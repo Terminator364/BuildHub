@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BuildHub Error Ledger Entry",
+  "type": "object",
+  "required": ["id", "mechanism", "invariant", "regression_status"],
+  "properties": {
+    "id": {"type": "string"},
+    "mechanism": {"type": "string"},
+    "observed_in": {"type": "array", "items": {"type": "string"}},
+    "invariant": {"type": "string"},
+    "regression_status": {
+      "enum": ["PLANNED", "EXECUTABLE", "CI_PROVEN", "FIELD_PROVEN"]
+    },
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": true
+}
