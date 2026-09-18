@@ -9,6 +9,7 @@ from .doctor import run_doctor
 from .io import atomic_write_json, sha256_file
 from .receipt import publish_verified
 from .recovery import RecoveryJournal
+from .runner import run_process
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -29,6 +30,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     r = sub.add_parser("recover-status", help="Read recovery journal")
     r.add_argument("journal")
+
+    run = sub.add_parser("run", help="Run one supervised process without shell argument re-parsing")
+    run.add_argument("--log", required=True)
+    run.add_argument("--heartbeat", required=True)
+    run.add_argument("--timeout", type=float)
+    run.add_argument("--operation-id")
+    run.add_argument("argv", nargs=argparse.REMAINDER)
 
     return p
 
@@ -68,6 +76,22 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.command == "recover-status":
         print(json.dumps(RecoveryJournal(args.journal).status(), ensure_ascii=False, sort_keys=True))
         return 0
+
+    if args.command == "run":
+        command = list(args.argv)
+        if command and command[0] == "--":
+            command = command[1:]
+        if not command:
+            parser.error("run requires an executable after --")
+        result = run_process(
+            command,
+            log_path=args.log,
+            heartbeat_path=args.heartbeat,
+            timeout_seconds=args.timeout,
+            operation_id=args.operation_id,
+        )
+        print(json.dumps(result, ensure_ascii=False, sort_keys=True))
+        return 0 if result["classification"] == "SUCCESS" else 1
 
     return 2
 
