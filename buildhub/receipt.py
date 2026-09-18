@@ -13,8 +13,38 @@ from .io import atomic_write_json, read_json, sha256_file
 RECEIPT_SCHEMA = "buildhub.receipt/v1"
 
 
+class CommitConflict(RuntimeError):
+    pass
+
+
 def utc_now() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def _existing_commit(
+    src: Path,
+    dst: Path,
+    receipt_path: Path,
+    operation_id: str,
+) -> dict[str, Any] | None:
+    if not receipt_path.exists():
+        return None
+    existing = read_json(receipt_path)
+    if existing.get("status") != "COMMITTED":
+        return None
+    current_source_hash = sha256_file(src)
+    same_operation = existing.get("operation_id") == operation_id
+    same_source = existing.get("source_sha256") == current_source_hash
+    same_destination = (
+        dst.is_file()
+        and existing.get("published_sha256") == sha256_file(dst)
+        and existing.get("readback_verified") is True
+    )
+    if same_operation and same_source and same_destination:
+        return existing
+    if same_operation:
+        raise CommitConflict("operation_id already committed with different evidence")
+    return None
 
 
 def publish_verified(
@@ -24,16 +54,22 @@ def publish_verified(
     *,
     operation_id: str | None = None,
 ) -> dict[str, Any]:
-    """Publish only when staging, destination readback and receipt readback all verify.
+    """Publish only when staging, destination readback and receipt readback verify.
 
-    If any finalization step fails, restore the previously validated destination.
+    Replaying the same committed operation with identical source/destination
+    evidence returns the existing receipt without rewriting the destination.
     """
     src = Path(source)
     dst = Path(destination)
+    receipt_file = Path(receipt_path)
     if not src.is_file():
         raise FileNotFoundError(src)
 
     operation_id = operation_id or str(uuid.uuid4())
+    previous = _existing_commit(src, dst, receipt_file, operation_id)
+    if previous is not None:
+        return previous
+
     source_hash = sha256_file(src)
     dst.parent.mkdir(parents=True, exist_ok=True)
 
@@ -74,8 +110,8 @@ def publish_verified(
             "readback_verified": True,
             "committed_at": utc_now(),
         }
-        atomic_write_json(receipt_path, receipt)
-        check = read_json(receipt_path)
+        atomic_write_json(receipt_file, receipt)
+        check = read_json(receipt_file)
         if (
             check.get("status") != "COMMITTED"
             or check.get("published_sha256") != source_hash
