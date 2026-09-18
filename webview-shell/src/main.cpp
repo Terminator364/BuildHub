@@ -1,14 +1,19 @@
 #define UNICODE
 #define _UNICODE
+#define NOMINMAX
 #include <windows.h>
 #include <shlobj.h>
 #include <shlwapi.h>
+#include <psapi.h>
+#include <dbghelp.h>
 #include <wrl.h>
 #include <WebView2.h>
 #include <array>
 #include <string>
 #include <algorithm>
 #include <cwctype>
+#include <sstream>
+#include <iomanip>
 
 using Microsoft::WRL::Callback;
 using Microsoft::WRL::ComPtr;
@@ -18,6 +23,10 @@ constexpr int kMaxTabs = 3;
 constexpr int kToolbarH = 40;
 constexpr int kTabsH = 32;
 constexpr UINT WM_APP_LOW_MEMORY = WM_APP + 11;
+constexpr UINT_PTR TIMER_HEARTBEAT = 2001;
+constexpr UINT HEARTBEAT_MS = 60000;
+constexpr wchar_t kSchemaVersion[] = L"browser4g-error/1";
+constexpr wchar_t kBuildVersion[] = L"0.1.1-beta";
 
 enum ControlId : int {
     ID_BACK = 1001,
@@ -44,6 +53,7 @@ std::array<HWND, kMaxTabs> g_tabButtons{};
 std::array<TabState, kMaxTabs> g_tabs{};
 int g_tabCount = 1;
 int g_activeTab = 0;
+
 std::wstring g_appTitle = L"BuildHub WebView Shell";
 std::wstring g_appId = L"BuildHubWebViewShell";
 std::wstring g_home = L"https://www.bing.com/";
@@ -51,6 +61,23 @@ std::wstring g_configPath;
 std::wstring g_statePath;
 std::wstring g_dataRoot;
 std::wstring g_udfPath;
+std::wstring g_telemetryDir;
+std::wstring g_projectMemoryDir;
+std::wstring g_evidenceDir;
+std::wstring g_crashDir;
+std::wstring g_telemetryLogPath;
+std::wstring g_heartbeatPath;
+std::wstring g_statusPath;
+std::wstring g_latestErrorPath;
+std::wstring g_updateRequestPath;
+std::wstring g_ledgerPath;
+std::wstring g_errorIndexPath;
+std::wstring g_errorCountPath;
+std::wstring g_runMarkerPath;
+std::wstring g_runtimeVersion;
+std::wstring g_runId;
+std::wstring g_startedUtc;
+
 ComPtr<ICoreWebView2Environment> g_environment;
 ComPtr<ICoreWebView2Controller> g_controller;
 ComPtr<ICoreWebView2> g_webview;
@@ -59,6 +86,9 @@ EventRegistrationToken g_titleChangedToken{};
 EventRegistrationToken g_processFailedToken{};
 HANDLE g_lowMemHandle = nullptr;
 HANDLE g_lowMemWait = nullptr;
+volatile LONG g_bridgeWorkerActive = 0;
+volatile LONG g_errorCount = 0;
+volatile LONG g_cleanShutdown = 0;
 
 std::wstring Join(const std::wstring& a, const std::wstring& b) {
     if (a.empty()) return b;
@@ -87,8 +117,13 @@ void EnsureDir(const std::wstring& p) {
     if (!p.empty()) SHCreateDirectoryExW(nullptr, p.c_str(), nullptr);
 }
 
+bool FileExists(const std::wstring& path) {
+    DWORD a = GetFileAttributesW(path.c_str());
+    return a != INVALID_FILE_ATTRIBUTES && !(a & FILE_ATTRIBUTE_DIRECTORY);
+}
+
 std::wstring ReadIni(const wchar_t* section, const wchar_t* key, const std::wstring& def, const std::wstring& path) {
-    wchar_t buf[2048]{};
+    wchar_t buf[4096]{};
     GetPrivateProfileStringW(section, key, def.c_str(), buf, static_cast<DWORD>(_countof(buf)), path.c_str());
     return buf;
 }
@@ -99,6 +134,438 @@ int ReadIniInt(const wchar_t* section, const wchar_t* key, int def, const std::w
 
 void WriteIni(const wchar_t* section, const wchar_t* key, const std::wstring& value, const std::wstring& path) {
     WritePrivateProfileStringW(section, key, value.c_str(), path.c_str());
+}
+
+std::string WideToUtf8(const std::wstring& s) {
+    if (s.empty()) return {};
+    int n = WideCharToMultiByte(CP_UTF8, 0, s.c_str(), static_cast<int>(s.size()), nullptr, 0, nullptr, nullptr);
+    if (n <= 0) return {};
+    std::string out(static_cast<size_t>(n), '\0');
+    WideCharToMultiByte(CP_UTF8, 0, s.c_str(), static_cast<int>(s.size()), out.data(), n, nullptr, nullptr);
+    return out;
+}
+
+std::wstring Utf8ToWide(const std::string& s) {
+    if (s.empty()) return {};
+    int n = MultiByteToWideChar(CP_UTF8, 0, s.data(), static_cast<int>(s.size()), nullptr, 0);
+    if (n <= 0) return {};
+    std::wstring out(static_cast<size_t>(n), L'\0');
+    MultiByteToWideChar(CP_UTF8, 0, s.data(), static_cast<int>(s.size()), out.data(), n);
+    return out;
+}
+
+std::string JsonEscapeUtf8(const std::wstring& w) {
+    std::string s = WideToUtf8(w);
+    std::string out;
+    out.reserve(s.size() + 16);
+    static const char* hex = "0123456789abcdef";
+    for (unsigned char c : s) {
+        switch (c) {
+        case '\\': out += "\\\\"; break;
+        case '"': out += "\\\""; break;
+        case '\b': out += "\\b"; break;
+        case '\f': out += "\\f"; break;
+        case '\n': out += "\\n"; break;
+        case '\r': out += "\\r"; break;
+        case '\t': out += "\\t"; break;
+        default:
+            if (c < 0x20) {
+                out += "\\u00";
+                out.push_back(hex[(c >> 4) & 0xF]);
+                out.push_back(hex[c & 0xF]);
+            } else {
+                out.push_back(static_cast<char>(c));
+            }
+        }
+    }
+    return out;
+}
+
+std::wstring UtcNowIso() {
+    SYSTEMTIME st{};
+    GetSystemTime(&st);
+    wchar_t buf[64]{};
+    swprintf_s(buf, L"%04u-%02u-%02uT%02u:%02u:%02u.%03uZ",
+               st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond, st.wMilliseconds);
+    return buf;
+}
+
+std::wstring NewId() {
+    GUID g{};
+    if (SUCCEEDED(CoCreateGuid(&g))) {
+        wchar_t buf[64]{};
+        StringFromGUID2(g, buf, static_cast<int>(_countof(buf)));
+        std::wstring out(buf);
+        out.erase(std::remove(out.begin(), out.end(), L'{'), out.end());
+        out.erase(std::remove(out.begin(), out.end(), L'}'), out.end());
+        return out;
+    }
+    return std::to_wstring(GetTickCount64()) + L"-" + std::to_wstring(GetCurrentProcessId());
+}
+
+bool AtomicWriteUtf8(const std::wstring& path, const std::string& content) {
+    std::wstring tmp = path + L".tmp";
+    HANDLE h = CreateFileW(tmp.c_str(), GENERIC_WRITE, FILE_SHARE_READ, nullptr, CREATE_ALWAYS,
+                           FILE_ATTRIBUTE_NORMAL, nullptr);
+    if (h == INVALID_HANDLE_VALUE) return false;
+    DWORD written = 0;
+    bool ok = WriteFile(h, content.data(), static_cast<DWORD>(content.size()), &written, nullptr) &&
+              written == content.size();
+    if (ok) ok = FlushFileBuffers(h) != FALSE;
+    CloseHandle(h);
+    if (!ok) {
+        DeleteFileW(tmp.c_str());
+        return false;
+    }
+    if (!MoveFileExW(tmp.c_str(), path.c_str(), MOVEFILE_REPLACE_EXISTING | MOVEFILE_WRITE_THROUGH)) {
+        DeleteFileW(tmp.c_str());
+        return false;
+    }
+    return true;
+}
+
+bool AppendUtf8Line(const std::wstring& path, const std::string& line) {
+    HANDLE h = CreateFileW(path.c_str(), FILE_APPEND_DATA, FILE_SHARE_READ | FILE_SHARE_WRITE,
+                           nullptr, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
+    if (h == INVALID_HANDLE_VALUE) return false;
+    std::string payload = line;
+    payload.push_back('\n');
+    DWORD written = 0;
+    bool ok = WriteFile(h, payload.data(), static_cast<DWORD>(payload.size()), &written, nullptr) &&
+              written == payload.size();
+    if (ok) FlushFileBuffers(h);
+    CloseHandle(h);
+    return ok;
+}
+
+std::string ReadWholeFileUtf8(const std::wstring& path, size_t maxBytes = 1024 * 1024) {
+    HANDLE h = CreateFileW(path.c_str(), GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
+                           nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+    if (h == INVALID_HANDLE_VALUE) return {};
+    LARGE_INTEGER size{};
+    if (!GetFileSizeEx(h, &size) || size.QuadPart <= 0 || static_cast<ULONGLONG>(size.QuadPart) > maxBytes) {
+        CloseHandle(h);
+        return {};
+    }
+    std::string out(static_cast<size_t>(size.QuadPart), '\0');
+    DWORD got = 0;
+    bool ok = ReadFile(h, out.data(), static_cast<DWORD>(out.size()), &got, nullptr) != FALSE;
+    CloseHandle(h);
+    if (!ok) return {};
+    out.resize(got);
+    if (out.size() >= 3 && static_cast<unsigned char>(out[0]) == 0xEF &&
+        static_cast<unsigned char>(out[1]) == 0xBB && static_cast<unsigned char>(out[2]) == 0xBF) {
+        out.erase(0, 3);
+    }
+    return out;
+}
+
+std::wstring ExtractJsonString(const std::string& json, const std::string& key) {
+    const std::string needle = "\"" + key + "\"";
+    size_t p = json.find(needle);
+    if (p == std::string::npos) return {};
+    p = json.find(':', p + needle.size());
+    if (p == std::string::npos) return {};
+    p = json.find('"', p + 1);
+    if (p == std::string::npos) return {};
+    ++p;
+    std::string raw;
+    bool esc = false;
+    for (; p < json.size(); ++p) {
+        char c = json[p];
+        if (esc) {
+            switch (c) {
+            case '\\': raw.push_back('\\'); break;
+            case '"': raw.push_back('"'); break;
+            case '/': raw.push_back('/'); break;
+            case 'n': raw.push_back('\n'); break;
+            case 'r': raw.push_back('\r'); break;
+            case 't': raw.push_back('\t'); break;
+            default: raw.push_back(c); break;
+            }
+            esc = false;
+        } else if (c == '\\') {
+            esc = true;
+        } else if (c == '"') {
+            break;
+        } else {
+            raw.push_back(c);
+        }
+    }
+    return Utf8ToWide(raw);
+}
+
+std::wstring SanitizeUrl(const std::wstring& input) {
+    std::wstring s = input;
+    if (s.empty()) return L"";
+    auto lower = s;
+    std::transform(lower.begin(), lower.end(), lower.begin(), [](wchar_t c) { return static_cast<wchar_t>(towlower(c)); });
+    if (lower.rfind(L"file:", 0) == 0) return L"file://[redacted]";
+    if (lower.rfind(L"about:", 0) == 0) return s.substr(0, std::min<size_t>(s.size(), 64));
+    size_t scheme = s.find(L"://");
+    if (scheme != std::wstring::npos) {
+        size_t authorityStart = scheme + 3;
+        size_t end = s.find_first_of(L"/?#", authorityStart);
+        std::wstring authority = s.substr(authorityStart, end == std::wstring::npos ? std::wstring::npos : end - authorityStart);
+        size_t at = authority.rfind(L'@');
+        if (at != std::wstring::npos) authority = authority.substr(at + 1);
+        return s.substr(0, scheme + 3) + authority;
+    }
+    size_t colon = s.find(L':');
+    if (colon != std::wstring::npos) return s.substr(0, std::min<size_t>(colon + 1, 32)) + L"[redacted]";
+    return L"[redacted]";
+}
+
+struct MemorySnapshot {
+    DWORD load = 0;
+    ULONGLONG availMb = 0;
+    SIZE_T workingSetMb = 0;
+    SIZE_T privateMb = 0;
+};
+
+MemorySnapshot MemoryNow() {
+    MemorySnapshot m{};
+    MEMORYSTATUSEX ms{};
+    ms.dwLength = sizeof(ms);
+    if (GlobalMemoryStatusEx(&ms)) {
+        m.load = ms.dwMemoryLoad;
+        m.availMb = ms.ullAvailPhys / (1024ull * 1024ull);
+    }
+    PROCESS_MEMORY_COUNTERS_EX pmc{};
+    if (GetProcessMemoryInfo(GetCurrentProcess(), reinterpret_cast<PROCESS_MEMORY_COUNTERS*>(&pmc), sizeof(pmc))) {
+        m.workingSetMb = pmc.WorkingSetSize / (1024ull * 1024ull);
+        m.privateMb = pmc.PrivateUsage / (1024ull * 1024ull);
+    }
+    return m;
+}
+
+void SetupTelemetryPaths() {
+    g_telemetryDir = Join(g_dataRoot, L"telemetry");
+    g_projectMemoryDir = Join(g_dataRoot, L".project-memory");
+    g_evidenceDir = Join(g_projectMemoryDir, L"ERROR_EVIDENCE");
+    g_crashDir = Join(g_telemetryDir, L"crashes");
+    EnsureDir(g_telemetryDir);
+    EnsureDir(g_projectMemoryDir);
+    EnsureDir(g_evidenceDir);
+    EnsureDir(g_crashDir);
+
+    g_telemetryLogPath = Join(g_telemetryDir, L"events.jsonl");
+    g_heartbeatPath = Join(g_telemetryDir, L"heartbeat.json");
+    g_statusPath = Join(g_telemetryDir, L"status.json");
+    g_latestErrorPath = Join(g_telemetryDir, L"LATEST_ERROR_REPORT.json");
+    g_updateRequestPath = Join(g_telemetryDir, L"UPDATE_REQUEST.json");
+    g_ledgerPath = Join(g_projectMemoryDir, L"ERROR_LEDGER.jsonl");
+    g_errorIndexPath = Join(g_projectMemoryDir, L"ERROR_INDEX.md");
+    g_errorCountPath = Join(g_projectMemoryDir, L"ERROR_COUNTS.ini");
+    g_runMarkerPath = Join(g_dataRoot, L"RUNNING.json");
+
+    AtomicWriteUtf8(Join(g_projectMemoryDir, L"ERROR_SCHEMA_VERSION.txt"), WideToUtf8(kSchemaVersion) + "\n");
+    if (!FileExists(g_errorIndexPath)) {
+        AtomicWriteUtf8(g_errorIndexPath,
+            "# BROWSER4G Error Index\n\n"
+            "Runtime-maintained beta error memory. No page content, cookies, tokens, form data, or full browsing URLs are recorded.\n\n"
+            "| UTC | Severity | Error class | Event ID | Status |\n"
+            "|---|---|---|---|---|\n");
+    }
+}
+
+void WriteHealthStatus();
+void QueueBridge();
+
+void AppendTelemetry(const std::wstring& eventName, const std::wstring& severity, const std::wstring& detail = L"") {
+    MemorySnapshot m = MemoryNow();
+    std::ostringstream os;
+    os << "{\"schema\":\"browser4g-telemetry/1\""
+       << ",\"utc\":\"" << JsonEscapeUtf8(UtcNowIso()) << "\""
+       << ",\"run_id\":\"" << JsonEscapeUtf8(g_runId) << "\""
+       << ",\"version\":\"" << JsonEscapeUtf8(kBuildVersion) << "\""
+       << ",\"event\":\"" << JsonEscapeUtf8(eventName) << "\""
+       << ",\"severity\":\"" << JsonEscapeUtf8(severity) << "\""
+       << ",\"detail\":\"" << JsonEscapeUtf8(detail) << "\""
+       << ",\"memory_load_pct\":" << m.load
+       << ",\"memory_available_mb\":" << m.availMb
+       << ",\"process_working_set_mb\":" << m.workingSetMb
+       << ",\"process_private_mb\":" << m.privateMb
+       << "}";
+    AppendUtf8Line(g_telemetryLogPath, os.str());
+}
+
+std::wstring CountKeyFor(const std::wstring& errorClass, const std::wstring& rawCode) {
+    std::wstring key = errorClass + L"_" + rawCode;
+    for (auto& c : key) {
+        if (!(iswalnum(c) || c == L'_' || c == L'-')) c = L'_';
+    }
+    if (key.size() > 120) key.resize(120);
+    return key;
+}
+
+void RecordError(const std::wstring& errorClass,
+                 const std::wstring& rawCode,
+                 const std::wstring& severity,
+                 const std::wstring& intent,
+                 const std::wstring& expected,
+                 const std::wstring& observed,
+                 const std::wstring& rootCauseStatus,
+                 const std::wstring& rootCause,
+                 const std::wstring& regressionTest,
+                 const std::wstring& lesson,
+                 const std::wstring& evidenceRef = L"") {
+    const std::wstring eventId = NewId();
+    const std::wstring utc = UtcNowIso();
+    const std::wstring countKey = CountKeyFor(errorClass, rawCode);
+    int occurrence = ReadIniInt(L"counts", countKey.c_str(), 0, g_errorCountPath) + 1;
+    WriteIni(L"counts", countKey.c_str(), std::to_wstring(occurrence), g_errorCountPath);
+    InterlockedIncrement(&g_errorCount);
+
+    std::ostringstream os;
+    os << "{\"schema\":\"browser4g-error/1\""
+       << ",\"event_id\":\"" << JsonEscapeUtf8(eventId) << "\""
+       << ",\"utc\":\"" << JsonEscapeUtf8(utc) << "\""
+       << ",\"project\":\"BROWSER4G\""
+       << ",\"phase\":\"RUNTIME\""
+       << ",\"intent\":\"" << JsonEscapeUtf8(intent) << "\""
+       << ",\"expected\":\"" << JsonEscapeUtf8(expected) << "\""
+       << ",\"observed\":\"" << JsonEscapeUtf8(observed) << "\""
+       << ",\"error_class\":\"" << JsonEscapeUtf8(errorClass) << "\""
+       << ",\"raw_code\":\"" << JsonEscapeUtf8(rawCode) << "\""
+       << ",\"severity\":\"" << JsonEscapeUtf8(severity) << "\""
+       << ",\"root_cause_status\":\"" << JsonEscapeUtf8(rootCauseStatus) << "\""
+       << ",\"root_cause\":\"" << JsonEscapeUtf8(rootCause) << "\""
+       << ",\"attempts\":[]"
+       << ",\"resolution\":\"OPEN\""
+       << ",\"regression_test\":\"" << JsonEscapeUtf8(regressionTest) << "\""
+       << ",\"lesson\":\"" << JsonEscapeUtf8(lesson) << "\""
+       << ",\"anticipation_candidate\":\"Prevent recurrence of " << JsonEscapeUtf8(errorClass) << " under equivalent causal conditions.\""
+       << ",\"evidence_refs\":[\"" << JsonEscapeUtf8(evidenceRef.empty() ? (L"run:" + g_runId) : evidenceRef) << "\"]"
+       << ",\"cross_project_tags\":[\"browser-runtime\",\"beta-field\",\"automatic-capture\"]"
+       << ",\"occurrence\":" << occurrence
+       << ",\"run_id\":\"" << JsonEscapeUtf8(g_runId) << "\""
+       << ",\"version\":\"" << JsonEscapeUtf8(kBuildVersion) << "\""
+       << "}";
+    const std::string payload = os.str();
+    AppendUtf8Line(g_ledgerPath, payload);
+    AtomicWriteUtf8(g_latestErrorPath, payload + "\n");
+
+    std::ostringstream idx;
+    idx << "| " << WideToUtf8(utc) << " | " << WideToUtf8(severity) << " | "
+        << WideToUtf8(errorClass) << " | " << WideToUtf8(eventId) << " | OPEN |\n";
+    AppendUtf8Line(g_errorIndexPath, idx.str().substr(0, idx.str().size() - 1));
+
+    if (severity == L"HIGH" || severity == L"P0") {
+        std::ostringstream req;
+        req << "{\"schema\":\"browser4g-update-request/1\""
+            << ",\"utc\":\"" << JsonEscapeUtf8(utc) << "\""
+            << ",\"project\":\"BROWSER4G\""
+            << ",\"version\":\"" << JsonEscapeUtf8(kBuildVersion) << "\""
+            << ",\"event_id\":\"" << JsonEscapeUtf8(eventId) << "\""
+            << ",\"error_class\":\"" << JsonEscapeUtf8(errorClass) << "\""
+            << ",\"severity\":\"" << JsonEscapeUtf8(severity) << "\""
+            << ",\"requested_action\":\"ANALYZE_BUILD_CANDIDATE\""
+            << ",\"auto_install\":false"
+            << ",\"reason\":\"Deployment remains transactional: build, verify, hash, readback, then controlled promotion.\""
+            << "}";
+        AtomicWriteUtf8(g_updateRequestPath, req.str() + "\n");
+    }
+
+    AppendTelemetry(L"ERROR_CAPTURED", severity, errorClass + L" / " + rawCode);
+    WriteHealthStatus();
+    QueueBridge();
+}
+
+bool AtomicCopy(const std::wstring& src, const std::wstring& dst) {
+    if (!FileExists(src)) return true;
+    std::wstring tmp = dst + L".tmp";
+    DeleteFileW(tmp.c_str());
+    if (!CopyFileW(src.c_str(), tmp.c_str(), FALSE)) return false;
+    if (!MoveFileExW(tmp.c_str(), dst.c_str(), MOVEFILE_REPLACE_EXISTING | MOVEFILE_WRITE_THROUGH)) {
+        DeleteFileW(tmp.c_str());
+        return false;
+    }
+    return true;
+}
+
+bool DiscoverChatGptPcBridge(std::wstring& controlFolder, std::wstring& deviceId) {
+    std::wstring root = Join(LocalAppData(), L"Tunnel_PC_G4");
+    std::wstring state = Join(root, L"state");
+    std::string config = ReadWholeFileUtf8(Join(state, L"config.json"), 256 * 1024);
+    std::string device = ReadWholeFileUtf8(Join(state, L"device.json"), 256 * 1024);
+    if (config.empty() || device.empty()) return false;
+    controlFolder = ExtractJsonString(config, "control_folder");
+    deviceId = ExtractJsonString(device, "device_id");
+    if (controlFolder.empty() || deviceId.empty()) return false;
+    DWORD attrs = GetFileAttributesW(controlFolder.c_str());
+    return attrs != INVALID_FILE_ATTRIBUTES && (attrs & FILE_ATTRIBUTE_DIRECTORY);
+}
+
+DWORD WINAPI BridgeWorker(LPVOID) {
+    std::wstring control, device;
+    if (DiscoverChatGptPcBridge(control, device)) {
+        std::wstring root = Join(Join(Join(control, L"03_TELEMETRY"), device), L"BROWSER4G");
+        EnsureDir(Join(control, L"03_TELEMETRY"));
+        EnsureDir(Join(Join(control, L"03_TELEMETRY"), device));
+        EnsureDir(root);
+        AtomicCopy(g_statusPath, Join(root, L"status.json"));
+        AtomicCopy(g_heartbeatPath, Join(root, L"heartbeat.json"));
+        AtomicCopy(g_latestErrorPath, Join(root, L"LATEST_ERROR_REPORT.json"));
+        AtomicCopy(g_updateRequestPath, Join(root, L"UPDATE_REQUEST.json"));
+        AtomicCopy(g_ledgerPath, Join(root, L"ERROR_LEDGER.jsonl"));
+        AtomicCopy(g_errorIndexPath, Join(root, L"ERROR_INDEX.md"));
+        AtomicCopy(Join(g_projectMemoryDir, L"ERROR_SCHEMA_VERSION.txt"), Join(root, L"ERROR_SCHEMA_VERSION.txt"));
+    }
+    InterlockedExchange(&g_bridgeWorkerActive, 0);
+    return 0;
+}
+
+void QueueBridge() {
+    if (InterlockedCompareExchange(&g_bridgeWorkerActive, 1, 0) != 0) return;
+    HANDLE h = CreateThread(nullptr, 0, BridgeWorker, nullptr, 0, nullptr);
+    if (h) CloseHandle(h);
+    else InterlockedExchange(&g_bridgeWorkerActive, 0);
+}
+
+void WriteHealthStatus() {
+    MemorySnapshot m = MemoryNow();
+    std::wstring control, device;
+    bool bridge = DiscoverChatGptPcBridge(control, device);
+    std::ostringstream os;
+    os << "{\"schema\":\"browser4g-status/1\""
+       << ",\"utc\":\"" << JsonEscapeUtf8(UtcNowIso()) << "\""
+       << ",\"project\":\"BROWSER4G\""
+       << ",\"version\":\"" << JsonEscapeUtf8(kBuildVersion) << "\""
+       << ",\"run_id\":\"" << JsonEscapeUtf8(g_runId) << "\""
+       << ",\"started_utc\":\"" << JsonEscapeUtf8(g_startedUtc) << "\""
+       << ",\"runtime_version\":\"" << JsonEscapeUtf8(g_runtimeVersion) << "\""
+       << ",\"webview_ready\":" << (g_webview ? "true" : "false")
+       << ",\"tab_count\":" << g_tabCount
+       << ",\"active_tab\":" << g_activeTab
+       << ",\"memory_load_pct\":" << m.load
+       << ",\"memory_available_mb\":" << m.availMb
+       << ",\"process_working_set_mb\":" << m.workingSetMb
+       << ",\"process_private_mb\":" << m.privateMb
+       << ",\"error_count_session\":" << g_errorCount
+       << ",\"chatgpt_pc_bridge_detected\":" << (bridge ? "true" : "false")
+       << ",\"privacy\":\"NO_PAGE_CONTENT_NO_COOKIES_NO_TOKENS_NO_FORM_DATA_NO_FULL_URLS\""
+       << "}";
+    AtomicWriteUtf8(g_statusPath, os.str() + "\n");
+}
+
+void WriteHeartbeat() {
+    MemorySnapshot m = MemoryNow();
+    std::ostringstream os;
+    os << "{\"schema\":\"browser4g-heartbeat/1\""
+       << ",\"utc\":\"" << JsonEscapeUtf8(UtcNowIso()) << "\""
+       << ",\"run_id\":\"" << JsonEscapeUtf8(g_runId) << "\""
+       << ",\"version\":\"" << JsonEscapeUtf8(kBuildVersion) << "\""
+       << ",\"state\":\"RUNNING\""
+       << ",\"memory_load_pct\":" << m.load
+       << ",\"memory_available_mb\":" << m.availMb
+       << ",\"process_working_set_mb\":" << m.workingSetMb
+       << ",\"process_private_mb\":" << m.privateMb
+       << ",\"webview_ready\":" << (g_webview ? "true" : "false")
+       << "}";
+    AtomicWriteUtf8(g_heartbeatPath, os.str() + "\n");
+    WriteHealthStatus();
+    QueueBridge();
 }
 
 void SaveState() {
@@ -126,6 +593,7 @@ void LoadConfigAndState() {
     g_statePath = Join(g_dataRoot, L"state.ini");
     EnsureDir(g_dataRoot);
     EnsureDir(g_udfPath);
+    SetupTelemetryPaths();
 
     g_tabCount = std::clamp(ReadIniInt(L"session", L"tab_count", 1, g_statePath), 1, kMaxTabs);
     g_activeTab = std::clamp(ReadIniInt(L"session", L"active_tab", 0, g_statePath), 0, g_tabCount - 1);
@@ -188,6 +656,9 @@ void UpdateWindowTitle() {
     std::wstring title = g_tabs[g_activeTab].title;
     if (!title.empty()) title += L" — ";
     title += g_appTitle;
+    title += L" [β ";
+    title += kBuildVersion;
+    title += L"]";
     SetWindowTextW(g_main, title.c_str());
 }
 
@@ -196,7 +667,19 @@ void NavigateActive(const std::wstring& raw) {
     g_tabs[g_activeTab].url = url;
     SetWindowTextW(g_address, url.c_str());
     SaveState();
-    if (g_webview) g_webview->Navigate(url.c_str());
+    if (g_webview) {
+        HRESULT hr = g_webview->Navigate(url.c_str());
+        if (FAILED(hr)) {
+            wchar_t code[32]{};
+            swprintf_s(code, L"0x%08X", static_cast<unsigned int>(hr));
+            RecordError(L"NAVIGATE_CALL_FAILED", code, L"MEDIUM",
+                        L"Navigate active tab", L"Navigation request accepted",
+                        L"WebView2 Navigate returned failure for " + SanitizeUrl(url),
+                        L"STRONG_CANDIDATE", L"WebView2 navigation call rejected synchronously",
+                        L"Navigate invalid/edge inputs and assert graceful error capture",
+                        L"Every synchronous WebView2 API failure must be captured with a sanitized origin.");
+        }
+    }
 }
 
 void SyncCurrentUrlFromWebView() {
@@ -230,11 +713,13 @@ void SwitchTab(int idx) {
     UpdateWindowTitle();
     SetWindowTextW(g_address, g_tabs[g_activeTab].url.c_str());
     SaveState();
+    AppendTelemetry(L"TAB_SWITCH", L"INFO", L"logical_tab=" + std::to_wstring(idx));
     if (g_webview) g_webview->Navigate(g_tabs[g_activeTab].url.c_str());
 }
 
 void NewTab() {
     if (g_tabCount >= kMaxTabs) {
+        AppendTelemetry(L"TAB_LIMIT_REACHED", L"INFO", L"max=3");
         MessageBeep(MB_ICONINFORMATION);
         return;
     }
@@ -246,6 +731,7 @@ void NewTab() {
     UpdateTabButtons();
     UpdateWindowTitle();
     SaveState();
+    AppendTelemetry(L"TAB_CREATED", L"INFO", L"logical_tab=" + std::to_wstring(idx));
     NavigateActive(g_home);
 }
 
@@ -263,6 +749,7 @@ void CloseTab() {
     UpdateTabButtons();
     UpdateWindowTitle();
     SaveState();
+    AppendTelemetry(L"TAB_CLOSED", L"INFO", L"remaining=" + std::to_wstring(g_tabCount));
     NavigateActive(g_tabs[g_activeTab].url);
 }
 
@@ -296,10 +783,19 @@ void Layout() {
 }
 
 void ShowRuntimeMissing(HRESULT hr) {
+    wchar_t code[32]{};
+    swprintf_s(code, L"0x%08X", static_cast<unsigned int>(hr));
+    RecordError(L"WEBVIEW2_RUNTIME_INIT_FAILED", code, L"HIGH",
+                L"Initialize WebView2 runtime", L"Runtime environment created",
+                L"WebView2 environment/controller initialization failed",
+                L"UNKNOWN", L"Runtime missing, damaged, incompatible, or initialization failure",
+                L"Cold-start with runtime present/missing/damaged and assert durable diagnostic",
+                L"A browser beta must turn runtime bootstrap failures into durable evidence, not screenshots.");
+
     wchar_t msg[1024]{};
     swprintf_s(msg,
         L"%s could not start Microsoft Edge WebView2 Runtime.\n\nHRESULT: 0x%08X\n\n"
-        L"Windows 11 normally includes WebView2. If it is missing or damaged, install/repair the Microsoft Edge WebView2 Evergreen Runtime, then relaunch.",
+        L"A diagnostic report has already been written locally and queued to the ChatGPT-PC telemetry bridge when available.",
         g_appTitle.c_str(), static_cast<unsigned int>(hr));
     MessageBoxW(g_main, msg, g_appTitle.c_str(), MB_OK | MB_ICONERROR);
 }
@@ -312,6 +808,13 @@ void SetupLowMemorySignal() {
     g_lowMemHandle = CreateMemoryResourceNotification(LowMemoryResourceNotification);
     if (g_lowMemHandle) {
         RegisterWaitForSingleObject(&g_lowMemWait, g_lowMemHandle, LowMemoryWaitCallback, nullptr, INFINITE, WT_EXECUTEDEFAULT);
+    } else {
+        RecordError(L"LOW_MEMORY_WATCH_SETUP_FAILED", std::to_wstring(GetLastError()), L"LOW",
+                    L"Register Windows low-memory notification", L"Notification handle registered",
+                    L"CreateMemoryResourceNotification failed",
+                    L"UNKNOWN", L"Windows API setup failure",
+                    L"Exercise startup with notification API available/unavailable",
+                    L"Resource guards must fail open and leave evidence.");
     }
 }
 
@@ -328,17 +831,25 @@ void CleanupLowMemorySignal() {
 
 void RecordRuntimeVersion() {
     LPWSTR version = nullptr;
-    if (SUCCEEDED(GetAvailableCoreWebView2BrowserVersionString(nullptr, &version)) && version) {
+    HRESULT hr = GetAvailableCoreWebView2BrowserVersionString(nullptr, &version);
+    if (SUCCEEDED(hr) && version) {
+        g_runtimeVersion = version;
         std::wstring runtimePath = Join(g_dataRoot, L"runtime.ini");
         std::wstring previous = ReadIni(L"runtime", L"version", L"", runtimePath);
         if (previous != version) {
             WriteIni(L"runtime", L"previous", previous, runtimePath);
             WriteIni(L"runtime", L"version", version, runtimePath);
             WriteIni(L"runtime", L"changed", L"1", runtimePath);
+            AppendTelemetry(L"WEBVIEW2_RUNTIME_CHANGED", L"INFO",
+                            (previous.empty() ? L"first_seen" : previous) + L" -> " + std::wstring(version));
         } else {
             WriteIni(L"runtime", L"changed", L"0", runtimePath);
         }
         CoTaskMemFree(version);
+    } else {
+        wchar_t code[32]{};
+        swprintf_s(code, L"0x%08X", static_cast<unsigned int>(hr));
+        AppendTelemetry(L"WEBVIEW2_RUNTIME_VERSION_UNAVAILABLE", L"WARNING", code);
     }
 }
 
@@ -355,6 +866,7 @@ void InitWebView() {
                     return S_OK;
                 }
                 g_environment = env;
+                AppendTelemetry(L"WEBVIEW2_ENV_READY", L"INFO", g_runtimeVersion);
                 env->CreateCoreWebView2Controller(
                     g_main,
                     Callback<ICoreWebView2CreateCoreWebView2ControllerCompletedHandler>(
@@ -365,7 +877,15 @@ void InitWebView() {
                             }
                             g_controller = controller;
                             g_controller->get_CoreWebView2(g_webview.GetAddressOf());
-                            if (!g_webview) return E_FAIL;
+                            if (!g_webview) {
+                                RecordError(L"WEBVIEW2_CORE_NULL", L"E_FAIL", L"HIGH",
+                                            L"Acquire CoreWebView2", L"Core interface available",
+                                            L"Controller exists but CoreWebView2 is null",
+                                            L"UNKNOWN", L"Unexpected controller/core initialization divergence",
+                                            L"Assert controller success always yields non-null core or durable failure",
+                                            L"Partial initialization must never look healthy.");
+                                return E_FAIL;
+                            }
 
                             ComPtr<ICoreWebView2Settings> settings;
                             if (SUCCEEDED(g_webview->get_Settings(&settings)) && settings) {
@@ -377,9 +897,24 @@ void InitWebView() {
 
                             g_webview->add_NavigationCompleted(
                                 Callback<ICoreWebView2NavigationCompletedEventHandler>(
-                                    [](ICoreWebView2*, ICoreWebView2NavigationCompletedEventArgs*) -> HRESULT {
+                                    [](ICoreWebView2*, ICoreWebView2NavigationCompletedEventArgs* args) -> HRESULT {
+                                        BOOL ok = FALSE;
+                                        COREWEBVIEW2_WEB_ERROR_STATUS webStatus = COREWEBVIEW2_WEB_ERROR_STATUS_UNKNOWN;
+                                        if (args) {
+                                            args->get_IsSuccess(&ok);
+                                            if (!ok) args->get_WebErrorStatus(&webStatus);
+                                        }
                                         SyncCurrentUrlFromWebView();
                                         SyncTitleFromWebView();
+                                        if (!ok) {
+                                            std::wstring origin = SanitizeUrl(g_tabs[g_activeTab].url);
+                                            RecordError(L"NAVIGATION_FAILED", std::to_wstring(static_cast<int>(webStatus)), L"MEDIUM",
+                                                        L"Complete web navigation", L"Navigation succeeds or reports bounded network failure",
+                                                        L"Navigation failed for sanitized origin " + origin,
+                                                        L"UNKNOWN", L"Network, TLS, DNS, policy, renderer, or remote endpoint failure",
+                                                        L"Inject offline/DNS/TLS failures and assert automatic diagnostic without full URL leakage",
+                                                        L"Navigation failures need machine-readable WebErrorStatus plus a privacy-safe origin.");
+                                        }
                                         return S_OK;
                                     }).Get(),
                                 &g_navCompletedToken);
@@ -395,12 +930,20 @@ void InitWebView() {
                             g_webview->add_ProcessFailed(
                                 Callback<ICoreWebView2ProcessFailedEventHandler>(
                                     [](ICoreWebView2*, ICoreWebView2ProcessFailedEventArgs* args) -> HRESULT {
-                                        COREWEBVIEW2_PROCESS_FAILED_KIND kind{};
+                                        COREWEBVIEW2_PROCESS_FAILED_KIND kind = COREWEBVIEW2_PROCESS_FAILED_KIND_BROWSER_PROCESS_EXITED;
                                         if (args) args->get_ProcessFailedKind(&kind);
+                                        std::wstring sev =
+                                            (kind == COREWEBVIEW2_PROCESS_FAILED_KIND_BROWSER_PROCESS_EXITED ? L"HIGH" : L"MEDIUM");
+                                        RecordError(L"WEBVIEW2_PROCESS_FAILED", std::to_wstring(static_cast<int>(kind)), sev,
+                                                    L"Keep browser/render process healthy", L"WebView2 process remains available",
+                                                    L"WebView2 ProcessFailed event captured",
+                                                    L"UNKNOWN", L"Renderer/browser/GPU/utility process terminated or became unhealthy",
+                                                    L"Force renderer/browser termination and assert process-kind evidence plus recovery path",
+                                                    L"Process failures must be classified by WebView2 process kind and preserved automatically.");
                                         if (kind == COREWEBVIEW2_PROCESS_FAILED_KIND_RENDER_PROCESS_EXITED ||
                                             kind == COREWEBVIEW2_PROCESS_FAILED_KIND_FRAME_RENDER_PROCESS_EXITED) {
                                             MessageBoxW(g_main,
-                                                L"A web content process stopped. The current address is preserved. Use Reload when ready.",
+                                                L"A web content process stopped. The incident has already been captured. Use Reload when ready.",
                                                 g_appTitle.c_str(), MB_OK | MB_ICONWARNING);
                                         }
                                         return S_OK;
@@ -411,6 +954,8 @@ void InitWebView() {
                             UpdateTabButtons();
                             UpdateWindowTitle();
                             SetWindowTextW(g_address, g_tabs[g_activeTab].url.c_str());
+                            AppendTelemetry(L"WEBVIEW2_CONTROLLER_READY", L"INFO", L"physical_slots=1");
+                            WriteHeartbeat();
                             g_webview->Navigate(g_tabs[g_activeTab].url.c_str());
                             return S_OK;
                         }).Get());
@@ -418,6 +963,77 @@ void InitWebView() {
             }).Get());
 
     if (FAILED(hr)) ShowRuntimeMissing(hr);
+}
+
+LONG WINAPI CrashFilter(EXCEPTION_POINTERS* ep) {
+    if (!g_crashDir.empty()) {
+        SYSTEMTIME st{};
+        GetSystemTime(&st);
+        wchar_t stem[128]{};
+        swprintf_s(stem, L"crash-%04u%02u%02uT%02u%02u%02uZ-%lu",
+                   st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond, GetCurrentProcessId());
+        std::wstring dumpPath = Join(g_crashDir, std::wstring(stem) + L".dmp");
+        HANDLE h = CreateFileW(dumpPath.c_str(), GENERIC_WRITE, 0, nullptr, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
+        if (h != INVALID_HANDLE_VALUE) {
+            MINIDUMP_EXCEPTION_INFORMATION mei{};
+            mei.ThreadId = GetCurrentThreadId();
+            mei.ExceptionPointers = ep;
+            mei.ClientPointers = FALSE;
+            MiniDumpWriteDump(GetCurrentProcess(), GetCurrentProcessId(), h, MiniDumpNormal,
+                              ep ? &mei : nullptr, nullptr, nullptr);
+            FlushFileBuffers(h);
+            CloseHandle(h);
+        }
+
+        DWORD code = (ep && ep->ExceptionRecord) ? ep->ExceptionRecord->ExceptionCode : 0;
+        wchar_t txt[512]{};
+        swprintf_s(txt, L"utc=%s\r\nrun_id=%s\r\nversion=%s\r\nexception_code=0x%08X\r\ndump=%s\r\n",
+                   UtcNowIso().c_str(), g_runId.c_str(), kBuildVersion, code, dumpPath.c_str());
+        HANDLE t = CreateFileW(Join(g_crashDir, L"LAST_CRASH.txt").c_str(), GENERIC_WRITE, FILE_SHARE_READ,
+                               nullptr, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
+        if (t != INVALID_HANDLE_VALUE) {
+            std::string u = WideToUtf8(txt);
+            DWORD written = 0;
+            WriteFile(t, u.data(), static_cast<DWORD>(u.size()), &written, nullptr);
+            FlushFileBuffers(t);
+            CloseHandle(t);
+        }
+    }
+    return EXCEPTION_EXECUTE_HANDLER;
+}
+
+void BeginRun() {
+    g_runId = NewId();
+    g_startedUtc = UtcNowIso();
+
+    if (FileExists(g_runMarkerPath)) {
+        RecordError(L"UNCLEAN_SHUTDOWN", L"RUN_MARKER_PRESENT", L"HIGH",
+                    L"Complete previous browser run cleanly", L"Previous RUNNING marker removed during orderly shutdown",
+                    L"Previous RUNNING marker still present at startup",
+                    L"STRONG_CANDIDATE", L"Prior process terminated unexpectedly, OS/power loss, or forced kill",
+                    L"Kill process/power cycle and assert next startup emits UNCLEAN_SHUTDOWN with persistent evidence",
+                    L"A stale run marker is a durable crash/power-loss signal and must become an automatic field incident.");
+    }
+
+    std::ostringstream marker;
+    marker << "{\"schema\":\"browser4g-run/1\""
+           << ",\"run_id\":\"" << JsonEscapeUtf8(g_runId) << "\""
+           << ",\"version\":\"" << JsonEscapeUtf8(kBuildVersion) << "\""
+           << ",\"started_utc\":\"" << JsonEscapeUtf8(g_startedUtc) << "\""
+           << ",\"pid\":" << GetCurrentProcessId()
+           << "}";
+    AtomicWriteUtf8(g_runMarkerPath, marker.str() + "\n");
+    AppendTelemetry(L"APP_START", L"INFO", L"beta_instrumentation=1");
+    WriteHeartbeat();
+}
+
+void EndRunCleanly() {
+    if (InterlockedExchange(&g_cleanShutdown, 1) != 0) return;
+    AppendTelemetry(L"APP_CLEAN_SHUTDOWN", L"INFO");
+    SaveState();
+    WriteHealthStatus();
+    DeleteFileW(g_runMarkerPath.c_str());
+    QueueBridge();
 }
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
@@ -444,12 +1060,19 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
         g_tabButtons[2] = makeButton(L"3", ID_TAB3);
         UpdateTabButtons();
         SetupLowMemorySignal();
+        SetTimer(hwnd, TIMER_HEARTBEAT, HEARTBEAT_MS, nullptr);
         InitWebView();
         return 0;
     }
     case WM_SIZE:
         Layout();
         return 0;
+    case WM_TIMER:
+        if (wp == TIMER_HEARTBEAT) {
+            WriteHeartbeat();
+            return 0;
+        }
+        break;
     case WM_COMMAND: {
         int id = LOWORD(wp);
         if (id == ID_BACK && g_webview) {
@@ -473,15 +1096,24 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
         }
         return 0;
     }
-    case WM_APP_LOW_MEMORY:
+    case WM_APP_LOW_MEMORY: {
+        MemorySnapshot m = MemoryNow();
+        RecordError(L"LOW_MEMORY_SIGNAL", std::to_wstring(m.load), L"MEDIUM",
+                    L"Keep browser usable under memory pressure", L"Maintain safe memory headroom",
+                    L"Windows LowMemoryResourceNotification fired; available_mb=" + std::to_wstring(m.availMb),
+                    L"CONFIRMED", L"System memory pressure crossed Windows low-memory threshold",
+                    L"Stress host memory to 80/90/95% and assert notification, no second renderer allocation, and continued heartbeat",
+                    L"Field memory pressure is a first-class beta incident and must be captured without user screenshots.");
         SetProcessWorkingSetSize(GetCurrentProcess(), static_cast<SIZE_T>(-1), static_cast<SIZE_T>(-1));
         return 0;
+    }
     case WM_CLOSE:
         SyncCurrentUrlFromWebView();
-        SaveState();
+        EndRunCleanly();
         DestroyWindow(hwnd);
         return 0;
     case WM_DESTROY:
+        KillTimer(hwnd, TIMER_HEARTBEAT);
         CleanupLowMemorySignal();
         if (g_controller) g_controller->Close();
         g_webview.Reset();
@@ -499,6 +1131,8 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int show) {
     if (FAILED(co)) return 2;
 
     LoadConfigAndState();
+    SetUnhandledExceptionFilter(CrashFilter);
+    BeginRun();
 
     WNDCLASSEXW wc{sizeof(wc)};
     wc.lpfnWndProc = WndProc;
@@ -507,16 +1141,30 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int show) {
     wc.hIcon = LoadIconW(nullptr, IDI_APPLICATION);
     wc.hbrBackground = reinterpret_cast<HBRUSH>(COLOR_WINDOW + 1);
     wc.lpszClassName = L"BuildHubWebViewShellWindow";
-    RegisterClassExW(&wc);
+    if (!RegisterClassExW(&wc)) {
+        RecordError(L"WINDOW_CLASS_REGISTER_FAILED", std::to_wstring(GetLastError()), L"HIGH",
+                    L"Register browser window class", L"Window class registered",
+                    L"RegisterClassExW failed", L"UNKNOWN", L"Win32 window bootstrap failure",
+                    L"Assert bootstrap errors are durable and leave run evidence",
+                    L"Native bootstrap failures require the same telemetry discipline as WebView failures.");
+        CoUninitialize();
+        return 3;
+    }
 
     g_main = CreateWindowExW(0, wc.lpszClassName, g_appTitle.c_str(),
                              WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN,
                              CW_USEDEFAULT, CW_USEDEFAULT, 1180, 760,
                              nullptr, nullptr, instance, nullptr);
     if (!g_main) {
+        RecordError(L"WINDOW_CREATE_FAILED", std::to_wstring(GetLastError()), L"HIGH",
+                    L"Create main browser window", L"Main window created",
+                    L"CreateWindowExW failed", L"UNKNOWN", L"Win32 window creation failure",
+                    L"Assert CreateWindow failure yields a durable update request",
+                    L"A failed GUI bootstrap must never be silent.");
         CoUninitialize();
-        return 3;
+        return 4;
     }
+
     ShowWindow(g_main, show);
     UpdateWindow(g_main);
 
@@ -526,6 +1174,7 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int show) {
         DispatchMessageW(&msg);
     }
 
+    EndRunCleanly();
     CoUninitialize();
     return static_cast<int>(msg.wParam);
 }
