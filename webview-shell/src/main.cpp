@@ -29,7 +29,7 @@ constexpr UINT_PTR TIMER_WEBVIEW_WATCHDOG = 2002;
 constexpr UINT HEARTBEAT_MS = 60000;
 constexpr UINT WEBVIEW_WATCHDOG_MS = 15000;
 constexpr wchar_t kSchemaVersion[] = L"browser4g-error/1";
-constexpr wchar_t kBuildVersion[] = L"0.1.2-beta";
+constexpr wchar_t kBuildVersion[] = L"0.1.4-beta";
 
 enum ControlId : int {
     ID_BACK = 1001,
@@ -92,6 +92,8 @@ HANDLE g_lowMemWait = nullptr;
 volatile LONG g_bridgeWorkerActive = 0;
 volatile LONG g_errorCount = 0;
 volatile LONG g_cleanShutdown = 0;
+volatile LONG g_lowMemWaitArmed = 0;
+volatile LONG g_lowMemEpisodeActive = 0;
 std::wstring g_lastErrorFingerprint;
 ULONGLONG g_lastErrorTick = 0;
 volatile LONG g_suppressedSameError = 0;
@@ -379,6 +381,7 @@ void SetupTelemetryPaths() {
 
 void WriteHealthStatus();
 void QueueBridge();
+void MaybeRearmLowMemoryWait();
 
 void AppendTelemetry(const std::wstring& eventName, const std::wstring& severity, const std::wstring& detail = L"") {
     MemorySnapshot m = MemoryNow();
@@ -589,6 +592,7 @@ void WriteHeartbeat() {
        << "}";
     AtomicWriteUtf8(g_heartbeatPath, os.str() + "\n");
     WriteHealthStatus();
+    MaybeRearmLowMemoryWait();
     QueueBridge();
 }
 
@@ -684,6 +688,44 @@ void UpdateWindowTitle() {
     title += kBuildVersion;
     title += L"]";
     SetWindowTextW(g_main, title.c_str());
+}
+
+
+void NavigateInitialPage() {
+    if (!g_webview) return;
+    std::wstring url = g_tabs[g_activeTab].url;
+    if (url.empty() || url == L"about:blank") {
+        const wchar_t* html =
+            LR"HTML(<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{color-scheme:dark;font-family:Segoe UI,system-ui,sans-serif}
+body{margin:0;background:#0b0d10;color:#eef2f7;display:grid;place-items:center;min-height:100vh}
+main{width:min(760px,82vw);padding:48px;border:1px solid #262c35;border-radius:24px;background:#11151a;box-shadow:0 18px 60px #0008}
+h1{font-size:38px;margin:0 0 10px;letter-spacing:-1px}
+p{color:#aeb7c4;line-height:1.55;font-size:17px}
+.badge{display:inline-block;border:1px solid #314154;border-radius:999px;padding:7px 12px;color:#cfe8ff;background:#142131;margin-bottom:26px}
+code{color:#d6e6ff;background:#0a1017;padding:3px 7px;border-radius:7px}
+</style></head><body><main><div class="badge">BROWSER4G · Beta field build</div>
+<h1>Moteur Web prêt.</h1>
+<p>Cette page est intégrée localement au navigateur. Si tu la vois, le contrôleur WebView2 et le rendu fonctionnent réellement.</p>
+<p>Entre une adresse dans la barre supérieure, par exemple <code>https://example.com</code>, puis clique sur Go.</p>
+</main></body></html>)HTML";
+        HRESULT hr = g_webview->NavigateToString(html);
+        if (FAILED(hr)) {
+            wchar_t code[32]{};
+            swprintf_s(code, L"0x%08X", static_cast<unsigned int>(hr));
+            RecordError(L"START_PAGE_RENDER_FAILED", code, L"HIGH",
+                        L"Render built-in start page", L"Local start page renders without network",
+                        L"NavigateToString failed after WebView2 controller reached READY",
+                        L"UNKNOWN", L"Unexpected WebView2 local-render failure",
+                        L"Cold-start and assert local start page appears before any network navigation",
+                        L"A viable browser must prove local rendering independently of network state.");
+        } else {
+            AppendTelemetry(L"START_PAGE_NAVIGATED", L"INFO", L"local_html=1");
+        }
+        return;
+    }
+    g_webview->Navigate(url.c_str());
 }
 
 void NavigateActive(const std::wstring& raw) {
@@ -825,13 +867,47 @@ void ShowRuntimeMissing(HRESULT hr) {
 }
 
 VOID CALLBACK LowMemoryWaitCallback(PVOID, BOOLEAN) {
+    InterlockedExchange(&g_lowMemWaitArmed, 0);
+    g_lowMemWait = nullptr;
     if (g_main) PostMessageW(g_main, WM_APP_LOW_MEMORY, 0, 0);
+}
+
+bool ArmLowMemoryWait() {
+    if (!g_lowMemHandle) return false;
+    if (InterlockedCompareExchange(&g_lowMemWaitArmed, 1, 0) != 0) return true;
+    HANDLE waitHandle = nullptr;
+    if (!RegisterWaitForSingleObject(&waitHandle, g_lowMemHandle, LowMemoryWaitCallback, nullptr, INFINITE,
+                                     WT_EXECUTEONLYONCE | WT_EXECUTEDEFAULT)) {
+        InterlockedExchange(&g_lowMemWaitArmed, 0);
+        return false;
+    }
+    g_lowMemWait = waitHandle;
+    return true;
+}
+
+void MaybeRearmLowMemoryWait() {
+    if (!g_lowMemHandle) return;
+    BOOL low = FALSE;
+    if (!QueryMemoryResourceNotification(g_lowMemHandle, &low)) return;
+    if (!low && InterlockedCompareExchange(&g_lowMemEpisodeActive, 0, 1) == 1) {
+        AppendTelemetry(L"LOW_MEMORY_RECOVERED", L"INFO", L"Windows low-memory notification cleared");
+    }
+    if (!low && InterlockedCompareExchange(&g_lowMemWaitArmed, 0, 0) == 0) {
+        ArmLowMemoryWait();
+    }
 }
 
 void SetupLowMemorySignal() {
     g_lowMemHandle = CreateMemoryResourceNotification(LowMemoryResourceNotification);
     if (g_lowMemHandle) {
-        RegisterWaitForSingleObject(&g_lowMemWait, g_lowMemHandle, LowMemoryWaitCallback, nullptr, INFINITE, WT_EXECUTEDEFAULT);
+        if (!ArmLowMemoryWait()) {
+            RecordError(L"LOW_MEMORY_WATCH_ARM_FAILED", std::to_wstring(GetLastError()), L"LOW",
+                        L"Arm one-shot low-memory notification", L"One-shot wait registered",
+                        L"RegisterWaitForSingleObject failed",
+                        L"UNKNOWN", L"Windows wait registration failure",
+                        L"Exercise low-memory watch registration failure and assert browser remains usable",
+                        L"Resource telemetry must never starve the UI message loop.");
+        }
     } else {
         RecordError(L"LOW_MEMORY_WATCH_SETUP_FAILED", std::to_wstring(GetLastError()), L"LOW",
                     L"Register Windows low-memory notification", L"Notification handle registered",
@@ -847,6 +923,7 @@ void CleanupLowMemorySignal() {
         UnregisterWaitEx(g_lowMemWait, INVALID_HANDLE_VALUE);
         g_lowMemWait = nullptr;
     }
+    InterlockedExchange(&g_lowMemWaitArmed, 0);
     if (g_lowMemHandle) {
         CloseHandle(g_lowMemHandle);
         g_lowMemHandle = nullptr;
@@ -990,9 +1067,9 @@ void InitWebView() {
                             UpdateTabButtons();
                             UpdateWindowTitle();
                             SetWindowTextW(g_address, g_tabs[g_activeTab].url.c_str());
-                            AppendTelemetry(L"WEBVIEW2_CONTROLLER_READY", L"INFO", L"physical_slots=1");
+                            AppendTelemetry(L"WEBVIEW2_CONTROLLER_READY", L"INFO", L"physical_slots=1 lowmem_edge_guard=1");
                             WriteHeartbeat();
-                            g_webview->Navigate(g_tabs[g_activeTab].url.c_str());
+                            NavigateInitialPage();
                             return S_OK;
                         }).Get());
                 return S_OK;
@@ -1161,12 +1238,18 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
     }
     case WM_APP_LOW_MEMORY: {
         MemorySnapshot m = MemoryNow();
-        RecordError(L"LOW_MEMORY_SIGNAL", std::to_wstring(m.load), L"MEDIUM",
-                    L"Keep browser usable under memory pressure", L"Maintain safe memory headroom",
-                    L"Windows LowMemoryResourceNotification fired; available_mb=" + std::to_wstring(m.availMb),
-                    L"CONFIRMED", L"System memory pressure crossed Windows low-memory threshold",
-                    L"Stress host memory to 80/90/95% and assert notification, no second renderer allocation, and continued heartbeat",
-                    L"Field memory pressure is a first-class beta incident and must be captured without user screenshots.");
+        if (InterlockedExchange(&g_lowMemEpisodeActive, 1) == 0) {
+            RecordError(L"LOW_MEMORY_SIGNAL", L"LOW_MEMORY", L"MEDIUM",
+                        L"Keep browser usable under memory pressure", L"Maintain safe memory headroom",
+                        L"Windows LowMemoryResourceNotification entered low state; load_pct=" + std::to_wstring(m.load) +
+                            L"; available_mb=" + std::to_wstring(m.availMb),
+                        L"CONFIRMED", L"System memory pressure crossed Windows low-memory threshold",
+                        L"Stress host memory to 80/90/95% and assert exactly one incident per low-memory episode, continued UI pumping, and WebView2 initialization progress",
+                        L"A level-triggered low-memory signal must be converted into an edge-triggered incident; repeated file I/O must never starve the UI loop.");
+        } else {
+            AppendTelemetry(L"LOW_MEMORY_REPEAT_SUPPRESSED", L"INFO",
+                            L"load_pct=" + std::to_wstring(m.load) + L"; available_mb=" + std::to_wstring(m.availMb));
+        }
         SetProcessWorkingSetSize(GetCurrentProcess(), static_cast<SIZE_T>(-1), static_cast<SIZE_T>(-1));
         return 0;
     }
