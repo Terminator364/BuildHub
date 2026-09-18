@@ -65,6 +65,22 @@ class ReceiptTests(unittest.TestCase):
             with self.assertRaises(CommitConflict):
                 publish_verified(src, dst, receipt, operation_id="stable-op")
 
+    def test_different_operation_cannot_overwrite_committed_receipt(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            src = root / "source.bin"
+            dst = root / "published.bin"
+            receipt = root / "receipt.json"
+            src.write_bytes(b"first artifact")
+            original = publish_verified(src, dst, receipt, operation_id="op-original")
+
+            src.write_bytes(b"second artifact")
+            with self.assertRaises(CommitConflict):
+                publish_verified(src, dst, receipt, operation_id="op-other")
+
+            self.assertEqual(read_json(receipt), original)
+            self.assertEqual(dst.read_bytes(), b"first artifact")
+
 
 if __name__ == "__main__":
     unittest.main()
