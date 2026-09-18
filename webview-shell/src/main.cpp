@@ -29,7 +29,7 @@ constexpr UINT_PTR TIMER_WEBVIEW_WATCHDOG = 2002;
 constexpr UINT HEARTBEAT_MS = 60000;
 constexpr UINT WEBVIEW_WATCHDOG_MS = 15000;
 constexpr wchar_t kSchemaVersion[] = L"browser4g-error/1";
-constexpr wchar_t kBuildVersion[] = L"0.1.2-beta";
+constexpr wchar_t kBuildVersion[] = L"0.1.3-beta";
 
 enum ControlId : int {
     ID_BACK = 1001,
@@ -686,6 +686,44 @@ void UpdateWindowTitle() {
     SetWindowTextW(g_main, title.c_str());
 }
 
+
+void NavigateInitialPage() {
+    if (!g_webview) return;
+    std::wstring url = g_tabs[g_activeTab].url;
+    if (url.empty() || url == L"about:blank") {
+        const wchar_t* html =
+            LR"HTML(<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{color-scheme:dark;font-family:Segoe UI,system-ui,sans-serif}
+body{margin:0;background:#0b0d10;color:#eef2f7;display:grid;place-items:center;min-height:100vh}
+main{width:min(760px,82vw);padding:48px;border:1px solid #262c35;border-radius:24px;background:#11151a;box-shadow:0 18px 60px #0008}
+h1{font-size:38px;margin:0 0 10px;letter-spacing:-1px}
+p{color:#aeb7c4;line-height:1.55;font-size:17px}
+.badge{display:inline-block;border:1px solid #314154;border-radius:999px;padding:7px 12px;color:#cfe8ff;background:#142131;margin-bottom:26px}
+code{color:#d6e6ff;background:#0a1017;padding:3px 7px;border-radius:7px}
+</style></head><body><main><div class="badge">BROWSER4G · Beta field build</div>
+<h1>Moteur Web prêt.</h1>
+<p>Cette page est intégrée localement au navigateur. Si tu la vois, le contrôleur WebView2 et le rendu fonctionnent réellement.</p>
+<p>Entre une adresse dans la barre supérieure, par exemple <code>https://example.com</code>, puis clique sur Go.</p>
+</main></body></html>)HTML";
+        HRESULT hr = g_webview->NavigateToString(html);
+        if (FAILED(hr)) {
+            wchar_t code[32]{};
+            swprintf_s(code, L"0x%08X", static_cast<unsigned int>(hr));
+            RecordError(L"START_PAGE_RENDER_FAILED", code, L"HIGH",
+                        L"Render built-in start page", L"Local start page renders without network",
+                        L"NavigateToString failed after WebView2 controller reached READY",
+                        L"UNKNOWN", L"Unexpected WebView2 local-render failure",
+                        L"Cold-start and assert local start page appears before any network navigation",
+                        L"A viable browser must prove local rendering independently of network state.");
+        } else {
+            AppendTelemetry(L"START_PAGE_NAVIGATED", L"INFO", L"local_html=1");
+        }
+        return;
+    }
+    g_webview->Navigate(url.c_str());
+}
+
 void NavigateActive(const std::wstring& raw) {
     std::wstring url = NormalizeAddress(raw);
     g_tabs[g_activeTab].url = url;
@@ -992,7 +1030,7 @@ void InitWebView() {
                             SetWindowTextW(g_address, g_tabs[g_activeTab].url.c_str());
                             AppendTelemetry(L"WEBVIEW2_CONTROLLER_READY", L"INFO", L"physical_slots=1");
                             WriteHeartbeat();
-                            g_webview->Navigate(g_tabs[g_activeTab].url.c_str());
+                            NavigateInitialPage();
                             return S_OK;
                         }).Get());
                 return S_OK;
