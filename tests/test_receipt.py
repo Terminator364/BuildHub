@@ -4,7 +4,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from buildhub.io import read_json, sha256_file
-from buildhub.receipt import publish_verified
+from buildhub.receipt import CommitConflict, publish_verified
 
 
 class ReceiptTests(unittest.TestCase):
@@ -37,6 +37,33 @@ class ReceiptTests(unittest.TestCase):
                     publish_verified(src, dst, receipt, operation_id="op-2")
 
             self.assertEqual(dst.read_bytes(), b"previous validated")
+
+    def test_same_committed_operation_is_idempotent(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            src = root / "source.bin"
+            dst = root / "published.bin"
+            receipt = root / "receipt.json"
+            src.write_bytes(b"same payload")
+            first = publish_verified(src, dst, receipt, operation_id="stable-op")
+
+            with patch("buildhub.receipt.shutil.copyfile", side_effect=AssertionError("must not rewrite")):
+                replay = publish_verified(src, dst, receipt, operation_id="stable-op")
+
+            self.assertEqual(first, replay)
+
+    def test_same_operation_with_changed_source_is_conflict(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            src = root / "source.bin"
+            dst = root / "published.bin"
+            receipt = root / "receipt.json"
+            src.write_bytes(b"version one")
+            publish_verified(src, dst, receipt, operation_id="stable-op")
+            src.write_bytes(b"version two")
+
+            with self.assertRaises(CommitConflict):
+                publish_verified(src, dst, receipt, operation_id="stable-op")
 
 
 if __name__ == "__main__":
