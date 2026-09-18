@@ -1,0 +1,12 @@
+{"id":"BH-E001","mechanism":"argument-list-0-1-N-and-space-paths","observed_in":["BUILD1","BUILD2"],"invariant":"CLI and process invocation preserve zero, one, many arguments and paths containing spaces","regression_status":"PLANNED"}
+{"id":"BH-E002","mechanism":"windows-external-termination-0xC000013A","observed_in":["BUILD1","BUILD2"],"invariant":"external cancellation is classified separately from build failure and cannot produce COMMITTED","regression_status":"PLANNED"}
+{"id":"BH-E003","mechanism":"missing-runtime-module-build2_core","observed_in":["BUILD2"],"invariant":"required runtime modules are verified before execution","regression_status":"PLANNED"}
+{"id":"BH-E004","mechanism":"incomplete-payload","observed_in":["BUILD1","BUILD2"],"invariant":"payload completeness is checked before activation","regression_status":"PLANNED"}
+{"id":"BH-E005","mechanism":"false-commit-without-hash-readback","observed_in":["BUILD1","BUILD2"],"invariant":"COMMITTED requires SHA-256 plus post-write readback evidence","regression_status":"EXECUTABLE"}
+{"id":"BH-E006","mechanism":"stale-recovery-replay","observed_in":["BUILD1","BUILD2"],"invariant":"a committed recovery step cannot be replayed as pending","regression_status":"EXECUTABLE"}
+{"id":"BH-E007","mechanism":"utf8-bom-json","observed_in":["BUILD1","BUILD2"],"invariant":"JSON readers tolerate UTF-8 BOM while writers emit canonical UTF-8","regression_status":"EXECUTABLE"}
+{"id":"BH-E008","mechanism":"heartbeat-insufficient-for-long-worker","observed_in":["BUILD2"],"invariant":"long operations expose machine-readable liveness and operation identity","regression_status":"PLANNED"}
+{"id":"BH-E009","mechanism":"non-idempotent-retry","observed_in":["BUILD1","BUILD2"],"invariant":"retrying a completed operation does not duplicate publication or corrupt state","regression_status":"PLANNED"}
+{"id":"BH-E010","mechanism":"partial-publication","observed_in":["BUILD1","BUILD2"],"invariant":"failed finalization restores the previously validated destination","regression_status":"EXECUTABLE"}
+{"id":"BH-E011","mechanism":"github-actions-quota-or-service-exhaustion","observed_in":["BUILD2"],"invariant":"external CI unavailability cannot corrupt local state or block autonomous local recovery","regression_status":"PLANNED"}
+{"id":"BH-E012","mechanism":"cancellation-subtree-leak","observed_in":["BUILD1","BUILD2"],"invariant":"cancellation terminates the supervised process subtree and leaves recoverable state","regression_status":"PLANNED"}
