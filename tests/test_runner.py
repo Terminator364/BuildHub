@@ -1,5 +1,6 @@
 import sys
 import tempfile
+import time
 import unittest
 from pathlib import Path
 
@@ -49,6 +50,32 @@ class RunnerTests(unittest.TestCase):
             self.assertEqual(result["classification"], "TIMEOUT")
             final = read_json(root / "heartbeat.json")
             self.assertEqual(final["state"], "TIMEOUT")
+
+    def test_timeout_terminates_descendant_process(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            sentinel = root / "child-survived.txt"
+            child_code = (
+                "import pathlib,time;"
+                "time.sleep(1.5);"
+                f"pathlib.Path({str(sentinel)!r}).write_text('alive', encoding='utf-8')"
+            )
+            parent_code = (
+                "import subprocess,sys,time;"
+                f"subprocess.Popen([sys.executable, '-c', {child_code!r}]);"
+                "time.sleep(30)"
+            )
+            result = run_process(
+                [sys.executable, "-c", parent_code],
+                log_path=root / "tree.log",
+                heartbeat_path=root / "tree-heartbeat.json",
+                operation_id="tree-timeout",
+                timeout_seconds=0.5,
+                heartbeat_seconds=0.2,
+            )
+            self.assertEqual(result["classification"], "TIMEOUT")
+            time.sleep(2.0)
+            self.assertFalse(sentinel.exists(), "descendant escaped process-tree cancellation")
 
 
 if __name__ == "__main__":
