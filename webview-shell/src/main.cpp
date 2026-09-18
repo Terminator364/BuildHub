@@ -381,6 +381,7 @@ void SetupTelemetryPaths() {
 
 void WriteHealthStatus();
 void QueueBridge();
+void MaybeRearmLowMemoryWait();
 
 void AppendTelemetry(const std::wstring& eventName, const std::wstring& severity, const std::wstring& detail = L"") {
     MemorySnapshot m = MemoryNow();
