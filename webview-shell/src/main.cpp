@@ -29,7 +29,7 @@ constexpr UINT_PTR TIMER_WEBVIEW_WATCHDOG = 2002;
 constexpr UINT HEARTBEAT_MS = 60000;
 constexpr UINT WEBVIEW_WATCHDOG_MS = 15000;
 constexpr wchar_t kSchemaVersion[] = L"browser4g-error/1";
-constexpr wchar_t kBuildVersion[] = L"0.1.3-beta";
+constexpr wchar_t kBuildVersion[] = L"0.1.4-beta";
 
 enum ControlId : int {
     ID_BACK = 1001,
@@ -92,6 +92,8 @@ HANDLE g_lowMemWait = nullptr;
 volatile LONG g_bridgeWorkerActive = 0;
 volatile LONG g_errorCount = 0;
 volatile LONG g_cleanShutdown = 0;
+volatile LONG g_lowMemWaitArmed = 0;
+volatile LONG g_lowMemEpisodeActive = 0;
 std::wstring g_lastErrorFingerprint;
 ULONGLONG g_lastErrorTick = 0;
 volatile LONG g_suppressedSameError = 0;
@@ -589,6 +591,7 @@ void WriteHeartbeat() {
        << "}";
     AtomicWriteUtf8(g_heartbeatPath, os.str() + "\n");
     WriteHealthStatus();
+    MaybeRearmLowMemoryWait();
     QueueBridge();
 }
 
@@ -863,13 +866,47 @@ void ShowRuntimeMissing(HRESULT hr) {
 }
 
 VOID CALLBACK LowMemoryWaitCallback(PVOID, BOOLEAN) {
+    InterlockedExchange(&g_lowMemWaitArmed, 0);
+    g_lowMemWait = nullptr;
     if (g_main) PostMessageW(g_main, WM_APP_LOW_MEMORY, 0, 0);
+}
+
+bool ArmLowMemoryWait() {
+    if (!g_lowMemHandle) return false;
+    if (InterlockedCompareExchange(&g_lowMemWaitArmed, 1, 0) != 0) return true;
+    HANDLE waitHandle = nullptr;
+    if (!RegisterWaitForSingleObject(&waitHandle, g_lowMemHandle, LowMemoryWaitCallback, nullptr, INFINITE,
+                                     WT_EXECUTEONLYONCE | WT_EXECUTEDEFAULT)) {
+        InterlockedExchange(&g_lowMemWaitArmed, 0);
+        return false;
+    }
+    g_lowMemWait = waitHandle;
+    return true;
+}
+
+void MaybeRearmLowMemoryWait() {
+    if (!g_lowMemHandle) return;
+    BOOL low = FALSE;
+    if (!QueryMemoryResourceNotification(g_lowMemHandle, &low)) return;
+    if (!low && InterlockedCompareExchange(&g_lowMemEpisodeActive, 0, 1) == 1) {
+        AppendTelemetry(L"LOW_MEMORY_RECOVERED", L"INFO", L"Windows low-memory notification cleared");
+    }
+    if (!low && InterlockedCompareExchange(&g_lowMemWaitArmed, 0, 0) == 0) {
+        ArmLowMemoryWait();
+    }
 }
 
 void SetupLowMemorySignal() {
     g_lowMemHandle = CreateMemoryResourceNotification(LowMemoryResourceNotification);
     if (g_lowMemHandle) {
-        RegisterWaitForSingleObject(&g_lowMemWait, g_lowMemHandle, LowMemoryWaitCallback, nullptr, INFINITE, WT_EXECUTEDEFAULT);
+        if (!ArmLowMemoryWait()) {
+            RecordError(L"LOW_MEMORY_WATCH_ARM_FAILED", std::to_wstring(GetLastError()), L"LOW",
+                        L"Arm one-shot low-memory notification", L"One-shot wait registered",
+                        L"RegisterWaitForSingleObject failed",
+                        L"UNKNOWN", L"Windows wait registration failure",
+                        L"Exercise low-memory watch registration failure and assert browser remains usable",
+                        L"Resource telemetry must never starve the UI message loop.");
+        }
     } else {
         RecordError(L"LOW_MEMORY_WATCH_SETUP_FAILED", std::to_wstring(GetLastError()), L"LOW",
                     L"Register Windows low-memory notification", L"Notification handle registered",
@@ -885,6 +922,7 @@ void CleanupLowMemorySignal() {
         UnregisterWaitEx(g_lowMemWait, INVALID_HANDLE_VALUE);
         g_lowMemWait = nullptr;
     }
+    InterlockedExchange(&g_lowMemWaitArmed, 0);
     if (g_lowMemHandle) {
         CloseHandle(g_lowMemHandle);
         g_lowMemHandle = nullptr;
@@ -1028,7 +1066,7 @@ void InitWebView() {
                             UpdateTabButtons();
                             UpdateWindowTitle();
                             SetWindowTextW(g_address, g_tabs[g_activeTab].url.c_str());
-                            AppendTelemetry(L"WEBVIEW2_CONTROLLER_READY", L"INFO", L"physical_slots=1");
+                            AppendTelemetry(L"WEBVIEW2_CONTROLLER_READY", L"INFO", L"physical_slots=1 lowmem_edge_guard=1");
                             WriteHeartbeat();
                             NavigateInitialPage();
                             return S_OK;
@@ -1199,12 +1237,18 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
     }
     case WM_APP_LOW_MEMORY: {
         MemorySnapshot m = MemoryNow();
-        RecordError(L"LOW_MEMORY_SIGNAL", std::to_wstring(m.load), L"MEDIUM",
-                    L"Keep browser usable under memory pressure", L"Maintain safe memory headroom",
-                    L"Windows LowMemoryResourceNotification fired; available_mb=" + std::to_wstring(m.availMb),
-                    L"CONFIRMED", L"System memory pressure crossed Windows low-memory threshold",
-                    L"Stress host memory to 80/90/95% and assert notification, no second renderer allocation, and continued heartbeat",
-                    L"Field memory pressure is a first-class beta incident and must be captured without user screenshots.");
+        if (InterlockedExchange(&g_lowMemEpisodeActive, 1) == 0) {
+            RecordError(L"LOW_MEMORY_SIGNAL", L"LOW_MEMORY", L"MEDIUM",
+                        L"Keep browser usable under memory pressure", L"Maintain safe memory headroom",
+                        L"Windows LowMemoryResourceNotification entered low state; load_pct=" + std::to_wstring(m.load) +
+                            L"; available_mb=" + std::to_wstring(m.availMb),
+                        L"CONFIRMED", L"System memory pressure crossed Windows low-memory threshold",
+                        L"Stress host memory to 80/90/95% and assert exactly one incident per low-memory episode, continued UI pumping, and WebView2 initialization progress",
+                        L"A level-triggered low-memory signal must be converted into an edge-triggered incident; repeated file I/O must never starve the UI loop.");
+        } else {
+            AppendTelemetry(L"LOW_MEMORY_REPEAT_SUPPRESSED", L"INFO",
+                            L"load_pct=" + std::to_wstring(m.load) + L"; available_mb=" + std::to_wstring(m.availMb));
+        }
         SetProcessWorkingSetSize(GetCurrentProcess(), static_cast<SIZE_T>(-1), static_cast<SIZE_T>(-1));
         return 0;
     }
