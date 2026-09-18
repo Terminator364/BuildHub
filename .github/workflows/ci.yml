@@ -1,0 +1,49 @@
+name: buildhub-ci
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test-${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Public repository boundary audit
+        run: python tools/public_audit.py .
+
+      - name: Compile
+        run: python -m compileall -q buildhub tests
+
+      - name: Regression tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Doctor evidence
+        run: python -m buildhub.cli doctor --json ci-doctor.json
+
+      - name: Upload doctor evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: doctor-${{ runner.os }}-${{ github.sha }}
+          path: ci-doctor.json
+          if-no-files-found: error
+          retention-days: 7
