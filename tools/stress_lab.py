@@ -5,6 +5,11 @@ import sys
 import tempfile
 from pathlib import Path
 
+# Direct script execution puts tools/ at sys.path[0]; restore repository root.
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 from buildhub.execution import choose_execution_backend
 from buildhub.io import sha256_file
 from buildhub.package import create_package, verify_package
