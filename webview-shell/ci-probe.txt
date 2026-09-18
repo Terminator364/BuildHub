@@ -1,1 +1,2 @@
 BROWSER4G generic shell bootstrap validation 2026-09-18
+Retry after dynamic MSVC discovery.
