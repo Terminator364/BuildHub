@@ -20,13 +20,16 @@ using Microsoft::WRL::ComPtr;
 
 namespace {
 constexpr int kMaxTabs = 3;
-constexpr int kToolbarH = 40;
-constexpr int kTabsH = 32;
+constexpr int kToolbarH = 48;
+constexpr int kTabsH = 38;
 constexpr UINT WM_APP_LOW_MEMORY = WM_APP + 11;
+constexpr UINT WM_APP_INIT_WEBVIEW = WM_APP + 12;
 constexpr UINT_PTR TIMER_HEARTBEAT = 2001;
+constexpr UINT_PTR TIMER_WEBVIEW_WATCHDOG = 2002;
 constexpr UINT HEARTBEAT_MS = 60000;
+constexpr UINT WEBVIEW_WATCHDOG_MS = 15000;
 constexpr wchar_t kSchemaVersion[] = L"browser4g-error/1";
-constexpr wchar_t kBuildVersion[] = L"0.1.1-beta";
+constexpr wchar_t kBuildVersion[] = L"0.1.2-beta";
 
 enum ControlId : int {
     ID_BACK = 1001,
@@ -92,6 +95,8 @@ volatile LONG g_cleanShutdown = 0;
 std::wstring g_lastErrorFingerprint;
 ULONGLONG g_lastErrorTick = 0;
 volatile LONG g_suppressedSameError = 0;
+std::wstring g_initStage = L"NOT_STARTED";
+HFONT g_uiFont = nullptr;
 
 std::wstring Join(const std::wstring& a, const std::wstring& b) {
     if (a.empty()) return b;
@@ -551,6 +556,7 @@ void WriteHealthStatus() {
        << ",\"run_id\":\"" << JsonEscapeUtf8(g_runId) << "\""
        << ",\"started_utc\":\"" << JsonEscapeUtf8(g_startedUtc) << "\""
        << ",\"runtime_version\":\"" << JsonEscapeUtf8(g_runtimeVersion) << "\""
+       << ",\"init_stage\":\"" << JsonEscapeUtf8(g_initStage) << "\""
        << ",\"webview_ready\":" << (g_webview ? "true" : "false")
        << ",\"tab_count\":" << g_tabCount
        << ",\"active_tab\":" << g_activeTab
@@ -578,6 +584,7 @@ void WriteHeartbeat() {
        << ",\"memory_available_mb\":" << m.availMb
        << ",\"process_working_set_mb\":" << m.workingSetMb
        << ",\"process_private_mb\":" << m.privateMb
+       << ",\"init_stage\":\"" << JsonEscapeUtf8(g_initStage) << "\""
        << ",\"webview_ready\":" << (g_webview ? "true" : "false")
        << "}";
     AtomicWriteUtf8(g_heartbeatPath, os.str() + "\n");
@@ -871,6 +878,10 @@ void RecordRuntimeVersion() {
 }
 
 void InitWebView() {
+    if (g_webview || g_initStage == L"ENV_REQUESTED" || g_initStage == L"CONTROLLER_REQUESTED") return;
+    g_initStage = L"ENV_REQUESTED";
+    AppendTelemetry(L"WEBVIEW2_INIT_BEGIN", L"INFO", L"message_loop_ready=1 hwnd_valid=" + std::to_wstring(g_main != nullptr));
+    WriteHealthStatus();
     RecordRuntimeVersion();
     HRESULT hr = CreateCoreWebView2EnvironmentWithOptions(
         nullptr,
@@ -879,22 +890,28 @@ void InitWebView() {
         Callback<ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler>(
             [](HRESULT result, ICoreWebView2Environment* env) -> HRESULT {
                 if (FAILED(result) || !env) {
+                    g_initStage = L"ENV_FAILED";
                     ShowRuntimeMissing(result);
                     return S_OK;
                 }
                 g_environment = env;
+                g_initStage = L"ENV_READY";
                 AppendTelemetry(L"WEBVIEW2_ENV_READY", L"INFO", g_runtimeVersion);
+                WriteHealthStatus();
+                g_initStage = L"CONTROLLER_REQUESTED";
                 env->CreateCoreWebView2Controller(
                     g_main,
                     Callback<ICoreWebView2CreateCoreWebView2ControllerCompletedHandler>(
                         [](HRESULT result2, ICoreWebView2Controller* controller) -> HRESULT {
                             if (FAILED(result2) || !controller) {
+                                g_initStage = L"CONTROLLER_FAILED";
                                 ShowRuntimeMissing(result2);
                                 return S_OK;
                             }
                             g_controller = controller;
                             g_controller->get_CoreWebView2(g_webview.GetAddressOf());
                             if (!g_webview) {
+                                g_initStage = L"CORE_NULL";
                                 RecordError(L"WEBVIEW2_CORE_NULL", L"E_FAIL", L"HIGH",
                                             L"Acquire CoreWebView2", L"Core interface available",
                                             L"Controller exists but CoreWebView2 is null",
@@ -967,6 +984,8 @@ void InitWebView() {
                                     }).Get(),
                                 &g_processFailedToken);
 
+                            g_initStage = L"READY";
+                            if (g_main) KillTimer(g_main, TIMER_WEBVIEW_WATCHDOG);
                             Layout();
                             UpdateTabButtons();
                             UpdateWindowTitle();
@@ -979,7 +998,10 @@ void InitWebView() {
                 return S_OK;
             }).Get());
 
-    if (FAILED(hr)) ShowRuntimeMissing(hr);
+    if (FAILED(hr)) {
+        g_initStage = L"ENV_REQUEST_FAILED";
+        ShowRuntimeMissing(hr);
+    }
 }
 
 LONG WINAPI CrashFilter(EXCEPTION_POINTERS* ep) {
@@ -1056,7 +1078,13 @@ void EndRunCleanly() {
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
     switch (msg) {
     case WM_CREATE: {
-        HFONT font = static_cast<HFONT>(GetStockObject(DEFAULT_GUI_FONT));
+        // CreateWindowExW delivers WM_CREATE before its return value is assigned to g_main.
+        // Bind the actual HWND immediately, then defer WebView2 bootstrap until the message loop is active.
+        g_main = hwnd;
+        g_uiFont = CreateFontW(-18, 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE, DEFAULT_CHARSET,
+                               OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, CLEARTYPE_QUALITY,
+                               DEFAULT_PITCH | FF_DONTCARE, L"Segoe UI");
+        HFONT font = g_uiFont ? g_uiFont : static_cast<HFONT>(GetStockObject(DEFAULT_GUI_FONT));
         auto makeButton = [&](const wchar_t* text, int id) {
             HWND h = CreateWindowW(L"BUTTON", text, WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
                                    0, 0, 10, 10, hwnd, reinterpret_cast<HMENU>(static_cast<INT_PTR>(id)), nullptr, nullptr);
@@ -1078,15 +1106,33 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
         UpdateTabButtons();
         SetupLowMemorySignal();
         SetTimer(hwnd, TIMER_HEARTBEAT, HEARTBEAT_MS, nullptr);
-        InitWebView();
+        SetTimer(hwnd, TIMER_WEBVIEW_WATCHDOG, WEBVIEW_WATCHDOG_MS, nullptr);
+        PostMessageW(hwnd, WM_APP_INIT_WEBVIEW, 0, 0);
         return 0;
     }
     case WM_SIZE:
         Layout();
         return 0;
+    case WM_APP_INIT_WEBVIEW:
+        InitWebView();
+        return 0;
     case WM_TIMER:
         if (wp == TIMER_HEARTBEAT) {
             WriteHeartbeat();
+            return 0;
+        }
+        if (wp == TIMER_WEBVIEW_WATCHDOG) {
+            KillTimer(hwnd, TIMER_WEBVIEW_WATCHDOG);
+            if (!g_webview) {
+                RecordError(L"WEBVIEW2_INIT_TIMEOUT", g_initStage, L"HIGH",
+                            L"Initialize WebView2 after native window creation",
+                            L"Environment and controller become ready within 15 seconds",
+                            L"WebView2 initialization did not reach READY; init_stage=" + g_initStage,
+                            L"STRONG_CANDIDATE",
+                            L"Initialization stalled before environment/controller completion; previous build could start WebView2 during WM_CREATE before the final HWND assignment/message-loop readiness",
+                            L"Cold-start repeatedly under 80/90/95% memory pressure and assert READY or explicit stage failure within 15 seconds",
+                            L"WebView2 bootstrap must begin only after the final HWND exists and the UI message loop can service asynchronous completion.");
+            }
             return 0;
         }
         break;
@@ -1131,11 +1177,16 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
         return 0;
     case WM_DESTROY:
         KillTimer(hwnd, TIMER_HEARTBEAT);
+        KillTimer(hwnd, TIMER_WEBVIEW_WATCHDOG);
         CleanupLowMemorySignal();
         if (g_controller) g_controller->Close();
         g_webview.Reset();
         g_controller.Reset();
         g_environment.Reset();
+        if (g_uiFont) {
+            DeleteObject(g_uiFont);
+            g_uiFont = nullptr;
+        }
         PostQuitMessage(0);
         return 0;
     }
