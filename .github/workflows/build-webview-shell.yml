@@ -14,13 +14,17 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: buildhub-webview-shell-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: windows-latest
     timeout-minutes: 20
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Restore pinned WebView2 SDK
         shell: pwsh
@@ -53,9 +57,9 @@ jobs:
           Get-Content out\build-manifest.json
 
       - name: Upload generic shell artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: buildhub-webview-shell-x64
           path: out/
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 7
