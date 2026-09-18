@@ -32,6 +32,7 @@ def _existing_commit(
     existing = read_json(receipt_path)
     if existing.get("status") != "COMMITTED":
         return None
+
     current_source_hash = sha256_file(src)
     same_operation = existing.get("operation_id") == operation_id
     same_source = existing.get("source_sha256") == current_source_hash
@@ -40,11 +41,14 @@ def _existing_commit(
         and existing.get("published_sha256") == sha256_file(dst)
         and existing.get("readback_verified") is True
     )
+
     if same_operation and same_source and same_destination:
         return existing
+
     if same_operation:
         raise CommitConflict("operation_id already committed with different evidence")
-    return None
+
+    raise CommitConflict("receipt path already contains a committed operation")
 
 
 def publish_verified(
@@ -58,6 +62,8 @@ def publish_verified(
 
     Replaying the same committed operation with identical source/destination
     evidence returns the existing receipt without rewriting the destination.
+    Once COMMITTED, a receipt path is immutable and cannot be reused by another
+    operation.
     """
     src = Path(source)
     dst = Path(destination)
