@@ -89,6 +89,9 @@ HANDLE g_lowMemWait = nullptr;
 volatile LONG g_bridgeWorkerActive = 0;
 volatile LONG g_errorCount = 0;
 volatile LONG g_cleanShutdown = 0;
+std::wstring g_lastErrorFingerprint;
+ULONGLONG g_lastErrorTick = 0;
+volatile LONG g_suppressedSameError = 0;
 
 std::wstring Join(const std::wstring& a, const std::wstring& b) {
     if (a.empty()) return b;
@@ -410,11 +413,24 @@ void RecordError(const std::wstring& errorClass,
                  const std::wstring& regressionTest,
                  const std::wstring& lesson,
                  const std::wstring& evidenceRef = L"") {
-    const std::wstring eventId = NewId();
     const std::wstring utc = UtcNowIso();
     const std::wstring countKey = CountKeyFor(errorClass, rawCode);
     int occurrence = ReadIniInt(L"counts", countKey.c_str(), 0, g_errorCountPath) + 1;
     WriteIni(L"counts", countKey.c_str(), std::to_wstring(occurrence), g_errorCountPath);
+
+    const std::wstring fingerprint = errorClass + L"|" + rawCode + L"|" + observed;
+    const ULONGLONG nowTick = GetTickCount64();
+    if (fingerprint == g_lastErrorFingerprint && (nowTick - g_lastErrorTick) < 60000ull) {
+        InterlockedIncrement(&g_suppressedSameError);
+        AppendTelemetry(L"ERROR_DEDUPED", severity, errorClass + L" / occurrence=" + std::to_wstring(occurrence));
+        WriteHealthStatus();
+        QueueBridge();
+        return;
+    }
+    g_lastErrorFingerprint = fingerprint;
+    g_lastErrorTick = nowTick;
+
+    const std::wstring eventId = NewId();
     InterlockedIncrement(&g_errorCount);
 
     std::ostringstream os;
@@ -543,6 +559,7 @@ void WriteHealthStatus() {
        << ",\"process_working_set_mb\":" << m.workingSetMb
        << ",\"process_private_mb\":" << m.privateMb
        << ",\"error_count_session\":" << g_errorCount
+       << ",\"deduped_error_repeats_session\":" << g_suppressedSameError
        << ",\"chatgpt_pc_bridge_detected\":" << (bridge ? "true" : "false")
        << ",\"privacy\":\"NO_PAGE_CONTENT_NO_COOKIES_NO_TOKENS_NO_FORM_DATA_NO_FULL_URLS\""
        << "}";
