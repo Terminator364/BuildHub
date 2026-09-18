@@ -1,5 +1,6 @@
 import contextlib
 import io
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -26,9 +27,8 @@ class CliTests(unittest.TestCase):
             with contextlib.redirect_stdout(output):
                 code = main(["hash", str(a), str(b)])
             self.assertEqual(code, 0)
-            text = output.getvalue()
-            self.assertIn(str(a), text)
-            self.assertIn(str(b), text)
+            payload = json.loads(output.getvalue())
+            self.assertEqual([item["path"] for item in payload], [str(a), str(b)])
 
 
 if __name__ == "__main__":
