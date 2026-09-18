@@ -6,6 +6,10 @@ on:
     paths:
       - 'webview-shell/**'
       - '.github/workflows/build-webview-shell.yml'
+  pull_request:
+    paths:
+      - 'webview-shell/**'
+      - '.github/workflows/build-webview-shell.yml'
 
 permissions:
   contents: read
