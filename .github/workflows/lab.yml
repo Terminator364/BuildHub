@@ -1,0 +1,73 @@
+name: BuildHub public lab
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+  push:
+    paths:
+      - ".github/workflows/lab.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: buildhub-public-lab-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compatibility:
+    name: ${{ matrix.os }}-py${{ matrix.python }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-22.04
+          - ubuntu-24.04
+          - windows-2022
+          - windows-2025
+        python:
+          - "3.10"
+          - "3.11"
+          - "3.12"
+          - "3.13"
+          - "3.14"
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Public boundary
+        run: python tools/public_audit.py .
+
+      - name: Ledger integrity
+        run: python tools/check_ledger.py .project-memory/ERROR_LEDGER.jsonl
+
+      - name: Compile
+        run: python -m compileall -q buildhub tests tools
+
+      - name: Regression suite
+        run: python -m unittest discover -s tests -v
+
+      - name: Stress lab
+        run: python tools/stress_lab.py lab-report.json
+
+      - name: Doctor
+        run: python -m buildhub.cli doctor --json lab-doctor.json
+
+      - name: Upload compact evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: lab-${{ matrix.os }}-py${{ matrix.python }}-${{ github.sha }}
+          path: |
+            lab-report.json
+            lab-doctor.json
+          if-no-files-found: error
+          retention-days: 3
