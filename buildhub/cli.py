@@ -6,7 +6,10 @@ from pathlib import Path
 from typing import Sequence
 
 from .doctor import run_doctor
+from .execution import choose_execution_backend
 from .io import atomic_write_json, sha256_file
+from .package import create_package, verify_package
+from .payload import validate_payload
 from .receipt import publish_verified
 from .recovery import RecoveryJournal
 from .runner import run_process
@@ -38,7 +41,27 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--operation-id")
     run.add_argument("argv", nargs=argparse.REMAINDER)
 
+    payload = sub.add_parser("validate-payload", help="Verify payload files, hashes, and required modules")
+    payload.add_argument("manifest")
+
+    package = sub.add_parser("package", help="Create a deterministic BuildHub package")
+    package.add_argument("--root", default=".")
+    package.add_argument("--output", required=True)
+    package.add_argument("files", nargs="+")
+
+    verify = sub.add_parser("verify-package", help="Verify a BuildHub package manifest and hashes")
+    verify.add_argument("package")
+
+    plan = sub.add_parser("plan", help="Select remote or local execution without making CI authoritative")
+    plan.add_argument("--remote-status", required=True)
+    plan.add_argument("--local-unavailable", action="store_true")
+    plan.add_argument("--prefer-local", action="store_true")
+
     return p
+
+
+def _print(value: object) -> None:
+    print(json.dumps(value, ensure_ascii=False, sort_keys=True))
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -52,29 +75,21 @@ def main(argv: Sequence[str] | None = None) -> int:
         result = run_doctor()
         if args.json_path:
             atomic_write_json(args.json_path, result)
-        print(json.dumps(result, ensure_ascii=False, sort_keys=True))
+        _print(result)
         return 0
 
     if args.command == "hash":
-        print(json.dumps(
-            [{"path": str(Path(p)), "sha256": sha256_file(p)} for p in args.paths],
-            ensure_ascii=False,
-            sort_keys=True,
-        ))
+        _print([{"path": str(Path(p)), "sha256": sha256_file(p)} for p in args.paths])
         return 0
 
     if args.command == "publish":
-        result = publish_verified(
-            args.source,
-            args.destination,
-            args.receipt,
-            operation_id=args.operation_id,
-        )
-        print(json.dumps(result, ensure_ascii=False, sort_keys=True))
+        _print(publish_verified(
+            args.source, args.destination, args.receipt, operation_id=args.operation_id
+        ))
         return 0
 
     if args.command == "recover-status":
-        print(json.dumps(RecoveryJournal(args.journal).status(), ensure_ascii=False, sort_keys=True))
+        _print(RecoveryJournal(args.journal).status())
         return 0
 
     if args.command == "run":
@@ -90,8 +105,33 @@ def main(argv: Sequence[str] | None = None) -> int:
             timeout_seconds=args.timeout,
             operation_id=args.operation_id,
         )
-        print(json.dumps(result, ensure_ascii=False, sort_keys=True))
+        _print(result)
         return 0 if result["classification"] == "SUCCESS" else 1
+
+    if args.command == "validate-payload":
+        _print(validate_payload(args.manifest))
+        return 0
+
+    if args.command == "package":
+        _print(create_package(args.root, args.output, args.files))
+        return 0
+
+    if args.command == "verify-package":
+        _print(verify_package(args.package))
+        return 0
+
+    if args.command == "plan":
+        plan = choose_execution_backend(
+            remote_status=args.remote_status,
+            local_available=not args.local_unavailable,
+            prefer_remote=not args.prefer_local,
+        )
+        _print({
+            "backend": plan.backend,
+            "reason": plan.reason,
+            "local_state_authoritative": plan.local_state_authoritative,
+        })
+        return 0
 
     return 2
 
