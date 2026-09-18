@@ -35,6 +35,21 @@ class RunnerTests(unittest.TestCase):
             self.assertEqual(final["state"], "SUCCESS")
             self.assertEqual(final["operation_id"], "runner-test")
 
+    def test_timeout_is_bounded_and_never_success(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            result = run_process(
+                [sys.executable, "-c", "import time; time.sleep(30)"],
+                log_path=root / "worker.log",
+                heartbeat_path=root / "heartbeat.json",
+                operation_id="timeout-test",
+                timeout_seconds=0.5,
+                heartbeat_seconds=0.2,
+            )
+            self.assertEqual(result["classification"], "TIMEOUT")
+            final = read_json(root / "heartbeat.json")
+            self.assertEqual(final["state"], "TIMEOUT")
+
 
 if __name__ == "__main__":
     unittest.main()
