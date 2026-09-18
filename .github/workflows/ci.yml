@@ -9,6 +9,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: buildhub-ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     name: test-${{ matrix.os }}
@@ -21,29 +25,45 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.11"
 
       - name: Public repository boundary audit
         run: python tools/public_audit.py .
 
-      - name: Compile
-        run: python -m compileall -q buildhub tests
+      - name: Error-ledger validation
+        run: python tools/check_ledger.py .project-memory/ERROR_LEDGER.jsonl
 
-      - name: Regression tests
+      - name: Compile
+        run: python -m compileall -q buildhub tests tools
+
+      - name: Regression and fault-injection tests
         run: python -m unittest discover -s tests -v
 
       - name: Doctor evidence
         run: python -m buildhub.cli doctor --json ci-doctor.json
 
-      - name: Upload doctor evidence
-        uses: actions/upload-artifact@v4
+      - name: Deterministic package smoke test
+        run: >
+          python -m buildhub.cli package --root . --output ci-buildhub.zip
+          README.md pyproject.toml buildhub/__init__.py buildhub/cli.py
+          buildhub/io.py buildhub/receipt.py buildhub/recovery.py
+          buildhub/runner.py buildhub/payload.py buildhub/package.py
+          buildhub/execution.py buildhub/doctor.py buildhub/heartbeat.py
+
+      - name: Verify package smoke test
+        run: python -m buildhub.cli verify-package ci-buildhub.zip
+
+      - name: Upload CI evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: doctor-${{ runner.os }}-${{ github.sha }}
-          path: ci-doctor.json
+          name: evidence-${{ runner.os }}-${{ github.sha }}
+          path: |
+            ci-doctor.json
+            ci-buildhub.zip
           if-no-files-found: error
           retention-days: 7
