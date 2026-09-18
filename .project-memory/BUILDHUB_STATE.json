@@ -1,22 +1,48 @@
 {
   "schema": "buildhub.state/v1",
-  "checkpoint": "PROMPT1-2026-09-18",
-  "phase": "PROMPT_1_INITIALIZATION",
+  "checkpoint": "PROMPT2-2026-09-18",
+  "phase": "PROMPT_2_GITHUB_PUBLIC_LAB",
   "phase_status": "CI_VERIFIED",
-  "evidence_head": "a54758e7c8512cdc050ce0c52af6f7eefc20158e",
+  "evidence_head": "49d3c2950087f7cf8823862c7fe92d0c55755582",
   "evidence": {
-    "buildhub_ci_run": 35374959631,
-    "windows": "PASS",
-    "linux": "PASS",
-    "native_webview_shell_run": 35374959654,
-    "native_webview_shell": "PASS",
-    "artifacts": [
-      "doctor-Linux-a54758e7c8512cdc050ce0c52af6f7eefc20158e",
-      "doctor-Windows-a54758e7c8512cdc050ce0c52af6f7eefc20158e",
-      "buildhub-webview-shell-x64"
-    ]
+    "fast_ci": {
+      "run_id": 35376047887,
+      "head": "49d3c2950087f7cf8823862c7fe92d0c55755582",
+      "windows": "PASS",
+      "linux": "PASS",
+      "artifacts": [
+        "evidence-Linux-49d3c2950087f7cf8823862c7fe92d0c55755582",
+        "evidence-Windows-49d3c2950087f7cf8823862c7fe92d0c55755582"
+      ]
+    },
+    "public_lab": {
+      "run_id": 35376038080,
+      "head": "106e5d88eb304def4de05cbf9af0988eef8d9a1b",
+      "matrix": "4 OS images x Python 3.10-3.14",
+      "cells": 20,
+      "result": "20/20 PASS",
+      "artifact_count": 20
+    },
+    "native_webview_shell": {
+      "run_id": 35376043181,
+      "head": "ee18fc729aca00489d77914d7b864d17d9d8219f",
+      "result": "PASS",
+      "artifact": "buildhub-webview-shell-x64"
+    },
+    "codeql": {
+      "run_id": 35376047988,
+      "head": "49d3c2950087f7cf8823862c7fe92d0c55755582",
+      "python": "PASS",
+      "cpp": "PASS"
+    }
+  },
+  "regression_ledger": {
+    "entries": 12,
+    "status": "ALL_CI_PROVEN"
   },
   "public_private_boundary": "PASS",
-  "next_phase": "PROMPT_2_GITHUB_PUBLIC_LAB",
+  "github_public_lab": "PASS",
+  "field_status": "FIELD_UNVERIFIED",
+  "next_phase": "PROMPT_3_REAL_PC",
   "continuation_code": "BUILDHUB CONTINUE"
 }
