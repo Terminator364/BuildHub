@@ -26,6 +26,23 @@ def fsync_file(path: str | os.PathLike[str]) -> None:
         os.fsync(f.fileno())
 
 
+def fsync_parent_dir(path: str | os.PathLike[str]) -> bool:
+    """Flush a directory entry after atomic replace where the OS supports it."""
+    parent = Path(path)
+    if os.name == "nt":
+        # Windows does not expose portable directory fsync through Python.
+        return False
+    flags = os.O_RDONLY
+    if hasattr(os, "O_DIRECTORY"):
+        flags |= os.O_DIRECTORY
+    fd = os.open(parent, flags)
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+    return True
+
+
 def read_json(path: str | os.PathLike[str]) -> Any:
     with Path(path).open("r", encoding="utf-8-sig") as f:
         return json.load(f)
@@ -42,6 +59,10 @@ def atomic_write_json(path: str | os.PathLike[str], value: Any) -> None:
             f.flush()
             os.fsync(f.fileno())
         os.replace(tmp_name, target)
+        # Re-open the final name so the durable object is the published path,
+        # then persist the directory entry on platforms that support it.
+        fsync_file(target)
+        fsync_parent_dir(target.parent)
     finally:
         try:
             Path(tmp_name).unlink(missing_ok=True)
