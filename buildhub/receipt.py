@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from .io import atomic_write_json, read_json, sha256_file
+from .io import atomic_write_json, fsync_file, read_json, sha256_file
 
 RECEIPT_SCHEMA = "buildhub.receipt/v1"
 
@@ -89,6 +89,7 @@ def publish_verified(
     replaced = False
     try:
         shutil.copyfile(src, stage)
+        fsync_file(stage)
         if sha256_file(stage) != source_hash:
             raise IOError("staging hash mismatch")
 
@@ -99,6 +100,7 @@ def publish_verified(
             os.close(backup_fd)
             backup = Path(backup_name)
             shutil.copyfile(dst, backup)
+            fsync_file(backup)
 
         os.replace(stage, dst)
         replaced = True
@@ -106,6 +108,7 @@ def publish_verified(
         readback_hash = sha256_file(dst)
         if readback_hash != source_hash:
             raise IOError("post-publication readback hash mismatch")
+        fsync_file(dst)
 
         receipt = {
             "schema": RECEIPT_SCHEMA,
