@@ -18,7 +18,9 @@
     "single_signal_cannot_promote_healthy": true,
     "unknown_outcome_is_not_healthy": true,
     "stale_receipt_is_not_healthy": true,
-    "probes_side_effect_free": true
+    "probes_side_effect_free": true,
+    "capability_scoped_health_required": true,
+    "optional_dimension_failure_degrades_only_relevant_capability": true
   },
   "gray_failures": [
     "job_alive_but_destination_becomes_read_only",
@@ -27,5 +29,26 @@
     "destination_exists_but_source_identity_changed",
     "cli_responds_while_recovery_journal_or_publication_state_is_stale"
   ],
-  "promotion_rule": "PUBLICATION_HEALTHY requires source/destination/receipt/identity agreement; COMMIT_OUTCOME_UNKNOWN and conflicts remain non-green."
+  "promotion_rule": "PUBLICATION_HEALTHY requires source/destination/receipt/identity agreement; COMMIT_OUTCOME_UNKNOWN and conflicts remain non-green.",
+  "capability_scopes": {
+    "LOCAL_BUILD": [
+      "PROCESS_OR_JOB_ALIVE",
+      "COMMAND_PATH_USABLE",
+      "SOURCE_READABLE",
+      "OPERATION_IDENTITY_VALID"
+    ],
+    "PUBLICATION": [
+      "COMMAND_PATH_USABLE",
+      "SOURCE_READABLE",
+      "DESTINATION_WRITABLE",
+      "RECEIPT_WRITABLE_AND_READBACK_VERIFIED",
+      "OPERATION_IDENTITY_VALID",
+      "PUBLICATION_STATE_FRESH"
+    ],
+    "RECOVERY_CLASSIFICATION": [
+      "SOURCE_READABLE",
+      "OPERATION_IDENTITY_VALID",
+      "PUBLICATION_STATE_FRESH"
+    ]
+  }
 }
