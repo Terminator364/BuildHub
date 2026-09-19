@@ -20,7 +20,9 @@ def sha256_file(path: str | os.PathLike[str]) -> str:
 def fsync_file(path: str | os.PathLike[str]) -> None:
     """Flush a completed file to stable storage before it can be acknowledged."""
     p = Path(path)
-    with p.open("rb") as f:
+    # Windows requires a writable file descriptor for FlushFileBuffers via os.fsync.
+    # The publication files are app-owned mutable staging/destination files here.
+    with p.open("r+b") as f:
         os.fsync(f.fileno())
 
 
