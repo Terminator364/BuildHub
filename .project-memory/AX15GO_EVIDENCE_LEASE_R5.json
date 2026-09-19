@@ -1,0 +1,74 @@
+{
+  "schema": "ax15go.evidence_lease/1",
+  "project": "BuildHub",
+  "status": "ENGINEERING_CONTRACT_NOT_FIELD_PROOF",
+  "purpose": "Close TOCTOU between health evidence and action without putting full probes on the interactive fast path.",
+  "rules": {
+    "lease_is_not_authentication": true,
+    "lease_is_not_authority_alone": true,
+    "health_snapshot_never_authorizes_mutation_alone": true,
+    "generation_change_invalidates_immediately": true,
+    "process_restart_invalidates_in_memory_leases": true,
+    "wall_clock_is_not_sole_freshness_oracle": true,
+    "stale_or_unknown_lease_is_not_valid": true,
+    "mutation_preconditions_checked_at_effect_boundary": true,
+    "no_full_health_probe_per_turn": true,
+    "no_polling_loop_for_lease_freshness": true,
+    "targeted_refresh_only_on_stale_or_unknown": true,
+    "retries_and_refreshes_bounded": true
+  },
+  "lease_fields": [
+    "capability",
+    "evidence_id",
+    "generation_vector",
+    "source_vector_hash",
+    "process_or_boot_generation",
+    "freshness_class",
+    "created_monotonic_local",
+    "invalidators",
+    "status"
+  ],
+  "freshness_classes": {
+    "FAST_READ_CACHE": "event-driven cached evidence; safe for non-mutating fast reads within unchanged generation vector",
+    "INTERACTIVE_CONTROL": "short-lived/event-invalidated evidence for interactive capability; targeted refresh only when stale",
+    "MUTATION_ADMISSION": "cached evidence is advisory; authoritative revision/fence/idempotency/storage preconditions are checked at effect boundary"
+  },
+  "capabilities": {
+    "LOCAL_BUILD": {
+      "generation_vector": [
+        "operation_id",
+        "source_manifest_hash",
+        "workspace_identity"
+      ],
+      "invalidators": [
+        "SOURCE_HASH_CHANGE",
+        "WORKSPACE_REPLACED",
+        "PROCESS_RESTART"
+      ],
+      "commit_guard": "build result binds exact source/input hashes"
+    },
+    "PUBLICATION": {
+      "generation_vector": [
+        "operation_id",
+        "source_hash",
+        "artifact_hash",
+        "destination_identity",
+        "expected_publication_revision"
+      ],
+      "invalidators": [
+        "SOURCE_HASH_CHANGE",
+        "ARTIFACT_HASH_CHANGE",
+        "DESTINATION_REPLACED",
+        "PUBLICATION_REVISION_CHANGE"
+      ],
+      "commit_guard": "re-read destination identity/revision and artifact hash at atomic publication; lost receipt => COMMIT_OUTCOME_UNKNOWN"
+    }
+  },
+  "negative_controls": [
+    "green health snapshot followed by generation change before action must be rejected/refreshed",
+    "process restart must not reuse prior in-memory lease",
+    "wall-clock rollback/advance must not extend authoritative lease",
+    "remote dependency failure must not force full local re-probe storm",
+    "stale lease must not be silently promoted by a fresh unrelated dimension"
+  ]
+}
