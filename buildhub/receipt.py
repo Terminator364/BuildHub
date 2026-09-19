@@ -56,6 +56,91 @@ def _existing_commit(
     raise CommitConflict("receipt path already contains a committed operation")
 
 
+def reconcile_publication(
+    source: str | os.PathLike[str],
+    destination: str | os.PathLike[str],
+    receipt_path: str | os.PathLike[str],
+    *,
+    operation_id: str,
+) -> dict[str, Any]:
+    """Classify publication state after interruption without mutating anything."""
+    src = Path(source)
+    dst = Path(destination)
+    receipt_file = Path(receipt_path)
+    if not src.is_file():
+        return {"status": "SOURCE_MISSING", "operation_id": operation_id}
+
+    source_hash = sha256_file(src)
+    dst_hash = sha256_file(dst) if dst.is_file() else None
+
+    if not receipt_file.is_file():
+        if dst_hash == source_hash:
+            return {
+                "status": "ARTIFACT_PRESENT_RECEIPT_MISSING",
+                "operation_id": operation_id,
+                "source_sha256": source_hash,
+                "published_sha256": dst_hash,
+            }
+        return {
+            "status": "NOT_COMMITTED",
+            "operation_id": operation_id,
+            "source_sha256": source_hash,
+            "published_sha256": dst_hash,
+        }
+
+    try:
+        receipt = read_json(receipt_file)
+    except Exception as exc:
+        return {
+            "status": "RECEIPT_UNREADABLE",
+            "operation_id": operation_id,
+            "source_sha256": source_hash,
+            "published_sha256": dst_hash,
+            "error": type(exc).__name__,
+        }
+
+    if receipt.get("operation_id") != operation_id:
+        return {
+            "status": "CONFLICT",
+            "operation_id": operation_id,
+            "receipt_operation_id": receipt.get("operation_id"),
+            "source_sha256": source_hash,
+            "published_sha256": dst_hash,
+        }
+
+    expected = receipt.get("published_sha256")
+    if (
+        receipt.get("status") == "COMMITTED"
+        and receipt.get("source_sha256") == source_hash
+        and receipt.get("readback_verified") is True
+        and expected == source_hash
+    ):
+        if dst_hash == source_hash:
+            return {
+                "status": "COMMITTED",
+                "operation_id": operation_id,
+                "source_sha256": source_hash,
+                "published_sha256": dst_hash,
+            }
+        return {
+            "status": "RECEIPT_PRESENT_ARTIFACT_MISMATCH",
+            "operation_id": operation_id,
+            "source_sha256": source_hash,
+            "receipt_sha256": expected,
+            "published_sha256": dst_hash,
+        }
+
+    return {
+        "status": "CONFLICT",
+        "operation_id": operation_id,
+        "source_sha256": source_hash,
+        "receipt_status": receipt.get("status"),
+        "receipt_source_sha256": receipt.get("source_sha256"),
+        "receipt_published_sha256": expected,
+        "published_sha256": dst_hash,
+    }
+
+
 def publish_verified(
     source: str | os.PathLike[str],
     destination: str | os.PathLike[str],
