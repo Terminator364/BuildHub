@@ -8,12 +8,17 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from .io import atomic_write_json, fsync_file, read_json, sha256_file
+from .io import atomic_write_json, fsync_file, fsync_parent_dir, read_json, sha256_file
 
 RECEIPT_SCHEMA = "buildhub.receipt/v1"
 
 
 class CommitConflict(RuntimeError):
+    pass
+
+
+class CommitOutcomeUnknown(RuntimeError):
+    """The durable artifact exists but receipt durability could not be proven."""
     pass
 
 
@@ -49,6 +54,91 @@ def _existing_commit(
         raise CommitConflict("operation_id already committed with different evidence")
 
     raise CommitConflict("receipt path already contains a committed operation")
+
+
+def reconcile_publication(
+    source: str | os.PathLike[str],
+    destination: str | os.PathLike[str],
+    receipt_path: str | os.PathLike[str],
+    *,
+    operation_id: str,
+) -> dict[str, Any]:
+    """Classify publication state after interruption without mutating anything."""
+    src = Path(source)
+    dst = Path(destination)
+    receipt_file = Path(receipt_path)
+    if not src.is_file():
+        return {"status": "SOURCE_MISSING", "operation_id": operation_id}
+
+    source_hash = sha256_file(src)
+    dst_hash = sha256_file(dst) if dst.is_file() else None
+
+    if not receipt_file.is_file():
+        if dst_hash == source_hash:
+            return {
+                "status": "ARTIFACT_PRESENT_RECEIPT_MISSING",
+                "operation_id": operation_id,
+                "source_sha256": source_hash,
+                "published_sha256": dst_hash,
+            }
+        return {
+            "status": "NOT_COMMITTED",
+            "operation_id": operation_id,
+            "source_sha256": source_hash,
+            "published_sha256": dst_hash,
+        }
+
+    try:
+        receipt = read_json(receipt_file)
+    except Exception as exc:
+        return {
+            "status": "RECEIPT_UNREADABLE",
+            "operation_id": operation_id,
+            "source_sha256": source_hash,
+            "published_sha256": dst_hash,
+            "error": type(exc).__name__,
+        }
+
+    if receipt.get("operation_id") != operation_id:
+        return {
+            "status": "CONFLICT",
+            "operation_id": operation_id,
+            "receipt_operation_id": receipt.get("operation_id"),
+            "source_sha256": source_hash,
+            "published_sha256": dst_hash,
+        }
+
+    expected = receipt.get("published_sha256")
+    if (
+        receipt.get("status") == "COMMITTED"
+        and receipt.get("source_sha256") == source_hash
+        and receipt.get("readback_verified") is True
+        and expected == source_hash
+    ):
+        if dst_hash == source_hash:
+            return {
+                "status": "COMMITTED",
+                "operation_id": operation_id,
+                "source_sha256": source_hash,
+                "published_sha256": dst_hash,
+            }
+        return {
+            "status": "RECEIPT_PRESENT_ARTIFACT_MISMATCH",
+            "operation_id": operation_id,
+            "source_sha256": source_hash,
+            "receipt_sha256": expected,
+            "published_sha256": dst_hash,
+        }
+
+    return {
+        "status": "CONFLICT",
+        "operation_id": operation_id,
+        "source_sha256": source_hash,
+        "receipt_status": receipt.get("status"),
+        "receipt_source_sha256": receipt.get("source_sha256"),
+        "receipt_published_sha256": expected,
+        "published_sha256": dst_hash,
+    }
 
 
 def publish_verified(
@@ -104,6 +194,7 @@ def publish_verified(
 
         os.replace(stage, dst)
         replaced = True
+        fsync_parent_dir(dst.parent)
 
         readback_hash = sha256_file(dst)
         if readback_hash != source_hash:
@@ -119,10 +210,46 @@ def publish_verified(
             "readback_verified": True,
             "committed_at": utc_now(),
         }
-        atomic_write_json(receipt_file, receipt)
+        try:
+            atomic_write_json(receipt_file, receipt)
+        except Exception as receipt_error:
+            # If atomic receipt publication crossed its replace boundary, a
+            # valid final receipt may already coexist with the durable artifact.
+            # Rolling the artifact back in that state can manufacture a false
+            # COMMITTED receipt for bytes that no longer exist.
+            materialized = None
+            try:
+                if receipt_file.is_file():
+                    candidate = read_json(receipt_file)
+                    if (
+                        candidate.get("status") == "COMMITTED"
+                        and candidate.get("operation_id") == operation_id
+                        and candidate.get("published_sha256") == source_hash
+                        and candidate.get("readback_verified") is True
+                        and sha256_file(dst) == source_hash
+                    ):
+                        materialized = candidate
+            except Exception:
+                materialized = None
+
+            if materialized is not None:
+                # One bounded durability retry can convert a transient final-
+                # name/directory flush failure into a proven commit.
+                try:
+                    fsync_file(receipt_file)
+                    fsync_parent_dir(receipt_file.parent)
+                    return materialized
+                except Exception as retry_error:
+                    raise CommitOutcomeUnknown(
+                        "artifact and COMMITTED receipt materialized but receipt durability is unproven"
+                    ) from retry_error
+
+            raise receipt_error
+
         check = read_json(receipt_file)
         if (
             check.get("status") != "COMMITTED"
+            or check.get("operation_id") != operation_id
             or check.get("published_sha256") != source_hash
             or check.get("readback_verified") is not True
         ):
@@ -131,12 +258,20 @@ def publish_verified(
         if backup is not None:
             backup.unlink(missing_ok=True)
         return receipt
+    except CommitOutcomeUnknown:
+        # Never roll back a durable artifact after a matching COMMITTED receipt
+        # may have crossed the atomic replace boundary. Recovery must inspect
+        # artifact+receipt identity and reconcile; blind replay is forbidden.
+        raise
     except Exception:
         if replaced:
             if backup is not None and backup.exists():
                 os.replace(backup, dst)
+                fsync_file(dst)
+                fsync_parent_dir(dst.parent)
             else:
                 dst.unlink(missing_ok=True)
+                fsync_parent_dir(dst.parent)
         raise
     finally:
         stage.unlink(missing_ok=True)

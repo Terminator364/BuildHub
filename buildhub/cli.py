@@ -10,7 +10,7 @@ from .execution import choose_execution_backend
 from .io import atomic_write_json, sha256_file
 from .package import create_package, verify_package
 from .payload import validate_payload
-from .receipt import publish_verified
+from .receipt import CommitOutcomeUnknown, publish_verified, reconcile_publication
 from .recovery import RecoveryJournal
 from .runner import run_process
 
@@ -30,6 +30,12 @@ def build_parser() -> argparse.ArgumentParser:
     pub.add_argument("destination")
     pub.add_argument("--receipt", required=True)
     pub.add_argument("--operation-id")
+
+    recon = sub.add_parser("reconcile-publish", help="Classify interrupted publication without replay")
+    recon.add_argument("source")
+    recon.add_argument("destination")
+    recon.add_argument("--receipt", required=True)
+    recon.add_argument("--operation-id", required=True)
 
     r = sub.add_parser("recover-status", help="Read recovery journal")
     r.add_argument("journal")
@@ -83,10 +89,28 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
 
     if args.command == "publish":
-        _print(publish_verified(
-            args.source, args.destination, args.receipt, operation_id=args.operation_id
-        ))
-        return 0
+        try:
+            _print(publish_verified(
+                args.source, args.destination, args.receipt, operation_id=args.operation_id
+            ))
+            return 0
+        except CommitOutcomeUnknown as exc:
+            _print({
+                "status": "COMMIT_OUTCOME_UNKNOWN",
+                "operation_id": args.operation_id,
+                "error": str(exc),
+            })
+            return 3
+
+    if args.command == "reconcile-publish":
+        state = reconcile_publication(
+            args.source,
+            args.destination,
+            args.receipt,
+            operation_id=args.operation_id,
+        )
+        _print(state)
+        return 0 if state["status"] == "COMMITTED" else 3
 
     if args.command == "recover-status":
         _print(RecoveryJournal(args.journal).status())
