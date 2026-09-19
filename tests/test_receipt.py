@@ -38,6 +38,21 @@ class ReceiptTests(unittest.TestCase):
 
             self.assertEqual(dst.read_bytes(), b"previous validated")
 
+    def test_publish_flushes_artifact_before_committed_receipt(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            src = root / "source.bin"
+            dst = root / "published.bin"
+            receipt = root / "receipt.json"
+            src.write_bytes(b"power-loss durable artifact")
+
+            with patch("buildhub.receipt.fsync_file", wraps=__import__("buildhub.io", fromlist=["fsync_file"]).fsync_file) as sync:
+                result = publish_verified(src, dst, receipt, operation_id="op-fsync")
+
+            self.assertEqual(result["status"], "COMMITTED")
+            self.assertGreaterEqual(sync.call_count, 2)
+            self.assertEqual(sync.call_args_list[-1].args[0], dst)
+
     def test_same_committed_operation_is_idempotent(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
