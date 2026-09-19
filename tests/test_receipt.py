@@ -5,7 +5,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from buildhub.io import fsync_file, fsync_parent_dir, read_json, sha256_file
-from buildhub.receipt import CommitConflict, CommitOutcomeUnknown, publish_verified
+from buildhub.receipt import CommitConflict, CommitOutcomeUnknown, publish_verified, reconcile_publication
 
 
 class ReceiptTests(unittest.TestCase):
@@ -121,6 +121,50 @@ class ReceiptTests(unittest.TestCase):
                 replay = publish_verified(src, dst, receipt, operation_id="stable-op")
 
             self.assertEqual(first, replay)
+
+    def test_reconcile_publication_classifies_interrupted_boundaries(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            src = root / "source.bin"
+            dst = root / "published.bin"
+            receipt = root / "receipt.json"
+            src.write_bytes(b"payload")
+
+            self.assertEqual(
+                reconcile_publication(src, dst, receipt, operation_id="op-r")["status"],
+                "NOT_COMMITTED",
+            )
+
+            dst.write_bytes(b"payload")
+            self.assertEqual(
+                reconcile_publication(src, dst, receipt, operation_id="op-r")["status"],
+                "ARTIFACT_PRESENT_RECEIPT_MISSING",
+            )
+
+            result = publish_verified(src, dst, receipt, operation_id="op-r")
+            self.assertEqual(result["status"], "COMMITTED")
+            self.assertEqual(
+                reconcile_publication(src, dst, receipt, operation_id="op-r")["status"],
+                "COMMITTED",
+            )
+
+            dst.write_bytes(b"corrupt")
+            self.assertEqual(
+                reconcile_publication(src, dst, receipt, operation_id="op-r")["status"],
+                "RECEIPT_PRESENT_ARTIFACT_MISMATCH",
+            )
+
+    def test_reconcile_publication_rejects_other_operation_receipt(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            src = root / "source.bin"
+            dst = root / "published.bin"
+            receipt = root / "receipt.json"
+            src.write_bytes(b"payload")
+            publish_verified(src, dst, receipt, operation_id="op-a")
+            state = reconcile_publication(src, dst, receipt, operation_id="op-b")
+            self.assertEqual(state["status"], "CONFLICT")
+            self.assertEqual(state["receipt_operation_id"], "op-a")
 
     def test_same_operation_with_changed_source_is_conflict(self):
         with tempfile.TemporaryDirectory() as td:
