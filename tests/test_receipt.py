@@ -1,10 +1,11 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
 from buildhub.io import fsync_file, fsync_parent_dir, read_json, sha256_file
-from buildhub.receipt import CommitConflict, publish_verified
+from buildhub.receipt import CommitConflict, CommitOutcomeUnknown, publish_verified
 
 
 class ReceiptTests(unittest.TestCase):
@@ -55,6 +56,57 @@ class ReceiptTests(unittest.TestCase):
             self.assertEqual(sync.call_args_list[-1].args[0], dst)
             self.assertGreaterEqual(dirsync.call_count, 1)
             self.assertEqual(dirsync.call_args_list[0].args[0], dst.parent)
+
+    def test_materialized_committed_receipt_never_triggers_blind_artifact_rollback(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            src = root / "source.bin"
+            dst = root / "published.bin"
+            receipt = root / "receipt.json"
+            src.write_bytes(b"new durable bytes")
+            dst.write_bytes(b"previous durable bytes")
+
+            def materialize_receipt_then_fail(path, value):
+                Path(path).write_text(json.dumps(value), encoding="utf-8")
+                raise OSError("simulated failure after receipt replace boundary")
+
+            real_sync = fsync_file
+            def fail_receipt_sync(path):
+                if Path(path) == receipt:
+                    raise OSError("simulated receipt durability retry failure")
+                return real_sync(path)
+
+            with patch("buildhub.receipt.atomic_write_json", side_effect=materialize_receipt_then_fail), \
+                 patch("buildhub.receipt.fsync_file", side_effect=fail_receipt_sync):
+                with self.assertRaises(CommitOutcomeUnknown):
+                    publish_verified(src, dst, receipt, operation_id="op-uncertain")
+
+            self.assertEqual(dst.read_bytes(), b"new durable bytes")
+            materialized = read_json(receipt)
+            self.assertEqual(materialized["status"], "COMMITTED")
+            self.assertEqual(materialized["operation_id"], "op-uncertain")
+            self.assertEqual(materialized["published_sha256"], sha256_file(dst))
+
+    def test_materialized_receipt_can_self_heal_on_bounded_durability_retry(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            src = root / "source.bin"
+            dst = root / "published.bin"
+            receipt = root / "receipt.json"
+            src.write_bytes(b"self-heal")
+
+            calls = {"n": 0}
+            def materialize_receipt_then_fail(path, value):
+                calls["n"] += 1
+                Path(path).write_text(json.dumps(value), encoding="utf-8")
+                raise OSError("simulated post-replace error")
+
+            with patch("buildhub.receipt.atomic_write_json", side_effect=materialize_receipt_then_fail):
+                result = publish_verified(src, dst, receipt, operation_id="op-heal")
+
+            self.assertEqual(result["status"], "COMMITTED")
+            self.assertEqual(calls["n"], 1)
+            self.assertEqual(sha256_file(dst), result["published_sha256"])
 
     def test_same_committed_operation_is_idempotent(self):
         with tempfile.TemporaryDirectory() as td:
