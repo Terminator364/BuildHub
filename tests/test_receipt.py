@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from buildhub.io import read_json, sha256_file
+from buildhub.io import fsync_file, read_json, sha256_file
 from buildhub.receipt import CommitConflict, publish_verified
 
 
@@ -46,7 +46,7 @@ class ReceiptTests(unittest.TestCase):
             receipt = root / "receipt.json"
             src.write_bytes(b"power-loss durable artifact")
 
-            with patch("buildhub.receipt.fsync_file", wraps=__import__("buildhub.io", fromlist=["fsync_file"]).fsync_file) as sync:
+            with patch("buildhub.receipt.fsync_file", wraps=fsync_file) as sync:
                 result = publish_verified(src, dst, receipt, operation_id="op-fsync")
 
             self.assertEqual(result["status"], "COMMITTED")
