@@ -1,0 +1,31 @@
+{
+  "schema": "ax15go.gray_health/1",
+  "project": "BuildHub",
+  "status": "ENGINEERING_CONTRACT_NOT_FIELD_PROOF",
+  "purpose": "Prevent process/command success from hiding unwritable publication state, stale receipts, destination mismatch or authority conflict.",
+  "required_dimensions": [
+    "PROCESS_OR_JOB_ALIVE",
+    "COMMAND_PATH_USABLE",
+    "SOURCE_READABLE",
+    "DESTINATION_WRITABLE",
+    "RECEIPT_WRITABLE_AND_READBACK_VERIFIED",
+    "OPERATION_IDENTITY_VALID",
+    "PUBLICATION_STATE_FRESH"
+  ],
+  "rules": {
+    "command_exit_zero_is_not_commit_health": true,
+    "artifact_exists_is_not_commit_health": true,
+    "single_signal_cannot_promote_healthy": true,
+    "unknown_outcome_is_not_healthy": true,
+    "stale_receipt_is_not_healthy": true,
+    "probes_side_effect_free": true
+  },
+  "gray_failures": [
+    "job_alive_but_destination_becomes_read_only",
+    "artifact_hash_matches_but_receipt_unwritable",
+    "receipt_exists_for_different_operation_id",
+    "destination_exists_but_source_identity_changed",
+    "cli_responds_while_recovery_journal_or_publication_state_is_stale"
+  ],
+  "promotion_rule": "PUBLICATION_HEALTHY requires source/destination/receipt/identity agreement; COMMIT_OUTCOME_UNKNOWN and conflicts remain non-green."
+}
