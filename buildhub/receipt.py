@@ -17,6 +17,11 @@ class CommitConflict(RuntimeError):
     pass
 
 
+class CommitOutcomeUnknown(RuntimeError):
+    """The durable artifact exists but receipt durability could not be proven."""
+    pass
+
+
 def utc_now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -120,10 +125,46 @@ def publish_verified(
             "readback_verified": True,
             "committed_at": utc_now(),
         }
-        atomic_write_json(receipt_file, receipt)
+        try:
+            atomic_write_json(receipt_file, receipt)
+        except Exception as receipt_error:
+            # If atomic receipt publication crossed its replace boundary, a
+            # valid final receipt may already coexist with the durable artifact.
+            # Rolling the artifact back in that state can manufacture a false
+            # COMMITTED receipt for bytes that no longer exist.
+            materialized = None
+            try:
+                if receipt_file.is_file():
+                    candidate = read_json(receipt_file)
+                    if (
+                        candidate.get("status") == "COMMITTED"
+                        and candidate.get("operation_id") == operation_id
+                        and candidate.get("published_sha256") == source_hash
+                        and candidate.get("readback_verified") is True
+                        and sha256_file(dst) == source_hash
+                    ):
+                        materialized = candidate
+            except Exception:
+                materialized = None
+
+            if materialized is not None:
+                # One bounded durability retry can convert a transient final-
+                # name/directory flush failure into a proven commit.
+                try:
+                    fsync_file(receipt_file)
+                    fsync_parent_dir(receipt_file.parent)
+                    return materialized
+                except Exception as retry_error:
+                    raise CommitOutcomeUnknown(
+                        "artifact and COMMITTED receipt materialized but receipt durability is unproven"
+                    ) from retry_error
+
+            raise receipt_error
+
         check = read_json(receipt_file)
         if (
             check.get("status") != "COMMITTED"
+            or check.get("operation_id") != operation_id
             or check.get("published_sha256") != source_hash
             or check.get("readback_verified") is not True
         ):
@@ -132,6 +173,11 @@ def publish_verified(
         if backup is not None:
             backup.unlink(missing_ok=True)
         return receipt
+    except CommitOutcomeUnknown:
+        # Never roll back a durable artifact after a matching COMMITTED receipt
+        # may have crossed the atomic replace boundary. Recovery must inspect
+        # artifact+receipt identity and reconcile; blind replay is forbidden.
+        raise
     except Exception:
         if replaced:
             if backup is not None and backup.exists():
