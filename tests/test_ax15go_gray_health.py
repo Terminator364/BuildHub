@@ -15,6 +15,9 @@ class AX15GoGrayHealthTests(unittest.TestCase):
         self.assertTrue(health["rules"]["unknown_outcome_is_not_healthy"])
         self.assertIn("RECEIPT_WRITABLE_AND_READBACK_VERIFIED", health["required_dimensions"])
         self.assertIn("OPERATION_IDENTITY_VALID", health["required_dimensions"])
+        self.assertTrue(health["rules"]["capability_scoped_health_required"])
+        self.assertNotIn("DESTINATION_WRITABLE", health["capability_scopes"]["LOCAL_BUILD"])
+        self.assertIn("DESTINATION_WRITABLE", health["capability_scopes"]["PUBLICATION"])
 
 
 if __name__ == "__main__":
