@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from .io import atomic_write_json, fsync_file, read_json, sha256_file
+from .io import atomic_write_json, fsync_file, fsync_parent_dir, read_json, sha256_file
 
 RECEIPT_SCHEMA = "buildhub.receipt/v1"
 
@@ -104,6 +104,7 @@ def publish_verified(
 
         os.replace(stage, dst)
         replaced = True
+        fsync_parent_dir(dst.parent)
 
         readback_hash = sha256_file(dst)
         if readback_hash != source_hash:
@@ -135,8 +136,11 @@ def publish_verified(
         if replaced:
             if backup is not None and backup.exists():
                 os.replace(backup, dst)
+                fsync_file(dst)
+                fsync_parent_dir(dst.parent)
             else:
                 dst.unlink(missing_ok=True)
+                fsync_parent_dir(dst.parent)
         raise
     finally:
         stage.unlink(missing_ok=True)
