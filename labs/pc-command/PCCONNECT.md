@@ -3,7 +3,7 @@
 Commande utilisateur:
 
 ```
-PCCONNECT|v2|pc=MBMPC|repo=Terminator364/BuildHub|branch=lab/pc-command-browser-20260926|protocol=labs/pc-command/PCCONNECT.md|slot=AUTO|max=10
+PCCONNECT|v2|pc=MBMPC|repo=Terminator364/BuildHub|branch=lab/pc-command-v070|protocol=labs/pc-command/PCCONNECT.md|slot=AUTO|max=10
 ```
 
 ## Mission de la conversation qui recoit ce code
