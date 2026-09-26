@@ -1,8 +1,12 @@
-param([string]$Root = (Split-Path -Parent $PSScriptRoot))
+param([string]$Root = (Split-Path -Parent $PSScriptRoot),[switch]$SmokeTest)
 $ErrorActionPreference='SilentlyContinue'
-$createdNew=$false
-$mutex=New-Object Threading.Mutex($true,'Local\PC_COMMAND_SINGLE_INSTANCE',[ref]$createdNew)
-if(-not$createdNew){exit 0}
+$createdNew=$true
+$mutex=$null
+if(-not$SmokeTest){
+  $createdNew=$false
+  $mutex=New-Object Threading.Mutex($true,'Local\PC_COMMAND_SINGLE_INSTANCE',[ref]$createdNew)
+  if(-not$createdNew){exit 0}
+}
 [Console]::OutputEncoding=[Text.UTF8Encoding]::new()
 $OutputEncoding=[Console]::OutputEncoding
 
@@ -178,6 +182,23 @@ function Process-PcKey {
   $script:Feedback=Read-PcFeedbackLocal $Paths
   $script:LastDisplay=[datetime]::MinValue
   return $true
+}
+
+if($SmokeTest){
+  try{
+    Start-PcFrame
+    $conv=$Sync.Channel
+    Write-PcHeader $App $Defaults $Sync $conv $UpdateInfo '|'
+    Write-PcGeneral $Sync.Overview $Feedback
+    Write-PcFooter 'general'
+    Write-Output 'PC_COMMAND_SMOKE_OK'
+    Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
+    exit 0
+  }catch{
+    Write-Error ('PC_COMMAND_SMOKE_FAIL: '+$_.Exception.Message)
+    Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
+    exit 41
+  }
 }
 
 while($true){
