@@ -4,6 +4,7 @@ $files=@(
   (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1'),
   (Join-Path $root 'pc-command\v5\PC_COMMAND_BOOTSTRAP.ps1'),
   (Join-Path $root 'pc-command\v5\lib\engine.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\eventbus.ps1'),
   (Join-Path $root 'pc-command\v5\lib\io.ps1'),
   (Join-Path $root 'pc-command\v5\lib\report.ps1'),
   (Join-Path $root 'pc-command\v5\lib\ui.ps1')
@@ -30,4 +31,5 @@ if($p1-ne75){throw "expected 75 got $p1"}
 $m.micro_tasks += [pscustomobject]@{state='PENDING';weight=1;completion=0}
 $p2=(Get-PcMacroProgress $m).Percent
 if($p2-ne50){throw "scope expansion expected 50 got $p2"}
+if([string]$cfg.version -ne '0.7.0'){throw 'expected v0.7.0'}
 Write-Host 'PC_COMMAND_V5_TESTS_OK'
