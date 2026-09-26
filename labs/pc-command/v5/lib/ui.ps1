@@ -140,7 +140,10 @@ function Write-PcVersions {
   }
   Write-PcLine ''
   Write-PcLine 'Promotion: une version n est meilleure que si les fonctions precedentes restent prouvees.' -ForegroundColor Yellow
-}function Write-PcMicro {
+}
+
+
+function Write-PcMicro {
   param($Micro)
   Write-PcLine 'MICRO-TACHE / DETAIL' -ForegroundColor Cyan
   Write-PcLine ''
@@ -154,28 +157,26 @@ function Write-PcVersions {
   if($Micro.blocker){Write-PcLine ('Blocage     : '+$Micro.blocker) -ForegroundColor Red}
   if($Micro.next_step){Write-PcLine ('Prochaine   : '+$Micro.next_step)}
   Write-PcLine ''
-  Write-PcLine 'Une micro-tache n est DONE que si une preuve/resultat observable existe.' -ForegroundColor DarkGray
+  Write-PcLine 'DONE exige une preuve/resultat observable.' -ForegroundColor DarkGray
 }
 
 function Write-PcHelp {
   Write-PcLine 'AIDE / NAVIGATION' -ForegroundColor Cyan
   Write-PcLine ''
-  Write-PcLine '[A] Accueil          : revenir directement a la vue principale.'
+  Write-PcLine '[A] Accueil          : revenir a la vue principale.'
   Write-PcLine '[B] Retour           : remonter d un niveau.'
-  Write-PcLine '[1-9]               : ouvrir conversation, macro ou micro selon la fenetre.'
-  Write-PcLine '[C] Cahier A+B+C     : exigences, recherche et retours terrain.'
-  Write-PcLine '[F] Feedbacks        : registre canonique des retours.'
-  Write-PcLine '[V] Versions         : historique, regressions et cible.'
-  Write-PcLine '[T] Chronologie      : evenements observables recents.'
-  Write-PcLine '[S] Sources          : adaptateurs et transports.'
+  Write-PcLine '[1-9]                : ouvrir conversation, macro ou micro selon la vue.'
+  Write-PcLine '[C] Cahier A+B+C     : exigences, recherche, terrain.'
+  Write-PcLine '[F] Feedbacks        : registre canonique.'
+  Write-PcLine '[V] Versions         : historique, regressions, cible.'
+  Write-PcLine '[T] Chronologie      : evenements observables.'
+  Write-PcLine '[S] Sources          : adaptateurs/transports.'
   Write-PcLine '[L] Local            : activite observee sur le PC.'
   Write-PcLine '[P] Parametres       : cadences, RAM, Drive, sync, update.'
   Write-PcLine '[X] Rapport          : rapport detaille.'
-  Write-PcLine '[R] Sync             : demander une synchronisation non bloquante.'
+  Write-PcLine '[R] Sync             : synchronisation non bloquante.'
   Write-PcLine '[U] Update           : verifier une nouvelle version.'
-  Write-PcLine '[Q] Fermer           : fermer proprement PC COMMAND.'
+  Write-PcLine '[Q] Fermer           : fermer proprement.'
   Write-PcLine ''
-  Write-PcLine 'Les touches sont contextuelles: seules les actions utiles a la fenetre sont affichees.' -ForegroundColor Green
+  Write-PcLine 'Les commandes affichees changent selon la fenetre.' -ForegroundColor Green
 }
-
-
