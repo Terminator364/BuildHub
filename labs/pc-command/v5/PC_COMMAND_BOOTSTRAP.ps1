@@ -6,7 +6,7 @@ $Backup=Join-Path $Root 'backup'
 New-Item -ItemType Directory -Force -Path $AppDir,$Stage,$Backup|Out-Null
 
 $Repo='Terminator364/BuildHub'
-$Branch='lab/pc-command-browser-20260926'
+$Branch='lab/pc-command-v070'
 $ManifestPath='labs/pc-command/v5/manifest.json'
 $gh=(Get-Command gh.exe -ErrorAction SilentlyContinue).Source
 
