@@ -64,6 +64,13 @@ function Write-PcHeader {
   }
 }
 
+function Get-PcHomeCompactMode {
+  param([int]$Count)
+  if($Count-le0){return $false}
+  $richLines=4+($Count*4)
+  return ($Count-gt5 -or $script:PcFrameMax-lt$richLines)
+}
+
 function Write-PcGeneral {
   param($Overview,$Feedback,$Config,$Sync,$UpdateInfo)
   Write-PcLine 'ACCUEIL' Cyan
@@ -77,17 +84,23 @@ function Write-PcGeneral {
   $fb=if($Feedback -and $Feedback.Index){[string]$Feedback.Index.last_feedback_id}else{'-'}
   Write-PcLine ("$count conversation(s) connectee(s) | dernier feedback : $fb") DarkCyan
   Write-PcLine ''
+  $compact=Get-PcHomeCompactMode $count
   $i=1
   foreach($x in @($Overview.conversations|Select-Object -First 10)){
     $pct=if($null-ne$x.progress_estimate){[int]$x.progress_estimate}else{0}
     $life=Get-PcLifecycleView $x
     $slot=Get-PcSlotKey $i
-    Write-PcLine ("[$slot] $($x.label) | $($x.short_code)") Green
-    Write-PcLine ('    '+(Get-PcBar $pct 36)+' '+$pct+'% | '+$life.Label) $life.Color
-    if($x.current_action){Write-PcLine ('    Maintenant : '+$x.current_action)}
-    if($x.next_step){Write-PcLine ('    Ensuite    : '+$x.next_step) DarkGray}
-    if($x.blocker){Write-PcLine ('    Blocage    : '+$x.blocker) Red}
-    Write-PcLine ''
+    if($compact){
+      $block=if($x.blocker){' | BLOQUE'}else{''}
+      Write-PcLine ("[$slot] $($x.label) | $pct% | $($life.Label)$block") $(if($x.blocker){'Red'}else{$life.Color})
+    }else{
+      Write-PcLine ("[$slot] $($x.label) | $($x.short_code)") Green
+      Write-PcLine ('    '+(Get-PcBar $pct 36)+' '+$pct+'% | '+$life.Label) $life.Color
+      if($x.current_action){Write-PcLine ('    Maintenant : '+$x.current_action)}
+      if($x.next_step){Write-PcLine ('    Ensuite    : '+$x.next_step) DarkGray}
+      if($x.blocker){Write-PcLine ('    Blocage    : '+$x.blocker) Red}
+      Write-PcLine ''
+    }
     $i++
   }
 }
