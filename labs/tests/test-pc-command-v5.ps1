@@ -41,4 +41,14 @@ $idxPath=Join-Path $root 'pc-command\v5\config.default.json'
 if(-not(Test-Path $idxPath)){throw 'config missing'}
 if(-not([bool]$cfg.feedback_ledger.enabled)){throw 'feedback ledger must be enabled'}
 if(-not$cfg.feedback_ledger.ingest_before_build){throw 'feedback ingestion must happen before build'}
+if([double]$cfg.cadence.internet_sync_seconds -ne 3){throw 'sync must default to 3s'}
+if([double]$cfg.cadence.engine_recalc_seconds -ne 3.5){throw 'engine must default to 3.5s'}
+if([int]$cfg.cadence.display_refresh_seconds -ne 10){throw 'display must default to 10s'}
+if(-not[bool]$cfg.automation.auto_update){throw 'auto update must be enabled'}
+$uiText=Get-Content (Join-Path $root 'pc-command\v5\lib\ui.ps1') -Raw
+if($uiText -notmatch '\[A\] Accueil'){throw 'A Accueil must be visible'}
+if($uiText -notmatch 'PARAMETRES / SANTE DU SYSTEME'){throw 'settings health view missing'}
+if($uiText -notmatch 'function Write-PcMicro'){throw 'micro detail view missing'}
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -notmatch 'Start-PcUpdateProbe'){throw 'auto update probe not wired'}
 Write-Host 'PC_COMMAND_V5_TESTS_OK'
