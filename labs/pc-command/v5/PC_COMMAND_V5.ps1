@@ -266,124 +266,7 @@ function Process-PcKey {
     Save-PcLocalSettings $Paths $App.SyncSeconds $App.EngineSeconds $App.DisplaySeconds $App.Mode
     Set-PcInputAck $k ("parametre applique: sync "+$App.SyncSeconds+"s, moteur "+$App.EngineSeconds+"s, affichage "+$App.DisplaySeconds+"s, profil "+$App.Mode) $true
   }
-  elseif($k-match'^[0-9]
-
-  Refresh-PcLocalState
-  $script:Feedback=Read-PcFeedbackLocal $Paths
-  $script:LastDisplay=[datetime]::MinValue
-  return $true
-}
-
-if($SmokeTest){
-  try{
-    Start-PcFrame
-    $conv=$Sync.Channel
-    Write-PcHeader $App $Defaults $Sync $conv $UpdateInfo '|'
-    Write-PcGeneral $Sync.Overview $Feedback $Defaults $Sync $UpdateInfo
-    Write-PcFooter 'general'
-    Write-Output 'PC_COMMAND_SMOKE_OK'
-    Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
-    exit 0
-  }catch{
-    Write-Error ('PC_COMMAND_SMOKE_FAIL: '+$_.Exception.Message)
-    Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
-    exit 41
-  }
-}
-
-while($true){
-  $now=Get-Date
-  Drain-LocalPcEvents
-
-  # Input first: navigation never waits for Internet.
-  [void](Process-PcKey)
-
-  # Complete any background git pull without blocking the UI.
-  $pull=Complete-PcStatePull $Paths
-  if($pull.Completed){
-    if($pull.Success){Refresh-PcLocalState;$script:Feedback=Read-PcFeedbackLocal $Paths;Add-LocalPcEvent 'Etat distant synchronise.'}
-    else{Add-LocalPcEvent 'Synchronisation impossible: dernier etat local conserve.'}
-    $LastDisplay=[datetime]::MinValue
-  }
-
-  # Launch a tiny background git pull every requested interval.
-  if(($now-$LastPullStart).TotalSeconds-ge$App.SyncSeconds -or $LastPullStart-eq[datetime]::MinValue){
-    if(Start-PcStatePull $Defaults $Paths){$LastPullStart=$now}
-  }
-
-  # Nonblocking auto-update probe. A newer validated manifest triggers bootstrap+restart.
-  $up=Complete-PcUpdateProbe $Defaults
-  if($up.Completed){
-    $script:UpdateInfo=$up
-    if($up.Success -and $up.Available -and [bool]$Defaults.automation.auto_update){
-      Add-LocalPcEvent ("Mise a jour automatique vers v"+$up.Version)
-      $boot=Join-Path $Root 'PC_COMMAND_BOOTSTRAP.ps1'
-      if(Test-Path $boot){
-        Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
-        try{$mutex.ReleaseMutex()}catch{}
-        Start-Process powershell.exe -ArgumentList '-NoProfile','-ExecutionPolicy','Bypass','-File',$boot
-        exit 0
-      }
-    }
-  }
-  if(($now-$LastUpdateCheck).TotalSeconds-ge[double]$Defaults.cadence.update_check_seconds -or $LastUpdateCheck-eq[datetime]::MinValue){
-    if(Start-PcUpdateProbe $Defaults $Paths){$LastUpdateCheck=$now}
-  }
-
-  if(($now-$LastCalc).TotalSeconds-ge$App.EngineSeconds){
-    $Cycle++
-    if($Sync.Overview){Save-PcHistory $Sync.Overview $Paths.HistoryFile ([int]$Defaults.limits.history_max_bytes)}
-    $LastCalc=$now
-  }
-
-  if(($now-$LastSpinner).TotalSeconds-ge1){
-    $sp=@('|','/','-','\')[$SpinnerIndex%4];$SpinnerIndex++;$LastSpinner=$now
-    $pct=0;$st='CACHE'
-    if($Sync.Overview -and @($Sync.Overview.conversations).Count-gt0){
-      $c=$Sync.Overview.conversations[[math]::Min($ConversationIndex,@($Sync.Overview.conversations).Count-1)]
-      if($null-ne$c.progress_estimate){$pct=[int]$c.progress_estimate}
-      if($c.lifecycle.state){$st=[string]$c.lifecycle.state}
-    }
-    $Host.UI.RawUI.WindowTitle="PC COMMAND v$($Defaults.version) $sp $st $pct%"
-  }
-
-  if(($now-$LastDisplay).TotalSeconds-ge$App.DisplaySeconds -or $LastDisplay-eq[datetime]::MinValue){
-    try{
-      Start-PcFrame
-      $conv=$Sync.Channel
-      Write-PcHeader $App $Defaults $Sync $conv $UpdateInfo @('|','/','-','\')[$SpinnerIndex%4]
-      switch($View){
-        'general'{Write-PcGeneral $Sync.Overview $Feedback $Defaults $Sync $UpdateInfo}
-        'conversation'{if($conv){Write-PcConversation $conv $Paths.HistoryFile}else{Write-PcLine 'Detail local indisponible; [R] synchroniser.' -ForegroundColor Yellow}}
-        'macro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex){Write-PcMacro $conv.macro_tasks[$MacroIndex] ([int]$Defaults.limits.max_visible_microtasks) $MicroPage}}
-        'micro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex -and @($conv.macro_tasks[$MacroIndex].micro_tasks).Count-gt$MicroIndex){Write-PcMicro $conv.macro_tasks[$MacroIndex].micro_tasks[$MicroIndex]}}
-        'timeline'{if($conv){Write-PcTimeline $conv}}
-        'requirements'{if($conv){Write-PcRequirements $conv}}
-        'feedback'{Write-PcFeedback $Feedback}
-        'versions'{Write-PcVersions $Feedback $Defaults}
-        'sources'{Write-PcSources $Defaults $Sync}
-        'local'{Write-PcLocal $LocalEvents}
-        'settings'{Write-PcSettings $App $Defaults $Sync $UpdateInfo}
-        'reports'{Write-PcReportCenter $Defaults $Paths $conv}
-        'health'{Write-PcHealth $Defaults $Sync $UpdateInfo}
-        'help'{Write-PcHelp}
-      }
-      Write-PcFooter $View
-      $ackColor=if($script:LastInputAckOk){'Green'}else{'Yellow'}
-      Write-PcFooterLine ('Action: '+$script:LastInputAck) $ackColor
-      Write-PcFooterLine ("Cycle $Cycle | etat local immediat | dernier pull: "+$(if($script:PcLastPullOkAt){$script:PcLastPullOkAt.ToString('HH:mm:ss')}else{'jamais'})) DarkGray
-    }catch{
-      Start-PcFrame
-      Write-PcLine 'PC COMMAND - MODE SECOURS' -ForegroundColor Red
-      Write-PcLine ('Erreur affichage: '+$_.Exception.Message) -ForegroundColor Yellow
-      Write-PcFooterLine '[R] Resynchroniser  [A] Accueil  [Q] Fermer' Yellow
-      Add-Content -Path (Join-Path $Root 'runtime-errors.log') -Value ((Get-Date).ToString('o')+' '+$_.Exception.Message)
-    }
-    $LastDisplay=$now
-  }
-
-  Start-Sleep -Milliseconds 100
-} -and $Sync.Overview){
+  elseif($k-match'^[0-9]$' -and $Sync.Overview){
     $idx=Get-PcSlotIndexFromKey $k
     if($View-eq'general' -and $idx-ge0 -and $idx-lt@($Sync.Overview.conversations).Count){
       $script:ConversationIndex=$idx
@@ -499,7 +382,7 @@ while($true){
       switch($View){
         'general'{Write-PcGeneral $Sync.Overview $Feedback $Defaults $Sync $UpdateInfo}
         'conversation'{if($conv){Write-PcConversation $conv $Paths.HistoryFile}else{Write-PcLine 'Detail local indisponible; [R] synchroniser.' -ForegroundColor Yellow}}
-        'macro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex){Write-PcMacro $conv.macro_tasks[$MacroIndex] ([int]$Defaults.limits.max_visible_microtasks)}}
+        'macro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex){Write-PcMacro $conv.macro_tasks[$MacroIndex] ([int]$Defaults.limits.max_visible_microtasks) $MicroPage}}
         'micro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex -and @($conv.macro_tasks[$MacroIndex].micro_tasks).Count-gt$MicroIndex){Write-PcMicro $conv.macro_tasks[$MacroIndex].micro_tasks[$MicroIndex]}}
         'timeline'{if($conv){Write-PcTimeline $conv}}
         'requirements'{if($conv){Write-PcRequirements $conv}}
