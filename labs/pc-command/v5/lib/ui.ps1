@@ -26,7 +26,7 @@ function Write-PcLine {
 }
 
 function Write-PcFooterLine {
-  param([Parameter(Position=0)]$Object='',[ConsoleColor]$ForegroundColor=[ConsoleColor]::Gray)
+  param([Parameter(Position=0)]$Object='',[Parameter(Position=1)][ConsoleColor]$ForegroundColor=[ConsoleColor]::Gray)
   $s=if($null-eq$Object){''}else{[string]$Object}
   if($s.Length-ge$script:PcFrameWidth){$s=$s.Substring(0,[math]::Max(1,$script:PcFrameWidth-4))+'...'}
   try{[Console]::ForegroundColor=$ForegroundColor;[Console]::WriteLine($s);[Console]::ResetColor()}catch{Write-Host $s -ForegroundColor $ForegroundColor}
