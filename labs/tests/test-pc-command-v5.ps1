@@ -31,5 +31,8 @@ if($p1-ne75){throw "expected 75 got $p1"}
 $m.micro_tasks += [pscustomobject]@{state='PENDING';weight=1;completion=0}
 $p2=(Get-PcMacroProgress $m).Percent
 if($p2-ne50){throw "scope expansion expected 50 got $p2"}
-if([string]$cfg.version -ne '0.7.0'){throw 'expected v0.7.0'}
+if([string]$cfg.version -ne '0.8.0'){throw 'expected v0.8.0'}
+if(-not(Get-Command Read-PcStateLocal -ErrorAction SilentlyContinue)){throw 'Read-PcStateLocal missing'}
+if(-not(Get-Command Start-PcStatePull -ErrorAction SilentlyContinue)){throw 'Start-PcStatePull missing'}
+if(-not(Get-Command Complete-PcStatePull -ErrorAction SilentlyContinue)){throw 'Complete-PcStatePull missing'}
 Write-Host 'PC_COMMAND_V5_TESTS_OK'
