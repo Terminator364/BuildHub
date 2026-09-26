@@ -4,6 +4,9 @@ $script:PcPullProcess = $null
 $script:PcPullStartedAt = $null
 $script:PcLastPullOkAt = $null
 $script:PcLastPullError = $null
+$script:PcUpdateProcess = $null
+$script:PcUpdateStartedAt = $null
+$script:PcLastUpdateError = $null
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -155,7 +158,7 @@ function Save-PcHistory {
 }
 
 function Save-PcLocalSettings {
-  param($Paths,[int]$Sync,[int]$Calc,[int]$Display,[string]$Mode)
+  param($Paths,[double]$Sync,[double]$Calc,[int]$Display,[string]$Mode)
   $o=[ordered]@{internet_sync_seconds=$Sync;engine_recalc_seconds=$Calc;display_refresh_seconds=$Display;mode=$Mode;updated_at=(Get-Date).ToString('o')}
   ($o|ConvertTo-Json)|Set-Content $Paths.LocalConfig -Encoding UTF8
 }
@@ -190,4 +193,61 @@ function Read-PcFeedbackLocal {
     if(Test-Path $vt){$result.Versions=Get-Content $vt -Raw|ConvertFrom-Json}
   }catch{$result.Error=$_.Exception.Message}
   return [pscustomobject]$result
+}
+
+
+function Start-PcUpdateProbe {
+  param($Config,$Paths)
+  if($script:PcUpdateProcess -and -not$script:PcUpdateProcess.HasExited){return $false}
+  try{
+    $gh=(Get-Command gh.exe -ErrorAction SilentlyContinue).Source
+    if(-not$gh){$script:PcLastUpdateError='GitHub CLI absent';return $false}
+    $repo=[string]$Config.code.repo
+    $branch=[string]$Config.code.branch
+    $base=[string]$Config.code.base_path
+    $endpoint='repos/'+$repo+'/contents/'+$base+'/manifest.json?ref='+[uri]::EscapeDataString($branch)
+    $psi=New-Object Diagnostics.ProcessStartInfo
+    $psi.FileName=$gh
+    $psi.UseShellExecute=$false
+    $psi.CreateNoWindow=$true
+    $psi.RedirectStandardOutput=$true
+    $psi.RedirectStandardError=$true
+    $psi.Arguments='api "'+$endpoint+'"'
+    $script:PcUpdateProcess=[Diagnostics.Process]::Start($psi)
+    $script:PcUpdateStartedAt=Get-Date
+    return $true
+  }catch{
+    $script:PcLastUpdateError=$_.Exception.Message
+    return $false
+  }
+}
+
+function Complete-PcUpdateProbe {
+  param($Config)
+  if(-not$script:PcUpdateProcess){
+    return [pscustomobject]@{Completed=$false;Success=$false;Available=$false;Version=[string]$Config.version;Manifest=$null;Error=$null}
+  }
+  if(-not$script:PcUpdateProcess.HasExited){
+    return [pscustomobject]@{Completed=$false;Success=$false;Available=$false;Version=[string]$Config.version;Manifest=$null;Error=$null}
+  }
+  $out=$script:PcUpdateProcess.StandardOutput.ReadToEnd()
+  $err=$script:PcUpdateProcess.StandardError.ReadToEnd()
+  $code=$script:PcUpdateProcess.ExitCode
+  $script:PcUpdateProcess.Dispose()
+  $script:PcUpdateProcess=$null
+  if($code-ne0){
+    $script:PcLastUpdateError=$err
+    return [pscustomobject]@{Completed=$true;Success=$false;Available=$false;Version=[string]$Config.version;Manifest=$null;Error=$err}
+  }
+  try{
+    $meta=$out|ConvertFrom-Json
+    $bytes=[Convert]::FromBase64String(([string]$meta.content -replace 's',''))
+    $manifest=[Text.Encoding]::UTF8.GetString($bytes)|ConvertFrom-Json
+    $available=([version]$manifest.version -gt [version]$Config.version)
+    $script:PcLastUpdateError=$null
+    return [pscustomobject]@{Completed=$true;Success=$true;Available=$available;Version=[string]$manifest.version;Manifest=$manifest;Error=$null}
+  }catch{
+    $script:PcLastUpdateError=$_.Exception.Message
+    return [pscustomobject]@{Completed=$true;Success=$false;Available=$false;Version=[string]$Config.version;Manifest=$null;Error=$_.Exception.Message}
+  }
 }
