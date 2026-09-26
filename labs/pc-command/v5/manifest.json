@@ -1,8 +1,8 @@
 {
   "schema": "pc.command.manifest.v1",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "channel": "candidate",
-  "generated_at": "2026-09-26T22:06:21.785Z",
+  "generated_at": "2026-09-26T22:09:06.701Z",
   "entrypoint": "PC_COMMAND_V5.ps1",
   "files": [
     {
@@ -35,7 +35,7 @@
     },
     {
       "relative_path": "config.default.json",
-      "git_blob_sha": "53b23da9e6b979a40ff635f6fdec390e90515be4"
+      "git_blob_sha": "cafc487ea43c3b04da26cb383f74fee0de574ffc"
     }
   ]
 }
