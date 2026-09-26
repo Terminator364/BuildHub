@@ -3,7 +3,7 @@
   "version": "0.7.0",
   "code": {
     "repo": "Terminator364/BuildHub",
-    "branch": "lab/pc-command-browser-20260926",
+    "branch": "lab/pc-command-v070",
     "base_path": "labs/pc-command/v5"
   },
   "state": {
@@ -76,7 +76,7 @@
   },
   "updater": {
     "transport": "github_api_blob_sha",
-    "manifest_ref": "lab/pc-command-browser-20260926",
+    "manifest_ref": "lab/pc-command-v070",
     "verify_git_blob_sha": true,
     "backups_kept": 3
   },
