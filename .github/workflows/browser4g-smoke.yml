@@ -10,17 +10,21 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: browser4g-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   smoke:
     name: ${{ matrix.browser }}
     runs-on: windows-latest
-    timeout-minutes: 12
+    timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
         browser: [edge, firefox, brave, qutebrowser, falkon, helium]
     steps:
       - uses: actions/checkout@v4
-      - name: Install / locate / version smoke test
+      - name: Install / locate / bounded version smoke test
         shell: pwsh
         run: ./labs/browser-bench/browser-smoke.ps1 -Browser '${{ matrix.browser }}'
