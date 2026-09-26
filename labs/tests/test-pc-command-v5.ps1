@@ -51,4 +51,13 @@ if($uiText -notmatch 'PARAMETRES / SANTE DU SYSTEME'){throw 'settings health vie
 if($uiText -notmatch 'function Write-PcMicro'){throw 'micro detail view missing'}
 $mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
 if($mainText -notmatch 'Start-PcUpdateProbe'){throw 'auto update probe not wired'}
+$manifest=Get-Content (Join-Path $root 'pc-command\v5\manifest.json') -Raw|ConvertFrom-Json
+foreach($f in @($manifest.files)){
+  $p=Join-Path (Join-Path $root 'pc-command\v5') $f.relative_path
+  if(-not(Test-Path $p)){throw "manifest file missing: $($f.relative_path)"}
+  $actual=(& git hash-object $p).Trim()
+  if($actual-ne[string]$f.git_blob_sha){throw "manifest integrity mismatch: $($f.relative_path)"}
+}
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -notmatch 'PC_COMMAND_SMOKE_OK'){throw 'runtime smoke gate missing'}
 Write-Host 'PC_COMMAND_V5_TESTS_OK'
