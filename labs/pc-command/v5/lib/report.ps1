@@ -33,7 +33,7 @@ function New-PcReport {
         $micro += "<h3>$(ConvertTo-PcHtmlEncoded $m.title)</h3><ul>"
         foreach($t in @($m.micro_tasks)){
           $tp=[int][math]::Round((Get-PcMicroCompletion $t)*100,0)
-          $micro += "<li><b>$($t.state) $tp%</b> — $(ConvertTo-PcHtmlEncoded $t.title)"
+          $micro += "<li><b>$($t.state) $tp%</b> - $(ConvertTo-PcHtmlEncoded $t.title)"
           if($t.evidence){$micro += "<br><span class='muted'>preuve: $(ConvertTo-PcHtmlEncoded $t.evidence)</span>"}
           $micro += "</li>"
         }
@@ -44,7 +44,7 @@ function New-PcReport {
   $abc=''
   if($Channel -and $Channel.cahier_des_charges){
     $q=Get-PcRequirementCoverage $Channel
-    $abc="<h2>Cahier des charges A+B+C</h2><p>Version $(ConvertTo-PcHtmlEncoded $Channel.cahier_des_charges.version) — couverture $($q.Percent)% — P0 ouvertes $($q.P0Open)</p><p>Dernier delta: $(ConvertTo-PcHtmlEncoded $Channel.cahier_des_charges.last_delta)</p>"
+    $abc="<h2>Cahier des charges A+B+C</h2><p>Version $(ConvertTo-PcHtmlEncoded $Channel.cahier_des_charges.version) - couverture $($q.Percent)% - P0 ouvertes $($q.P0Open)</p><p>Dernier delta: $(ConvertTo-PcHtmlEncoded $Channel.cahier_des_charges.last_delta)</p>"
   }
   $html="<html><head><meta charset='utf-8'><style>body{font-family:Segoe UI,Arial;margin:28px;color:#111}table{border-collapse:collapse;width:100%}th,td{border:1px solid #bbb;padding:7px;vertical-align:top}th{background:#eee}.bar{height:16px;background:#ddd;border-radius:8px;overflow:hidden}.fill{height:100%;width:$progress%;background:#333}.muted{color:#666;font-size:90%}li{margin:6px 0}</style></head><body><h1>PC COMMAND</h1><p>Version $($Config.version) | $(Get-Date)</p><h2>$(ConvertTo-PcHtmlEncoded $convTitle)</h2><p>Progression estimee: <b>$progress%</b></p><div class='bar'><div class='fill'></div></div><p>Etat: <b>$(if($life){ConvertTo-PcHtmlEncoded $life.Label}else{'N/A'})</b></p><p>Etats observables uniquement; aucun raisonnement prive du modele n est expose.</p>$abc<h2>Macro-taches</h2><table><tr><th>Macro-tache</th><th>Etat</th><th>Avancement</th><th>En cours</th><th>Prochaine etape</th></tr>$rows</table><h2>Micro-taches condensees</h2>$micro</body></html>"
   [IO.File]::WriteAllText($htmlPath,$html,[Text.UTF8Encoding]::new($false))
