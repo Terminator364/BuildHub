@@ -5,6 +5,7 @@ $StageRoot=Join-Path $Root 'staging'
 $BackupRoot=Join-Path $Root 'backup'
 $ConfigDir=Join-Path $Root 'config'
 $UpdateStatus=Join-Path $ConfigDir 'update-status.json'
+$RootBootstrap=Join-Path $Root 'PC_COMMAND_BOOTSTRAP.ps1'
 New-Item -ItemType Directory -Force -Path $AppDir,$StageRoot,$BackupRoot,$ConfigDir|Out-Null
 
 $Repo='Terminator364/BuildHub'
@@ -126,7 +127,12 @@ if($install -and $remote){
         Move-Item $AppDir $rollbackDir -Force
       }
       Move-Item $st $AppDir -Force
-      Write-UpdateStatus 'SWAPPED' $version 'Nouvelle version installee; verification post-launch.' $rollbackDir
+      # The Desktop shortcut launches the bootstrap stored at PC_COMMAND root,
+      # not the copy inside app. Keep that launcher synchronized with the
+      # newly installed release so future updates use the newest safety logic.
+      $newBootstrap=Join-Path $AppDir 'PC_COMMAND_BOOTSTRAP.ps1'
+      if(Test-Path $newBootstrap){Copy-Item $newBootstrap $RootBootstrap -Force}
+      Write-UpdateStatus 'SWAPPED' $version 'Nouvelle version installee; bootstrap racine synchronise; verification post-launch.' $rollbackDir
     }catch{
       if(-not(Test-Path $AppDir) -and $hadCurrent -and (Test-Path $rollbackDir)){Move-Item $rollbackDir $AppDir -Force}
       Write-UpdateStatus 'ROLLED_BACK' $version ('Echec swap: '+$_.Exception.Message) $rollbackDir
@@ -159,6 +165,16 @@ if($install -and $remote){
       exit 5
     }
   }
+}
+
+# Self-heal launcher drift even when there is no application update.
+$appBootstrap=Join-Path $AppDir 'PC_COMMAND_BOOTSTRAP.ps1'
+if(Test-Path $appBootstrap){
+  try{
+    $appHash=(& git hash-object $appBootstrap 2>$null).Trim()
+    $rootHash=if(Test-Path $RootBootstrap){(& git hash-object $RootBootstrap 2>$null).Trim()}else{''}
+    if($appHash -and $appHash-ne$rootHash){Copy-Item $appBootstrap $RootBootstrap -Force}
+  }catch{}
 }
 
 if(-not(Test-Path (Join-Path $AppDir 'PC_COMMAND_V5.ps1'))){
