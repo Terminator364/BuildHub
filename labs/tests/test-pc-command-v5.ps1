@@ -132,4 +132,4 @@ if([string]$cfg.updater.swap_mode -ne 'same_volume_directory_move'){throw 'updat
 if(-not[bool]$cfg.updater.root_bootstrap_self_heal){throw 'root bootstrap self-heal policy missing'}
 if($bootText -notmatch 'RootBootstrap'){throw 'root bootstrap self-heal implementation missing'}
 if($bootText -notmatch 'Copy-Item \$appBootstrap \$RootBootstrap'){throw 'root bootstrap self-heal copy missing'}
-Write-Host 'PC_COMMAND_V095_UPDATE_REPORT_OK'
+Write-Host 'PC_COMMAND_V096_UPDATE_REPORT_OK'
