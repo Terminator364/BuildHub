@@ -36,7 +36,7 @@ if(Test-Path $Paths.LocalConfig){
   }catch{}
 }
 
-$View='general';$ConversationIndex=0;$MacroIndex=0;$MicroIndex=0
+$View='general';$BackView='general';$ConversationIndex=0;$MacroIndex=0;$MicroIndex=0
 $NeedDetail=$false
 $Sync=Read-PcStateLocal $Defaults $Paths $ConversationIndex
 $Feedback=Read-PcFeedbackLocal $Paths
@@ -101,11 +101,12 @@ function Process-PcKey {
 
   if($k-eq'A'){
     $script:View='general'
+    $script:BackView='general'
   }
   elseif($k-eq'B'){
     if($View-eq'micro'){$script:View='macro'}
     elseif($View -in @('macro','timeline','requirements')){$script:View='conversation'}
-    elseif($View -in @('feedback','versions','sources','local','settings','help')){$script:View='general'}
+    elseif($View -in @('feedback','versions','sources','local','settings','help','reports','health')){$script:View=$script:BackView}
     elseif($View-eq'conversation'){$script:View='general'}
     else{$script:View='general'}
   }
@@ -114,22 +115,40 @@ function Process-PcKey {
     $script:LastPullStart=Get-Date
     Add-LocalPcEvent 'Synchronisation demandee; interface reste interactive.'
   }
-  elseif($k-eq'H'){$script:View='help'}
-  elseif($k-eq'F'){$script:View='feedback'}
-  elseif($k-eq'V'){$script:View='versions'}
-  elseif($k-eq'S'){$script:View='sources'}
-  elseif($k-eq'L'){$script:View='local'}
-  elseif($k-eq'P'){$script:View='settings'}
-  elseif($k-eq'T' -and $Sync.Channel){$script:View='timeline'}
+  elseif($k-eq'H'){$script:BackView=$View;$script:View='help'}
+  elseif($k-eq'F'){$script:BackView=$View;$script:View='feedback'}
+  elseif($k-eq'V'){$script:BackView=$View;$script:View='versions'}
+  elseif($k-eq'S'){$script:BackView=$View;$script:View='sources'}
+  elseif($k-eq'L'){$script:BackView=$View;$script:View='local'}
+  elseif($k-eq'P'){$script:BackView=$View;$script:View='settings'}
+  elseif($k-eq'T' -and $Sync.Channel){$script:BackView=$View;$script:View='timeline'}
   elseif($k-eq'C' -and $View-eq'settings'){
     Set-Clipboard 'PCCONNECT|v4|state=Terminator364/PC-COMMAND-STATE|code=Terminator364/BuildHub|slot=AUTO|max=10'
     Add-LocalPcEvent 'Code PCCONNECT copie.'
   }
-  elseif($k-eq'C' -and $Sync.Channel){$script:View='requirements'}
+  elseif($k-eq'C' -and $Sync.Channel){$script:BackView=$View;$script:View='requirements'}
   elseif($k-eq'X'){
+    $script:BackView=$View
+    $script:View='reports'
+  }
+  elseif($k-eq'Y'){
+    $script:BackView=$View
+    $script:View='health'
+  }
+  elseif($k-eq'G' -and $View-eq'reports'){
     $rep=New-PcReport $Defaults $Sync.Overview $Sync.Channel $Paths
     Add-LocalPcEvent ("Rapport cree: "+$(if($rep.Pdf){$rep.Pdf}else{$rep.Html}))
-    if($rep.Pdf){Start-Process explorer.exe -ArgumentList $rep.Pdf}else{Start-Process $rep.Html}
+  }
+  elseif($k-eq'O' -and $View-eq'reports'){
+    $last=Get-ChildItem $Paths.Reports -File -ErrorAction SilentlyContinue|Where-Object Extension -eq '.pdf'|Sort-Object LastWriteTime -Descending|Select-Object -First 1
+    if($last){Start-Process $last.FullName;Add-LocalPcEvent ('Ouverture '+$last.Name)}
+  }
+  elseif($k-eq'D' -and $View-eq'reports'){
+    $last=Get-ChildItem $Paths.Reports -File -ErrorAction SilentlyContinue|Where-Object Extension -eq '.pdf'|Sort-Object LastWriteTime -Descending|Select-Object -First 1
+    if($last){$ex=Export-PcReportToDrive $last.FullName;Add-LocalPcEvent $ex.Message}
+  }
+  elseif($k-eq'E' -and $View-eq'reports'){
+    Start-Process explorer.exe -ArgumentList $Paths.Reports
   }
   elseif($k-eq'D' -and $View-eq'settings'){
     $last=Get-ChildItem $Paths.Reports -File -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1
@@ -157,7 +176,15 @@ function Process-PcKey {
       $cur=[array]::IndexOf($vals,[int]$App.DisplaySeconds)
       if($cur-lt0){$cur=1};$App.DisplaySeconds=$vals[($cur+1)%$vals.Count]
     }
-    elseif($k-eq'4'){$App.Mode=if($App.Mode-eq'AUTO'){'ECO'}else{'AUTO'}}
+    elseif($k-eq'4'){
+      $profiles=@('AUTO','ECO','RAPIDE')
+      $cur=[array]::IndexOf($profiles,[string]$App.Mode)
+      if($cur-lt0){$cur=0}
+      $App.Mode=$profiles[($cur+1)%$profiles.Count]
+      if($App.Mode-eq'ECO'){$App.SyncSeconds=10;$App.EngineSeconds=10;$App.DisplaySeconds=20}
+      elseif($App.Mode-eq'RAPIDE'){$App.SyncSeconds=3;$App.EngineSeconds=3.5;$App.DisplaySeconds=10}
+      else{$App.SyncSeconds=[double]$Defaults.cadence.internet_sync_seconds;$App.EngineSeconds=[double]$Defaults.cadence.engine_recalc_seconds;$App.DisplaySeconds=[int]$Defaults.cadence.display_refresh_seconds}
+    }
     Save-PcLocalSettings $Paths $App.SyncSeconds $App.EngineSeconds $App.DisplaySeconds $App.Mode
   }
   elseif($k-match'^[1-9]$' -and $Sync.Overview){
@@ -263,7 +290,7 @@ while($true){
       $conv=$Sync.Channel
       Write-PcHeader $App $Defaults $Sync $conv $UpdateInfo @('|','/','-','\')[$SpinnerIndex%4]
       switch($View){
-        'general'{Write-PcGeneral $Sync.Overview $Feedback}
+        'general'{Write-PcGeneral $Sync.Overview $Feedback $Defaults $Sync $UpdateInfo}
         'conversation'{if($conv){Write-PcConversation $conv $Paths.HistoryFile}else{Write-PcLine 'Detail local indisponible; [R] synchroniser.' -ForegroundColor Yellow}}
         'macro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex){Write-PcMacro $conv.macro_tasks[$MacroIndex] ([int]$Defaults.limits.max_visible_microtasks)}}
         'micro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex -and @($conv.macro_tasks[$MacroIndex].micro_tasks).Count-gt$MicroIndex){Write-PcMicro $conv.macro_tasks[$MacroIndex].micro_tasks[$MicroIndex]}}
@@ -274,6 +301,8 @@ while($true){
         'sources'{Write-PcSources $Defaults $Sync}
         'local'{Write-PcLocal $LocalEvents}
         'settings'{Write-PcSettings $App $Defaults $Sync $UpdateInfo}
+        'reports'{Write-PcReportCenter $Defaults $Paths $conv}
+        'health'{Write-PcHealth $Defaults $Sync $UpdateInfo}
         'help'{Write-PcHelp}
       }
       Write-PcFooter $View
