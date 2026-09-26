@@ -1,16 +1,16 @@
 {
   "schema": "pc_command.status.v1",
   "project": "PC COMMAND / Browser4G lab",
-  "stage": "BROWSER_SMOKE_GITHUB",
-  "current_action": "Smoke-tests Windows en cours: Edge, Firefox, Brave, qutebrowser, Falkon et Helium",
-  "last_success": "Centre PC Command valide sur CI; dashboard humain alimente par GitHub",
-  "next_step": "Eliminer les candidats qui echouent puis comparer les survivants avant test RAM local",
+  "stage": "SIMPLIFICATION_SUIVI",
+  "current_action": "Simplification du suivi local PowerShell et poursuite des recherches navigateurs via GitHub et TLIB",
+  "last_success": "Tests PC Command sur BuildHub publics reussis; Google Drive Desktop conserve actif",
+  "next_step": "Valider le suivi PowerShell minimal puis poursuivre le tri des navigateurs",
   "blocker": null,
-  "updated_at": "2026-09-26T14:07:00+01:00",
+  "updated_at": "2026-09-26T15:12:00+01:00",
   "recent": [
-    "Tests de navigateurs deplaces sur BuildHub public pour economiser le quota Desktop Commander",
-    "6 jobs Windows lances en parallele",
-    "TLIB utilise comme catalogue L0 de candidats",
-    "Google Drive Desktop reste actif"
+    "Abandon du tableau de bord complexe",
+    "Suivi local reduit a une seule fenetre PowerShell lisible",
+    "Actualisation toutes les 2 minutes depuis GitHub",
+    "Desktop Commander utilise seulement pour les actions locales indispensables"
   ]
 }
