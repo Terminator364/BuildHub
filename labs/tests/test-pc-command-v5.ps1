@@ -186,7 +186,11 @@ Write-Host 'PC_COMMAND_V097_TEN_SLOT_PAGING_OK'
 # FB-035 / v0.9.7: 10 conversations must fit the minimum frame and active labels must not invent "TRAVAIL EN COURS".
 $engineText=Get-Content (Join-Path $root 'pc-command\v5\lib\engine.ps1') -Raw
 if($engineText -match 'TRAVAIL EN COURS'){throw 'forbidden inferred active-state label remains'}
-if($engineText -notmatch "Label=if\(\$state-eq'TOOL_RUNNING'\)\{'TOOL_RUNNING'\}else\{'ASSISTANT_PROCESSING'\}"){throw 'exact observable active labels missing'}
+$nowIso=[datetimeoffset]::Now.ToString('o')
+$assistantProbe=[pscustomobject]@{lifecycle=[pscustomobject]@{state='ASSISTANT_PROCESSING';phase='TEST';last_signal_at=$nowIso}}
+$toolProbe=[pscustomobject]@{lifecycle=[pscustomobject]@{state='TOOL_RUNNING';phase='TEST';last_signal_at=$nowIso}}
+if([string](Get-PcLifecycleView $assistantProbe).Label -ne 'ASSISTANT_PROCESSING'){throw 'ASSISTANT_PROCESSING label mismatch'}
+if([string](Get-PcLifecycleView $toolProbe).Label -ne 'TOOL_RUNNING'){throw 'TOOL_RUNNING label mismatch'}
 $script:PcFrameMax=14
 if(-not(Get-PcHomeCompactMode 10)){throw '10-conversation home must use compact mode at minimum frame'}
 if((4+10)-gt$script:PcFrameMax){throw 'compact 10-conversation layout exceeds minimum frame budget'}
