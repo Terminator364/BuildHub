@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-browser-20260926",
@@ -56,6 +56,16 @@
     "atomic_stage": true,
     "rollback_backup": true,
     "state_transport_separate": true,
-    "cahier_delta_each_relevant_message": true
+    "cahier_delta_each_relevant_message": true,
+    "event_bus_append_only": true
+  },
+  "event_bus": {
+    "enabled": true,
+    "repo": "Terminator364/PC-COMMAND-STATE",
+    "issue_number": 1,
+    "poll_seconds": 5,
+    "history_max_bytes": 1048576,
+    "format": "[PCEVENT v1] JSON",
+    "private": true
   }
 }
