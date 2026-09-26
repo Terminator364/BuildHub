@@ -1,3 +1,5 @@
+. (Join-Path $PSScriptRoot 'pdf.ps1')
+
 function ConvertTo-PcHtmlEncoded {
   param([string]$Text)
   return [System.Net.WebUtility]::HtmlEncode($Text)
@@ -48,30 +50,41 @@ function New-PcReport {
   }
   $html="<html><head><meta charset='utf-8'><style>body{font-family:Segoe UI,Arial;margin:28px;color:#111}table{border-collapse:collapse;width:100%}th,td{border:1px solid #bbb;padding:7px;vertical-align:top}th{background:#eee}.bar{height:16px;background:#ddd;border-radius:8px;overflow:hidden}.fill{height:100%;width:$progress%;background:#333}.muted{color:#666;font-size:90%}li{margin:6px 0}</style></head><body><h1>PC COMMAND</h1><p>Version $($Config.version) | $(Get-Date)</p><h2>$(ConvertTo-PcHtmlEncoded $convTitle)</h2><p>Progression estimee: <b>$progress%</b></p><div class='bar'><div class='fill'></div></div><p>Etat: <b>$(if($life){ConvertTo-PcHtmlEncoded $life.Label}else{'N/A'})</b></p><p>Etats observables uniquement; aucun raisonnement prive du modele n est expose.</p>$abc<h2>Macro-taches</h2><table><tr><th>Macro-tache</th><th>Etat</th><th>Avancement</th><th>En cours</th><th>Prochaine etape</th></tr>$rows</table><h2>Micro-taches condensees</h2>$micro</body></html>"
   [IO.File]::WriteAllText($htmlPath,$html,[Text.UTF8Encoding]::new($false))
-  $edge=@('C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe','C:\Program Files\Microsoft\Edge\Application\msedge.exe')|Where-Object{Test-Path $_}|Select-Object -First 1
-  $madePdf=$false
-  if($edge){
-    try{
-      $p=Start-Process $edge -ArgumentList @('--headless','--disable-gpu',("--print-to-pdf=$pdfPath"),("file:///"+($htmlPath -replace '\','/'))) -PassThru -WindowStyle Hidden
-      if($p.WaitForExit(30000) -and (Test-Path $pdfPath)){$madePdf=$true}
-    }catch{}
-  }
-  if(-not$madePdf){
-    try{
-      $word=New-Object -ComObject Word.Application
-      $word.Visible=$false
-      $doc=$word.Documents.Open($htmlPath)
-      $doc.ExportAsFixedFormat($pdfPath,17)
-      $doc.Close($false)
-      $word.Quit()
-      [Runtime.InteropServices.Marshal]::ReleaseComObject($doc)|Out-Null
-      [Runtime.InteropServices.Marshal]::ReleaseComObject($word)|Out-Null
-      if(Test-Path $pdfPath){$madePdf=$true}
-    }catch{
-      try{if($doc){$doc.Close($false)}}catch{}
-      try{if($word){$word.Quit()}}catch{}
+  $pdfLines=New-Object System.Collections.Generic.List[string]
+  $pdfLines.Add('PC COMMAND - RAPPORT DETAILLE')
+  $pdfLines.Add(('Version: '+$Config.version+' | '+(Get-Date).ToString('yyyy-MM-dd HH:mm:ss')))
+  $pdfLines.Add(('Conversation: '+$convTitle))
+  $pdfLines.Add(('Progression estimee: '+$progress+'%'))
+  if($life){$pdfLines.Add(('Etat: '+$life.Label+' | '+$life.Detail))}
+  $pdfLines.Add('')
+  if($Channel){
+    foreach($m in @($Channel.macro_tasks)){
+      $mp=Get-PcMacroProgress $m
+      $pdfLines.Add(('MACRO: '+$m.title+' | '+$m.state+' | '+$mp.Percent+'%'))
+      if($m.current_action){$pdfLines.Add(('  En cours: '+$m.current_action))}
+      if($m.last_success){$pdfLines.Add(('  Dernier OK: '+$m.last_success))}
+      if($m.next_step){$pdfLines.Add(('  Ensuite: '+$m.next_step))}
+      $vis=Get-PcVisibleMicroTasks $m 12
+      foreach($t in @($vis.Items)){
+        $tp=[int][math]::Round((Get-PcMicroCompletion $t)*100,0)
+        $pdfLines.Add(('    - '+$t.state+' '+$tp+'% '+$t.title))
+      }
+      if($vis.Hidden-gt0){$pdfLines.Add(('    ... '+$vis.Hidden+' micro-tache(s) condensee(s)'))}
+      $pdfLines.Add('')
+    }
+    if($Channel.cahier_des_charges){
+      $q=Get-PcRequirementCoverage $Channel
+      $pdfLines.Add(('CAHIER A+B+C | couverture '+$q.Percent+'% | P0 ouvertes '+$q.P0Open))
+      $pdfLines.Add(('Dernier delta: '+$Channel.cahier_des_charges.last_delta))
     }
   }
+  $pdfLines.Add('')
+  $pdfLines.Add('Etats observables uniquement; aucun raisonnement prive/chain-of-thought n est expose.')
+  $madePdf=$false
+  try{
+    New-PcTextPdf $pdfPath @($pdfLines)|Out-Null
+    if(Test-Path $pdfPath){$madePdf=$true}
+  }catch{$madePdf=$false}
   $downloads=Join-Path (Join-Path $env:USERPROFILE 'Downloads') 'PC_COMMAND'
   $downloadCopy=$null
   if($madePdf){
