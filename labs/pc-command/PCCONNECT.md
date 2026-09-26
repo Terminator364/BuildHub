@@ -57,3 +57,11 @@ Toujours MERGE + REFINE + PRESERVE.
 Si l'utilisateur quitte ou change de sujet:
 - conversation.paused si travail inacheve;
 - conversation.completed seulement si toutes les macro-taches requises sont closes ou explicitement abandonnees.
+
+## PCCONNECT v3 - instrumentation des tours
+- Debut de chaque tour: publier turn.started et ASSISTANT_PROCESSING.
+- Avant un lot d outils: TOOL_RUNNING + last_signal_at.
+- Apres le lot: resultat, preuve, progression et blocage.
+- Avant reponse: ASSISTANT_RESPONDED + turn.completed + overview.json.
+- Une longue operation reste TRAVAIL EN COURS jusqu a 15 min sans signal; 15-30 min = signal ancien; au-dela = interruption possible.
+- A+B+C a chaque delta: besoin/promesse + recherche/architecture + terrain/feedback; MERGE + REFINE + PRESERVE.
