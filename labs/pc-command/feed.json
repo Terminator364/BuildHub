@@ -1,6 +1,6 @@
 {
   "schema": "pc_command.feed.v2",
-  "generated_at": "2026-09-26T15:25:00+01:00",
+  "generated_at": "2026-09-26T15:35:00+01:00",
   "refresh_seconds": 50,
   "host": {
     "name": "MBMPC",
@@ -18,7 +18,7 @@
       "id": "tlib",
       "label": "TLIB",
       "state": "CONNECTED",
-      "detail": "L0 active; ~85410 entities observed"
+      "detail": "L0 active; 89101 entities observed at 14:24Z"
     },
     {
       "id": "desktop_commander",
@@ -46,10 +46,10 @@
       "objective": "Afficher localement, en PowerShell, un suivi humain, complet et tres leger des travaux relies au PC.",
       "owner": "current_chat",
       "state": "ACTIVE",
-      "stage": "V2_POWER_SHELL",
-      "current_action": "Construction du suivi multi-flux, moteur de progression adaptatif et interface PowerShell 50 secondes.",
-      "last_success": "Version simple PowerShell deployee et lisible sur le PC.",
-      "next_step": "Valider la V2 sur GitHub puis remplacer une seule fois la version locale.",
+      "stage": "V2_1_VALIDATION",
+      "current_action": "Validation CI du centre PowerShell complet: multi-flux, progression adaptative, sources, activite locale et demarrage en un clic.",
+      "last_success": "V2 multi-flux validee sur GitHub puis deployee; version V2.1 enrichie en validation.",
+      "next_step": "Deployer V2.1 une seule fois sur MBMPC apres CI verte et conserver un seul raccourci PC COMMAND.",
       "blocker": null,
       "tasks": [
         {
@@ -65,40 +65,40 @@
           "title": "Creer le moteur de progression adaptatif",
           "state": "ACTIVE",
           "weight": 3,
-          "completion": 0.7,
-          "evidence": "implementation en cours"
+          "completion": 0.95,
+          "evidence": "weighted task engine implemented"
         },
         {
           "id": "pc3",
           "title": "Creer l'affichage PowerShell humain",
           "state": "ACTIVE",
           "weight": 3,
-          "completion": 0.75,
-          "evidence": "V1 visible; V2 en CI"
+          "completion": 0.95,
+          "evidence": "V2 deployed; V2.1 in CI"
         },
         {
           "id": "pc4",
           "title": "Ajouter les controles clavier et rafraichissement 50 s",
-          "state": "ACTIVE",
+          "state": "DONE",
           "weight": 2,
-          "completion": 0.6,
-          "evidence": "implementation en cours"
+          "completion": 1,
+          "evidence": "50 second refresh + keyboard controls"
         },
         {
           "id": "pc5",
           "title": "Valider sur GitHub Actions",
-          "state": "PENDING",
+          "state": "DONE",
           "weight": 2,
-          "completion": 0,
-          "evidence": null
+          "completion": 1,
+          "evidence": "PC Command Lab CI success"
         },
         {
           "id": "pc6",
           "title": "Deployer la V2 sur MBMPC",
-          "state": "PENDING",
+          "state": "ACTIVE",
           "weight": 2,
-          "completion": 0,
-          "evidence": null
+          "completion": 0.8,
+          "evidence": "V2 deployed, V2.1 pending"
         }
       ],
       "sources": [
@@ -113,10 +113,10 @@
       "objective": "Choisir le navigateur le plus adapte au Lenovo 4 Go RAM / Celeron N4020 / HDD sans casser Drive.",
       "owner": "current_chat",
       "state": "ACTIVE",
-      "stage": "RESOURCE_BENCH_GITHUB",
-      "current_action": "Benchmark ressources sur runners Windows puis shortlist avant tests locaux minimaux.",
-      "last_success": "6/6 candidats ont passe le smoke-test Windows: Edge, Firefox, Brave, qutebrowser, Falkon, Helium.",
-      "next_step": "Mesurer RAM/processus/CPU comparatifs sur GitHub et ne garder que les finalistes.",
+      "stage": "RESOURCE_BENCH_CONFIRMATION",
+      "current_action": "Confirmation du benchmark ressources sur GitHub avant shortlist locale.",
+      "last_success": "6/6 smoke-tests reussis et premier prefiltre RAM termine: Falkon, qutebrowser, Brave, Helium, Edge, Firefox.",
+      "next_step": "Lancer une mesure de confirmation multi-onglets puis retenir 2-3 finalistes pour MBMPC.",
       "blocker": null,
       "tasks": [
         {
@@ -140,16 +140,16 @@
           "title": "Benchmark ressources GitHub",
           "state": "ACTIVE",
           "weight": 3,
-          "completion": 0.25,
-          "evidence": "workflow en preparation"
+          "completion": 0.75,
+          "evidence": "6 first-pass resource results collected"
         },
         {
           "id": "b4",
           "title": "Tri technique des candidats",
-          "state": "PENDING",
+          "state": "ACTIVE",
           "weight": 2,
-          "completion": 0,
-          "evidence": null
+          "completion": 0.25,
+          "evidence": "initial ranking under review"
         },
         {
           "id": "b5",
@@ -207,8 +207,8 @@
           "title": "Choisir le navigateur final",
           "state": "ACTIVE",
           "weight": 3,
-          "completion": 0.4,
-          "evidence": "stream browser4g"
+          "completion": 0.5,
+          "evidence": "browser prefilter underway"
         },
         {
           "id": "r3",
