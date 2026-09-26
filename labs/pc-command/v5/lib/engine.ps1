@@ -222,3 +222,25 @@ function Get-PcRequirementCoverage {
     Implemented=@($req|Where-Object status -eq 'IMPLEMENTED').Count
   }
 }
+
+
+function Get-PcHealthScore {
+  param($Config,$Sync,$UpdateInfo)
+  $score=100
+  $reasons=New-Object System.Collections.Generic.List[string]
+  $os=Get-CimInstance Win32_OperatingSystem -ErrorAction SilentlyContinue
+  $freeMb=if($os){[math]::Round($os.FreePhysicalMemory/1024,0)}else{0}
+  if(-not$Sync.Online){$score-=15;$reasons.Add('Mode cache/offline')}
+  if($script:PcSyncFailures -gt0){
+    $pen=[math]::Min(30,[int]$script:PcSyncFailures*2)
+    $score-=$pen;$reasons.Add(('Echecs sync: '+$script:PcSyncFailures))
+  }
+  if($freeMb -gt0 -and $freeMb -lt500){$score-=20;$reasons.Add(('RAM libre faible: '+$freeMb+' MB'))}
+  elseif($freeMb -gt0 -and $freeMb -lt750){$score-=10;$reasons.Add(('RAM libre limitee: '+$freeMb+' MB'))}
+  if(-not(Get-Process GoogleDriveFS -ErrorAction SilentlyContinue)){$score-=10;$reasons.Add('Google Drive Desktop arrete')}
+  if($UpdateInfo -and $UpdateInfo.Available){$score-=5;$reasons.Add(('Update '+$UpdateInfo.Version+' disponible'))}
+  if($score-lt0){$score=0}
+  $level=if($score-ge90){'EXCELLENT'}elseif($score-ge75){'BON'}elseif($score-ge55){'ATTENTION'}else{'DEGRADE'}
+  $color=if($score-ge75){'Green'}elseif($score-ge55){'Yellow'}else{'Red'}
+  return [pscustomobject]@{Score=$score;Level=$level;Color=$color;FreeRamMb=$freeMb;Reasons=@($reasons)}
+}
