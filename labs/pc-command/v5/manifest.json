@@ -1,8 +1,8 @@
 {
   "schema": "pc.command.manifest.v1",
   "version": "0.9.7",
-  "channel": "candidate",
-  "generated_at": "2026-09-26T23:28:00Z",
+  "channel": "stable",
+  "generated_at": "2026-09-26T23:36:00Z",
   "entrypoint": "PC_COMMAND_V5.ps1",
   "files": [
     {
