@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.5.0-lab",
+  "version": "0.5.0",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-browser-20260926",
@@ -17,8 +17,8 @@
     "internet_sync_seconds": 5,
     "engine_recalc_seconds": 5,
     "display_refresh_seconds": 10,
-    "heartbeat_seconds": 1,
-    "registry_refresh_seconds": 60
+    "heartbeat_title_seconds": 1,
+    "update_check_seconds": 300
   },
   "limits": {
     "max_conversations": 10,
@@ -28,19 +28,15 @@
     "ram_budget_mb": 150,
     "history_max_bytes": 524288
   },
-  "offline": {
-    "enabled": true,
-    "backoff_max_seconds": 60
+  "drive": {
+    "root_folder_id": "1fFLEoZxzoAkrMzC9SxjvOlzbTsW1ZjLW",
+    "reports_folder_id": "1Y6tgwMBHYaQPvsWIWCvEdUrUOgP681a3",
+    "checkpoints_folder_id": "1zLolAtOMPtoLkr8OxCEk5FJkNncBbSfN",
+    "exports_folder_id": "1WttL-Nm4DbpFjnGizDUY5YN-lWYQw9zA"
   },
-  "reports": {
-    "local_subdir": "reports",
-    "pdf_on_demand": true,
-    "drive_folder_id": "1Y6tgwMBHYaQPvsWIWCvEdUrUOgP681a3"
-  },
-  "checkpoint": {
-    "drive_folder_id": "1zLolAtOMPtoLkr8OxCEk5FJkNncBbSfN"
-  },
-  "export": {
-    "drive_folder_id": "1WttL-Nm4DbpFjnGizDUY5YN-lWYQw9zA"
+  "privacy": {
+    "no_passwords": true,
+    "no_chain_of_thought": true,
+    "observable_state_only": true
   }
 }
