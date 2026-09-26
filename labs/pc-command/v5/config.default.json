@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.7.0",
+  "version": "0.6.1",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-browser-20260926",
@@ -67,5 +67,10 @@
     "history_max_bytes": 1048576,
     "format": "[PCEVENT v1] JSON",
     "private": true
+  },
+  "navigation": {
+    "cache_first": true,
+    "max_visual_response_ms": 500,
+    "network_refresh_after_navigation": true
   }
 }
