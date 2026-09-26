@@ -15,17 +15,17 @@ function Invoke-PcGhRaw {
   param([string]$Repo,[string]$Path,[string]$Ref='main')
   $gh=(Get-Command gh.exe -ErrorAction SilentlyContinue).Source
   if(-not $gh){throw 'GitHub CLI absent'}
-  $args=@('api','-H','Accept: application/vnd.github.raw+json',("repos/$Repo/contents/$Path?ref=$Ref"))
-  $psi=New-Object System.Diagnostics.ProcessStartInfo
-  $psi.FileName=$gh; $psi.UseShellExecute=$false; $psi.RedirectStandardOutput=$true; $psi.RedirectStandardError=$true
-  foreach($a in $args){[void]$psi.ArgumentList.Add($a)}
-  $p=[Diagnostics.Process]::Start($psi)
-  $out=$p.StandardOutput.ReadToEnd(); $err=$p.StandardError.ReadToEnd(); $p.WaitForExit()
-  if($p.ExitCode -ne 0){throw ($err.Trim())}
-  $script:PcSessionRxBytes += [Text.Encoding]::UTF8.GetByteCount($out)
-  return $out
+  $endpoint="repos/$Repo/contents/$Path?ref=$Ref"
+  $oldEap=$ErrorActionPreference
+  $ErrorActionPreference='Continue'
+  $out=@(& $gh api -H 'Accept: application/vnd.github.raw+json' $endpoint 2>&1)
+  $code=$LASTEXITCODE
+  $ErrorActionPreference=$oldEap
+  $text=($out -join [Environment]::NewLine)
+  if($code -ne 0){throw $text}
+  $script:PcSessionRxBytes += [Text.Encoding]::UTF8.GetByteCount($text)
+  return $text
 }
-
 function Write-PcAtomic {
   param([string]$Path,[string]$Content)
   $tmp=$Path+'.tmp'
