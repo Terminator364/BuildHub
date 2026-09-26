@@ -1,0 +1,326 @@
+{
+  "schema": "pc_command.feed.v2",
+  "generated_at": "2026-09-26T15:42:00+01:00",
+  "refresh_seconds": 10,
+  "host": {
+    "name": "MBMPC",
+    "ram_gb": 4,
+    "google_drive_policy": "KEEP_RUNNING"
+  },
+  "sources": [
+    {
+      "id": "github",
+      "label": "GitHub BuildHub",
+      "state": "CONNECTED",
+      "detail": "lab/pc-command-browser-20260926"
+    },
+    {
+      "id": "tlib",
+      "label": "TLIB",
+      "state": "CONNECTED",
+      "detail": "L0 active; 89101 entities observed at 14:24Z"
+    },
+    {
+      "id": "desktop_commander",
+      "label": "Desktop Commander",
+      "state": "LOCAL_DETECT",
+      "detail": "detected locally by the viewer"
+    },
+    {
+      "id": "drive",
+      "label": "Google Drive Desktop",
+      "state": "KEEP_RUNNING",
+      "detail": "sync must remain enabled"
+    },
+    {
+      "id": "telegram",
+      "label": "Telegram",
+      "state": "AVAILABLE_NOT_ACTIVE",
+      "detail": "not used by the current browser test stream"
+    }
+  ],
+  "streams": [
+    {
+      "id": "pc-command-v2",
+      "title": "PC COMMAND - centre de suivi",
+      "objective": "Afficher localement, en PowerShell, un suivi humain, complet et tres leger des travaux relies au PC.",
+      "owner": "current_chat",
+      "state": "ACTIVE",
+      "stage": "V3_EVENT_INGESTION",
+      "current_action": "Ajout du bus d'evenements multi-conversations: nouvelle tache detectee, plan elargi, progression recalculee; limite a 10 flux actifs.",
+      "last_success": "La nouvelle demande utilisateur a ete detectee comme extension de portee et convertie en micro-taches du flux PC COMMAND.",
+      "next_step": "Implementer le registre de conversations et les fichiers d'evenements independants, puis les faire consolider localement sans Desktop Commander.",
+      "blocker": null,
+      "tasks": [
+        {
+          "id": "pc1",
+          "title": "Definir le protocole multi-conversations",
+          "state": "DONE",
+          "weight": 2,
+          "completion": 1,
+          "evidence": "schema v2"
+        },
+        {
+          "id": "pc2",
+          "title": "Creer le moteur de progression adaptatif",
+          "state": "ACTIVE",
+          "weight": 3,
+          "completion": 0.98,
+          "evidence": "weighted adaptive engine + scope expansion model"
+        },
+        {
+          "id": "pc3",
+          "title": "Creer l'affichage PowerShell humain",
+          "state": "ACTIVE",
+          "weight": 3,
+          "completion": 0.98,
+          "evidence": "multi-stream console viewer live on PC"
+        },
+        {
+          "id": "pc4",
+          "title": "Ajouter les controles clavier et rafraichissement 50 s",
+          "state": "ACTIVE",
+          "weight": 2,
+          "completion": 0.9,
+          "evidence": "10s remote / 1s local redesign"
+        },
+        {
+          "id": "pc5",
+          "title": "Valider sur GitHub Actions",
+          "state": "DONE",
+          "weight": 2,
+          "completion": 1,
+          "evidence": "GitHub CI success on V2"
+        },
+        {
+          "id": "pc6",
+          "title": "Deployer la V2 sur MBMPC",
+          "state": "ACTIVE",
+          "weight": 2,
+          "completion": 0.8,
+          "evidence": "V2 deployed; V3 pending CI"
+        },
+        {
+          "id": "pc7",
+          "title": "Detection multi-conversations et ingestion automatique des nouvelles taches",
+          "state": "ACTIVE",
+          "weight": 4,
+          "completion": 0.1,
+          "evidence": "user added requirement detected in current conversation"
+        },
+        {
+          "id": "pc8",
+          "title": "Protocole PCCONNECT, code court et flux d'evenements par conversation",
+          "state": "ACTIVE",
+          "weight": 3,
+          "completion": 0.05,
+          "evidence": "architecture defined; implementation pending"
+        }
+      ],
+      "sources": [
+        "github",
+        "desktop_commander",
+        "drive"
+      ],
+      "events": [
+        {
+          "at": "2026-09-26T15:31:20+01:00",
+          "kind": "USER_FEEDBACK",
+          "text": "Vue multi-flux visible; demande de plus de detail et d'un moteur plus reactif."
+        },
+        {
+          "at": "2026-09-26T15:35:00+01:00",
+          "kind": "DESIGN",
+          "text": "Separation retenue: recalcul local 1 s, synchronisation distante 10 s."
+        },
+        {
+          "at": "2026-09-26T15:42:00+01:00",
+          "kind": "BUILD",
+          "text": "V3 en cours sur BuildHub pour limiter les appels Desktop Commander."
+        },
+        {
+          "at": "2026-09-26T15:50:00+01:00",
+          "kind": "SCOPE_EXPANDED",
+          "text": "Nouvelle exigence detectee: ingestion automatique de taches depuis plusieurs conversations, maximum 10 flux actifs. Progression recalculee."
+        }
+      ]
+    },
+    {
+      "id": "browser4g",
+      "title": "Navigateur pour PC 4 Go",
+      "objective": "Choisir le navigateur le plus adapte au Lenovo 4 Go RAM / Celeron N4020 / HDD sans casser Drive.",
+      "owner": "current_chat",
+      "state": "ACTIVE",
+      "stage": "RESOURCE_CONFIRMATION",
+      "current_action": "Confirmation des mesures RAM/CPU sur runners Windows et ajout du navigateur personnel BuildHub comme candidat experimental.",
+      "last_success": "Premier prefiltre RAM: Falkon 165 MB; qutebrowser 306 MB; Brave 357 MB; Helium 646 MB; Edge 678 MB; Firefox 786 MB sur runner Windows (comparatif relatif).",
+      "next_step": "Test multi-pages ChatGPT/YouTube/GitHub puis shortlist 2-3 finalistes pour le Lenovo.",
+      "blocker": null,
+      "tasks": [
+        {
+          "id": "b1",
+          "title": "Recherche Internet/GitHub/TLIB",
+          "state": "DONE",
+          "weight": 2,
+          "completion": 1,
+          "evidence": "candidate matrix"
+        },
+        {
+          "id": "b2",
+          "title": "Smoke-tests Windows",
+          "state": "DONE",
+          "weight": 2,
+          "completion": 1,
+          "evidence": "6/6 success"
+        },
+        {
+          "id": "b3",
+          "title": "Benchmark ressources GitHub",
+          "state": "ACTIVE",
+          "weight": 3,
+          "completion": 0.82,
+          "evidence": "first-pass resource matrix complete; realistic pass pending"
+        },
+        {
+          "id": "b4",
+          "title": "Tri technique des candidats",
+          "state": "ACTIVE",
+          "weight": 2,
+          "completion": 0.35,
+          "evidence": "Falkon/qutebrowser/Brave provisional low-memory leaders"
+        },
+        {
+          "id": "b5",
+          "title": "Tests locaux des finalistes seulement",
+          "state": "PENDING",
+          "weight": 3,
+          "completion": 0,
+          "evidence": null
+        },
+        {
+          "id": "b6",
+          "title": "Migration ou optimisation Edge",
+          "state": "PENDING",
+          "weight": 2,
+          "completion": 0,
+          "evidence": null
+        },
+        {
+          "id": "b7",
+          "title": "Nettoyage des navigateurs rejetes",
+          "state": "PENDING",
+          "weight": 1,
+          "completion": 0,
+          "evidence": null
+        }
+      ],
+      "sources": [
+        "github",
+        "tlib",
+        "desktop_commander"
+      ],
+      "events": [
+        {
+          "at": "2026-09-26T14:04:00Z",
+          "kind": "SMOKE",
+          "text": "6/6 navigateurs ont demarre correctement sur Windows runner."
+        },
+        {
+          "at": "2026-09-26T14:32:56Z",
+          "kind": "BENCH",
+          "text": "Prefiltre simple termine; Falkon et qutebrowser ont le plus petit working set relatif."
+        },
+        {
+          "at": "2026-09-26T15:40:00+01:00",
+          "kind": "DISCOVERY",
+          "text": "Le navigateur personnel BuildHub WebView2 est ajoute comme candidat experimental adapte aux 4 Go."
+        }
+      ]
+    },
+    {
+      "id": "ram-optimization",
+      "title": "Optimisation RAM Windows",
+      "objective": "Reduire la pression memoire sans couper Google Drive et sans fragiliser Windows.",
+      "owner": "current_chat",
+      "state": "WAITING",
+      "stage": "AFTER_BROWSER_SHORTLIST",
+      "current_action": "En attente du choix navigateur pour eviter des optimisations contradictoires.",
+      "last_success": "Onglets inutiles fermes; mode de travail a un seul onglet technique adopte.",
+      "next_step": "Audit final des processus, demarrage, effets Windows et services non essentiels.",
+      "blocker": "Depend du choix final du navigateur.",
+      "tasks": [
+        {
+          "id": "r1",
+          "title": "Nettoyer les onglets et doublons",
+          "state": "DONE",
+          "weight": 1,
+          "completion": 1,
+          "evidence": "Edge RAM reduite precedemment"
+        },
+        {
+          "id": "r2",
+          "title": "Choisir le navigateur final",
+          "state": "ACTIVE",
+          "weight": 3,
+          "completion": 0.5,
+          "evidence": "browser prefilter underway"
+        },
+        {
+          "id": "r3",
+          "title": "Optimiser le demarrage Windows",
+          "state": "PENDING",
+          "weight": 2,
+          "completion": 0,
+          "evidence": null
+        },
+        {
+          "id": "r4",
+          "title": "Optimiser les effets et processus non essentiels",
+          "state": "PENDING",
+          "weight": 2,
+          "completion": 0,
+          "evidence": null
+        },
+        {
+          "id": "r5",
+          "title": "Mesurer avant/apres",
+          "state": "PENDING",
+          "weight": 2,
+          "completion": 0,
+          "evidence": null
+        }
+      ],
+      "sources": [
+        "desktop_commander",
+        "github"
+      ],
+      "events": [
+        {
+          "at": "2026-09-26T12:00:00+01:00",
+          "kind": "MEASURE",
+          "text": "PC cible confirme: 4 Go RAM, Celeron N4020, HDD."
+        },
+        {
+          "at": "2026-09-26T13:00:00+01:00",
+          "kind": "OPTIMIZE",
+          "text": "Politique un seul onglet technique adoptee; Google Drive Desktop conserve actif."
+        }
+      ]
+    }
+  ],
+  "local_recalc_seconds": 1,
+  "engine": {
+    "name": "PC Command Adaptive Progress Engine",
+    "version": "3.0-lab",
+    "semantics": "evidence_weighted_progress",
+    "note": "Progress is an estimate from weighted tasks and evidence, not a probability of success.",
+    "recompute_seconds": 1,
+    "remote_sync_seconds": 10,
+    "dynamic_scope": true,
+    "max_active_streams": 10,
+    "max_active_tasks_per_stream": 20,
+    "registration": "PCCONNECT",
+    "event_model": "CloudEvents-inspired append-only events + weighted task rollup",
+    "discovery_policy": "New tasks expand scope and may lower progress; completed evidence is never discarded."
+  }
+}
