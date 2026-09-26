@@ -113,3 +113,20 @@ if([string]$x.Index.last_feedback_id-ne'FB-002'){throw "feedback reader did not 
 if(@($x.Versions.versions).Count-ne1){throw 'version trace not loaded'}
 Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
 Write-Host 'PC_COMMAND_V094_LEDGER_ROUTER_OK'
+
+
+# v0.9.5: updater must smoke before swap, retain rollback, and report status.
+$bootText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_BOOTSTRAP.ps1') -Raw
+foreach($token in @('SmokeTest','READY_TO_SWAP','ROLLED_BACK','RECOVERY_REQUIRED','update-status.json','Move-Item')){
+  if($bootText -notmatch [regex]::Escape($token)){throw "v0.9.5 updater token missing: $token"}
+}
+if($bootText -notmatch 'Wait-PcViewerExit'){throw 'v0.9.5 must defer swap while viewer is still alive'}
+if($bootText -notmatch 'post-launch' -and $bootText -notmatch 'post-launch'){throw 'post-launch update verification missing'}
+
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -match 'lab/pc-command-v070/labs/pc-command/v5/manifest.json'){throw 'stale hard-coded manifest URL remains'}
+if($mainText -notmatch 'Ensure-PcChannelDetail'){throw 'report detail gate missing'}
+if($mainText -notmatch 'PDF detaille genere'){throw 'human PDF ACK missing'}
+if(-not[bool]$cfg.reports.force_selected_conversation_detail){throw 'report detail policy missing'}
+if([string]$cfg.updater.swap_mode -ne 'same_volume_directory_move'){throw 'updater swap mode missing'}
+Write-Host 'PC_COMMAND_V095_UPDATE_REPORT_OK'
