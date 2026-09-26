@@ -265,3 +265,25 @@ function Complete-PcUpdateProbe {
     return [pscustomobject]@{Completed=$true;Success=$false;Available=$false;Version=[string]$Config.version;Manifest=$null;Error=$_.Exception.Message}
   }
 }
+
+
+function Invoke-PcRollback {
+  param([string]$Root)
+  try{
+    $app=Join-Path $Root 'app'
+    $backupRoot=Join-Path $Root 'backup'
+    $candidate=Get-ChildItem $backupRoot -Directory -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1
+    if(-not$candidate){return [pscustomobject]@{Success=$false;Message='Aucun backup disponible';Version=$null}}
+    $manifest=Join-Path $candidate.FullName 'manifest.json'
+    $version=$null
+    if(Test-Path $manifest){try{$version=(Get-Content $manifest -Raw -Encoding UTF8|ConvertFrom-Json).version}catch{}}
+    $safety=Join-Path $backupRoot ('pre-rollback-'+(Get-Date -Format 'yyyyMMdd-HHmmss'))
+    New-Item -ItemType Directory -Force -Path $safety|Out-Null
+    if(Test-Path $app){Copy-Item (Join-Path $app '*') $safety -Recurse -Force -ErrorAction SilentlyContinue}
+    Remove-Item (Join-Path $app '*') -Recurse -Force -ErrorAction SilentlyContinue
+    Copy-Item (Join-Path $candidate.FullName '*') $app -Recurse -Force
+    return [pscustomobject]@{Success=$true;Message=('Rollback vers '+$(if($version){$version}else{$candidate.Name}));Version=$version}
+  }catch{
+    return [pscustomobject]@{Success=$false;Message=$_.Exception.Message;Version=$null}
+  }
+}
