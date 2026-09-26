@@ -4,7 +4,8 @@ $AppDir=Join-Path $Root 'app';$Stage=Join-Path $Root 'staging';$Backup=Join-Path
 New-Item -ItemType Directory -Force -Path $AppDir,$Stage,$Backup|Out-Null
 $Base='https://raw.githubusercontent.com/Terminator364/BuildHub/lab/pc-command-browser-20260926/labs/pc-command/v5'
 $manifest=$null
-try{$manifest=(Invoke-WebRequest "$Base/manifest.json" -TimeoutSec 6 -UseBasicParsing).Content|ConvertFrom-Json}catch{}
+$nonce=[DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+try{$manifest=(Invoke-WebRequest ("$Base/manifest.json?pc=$nonce") -TimeoutSec 6 -UseBasicParsing -Headers @{'Cache-Control'='no-cache'}).Content|ConvertFrom-Json}catch{}
 if($manifest){
   $st=Join-Path $Stage ([string]$manifest.version)
   if(Test-Path $st){Remove-Item $st -Recurse -Force}
@@ -14,7 +15,7 @@ if($manifest){
     $dest=Join-Path $st ([string]$f.relative_path)
     New-Item -ItemType Directory -Force -Path (Split-Path $dest -Parent)|Out-Null
     try{
-      Invoke-WebRequest ("$Base/"+$f.relative_path) -OutFile $dest -TimeoutSec 10 -UseBasicParsing
+      Invoke-WebRequest ("$Base/"+$f.relative_path+"?pcv="+$manifest.version+"&n="+$nonce) -OutFile $dest -TimeoutSec 10 -UseBasicParsing -Headers @{'Cache-Control'='no-cache'}
       $git=(Get-Command git.exe -ErrorAction SilentlyContinue).Source
       if($git -and $f.git_blob_sha){$actual=(& $git hash-object $dest).Trim();if($actual-ne[string]$f.git_blob_sha){$ok=$false;break}}
     }catch{$ok=$false;break}
