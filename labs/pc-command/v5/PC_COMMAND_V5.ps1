@@ -16,7 +16,7 @@ $Lib=Join-Path $PSScriptRoot 'lib'
 . (Join-Path $Lib 'report.ps1')
 . (Join-Path $Lib 'ui.ps1')
 
-$Defaults=Get-Content (Join-Path $PSScriptRoot 'config.default.json') -Raw|ConvertFrom-Json
+$Defaults=Get-Content (Join-Path $PSScriptRoot 'config.default.json') -Raw -Encoding UTF8|ConvertFrom-Json
 $Paths=Initialize-PcPaths $Root
 [void](Initialize-PcStateRepo $Defaults $Paths)
 
@@ -28,7 +28,7 @@ $App=[pscustomobject]@{
 }
 if(Test-Path $Paths.LocalConfig){
   try{
-    $lc=Get-Content $Paths.LocalConfig -Raw|ConvertFrom-Json
+    $lc=Get-Content $Paths.LocalConfig -Raw -Encoding UTF8|ConvertFrom-Json
     if($lc.internet_sync_seconds){$App.SyncSeconds=[double]$lc.internet_sync_seconds}
     if($lc.engine_recalc_seconds){$App.EngineSeconds=[double]$lc.engine_recalc_seconds}
     if($lc.display_refresh_seconds){$App.DisplaySeconds=[int]$lc.display_refresh_seconds}
@@ -193,7 +193,7 @@ function Process-PcKey {
       $script:ConversationIndex=$idx
       $id=[string]$Sync.Overview.conversations[$idx].id
       $cache=Join-Path $Paths.Cache ("channel-$id.json")
-      if(Test-Path $cache){try{$script:Sync.Channel=Get-Content $cache -Raw|ConvertFrom-Json}catch{}}
+      if(Test-Path $cache){try{$script:Sync.Channel=Get-Content $cache -Raw -Encoding UTF8|ConvertFrom-Json}catch{}}
       $script:View='conversation'
     }
     elseif($View-eq'conversation' -and $Sync.Channel -and $idx-lt@($Sync.Channel.macro_tasks).Count){
