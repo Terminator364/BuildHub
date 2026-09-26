@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-v070",
@@ -15,11 +15,11 @@
     "sync_mode": "local_git_background_pull"
   },
   "cadence": {
-    "internet_sync_seconds": 5,
-    "engine_recalc_seconds": 5,
+    "internet_sync_seconds": 3,
+    "engine_recalc_seconds": 3.5,
     "display_refresh_seconds": 10,
     "heartbeat_title_seconds": 1,
-    "update_check_seconds": 300
+    "update_check_seconds": 180
   },
   "limits": {
     "max_conversations": 10,
@@ -61,7 +61,9 @@
     "cahier_delta_each_relevant_message": true,
     "event_bus_append_only": true,
     "nonblocking_state_sync": true,
-    "input_first_loop": true
+    "input_first_loop": true,
+    "auto_update": true,
+    "auto_update_mode": "background_probe_then_atomic_bootstrap_restart"
   },
   "event_bus": {
     "enabled": false,
@@ -72,7 +74,11 @@
     "cache_first": true,
     "max_visual_response_ms": 500,
     "network_refresh_after_navigation": true,
-    "local_state_only_on_keypress": true
+    "local_state_only_on_keypress": true,
+    "contextual_controls": true,
+    "home_button_global": true,
+    "help_view": true,
+    "micro_detail_view": true
   },
   "updater": {
     "transport": "github_api_blob_sha",
@@ -97,5 +103,15 @@
     "process_start_info_compat": "windows_powershell_5_1",
     "background_pull": true,
     "failures_increment_per_attempt": true
+  },
+  "home": {
+    "clean": true,
+    "technical_metrics_in_settings": true,
+    "show_current_and_next": true
+  },
+  "quality_target": {
+    "user_perceived_target_10": 5,
+    "current_goal": "global improvement without regression",
+    "promotion_requires_no_open_p0_regression": true
   }
 }
