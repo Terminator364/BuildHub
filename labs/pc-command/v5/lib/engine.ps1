@@ -79,32 +79,76 @@ function Format-PcAge {
 
 function Get-PcLifecycleView {
   param($Conversation)
+
+  $turn = $Conversation.current_turn
   $lc = $Conversation.lifecycle
-  if ($null -eq $lc) {
-    return [pscustomobject]@{Label='ETAT INCONNU';Color='Yellow';Detail='Aucun etat publie.';AgeSeconds=[double]::PositiveInfinity}
+  $state = ''
+  $phase = '-'
+  $stamp = ''
+  $started = ''
+
+  if ($turn) {
+    $state = [string]$turn.state
+    $phase = if ($turn.phase) {[string]$turn.phase} else {'-'}
+    $stamp = if ($turn.last_signal_at) {[string]$turn.last_signal_at} elseif ($turn.started_at) {[string]$turn.started_at} else {''}
+    $started = if ($turn.started_at) {[string]$turn.started_at} else {$stamp}
+  } elseif ($lc) {
+    $state = [string]$lc.state
+    $phase = if ($lc.phase) {[string]$lc.phase} else {'-'}
+    $stamp = if ($lc.last_signal_at) {[string]$lc.last_signal_at} elseif ($lc.last_transition_at) {[string]$lc.last_transition_at} elseif ($Conversation.updated_at) {[string]$Conversation.updated_at} else {''}
+    $started = if ($lc.started_at) {[string]$lc.started_at} else {$stamp}
+  } else {
+    return [pscustomobject]@{Label='ETAT INCONNU';Color='Yellow';Detail='Aucun etat observable publie.';AgeSeconds=[double]::PositiveInfinity;Confidence=0;DurationSeconds=0}
   }
-  $state = [string]$lc.state
-  $stamp = if ($lc.last_transition_at) {[string]$lc.last_transition_at} elseif ($Conversation.updated_at) {[string]$Conversation.updated_at} else {''}
+
   $age = Get-PcAgeSeconds $stamp
-  $phase = if ($lc.phase) {[string]$lc.phase} else {'-'}
-  switch ($state) {
-    'ASSISTANT_PROCESSING' {
-      if ($age -gt 120) { return [pscustomobject]@{Label='SIGNAL DISTANT ANCIEN';Color='Yellow';Detail=("Dernier signal il y a "+(Format-PcAge $age)+". Traitement possiblement en cours ou interrompu.");AgeSeconds=$age} }
-      return [pscustomobject]@{Label='TRAVAIL EN COURS';Color='Green';Detail=("Phase "+$phase+" | depuis "+(Format-PcAge $age));AgeSeconds=$age}
+  $duration = Get-PcAgeSeconds $started
+
+  if ($state -in @('ASSISTANT_PROCESSING','TOOL_RUNNING')) {
+    $confidence = if ($age -le 60) {100} elseif ($age -le 300) {90} elseif ($age -le 900) {75} elseif ($age -le 1800) {50} else {25}
+    if ($age -le 900) {
+      return [pscustomobject]@{
+        Label = if ($state -eq 'TOOL_RUNNING') {'OUTIL / TRAVAIL EN COURS'} else {'TRAVAIL EN COURS'}
+        Color='Green'
+        Detail=("Phase "+$phase+" | duree "+(Format-PcAge $duration)+" | dernier signal "+(Format-PcAge $age)+" | confiance "+$confidence+"%")
+        AgeSeconds=$age
+        Confidence=$confidence
+        DurationSeconds=$duration
+      }
     }
-    'TOOL_RUNNING' { return [pscustomobject]@{Label='OUTIL EN COURS';Color='Green';Detail=("Phase "+$phase+" | signal "+(Format-PcAge $age));AgeSeconds=$age} }
-    'WAITING_EXTERNAL' { return [pscustomobject]@{Label='ATTENTE EXTERNE';Color='Yellow';Detail=("Dependance externe | "+(Format-PcAge $age));AgeSeconds=$age} }
-    'ASSISTANT_RESPONDED' { return [pscustomobject]@{Label='REPONSE LIVREE';Color='Cyan';Detail='En attente du prochain message utilisateur.';AgeSeconds=$age} }
-    'PAUSED' { return [pscustomobject]@{Label='EN PAUSE';Color='Yellow';Detail='Travail volontairement mis en pause.';AgeSeconds=$age} }
-    'USER_STOPPED_EXPLICIT' { return [pscustomobject]@{Label='ARRET UTILISATEUR';Color='Yellow';Detail='Arret explicite rapporte.';AgeSeconds=$age} }
-    'INTERRUPTED_INFERRED' { return [pscustomobject]@{Label='INTERRUPTION PROBABLE';Color='Yellow';Detail='Le flux precedent n a pas publie sa fermeture.';AgeSeconds=$age} }
-    'SECURITY_CHECK_REPORTED' { return [pscustomobject]@{Label='CONTROLE SECURITE';Color='Yellow';Detail='Un controle de securite a ete rapporte.';AgeSeconds=$age} }
-    'NETWORK_ERROR' { return [pscustomobject]@{Label='ERREUR RESEAU';Color='Red';Detail='Erreur reseau rapportee par le flux.';AgeSeconds=$age} }
-    'RATE_LIMIT_WAIT' { return [pscustomobject]@{Label='ATTENTE QUOTA';Color='Yellow';Detail='Limite/quota rapporte.';AgeSeconds=$age} }
-    'OFFLINE' { return [pscustomobject]@{Label='HORS LIGNE';Color='Yellow';Detail='Dernier etat local disponible.';AgeSeconds=$age} }
-    'RECOVERING' { return [pscustomobject]@{Label='REPRISE';Color='Green';Detail='Reprise du dernier etat fiable.';AgeSeconds=$age} }
-    'COMPLETED' { return [pscustomobject]@{Label='TERMINE';Color='Green';Detail='Flux declare termine.';AgeSeconds=$age} }
-    default { return [pscustomobject]@{Label=$state;Color='Yellow';Detail=("Etat publie | "+(Format-PcAge $age));AgeSeconds=$age} }
+    if ($age -le 1800) {
+      return [pscustomobject]@{
+        Label='TRAVAIL DECLARE - SIGNAL ANCIEN'
+        Color='Yellow'
+        Detail=("Phase "+$phase+" | duree "+(Format-PcAge $duration)+" | aucun signal depuis "+(Format-PcAge $age)+" | confiance "+$confidence+"%")
+        AgeSeconds=$age
+        Confidence=$confidence
+        DurationSeconds=$duration
+      }
+    }
+    return [pscustomobject]@{
+      Label='INTERRUPTION POSSIBLE'
+      Color='Yellow'
+      Detail=("Le tour etait declare actif mais aucun signal depuis "+(Format-PcAge $age)+". Etat non invente.")
+      AgeSeconds=$age
+      Confidence=$confidence
+      DurationSeconds=$duration
+    }
+  }
+
+  switch ($state) {
+    'WAITING_EXTERNAL' { return [pscustomobject]@{Label='ATTENTE EXTERNE';Color='Yellow';Detail=("Phase "+$phase+" | "+(Format-PcAge $age));AgeSeconds=$age;Confidence=90;DurationSeconds=$duration} }
+    'ASSISTANT_RESPONDED' { return [pscustomobject]@{Label='REPONSE LIVREE';Color='Cyan';Detail=("Tour termine il y a "+(Format-PcAge $age)+".");AgeSeconds=$age;Confidence=100;DurationSeconds=$duration} }
+    'PAUSED' { return [pscustomobject]@{Label='EN PAUSE';Color='Yellow';Detail='Travail volontairement mis en pause.';AgeSeconds=$age;Confidence=100;DurationSeconds=$duration} }
+    'USER_STOPPED_EXPLICIT' { return [pscustomobject]@{Label='ARRET UTILISATEUR';Color='Yellow';Detail='Arret explicite rapporte.';AgeSeconds=$age;Confidence=100;DurationSeconds=$duration} }
+    'INTERRUPTED_INFERRED' { return [pscustomobject]@{Label='INTERRUPTION PROBABLE';Color='Yellow';Detail='Le flux precedent n a pas publie sa fermeture avant un nouvel input.';AgeSeconds=$age;Confidence=75;DurationSeconds=$duration} }
+    'SECURITY_CHECK_REPORTED' { return [pscustomobject]@{Label='CONTROLE SECURITE';Color='Yellow';Detail='Un controle de securite a ete rapporte.';AgeSeconds=$age;Confidence=100;DurationSeconds=$duration} }
+    'NETWORK_ERROR' { return [pscustomobject]@{Label='ERREUR RESEAU';Color='Red';Detail='Erreur reseau rapportee par le flux.';AgeSeconds=$age;Confidence=100;DurationSeconds=$duration} }
+    'RATE_LIMIT_WAIT' { return [pscustomobject]@{Label='ATTENTE QUOTA';Color='Yellow';Detail='Limite/quota rapporte.';AgeSeconds=$age;Confidence=100;DurationSeconds=$duration} }
+    'OFFLINE' { return [pscustomobject]@{Label='HORS LIGNE';Color='Yellow';Detail='Dernier etat local disponible.';AgeSeconds=$age;Confidence=80;DurationSeconds=$duration} }
+    'RECOVERING' { return [pscustomobject]@{Label='REPRISE';Color='Green';Detail='Reprise du dernier etat fiable.';AgeSeconds=$age;Confidence=90;DurationSeconds=$duration} }
+    'COMPLETED' { return [pscustomobject]@{Label='TERMINE';Color='Green';Detail='Flux declare termine.';AgeSeconds=$age;Confidence=100;DurationSeconds=$duration} }
+    default { return [pscustomobject]@{Label=$state;Color='Yellow';Detail=("Etat publie | "+(Format-PcAge $age));AgeSeconds=$age;Confidence=70;DurationSeconds=$duration} }
   }
 }
 
