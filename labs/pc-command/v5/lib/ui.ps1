@@ -25,169 +25,52 @@ function Write-PcLine {
   $script:PcFrameLine++
 }
 
-function Write-PcFooterLine {
-  param([Parameter(Position=0)]$Object='',[Parameter(Position=1)][ConsoleColor]$ForegroundColor=[ConsoleColor]::Gray)
-  $s=if($null-eq$Object){''}else{[string]$Object}
-  if($s.Length-ge$script:PcFrameWidth){$s=$s.Substring(0,[math]::Max(1,$script:PcFrameWidth-4))+'...'}
-  try{[Console]::ForegroundColor=$ForegroundColor;[Console]::WriteLine($s);[Console]::ResetColor()}catch{Write-Host $s -ForegroundColor $ForegroundColor}
-}
-
-function Get-PcBar {
-  param([int]$Percent,[int]$Width=30)
-  if($Percent-lt0){$Percent=0};if($Percent-gt100){$Percent=100}
-  $filled=[math]::Floor(($Percent/100.0)*$Width)
-  return '['+('#'*$filled)+('-'*($Width-$filled))+']'
-}
-
-function Write-PcHeader {
-  param($App,$Config,$Sync,$Conversation,$UpdateInfo,[string]$Spinner)
-  $os=Get-CimInstance Win32_OperatingSystem -ErrorAction SilentlyContinue
-  $free=if($os){[math]::Round($os.FreePhysicalMemory/1024,0)}else{0}
-  $drive=if(Get-Process GoogleDriveFS -ErrorAction SilentlyContinue){'ACTIF'}else{'ARRETE'}
-  Write-PcLine '================================================================================' -ForegroundColor Cyan
-  Write-PcLine (" PC COMMAND  v$($Config.version)   $Spinner  MOTEUR VIVANT") -ForegroundColor Cyan
-  Write-PcLine '================================================================================' -ForegroundColor Cyan
-  Write-PcLine ("RAM libre : $free MB | Drive : $drive | Budget PC COMMAND : $($Config.limits.ram_budget_mb) MB")
-  Write-PcLine ("Moteur : $($App.EngineSeconds)s | Internet : $($App.SyncSeconds)s | Affichage : $($App.DisplaySeconds)s | Mode : $($App.Mode)")
-  Write-PcLine ("Etat : depot prive local-sync | Echecs sync : $script:PcSyncFailures")
-  if($UpdateInfo -and $UpdateInfo.Available){Write-PcLine ("MISE A JOUR DISPONIBLE : v$($UpdateInfo.Version)") -ForegroundColor Yellow}
-  if($Conversation){
-    $life=Get-PcLifecycleView $Conversation
-    Write-PcLine ("Conversation : $($Conversation.label) | "+$life.Label+" | "+$life.Detail) -ForegroundColor $life.Color
-  }
-  if(-not $Sync.Online){Write-PcLine 'MODE OFFLINE/CACHE : dernier etat fiable affiche.' -ForegroundColor Yellow}
-  Write-PcLine ''
-}
-
-function Write-PcGeneral {
-  param($Overview,$Feedback)
-  Write-PcLine 'ACCUEIL / CONVERSATIONS CONNECTEES' -ForegroundColor Cyan
-  if($Feedback -and $Feedback.Index){
-    Write-PcLine ('Feedbacks      : '+$Feedback.Index.total_feedbacks+' | dernier '+$Feedback.Index.last_feedback_id+' | politique '+$Feedback.Index.policy) -ForegroundColor DarkCyan
-  }
-  Write-PcLine ''
-  if(-not $Overview -or @($Overview.conversations).Count-eq0){Write-PcLine 'Aucune conversation connectee.' -ForegroundColor Yellow;return}
-  $i=1
-  foreach($c in @($Overview.conversations|Select-Object -First 10)){
-    $pct=if($null-ne$c.progress_estimate){[int]$c.progress_estimate}else{0}
-    $life=Get-PcLifecycleView $c
-    Write-PcLine ("[$i] $($c.label) | $($c.short_code)") -ForegroundColor Green
-    Write-PcLine ('    '+(Get-PcBar $pct 36)+' '+$pct+'% | '+$life.Label) -ForegroundColor $life.Color
-    Write-PcLine ('    Activite   : '+$life.Detail) -ForegroundColor $life.Color
-    if($c.current_action){Write-PcLine ('    Maintenant : '+$c.current_action)}
-    if($c.next_step){Write-PcLine ('    Ensuite    : '+$c.next_step) -ForegroundColor DarkGray}
-    Write-PcLine ''
-    $i++
-  }
-}
-
-function Write-PcConversation {
-  param($Conversation,[string]$HistoryFile)
-  $cp=Get-PcConversationProgress $Conversation; $life=Get-PcLifecycleView $Conversation; $risk=Get-PcRisk $Conversation
-  $eta=Get-PcEta $HistoryFile ([string]$Conversation.conversation_id) $cp.Percent $cp.MacroCount
-  Write-PcLine ('CONVERSATION : '+$Conversation.label) -ForegroundColor Cyan
-  Write-PcLine ('Objectif     : '+$Conversation.objective)
-  Write-PcLine ('Etat         : '+$life.Label+' | '+$life.Detail) -ForegroundColor $life.Color
-  Write-PcLine ('Avancement   : '+(Get-PcBar $cp.Percent 42)+' '+$cp.Percent+'%')
-  Write-PcLine ("Macro-taches : $($cp.MacroCount) | actives $($cp.Active) | attente $($cp.Waiting) | bloquees $($cp.Blocked)")
-  Write-PcLine ('Risque       : '+$risk.Level+' ('+$risk.Score+'/100) | ETA: '+$eta) -ForegroundColor $(if($risk.Score-ge60){'Red'}elseif($risk.Score-ge30){'Yellow'}else{'Green'})
-  Write-PcLine ''
-  $i=1
-  foreach($m in @($Conversation.macro_tasks|Select-Object -First 4)){
-    $mp=Get-PcMacroProgress $m
-    Write-PcLine ("[$i] $($m.title) | $($m.state)") -ForegroundColor $(if($m.state-eq'BLOCKED'){'Red'}elseif($m.state-eq'WAITING'){'Yellow'}else{'Green'})
-    Write-PcLine ('    '+(Get-PcBar $mp.Percent 30)+' '+$mp.Percent+'% | fiabilite '+$mp.Confidence+'%')
-    if($m.current_action){Write-PcLine ('    En cours : '+$m.current_action)}
-    Write-PcLine ''
-    $i++
-  }
-}
-
-function Write-PcMacro {
-  param($Macro,[int]$MaxVisible=20)
-  $mp=Get-PcMacroProgress $Macro
-  Write-PcLine ('MACRO-TACHE : '+$Macro.title) -ForegroundColor Cyan
-  Write-PcLine ('Etat        : '+$Macro.state)
-  Write-PcLine ('Avancement  : '+(Get-PcBar $mp.Percent 44)+' '+$mp.Percent+'%')
-  Write-PcLine ('Fiabilite   : '+$mp.Confidence+'%')
-  if($Macro.current_action){Write-PcLine ('En cours    : '+$Macro.current_action)}
-  if($Macro.last_success){Write-PcLine ('Dernier OK  : '+$Macro.last_success) -ForegroundColor Green}
-  if($Macro.next_step){Write-PcLine ('Prochaine   : '+$Macro.next_step)}
-  if($Macro.blocker){Write-PcLine ('Blocage     : '+$Macro.blocker) -ForegroundColor Red}else{Write-PcLine 'Blocage     : aucun' -ForegroundColor Green}
-  Write-PcLine ''
-  $v=Get-PcVisibleMicroTasks $Macro $MaxVisible
-  if($v.Total-eq0){Write-PcLine 'Micro-taches detaillees non publiees dans ce snapshot.' -ForegroundColor DarkGray}
-  else{
-    Write-PcLine ("MICRO-TACHES : $($v.Total) total | $($v.Hidden) masquee(s) par condensation") -ForegroundColor Cyan
-    foreach($t in @($v.Items)){
-      $mark=switch([string]$t.state){'DONE'{'OK'}'ACTIVE'{'>>'}'BLOCKED'{'!!'}default{'..'}}
-      $pct=[int][math]::Round((Get-PcMicroCompletion $t)*100,0)
-      Write-PcLine ("  $mark $($t.title) - $pct%")
-      if($t.evidence){Write-PcLine ('      preuve: '+$t.evidence) -ForegroundColor DarkGray}
-    }
-  }
-}
-
-function Write-PcTimeline {
-  param($Conversation)
-  Write-PcLine 'CHRONOLOGIE / EVENEMENTS RECENTS' -ForegroundColor Cyan
-  Write-PcLine ''
-  foreach($e in @($Conversation.recent_events|Select-Object -Last 20)){
-    Write-PcLine ('  '+$e.at+' | '+$e.type) -ForegroundColor DarkCyan
-    Write-PcLine ('      '+$e.summary)
-  }
-}
-
-function Write-PcSources {
-  param($Config,$Sync)
-  Write-PcLine 'SOURCES / ADAPTATEURS' -ForegroundColor Cyan
-  Write-PcLine ''
-  Write-PcLine 'Noyau local-first : cache disque + moteur PowerShell.' -ForegroundColor Green
-  Write-PcLine ('Transport actif  : '+$Config.state.transport+' / '+$Config.state.repo)
-  Write-PcLine ('Etat transport    : '+$(if($Sync.Online){'ONLINE'}else{'OFFLINE / CACHE'}))
-  Write-PcLine ''
-  Write-PcLine 'Adaptateurs : ChatGPT/PCCONNECT, GitHub, Drive, Telegram/Delivery, TLIB, Web/YouTube, WMI Windows, Desktop Commander.'
-  Write-PcLine 'Une source n est affichee comme observee que si un evenement ou une preuve existe.' -ForegroundColor Yellow
-  Write-PcLine 'Aucun mot de passe ne doit etre stocke dans PC COMMAND.' -ForegroundColor Yellow
-}
-
-function Write-PcLocal {
-  param($LocalEvents)
-  Write-PcLine 'ACTIVITE LOCALE DU PC' -ForegroundColor Cyan
-  Write-PcLine ''
-  if($LocalEvents.Count-eq0){Write-PcLine 'Aucune nouvelle activite locale observee.'}
-  else{foreach($e in $LocalEvents){Write-PcLine ('  '+$e.At.ToString('HH:mm:ss')+' | '+$e.Text)}}
-  Write-PcLine ''
-  Write-PcLine 'Observation WMI locale: aucun appel Desktop Commander requis.' -ForegroundColor DarkGray
-}
-
-function Write-PcSettings {
-  param($App,$Config)
-  Write-PcLine 'PARAMETRES' -ForegroundColor Cyan
-  Write-PcLine ''
-  Write-PcLine ("Version               : $($Config.version)")
-  Write-PcLine ("Sync Internet          : $($App.SyncSeconds) s  | [1] alterner 5/10/30")
-  Write-PcLine ("Calcul moteur          : $($App.EngineSeconds) s | [2] alterner 5/10/30")
-  Write-PcLine ("Rafraichissement ecran : $($App.DisplaySeconds) s | [3] alterner 10/20/30")
-  Write-PcLine ("Mode                   : $($App.Mode) | [4] AUTO/ECO")
-  Write-PcLine ("RAM budget             : $($Config.limits.ram_budget_mb) MB")
-  Write-PcLine ("Conversations max      : $($Config.limits.max_conversations)")
-  Write-PcLine ("Depot etat local       : state-repo (pull asynchrone)")
-  Write-PcLine ''
-  Write-PcLine 'CODE NOUVELLE CONVERSATION :' -ForegroundColor Green
-  Write-PcLine 'PCCONNECT|v3|state=Terminator364/PC-COMMAND-STATE|code=Terminator364/BuildHub|slot=AUTO|max=10'
-  Write-PcLine ''
-  Write-PcLine '[C] Copier code  [X] Rapport PDF  [D] Export Drive  [U] Verifier update'
-}
-
 function Write-PcFooter {
   param([string]$View)
   Write-PcFooterLine ''
   Write-PcFooterLine '--------------------------------------------------------------------------------' DarkGray
   switch($View){
-    'general'{Write-PcFooterLine '[1-9] Conversation  [F] Feedbacks  [V] Versions  [S] Sources  [L] Local  [P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'}
-    'conversation'{Write-PcFooterLine '[1-9] Macro  [C] Cahier A+B+C  [F] Feedbacks  [V] Versions  [T] Chronologie  [B] Retour  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
-    'macro'{Write-PcFooterLine '[C] Cahier A+B+C  [F] Feedbacks  [V] Versions  [B] Retour  [T] Chronologie  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
+    'general'{
+      Write-PcFooterLine '[A] Accueil  [1-9] Conversation  [F] Feedbacks  [V] Versions'
+      Write-PcFooterLine '[S] Sources  [L] Local  [P] Parametres  [H] Aide  [R] Sync  [Q] Fermer'
+    }
+    'conversation'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [1-9] Macro  [C] Cahier A+B+C  [T] Chronologie'
+      Write-PcFooterLine '[F] Feedbacks  [V] Versions  [S] Sources  [P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'
+    }
+    'macro'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [1-9] Micro  [C] Cahier  [T] Chronologie'
+      Write-PcFooterLine '[F] Feedbacks  [V] Versions  [P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'
+    }
+    'micro'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [C] Cahier  [T] Chronologie  [F] Feedbacks  [V] Versions'
+      Write-PcFooterLine '[P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'
+    }
+    'feedback'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [V] Versions  [C] Cahier  [P] Parametres  [R] Sync  [Q] Fermer'
+    }
+    'versions'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [F] Feedbacks  [U] Verifier update  [P] Parametres  [R] Sync  [Q] Fermer'
+    }
+    'requirements'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [F] Feedbacks  [V] Versions  [T] Chronologie  [P] Parametres  [R] Sync  [Q] Fermer'
+    }
+    'timeline'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [C] Cahier  [F] Feedbacks  [V] Versions  [P] Parametres  [R] Sync  [Q] Fermer'
+    }
+    'sources'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [L] Local  [F] Feedbacks  [P] Parametres  [R] Sync  [Q] Fermer'
+    }
+    'local'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [S] Sources  [P] Parametres  [R] Sync  [Q] Fermer'
+    }
+    'settings'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [1] Sync  [2] Moteur  [3] Affichage  [4] Mode'
+      Write-PcFooterLine '[C] Copier PCCONNECT  [D] Export Drive  [U] Update  [H] Aide  [R] Sync  [Q] Fermer'
+    }
+    'help'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [F] Feedbacks  [V] Versions  [Q] Fermer'
+    }
     default{Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [R] Sync  [Q] Fermer'}
   }
 }
@@ -257,4 +140,42 @@ function Write-PcVersions {
   }
   Write-PcLine ''
   Write-PcLine 'Promotion: une version n est meilleure que si les fonctions precedentes restent prouvees.' -ForegroundColor Yellow
+}function Write-PcMicro {
+  param($Micro)
+  Write-PcLine 'MICRO-TACHE / DETAIL' -ForegroundColor Cyan
+  Write-PcLine ''
+  if(-not$Micro){Write-PcLine 'Micro-tache indisponible.' -ForegroundColor Yellow;return}
+  $pct=[int][math]::Round((Get-PcMicroCompletion $Micro)*100,0)
+  Write-PcLine ('Titre       : '+$Micro.title)
+  Write-PcLine ('Etat        : '+$Micro.state)
+  Write-PcLine ('Avancement  : '+(Get-PcBar $pct 44)+' '+$pct+'%')
+  if($Micro.weight){Write-PcLine ('Poids       : '+$Micro.weight)}
+  if($Micro.evidence){Write-PcLine ('Preuve      : '+$Micro.evidence) -ForegroundColor Green}
+  if($Micro.blocker){Write-PcLine ('Blocage     : '+$Micro.blocker) -ForegroundColor Red}
+  if($Micro.next_step){Write-PcLine ('Prochaine   : '+$Micro.next_step)}
+  Write-PcLine ''
+  Write-PcLine 'Une micro-tache n est DONE que si une preuve/resultat observable existe.' -ForegroundColor DarkGray
 }
+
+function Write-PcHelp {
+  Write-PcLine 'AIDE / NAVIGATION' -ForegroundColor Cyan
+  Write-PcLine ''
+  Write-PcLine '[A] Accueil          : revenir directement a la vue principale.'
+  Write-PcLine '[B] Retour           : remonter d un niveau.'
+  Write-PcLine '[1-9]               : ouvrir conversation, macro ou micro selon la fenetre.'
+  Write-PcLine '[C] Cahier A+B+C     : exigences, recherche et retours terrain.'
+  Write-PcLine '[F] Feedbacks        : registre canonique des retours.'
+  Write-PcLine '[V] Versions         : historique, regressions et cible.'
+  Write-PcLine '[T] Chronologie      : evenements observables recents.'
+  Write-PcLine '[S] Sources          : adaptateurs et transports.'
+  Write-PcLine '[L] Local            : activite observee sur le PC.'
+  Write-PcLine '[P] Parametres       : cadences, RAM, Drive, sync, update.'
+  Write-PcLine '[X] Rapport          : rapport detaille.'
+  Write-PcLine '[R] Sync             : demander une synchronisation non bloquante.'
+  Write-PcLine '[U] Update           : verifier une nouvelle version.'
+  Write-PcLine '[Q] Fermer           : fermer proprement PC COMMAND.'
+  Write-PcLine ''
+  Write-PcLine 'Les touches sont contextuelles: seules les actions utiles a la fenetre sont affichees.' -ForegroundColor Green
+}
+
+
