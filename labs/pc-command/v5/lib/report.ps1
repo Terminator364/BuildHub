@@ -72,9 +72,10 @@ function New-PcReport {
       try{if($word){$word.Quit()}}catch{}
     }
   }
-  $downloads=Join-Path $env:USERPROFILE 'Downloads'
+  $downloads=Join-Path (Join-Path $env:USERPROFILE 'Downloads') 'PC_COMMAND'
   $downloadCopy=$null
-  if($madePdf -and (Test-Path $downloads)){
+  if($madePdf){
+    New-Item -ItemType Directory -Force -Path $downloads|Out-Null
     try{
       $friendly=('PC_COMMAND_'+($convTitle -replace '[^a-zA-Z0-9_-]','_')+'_'+(Get-Date -Format 'yyyyMMdd-HHmm')+'.pdf')
       $downloadCopy=Join-Path $downloads $friendly
