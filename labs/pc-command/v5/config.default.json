@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -157,5 +157,63 @@
       "Todoist"
     ],
     "role": "pilotage mirror only; never required for local runtime"
+  },
+  "local_observability": {
+    "process_watcher": false,
+    "mode": "on_demand",
+    "reason": "RAM-first; no permanent watcher without demonstrated need"
+  },
+  "input_feedback": {
+    "ack_visible": true,
+    "unknown_key_feedback": true,
+    "action_matrix_per_view": true,
+    "dead_advertised_controls_forbidden": true
+  },
+  "interaction_state": {
+    "user_preemption_visible": true,
+    "previous_turn_reason": "USER_PREEMPTED_BY_NEW_MESSAGE",
+    "new_turn_sequence": [
+      "USER_MESSAGE_RECEIVED",
+      "ASSISTANT_PROCESSING"
+    ]
+  },
+  "powershell_runtime": {
+    "current_engine": "Windows PowerShell 5.1",
+    "pwsh7_detected": false,
+    "migration_status": "DEFERRED_UNTIL_REVERSIBLE_TEST",
+    "task_profile": [
+      "-NoProfile",
+      "-NonInteractive"
+    ],
+    "cmd_role": "bootstrap_fallback_only",
+    "modules": "load_on_demand",
+    "persistent_services": "forbidden_unless_demonstrated"
+  },
+  "quality_gates": {
+    "psscriptanalyzer_ci": true,
+    "pester_ci": true,
+    "button_matrix_audit": true,
+    "runtime_smoke": true
+  },
+  "pslib_audit": {
+    "source": "PC_COMMAND_POWERSHELL_REPOSITORIES_AUDIT_2026-09-26.pdf",
+    "source_read_complete": true,
+    "integration_policy": "native_first_atomic_reversible_no_mass_install",
+    "first_batch": [
+      "PSScriptAnalyzer CI gate",
+      "Pester CI gate"
+    ],
+    "deferred_runtime_modules": [
+      "PSResourceGet",
+      "EventViewerX",
+      "PSWindowsUpdate",
+      "PSWriteHTML",
+      "ScheduledTaskManagement"
+    ],
+    "prohibited_mass_actions": [
+      "WinUtil presets",
+      "Sophia presets",
+      "Win11Debloat presets"
+    ]
   }
 }
