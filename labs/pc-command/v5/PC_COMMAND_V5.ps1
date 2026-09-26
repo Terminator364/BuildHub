@@ -17,22 +17,22 @@ $Paths=Initialize-PcPaths $Root
 [void](Initialize-PcStateRepo $Defaults $Paths)
 
 $App=[pscustomobject]@{
-  SyncSeconds=[int]$Defaults.cadence.internet_sync_seconds
-  EngineSeconds=[int]$Defaults.cadence.engine_recalc_seconds
+  SyncSeconds=[double]$Defaults.cadence.internet_sync_seconds
+  EngineSeconds=[double]$Defaults.cadence.engine_recalc_seconds
   DisplaySeconds=[int]$Defaults.cadence.display_refresh_seconds
   Mode='AUTO'
 }
 if(Test-Path $Paths.LocalConfig){
   try{
     $lc=Get-Content $Paths.LocalConfig -Raw|ConvertFrom-Json
-    if($lc.internet_sync_seconds){$App.SyncSeconds=[int]$lc.internet_sync_seconds}
-    if($lc.engine_recalc_seconds){$App.EngineSeconds=[int]$lc.engine_recalc_seconds}
+    if($lc.internet_sync_seconds){$App.SyncSeconds=[double]$lc.internet_sync_seconds}
+    if($lc.engine_recalc_seconds){$App.EngineSeconds=[double]$lc.engine_recalc_seconds}
     if($lc.display_refresh_seconds){$App.DisplaySeconds=[int]$lc.display_refresh_seconds}
     if($lc.mode){$App.Mode=[string]$lc.mode}
   }catch{}
 }
 
-$View='general';$ConversationIndex=0;$MacroIndex=0
+$View='general';$ConversationIndex=0;$MacroIndex=0;$MicroIndex=0
 $NeedDetail=$false
 $Sync=Read-PcStateLocal $Defaults $Paths $ConversationIndex
 $Feedback=Read-PcFeedbackLocal $Paths
@@ -40,6 +40,7 @@ $LastPullStart=[datetime]::MinValue
 $LastCalc=[datetime]::MinValue
 $LastDisplay=[datetime]::MinValue
 $LastSpinner=[datetime]::MinValue
+$LastUpdateCheck=[datetime]::MinValue
 $UpdateInfo=$null
 $SpinnerIndex=0
 $Cycle=0
@@ -74,7 +75,7 @@ function Drain-LocalPcEvents{
 }
 
 function Refresh-PcLocalState {
-  $detail=($View -in @('conversation','macro','timeline','requirements'))
+  $detail=($View -in @('conversation','macro','micro','timeline','requirements'))
   $script:Sync=Read-PcStateLocal $Defaults $Paths $ConversationIndex -NeedDetail:$detail
   if($script:PcLastPullOkAt){
     $age=((Get-Date)-$script:PcLastPullOkAt).TotalSeconds
@@ -83,26 +84,33 @@ function Refresh-PcLocalState {
   }
 }
 
+
 function Process-PcKey {
   if(-not[Console]::KeyAvailable){return $false}
   $k=[Console]::ReadKey($true).KeyChar.ToString().ToUpperInvariant()
+
   if($k-eq'Q'){
     Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
     try{$mutex.ReleaseMutex()}catch{}
     exit 0
   }
-  if($k-eq'R'){
+
+  if($k-eq'A'){
+    $script:View='general'
+  }
+  elseif($k-eq'B'){
+    if($View-eq'micro'){$script:View='macro'}
+    elseif($View -in @('macro','timeline','requirements')){$script:View='conversation'}
+    elseif($View -in @('feedback','versions','sources','local','settings','help')){$script:View='general'}
+    elseif($View-eq'conversation'){$script:View='general'}
+    else{$script:View='general'}
+  }
+  elseif($k-eq'R'){
     [void](Start-PcStatePull $Defaults $Paths)
     $script:LastPullStart=Get-Date
     Add-LocalPcEvent 'Synchronisation demandee; interface reste interactive.'
   }
-  elseif($k-eq'A'){$script:View='general'}
-  elseif($k-eq'B'){
-    if($View -in @('macro','timeline','requirements')){$script:View='conversation'}
-    elseif($View -in @('feedback','versions','sources','local','settings')){$script:View='general'}
-    elseif($View-eq'conversation'){$script:View='general'}
-    else{$script:View='general'}
-  }
+  elseif($k-eq'H'){$script:View='help'}
   elseif($k-eq'F'){$script:View='feedback'}
   elseif($k-eq'V'){$script:View='versions'}
   elseif($k-eq'S'){$script:View='sources'}
@@ -124,26 +132,50 @@ function Process-PcKey {
     if($last){$ex=Export-PcReportToDrive $last.FullName;Add-LocalPcEvent $ex.Message}
   }
   elseif($k-eq'U'){
-    $script:UpdateInfo=Get-PcUpdateInfo $ManifestUrl ([string]$Defaults.version)
-    Add-LocalPcEvent ("Verification update: "+$script:UpdateInfo.Version)
+    if(Start-PcUpdateProbe $Defaults $Paths){
+      $script:LastUpdateCheck=Get-Date
+      Add-LocalPcEvent 'Verification mise a jour lancee en arriere-plan.'
+    }
   }
   elseif($View-eq'settings' -and $k-match'^[1-4]$'){
-    if($k-eq'1'){$vals=@(5,10,30);$App.SyncSeconds=$vals[($vals.IndexOf($App.SyncSeconds)+1)%3]}
-    elseif($k-eq'2'){$vals=@(5,10,30);$App.EngineSeconds=$vals[($vals.IndexOf($App.EngineSeconds)+1)%3]}
-    elseif($k-eq'3'){$vals=@(10,20,30);$App.DisplaySeconds=$vals[($vals.IndexOf($App.DisplaySeconds)+1)%3]}
+    if($k-eq'1'){
+      $vals=@([double]3,[double]5,[double]10,[double]30)
+      $cur=[array]::IndexOf($vals,[double]$App.SyncSeconds)
+      if($cur-lt0){$cur=0};$App.SyncSeconds=$vals[($cur+1)%$vals.Count]
+    }
+    elseif($k-eq'2'){
+      $vals=@([double]3.5,[double]5,[double]10,[double]30)
+      $cur=[array]::IndexOf($vals,[double]$App.EngineSeconds)
+      if($cur-lt0){$cur=0};$App.EngineSeconds=$vals[($cur+1)%$vals.Count]
+    }
+    elseif($k-eq'3'){
+      $vals=@(5,10,20,30)
+      $cur=[array]::IndexOf($vals,[int]$App.DisplaySeconds)
+      if($cur-lt0){$cur=1};$App.DisplaySeconds=$vals[($cur+1)%$vals.Count]
+    }
     elseif($k-eq'4'){$App.Mode=if($App.Mode-eq'AUTO'){'ECO'}else{'AUTO'}}
     Save-PcLocalSettings $Paths $App.SyncSeconds $App.EngineSeconds $App.DisplaySeconds $App.Mode
   }
   elseif($k-match'^[1-9]$' -and $Sync.Overview){
     $idx=[int]$k-1
     if($View-eq'general' -and $idx-lt@($Sync.Overview.conversations).Count){
-      $script:ConversationIndex=$idx;$script:View='conversation';Refresh-PcLocalState
+      $script:ConversationIndex=$idx
+      $id=[string]$Sync.Overview.conversations[$idx].id
+      $cache=Join-Path $Paths.Cache ("channel-$id.json")
+      if(Test-Path $cache){try{$script:Sync.Channel=Get-Content $cache -Raw|ConvertFrom-Json}catch{}}
+      $script:View='conversation'
     }
     elseif($View-eq'conversation' -and $Sync.Channel -and $idx-lt@($Sync.Channel.macro_tasks).Count){
       $script:MacroIndex=$idx;$script:View='macro'
     }
+    elseif($View-eq'macro' -and $Sync.Channel -and @($Sync.Channel.macro_tasks).Count-gt$MacroIndex){
+      $m=$Sync.Channel.macro_tasks[$MacroIndex]
+      if($idx-lt@($m.micro_tasks).Count){$script:MicroIndex=$idx;$script:View='micro'}
+    }
   }
+
   Refresh-PcLocalState
+  $script:Feedback=Read-PcFeedbackLocal $Paths
   $script:LastDisplay=[datetime]::MinValue
   return $true
 }
@@ -166,6 +198,25 @@ while($true){
   # Launch a tiny background git pull every requested interval.
   if(($now-$LastPullStart).TotalSeconds-ge$App.SyncSeconds -or $LastPullStart-eq[datetime]::MinValue){
     if(Start-PcStatePull $Defaults $Paths){$LastPullStart=$now}
+  }
+
+  # Nonblocking auto-update probe. A newer validated manifest triggers bootstrap+restart.
+  $up=Complete-PcUpdateProbe $Defaults
+  if($up.Completed){
+    $script:UpdateInfo=$up
+    if($up.Success -and $up.Available -and [bool]$Defaults.automation.auto_update){
+      Add-LocalPcEvent ("Mise a jour automatique vers v"+$up.Version)
+      $boot=Join-Path $Root 'PC_COMMAND_BOOTSTRAP.ps1'
+      if(Test-Path $boot){
+        Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
+        try{$mutex.ReleaseMutex()}catch{}
+        Start-Process powershell.exe -ArgumentList '-NoProfile','-ExecutionPolicy','Bypass','-File',$boot
+        exit 0
+      }
+    }
+  }
+  if(($now-$LastUpdateCheck).TotalSeconds-ge[double]$Defaults.cadence.update_check_seconds -or $LastUpdateCheck-eq[datetime]::MinValue){
+    if(Start-PcUpdateProbe $Defaults $Paths){$LastUpdateCheck=$now}
   }
 
   if(($now-$LastCalc).TotalSeconds-ge$App.EngineSeconds){
@@ -194,13 +245,15 @@ while($true){
         'general'{Write-PcGeneral $Sync.Overview $Feedback}
         'conversation'{if($conv){Write-PcConversation $conv $Paths.HistoryFile}else{Write-PcLine 'Detail local indisponible; [R] synchroniser.' -ForegroundColor Yellow}}
         'macro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex){Write-PcMacro $conv.macro_tasks[$MacroIndex] ([int]$Defaults.limits.max_visible_microtasks)}}
+        'micro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex -and @($conv.macro_tasks[$MacroIndex].micro_tasks).Count-gt$MicroIndex){Write-PcMicro $conv.macro_tasks[$MacroIndex].micro_tasks[$MicroIndex]}}
         'timeline'{if($conv){Write-PcTimeline $conv}}
         'requirements'{if($conv){Write-PcRequirements $conv}}
         'feedback'{Write-PcFeedback $Feedback}
         'versions'{Write-PcVersions $Feedback $Defaults}
         'sources'{Write-PcSources $Defaults $Sync}
         'local'{Write-PcLocal $LocalEvents}
-        'settings'{Write-PcSettings $App $Defaults}
+        'settings'{Write-PcSettings $App $Defaults $Sync $UpdateInfo}
+        'help'{Write-PcHelp}
       }
       Write-PcFooter $View
       Write-PcFooterLine ("Cycle $Cycle | etat local immediat | dernier pull: "+$(if($script:PcLastPullOkAt){$script:PcLastPullOkAt.ToString('HH:mm:ss')}else{'jamais'})) DarkGray
