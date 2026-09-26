@@ -51,7 +51,7 @@ function Write-PcHeader {
 }
 
 function Write-PcGeneral {
-  param($Overview,$Feedback)
+  param($Overview,$Feedback,$Config,$Sync,$UpdateInfo)
   Write-PcLine 'ACCUEIL' Cyan
   Write-PcLine ''
   if(-not $Overview -or @($Overview.conversations).Count-eq0){
@@ -194,7 +194,7 @@ function Write-PcSettings {
   Write-PcLine 'PARAMETRES / SANTE DU SYSTEME' Cyan
   Write-PcLine ''
   Write-PcLine ("Version locale           : $($Config.version)")
-  Write-PcLine ("Mode                     : $($App.Mode) | [4] AUTO/ECO")
+  Write-PcLine ("Profil                   : $($App.Mode) | [4] AUTO/ECO/RAPIDE")
   Write-PcLine ("Sync Internet            : $($App.SyncSeconds) s | [1] 3/5/10/30")
   Write-PcLine ("Calcul moteur            : $($App.EngineSeconds) s | [2] 3.5/5/10/30")
   Write-PcLine ("Rafraichissement visuel  : $($App.DisplaySeconds) s | [3] 5/10/20/30")
@@ -308,8 +308,8 @@ function Write-PcFooter {
   Write-PcFooterLine '--------------------------------------------------------------------------------' DarkGray
   switch($View){
     'general'{
-      Write-PcFooterLine '[A] Accueil  [1-9] Conversation  [F] Feedbacks  [V] Versions'
-      Write-PcFooterLine '[S] Sources  [L] Local  [P] Parametres  [H] Aide  [R] Sync  [Q] Fermer'
+      Write-PcFooterLine '[A] Accueil  [1-9] Conversation  [F] Feedbacks  [V] Versions  [X] Rapports'
+      Write-PcFooterLine '[S] Sources  [L] Local  [P] Parametres  [Y] Sante  [H] Aide  [R] Sync  [Q] Fermer'
     }
     'conversation'{
       Write-PcFooterLine '[A] Accueil  [B] Retour  [1-9] Macro  [C] Cahier A+B+C  [T] Chronologie'
@@ -342,8 +342,15 @@ function Write-PcFooter {
       Write-PcFooterLine '[A] Accueil  [B] Retour  [S] Sources  [P] Parametres  [R] Sync  [Q] Fermer'
     }
     'settings'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [1] Sync  [2] Moteur  [3] Affichage  [4] Mode'
-      Write-PcFooterLine '[C] Copier PCCONNECT  [D] Export Drive  [U] Update  [H] Aide  [R] Sync  [Q] Fermer'
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [1] Sync  [2] Moteur  [3] Affichage  [4] Profil'
+      Write-PcFooterLine '[C] Copier PCCONNECT  [U] Update  [Y] Sante  [H] Aide  [R] Sync  [Q] Fermer'
+    }
+    'reports'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [G] Generer PDF  [O] Ouvrir dernier  [D] Export Drive'
+      Write-PcFooterLine '[E] Dossier rapports  [P] Parametres  [R] Sync  [Q] Fermer'
+    }
+    'health'{
+      Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [R] Sync  [Q] Fermer'
     }
     'help'{
       Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [F] Feedbacks  [V] Versions  [Q] Fermer'
@@ -351,5 +358,41 @@ function Write-PcFooter {
     default{
       Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [R] Sync  [Q] Fermer'
     }
+  }
+}
+
+
+function Write-PcReportCenter {
+  param($Config,$Paths,$Conversation)
+  Write-PcLine 'CENTRE DE RAPPORTS' -ForegroundColor Cyan
+  Write-PcLine ''
+  $files=@(Get-ChildItem $Paths.Reports -File -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending)
+  $pdf=@($files|Where-Object Extension -eq '.pdf')
+  $html=@($files|Where-Object Extension -eq '.html')
+  Write-PcLine ('Conversation : '+$(if($Conversation){$Conversation.label}else{'vue generale'}))
+  Write-PcLine ('PDF locaux    : '+$pdf.Count+' | HTML : '+$html.Count)
+  if($pdf.Count-gt0){
+    Write-PcLine ('Dernier PDF   : '+$pdf[0].Name) -ForegroundColor Green
+    Write-PcLine ('Date           : '+$pdf[0].LastWriteTime.ToString('yyyy-MM-dd HH:mm:ss'))
+    Write-PcLine ('Taille         : '+[math]::Round($pdf[0].Length/1KB,1)+' KB')
+  }else{
+    Write-PcLine 'Aucun PDF genere pour le moment.' -ForegroundColor Yellow
+  }
+  Write-PcLine ''
+  Write-PcLine 'Chaque nouveau PDF est aussi copie automatiquement dans Telechargements.' -ForegroundColor DarkGray
+  Write-PcLine 'Export Drive disponible sans bloquer le moteur.' -ForegroundColor DarkGray
+}
+
+function Write-PcHealth {
+  param($Config,$Sync,$UpdateInfo)
+  $h=Get-PcHealthScore $Config $Sync $UpdateInfo
+  Write-PcLine 'SANTE / DIAGNOSTIC' -ForegroundColor Cyan
+  Write-PcLine ''
+  Write-PcLine ('Score : '+$h.Score+'/100 | '+$h.Level) -ForegroundColor $h.Color
+  Write-PcLine ('RAM libre : '+$h.FreeRamMb+' MB')
+  if(@($h.Reasons).Count-eq0){Write-PcLine 'Aucune anomalie prioritaire detectee.' -ForegroundColor Green}
+  else{
+    Write-PcLine 'Points a surveiller :' -ForegroundColor Yellow
+    foreach($x in @($h.Reasons)){Write-PcLine ('  - '+$x)}
   }
 }
