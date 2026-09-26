@@ -1,16 +1,17 @@
 {
   "schema": "pc_command.feed.v3",
-  "generated_at": "2026-09-26T15:58:00+01:00",
+  "generated_at": "2026-09-26T16:05:00+01:00",
   "engine": {
     "version": "4.0-lab",
-    "local_recalc_seconds": 1,
-    "remote_sync_seconds": 10,
+    "local_recalc_seconds": 5,
+    "remote_sync_seconds": 5,
     "max_connected_conversations": 10,
     "max_active_macro_tasks_per_conversation": 10,
     "progress_semantics": "weighted completion, dynamic scope; not a probability of success",
     "confidence_semantics": "evidence coverage and freshness",
     "source_of_truth": "GitHub snapshot + local observable events",
-    "zero_cost": true
+    "zero_cost": true,
+    "display_refresh_seconds": 10
   },
   "host": {
     "id": "MBMPC",
