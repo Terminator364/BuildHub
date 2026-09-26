@@ -206,6 +206,26 @@ function Get-PcVisibleMicroTasks {
   return [pscustomobject]@{Items=@($active+$remaining);Hidden=$all.Count-($active.Count+$remaining.Count);Total=$all.Count}
 }
 
+function Get-PcMicroPage {
+  param($Macro,[int]$MaxVisible=20,[int]$Page=0,[int]$PageSize=10)
+  if($PageSize-lt1){$PageSize=10}
+  $v=Get-PcVisibleMicroTasks $Macro $MaxVisible
+  $items=@($v.Items)
+  $pages=[math]::Max(1,[int][math]::Ceiling($items.Count/[double]$PageSize))
+  if($Page-lt0){$Page=0}
+  if($Page-ge$pages){$Page=$pages-1}
+  $slice=@($items|Select-Object -Skip ($Page*$PageSize) -First $PageSize)
+  return [pscustomobject]@{
+    Items=$slice
+    Page=$Page
+    Pages=$pages
+    PageSize=$PageSize
+    VisibleTotal=$items.Count
+    Total=$v.Total
+    Hidden=$v.Hidden
+  }
+}
+
 function Get-PcRequirementCoverage {
   param($Conversation)
   $req=@($Conversation.cahier_des_charges.requirements)
