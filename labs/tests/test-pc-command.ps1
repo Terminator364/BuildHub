@@ -4,7 +4,8 @@ $files = @(
   (Join-Path $root 'pc-command\PC_COMMAND_DASHBOARD.ps1'),
   (Join-Path $root 'pc-command\PC_COMMAND_CONNECT.ps1'),
   (Join-Path $root 'pc-command\PC_COMMAND_STATUS.ps1'),
-  (Join-Path $root 'pc-command\PC_COMMAND_STATUS_V2.ps1')
+  (Join-Path $root 'pc-command\PC_COMMAND_STATUS_V2.ps1'),
+  (Join-Path $root 'pc-command\PC_COMMAND_START.ps1')
 )
 $failed = $false
 foreach ($file in $files) {
