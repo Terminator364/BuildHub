@@ -65,3 +65,18 @@ Si l'utilisateur quitte ou change de sujet:
 - Avant reponse: ASSISTANT_RESPONDED + turn.completed + overview.json.
 - Une longue operation reste TRAVAIL EN COURS jusqu a 15 min sans signal; 15-30 min = signal ancien; au-dela = interruption possible.
 - A+B+C a chaque delta: besoin/promesse + recherche/architecture + terrain/feedback; MERGE + REFINE + PRESERVE.
+
+
+## Regle de cahier vivant A+B+C
+Chaque message utilisateur pertinent pour le projet devient un delta de cahier des charges:
+- A: besoin, contrainte, comportement souhaite, livrable;
+- B: consequence d'architecture, recherche, reemploi ou test;
+- C: retour terrain, capture, bug, mesure, preuve.
+
+La conversation publie ce delta au debut du tour, puis publie les preuves et resultats avant la reponse finale. Les anciennes exigences sont preservees sauf retrait explicite de l'utilisateur.
+
+## Statut de travail
+Au debut d'un travail significatif, publier ASSISTANT_PROCESSING avec started_at, last_signal_at et lease_until.
+Le PC local mesure le temps ecoule sans heartbeat distant permanent.
+Un lease expire ne signifie jamais TERMINE: l'etat devient INDETERMINE jusqu'a une nouvelle preuve.
+Ne jamais exposer le raisonnement prive; publier uniquement phase, outils, resultats et preuves observables.
