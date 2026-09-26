@@ -154,6 +154,16 @@ function Process-PcKey {
     $last=Get-ChildItem $Paths.Reports -File -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending|Select-Object -First 1
     if($last){$ex=Export-PcReportToDrive $last.FullName;Add-LocalPcEvent $ex.Message}
   }
+  elseif($k-eq'Z' -and $View-eq'settings'){
+    $rb=Invoke-PcRollback $Root
+    Add-LocalPcEvent $rb.Message
+    if($rb.Success){
+      Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
+      try{$mutex.ReleaseMutex()}catch{}
+      Start-Process powershell.exe -ArgumentList '-NoProfile','-ExecutionPolicy','Bypass','-File',(Join-Path $Root 'app\PC_COMMAND_V5.ps1'),'-Root',$Root
+      exit 0
+    }
+  }
   elseif($k-eq'U'){
     if(Start-PcUpdateProbe $Defaults $Paths){
       $script:LastUpdateCheck=Get-Date
