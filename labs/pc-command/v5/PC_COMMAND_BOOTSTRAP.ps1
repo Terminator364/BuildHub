@@ -10,6 +10,7 @@ New-Item -ItemType Directory -Force -Path $AppDir,$StageRoot,$BackupRoot,$Config
 
 $Repo='Terminator364/BuildHub'
 $Branch='pc-command/stable'
+$RequiredChannel='stable'
 $ManifestPath='labs/pc-command/v5/manifest.json'
 $gh=(Get-Command gh.exe -ErrorAction SilentlyContinue).Source
 
@@ -43,6 +44,13 @@ function Get-GhBlobBytes([string]$Sha){
   if(-not$j -or -not$j.content){return $null}
   try{return [Convert]::FromBase64String(([string]$j.content -replace '\s',''))}catch{return $null}
 }
+function Sync-PcRootBootstrap {
+  $appBootstrap=Join-Path $AppDir 'PC_COMMAND_BOOTSTRAP.ps1'
+  if(Test-Path $appBootstrap){
+    try{Copy-Item $appBootstrap $RootBootstrap -Force;return $true}catch{return $false}
+  }
+  return $false
+}
 function Start-PcInstalledApp {
   $main=Join-Path $AppDir 'PC_COMMAND_V5.ps1'
   if(Test-Path $main){
@@ -54,9 +62,10 @@ function Start-PcInstalledApp {
 function Wait-PcViewerExit {
   param([int]$Seconds=10)
   $deadline=(Get-Date).AddSeconds($Seconds)
+  $rootRx=[regex]::Escape($Root)
   do{
     $running=@(Get-CimInstance Win32_Process -ErrorAction SilentlyContinue|Where-Object{
-      $_.Name-eq'powershell.exe' -and $_.CommandLine -match'PC_COMMAND_V5\.ps1'
+      $_.Name-eq'powershell.exe' -and $_.CommandLine -match'PC_COMMAND_V5\.ps1' -and $_.CommandLine -match $rootRx
     })
     if($running.Count-eq0){return $true}
     Start-Sleep -Milliseconds 250
@@ -74,6 +83,10 @@ $remote=$null
 $manifestBytes=Get-GhContentBytes $ManifestPath $Branch
 if($manifestBytes){
   try{$remote=[Text.Encoding]::UTF8.GetString($manifestBytes)|ConvertFrom-Json}catch{}
+}
+if($remote -and [string]$remote.channel -ne $RequiredChannel){
+  Write-UpdateStatus 'REJECTED' ([string]$remote.version) ('Canal manifest refuse: '+[string]$remote.channel+'; attendu: '+$RequiredChannel)
+  $remote=$null
 }
 
 $install=$false
@@ -130,11 +143,11 @@ if($install -and $remote){
       # The Desktop shortcut launches the bootstrap stored at PC_COMMAND root,
       # not the copy inside app. Keep that launcher synchronized with the
       # newly installed release so future updates use the newest safety logic.
-      $newBootstrap=Join-Path $AppDir 'PC_COMMAND_BOOTSTRAP.ps1'
-      if(Test-Path $newBootstrap){Copy-Item $newBootstrap $RootBootstrap -Force}
+      [void](Sync-PcRootBootstrap)
       Write-UpdateStatus 'SWAPPED' $version 'Nouvelle version installee; bootstrap racine synchronise; verification post-launch.' $rollbackDir
     }catch{
       if(-not(Test-Path $AppDir) -and $hadCurrent -and (Test-Path $rollbackDir)){Move-Item $rollbackDir $AppDir -Force}
+      [void](Sync-PcRootBootstrap)
       Write-UpdateStatus 'ROLLED_BACK' $version ('Echec swap: '+$_.Exception.Message) $rollbackDir
       [void](Start-PcInstalledApp)
       exit 3
@@ -142,11 +155,15 @@ if($install -and $remote){
 
     [void](Start-PcInstalledApp)
     Start-Sleep -Seconds 4
+    $rootRx=[regex]::Escape($Root)
     $newAlive=@(Get-CimInstance Win32_Process -ErrorAction SilentlyContinue|Where-Object{
-      $_.Name-eq'powershell.exe' -and $_.CommandLine -match'PC_COMMAND_V5\.ps1'
+      $_.Name-eq'powershell.exe' -and $_.CommandLine -match'PC_COMMAND_V5\.ps1' -and $_.CommandLine -match $rootRx
     }).Count -gt 0
+    $postVersion=''
+    try{$postVersion=[string]((Get-Content (Join-Path $AppDir 'manifest.json') -Raw -Encoding UTF8|ConvertFrom-Json).version)}catch{}
+    $postOk=($newAlive -and $postVersion-eq$version)
 
-    if($newAlive){
+    if($postOk){
       Write-UpdateStatus 'SUCCESS' $version 'Pre-smoke, swap et post-launch valides.' $rollbackDir
       Get-ChildItem $BackupRoot -Directory -ErrorAction SilentlyContinue|
         Sort-Object LastWriteTime -Descending|Select-Object -Skip 3|
@@ -157,7 +174,8 @@ if($install -and $remote){
     try{
       if(Test-Path $AppDir){Remove-Item $AppDir -Recurse -Force}
       if($hadCurrent -and (Test-Path $rollbackDir)){Move-Item $rollbackDir $AppDir -Force}
-      Write-UpdateStatus 'ROLLED_BACK' $version 'Nouveau viewer non vivant apres 4 s; rollback automatique.' $rollbackDir
+      [void](Sync-PcRootBootstrap)
+      Write-UpdateStatus 'ROLLED_BACK' $version ('Post-launch invalide; viewer='+$newAlive+'; version='+$postVersion+'; rollback automatique.') $rollbackDir
       [void](Start-PcInstalledApp)
       exit 4
     }catch{
@@ -173,7 +191,7 @@ if(Test-Path $appBootstrap){
   try{
     $appHash=(& git hash-object $appBootstrap 2>$null).Trim()
     $rootHash=if(Test-Path $RootBootstrap){(& git hash-object $RootBootstrap 2>$null).Trim()}else{''}
-    if($appHash -and $appHash-ne$rootHash){Copy-Item $appBootstrap $RootBootstrap -Force}
+    if($appHash -and $appHash-ne$rootHash){[void](Sync-PcRootBootstrap)}
   }catch{}
 }
 
