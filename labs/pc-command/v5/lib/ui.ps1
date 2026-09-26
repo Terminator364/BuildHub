@@ -33,9 +33,10 @@ function Write-PcGeneral {
   $i=1
   foreach($c in @($Overview.conversations|Select-Object -First 10)){
     $pct=if($null-ne$c.progress_estimate){[int]$c.progress_estimate}else{0}
-    $state=if($c.lifecycle){[string]$c.lifecycle.state}else{'UNKNOWN'}
+    $life=Get-PcLifecycleView $c
     Write-Host ("[$i] $($c.label) | $($c.short_code)") -ForegroundColor Green
-    Write-Host ('    '+(Get-PcBar $pct 36)+' '+$pct+'% | '+$state)
+    Write-Host ('    '+(Get-PcBar $pct 36)+' '+$pct+'% | '+$life.Label) -ForegroundColor $life.Color
+    Write-Host ('    Activite   : '+$life.Detail) -ForegroundColor $life.Color
     if($c.current_action){Write-Host ('    Maintenant : '+$c.current_action)}
     if($c.next_step){Write-Host ('    Ensuite    : '+$c.next_step) -ForegroundColor DarkGray}
     Write-Host ''
