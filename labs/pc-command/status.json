@@ -1,16 +1,16 @@
 {
   "schema": "pc_command.status.v1",
   "project": "PC COMMAND / Browser4G lab",
-  "stage": "GITHUB_LAB",
-  "current_action": "Recherche et tests navigateurs sur GitHub + TLIB; construction du centre de controle leger",
-  "last_success": "PC Command Lab CI vert sur BuildHub public",
-  "next_step": "Smoke-tests Windows des candidats puis shortlist pour test local minimal",
+  "stage": "BROWSER_SMOKE_GITHUB",
+  "current_action": "Smoke-tests Windows en cours: Edge, Firefox, Brave, qutebrowser, Falkon et Helium",
+  "last_success": "Centre PC Command valide sur CI; dashboard humain alimente par GitHub",
+  "next_step": "Eliminer les candidats qui echouent puis comparer les survivants avant test RAM local",
   "blocker": null,
-  "updated_at": "2026-09-26T14:00:00Z",
+  "updated_at": "2026-09-26T14:07:00+01:00",
   "recent": [
-    "Centre de controle WinForms cree",
-    "Validation PowerShell/JSON reussie sur GitHub Actions",
-    "TLIB interroge: candidats navigateurs identifies",
-    "Google Drive Desktop conserve actif"
+    "Tests de navigateurs deplaces sur BuildHub public pour economiser le quota Desktop Commander",
+    "6 jobs Windows lances en parallele",
+    "TLIB utilise comme catalogue L0 de candidats",
+    "Google Drive Desktop reste actif"
   ]
 }
