@@ -1,0 +1,230 @@
+{
+  "schema": "pc.command.config.v1",
+  "version": "0.9.6",
+  "code": {
+    "repo": "Terminator364/BuildHub",
+    "branch": "pc-command/stable",
+    "base_path": "labs/pc-command/v5"
+  },
+  "state": {
+    "transport": "github_private",
+    "repo": "Terminator364/PC-COMMAND-STATE",
+    "branch": "main",
+    "registry_path": "pc-command/registry.json",
+    "overview_path": "pc-command/overview.json",
+    "sync_mode": "local_git_background_pull"
+  },
+  "cadence": {
+    "internet_sync_seconds": 3,
+    "engine_recalc_seconds": 3.5,
+    "display_refresh_seconds": 10,
+    "heartbeat_title_seconds": 1,
+    "update_check_seconds": 180
+  },
+  "limits": {
+    "max_conversations": 10,
+    "max_macro_tasks_per_conversation": 10,
+    "max_visible_microtasks": 20,
+    "max_events_loaded": 100,
+    "ram_budget_mb": 150,
+    "history_max_bytes": 524288
+  },
+  "drive": {
+    "root_folder_id": "1fFLEoZxzoAkrMzC9SxjvOlzbTsW1ZjLW",
+    "reports_folder_id": "1Y6tgwMBHYaQPvsWIWCvEdUrUOgP681a3",
+    "checkpoints_folder_id": "1zLolAtOMPtoLkr8OxCEk5FJkNncBbSfN",
+    "exports_folder_id": "1WttL-Nm4DbpFjnGizDUY5YN-lWYQw9zA"
+  },
+  "privacy": {
+    "no_passwords": true,
+    "no_chain_of_thought": true,
+    "observable_state_only": true
+  },
+  "freshness": {
+    "work_lease_seconds": 1200,
+    "processing_fresh_seconds": 300,
+    "interruption_possible_seconds": 1800
+  },
+  "render": {
+    "responsive": true,
+    "max_general_conversations": 10,
+    "max_conversation_macros_visible": 4,
+    "max_macro_microtasks_visible": 12,
+    "emergency_fallback": true,
+    "footer_parameter_binding_fix": true
+  },
+  "automation": {
+    "update_on_start": true,
+    "atomic_stage": true,
+    "rollback_backup": true,
+    "state_transport_separate": true,
+    "cahier_delta_each_relevant_message": true,
+    "event_bus_append_only": true,
+    "nonblocking_state_sync": true,
+    "input_first_loop": true,
+    "auto_update": true,
+    "auto_update_mode": "background_probe_then_atomic_bootstrap_restart",
+    "pre_swap_runtime_smoke": true,
+    "rollback_on_smoke_failure": true,
+    "manifest_integrity_gate": true,
+    "post_launch_liveness_seconds": 4,
+    "defer_swap_if_viewer_active": true
+  },
+  "event_bus": {
+    "enabled": false,
+    "mode": "dormant_experimental",
+    "reason": "disabled in local runtime to preserve instant UI and low RAM"
+  },
+  "navigation": {
+    "cache_first": true,
+    "max_visual_response_ms": 500,
+    "network_refresh_after_navigation": true,
+    "local_state_only_on_keypress": true,
+    "contextual_controls": true,
+    "home_button_global": true,
+    "help_view": true,
+    "micro_detail_view": true
+  },
+  "updater": {
+    "transport": "github_api_blob_sha",
+    "manifest_ref": "pc-command/stable",
+    "verify_git_blob_sha": true,
+    "backups_kept": 3,
+    "release_channel": "stable",
+    "swap_mode": "same_volume_directory_move",
+    "status_file": "config/update-status.json",
+    "post_launch_rollback": true,
+    "root_bootstrap_self_heal": true,
+    "desktop_shortcut_launcher": "PC_COMMAND/PC_COMMAND_BOOTSTRAP.ps1"
+  },
+  "hotfixes": {
+    "footer_positional_color_binding": "fixed",
+    "emergency_mode_regression": "fixed"
+  },
+  "feedback_ledger": {
+    "enabled": true,
+    "canonical_repo": "Terminator364/PC-COMMAND-STATE",
+    "index_path": "pc-command/feedback/feedback-index.json",
+    "machine_path": "pc-command/feedback/feedback-ledger.jsonl",
+    "version_trace_path": "pc-command/feedback/version-trace.json",
+    "ingest_before_build": true,
+    "preserve_previous": true,
+    "reader_self_reconcile": true,
+    "independent_section_errors": true
+  },
+  "sync_engine": {
+    "process_start_info_compat": "windows_powershell_5_1",
+    "background_pull": true,
+    "failures_increment_per_attempt": true
+  },
+  "home": {
+    "clean": true,
+    "technical_metrics_in_settings": true,
+    "show_current_and_next": true
+  },
+  "quality_target": {
+    "user_perceived_target_10": 5,
+    "current_goal": "prove update/rollback launcher continuity and detailed PDF without RAM regression",
+    "promotion_requires_no_open_p0_regression": true,
+    "runtime_smoke_required": true,
+    "manifest_hashes_required": true
+  },
+  "reports": {
+    "auto_pdf": true,
+    "auto_downloads_mirror": true,
+    "drive_export_on_demand": true,
+    "human_names": true,
+    "pdf_engine": "pure_powershell_low_ram",
+    "browser_processes_required": false,
+    "downloads_subfolder": "PC_COMMAND",
+    "pdf_generation_target_seconds": 2,
+    "force_selected_conversation_detail": true
+  },
+  "product": {
+    "stage": "candidate",
+    "objective": "transactional self-update v2 + root launcher self-heal + detailed low-RAM reports",
+    "target_user_score_10": 5,
+    "command_router": "contextual",
+    "health_score": true,
+    "report_center": true,
+    "navigation_back_stack": "one-level contextual"
+  },
+  "preferences": {
+    "local_persisted": true,
+    "profiles": [
+      "AUTO",
+      "ECO",
+      "RAPIDE"
+    ],
+    "default_profile": "AUTO",
+    "auto_download_reports": true,
+    "report_downloads_folder": "Downloads/PC_COMMAND"
+  },
+  "plugins": {
+    "canonical_dependency": false,
+    "optional_adapters": [
+      "Notion",
+      "Todoist"
+    ],
+    "role": "pilotage mirror only; never required for local runtime"
+  },
+  "local_observability": {
+    "process_watcher": false,
+    "mode": "on_demand",
+    "reason": "RAM-first; no permanent watcher without demonstrated need"
+  },
+  "input_feedback": {
+    "ack_visible": true,
+    "unknown_key_feedback": true,
+    "action_matrix_per_view": true,
+    "dead_advertised_controls_forbidden": true,
+    "action_matrix_single_source": true
+  },
+  "interaction_state": {
+    "user_preemption_visible": true,
+    "previous_turn_reason": "USER_PREEMPTED_BY_NEW_MESSAGE",
+    "new_turn_sequence": [
+      "USER_MESSAGE_RECEIVED",
+      "ASSISTANT_PROCESSING"
+    ]
+  },
+  "powershell_runtime": {
+    "current_engine": "Windows PowerShell 5.1",
+    "pwsh7_detected": false,
+    "migration_status": "DEFERRED_UNTIL_REVERSIBLE_TEST",
+    "task_profile": [
+      "-NoProfile",
+      "-NonInteractive"
+    ],
+    "cmd_role": "bootstrap_fallback_only",
+    "modules": "load_on_demand",
+    "persistent_services": "forbidden_unless_demonstrated"
+  },
+  "quality_gates": {
+    "psscriptanalyzer_ci": true,
+    "pester_ci": true,
+    "button_matrix_audit": true,
+    "runtime_smoke": true
+  },
+  "pslib_audit": {
+    "source": "PC_COMMAND_POWERSHELL_REPOSITORIES_AUDIT_2026-09-26.pdf",
+    "source_read_complete": true,
+    "integration_policy": "native_first_atomic_reversible_no_mass_install",
+    "first_batch": [
+      "PSScriptAnalyzer CI gate",
+      "Pester CI gate"
+    ],
+    "deferred_runtime_modules": [
+      "PSResourceGet",
+      "EventViewerX",
+      "PSWindowsUpdate",
+      "PSWriteHTML",
+      "ScheduledTaskManagement"
+    ],
+    "prohibited_mass_actions": [
+      "WinUtil presets",
+      "Sophia presets",
+      "Win11Debloat presets"
+    ]
+  }
+}

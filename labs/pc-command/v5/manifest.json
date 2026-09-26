@@ -1,0 +1,41 @@
+{
+  "schema": "pc.command.manifest.v1",
+  "version": "0.9.6",
+  "channel": "candidate",
+  "generated_at": "2026-09-26T22:09:06.701Z",
+  "entrypoint": "PC_COMMAND_V5.ps1",
+  "files": [
+    {
+      "relative_path": "lib/engine.ps1",
+      "git_blob_sha": "fced91e1c3c3f4ff3a12a0b0e5cb657e6d6a8df8"
+    },
+    {
+      "relative_path": "lib/io.ps1",
+      "git_blob_sha": "fc6b19a32ab4ce0985854d07653792558e8dc37b"
+    },
+    {
+      "relative_path": "lib/pdf.ps1",
+      "git_blob_sha": "db973784c0e142d5583c237c4004cc5b62e750cc"
+    },
+    {
+      "relative_path": "lib/report.ps1",
+      "git_blob_sha": "39fb32d42635e96702846d5215ee59de394f8952"
+    },
+    {
+      "relative_path": "lib/ui.ps1",
+      "git_blob_sha": "461dfe157ccaf9f418ca8c587b49b4ac1707c8fc"
+    },
+    {
+      "relative_path": "PC_COMMAND_V5.ps1",
+      "git_blob_sha": "4cc891fe40c81f30e48887af0aad4c8c67a91fbd"
+    },
+    {
+      "relative_path": "PC_COMMAND_BOOTSTRAP.ps1",
+      "git_blob_sha": "a08719cc137d93a78b58b69b498b94ebbb269c27"
+    },
+    {
+      "relative_path": "config.default.json",
+      "git_blob_sha": "cafc487ea43c3b04da26cb383f74fee0de574ffc"
+    }
+  ]
+}
