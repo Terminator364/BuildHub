@@ -7,6 +7,7 @@ $files=@(
   (Join-Path $root 'pc-command\v5\lib\eventbus.ps1'),
   (Join-Path $root 'pc-command\v5\lib\io.ps1'),
   (Join-Path $root 'pc-command\v5\lib\report.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\pdf.ps1'),
   (Join-Path $root 'pc-command\v5\lib\ui.ps1')
 )
 foreach($f in $files){
@@ -49,6 +50,8 @@ if([string]$cfg.product.command_router -ne 'contextual'){throw 'contextual comma
 if(-not[bool]$cfg.product.report_center){throw 'report center required'}
 if(-not[bool]$cfg.product.health_score){throw 'health score required'}
 if(-not[bool]$cfg.preferences.local_persisted){throw 'local preferences required'}
+if([string]$cfg.reports.pdf_engine -ne 'pure_powershell_low_ram'){throw 'low-RAM PDF engine required'}
+if([bool]$cfg.reports.browser_processes_required){throw 'report generation must not require browser processes'}
 $uiText=Get-Content (Join-Path $root 'pc-command\v5\lib\ui.ps1') -Raw
 if($uiText -notmatch '\[A\] Accueil'){throw 'A Accueil must be visible'}
 if($uiText -notmatch 'PARAMETRES / SANTE DU SYSTEME'){throw 'settings health view missing'}
