@@ -1,0 +1,22 @@
+name: PC Command Lab
+
+on:
+  pull_request:
+    paths:
+      - 'labs/pc-command/**'
+      - 'labs/browser-bench/**'
+      - '.github/workflows/pc-command-lab.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse PowerShell and validate browser matrix
+        shell: pwsh
+        run: ./labs/tests/test-pc-command.ps1
