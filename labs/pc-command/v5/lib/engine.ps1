@@ -105,8 +105,16 @@ function Get-PcLifecycleView {
   $duration = Get-PcAgeSeconds $started
 
   if ($state -in @('ASSISTANT_PROCESSING','TOOL_RUNNING')) {
-    $confidence = if ($age -le 60) {100} elseif ($age -le 300) {90} elseif ($age -le 900) {75} elseif ($age -le 1800) {50} else {25}
-    if ($age -le 900) {
+    $leaseUntil=$null
+    if($turn -and $turn.lease_until){try{$leaseUntil=[datetimeoffset]::Parse([string]$turn.lease_until)}catch{}}
+    elseif($lc -and $lc.lease_until){try{$leaseUntil=[datetimeoffset]::Parse([string]$lc.lease_until)}catch{}}
+    if($leaseUntil -and [datetimeoffset]::Now -le $leaseUntil){
+      $remaining=[math]::Max(0,($leaseUntil-[datetimeoffset]::Now).TotalSeconds)
+      $confidence=if($age-le60){100}elseif($age-le300){95}else{85}
+      return [pscustomobject]@{Label=if($state-eq'TOOL_RUNNING'){'OUTIL / TRAVAIL EN COURS'}else{'TRAVAIL EN COURS'};Color='Green';Detail=("Phase "+$phase+" | duree "+(Format-PcAge $duration)+" | signal "+(Format-PcAge $age)+" | lease "+(Format-PcAge $remaining));AgeSeconds=$age;Confidence=$confidence;DurationSeconds=$duration;LeaseRemainingSeconds=$remaining}
+    }
+    $confidence = if ($age -le 60) {100} elseif ($age -le 300) {90} elseif ($age -le 900) {70} elseif ($age -le 1800) {45} else {20}
+    if ($age -le 300) {
       return [pscustomobject]@{
         Label = if ($state -eq 'TOOL_RUNNING') {'OUTIL / TRAVAIL EN COURS'} else {'TRAVAIL EN COURS'}
         Color='Green'
@@ -118,7 +126,7 @@ function Get-PcLifecycleView {
     }
     if ($age -le 1800) {
       return [pscustomobject]@{
-        Label='TRAVAIL DECLARE - SIGNAL ANCIEN'
+        Label='ETAT INDETERMINE - SIGNAL ANCIEN'
         Color='Yellow'
         Detail=("Phase "+$phase+" | duree "+(Format-PcAge $duration)+" | aucun signal depuis "+(Format-PcAge $age)+" | confiance "+$confidence+"%")
         AgeSeconds=$age
@@ -196,4 +204,21 @@ function Get-PcVisibleMicroTasks {
   $active=@($all|Where-Object state -in @('ACTIVE','BLOCKED')|Select-Object -First ([math]::Min(10,$MaxVisible)))
   $remaining=@($all|Where-Object {$_ -notin $active}|Select-Object -Last ($MaxVisible-$active.Count))
   return [pscustomobject]@{Items=@($active+$remaining);Hidden=$all.Count-($active.Count+$remaining.Count);Total=$all.Count}
+}
+
+function Get-PcRequirementCoverage {
+  param($Conversation)
+  $req=@($Conversation.cahier_des_charges.requirements)
+  if($req.Count-eq0){return [pscustomobject]@{Percent=0;Count=0;P0Open=0;Implemented=0}}
+  $sum=0.0
+  foreach($r in $req){
+    $v=if($null-ne$r.coverage){[double]$r.coverage}else{0.0}
+    if($v-lt0){$v=0};if($v-gt1){$v=1};$sum+=$v
+  }
+  [pscustomobject]@{
+    Percent=[int][math]::Round(($sum/$req.Count)*100,0)
+    Count=$req.Count
+    P0Open=@($req|Where-Object{$_.priority-eq'P0' -and $_.status-ne'IMPLEMENTED'}).Count
+    Implemented=@($req|Where-Object status -eq 'IMPLEMENTED').Count
+  }
 }
