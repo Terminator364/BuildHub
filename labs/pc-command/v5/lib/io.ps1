@@ -191,24 +191,74 @@ function Get-PcUpdateInfo {
 function Read-PcFeedbackLocal {
   param($Paths)
   $base=Join-Path $Paths.StateRepo 'pc-command\feedback'
-  $result=[ordered]@{Index=$null;Recent=@();Versions=$null;Error=$null}
-  try{
-    $idx=Join-Path $base 'feedback-index.json'
-    if(Test-Path $idx){$result.Index=Get-Content $idx -Raw -Encoding UTF8|ConvertFrom-Json}
-    $ledger=Join-Path $base 'feedback-ledger.jsonl'
-    if(Test-Path $ledger){
-      $tmp=New-Object System.Collections.Generic.List[object]
-      foreach($line in @(Get-Content $ledger -Encoding UTF8 -Tail 12 -ErrorAction SilentlyContinue)){
-        try{$tmp.Add(($line|ConvertFrom-Json))}catch{}
-      }
-      $result.Recent=@($tmp)
-    }
-    $vt=Join-Path $base 'version-trace.json'
-    if(Test-Path $vt){$result.Versions=Get-Content $vt -Raw -Encoding UTF8|ConvertFrom-Json}
-  }catch{$result.Error=$_.Exception.Message}
-  return [pscustomobject]$result
-}
+  $errors=@()
+  $index=$null
+  $versions=$null
+  $events=@()
 
+  $idx=Join-Path $base 'feedback-index.json'
+  if(Test-Path $idx){
+    try{$index=Get-Content $idx -Raw -Encoding UTF8|ConvertFrom-Json}
+    catch{$errors+=('index: '+$_.Exception.Message)}
+  }
+
+  $ledger=Join-Path $base 'feedback-ledger.jsonl'
+  if(Test-Path $ledger){
+    try{
+      foreach($line in @(Get-Content $ledger -Encoding UTF8 -ErrorAction Stop)){
+        if([string]::IsNullOrWhiteSpace([string]$line)){continue}
+        try{$events+=($line|ConvertFrom-Json)}
+        catch{$errors+=('ledger-line: '+$_.Exception.Message)}
+      }
+    }catch{$errors+=('ledger: '+$_.Exception.Message)}
+  }
+
+  $vt=Join-Path $base 'version-trace.json'
+  if(Test-Path $vt){
+    try{$versions=Get-Content $vt -Raw -Encoding UTF8|ConvertFrom-Json}
+    catch{$errors+=('versions: '+$_.Exception.Message)}
+  }
+
+  # Reconcile the human pointer from the machine ledger instead of trusting
+  # a stale index. The ledger remains the source of truth for chronology.
+  if($events.Count-gt0){
+    $latest=@($events|Sort-Object {
+      try{[datetimeoffset]::Parse([string]$_.at)}catch{[datetimeoffset]::MinValue}
+    }|Select-Object -Last 1)
+    if(-not$index){
+      $index=[pscustomobject]@{
+        schema='pc.command.feedback.index.derived.v1'
+        total_feedbacks=$events.Count
+        unique_feedback_ids=@($events.feedback_id|Sort-Object -Unique).Count
+        last_feedback_id=[string]$latest[0].feedback_id
+        last_feedback_at=[string]$latest[0].at
+        policy='A+B+C -> MERGE+REFINE+PRESERVE'
+      }
+    }else{
+      $index.total_feedbacks=$events.Count
+      if($index.PSObject.Properties.Name -contains 'unique_feedback_ids'){
+        $index.unique_feedback_ids=@($events.feedback_id|Sort-Object -Unique).Count
+      }
+      $index.last_feedback_id=[string]$latest[0].feedback_id
+      if($index.PSObject.Properties.Name -contains 'last_feedback_at'){
+        $index.last_feedback_at=[string]$latest[0].at
+      }else{
+        $index|Add-Member -NotePropertyName last_feedback_at -NotePropertyValue ([string]$latest[0].at) -Force
+      }
+    }
+  }
+
+  $recent=@($events|Sort-Object {
+    try{[datetimeoffset]::Parse([string]$_.at)}catch{[datetimeoffset]::MinValue}
+  }|Select-Object -Last 12)
+
+  return [pscustomobject]@{
+    Index=$index
+    Recent=$recent
+    Versions=$versions
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+  }
+}
 
 function Start-PcUpdateProbe {
   param($Config,$Paths)

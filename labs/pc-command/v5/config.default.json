@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -101,7 +101,9 @@
     "machine_path": "pc-command/feedback/feedback-ledger.jsonl",
     "version_trace_path": "pc-command/feedback/version-trace.json",
     "ingest_before_build": true,
-    "preserve_previous": true
+    "preserve_previous": true,
+    "reader_self_reconcile": true,
+    "independent_section_errors": true
   },
   "sync_engine": {
     "process_start_info_compat": "windows_powershell_5_1",
@@ -115,7 +117,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "global improvement without regression",
+    "current_goal": "feedback truth + zero dead advertised controls + stable promotion",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -132,7 +134,7 @@
   },
   "product": {
     "stage": "candidate",
-    "objective": "visible product leap without regression",
+    "objective": "repair ledger visibility + unify contextual actions without RAM regression",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
@@ -167,7 +169,8 @@
     "ack_visible": true,
     "unknown_key_feedback": true,
     "action_matrix_per_view": true,
-    "dead_advertised_controls_forbidden": true
+    "dead_advertised_controls_forbidden": true,
+    "action_matrix_single_source": true
   },
   "interaction_state": {
     "user_preemption_visible": true,

@@ -107,23 +107,7 @@ function Set-PcInputAck {
 
 function Get-PcAllowedKeysForView {
   param([string]$CurrentView)
-  switch($CurrentView){
-    'general'      {return @('A','1','2','3','4','5','6','7','8','9','F','V','X','S','L','P','Y','H','R','Q')}
-    'conversation' {return @('A','B','1','2','3','4','5','6','7','8','9','C','T','F','V','S','P','X','R','Q')}
-    'macro'        {return @('A','B','1','2','3','4','5','6','7','8','9','C','T','F','V','P','X','R','Q')}
-    'micro'        {return @('A','B','C','T','F','V','P','X','R','Q')}
-    'feedback'     {return @('A','B','V','C','P','R','Q')}
-    'versions'     {return @('A','B','F','U','P','R','Q')}
-    'requirements' {return @('A','B','F','V','T','P','R','Q')}
-    'timeline'     {return @('A','B','C','F','V','P','R','Q')}
-    'sources'      {return @('A','B','L','F','P','R','Q')}
-    'local'        {return @('A','B','S','P','R','Q')}
-    'settings'     {return @('A','B','1','2','3','4','C','U','Y','H','R','Q')}
-    'reports'      {return @('A','B','G','O','D','E','P','R','Q')}
-    'health'       {return @('A','B','P','R','Q')}
-    'help'         {return @('A','B','P','F','V','Q')}
-    default        {return @('A','B','P','R','Q')}
-  }
+  return @(Get-PcExpandedKeysForView $CurrentView)
 }
 
 function Ensure-PcChannelDetail {
@@ -154,6 +138,7 @@ function Process-PcKey {
   if($k-eq'A'){
     $script:View='general'
     $script:BackView='general'
+    Set-PcInputAck $k 'accueil ouvert' $true
   }
   elseif($k-eq'B'){
     if($View-eq'micro'){$script:View='macro'}
@@ -161,19 +146,20 @@ function Process-PcKey {
     elseif($View -in @('feedback','versions','sources','local','settings','help','reports','health')){$script:View=$script:BackView}
     elseif($View-eq'conversation'){$script:View='general'}
     else{$script:View='general'}
+    Set-PcInputAck $k ('retour vers '+$script:View) $true
   }
   elseif($k-eq'R'){
     [void](Start-PcStatePull $Defaults $Paths)
     $script:LastPullStart=Get-Date
     Add-LocalPcEvent 'Synchronisation demandee; interface reste interactive.'
   }
-  elseif($k-eq'H'){$script:BackView=$View;$script:View='help'}
-  elseif($k-eq'F'){$script:BackView=$View;$script:View='feedback'}
-  elseif($k-eq'V'){$script:BackView=$View;$script:View='versions'}
-  elseif($k-eq'S'){$script:BackView=$View;$script:View='sources'}
-  elseif($k-eq'L'){$script:BackView=$View;$script:View='local'}
-  elseif($k-eq'P'){$script:BackView=$View;$script:View='settings'}
-  elseif($k-eq'T' -and $Sync.Channel){$script:BackView=$View;$script:View='timeline'}
+  elseif($k-eq'H'){$script:BackView=$View;$script:View='help';Set-PcInputAck $k 'aide ouverte' $true}
+  elseif($k-eq'F'){$script:BackView=$View;$script:View='feedback';Set-PcInputAck $k 'feedback ledger ouvert' $true}
+  elseif($k-eq'V'){$script:BackView=$View;$script:View='versions';Set-PcInputAck $k 'historique des versions ouvert' $true}
+  elseif($k-eq'S'){$script:BackView=$View;$script:View='sources';Set-PcInputAck $k 'sources ouvertes' $true}
+  elseif($k-eq'L'){$script:BackView=$View;$script:View='local';Set-PcInputAck $k 'activite locale ouverte' $true}
+  elseif($k-eq'P'){$script:BackView=$View;$script:View='settings';Set-PcInputAck $k 'parametres ouverts' $true}
+  elseif($k-eq'T' -and $Sync.Channel){$script:BackView=$View;$script:View='timeline';Set-PcInputAck $k 'chronologie ouverte' $true}
   elseif($k-eq'C' -and $View-eq'settings'){
     Set-Clipboard 'PCCONNECT|v4|state=Terminator364/PC-COMMAND-STATE|code=Terminator364/BuildHub|slot=AUTO|max=10'
     Add-LocalPcEvent 'Code PCCONNECT copie.'
@@ -190,10 +176,12 @@ function Process-PcKey {
   elseif($k-eq'X'){
     $script:BackView=$View
     $script:View='reports'
+    Set-PcInputAck $k 'centre de rapports ouvert' $true
   }
   elseif($k-eq'Y'){
     $script:BackView=$View
     $script:View='health'
+    Set-PcInputAck $k 'diagnostic sante ouvert' $true
   }
   elseif($k-eq'G' -and $View-eq'reports'){
     $rep=New-PcReport $Defaults $Sync.Overview $Sync.Channel $Paths

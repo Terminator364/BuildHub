@@ -46,7 +46,7 @@ if([double]$cfg.cadence.engine_recalc_seconds -ne 3.5){throw 'engine must defaul
 if([int]$cfg.cadence.display_refresh_seconds -ne 10){throw 'display must default to 10s'}
 if(-not[bool]$cfg.automation.auto_update){throw 'auto update must be enabled'}
 $uiText=Get-Content (Join-Path $root 'pc-command\v5\lib\ui.ps1') -Raw
-if($uiText -notmatch '\[A\] Accueil'){throw 'A Accueil must be visible'}
+if($uiText -notmatch "Key='A';Label='Accueil'"){throw 'A Accueil action must exist'}
 if($uiText -notmatch 'PARAMETRES / SANTE DU SYSTEME'){throw 'settings health view missing'}
 if($uiText -notmatch 'function Write-PcMicro'){throw 'micro detail view missing'}
 $mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
@@ -68,13 +68,48 @@ if(-not $cfg.interaction_state.user_preemption_visible){throw 'user preemption m
 
 $uiText=Get-Content (Join-Path $root 'pc-command\v5\lib\ui.ps1') -Raw
 $mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
-foreach($view in @('general','conversation','macro','micro','feedback','versions','requirements','timeline','sources','local','settings','reports','health','help')){
-  if($uiText -notmatch ("'"+[regex]::Escape($view)+"'\{")){throw "footer missing view $view"}
-}
+# Footer/action availability is validated below through the canonical action matrix.
 foreach($token in @('Set-PcInputAck','Get-PcAllowedKeysForView','Action: ')){
   if($mainText -notmatch [regex]::Escape($token)){throw "input feedback missing $token"}
 }
 if($mainText -notmatch 'USER_PREEMPTED_BY_NEW_MESSAGE' -and $uiText -notmatch 'USER_PREEMPTED_BY_NEW_MESSAGE'){throw 'preemption state not visible'}
-if($uiText -notmatch '\[A\] Accueil'){throw 'global home button missing'}
+if($uiText -notmatch "Key='A';Label='Accueil'"){throw 'global home button missing'}
 Write-Host 'PC_COMMAND_BUTTON_AUDIT_OK'
 Write-Host 'PC_COMMAND_V5_TESTS_OK'
+
+
+# v0.9.4: action matrix must drive both footer and router.
+. (Join-Path $root 'pc-command\v5\lib\ui.ps1')
+foreach($view in @('general','conversation','macro','micro','feedback','versions','requirements','timeline','sources','local','settings','reports','health','help')){
+  $actions=@(Get-PcActionsForView $view)
+  if($actions.Count-eq0){throw "empty action matrix for $view"}
+  $keys=@(Get-PcExpandedKeysForView $view)
+  if($keys -notcontains 'A'){throw "A Accueil missing from $view"}
+  if($keys -notcontains 'Q'){throw "Q Fermer missing from $view"}
+}
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -notmatch 'Get-PcExpandedKeysForView'){throw 'router is not using the canonical action matrix'}
+
+# v0.9.4: feedback reader must not fail on Generic.List/array conversion and
+# must reconcile a stale index from the machine ledger.
+$tmp=Join-Path $env:TEMP ('pc-command-feedback-test-'+[guid]::NewGuid().ToString('N'))
+$fb=Join-Path $tmp 'pc-command\feedback'
+New-Item -ItemType Directory -Force -Path $fb|Out-Null
+@'
+{"schema":"pc.command.feedback.index.v1","total_feedbacks":1,"last_feedback_id":"FB-001","policy":"A+B+C -> MERGE+REFINE+PRESERVE"}
+'@ | Set-Content (Join-Path $fb 'feedback-index.json') -Encoding UTF8
+@'
+{"schema":"pc.command.feedback.v1","feedback_id":"FB-001","at":"2026-09-26T20:00:00Z","abc":{"A":"a","B":"b","C":"c"},"status":"RECORDED"}
+{"schema":"pc.command.feedback.v1","feedback_id":"FB-002","at":"2026-09-26T21:00:00Z","abc":{"A":"a2","B":"b2","C":"c2"},"status":"RECORDED"}
+'@ | Set-Content (Join-Path $fb 'feedback-ledger.jsonl') -Encoding UTF8
+@'
+{"schema":"pc.command.version.trace.v1","versions":[{"version":"0.9.4","status":"candidate"}]}
+'@ | Set-Content (Join-Path $fb 'version-trace.json') -Encoding UTF8
+$paths=[pscustomobject]@{StateRepo=$tmp}
+$x=Read-PcFeedbackLocal $paths
+if($x.Error){throw "feedback reader error: $($x.Error)"}
+if(@($x.Recent).Count-ne2){throw "feedback reader recent count wrong: $(@($x.Recent).Count)"}
+if([string]$x.Index.last_feedback_id-ne'FB-002'){throw "feedback reader did not reconcile latest id"}
+if(@($x.Versions.versions).Count-ne1){throw 'version trace not loaded'}
+Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
+Write-Host 'PC_COMMAND_V094_LEDGER_ROUTER_OK'

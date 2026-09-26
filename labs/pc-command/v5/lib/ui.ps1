@@ -307,65 +307,139 @@ function Write-PcHelp {
   Write-PcLine 'Seules les actions pertinentes a la fenetre sont affichees dans le pied de page.' Green
 }
 
+function Get-PcActionsForView {
+  param([string]$View)
+  switch($View){
+    'general' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},
+      [pscustomobject]@{Key='1-9';Label='Conversation'},
+      [pscustomobject]@{Key='F';Label='Feedbacks'},
+      [pscustomobject]@{Key='V';Label='Versions'},
+      [pscustomobject]@{Key='X';Label='Rapports'},
+      [pscustomobject]@{Key='S';Label='Sources'},
+      [pscustomobject]@{Key='L';Label='Local'},
+      [pscustomobject]@{Key='P';Label='Parametres'},
+      [pscustomobject]@{Key='Y';Label='Sante'},
+      [pscustomobject]@{Key='H';Label='Aide'},
+      [pscustomobject]@{Key='R';Label='Sync'},
+      [pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'conversation' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='1-9';Label='Macro'},[pscustomobject]@{Key='C';Label='Cahier A+B+C'},
+      [pscustomobject]@{Key='T';Label='Chronologie'},[pscustomobject]@{Key='F';Label='Feedbacks'},
+      [pscustomobject]@{Key='V';Label='Versions'},[pscustomobject]@{Key='S';Label='Sources'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='X';Label='Rapport'},
+      [pscustomobject]@{Key='R';Label='Sync'},[pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'macro' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='1-9';Label='Micro'},[pscustomobject]@{Key='C';Label='Cahier'},
+      [pscustomobject]@{Key='T';Label='Chronologie'},[pscustomobject]@{Key='F';Label='Feedbacks'},
+      [pscustomobject]@{Key='V';Label='Versions'},[pscustomobject]@{Key='P';Label='Parametres'},
+      [pscustomobject]@{Key='X';Label='Rapport'},[pscustomobject]@{Key='R';Label='Sync'},
+      [pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'micro' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='C';Label='Cahier'},[pscustomobject]@{Key='T';Label='Chronologie'},
+      [pscustomobject]@{Key='F';Label='Feedbacks'},[pscustomobject]@{Key='V';Label='Versions'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='X';Label='Rapport'},
+      [pscustomobject]@{Key='R';Label='Sync'},[pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'feedback' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='V';Label='Versions'},[pscustomobject]@{Key='C';Label='Cahier'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='R';Label='Sync'},
+      [pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'versions' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='F';Label='Feedbacks'},[pscustomobject]@{Key='U';Label='Verifier update'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='R';Label='Sync'},
+      [pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'requirements' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='F';Label='Feedbacks'},[pscustomobject]@{Key='V';Label='Versions'},
+      [pscustomobject]@{Key='T';Label='Chronologie'},[pscustomobject]@{Key='P';Label='Parametres'},
+      [pscustomobject]@{Key='R';Label='Sync'},[pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'timeline' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='C';Label='Cahier'},[pscustomobject]@{Key='F';Label='Feedbacks'},
+      [pscustomobject]@{Key='V';Label='Versions'},[pscustomobject]@{Key='P';Label='Parametres'},
+      [pscustomobject]@{Key='R';Label='Sync'},[pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'sources' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='L';Label='Local'},[pscustomobject]@{Key='F';Label='Feedbacks'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='R';Label='Sync'},
+      [pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'local' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='S';Label='Sources'},[pscustomobject]@{Key='P';Label='Parametres'},
+      [pscustomobject]@{Key='R';Label='Sync'},[pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'settings' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='1';Label='Sync'},[pscustomobject]@{Key='2';Label='Moteur'},
+      [pscustomobject]@{Key='3';Label='Affichage'},[pscustomobject]@{Key='4';Label='Profil'},
+      [pscustomobject]@{Key='C';Label='Copier PCCONNECT'},[pscustomobject]@{Key='U';Label='Update'},
+      [pscustomobject]@{Key='Y';Label='Sante'},[pscustomobject]@{Key='H';Label='Aide'},
+      [pscustomobject]@{Key='R';Label='Sync'},[pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'reports' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='G';Label='Generer PDF'},[pscustomobject]@{Key='O';Label='Ouvrir dernier'},
+      [pscustomobject]@{Key='D';Label='Export Drive'},[pscustomobject]@{Key='E';Label='Dossier rapports'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='R';Label='Sync'},
+      [pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'health' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='R';Label='Sync'},
+      [pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    'help' {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='F';Label='Feedbacks'},
+      [pscustomobject]@{Key='V';Label='Versions'},[pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+    default {return @(
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='R';Label='Sync'},
+      [pscustomobject]@{Key='Q';Label='Fermer'}
+    )}
+  }
+}
+
+function Get-PcExpandedKeysForView {
+  param([string]$View)
+  $keys=@()
+  foreach($a in @(Get-PcActionsForView $View)){
+    if($a.Key-eq'1-9'){$keys+=@('1','2','3','4','5','6','7','8','9')}
+    else{$keys+=[string]$a.Key}
+  }
+  return @($keys|Select-Object -Unique)
+}
+
 function Write-PcFooter {
   param([string]$View)
   Write-PcFooterLine ''
   Write-PcFooterLine '--------------------------------------------------------------------------------' DarkGray
-  switch($View){
-    'general'{
-      Write-PcFooterLine '[A] Accueil  [1-9] Conversation  [F] Feedbacks  [V] Versions  [X] Rapports'
-      Write-PcFooterLine '[S] Sources  [L] Local  [P] Parametres  [Y] Sante  [H] Aide  [R] Sync  [Q] Fermer'
-    }
-    'conversation'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [1-9] Macro  [C] Cahier A+B+C  [T] Chronologie'
-      Write-PcFooterLine '[F] Feedbacks  [V] Versions  [S] Sources  [P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'
-    }
-    'macro'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [1-9] Micro  [C] Cahier  [T] Chronologie'
-      Write-PcFooterLine '[F] Feedbacks  [V] Versions  [P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'
-    }
-    'micro'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [C] Cahier  [T] Chronologie  [F] Feedbacks  [V] Versions'
-      Write-PcFooterLine '[P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'
-    }
-    'feedback'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [V] Versions  [C] Cahier  [P] Parametres  [R] Sync  [Q] Fermer'
-    }
-    'versions'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [F] Feedbacks  [U] Verifier update  [P] Parametres  [R] Sync  [Q] Fermer'
-    }
-    'requirements'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [F] Feedbacks  [V] Versions  [T] Chronologie  [P] Parametres  [R] Sync  [Q] Fermer'
-    }
-    'timeline'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [C] Cahier  [F] Feedbacks  [V] Versions  [P] Parametres  [R] Sync  [Q] Fermer'
-    }
-    'sources'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [L] Local  [F] Feedbacks  [P] Parametres  [R] Sync  [Q] Fermer'
-    }
-    'local'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [S] Sources  [P] Parametres  [R] Sync  [Q] Fermer'
-    }
-    'settings'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [1] Sync  [2] Moteur  [3] Affichage  [4] Profil'
-      Write-PcFooterLine '[C] Copier PCCONNECT  [U] Update  [Y] Sante  [H] Aide  [R] Sync  [Q] Fermer'
-    }
-    'reports'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [G] Generer PDF  [O] Ouvrir dernier  [D] Export Drive'
-      Write-PcFooterLine '[E] Dossier rapports  [P] Parametres  [R] Sync  [Q] Fermer'
-    }
-    'health'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [R] Sync  [Q] Fermer'
-    }
-    'help'{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [F] Feedbacks  [V] Versions  [Q] Fermer'
-    }
-    default{
-      Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [R] Sync  [Q] Fermer'
-    }
+  $line=''
+  foreach($a in @(Get-PcActionsForView $View)){
+    $item='['+$a.Key+'] '+$a.Label
+    if([string]::IsNullOrWhiteSpace($line)){$line=$item}
+    elseif(($line.Length+2+$item.Length)-ge[math]::Max(50,$script:PcFrameWidth-2)){
+      Write-PcFooterLine $line
+      $line=$item
+    }else{$line+='  '+$item}
   }
+  if(-not[string]::IsNullOrWhiteSpace($line)){Write-PcFooterLine $line}
 }
-
 
 function Write-PcReportCenter {
   param($Config,$Paths,$Conversation)
