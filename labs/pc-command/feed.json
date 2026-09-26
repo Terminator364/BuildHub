@@ -1,7 +1,7 @@
 {
   "schema": "pc_command.feed.v2",
-  "generated_at": "2026-09-26T15:35:00+01:00",
-  "refresh_seconds": 50,
+  "generated_at": "2026-09-26T15:42:00+01:00",
+  "refresh_seconds": 10,
   "host": {
     "name": "MBMPC",
     "ram_gb": 4,
@@ -46,10 +46,10 @@
       "objective": "Afficher localement, en PowerShell, un suivi humain, complet et tres leger des travaux relies au PC.",
       "owner": "current_chat",
       "state": "ACTIVE",
-      "stage": "V2_1_VALIDATION",
-      "current_action": "Validation CI du centre PowerShell complet: multi-flux, progression adaptative, sources, activite locale et demarrage en un clic.",
-      "last_success": "V2 multi-flux validee sur GitHub puis deployee; version V2.1 enrichie en validation.",
-      "next_step": "Deployer V2.1 une seule fois sur MBMPC apres CI verte et conserver un seul raccourci PC COMMAND.",
+      "stage": "V3_ADAPTIVE_ENGINE",
+      "current_action": "Construction du moteur local V3: recalcul chaque seconde, synchro 10 s, onglets de conversations, detail humain et journal d'activite local.",
+      "last_success": "V2 multi-flux fonctionne sur le PC; CI PowerShell verte.",
+      "next_step": "Valider V3 sur GitHub puis remplacer une seule fois le script local.",
       "blocker": null,
       "tasks": [
         {
@@ -65,24 +65,24 @@
           "title": "Creer le moteur de progression adaptatif",
           "state": "ACTIVE",
           "weight": 3,
-          "completion": 0.95,
-          "evidence": "weighted task engine implemented"
+          "completion": 0.98,
+          "evidence": "weighted adaptive engine + scope expansion model"
         },
         {
           "id": "pc3",
           "title": "Creer l'affichage PowerShell humain",
           "state": "ACTIVE",
           "weight": 3,
-          "completion": 0.95,
-          "evidence": "V2 deployed; V2.1 in CI"
+          "completion": 0.98,
+          "evidence": "multi-stream console viewer live on PC"
         },
         {
           "id": "pc4",
           "title": "Ajouter les controles clavier et rafraichissement 50 s",
-          "state": "DONE",
+          "state": "ACTIVE",
           "weight": 2,
-          "completion": 1,
-          "evidence": "50 second refresh + keyboard controls"
+          "completion": 0.9,
+          "evidence": "10s remote / 1s local redesign"
         },
         {
           "id": "pc5",
@@ -90,7 +90,7 @@
           "state": "DONE",
           "weight": 2,
           "completion": 1,
-          "evidence": "PC Command Lab CI success"
+          "evidence": "GitHub CI success on V2"
         },
         {
           "id": "pc6",
@@ -98,13 +98,30 @@
           "state": "ACTIVE",
           "weight": 2,
           "completion": 0.8,
-          "evidence": "V2 deployed, V2.1 pending"
+          "evidence": "V2 deployed; V3 pending CI"
         }
       ],
       "sources": [
         "github",
         "desktop_commander",
         "drive"
+      ],
+      "events": [
+        {
+          "at": "2026-09-26T15:31:20+01:00",
+          "kind": "USER_FEEDBACK",
+          "text": "Vue multi-flux visible; demande de plus de detail et d'un moteur plus reactif."
+        },
+        {
+          "at": "2026-09-26T15:35:00+01:00",
+          "kind": "DESIGN",
+          "text": "Separation retenue: recalcul local 1 s, synchronisation distante 10 s."
+        },
+        {
+          "at": "2026-09-26T15:42:00+01:00",
+          "kind": "BUILD",
+          "text": "V3 en cours sur BuildHub pour limiter les appels Desktop Commander."
+        }
       ]
     },
     {
@@ -113,10 +130,10 @@
       "objective": "Choisir le navigateur le plus adapte au Lenovo 4 Go RAM / Celeron N4020 / HDD sans casser Drive.",
       "owner": "current_chat",
       "state": "ACTIVE",
-      "stage": "RESOURCE_BENCH_CONFIRMATION",
-      "current_action": "Confirmation du benchmark ressources sur GitHub avant shortlist locale.",
-      "last_success": "6/6 smoke-tests reussis et premier prefiltre RAM termine: Falkon, qutebrowser, Brave, Helium, Edge, Firefox.",
-      "next_step": "Lancer une mesure de confirmation multi-onglets puis retenir 2-3 finalistes pour MBMPC.",
+      "stage": "RESOURCE_CONFIRMATION",
+      "current_action": "Confirmation des mesures RAM/CPU sur runners Windows et ajout du navigateur personnel BuildHub comme candidat experimental.",
+      "last_success": "Premier prefiltre RAM: Falkon 165 MB; qutebrowser 306 MB; Brave 357 MB; Helium 646 MB; Edge 678 MB; Firefox 786 MB sur runner Windows (comparatif relatif).",
+      "next_step": "Test multi-pages ChatGPT/YouTube/GitHub puis shortlist 2-3 finalistes pour le Lenovo.",
       "blocker": null,
       "tasks": [
         {
@@ -140,16 +157,16 @@
           "title": "Benchmark ressources GitHub",
           "state": "ACTIVE",
           "weight": 3,
-          "completion": 0.75,
-          "evidence": "6 first-pass resource results collected"
+          "completion": 0.82,
+          "evidence": "first-pass resource matrix complete; realistic pass pending"
         },
         {
           "id": "b4",
           "title": "Tri technique des candidats",
           "state": "ACTIVE",
           "weight": 2,
-          "completion": 0.25,
-          "evidence": "initial ranking under review"
+          "completion": 0.35,
+          "evidence": "Falkon/qutebrowser/Brave provisional low-memory leaders"
         },
         {
           "id": "b5",
@@ -180,6 +197,23 @@
         "github",
         "tlib",
         "desktop_commander"
+      ],
+      "events": [
+        {
+          "at": "2026-09-26T14:04:00Z",
+          "kind": "SMOKE",
+          "text": "6/6 navigateurs ont demarre correctement sur Windows runner."
+        },
+        {
+          "at": "2026-09-26T14:32:56Z",
+          "kind": "BENCH",
+          "text": "Prefiltre simple termine; Falkon et qutebrowser ont le plus petit working set relatif."
+        },
+        {
+          "at": "2026-09-26T15:40:00+01:00",
+          "kind": "DISCOVERY",
+          "text": "Le navigateur personnel BuildHub WebView2 est ajoute comme candidat experimental adapte aux 4 Go."
+        }
       ]
     },
     {
@@ -238,7 +272,29 @@
       "sources": [
         "desktop_commander",
         "github"
+      ],
+      "events": [
+        {
+          "at": "2026-09-26T12:00:00+01:00",
+          "kind": "MEASURE",
+          "text": "PC cible confirme: 4 Go RAM, Celeron N4020, HDD."
+        },
+        {
+          "at": "2026-09-26T13:00:00+01:00",
+          "kind": "OPTIMIZE",
+          "text": "Politique un seul onglet technique adoptee; Google Drive Desktop conserve actif."
+        }
       ]
     }
-  ]
+  ],
+  "local_recalc_seconds": 1,
+  "engine": {
+    "name": "PC Command Adaptive Progress Engine",
+    "version": "3.0-lab",
+    "semantics": "evidence_weighted_progress",
+    "note": "Progress is an estimate from weighted tasks and evidence, not a probability of success.",
+    "recompute_seconds": 1,
+    "remote_sync_seconds": 10,
+    "dynamic_scope": true
+  }
 }
