@@ -1,9 +1,9 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "code": {
     "repo": "Terminator364/BuildHub",
-    "branch": "lab/pc-command-v070",
+    "branch": "lab/pc-command-v090",
     "base_path": "labs/pc-command/v5"
   },
   "state": {
@@ -85,9 +85,11 @@
   },
   "updater": {
     "transport": "github_api_blob_sha",
-    "manifest_ref": "lab/pc-command-v070",
+    "manifest_ref": "lab/pc-command-v090",
     "verify_git_blob_sha": true,
-    "backups_kept": 3
+    "backups_kept": 3,
+    "rollback_command": true,
+    "rollback_safety_backup": true
   },
   "hotfixes": {
     "footer_positional_color_binding": "fixed",
@@ -136,7 +138,9 @@
     "command_router": "contextual",
     "health_score": true,
     "report_center": true,
-    "navigation_back_stack": "one-level contextual"
+    "navigation_back_stack": "one-level contextual",
+    "update_ring": "candidate",
+    "update_branch": "lab/pc-command-v090"
   },
   "preferences": {
     "local_persisted": true,
