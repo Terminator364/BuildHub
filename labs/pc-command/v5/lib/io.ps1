@@ -15,7 +15,7 @@ function Invoke-PcGhRaw {
   param([string]$Repo,[string]$Path,[string]$Ref='main')
   $gh=(Get-Command gh.exe -ErrorAction SilentlyContinue).Source
   if(-not $gh){throw 'GitHub CLI absent'}
-  $endpoint="repos/$Repo/contents/$Path?ref=$Ref"
+  $endpoint="repos/$Repo/contents/${Path}?ref=$Ref"
   $oldEap=$ErrorActionPreference
   $ErrorActionPreference='Continue'
   $out=@(& $gh api -H 'Accept: application/vnd.github.raw+json' $endpoint 2>&1)

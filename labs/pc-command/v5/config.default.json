@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-browser-20260926",
