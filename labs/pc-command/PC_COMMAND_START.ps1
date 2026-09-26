@@ -1,6 +1,6 @@
 $ErrorActionPreference='SilentlyContinue'
 $stateDir=Join-Path $env:LOCALAPPDATA 'PC_COMMAND'
-$viewer=Join-Path $stateDir 'PC_COMMAND_STATUS_V2.ps1'
+$viewer=Join-Path $stateDir 'PC_COMMAND_STATUS_V4.ps1'
 $stdout=Join-Path $stateDir 'remote.stdout.log'
 $stderr=Join-Path $stateDir 'remote.stderr.log'
 New-Item -ItemType Directory -Force -Path $stateDir|Out-Null
