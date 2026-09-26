@@ -44,7 +44,7 @@ $UpdateInfo=$null
 $SpinnerIndex=0
 $Cycle=0
 $LocalEvents=New-Object System.Collections.Generic.List[object]
-$ManifestUrl='https://raw.githubusercontent.com/Terminator364/BuildHub/lab/pc-command-browser-20260926/labs/pc-command/v5/manifest.json'
+$ManifestUrl='https://raw.githubusercontent.com/Terminator364/BuildHub/lab/pc-command-v070/labs/pc-command/v5/manifest.json'
 
 try{
   Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
