@@ -101,7 +101,10 @@ function Start-PcStatePull {
     $psi.CreateNoWindow=$true
     $psi.RedirectStandardOutput=$true
     $psi.RedirectStandardError=$true
-    foreach($a in @('-C',$Paths.StateRepo,'pull','--ff-only','--quiet')){[void]$psi.ArgumentList.Add($a)}
+    # Windows PowerShell 5.1/.NET Framework has no ProcessStartInfo.ArgumentList.
+    # Quote the repo path explicitly and use Arguments for compatibility.
+    $repoArg='"'+([string]$Paths.StateRepo).Replace('"','\"')+'"'
+    $psi.Arguments='-C '+$repoArg+' pull --ff-only --quiet'
     $script:PcPullProcess=[Diagnostics.Process]::Start($psi)
     $script:PcPullStartedAt=Get-Date
     return $true
