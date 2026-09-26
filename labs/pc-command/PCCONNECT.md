@@ -80,3 +80,38 @@ Au debut d'un travail significatif, publier ASSISTANT_PROCESSING avec started_at
 Le PC local mesure le temps ecoule sans heartbeat distant permanent.
 Un lease expire ne signifie jamais TERMINE: l'etat devient INDETERMINE jusqu'a une nouvelle preuve.
 Ne jamais exposer le raisonnement prive; publier uniquement phase, outils, resultats et preuves observables.
+
+
+## Feedback Ledger obligatoire
+
+Avant BUILD sur chaque message utilisateur pertinent:
+
+1. Lire:
+   - `pc-command/feedback/feedback-index.json`
+   - `pc-command/feedback/feedback-ledger.jsonl`
+   dans le depot prive `Terminator364/PC-COMMAND-STATE`.
+2. Produire le delta:
+   - A = besoin/promesse/contrainte/livrable;
+   - B = recherche, innovation, contre-audit, consequence architecture;
+   - C = retour terrain, capture, bug, critique, mesure.
+3. Creer exactement une nouvelle entree idempotente de schema `pc.command.feedback.v1`.
+4. Generer le prochain `feedback_id` sans reutiliser un id existant.
+5. Relire le SHA courant juste avant ecriture; en cas de conflit: refetch -> merge -> retry.
+6. Mettre a jour:
+   - `feedback-ledger.jsonl`
+   - `FEEDBACK_LEDGER_MASTER.md`
+   - `feedback-index.json`
+   - les exigences/cahier de la conversation;
+   - la `VERSION_TRACE` si une version est impactee.
+7. Le feedback doit etre enregistre **avant** la phase de construction, sauf urgence de securite.
+8. Aucun ancien feedback n'est supprime silencieusement.
+9. Une nouvelle version doit declarer:
+   - feedbacks traites;
+   - feedbacks reportes;
+   - regressions ouvertes;
+   - preuves/gates executees.
+10. Une version n'est pas consideree meilleure si elle casse une fonction precedemment validee.
+
+### Donnees brutes et vie privee
+Ne pas stocker de mot de passe, token, secret, chain-of-thought ou contenu prive non necessaire.
+Le ledger contient des resumes techniques des feedbacks et preuves terrain, pas des secrets.
