@@ -56,14 +56,14 @@ function Read-PcStateLocal {
   try{
     $regPath=Join-Path $Paths.StateRepo ([string]$Config.state.registry_path)
     $ovPath=Join-Path $Paths.StateRepo ([string]$Config.state.overview_path)
-    if(Test-Path $regPath){$result.Registry=Get-Content $regPath -Raw|ConvertFrom-Json}
-    if(Test-Path $ovPath){$result.Overview=Get-Content $ovPath -Raw|ConvertFrom-Json}
+    if(Test-Path $regPath){$result.Registry=Get-Content $regPath -Raw -Encoding UTF8|ConvertFrom-Json}
+    if(Test-Path $ovPath){$result.Overview=Get-Content $ovPath -Raw -Encoding UTF8|ConvertFrom-Json}
     if($NeedDetail -and $result.Registry -and $result.Overview -and @($result.Overview.conversations).Count-gt$ConversationIndex){
       $id=[string]$result.Overview.conversations[$ConversationIndex].id
       $ch=@($result.Registry.channels|Where-Object id -eq $id|Select-Object -First 1)
       if($ch.Count-gt0 -and $ch[0].state_path){
         $chPath=Join-Path $Paths.StateRepo ([string]$ch[0].state_path)
-        if(Test-Path $chPath){$result.Channel=Get-Content $chPath -Raw|ConvertFrom-Json}
+        if(Test-Path $chPath){$result.Channel=Get-Content $chPath -Raw -Encoding UTF8|ConvertFrom-Json}
       }
     }
     if($result.Overview){$result.Online=$true}
@@ -71,11 +71,11 @@ function Read-PcStateLocal {
   }catch{$result.Error=$_.Exception.Message}
 
   if(-not$result.Overview){
-    try{$result.Registry=Get-Content (Join-Path $Paths.Cache 'registry.json') -Raw|ConvertFrom-Json}catch{}
-    try{$result.Overview=Get-Content (Join-Path $Paths.Cache 'overview.json') -Raw|ConvertFrom-Json}catch{}
+    try{$result.Registry=Get-Content (Join-Path $Paths.Cache 'registry.json') -Raw -Encoding UTF8|ConvertFrom-Json}catch{}
+    try{$result.Overview=Get-Content (Join-Path $Paths.Cache 'overview.json') -Raw -Encoding UTF8|ConvertFrom-Json}catch{}
     if($NeedDetail -and $result.Overview -and @($result.Overview.conversations).Count-gt$ConversationIndex){
       $id=[string]$result.Overview.conversations[$ConversationIndex].id
-      try{$result.Channel=Get-Content (Join-Path $Paths.Cache ("channel-$id.json")) -Raw|ConvertFrom-Json}catch{}
+      try{$result.Channel=Get-Content (Join-Path $Paths.Cache ("channel-$id.json")) -Raw -Encoding UTF8|ConvertFrom-Json}catch{}
     }
     if($result.Overview){$result.Source='CACHE';$result.Online=$false}
   }else{
@@ -165,7 +165,7 @@ function Save-PcHistory {
   ($row|ConvertTo-Json -Compress -Depth 8)|Add-Content -Path $HistoryFile -Encoding UTF8
   try{
     if((Get-Item $HistoryFile).Length-gt$MaxBytes){
-      $lines=Get-Content $HistoryFile -Tail 1500
+      $lines=Get-Content $HistoryFile -Encoding UTF8 -Tail 1500
       [IO.File]::WriteAllLines($HistoryFile,$lines,[Text.UTF8Encoding]::new($false))
     }
   }catch{}
@@ -194,17 +194,17 @@ function Read-PcFeedbackLocal {
   $result=[ordered]@{Index=$null;Recent=@();Versions=$null;Error=$null}
   try{
     $idx=Join-Path $base 'feedback-index.json'
-    if(Test-Path $idx){$result.Index=Get-Content $idx -Raw|ConvertFrom-Json}
+    if(Test-Path $idx){$result.Index=Get-Content $idx -Raw -Encoding UTF8|ConvertFrom-Json}
     $ledger=Join-Path $base 'feedback-ledger.jsonl'
     if(Test-Path $ledger){
       $tmp=New-Object System.Collections.Generic.List[object]
-      foreach($line in @(Get-Content $ledger -Tail 12 -ErrorAction SilentlyContinue)){
+      foreach($line in @(Get-Content $ledger -Encoding UTF8 -Tail 12 -ErrorAction SilentlyContinue)){
         try{$tmp.Add(($line|ConvertFrom-Json))}catch{}
       }
       $result.Recent=@($tmp)
     }
     $vt=Join-Path $base 'version-trace.json'
-    if(Test-Path $vt){$result.Versions=Get-Content $vt -Raw|ConvertFrom-Json}
+    if(Test-Path $vt){$result.Versions=Get-Content $vt -Raw -Encoding UTF8|ConvertFrom-Json}
   }catch{$result.Error=$_.Exception.Message}
   return [pscustomobject]$result
 }
