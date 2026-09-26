@@ -217,7 +217,7 @@ function Start-PcUpdateProbe {
     $gh=(Get-Command gh.exe -ErrorAction SilentlyContinue).Source
     if(-not$gh){$script:PcLastUpdateError='GitHub CLI absent';return $false}
     $repo=[string]$Config.code.repo
-    $branch=[string]$Config.code.branch
+    $branch=if($Config.updater.manifest_ref){[string]$Config.updater.manifest_ref}else{[string]$Config.code.branch}
     $base=[string]$Config.code.base_path
     $endpoint='repos/'+$repo+'/contents/'+$base+'/manifest.json?ref='+[uri]::EscapeDataString($branch)
     $psi=New-Object Diagnostics.ProcessStartInfo
@@ -255,7 +255,7 @@ function Complete-PcUpdateProbe {
   }
   try{
     $meta=$out|ConvertFrom-Json
-    $bytes=[Convert]::FromBase64String(([string]$meta.content -replace 's',''))
+    $bytes=[Convert]::FromBase64String(([string]$meta.content -replace '\s',''))
     $manifest=[Text.Encoding]::UTF8.GetString($bytes)|ConvertFrom-Json
     $available=([version]$manifest.version -gt [version]$Config.version)
     $script:PcLastUpdateError=$null
