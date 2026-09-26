@@ -46,10 +46,10 @@
       "objective": "Afficher localement, en PowerShell, un suivi humain, complet et tres leger des travaux relies au PC.",
       "owner": "current_chat",
       "state": "ACTIVE",
-      "stage": "V3_ADAPTIVE_ENGINE",
-      "current_action": "Construction du moteur local V3: recalcul chaque seconde, synchro 10 s, onglets de conversations, detail humain et journal d'activite local.",
-      "last_success": "V2 multi-flux fonctionne sur le PC; CI PowerShell verte.",
-      "next_step": "Valider V3 sur GitHub puis remplacer une seule fois le script local.",
+      "stage": "V3_EVENT_INGESTION",
+      "current_action": "Ajout du bus d'evenements multi-conversations: nouvelle tache detectee, plan elargi, progression recalculee; limite a 10 flux actifs.",
+      "last_success": "La nouvelle demande utilisateur a ete detectee comme extension de portee et convertie en micro-taches du flux PC COMMAND.",
+      "next_step": "Implementer le registre de conversations et les fichiers d'evenements independants, puis les faire consolider localement sans Desktop Commander.",
       "blocker": null,
       "tasks": [
         {
@@ -99,6 +99,22 @@
           "weight": 2,
           "completion": 0.8,
           "evidence": "V2 deployed; V3 pending CI"
+        },
+        {
+          "id": "pc7",
+          "title": "Detection multi-conversations et ingestion automatique des nouvelles taches",
+          "state": "ACTIVE",
+          "weight": 4,
+          "completion": 0.1,
+          "evidence": "user added requirement detected in current conversation"
+        },
+        {
+          "id": "pc8",
+          "title": "Protocole PCCONNECT, code court et flux d'evenements par conversation",
+          "state": "ACTIVE",
+          "weight": 3,
+          "completion": 0.05,
+          "evidence": "architecture defined; implementation pending"
         }
       ],
       "sources": [
@@ -121,6 +137,11 @@
           "at": "2026-09-26T15:42:00+01:00",
           "kind": "BUILD",
           "text": "V3 en cours sur BuildHub pour limiter les appels Desktop Commander."
+        },
+        {
+          "at": "2026-09-26T15:50:00+01:00",
+          "kind": "SCOPE_EXPANDED",
+          "text": "Nouvelle exigence detectee: ingestion automatique de taches depuis plusieurs conversations, maximum 10 flux actifs. Progression recalculee."
         }
       ]
     },
@@ -295,6 +316,11 @@
     "note": "Progress is an estimate from weighted tasks and evidence, not a probability of success.",
     "recompute_seconds": 1,
     "remote_sync_seconds": 10,
-    "dynamic_scope": true
+    "dynamic_scope": true,
+    "max_active_streams": 10,
+    "max_active_tasks_per_stream": 20,
+    "registration": "PCCONNECT",
+    "event_model": "CloudEvents-inspired append-only events + weighted task rollup",
+    "discovery_policy": "New tasks expand scope and may lower progress; completed evidence is never discarded."
   }
 }
