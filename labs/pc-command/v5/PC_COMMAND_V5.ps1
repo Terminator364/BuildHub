@@ -53,7 +53,6 @@ $script:LastInputAck='Pret.'
 $script:LastInputAckOk=$true
 $script:LastInputAckAt=Get-Date
 $EnableProcessWatcher=($Defaults.local_observability -and [bool]$Defaults.local_observability.process_watcher)
-$ManifestUrl='https://raw.githubusercontent.com/Terminator364/BuildHub/lab/pc-command-v070/labs/pc-command/v5/manifest.json'
 
 if($EnableProcessWatcher){
   try{
@@ -184,10 +183,18 @@ function Process-PcKey {
     Set-PcInputAck $k 'diagnostic sante ouvert' $true
   }
   elseif($k-eq'G' -and $View-eq'reports'){
+    # A report requested from Accueil still needs the selected conversation's
+    # detailed macro/micro state; otherwise the PDF can be technically valid
+    # but nearly empty.
+    [void](Ensure-PcChannelDetail)
     $rep=New-PcReport $Defaults $Sync.Overview $Sync.Channel $Paths
     $made=$(if($rep.Pdf){$rep.Pdf}else{$rep.Html})
     Add-LocalPcEvent ("Rapport cree: "+$made)
-    Set-PcInputAck $k ("rapport genere: "+[IO.Path]::GetFileName($made)) ([bool]$made)
+    if($rep.Pdf){
+      Set-PcInputAck $k ("PDF detaille genere: "+[IO.Path]::GetFileName($rep.Pdf)) $true
+    }else{
+      Set-PcInputAck $k ("rapport HTML genere: "+[IO.Path]::GetFileName($made)) ([bool]$made)
+    }
   }
   elseif($k-eq'O' -and $View-eq'reports'){
     $last=Get-ChildItem $Paths.Reports -File -ErrorAction SilentlyContinue|Where-Object Extension -eq '.pdf'|Sort-Object LastWriteTime -Descending|Select-Object -First 1
