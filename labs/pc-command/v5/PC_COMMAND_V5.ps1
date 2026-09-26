@@ -35,6 +35,7 @@ if(Test-Path $Paths.LocalConfig){
 $View='general';$ConversationIndex=0;$MacroIndex=0
 $NeedDetail=$false
 $Sync=Read-PcStateLocal $Defaults $Paths $ConversationIndex
+$Feedback=Read-PcFeedbackLocal $Paths
 $LastPullStart=[datetime]::MinValue
 $LastCalc=[datetime]::MinValue
 $LastDisplay=[datetime]::MinValue
@@ -98,9 +99,12 @@ function Process-PcKey {
   elseif($k-eq'A'){$script:View='general'}
   elseif($k-eq'B'){
     if($View -in @('macro','timeline','requirements')){$script:View='conversation'}
+    elseif($View -in @('feedback','versions','sources','local','settings')){$script:View='general'}
     elseif($View-eq'conversation'){$script:View='general'}
     else{$script:View='general'}
   }
+  elseif($k-eq'F'){$script:View='feedback'}
+  elseif($k-eq'V'){$script:View='versions'}
   elseif($k-eq'S'){$script:View='sources'}
   elseif($k-eq'L'){$script:View='local'}
   elseif($k-eq'P'){$script:View='settings'}
@@ -154,7 +158,7 @@ while($true){
   # Complete any background git pull without blocking the UI.
   $pull=Complete-PcStatePull $Paths
   if($pull.Completed){
-    if($pull.Success){Refresh-PcLocalState;Add-LocalPcEvent 'Etat distant synchronise.'}
+    if($pull.Success){Refresh-PcLocalState;$script:Feedback=Read-PcFeedbackLocal $Paths;Add-LocalPcEvent 'Etat distant synchronise.'}
     else{Add-LocalPcEvent 'Synchronisation impossible: dernier etat local conserve.'}
     $LastDisplay=[datetime]::MinValue
   }
@@ -187,11 +191,13 @@ while($true){
       $conv=$Sync.Channel
       Write-PcHeader $App $Defaults $Sync $conv $UpdateInfo @('|','/','-','\')[$SpinnerIndex%4]
       switch($View){
-        'general'{Write-PcGeneral $Sync.Overview}
+        'general'{Write-PcGeneral $Sync.Overview $Feedback}
         'conversation'{if($conv){Write-PcConversation $conv $Paths.HistoryFile}else{Write-PcLine 'Detail local indisponible; [R] synchroniser.' -ForegroundColor Yellow}}
         'macro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex){Write-PcMacro $conv.macro_tasks[$MacroIndex] ([int]$Defaults.limits.max_visible_microtasks)}}
         'timeline'{if($conv){Write-PcTimeline $conv}}
         'requirements'{if($conv){Write-PcRequirements $conv}}
+        'feedback'{Write-PcFeedback $Feedback}
+        'versions'{Write-PcVersions $Feedback $Defaults}
         'sources'{Write-PcSources $Defaults $Sync}
         'local'{Write-PcLocal $LocalEvents}
         'settings'{Write-PcSettings $App $Defaults}
