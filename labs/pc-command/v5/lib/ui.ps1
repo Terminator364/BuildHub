@@ -1,15 +1,17 @@
 $script:PcFrameLine=0
-$script:PcFrameMax=40
+$script:PcFrameMax=34
 $script:PcFrameWidth=100
+$script:PcFrameHeight=40
 
 function Start-PcFrame {
   try{
     $script:PcFrameWidth=[math]::Max(60,[Console]::WindowWidth-1)
-    $script:PcFrameMax=[math]::Max(18,[Console]::WindowHeight-1)
+    $script:PcFrameHeight=[math]::Max(20,[Console]::WindowHeight-1)
+    $script:PcFrameMax=[math]::Max(14,$script:PcFrameHeight-5)
     [Console]::Clear()
   }catch{
     Clear-Host
-    $script:PcFrameWidth=100;$script:PcFrameMax=36
+    $script:PcFrameWidth=100;$script:PcFrameHeight=40;$script:PcFrameMax=35
   }
   $script:PcFrameLine=0
 }
@@ -21,6 +23,13 @@ function Write-PcLine {
   if($s.Length-ge$script:PcFrameWidth){$s=$s.Substring(0,[math]::Max(1,$script:PcFrameWidth-4))+'...'}
   try{[Console]::ForegroundColor=$ForegroundColor;[Console]::WriteLine($s);[Console]::ResetColor()}catch{Write-Host $s -ForegroundColor $ForegroundColor}
   $script:PcFrameLine++
+}
+
+function Write-PcFooterLine {
+  param([Parameter(Position=0)]$Object='',[ConsoleColor]$ForegroundColor=[ConsoleColor]::Gray)
+  $s=if($null-eq$Object){''}else{[string]$Object}
+  if($s.Length-ge$script:PcFrameWidth){$s=$s.Substring(0,[math]::Max(1,$script:PcFrameWidth-4))+'...'}
+  try{[Console]::ForegroundColor=$ForegroundColor;[Console]::WriteLine($s);[Console]::ResetColor()}catch{Write-Host $s -ForegroundColor $ForegroundColor}
 }
 
 function Get-PcBar {
@@ -40,7 +49,7 @@ function Write-PcHeader {
   Write-PcLine '================================================================================' -ForegroundColor Cyan
   Write-PcLine ("RAM libre : $free MB | Drive : $drive | Budget PC COMMAND : $($Config.limits.ram_budget_mb) MB")
   Write-PcLine ("Moteur : $($App.EngineSeconds)s | Internet : $($App.SyncSeconds)s | Affichage : $($App.DisplaySeconds)s | Mode : $($App.Mode)")
-  Write-PcLine ("Transport : $($Config.state.transport) + eventbus | RX : $([math]::Round($script:PcSessionRxBytes/1KB,1)) KB | Echecs : $script:PcSyncFailures")
+  Write-PcLine ("Etat : depot prive local-sync | Echecs sync : $script:PcSyncFailures")
   if($UpdateInfo -and $UpdateInfo.Available){Write-PcLine ("MISE A JOUR DISPONIBLE : v$($UpdateInfo.Version)") -ForegroundColor Yellow}
   if($Conversation){
     $life=Get-PcLifecycleView $Conversation
@@ -81,7 +90,7 @@ function Write-PcConversation {
   Write-PcLine ('Risque       : '+$risk.Level+' ('+$risk.Score+'/100) | ETA: '+$eta) -ForegroundColor $(if($risk.Score-ge60){'Red'}elseif($risk.Score-ge30){'Yellow'}else{'Green'})
   Write-PcLine ''
   $i=1
-  foreach($m in @($Conversation.macro_tasks|Select-Object -First 5)){
+  foreach($m in @($Conversation.macro_tasks|Select-Object -First 4)){
     $mp=Get-PcMacroProgress $m
     Write-PcLine ("[$i] $($m.title) | $($m.state)") -ForegroundColor $(if($m.state-eq'BLOCKED'){'Red'}elseif($m.state-eq'WAITING'){'Yellow'}else{'Green'})
     Write-PcLine ('    '+(Get-PcBar $mp.Percent 30)+' '+$mp.Percent+'% | fiabilite '+$mp.Confidence+'%')
@@ -160,7 +169,7 @@ function Write-PcSettings {
   Write-PcLine ("Mode                   : $($App.Mode) | [4] AUTO/ECO")
   Write-PcLine ("RAM budget             : $($Config.limits.ram_budget_mb) MB")
   Write-PcLine ("Conversations max      : $($Config.limits.max_conversations)")
-  if($Config.event_bus){Write-PcLine ("Bus prive              : $($Config.event_bus.repo) #$($Config.event_bus.issue_number)")}
+  Write-PcLine ("Depot etat local       : state-repo (pull asynchrone)")
   Write-PcLine ''
   Write-PcLine 'CODE NOUVELLE CONVERSATION :' -ForegroundColor Green
   Write-PcLine 'PCCONNECT|v3|state=Terminator364/PC-COMMAND-STATE|code=Terminator364/BuildHub|slot=AUTO|max=10'
@@ -170,13 +179,13 @@ function Write-PcSettings {
 
 function Write-PcFooter {
   param([string]$View)
-  Write-PcLine ''
-  Write-PcLine '--------------------------------------------------------------------------------' -ForegroundColor DarkGray
+  Write-PcFooterLine ''
+  Write-PcFooterLine '--------------------------------------------------------------------------------' DarkGray
   switch($View){
-    'general'{Write-PcLine '[1-9] Conversation  [S] Sources  [L] Local  [P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'}
-    'conversation'{Write-PcLine '[1-9] Macro  [C] Cahier A+B+C  [T] Chronologie  [B] Retour  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
-    'macro'{Write-PcLine '[C] Cahier A+B+C  [B] Retour  [T] Chronologie  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
-    default{Write-PcLine '[A] Accueil  [B] Retour  [P] Parametres  [R] Sync  [Q] Fermer'}
+    'general'{Write-PcFooterLine '[1-9] Conversation  [S] Sources  [L] Local  [P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'}
+    'conversation'{Write-PcFooterLine '[1-9] Macro  [C] Cahier A+B+C  [T] Chronologie  [B] Retour  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
+    'macro'{Write-PcFooterLine '[C] Cahier A+B+C  [B] Retour  [T] Chronologie  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
+    default{Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [R] Sync  [Q] Fermer'}
   }
 }
 
