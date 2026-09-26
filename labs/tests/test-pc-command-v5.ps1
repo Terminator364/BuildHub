@@ -133,3 +133,16 @@ if(-not[bool]$cfg.updater.root_bootstrap_self_heal){throw 'root bootstrap self-h
 if($bootText -notmatch 'RootBootstrap'){throw 'root bootstrap self-heal implementation missing'}
 if($bootText -notmatch 'Copy-Item \$appBootstrap \$RootBootstrap'){throw 'root bootstrap self-heal copy missing'}
 Write-Host 'PC_COMMAND_V096_UPDATE_REPORT_OK'
+
+# v0.9.7: updater must require a promoted stable manifest and restore the root launcher on rollback.
+$bootText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_BOOTSTRAP.ps1') -Raw
+if($bootText -notmatch "RequiredChannel='stable'"){throw 'stable manifest channel gate missing'}
+if($bootText -notmatch 'Canal manifest refuse'){throw 'manifest channel rejection status missing'}
+if($bootText -notmatch 'Sync-PcRootBootstrap'){throw 'root bootstrap sync helper missing'}
+if($bootText -notmatch 'postVersion'){throw 'post-launch version proof missing'}
+if($bootText -notmatch '\[regex\]::Escape\(\$Root\)'){throw 'viewer-exit scope must be tied to the PC Command root'}
+if(-not[bool]$cfg.updater.require_manifest_channel){throw 'manifest channel gate policy missing'}
+if([string]$cfg.updater.required_manifest_channel -ne 'stable'){throw 'required manifest channel must be stable'}
+if(-not[bool]$cfg.updater.post_launch_version_match){throw 'post-launch version match policy missing'}
+if(-not[bool]$cfg.updater.rollback_restores_root_bootstrap){throw 'rollback launcher restore policy missing'}
+Write-Host 'PC_COMMAND_V097_PROMOTION_ROLLBACK_OK'
