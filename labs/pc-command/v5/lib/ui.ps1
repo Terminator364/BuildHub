@@ -40,7 +40,7 @@ function Write-PcHeader {
   Write-PcLine '================================================================================' -ForegroundColor Cyan
   Write-PcLine ("RAM libre : $free MB | Drive : $drive | Budget PC COMMAND : $($Config.limits.ram_budget_mb) MB")
   Write-PcLine ("Moteur : $($App.EngineSeconds)s | Internet : $($App.SyncSeconds)s | Affichage : $($App.DisplaySeconds)s | Mode : $($App.Mode)")
-  Write-PcLine ("Transport : $($Config.state.transport) | RX observe : $([math]::Round($script:PcSessionRxBytes/1KB,1)) KB | Echecs sync : $script:PcSyncFailures")
+  Write-PcLine ("Transport : $($Config.state.transport) + eventbus | RX : $([math]::Round($script:PcSessionRxBytes/1KB,1)) KB | Echecs : $script:PcSyncFailures")
   if($UpdateInfo -and $UpdateInfo.Available){Write-PcLine ("MISE A JOUR DISPONIBLE : v$($UpdateInfo.Version)") -ForegroundColor Yellow}
   if($Conversation){
     $life=Get-PcLifecycleView $Conversation
@@ -160,6 +160,7 @@ function Write-PcSettings {
   Write-PcLine ("Mode                   : $($App.Mode) | [4] AUTO/ECO")
   Write-PcLine ("RAM budget             : $($Config.limits.ram_budget_mb) MB")
   Write-PcLine ("Conversations max      : $($Config.limits.max_conversations)")
+  if($Config.event_bus){Write-PcLine ("Bus prive              : $($Config.event_bus.repo) #$($Config.event_bus.issue_number)")}
   Write-PcLine ''
   Write-PcLine 'CODE NOUVELLE CONVERSATION :' -ForegroundColor Green
   Write-PcLine 'PCCONNECT|v3|state=Terminator364/PC-COMMAND-STATE|code=Terminator364/BuildHub|slot=AUTO|max=10'
