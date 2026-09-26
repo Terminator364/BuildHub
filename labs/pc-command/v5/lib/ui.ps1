@@ -43,30 +43,19 @@ function Get-PcActionsForView {
       [pscustomobject]@{Key='Q';Label='Fermer'}
     )}
     'conversation' {return @(
-      [pscustomobject]@{Key='A';Label='Accueil'},
-      [pscustomobject]@{Key='B';Label='Retour'},
-      [pscustomobject]@{Key='1-9';Label='Macro'},
-      [pscustomobject]@{Key='C';Label='Cahier A+B+C'},
-      [pscustomobject]@{Key='T';Label='Chronologie'},
-      [pscustomobject]@{Key='F';Label='Feedbacks'},
-      [pscustomobject]@{Key='V';Label='Versions'},
-      [pscustomobject]@{Key='S';Label='Sources'},
-      [pscustomobject]@{Key='P';Label='Parametres'},
-      [pscustomobject]@{Key='X';Label='Rapport'},
-      [pscustomobject]@{Key='R';Label='Sync'},
-      [pscustomobject]@{Key='Q';Label='Fermer'}
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='1-9';Label='Macro'},[pscustomobject]@{Key='C';Label='Cahier A+B+C'},
+      [pscustomobject]@{Key='T';Label='Chronologie'},[pscustomobject]@{Key='F';Label='Feedbacks'},
+      [pscustomobject]@{Key='V';Label='Versions'},[pscustomobject]@{Key='S';Label='Sources'},
+      [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='X';Label='Rapport'},
+      [pscustomobject]@{Key='R';Label='Sync'},[pscustomobject]@{Key='Q';Label='Fermer'}
     )}
     'macro' {return @(
-      [pscustomobject]@{Key='A';Label='Accueil'},
-      [pscustomobject]@{Key='B';Label='Retour'},
-      [pscustomobject]@{Key='1-9';Label='Micro'},
-      [pscustomobject]@{Key='C';Label='Cahier'},
-      [pscustomobject]@{Key='T';Label='Chronologie'},
-      [pscustomobject]@{Key='F';Label='Feedbacks'},
-      [pscustomobject]@{Key='V';Label='Versions'},
-      [pscustomobject]@{Key='P';Label='Parametres'},
-      [pscustomobject]@{Key='X';Label='Rapport'},
-      [pscustomobject]@{Key='R';Label='Sync'},
+      [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
+      [pscustomobject]@{Key='1-9';Label='Micro'},[pscustomobject]@{Key='C';Label='Cahier'},
+      [pscustomobject]@{Key='T';Label='Chronologie'},[pscustomobject]@{Key='F';Label='Feedbacks'},
+      [pscustomobject]@{Key='V';Label='Versions'},[pscustomobject]@{Key='P';Label='Parametres'},
+      [pscustomobject]@{Key='X';Label='Rapport'},[pscustomobject]@{Key='R';Label='Sync'},
       [pscustomobject]@{Key='Q';Label='Fermer'}
     )}
     'micro' {return @(
@@ -169,7 +158,6 @@ function Write-PcFooter {
   }
   if(-not[string]::IsNullOrWhiteSpace($line)){Write-PcFooterLine $line}
 }
-
 
 function Write-PcReportCenter {
   param($Config,$Paths,$Conversation)
