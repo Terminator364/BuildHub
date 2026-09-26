@@ -93,7 +93,9 @@
     "release_channel": "stable",
     "swap_mode": "same_volume_directory_move",
     "status_file": "config/update-status.json",
-    "post_launch_rollback": true
+    "post_launch_rollback": true,
+    "root_bootstrap_self_heal": true,
+    "desktop_shortcut_launcher": "PC_COMMAND/PC_COMMAND_BOOTSTRAP.ps1"
   },
   "hotfixes": {
     "footer_positional_color_binding": "fixed",
