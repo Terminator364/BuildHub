@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-v070",
@@ -63,7 +63,10 @@
     "nonblocking_state_sync": true,
     "input_first_loop": true,
     "auto_update": true,
-    "auto_update_mode": "background_probe_then_atomic_bootstrap_restart"
+    "auto_update_mode": "background_probe_then_atomic_bootstrap_restart",
+    "pre_swap_runtime_smoke": true,
+    "rollback_on_smoke_failure": true,
+    "manifest_integrity_gate": true
   },
   "event_bus": {
     "enabled": false,
@@ -112,6 +115,8 @@
   "quality_target": {
     "user_perceived_target_10": 5,
     "current_goal": "global improvement without regression",
-    "promotion_requires_no_open_p0_regression": true
+    "promotion_requires_no_open_p0_regression": true,
+    "runtime_smoke_required": true,
+    "manifest_hashes_required": true
   }
 }
