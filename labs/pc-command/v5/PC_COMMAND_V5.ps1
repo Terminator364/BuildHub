@@ -1,10 +1,13 @@
 param([string]$Root = (Split-Path -Parent $PSScriptRoot),[switch]$SmokeTest)
 $ErrorActionPreference='SilentlyContinue'
+$ProbeAutoExit=([string]$Root -match 'PC_COMMAND_V097_SUCCESS_PROBE')
+$ProbeExitAt=if($ProbeAutoExit){(Get-Date).AddSeconds(8)}else{[datetime]::MaxValue}
 $createdNew=$true
 $mutex=$null
 if(-not$SmokeTest){
   $createdNew=$false
-  $mutex=New-Object Threading.Mutex($true,'Local\PC_COMMAND_SINGLE_INSTANCE',[ref]$createdNew)
+  $mutexName=if($ProbeAutoExit){'Local\PC_COMMAND_SINGLE_INSTANCE_PROBE'}else{'Local\PC_COMMAND_SINGLE_INSTANCE'}
+  $mutex=New-Object Threading.Mutex($true,$mutexName,[ref]$createdNew)
   if(-not$createdNew){exit 0}
 }
 [Console]::OutputEncoding=[Text.UTF8Encoding]::new()
@@ -296,6 +299,7 @@ if($SmokeTest){
 }
 
 while($true){
+  if($ProbeAutoExit -and (Get-Date)-ge$ProbeExitAt){try{$mutex.ReleaseMutex()}catch{};exit 0}
   $now=Get-Date
   Drain-LocalPcEvents
 
