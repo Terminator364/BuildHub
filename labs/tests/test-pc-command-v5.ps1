@@ -36,4 +36,8 @@ if([string]$cfg.version -ne [string]$manifest.version){throw "config/manifest ve
 if(-not(Get-Command Read-PcStateLocal -ErrorAction SilentlyContinue)){throw 'Read-PcStateLocal missing'}
 if(-not(Get-Command Start-PcStatePull -ErrorAction SilentlyContinue)){throw 'Start-PcStatePull missing'}
 if(-not(Get-Command Complete-PcStatePull -ErrorAction SilentlyContinue)){throw 'Complete-PcStatePull missing'}
+$idxPath=Join-Path $root 'pc-command\v5\config.default.json'
+if(-not(Test-Path $idxPath)){throw 'config missing'}
+if(-not([bool]$cfg.feedback_ledger.enabled)){throw 'feedback ledger must be enabled'}
+if(-not$cfg.feedback_ledger.ingest_before_build){throw 'feedback ingestion must happen before build'}
 Write-Host 'PC_COMMAND_V5_TESTS_OK'
