@@ -2,6 +2,7 @@ $script:PcSessionRxBytes = 0
 $script:PcSyncFailures = 0
 $script:PcPullProcess = $null
 $script:PcPullStartedAt = $null
+$script:PcPullBranch = $null
 $script:PcLastPullOkAt = $null
 $script:PcLastPullError = $null
 $script:PcUpdateProcess = $null
@@ -107,7 +108,9 @@ function Start-PcStatePull {
     # Windows PowerShell 5.1/.NET Framework has no ProcessStartInfo.ArgumentList.
     # Quote the repo path explicitly and use Arguments for compatibility.
     $repoArg='"'+([string]$Paths.StateRepo).Replace('"','\"')+'"'
-    $psi.Arguments='-C '+$repoArg+' pull --ff-only --quiet'
+    $branch=if($Config.state.branch){[string]$Config.state.branch}else{'main'}
+    $script:PcPullBranch=$branch
+    $psi.Arguments='-C '+$repoArg+' fetch origin '+$branch+' --quiet'
     $script:PcPullProcess=[Diagnostics.Process]::Start($psi)
     $script:PcPullStartedAt=Get-Date
     return $true
@@ -124,11 +127,22 @@ function Complete-PcStatePull {
   $script:PcPullProcess.Dispose()
   $script:PcPullProcess=$null
   if($code-eq0){
-    $script:PcLastPullOkAt=Get-Date
-    $script:PcLastPullError=$null
-    $script:PcSyncFailures=0
-    ([ordered]@{last_success=$script:PcLastPullOkAt.ToString('o');last_error=$null}|ConvertTo-Json)|Set-Content $Paths.SyncStatus -Encoding UTF8
-    return [pscustomobject]@{Completed=$true;Success=$true;Changed=$true;Output=$out}
+    try{
+      $git=(Get-Command git.exe -ErrorAction Stop).Source
+      $branch=if($script:PcPullBranch){$script:PcPullBranch}else{'main'}
+      $mergeOut=& $git -C $Paths.StateRepo merge --ff-only ("origin/"+$branch) --quiet 2>&1
+      if($LASTEXITCODE-ne0){throw (($mergeOut|Out-String).Trim())}
+      $script:PcLastPullOkAt=Get-Date
+      $script:PcLastPullError=$null
+      $script:PcSyncFailures=0
+      ([ordered]@{last_success=$script:PcLastPullOkAt.ToString('o');last_error=$null;branch=$branch}|ConvertTo-Json)|Set-Content $Paths.SyncStatus -Encoding UTF8
+      return [pscustomobject]@{Completed=$true;Success=$true;Changed=$true;Output=(($out+[Environment]::NewLine+($mergeOut|Out-String)).Trim())}
+    }catch{
+      $script:PcSyncFailures++
+      $script:PcLastPullError=$_.Exception.Message
+      ([ordered]@{last_success=if($script:PcLastPullOkAt){$script:PcLastPullOkAt.ToString('o')}else{$null};last_error=$script:PcLastPullError;failed_at=(Get-Date).ToString('o')}|ConvertTo-Json)|Set-Content $Paths.SyncStatus -Encoding UTF8
+      return [pscustomobject]@{Completed=$true;Success=$false;Changed=$false;Error=$script:PcLastPullError}
+    }
   }
   $script:PcSyncFailures++
   $script:PcLastPullError=$err
