@@ -60,8 +60,11 @@ function Write-PcHeader {
 }
 
 function Write-PcGeneral {
-  param($Overview)
+  param($Overview,$Feedback)
   Write-PcLine 'ACCUEIL / CONVERSATIONS CONNECTEES' -ForegroundColor Cyan
+  if($Feedback -and $Feedback.Index){
+    Write-PcLine ('Feedbacks      : '+$Feedback.Index.total_feedbacks+' | dernier '+$Feedback.Index.last_feedback_id+' | politique '+$Feedback.Index.policy) -ForegroundColor DarkCyan
+  }
   Write-PcLine ''
   if(-not $Overview -or @($Overview.conversations).Count-eq0){Write-PcLine 'Aucune conversation connectee.' -ForegroundColor Yellow;return}
   $i=1
@@ -182,9 +185,9 @@ function Write-PcFooter {
   Write-PcFooterLine ''
   Write-PcFooterLine '--------------------------------------------------------------------------------' DarkGray
   switch($View){
-    'general'{Write-PcFooterLine '[1-9] Conversation  [S] Sources  [L] Local  [P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'}
-    'conversation'{Write-PcFooterLine '[1-9] Macro  [C] Cahier A+B+C  [T] Chronologie  [B] Retour  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
-    'macro'{Write-PcFooterLine '[C] Cahier A+B+C  [B] Retour  [T] Chronologie  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
+    'general'{Write-PcFooterLine '[1-9] Conversation  [F] Feedbacks  [V] Versions  [S] Sources  [L] Local  [P] Parametres  [X] Rapport  [R] Sync  [Q] Fermer'}
+    'conversation'{Write-PcFooterLine '[1-9] Macro  [C] Cahier A+B+C  [F] Feedbacks  [V] Versions  [T] Chronologie  [B] Retour  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
+    'macro'{Write-PcFooterLine '[C] Cahier A+B+C  [F] Feedbacks  [V] Versions  [B] Retour  [T] Chronologie  [P] Parametres  [X] PDF  [R] Sync  [Q] Fermer'}
     default{Write-PcFooterLine '[A] Accueil  [B] Retour  [P] Parametres  [R] Sync  [Q] Fermer'}
   }
 }
@@ -212,4 +215,46 @@ function Write-PcRequirements {
     $col=if($r.status-eq'IMPLEMENTED'){'Green'}elseif($r.priority-eq'P0'){'Yellow'}else{'Gray'}
     Write-PcLine ('  '+$r.id+' '+$r.priority+' | '+$r.status+' | '+$pct+'% | '+$r.title) -ForegroundColor $col
   }
+}
+
+
+function Write-PcFeedback {
+  param($Feedback)
+  Write-PcLine 'FEEDBACK LEDGER — BASE CANONIQUE' -ForegroundColor Cyan
+  Write-PcLine ''
+  if(-not$Feedback -or -not$Feedback.Index){
+    Write-PcLine 'Ledger local indisponible. [R] synchroniser.' -ForegroundColor Yellow
+    return
+  }
+  Write-PcLine ('Total feedbacks : '+$Feedback.Index.total_feedbacks)
+  Write-PcLine ('Dernier          : '+$Feedback.Index.last_feedback_id)
+  Write-PcLine ('Politique        : '+$Feedback.Index.policy)
+  Write-PcLine 'Regle            : aucun feedback pertinent ne doit etre perdu entre deux versions.' -ForegroundColor Green
+  Write-PcLine ''
+  Write-PcLine 'DERNIERS FEEDBACKS' -ForegroundColor Cyan
+  foreach($f in @($Feedback.Recent|Select-Object -Last 8)){
+    $id=if($f.feedback_id){$f.feedback_id}else{'?'}
+    $phase=if($f.phase){$f.phase}else{'-'}
+    Write-PcLine ('  '+$id+' | '+$phase) -ForegroundColor Green
+    if($f.evidence){Write-PcLine ('      '+$f.evidence)}
+    if($f.abc -and $f.abc.C){Write-PcLine ('      C: '+$f.abc.C) -ForegroundColor DarkGray}
+  }
+}
+
+function Write-PcVersions {
+  param($Feedback,$Config)
+  Write-PcLine 'HISTORIQUE / TRACE DES VERSIONS' -ForegroundColor Cyan
+  Write-PcLine ''
+  Write-PcLine ('Version locale : '+$Config.version) -ForegroundColor Green
+  if(-not$Feedback -or -not$Feedback.Versions){
+    Write-PcLine 'Version trace local indisponible. [R] synchroniser.' -ForegroundColor Yellow
+    return
+  }
+  foreach($v in @($Feedback.Versions.versions|Select-Object -Last 8)){
+    $col=if($v.status -match 'regress'){'Red'}elseif($v.status -match 'current|target|proven'){'Green'}else{'Gray'}
+    Write-PcLine ('  '+$v.version+' | '+$v.status+' | '+$v.intent) -ForegroundColor $col
+    if($v.terrain){Write-PcLine ('      terrain: '+$v.terrain)}
+  }
+  Write-PcLine ''
+  Write-PcLine 'Promotion: une version n est meilleure que si les fonctions precedentes restent prouvees.' -ForegroundColor Yellow
 }
