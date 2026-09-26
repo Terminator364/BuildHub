@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -66,7 +66,9 @@
     "auto_update_mode": "background_probe_then_atomic_bootstrap_restart",
     "pre_swap_runtime_smoke": true,
     "rollback_on_smoke_failure": true,
-    "manifest_integrity_gate": true
+    "manifest_integrity_gate": true,
+    "post_launch_liveness_seconds": 4,
+    "defer_swap_if_viewer_active": true
   },
   "event_bus": {
     "enabled": false,
@@ -88,7 +90,10 @@
     "manifest_ref": "pc-command/stable",
     "verify_git_blob_sha": true,
     "backups_kept": 3,
-    "release_channel": "stable"
+    "release_channel": "stable",
+    "swap_mode": "same_volume_directory_move",
+    "status_file": "config/update-status.json",
+    "post_launch_rollback": true
   },
   "hotfixes": {
     "footer_positional_color_binding": "fixed",
@@ -117,7 +122,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "feedback truth + zero dead advertised controls + stable promotion",
+    "current_goal": "safe self-update + meaningful PDF + preserve v0.9.4 field proof",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -130,11 +135,12 @@
     "pdf_engine": "pure_powershell_low_ram",
     "browser_processes_required": false,
     "downloads_subfolder": "PC_COMMAND",
-    "pdf_generation_target_seconds": 2
+    "pdf_generation_target_seconds": 2,
+    "force_selected_conversation_detail": true
   },
   "product": {
     "stage": "candidate",
-    "objective": "repair ledger visibility + unify contextual actions without RAM regression",
+    "objective": "transactional auto-update safety + detailed low-RAM report quality",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
