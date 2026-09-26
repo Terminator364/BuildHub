@@ -1,8 +1,8 @@
 {
   "schema": "pc.command.manifest.v1",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "channel": "candidate",
-  "generated_at": "2026-09-26T22:09:06.701Z",
+  "generated_at": "2026-09-26T22:45:00Z",
   "entrypoint": "PC_COMMAND_V5.ps1",
   "files": [
     {
@@ -31,11 +31,11 @@
     },
     {
       "relative_path": "PC_COMMAND_BOOTSTRAP.ps1",
-      "git_blob_sha": "a08719cc137d93a78b58b69b498b94ebbb269c27"
+      "git_blob_sha": "88c8fef0f0aae7237a7359312901ff81b17dd0c6"
     },
     {
       "relative_path": "config.default.json",
-      "git_blob_sha": "cafc487ea43c3b04da26cb383f74fee0de574ffc"
+      "git_blob_sha": "0de53a077c7aa821535a1b47f5be0e1a5b154f60"
     }
   ]
 }
