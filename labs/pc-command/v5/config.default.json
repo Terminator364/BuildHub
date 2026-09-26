@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-browser-20260926",
@@ -83,5 +83,14 @@
   "hotfixes": {
     "footer_positional_color_binding": "fixed",
     "emergency_mode_regression": "fixed"
+  },
+  "feedback_ledger": {
+    "enabled": true,
+    "canonical_repo": "Terminator364/PC-COMMAND-STATE",
+    "index_path": "pc-command/feedback/feedback-index.json",
+    "machine_path": "pc-command/feedback/feedback-ledger.jsonl",
+    "version_trace_path": "pc-command/feedback/version-trace.json",
+    "ingest_before_build": true,
+    "preserve_previous": true
   }
 }
