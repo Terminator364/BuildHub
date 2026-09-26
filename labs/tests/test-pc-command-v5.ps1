@@ -146,3 +146,13 @@ if([string]$cfg.updater.required_manifest_channel -ne 'stable'){throw 'required 
 if(-not[bool]$cfg.updater.post_launch_version_match){throw 'post-launch version match policy missing'}
 if(-not[bool]$cfg.updater.rollback_restores_root_bootstrap){throw 'rollback launcher restore policy missing'}
 Write-Host 'PC_COMMAND_V097_PROMOTION_ROLLBACK_OK'
+
+# v0.9.7: recover the previously valid local tree if a crash/power loss lands between directory renames.
+$bootText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_BOOTSTRAP.ps1') -Raw
+if($bootText -notmatch 'Recover-PcInterruptedSwap'){throw 'interrupted-swap recovery missing'}
+if($bootText -notmatch 'Test-PcInstalledTree'){throw 'local backup validation missing'}
+if($bootText -notmatch 'RECOVERED_PREVIOUS'){throw 'offline recovery status missing'}
+if($bootText -notmatch 'Application precedente restauree avant acces reseau'){throw 'recovery must happen before network dependency'}
+if(-not[bool]$cfg.updater.recover_interrupted_swap_offline){throw 'offline interrupted-swap recovery policy missing'}
+if(-not[bool]$cfg.updater.validate_local_backup_before_recovery){throw 'local backup validation policy missing'}
+Write-Host 'PC_COMMAND_V097_POWERLOSS_RECOVERY_OK'
