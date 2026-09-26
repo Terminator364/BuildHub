@@ -26,4 +26,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Parse PowerShell and validate PC Command schemas
         shell: pwsh
-        run: ./labs/tests/test-pc-command.ps1
+        run: |
+          ./labs/tests/test-pc-command.ps1
+          ./labs/tests/test-adaptive-progress.ps1
