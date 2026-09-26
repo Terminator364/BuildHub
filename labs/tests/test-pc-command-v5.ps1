@@ -182,3 +182,14 @@ if($mainText -notmatch "\^\[0-9\]\$"){throw 'router must accept digit 0'}
 if($mainText -notmatch 'Get-PcMicroPage'){throw 'router must use the shared microtask page model'}
 if($mainText -notmatch 'MicroPage'){throw 'microtask page state missing'}
 Write-Host 'PC_COMMAND_V097_TEN_SLOT_PAGING_OK'
+
+# FB-035 / v0.9.7: 10 conversations must fit the minimum frame and active labels must not invent "TRAVAIL EN COURS".
+$engineText=Get-Content (Join-Path $root 'pc-command\v5\lib\engine.ps1') -Raw
+if($engineText -match 'TRAVAIL EN COURS'){throw 'forbidden inferred active-state label remains'}
+if($engineText -notmatch "Label=if\(\$state-eq'TOOL_RUNNING'\)\{'TOOL_RUNNING'\}else\{'ASSISTANT_PROCESSING'\}"){throw 'exact observable active labels missing'}
+$script:PcFrameMax=14
+if(-not(Get-PcHomeCompactMode 10)){throw '10-conversation home must use compact mode at minimum frame'}
+if((4+10)-gt$script:PcFrameMax){throw 'compact 10-conversation layout exceeds minimum frame budget'}
+$script:PcFrameMax=34
+if(Get-PcHomeCompactMode 3){throw 'small conversation sets should keep rich layout when space permits'}
+Write-Host 'PC_COMMAND_V097_ADAPTIVE_HOME_STATE_LABELS_OK'
