@@ -79,9 +79,12 @@ function Find-PcDriveRoot {
 function New-PcReport {
   param($Config,$Overview,$Channel,$Paths)
   $stamp=Get-Date -Format 'yyyyMMdd-HHmmss'
-  $htmlPath=Join-Path $Paths.Reports ("PC_COMMAND_REPORT_$stamp.html")
-  $pdfPath=Join-Path $Paths.Reports ("PC_COMMAND_REPORT_$stamp.pdf")
   $convTitle=if($Channel){[string]$Channel.label}else{'PC COMMAND'}
+  $safe=($convTitle -replace '[^A-Za-z0-9_-]','_').Trim('_')
+  if(-not$safe){$safe='PC_COMMAND'}
+  $baseName='PC_COMMAND_'+$safe+'_v'+$Config.version+'_'+$stamp
+  $htmlPath=Join-Path $Paths.Reports ($baseName+'.html')
+  $pdfPath=Join-Path $Paths.Reports ($baseName+'.pdf')
   $progress=if($Channel){(Get-PcConversationProgress $Channel).Percent}elseif($Overview -and @($Overview.conversations).Count){[int]$Overview.conversations[0].progress_estimate}else{0}
   $life=if($Channel){Get-PcLifecycleView $Channel}else{$null}
   $rows=''
@@ -144,4 +147,15 @@ function Export-PcReportToDrive {
   New-Item -ItemType Directory -Force -Path $dest|Out-Null
   Copy-Item $Path (Join-Path $dest ([IO.Path]::GetFileName($Path))) -Force
   return [pscustomobject]@{Success=$true;Message=('Copie Drive: '+$dest)}
+}
+
+
+function Export-PcReportToDownloads {
+  param([string]$Path)
+  if(-not$Path -or -not(Test-Path $Path)){return [pscustomobject]@{Success=$false;Message='Rapport absent'}}
+  $dest=Join-Path ([Environment]::GetFolderPath('UserProfile')) 'Downloads\PC_COMMAND'
+  New-Item -ItemType Directory -Force -Path $dest|Out-Null
+  $target=Join-Path $dest ([IO.Path]::GetFileName($Path))
+  Copy-Item $Path $target -Force
+  return [pscustomobject]@{Success=$true;Message=('Copie telechargements: '+$target);Path=$target}
 }
