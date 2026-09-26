@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.6.1",
+  "version": "0.8.0",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-browser-20260926",
@@ -11,7 +11,8 @@
     "repo": "Terminator364/PC-COMMAND-STATE",
     "branch": "main",
     "registry_path": "pc-command/registry.json",
-    "overview_path": "pc-command/overview.json"
+    "overview_path": "pc-command/overview.json",
+    "sync_mode": "local_git_background_pull"
   },
   "cadence": {
     "internet_sync_seconds": 5,
@@ -47,7 +48,7 @@
   "render": {
     "responsive": true,
     "max_general_conversations": 10,
-    "max_conversation_macros_visible": 5,
+    "max_conversation_macros_visible": 4,
     "max_macro_microtasks_visible": 12,
     "emergency_fallback": true
   },
@@ -57,16 +58,14 @@
     "rollback_backup": true,
     "state_transport_separate": true,
     "cahier_delta_each_relevant_message": true,
-    "event_bus_append_only": true
+    "event_bus_append_only": true,
+    "nonblocking_state_sync": true,
+    "input_first_loop": true
   },
   "event_bus": {
-    "enabled": true,
-    "repo": "Terminator364/PC-COMMAND-STATE",
-    "issue_number": 1,
-    "poll_seconds": 5,
-    "history_max_bytes": 1048576,
-    "format": "[PCEVENT v1] JSON",
-    "private": true
+    "enabled": false,
+    "mode": "dormant_experimental",
+    "reason": "disabled in local runtime to preserve instant UI and low RAM"
   },
   "navigation": {
     "cache_first": true,
