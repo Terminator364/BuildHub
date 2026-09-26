@@ -6,7 +6,7 @@ $Backup=Join-Path $Root 'backup'
 New-Item -ItemType Directory -Force -Path $AppDir,$Stage,$Backup|Out-Null
 
 $Repo='Terminator364/BuildHub'
-$Branch='lab/pc-command-v070'
+$Branch='lab/pc-command-v090'
 $ManifestPath='labs/pc-command/v5/manifest.json'
 $gh=(Get-Command gh.exe -ErrorAction SilentlyContinue).Source
 
@@ -31,7 +31,7 @@ function Get-GhBlobBytes([string]$Sha){
 $localVersion=[version]'0.0.0'
 $localManifest=Join-Path $AppDir 'manifest.json'
 if(Test-Path $localManifest){
-  try{$lm=Get-Content $localManifest -Raw|ConvertFrom-Json;$localVersion=[version]$lm.version}catch{}
+  try{$lm=Get-Content $localManifest -Raw -Encoding UTF8|ConvertFrom-Json;$localVersion=[version]$lm.version}catch{}
 }
 
 $remote=$null
