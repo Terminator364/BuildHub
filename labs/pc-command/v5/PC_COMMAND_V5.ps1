@@ -216,7 +216,7 @@ if($SmokeTest){
     Start-PcFrame
     $conv=$Sync.Channel
     Write-PcHeader $App $Defaults $Sync $conv $UpdateInfo '|'
-    Write-PcGeneral $Sync.Overview $Feedback
+    Write-PcGeneral $Sync.Overview $Feedback $Defaults $Sync $UpdateInfo
     Write-PcFooter 'general'
     Write-Output 'PC_COMMAND_SMOKE_OK'
     Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue
