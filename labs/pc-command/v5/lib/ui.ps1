@@ -343,7 +343,7 @@ function Write-PcFooter {
     }
     'settings'{
       Write-PcFooterLine '[A] Accueil  [B] Retour  [1] Sync  [2] Moteur  [3] Affichage  [4] Profil'
-      Write-PcFooterLine '[C] Copier PCCONNECT  [U] Update  [Y] Sante  [H] Aide  [R] Sync  [Q] Fermer'
+      Write-PcFooterLine '[C] Copier PCCONNECT  [U] Update  [Z] Rollback  [Y] Sante  [H] Aide  [R] Sync  [Q] Fermer'
     }
     'reports'{
       Write-PcFooterLine '[A] Accueil  [B] Retour  [G] Generer PDF  [O] Ouvrir dernier  [D] Export Drive'
