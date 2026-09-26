@@ -9,6 +9,7 @@ $OutputEncoding=[Console]::OutputEncoding
 $Lib=Join-Path $PSScriptRoot 'lib'
 . (Join-Path $Lib 'engine.ps1')
 . (Join-Path $Lib 'io.ps1')
+. (Join-Path $Lib 'eventbus.ps1')
 . (Join-Path $Lib 'report.ps1')
 . (Join-Path $Lib 'ui.ps1')
 
@@ -82,6 +83,8 @@ while($true){
   $needDetail=($View -in @('conversation','macro','timeline','requirements')) -or $ForceDetail
   if(($now-$LastSync).TotalSeconds-ge$App.SyncSeconds -or $LastSync-eq[datetime]::MinValue){
     $Sync=Sync-PcState $Defaults $Paths $ConversationIndex -NeedDetail:$needDetail
+    $Bus=Sync-PcEventBus $Defaults $Paths $Sync.Overview $Sync.Channel
+    $Sync.Overview=$Bus.Overview;$Sync.Channel=$Bus.Channel
     $LastSync=$now;$ForceDetail=$false
   }
 
