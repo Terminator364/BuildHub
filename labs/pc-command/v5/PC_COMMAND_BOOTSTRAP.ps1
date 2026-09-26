@@ -6,7 +6,7 @@ $BackupRoot=Join-Path $Root 'backup'
 $ConfigDir=Join-Path $Root 'config'
 $UpdateStatus=Join-Path $ConfigDir 'update-status.json'
 $RootBootstrap=Join-Path $Root 'PC_COMMAND_BOOTSTRAP.ps1'
-New-Item -ItemType Directory -Force -Path $AppDir,$StageRoot,$BackupRoot,$ConfigDir|Out-Null
+New-Item -ItemType Directory -Force -Path $Root,$StageRoot,$BackupRoot,$ConfigDir|Out-Null
 
 $Repo='Terminator364/BuildHub'
 $Branch='pc-command/stable'
@@ -51,6 +51,52 @@ function Sync-PcRootBootstrap {
   }
   return $false
 }
+function Test-PcInstalledTree {
+  param([string]$Path)
+  if([string]::IsNullOrWhiteSpace($Path)){return $false}
+  $main=Join-Path $Path 'PC_COMMAND_V5.ps1'
+  $manifest=Join-Path $Path 'manifest.json'
+  if(-not(Test-Path $main) -or -not(Test-Path $manifest)){return $false}
+  try{
+    $m=Get-Content $manifest -Raw -Encoding UTF8|ConvertFrom-Json
+    [void][version]$m.version
+    return $true
+  }catch{return $false}
+}
+function Recover-PcInterruptedSwap {
+  if(Test-PcInstalledTree $AppDir){return $false}
+
+  $candidates=New-Object System.Collections.Generic.List[string]
+  if(Test-Path $UpdateStatus){
+    try{
+      $st=Get-Content $UpdateStatus -Raw -Encoding UTF8|ConvertFrom-Json
+      if($st.backup -and (Test-Path ([string]$st.backup))){$candidates.Add([string]$st.backup)}
+    }catch{}
+  }
+  foreach($b in @(Get-ChildItem $BackupRoot -Directory -ErrorAction SilentlyContinue|Sort-Object LastWriteTime -Descending)){
+    if(-not$candidates.Contains($b.FullName)){$candidates.Add($b.FullName)}
+  }
+
+  foreach($candidate in $candidates){
+    if(-not(Test-PcInstalledTree $candidate)){continue}
+    try{
+      if(Test-Path $AppDir){Remove-Item $AppDir -Recurse -Force}
+      Move-Item $candidate $AppDir -Force
+      [void](Sync-PcRootBootstrap)
+      $rv=''
+      try{$rv=[string]((Get-Content (Join-Path $AppDir 'manifest.json') -Raw -Encoding UTF8|ConvertFrom-Json).version)}catch{}
+      Write-UpdateStatus 'RECOVERED_PREVIOUS' $rv 'Application precedente restauree avant acces reseau.' $candidate
+      return $true
+    }catch{
+      Write-UpdateStatus 'RECOVERY_REQUIRED' '' ('Restauration locale impossible: '+$_.Exception.Message) $candidate
+    }
+  }
+  return $false
+}
+
+[void](Recover-PcInterruptedSwap)
+if(-not(Test-Path $AppDir)){New-Item -ItemType Directory -Force -Path $AppDir|Out-Null}
+
 function Start-PcInstalledApp {
   $main=Join-Path $AppDir 'PC_COMMAND_V5.ps1'
   if(Test-Path $main){
