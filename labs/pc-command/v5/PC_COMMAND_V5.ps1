@@ -77,7 +77,7 @@ while($true){
       if($null-ne$c.progress_estimate){$pct=[int]$c.progress_estimate}
       if($c.lifecycle.state){$st=[string]$c.lifecycle.state}
     }
-    $Host.UI.RawUI.WindowTitle="PC COMMAND v$($Defaults.version) $sp $st $pct%"
+    $Host.UI.RawUI.WindowTitle="PC COMMAND v$($Defaults.version) $sp $st $pct% | touches actives"
   }
 
   $needDetail=($View -in @('conversation','macro','timeline','requirements')) -or $ForceDetail
@@ -162,7 +162,15 @@ while($true){
     }
     elseif($k-match'^[1-9]$' -and $Sync.Overview){
       $idx=[int]$k-1
-      if($View-eq'general' -and $idx-lt@($Sync.Overview.conversations).Count){$ConversationIndex=$idx;$View='conversation';$ForceDetail=$true;$LastSync=[datetime]::MinValue;$LastDisplay=[datetime]::MinValue}
+      if($View-eq'general' -and $idx-lt@($Sync.Overview.conversations).Count){
+        $ConversationIndex=$idx
+        $id=[string]$Sync.Overview.conversations[$idx].id
+        $cache=Join-Path $Paths.Cache ("channel-$id.json")
+        if(Test-Path $cache){try{$Sync.Channel=Get-Content $cache -Raw|ConvertFrom-Json}catch{}}
+        $View='conversation'
+        $ForceDetail=$true
+        $LastDisplay=[datetime]::MinValue
+      }
       elseif($View-eq'conversation' -and $Sync.Channel -and $idx-lt@($Sync.Channel.macro_tasks).Count){$MacroIndex=$idx;$View='macro';$LastDisplay=[datetime]::MinValue}
     }
   }
