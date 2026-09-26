@@ -17,7 +17,7 @@ function Start-PcFrame {
 }
 
 function Write-PcLine {
-  param([Parameter(Position=0)]$Object='',[ConsoleColor]$ForegroundColor=[ConsoleColor]::Gray)
+  param([Parameter(Position=0)]$Object='',[Parameter(Position=1)][ConsoleColor]$ForegroundColor=[ConsoleColor]::Gray)
   if($script:PcFrameLine-ge$script:PcFrameMax){return}
   $s=if($null-eq$Object){''}else{[string]$Object}
   if($s.Length-ge$script:PcFrameWidth){$s=$s.Substring(0,[math]::Max(1,$script:PcFrameWidth-4))+'...'}

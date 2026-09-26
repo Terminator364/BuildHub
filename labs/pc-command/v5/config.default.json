@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-browser-20260926",
@@ -50,7 +50,8 @@
     "max_general_conversations": 10,
     "max_conversation_macros_visible": 4,
     "max_macro_microtasks_visible": 12,
-    "emergency_fallback": true
+    "emergency_fallback": true,
+    "footer_parameter_binding_fix": true
   },
   "automation": {
     "update_on_start": true,
@@ -70,7 +71,8 @@
   "navigation": {
     "cache_first": true,
     "max_visual_response_ms": 500,
-    "network_refresh_after_navigation": true
+    "network_refresh_after_navigation": true,
+    "local_state_only_on_keypress": true
   },
   "updater": {
     "transport": "github_api_blob_sha",
