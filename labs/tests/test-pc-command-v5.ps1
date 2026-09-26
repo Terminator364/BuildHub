@@ -156,3 +156,29 @@ if($bootText -notmatch 'Application precedente restauree avant acces reseau'){th
 if(-not[bool]$cfg.updater.recover_interrupted_swap_offline){throw 'offline interrupted-swap recovery policy missing'}
 if(-not[bool]$cfg.updater.validate_local_backup_before_recovery){throw 'local backup validation policy missing'}
 Write-Host 'PC_COMMAND_V097_POWERLOSS_RECOVERY_OK'
+
+# FB-034 / v0.9.7: the declared 10-conversation capacity and 20 visible microtasks must be navigable.
+if((Get-PcSlotKey 10) -ne '0'){throw '10th slot must render on key 0'}
+if((Get-PcSlotIndexFromKey '0') -ne 9){throw 'key 0 must route to the 10th slot'}
+foreach($view in @('general','conversation','macro')){
+  $keys=@(Get-PcExpandedKeysForView $view)
+  if($keys -notcontains '0'){throw "10th-slot key missing from $view"}
+}
+$macroKeys=@(Get-PcExpandedKeysForView 'macro')
+if($macroKeys -notcontains 'N'){throw 'microtask page key N missing from macro view'}
+$micro20=@()
+for($n=1;$n-le20;$n++){
+  $micro20 += [pscustomobject]@{title=("micro-"+$n);state='PENDING';weight=1;completion=0;evidence=$null}
+}
+$macro20=[pscustomobject]@{title='macro-20';state='ACTIVE';micro_tasks=$micro20}
+$page0=Get-PcMicroPage $macro20 20 0 10
+$page1=Get-PcMicroPage $macro20 20 1 10
+if(@($page0.Items).Count-ne10 -or @($page1.Items).Count-ne10){throw '20 microtasks must expose two full pages'}
+if($page0.Pages-ne2 -or $page1.Pages-ne2){throw 'microtask page count must be 2'}
+if([int]$page0.RawIndexes[9]-ne9){throw 'page 1 key 0 must resolve raw micro index 9'}
+if([int]$page1.RawIndexes[0]-ne10 -or [int]$page1.RawIndexes[9]-ne19){throw 'page 2 must resolve raw micro indexes 10..19'}
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -notmatch "\^\[0-9\]\$"){throw 'router must accept digit 0'}
+if($mainText -notmatch 'Get-PcMicroPage'){throw 'router must use the shared microtask page model'}
+if($mainText -notmatch 'MicroPage'){throw 'microtask page state missing'}
+Write-Host 'PC_COMMAND_V097_TEN_SLOT_PAGING_OK'
