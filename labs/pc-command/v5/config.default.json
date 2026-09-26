@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-browser-20260926",
@@ -79,5 +79,9 @@
     "manifest_ref": "lab/pc-command-browser-20260926",
     "verify_git_blob_sha": true,
     "backups_kept": 3
+  },
+  "hotfixes": {
+    "footer_positional_color_binding": "fixed",
+    "emergency_mode_regression": "fixed"
   }
 }
