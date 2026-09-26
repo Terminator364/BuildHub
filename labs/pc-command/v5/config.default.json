@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-v070",
@@ -92,5 +92,10 @@
     "version_trace_path": "pc-command/feedback/version-trace.json",
     "ingest_before_build": true,
     "preserve_previous": true
+  },
+  "sync_engine": {
+    "process_start_info_compat": "windows_powershell_5_1",
+    "background_pull": true,
+    "failures_increment_per_attempt": true
   }
 }
