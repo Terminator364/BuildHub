@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.8.4",
+  "version": "0.9.0",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-v070",
@@ -124,5 +124,33 @@
     "auto_downloads_mirror": true,
     "drive_export_on_demand": true,
     "human_names": true
+  },
+  "product": {
+    "stage": "candidate",
+    "objective": "visible product leap without regression",
+    "target_user_score_10": 5,
+    "command_router": "contextual",
+    "health_score": true,
+    "report_center": true,
+    "navigation_back_stack": "one-level contextual"
+  },
+  "preferences": {
+    "local_persisted": true,
+    "profiles": [
+      "AUTO",
+      "ECO",
+      "RAPIDE"
+    ],
+    "default_profile": "AUTO",
+    "auto_download_reports": true,
+    "report_downloads_folder": "Downloads/PC_COMMAND"
+  },
+  "plugins": {
+    "canonical_dependency": false,
+    "optional_adapters": [
+      "Notion",
+      "Todoist"
+    ],
+    "role": "pilotage mirror only; never required for local runtime"
   }
 }
