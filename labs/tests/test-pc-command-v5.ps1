@@ -38,6 +38,7 @@ if([string]$cfg.version -ne [string]$manifest.version){throw "config/manifest ve
 if(-not(Get-Command Read-PcStateLocal -ErrorAction SilentlyContinue)){throw 'Read-PcStateLocal missing'}
 if(-not(Get-Command Start-PcStatePull -ErrorAction SilentlyContinue)){throw 'Start-PcStatePull missing'}
 if(-not(Get-Command Complete-PcStatePull -ErrorAction SilentlyContinue)){throw 'Complete-PcStatePull missing'}
+if(-not(Get-Command Invoke-PcRollback -ErrorAction SilentlyContinue)){throw 'rollback command missing'}
 $idxPath=Join-Path $root 'pc-command\v5\config.default.json'
 if(-not(Test-Path $idxPath)){throw 'config missing'}
 if(-not([bool]$cfg.feedback_ledger.enabled)){throw 'feedback ledger must be enabled'}
@@ -46,6 +47,8 @@ if([double]$cfg.cadence.internet_sync_seconds -ne 3){throw 'sync must default to
 if([double]$cfg.cadence.engine_recalc_seconds -ne 3.5){throw 'engine must default to 3.5s'}
 if([int]$cfg.cadence.display_refresh_seconds -ne 10){throw 'display must default to 10s'}
 if(-not[bool]$cfg.automation.auto_update){throw 'auto update must be enabled'}
+if([string]$cfg.code.branch -ne 'lab/pc-command-v090'){throw 'updater must follow v090 branch'}
+if([string]$cfg.updater.manifest_ref -ne 'lab/pc-command-v090'){throw 'manifest ref mismatch'}
 if([string]$cfg.product.command_router -ne 'contextual'){throw 'contextual command router required'}
 if(-not[bool]$cfg.product.report_center){throw 'report center required'}
 if(-not[bool]$cfg.product.health_score){throw 'health score required'}
