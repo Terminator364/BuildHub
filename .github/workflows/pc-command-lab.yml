@@ -3,13 +3,20 @@ name: PC Command Lab
 on:
   pull_request:
     paths:
-      - 'labs/pc-command/**'
-      - 'labs/browser-bench/**'
+      - 'labs/pc-command/*.ps1'
+      - 'labs/pc-command/PCCONNECT.md'
+      - 'labs/pc-command/PROTOCOL_V2.md'
+      - 'labs/pc-command/feed-v3.json'
+      - 'labs/tests/test-pc-command.ps1'
       - '.github/workflows/pc-command-lab.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: pc-command-lab-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -17,6 +24,6 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - name: Parse PowerShell and validate browser matrix
+      - name: Parse PowerShell and validate PC Command schemas
         shell: pwsh
         run: ./labs/tests/test-pc-command.ps1
