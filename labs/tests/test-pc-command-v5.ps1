@@ -68,9 +68,7 @@ if(-not $cfg.interaction_state.user_preemption_visible){throw 'user preemption m
 
 $uiText=Get-Content (Join-Path $root 'pc-command\v5\lib\ui.ps1') -Raw
 $mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
-foreach($view in @('general','conversation','macro','micro','feedback','versions','requirements','timeline','sources','local','settings','reports','health','help')){
-  if($uiText -notmatch ("'"+[regex]::Escape($view)+"'\{")){throw "footer missing view $view"}
-}
+# Footer/action availability is validated below through the canonical action matrix.
 foreach($token in @('Set-PcInputAck','Get-PcAllowedKeysForView','Action: ')){
   if($mainText -notmatch [regex]::Escape($token)){throw "input feedback missing $token"}
 }
