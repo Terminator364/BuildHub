@@ -4,10 +4,13 @@ on:
   pull_request:
     paths:
       - 'labs/pc-command/*.ps1'
+      - 'labs/pc-command/v5/**'
       - 'labs/pc-command/PCCONNECT.md'
       - 'labs/pc-command/PROTOCOL_V2.md'
       - 'labs/pc-command/feed-v3.json'
       - 'labs/tests/test-pc-command.ps1'
+      - 'labs/tests/test-adaptive-progress.ps1'
+      - 'labs/tests/test-pc-command-v5.ps1'
       - '.github/workflows/pc-command-lab.yml'
   workflow_dispatch:
 
@@ -24,8 +27,9 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - name: Parse PowerShell and validate PC Command schemas
+      - name: Parse and validate PC Command
         shell: pwsh
         run: |
           ./labs/tests/test-pc-command.ps1
           ./labs/tests/test-adaptive-progress.ps1
+          ./labs/tests/test-pc-command-v5.ps1
