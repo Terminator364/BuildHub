@@ -129,4 +129,7 @@ if($mainText -notmatch 'Ensure-PcChannelDetail'){throw 'report detail gate missi
 if($mainText -notmatch 'PDF detaille genere'){throw 'human PDF ACK missing'}
 if(-not[bool]$cfg.reports.force_selected_conversation_detail){throw 'report detail policy missing'}
 if([string]$cfg.updater.swap_mode -ne 'same_volume_directory_move'){throw 'updater swap mode missing'}
+if(-not[bool]$cfg.updater.root_bootstrap_self_heal){throw 'root bootstrap self-heal policy missing'}
+if($bootText -notmatch 'RootBootstrap'){throw 'root bootstrap self-heal implementation missing'}
+if($bootText -notmatch 'Copy-Item \$appBootstrap \$RootBootstrap'){throw 'root bootstrap self-heal copy missing'}
 Write-Host 'PC_COMMAND_V095_UPDATE_REPORT_OK'
