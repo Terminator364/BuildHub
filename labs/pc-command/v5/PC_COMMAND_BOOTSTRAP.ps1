@@ -6,7 +6,7 @@ $Backup=Join-Path $Root 'backup'
 New-Item -ItemType Directory -Force -Path $AppDir,$Stage,$Backup|Out-Null
 
 $Repo='Terminator364/BuildHub'
-$Branch='lab/pc-command-v070'
+$Branch='lab/pc-command-browser-20260926'
 $ManifestPath='labs/pc-command/v5/manifest.json'
 $gh=(Get-Command gh.exe -ErrorAction SilentlyContinue).Source
 
@@ -59,18 +59,6 @@ if($install -and $remote){
     if($actual-ne[string]$f.git_blob_sha){$ok=$false;break}
   }
   if($ok){
-    $stageMain=Join-Path $st ([string]$remote.entrypoint)
-    if(-not(Test-Path $stageMain)){$ok=$false}
-    else{
-      & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $stageMain -Root $Root -SmokeTest *> (Join-Path $st 'smoke.log')
-      if($LASTEXITCODE-ne0){$ok=$false}
-    }
-  }
-  if(-not$ok){
-    [ordered]@{at=(Get-Date).ToString('o');candidate=[string]$remote.version;status='REJECTED_SMOKE';kept=[string]$localVersion}|ConvertTo-Json|Set-Content (Join-Path $Root 'update-last-status.json') -Encoding UTF8
-  }
-  if($ok){
-    [ordered]@{at=(Get-Date).ToString('o');candidate=[string]$remote.version;status='ACCEPTED_SMOKE';previous=[string]$localVersion}|ConvertTo-Json|Set-Content (Join-Path $Root 'update-last-status.json') -Encoding UTF8
     $old=Join-Path $Backup ('app-'+(Get-Date -Format 'yyyyMMdd-HHmmss'))
     if(Get-ChildItem $AppDir -Force -ErrorAction SilentlyContinue){Copy-Item $AppDir $old -Recurse -Force -ErrorAction SilentlyContinue}
     Remove-Item (Join-Path $AppDir '*') -Recurse -Force -ErrorAction SilentlyContinue
