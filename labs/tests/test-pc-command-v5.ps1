@@ -78,3 +78,40 @@ if($mainText -notmatch 'USER_PREEMPTED_BY_NEW_MESSAGE' -and $uiText -notmatch 'U
 if($uiText -notmatch '\[A\] Accueil'){throw 'global home button missing'}
 Write-Host 'PC_COMMAND_BUTTON_AUDIT_OK'
 Write-Host 'PC_COMMAND_V5_TESTS_OK'
+
+
+# v0.9.4: action matrix must drive both footer and router.
+. (Join-Path $root 'pc-command\v5\lib\ui.ps1')
+foreach($view in @('general','conversation','macro','micro','feedback','versions','requirements','timeline','sources','local','settings','reports','health','help')){
+  $actions=@(Get-PcActionsForView $view)
+  if($actions.Count-eq0){throw "empty action matrix for $view"}
+  $keys=@(Get-PcExpandedKeysForView $view)
+  if($keys -notcontains 'A'){throw "A Accueil missing from $view"}
+  if($keys -notcontains 'Q'){throw "Q Fermer missing from $view"}
+}
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -notmatch 'Get-PcExpandedKeysForView'){throw 'router is not using the canonical action matrix'}
+
+# v0.9.4: feedback reader must not fail on Generic.List/array conversion and
+# must reconcile a stale index from the machine ledger.
+$tmp=Join-Path $env:TEMP ('pc-command-feedback-test-'+[guid]::NewGuid().ToString('N'))
+$fb=Join-Path $tmp 'pc-command\feedback'
+New-Item -ItemType Directory -Force -Path $fb|Out-Null
+@'
+{"schema":"pc.command.feedback.index.v1","total_feedbacks":1,"last_feedback_id":"FB-001","policy":"A+B+C -> MERGE+REFINE+PRESERVE"}
+'@ | Set-Content (Join-Path $fb 'feedback-index.json') -Encoding UTF8
+@'
+{"schema":"pc.command.feedback.v1","feedback_id":"FB-001","at":"2026-09-26T20:00:00Z","abc":{"A":"a","B":"b","C":"c"},"status":"RECORDED"}
+{"schema":"pc.command.feedback.v1","feedback_id":"FB-002","at":"2026-09-26T21:00:00Z","abc":{"A":"a2","B":"b2","C":"c2"},"status":"RECORDED"}
+'@ | Set-Content (Join-Path $fb 'feedback-ledger.jsonl') -Encoding UTF8
+@'
+{"schema":"pc.command.version.trace.v1","versions":[{"version":"0.9.4","status":"candidate"}]}
+'@ | Set-Content (Join-Path $fb 'version-trace.json') -Encoding UTF8
+$paths=[pscustomobject]@{StateRepo=$tmp}
+$x=Read-PcFeedbackLocal $paths
+if($x.Error){throw "feedback reader error: $($x.Error)"}
+if(@($x.Recent).Count-ne2){throw "feedback reader recent count wrong: $(@($x.Recent).Count)"}
+if([string]$x.Index.last_feedback_id-ne'FB-002'){throw "feedback reader did not reconcile latest id"}
+if(@($x.Versions.versions).Count-ne1){throw 'version trace not loaded'}
+Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
+Write-Host 'PC_COMMAND_V094_LEDGER_ROUTER_OK'
