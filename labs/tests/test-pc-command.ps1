@@ -29,7 +29,8 @@ if ($data.candidates.Count -lt 5) { throw 'Candidate set too small' }
 $feedPath = Join-Path $root 'pc-command\feed.json'
 $feed = Get-Content $feedPath -Raw | ConvertFrom-Json
 if ($feed.schema -ne 'pc_command.feed.v2') { throw 'Bad PC Command feed schema' }
-if ([int]$feed.refresh_seconds -ne 50) { throw 'Refresh must be 50 seconds' }
+if ([int]$feed.refresh_seconds -ne 10) { throw 'Remote refresh must be 10 seconds' }
+if ([int]$feed.local_recalc_seconds -ne 1) { throw 'Local recalculation must be 1 second' }
 if (@($feed.streams).Count -lt 2) { throw 'Need multiple workstreams' }
 foreach ($s in @($feed.streams)) {
   if (-not $s.objective) { throw "Missing objective in $($s.id)" }
