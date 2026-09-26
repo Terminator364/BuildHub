@@ -86,6 +86,9 @@ function Write-PcConversation {
   Write-PcLine ('CONVERSATION : '+$Conversation.label) Cyan
   Write-PcLine ('Objectif     : '+$Conversation.objective)
   Write-PcLine ('Etat         : '+$life.Label+' | '+$life.Detail) $life.Color
+  if($Conversation.previous_turn -and $Conversation.previous_turn.ended_reason -eq 'USER_PREEMPTED_BY_NEW_MESSAGE'){
+    Write-PcLine ('Interaction  : tour precedent interrompu par un nouveau message utilisateur a '+$Conversation.previous_turn.ended_at) Yellow
+  }
   Write-PcLine ('Avancement   : '+(Get-PcBar $cp.Percent 42)+' '+$cp.Percent+'%')
   Write-PcLine ("Macro-taches : $($cp.MacroCount) | actives $($cp.Active) | attente $($cp.Waiting) | bloquees $($cp.Blocked)")
   $riskColor=if($risk.Score-ge60){'Red'}elseif($risk.Score-ge30){'Yellow'}else{'Green'}
@@ -181,7 +184,7 @@ function Write-PcLocal {
   if($LocalEvents.Count-eq0){Write-PcLine 'Aucune nouvelle activite locale observee.'}
   else{foreach($e in $LocalEvents){Write-PcLine ('  '+$e.At.ToString('HH:mm:ss')+' | '+$e.Text)}}
   Write-PcLine ''
-  Write-PcLine 'Observation WMI locale: aucun appel Desktop Commander requis.' DarkGray
+  Write-PcLine 'Observation locale: pas de watcher permanent par defaut; diagnostic charge a la demande.' DarkGray
 }
 
 function Write-PcSettings {
@@ -208,6 +211,8 @@ function Write-PcSettings {
   Write-PcLine ("Derniere sync reussie    : $last")
   Write-PcLine ("Echecs sync              : $script:PcSyncFailures")
   Write-PcLine ("Conversations max        : $($Config.limits.max_conversations)")
+  $watcher=if($Config.local_observability -and $Config.local_observability.process_watcher){'ACTIF'}else{'DESACTIVE (economie RAM)'}
+  Write-PcLine ("Watcher processus         : $watcher")
   if($script:PcLastPullError){Write-PcLine ('Derniere erreur sync     : '+$script:PcLastPullError) Yellow}
   if($UpdateInfo){Write-PcLine ('Version distante         : '+$UpdateInfo.Version+$(if($UpdateInfo.Available){' | DISPONIBLE'}else{' | a jour'}))}
   Write-PcLine ''
