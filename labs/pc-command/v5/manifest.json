@@ -1,33 +1,33 @@
-﻿{
-    "schema":  "pc.command.manifest.v1",
-    "version":  "0.5.1",
-    "channel":  "lab",
-    "generated_at":  "2026-09-26T17:26:38.5268106+01:00",
-    "entrypoint":  "PC_COMMAND_V5.ps1",
-    "files":  [
-                  {
-                      "relative_path":  "lib/engine.ps1",
-                      "git_blob_sha":  "c542f5b48203d31502864446308f761b12b7d30a"
-                  },
-                  {
-                      "relative_path":  "lib/io.ps1",
-                      "git_blob_sha":  "9cbdf561e83df8150186741d5a8c4eb39d352290"
-                  },
-                  {
-                      "relative_path":  "lib/report.ps1",
-                      "git_blob_sha":  "ed83336602bf794984030a8d2ae07421129d2ace"
-                  },
-                  {
-                      "relative_path":  "lib/ui.ps1",
-                      "git_blob_sha":  "055cd702bfca17cc3120ff2a4553970520902d70"
-                  },
-                  {
-                      "relative_path":  "PC_COMMAND_V5.ps1",
-                      "git_blob_sha":  "f968e54c10f74b6137375c5685747ce70677dd86"
-                  },
-                  {
-                      "relative_path":  "config.default.json",
-                      "git_blob_sha":  "3be5c3691461d3ebf9b8d8afdaf1756c36775db0"
-                  }
-              ]
+{
+  "schema": "pc.command.manifest.v1",
+  "version": "0.6.0",
+  "channel": "lab",
+  "generated_at": "2026-09-26T18:00:00+01:00",
+  "entrypoint": "PC_COMMAND_V5.ps1",
+  "files": [
+    {
+      "relative_path": "lib/engine.ps1",
+      "git_blob_sha": "c873626926377477e42a890c6c69abb7e8a973c2"
+    },
+    {
+      "relative_path": "lib/io.ps1",
+      "git_blob_sha": "9cbdf561e83df8150186741d5a8c4eb39d352290"
+    },
+    {
+      "relative_path": "lib/report.ps1",
+      "git_blob_sha": "ed83336602bf794984030a8d2ae07421129d2ace"
+    },
+    {
+      "relative_path": "lib/ui.ps1",
+      "git_blob_sha": "d46ff938b0bb6c587375908b80d1ba6368cc3476"
+    },
+    {
+      "relative_path": "PC_COMMAND_V5.ps1",
+      "git_blob_sha": "64a94fa304686f0cbb634d42adf5479cdd81b1bd"
+    },
+    {
+      "relative_path": "config.default.json",
+      "git_blob_sha": "490ef1d8a088f8bb4c7eecd94fc3d2a3b98a7846"
+    }
+  ]
 }
