@@ -45,10 +45,18 @@ if([double]$cfg.cadence.internet_sync_seconds -ne 3){throw 'sync must default to
 if([double]$cfg.cadence.engine_recalc_seconds -ne 3.5){throw 'engine must default to 3.5s'}
 if([int]$cfg.cadence.display_refresh_seconds -ne 10){throw 'display must default to 10s'}
 if(-not[bool]$cfg.automation.auto_update){throw 'auto update must be enabled'}
+if([string]$cfg.product.command_router -ne 'contextual'){throw 'contextual command router required'}
+if(-not[bool]$cfg.product.report_center){throw 'report center required'}
+if(-not[bool]$cfg.product.health_score){throw 'health score required'}
+if(-not[bool]$cfg.preferences.local_persisted){throw 'local preferences required'}
 $uiText=Get-Content (Join-Path $root 'pc-command\v5\lib\ui.ps1') -Raw
 if($uiText -notmatch '\[A\] Accueil'){throw 'A Accueil must be visible'}
 if($uiText -notmatch 'PARAMETRES / SANTE DU SYSTEME'){throw 'settings health view missing'}
 if($uiText -notmatch 'function Write-PcMicro'){throw 'micro detail view missing'}
+if($uiText -notmatch 'function Write-PcReportCenter'){throw 'report center missing'}
+if($uiText -notmatch 'function Write-PcHealth'){throw 'health view missing'}
+if($uiText -notmatch '\[Y\] Sante'){throw 'health shortcut missing'}
+if($uiText -notmatch '\[X\] Rapports'){throw 'report center shortcut missing'}
 $mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
 if($mainText -notmatch 'Start-PcUpdateProbe'){throw 'auto update probe not wired'}
 $manifest=Get-Content (Join-Path $root 'pc-command\v5\manifest.json') -Raw|ConvertFrom-Json
