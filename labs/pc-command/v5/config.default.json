@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.8.2",
+  "version": "0.8.4",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "lab/pc-command-v070",
@@ -118,5 +118,11 @@
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
+  },
+  "reports": {
+    "auto_pdf": true,
+    "auto_downloads_mirror": true,
+    "drive_export_on_demand": true,
+    "human_names": true
   }
 }
