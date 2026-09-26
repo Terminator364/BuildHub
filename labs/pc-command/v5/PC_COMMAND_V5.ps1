@@ -1,5 +1,8 @@
 param([string]$Root = (Split-Path -Parent $PSScriptRoot))
 $ErrorActionPreference='SilentlyContinue'
+$createdNew=$false
+$mutex=New-Object Threading.Mutex($true,'Local\PC_COMMAND_SINGLE_INSTANCE',[ref]$createdNew)
+if(-not$createdNew){exit 0}
 [Console]::OutputEncoding=[Text.UTF8Encoding]::new()
 $OutputEncoding=[Console]::OutputEncoding
 
@@ -76,7 +79,7 @@ while($true){
     $Host.UI.RawUI.WindowTitle="PC COMMAND v$($Defaults.version) $sp $st $pct%"
   }
 
-  $needDetail=($View -in @('conversation','macro','timeline')) -or $ForceDetail
+  $needDetail=($View -in @('conversation','macro','timeline','requirements')) -or $ForceDetail
   if(($now-$LastSync).TotalSeconds-ge$App.SyncSeconds -or $LastSync-eq[datetime]::MinValue){
     $Sync=Sync-PcState $Defaults $Paths $ConversationIndex -NeedDetail:$needDetail
     $LastSync=$now;$ForceDetail=$false
@@ -94,33 +97,43 @@ while($true){
   }
 
   if(($now-$LastDisplay).TotalSeconds-ge$App.DisplaySeconds -or $LastDisplay-eq[datetime]::MinValue){
-    Clear-Host
-    $conv=$Sync.Channel
+    try{
+      Start-PcFrame
+      $conv=$Sync.Channel
     Write-PcHeader $App $Defaults $Sync $conv $UpdateInfo @('|','/','-','\')[$SpinnerIndex%4]
     switch($View){
       'general'{Write-PcGeneral $Sync.Overview}
       'conversation'{if($conv){Write-PcConversation $conv $Paths.HistoryFile}else{Write-Host 'Detail indisponible; synchronisation...' -ForegroundColor Yellow}}
       'macro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex){Write-PcMacro $conv.macro_tasks[$MacroIndex] ([int]$Defaults.limits.max_visible_microtasks)}}
       'timeline'{if($conv){Write-PcTimeline $conv}}
+      'requirements'{if($conv){Write-PcRequirements $conv}}
       'sources'{Write-PcSources $Defaults $Sync}
       'local'{Write-PcLocal $LocalEvents}
       'settings'{Write-PcSettings $App $Defaults}
     }
-    Write-PcFooter $View
-    Write-Host ("Cycle moteur: $Cycle | dernier sync: "+$LastSync.ToString('HH:mm:ss')+" | prochain ecran dans $($App.DisplaySeconds)s") -ForegroundColor DarkGray
+      Write-PcFooter $View
+      Write-PcLine ("Cycle moteur: $Cycle | dernier sync: "+$LastSync.ToString('HH:mm:ss')+" | prochain ecran dans $($App.DisplaySeconds)s") -ForegroundColor DarkGray
+    } catch {
+      Start-PcFrame
+      Write-PcLine 'PC COMMAND - MODE SECOURS' -ForegroundColor Red
+      Write-PcLine ('Erreur affichage: '+$_.Exception.Message) -ForegroundColor Yellow
+      Write-PcLine 'Le moteur continue; [R] resynchroniser, [Q] fermer.'
+      Add-Content -Path (Join-Path $Root 'runtime-errors.log') -Value ((Get-Date).ToString('o')+' PC_COMMAND_RUNTIME_ERROR '+$_.Exception.Message)
+    }
     $LastDisplay=$now
   }
 
   if([Console]::KeyAvailable){
     $k=[Console]::ReadKey($true).KeyChar.ToString().ToUpperInvariant()
-    if($k-eq'Q'){Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue;break}
+    if($k-eq'Q'){Unregister-Event -SourceIdentifier PcCommandV5Proc -ErrorAction SilentlyContinue;try{$mutex.ReleaseMutex()}catch{};break}
     if($k-eq'R'){$LastSync=[datetime]::MinValue;$ForceDetail=$true;$LastDisplay=[datetime]::MinValue}
     elseif($k-eq'A'){$View='general';$LastDisplay=[datetime]::MinValue}
-    elseif($k-eq'B'){if($View-eq'macro' -or $View-eq'timeline'){$View='conversation'}elseif($View-eq'conversation'){$View='general'}else{$View='general'};$LastDisplay=[datetime]::MinValue}
+    elseif($k-eq'B'){if($View-eq'macro' -or $View-eq'timeline' -or $View-eq'requirements'){$View='conversation'}elseif($View-eq'conversation'){$View='general'}else{$View='general'};$LastDisplay=[datetime]::MinValue}
     elseif($k-eq'S'){$View='sources';$LastDisplay=[datetime]::MinValue}
     elseif($k-eq'L'){$View='local';$LastDisplay=[datetime]::MinValue}
     elseif($k-eq'P'){$View='settings';$LastDisplay=[datetime]::MinValue}
     elseif($k-eq'T' -and $Sync.Channel){$View='timeline';$LastDisplay=[datetime]::MinValue}
+    elseif($k-eq'C' -and $Sync.Channel -and $View-ne'settings'){$View='requirements';$LastDisplay=[datetime]::MinValue}
     elseif($k-eq'X'){
       $rep=New-PcReport $Defaults $Sync.Overview $Sync.Channel $Paths
       Add-LocalPcEvent ("Rapport cree: "+$(if($rep.Pdf){$rep.Pdf}else{$rep.Html}))
