@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -95,7 +95,11 @@
     "status_file": "config/update-status.json",
     "post_launch_rollback": true,
     "root_bootstrap_self_heal": true,
-    "desktop_shortcut_launcher": "PC_COMMAND/PC_COMMAND_BOOTSTRAP.ps1"
+    "desktop_shortcut_launcher": "PC_COMMAND/PC_COMMAND_BOOTSTRAP.ps1",
+    "required_manifest_channel": "stable",
+    "require_manifest_channel": true,
+    "post_launch_version_match": true,
+    "rollback_restores_root_bootstrap": true
   },
   "hotfixes": {
     "footer_positional_color_binding": "fixed",
@@ -124,7 +128,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "prove update/rollback launcher continuity and detailed PDF without RAM regression",
+    "current_goal": "enforce stable-channel promotion + rollback launcher continuity + preserve v0.9.4 field proof",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -142,7 +146,7 @@
   },
   "product": {
     "stage": "candidate",
-    "objective": "transactional self-update v2 + root launcher self-heal + detailed low-RAM reports",
+    "objective": "promotion-aware updater + rollback-safe launcher + detailed low-RAM reports",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
