@@ -215,8 +215,18 @@ function Get-PcMicroPage {
   if($Page-lt0){$Page=0}
   if($Page-ge$pages){$Page=$pages-1}
   $slice=@($items|Select-Object -Skip ($Page*$PageSize) -First $PageSize)
+  $rawIndexes=@()
+  $raw=@($Macro.micro_tasks)
+  foreach($selected in $slice){
+    $ri=-1
+    for($n=0;$n-lt$raw.Count;$n++){
+      if([object]::ReferenceEquals($raw[$n],$selected)){$ri=$n;break}
+    }
+    $rawIndexes+=$ri
+  }
   return [pscustomobject]@{
     Items=$slice
+    RawIndexes=$rawIndexes
     Page=$Page
     Pages=$pages
     PageSize=$PageSize
