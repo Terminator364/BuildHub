@@ -16,8 +16,8 @@ foreach($f in $files){
   if($errors.Count){throw "PowerShell parse errors in $f : $($errors|Out-String)"}
 }
 $cfg=Get-Content (Join-Path $root 'pc-command\v5\config.default.json') -Raw|ConvertFrom-Json
-if([int]$cfg.cadence.internet_sync_seconds-ne5){throw 'sync must be 5s'}
-if([int]$cfg.cadence.engine_recalc_seconds-ne5){throw 'engine must be 5s'}
+if([double]$cfg.cadence.internet_sync_seconds-ne3){throw 'sync must be 3s'}
+if([double]$cfg.cadence.engine_recalc_seconds-ne3.5){throw 'engine must be 3.5s'}
 if([int]$cfg.cadence.display_refresh_seconds-ne10){throw 'display must be 10s'}
 if([int]$cfg.limits.max_conversations-ne10){throw 'max conversations must be 10'}
 if([int]$cfg.limits.ram_budget_mb-ne150){throw 'ram budget must be 150MB'}
