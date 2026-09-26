@@ -60,4 +60,21 @@ foreach($f in @($manifest.files)){
 }
 $mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
 if($mainText -notmatch 'PC_COMMAND_SMOKE_OK'){throw 'runtime smoke gate missing'}
+
+if(-not $cfg.input_feedback.ack_visible){throw 'input ACK must be visible'}
+if(-not $cfg.input_feedback.action_matrix_per_view){throw 'button action matrix must be enabled'}
+if($cfg.local_observability.process_watcher){throw 'permanent process watcher must be disabled by default'}
+if(-not $cfg.interaction_state.user_preemption_visible){throw 'user preemption must be visible'}
+
+$uiText=Get-Content (Join-Path $root 'pc-command\v5\lib\ui.ps1') -Raw
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+foreach($view in @('general','conversation','macro','micro','feedback','versions','requirements','timeline','sources','local','settings','reports','health','help')){
+  if($uiText -notmatch ("'"+[regex]::Escape($view)+"'\{")){throw "footer missing view $view"}
+}
+foreach($token in @('Set-PcInputAck','Get-PcAllowedKeysForView','Action: ')){
+  if($mainText -notmatch [regex]::Escape($token)){throw "input feedback missing $token"}
+}
+if($mainText -notmatch 'USER_PREEMPTED_BY_NEW_MESSAGE' -and $uiText -notmatch 'USER_PREEMPTED_BY_NEW_MESSAGE'){throw 'preemption state not visible'}
+if($uiText -notmatch '\[A\] Accueil'){throw 'global home button missing'}
+Write-Host 'PC_COMMAND_BUTTON_AUDIT_OK'
 Write-Host 'PC_COMMAND_V5_TESTS_OK'
