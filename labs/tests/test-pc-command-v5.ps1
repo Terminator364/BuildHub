@@ -46,7 +46,7 @@ if([double]$cfg.cadence.engine_recalc_seconds -ne 3.5){throw 'engine must defaul
 if([int]$cfg.cadence.display_refresh_seconds -ne 10){throw 'display must default to 10s'}
 if(-not[bool]$cfg.automation.auto_update){throw 'auto update must be enabled'}
 $uiText=Get-Content (Join-Path $root 'pc-command\v5\lib\ui.ps1') -Raw
-if($uiText -notmatch '\[A\] Accueil'){throw 'A Accueil must be visible'}
+if($uiText -notmatch "Key='A';Label='Accueil'"){throw 'A Accueil action must exist'}
 if($uiText -notmatch 'PARAMETRES / SANTE DU SYSTEME'){throw 'settings health view missing'}
 if($uiText -notmatch 'function Write-PcMicro'){throw 'micro detail view missing'}
 $mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
@@ -75,7 +75,7 @@ foreach($token in @('Set-PcInputAck','Get-PcAllowedKeysForView','Action: ')){
   if($mainText -notmatch [regex]::Escape($token)){throw "input feedback missing $token"}
 }
 if($mainText -notmatch 'USER_PREEMPTED_BY_NEW_MESSAGE' -and $uiText -notmatch 'USER_PREEMPTED_BY_NEW_MESSAGE'){throw 'preemption state not visible'}
-if($uiText -notmatch '\[A\] Accueil'){throw 'global home button missing'}
+if($uiText -notmatch "Key='A';Label='Accueil'"){throw 'global home button missing'}
 Write-Host 'PC_COMMAND_BUTTON_AUDIT_OK'
 Write-Host 'PC_COMMAND_V5_TESTS_OK'
 
