@@ -2,7 +2,7 @@
   "schema": "pc.command.manifest.v1",
   "version": "0.6.0",
   "channel": "lab",
-  "generated_at": "2026-09-26T18:00:00+01:00",
+  "generated_at": "2026-09-26T17:56:00+01:00",
   "entrypoint": "PC_COMMAND_V5.ps1",
   "files": [
     {
