@@ -166,3 +166,25 @@ function Get-PcUpdateInfo {
     return [pscustomobject]@{Available=([version]$m.version -gt[version]$CurrentVersion);Version=[string]$m.version;Manifest=$m;Error=$null}
   }catch{return [pscustomobject]@{Available=$false;Version=$CurrentVersion;Manifest=$null;Error=$_.Exception.Message}}
 }
+
+
+function Read-PcFeedbackLocal {
+  param($Paths)
+  $base=Join-Path $Paths.StateRepo 'pc-command\feedback'
+  $result=[ordered]@{Index=$null;Recent=@();Versions=$null;Error=$null}
+  try{
+    $idx=Join-Path $base 'feedback-index.json'
+    if(Test-Path $idx){$result.Index=Get-Content $idx -Raw|ConvertFrom-Json}
+    $ledger=Join-Path $base 'feedback-ledger.jsonl'
+    if(Test-Path $ledger){
+      $tmp=New-Object System.Collections.Generic.List[object]
+      foreach($line in @(Get-Content $ledger -Tail 12 -ErrorAction SilentlyContinue)){
+        try{$tmp.Add(($line|ConvertFrom-Json))}catch{}
+      }
+      $result.Recent=@($tmp)
+    }
+    $vt=Join-Path $base 'version-trace.json'
+    if(Test-Path $vt){$result.Versions=Get-Content $vt -Raw|ConvertFrom-Json}
+  }catch{$result.Error=$_.Exception.Message}
+  return [pscustomobject]$result
+}
