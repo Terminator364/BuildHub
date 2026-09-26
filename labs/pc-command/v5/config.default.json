@@ -1,9 +1,9 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "code": {
     "repo": "Terminator364/BuildHub",
-    "branch": "lab/pc-command-v070",
+    "branch": "pc-command/stable",
     "base_path": "labs/pc-command/v5"
   },
   "state": {
@@ -85,9 +85,10 @@
   },
   "updater": {
     "transport": "github_api_blob_sha",
-    "manifest_ref": "lab/pc-command-v070",
+    "manifest_ref": "pc-command/stable",
     "verify_git_blob_sha": true,
-    "backups_kept": 3
+    "backups_kept": 3,
+    "release_channel": "stable"
   },
   "hotfixes": {
     "footer_positional_color_binding": "fixed",
