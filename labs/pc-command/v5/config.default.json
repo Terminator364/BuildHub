@@ -1,46 +1,61 @@
-﻿{
-    "schema":  "pc.command.config.v1",
-    "version":  "0.5.1",
-    "code":  {
-                 "repo":  "Terminator364/BuildHub",
-                 "branch":  "lab/pc-command-browser-20260926",
-                 "base_path":  "labs/pc-command/v5"
-             },
-    "state":  {
-                  "transport":  "github_private",
-                  "repo":  "Terminator364/PC-COMMAND-STATE",
-                  "branch":  "main",
-                  "registry_path":  "pc-command/registry.json",
-                  "overview_path":  "pc-command/overview.json"
-              },
-    "cadence":  {
-                    "internet_sync_seconds":  5,
-                    "engine_recalc_seconds":  5,
-                    "display_refresh_seconds":  10,
-                    "heartbeat_title_seconds":  1,
-                    "update_check_seconds":  300
-                },
-    "limits":  {
-                   "max_conversations":  10,
-                   "max_macro_tasks_per_conversation":  10,
-                   "max_visible_microtasks":  20,
-                   "max_events_loaded":  100,
-                   "ram_budget_mb":  150,
-                   "history_max_bytes":  524288
-               },
-    "drive":  {
-                  "root_folder_id":  "1fFLEoZxzoAkrMzC9SxjvOlzbTsW1ZjLW",
-                  "reports_folder_id":  "1Y6tgwMBHYaQPvsWIWCvEdUrUOgP681a3",
-                  "checkpoints_folder_id":  "1zLolAtOMPtoLkr8OxCEk5FJkNncBbSfN",
-                  "exports_folder_id":  "1WttL-Nm4DbpFjnGizDUY5YN-lWYQw9zA"
-              },
-    "privacy":  {
-                    "no_passwords":  true,
-                    "no_chain_of_thought":  true,
-                    "observable_state_only":  true
-                },
-    "freshness":  {
-                      "processing_green_seconds":  900,
-                      "processing_warn_seconds":  1800
-                  }
+{
+  "schema": "pc.command.config.v1",
+  "version": "0.6.0",
+  "code": {
+    "repo": "Terminator364/BuildHub",
+    "branch": "lab/pc-command-browser-20260926",
+    "base_path": "labs/pc-command/v5"
+  },
+  "state": {
+    "transport": "github_private",
+    "repo": "Terminator364/PC-COMMAND-STATE",
+    "branch": "main",
+    "registry_path": "pc-command/registry.json",
+    "overview_path": "pc-command/overview.json"
+  },
+  "cadence": {
+    "internet_sync_seconds": 5,
+    "engine_recalc_seconds": 5,
+    "display_refresh_seconds": 10,
+    "heartbeat_title_seconds": 1,
+    "update_check_seconds": 300
+  },
+  "limits": {
+    "max_conversations": 10,
+    "max_macro_tasks_per_conversation": 10,
+    "max_visible_microtasks": 20,
+    "max_events_loaded": 100,
+    "ram_budget_mb": 150,
+    "history_max_bytes": 524288
+  },
+  "drive": {
+    "root_folder_id": "1fFLEoZxzoAkrMzC9SxjvOlzbTsW1ZjLW",
+    "reports_folder_id": "1Y6tgwMBHYaQPvsWIWCvEdUrUOgP681a3",
+    "checkpoints_folder_id": "1zLolAtOMPtoLkr8OxCEk5FJkNncBbSfN",
+    "exports_folder_id": "1WttL-Nm4DbpFjnGizDUY5YN-lWYQw9zA"
+  },
+  "privacy": {
+    "no_passwords": true,
+    "no_chain_of_thought": true,
+    "observable_state_only": true
+  },
+  "freshness": {
+    "work_lease_seconds": 1200,
+    "processing_fresh_seconds": 300,
+    "interruption_possible_seconds": 1800
+  },
+  "render": {
+    "responsive": true,
+    "max_general_conversations": 10,
+    "max_conversation_macros_visible": 5,
+    "max_macro_microtasks_visible": 12,
+    "emergency_fallback": true
+  },
+  "automation": {
+    "update_on_start": true,
+    "atomic_stage": true,
+    "rollback_backup": true,
+    "state_transport_separate": true,
+    "cahier_delta_each_relevant_message": true
+  }
 }
