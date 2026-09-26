@@ -1,0 +1,291 @@
+{
+  "schema": "pc_command.feed.v3",
+  "generated_at": "2026-09-26T15:58:00+01:00",
+  "engine": {
+    "version": "4.0-lab",
+    "local_recalc_seconds": 1,
+    "remote_sync_seconds": 10,
+    "max_connected_conversations": 10,
+    "max_active_macro_tasks_per_conversation": 10,
+    "progress_semantics": "weighted completion, dynamic scope; not a probability of success",
+    "confidence_semantics": "evidence coverage and freshness",
+    "source_of_truth": "GitHub snapshot + local observable events",
+    "zero_cost": true
+  },
+  "host": {
+    "id": "MBMPC",
+    "ram_gb": 4,
+    "drive_policy": "KEEP_RUNNING"
+  },
+  "conversations": [
+    {
+      "id": "asquota-pccommand-20260926",
+      "label": "ASQUOTA2GO / PC COMMAND",
+      "short_code": "PCGO-01",
+      "state": "ACTIVE",
+      "last_update": "2026-09-26T15:58:00+01:00",
+      "objective": "Optimiser le PC 4 Go, construire PC COMMAND multi-conversations et choisir un navigateur adapte sans casser Google Drive.",
+      "macro_tasks": [
+        {
+          "id": "pc-command-engine",
+          "title": "PC COMMAND - moteur de suivi",
+          "weight": 4,
+          "state": "ACTIVE",
+          "last_event": "2026-09-26T15:58:00+01:00",
+          "current_action": "Passage au modele conversation > macro-taches > micro-taches; detection de portee et recalcul dynamique.",
+          "last_success": "V3 multi-flux PowerShell fonctionne; CI precedente verte.",
+          "next_step": "Valider le modele V4 puis le deployer une seule fois sur le PC.",
+          "blocker": null,
+          "micro_tasks": [
+            {
+              "id": "pc1",
+              "title": "Bus de statut GitHub zero-dollar",
+              "weight": 2,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "feed GitHub public"
+            },
+            {
+              "id": "pc2",
+              "title": "Recalcul local chaque seconde",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.9,
+              "evidence": "V3 engine implemented"
+            },
+            {
+              "id": "pc3",
+              "title": "Synchronisation distante chaque 10 secondes",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.9,
+              "evidence": "feed cadence set to 10s"
+            },
+            {
+              "id": "pc4",
+              "title": "Vue humaine PowerShell detaillee",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.85,
+              "evidence": "V3 viewer implemented"
+            },
+            {
+              "id": "pc5",
+              "title": "Onglets de conversations connectees",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.35,
+              "evidence": "V4 schema defined"
+            },
+            {
+              "id": "pc6",
+              "title": "Detection nouvelle macro/micro-tache et recalcul de portee",
+              "weight": 4,
+              "state": "ACTIVE",
+              "completion": 0.35,
+              "evidence": "current request recorded as scope expansion"
+            },
+            {
+              "id": "pc7",
+              "title": "Protocole PCCONNECT pour nouvelles conversations",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.25,
+              "evidence": "protocol being implemented"
+            },
+            {
+              "id": "pc8",
+              "title": "Journal local d'evenements Desktop Commander sans appel supplementaire",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.75,
+              "evidence": "WMI/local event monitoring designed"
+            },
+            {
+              "id": "pc9",
+              "title": "Demarrage en un clic depuis le Bureau",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.85,
+              "evidence": "shortcut exists; auto-start refinement pending"
+            },
+            {
+              "id": "pc10",
+              "title": "CI et deployment V4",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T15:31:20+01:00",
+              "type": "ui.feedback",
+              "summary": "Vue multi-flux demandee plus detaillee."
+            },
+            {
+              "at": "2026-09-26T15:50:00+01:00",
+              "type": "scope.expanded",
+              "summary": "Nouvelle exigence: suivi multi-conversations et taches dynamiques."
+            },
+            {
+              "at": "2026-09-26T15:58:00+01:00",
+              "type": "task.added",
+              "summary": "Architecture conversation > macro-taches > micro-taches ajoutee; limite 10 macro-taches actives."
+            }
+          ]
+        },
+        {
+          "id": "browser4g",
+          "title": "Navigateur pour PC 4 Go",
+          "weight": 3,
+          "state": "ACTIVE",
+          "last_event": "2026-09-26T15:52:00+01:00",
+          "current_action": "Confirmation comparative des navigateurs avant tests locaux minimaux.",
+          "last_success": "Prefiltre Windows: Falkon 165 MB, qutebrowser 306 MB, Brave 357 MB, Helium 646 MB, Edge 678 MB, Firefox 786 MB sur runner; comparatif relatif.",
+          "next_step": "Test realiste multi-pages puis shortlist 2-3 finalistes, incluant le navigateur personnel BuildHub comme candidat experimental.",
+          "blocker": null,
+          "micro_tasks": [
+            {
+              "id": "b1",
+              "title": "Recherche Internet/GitHub/TLIB",
+              "weight": 2,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "candidate matrix"
+            },
+            {
+              "id": "b2",
+              "title": "Smoke-tests Windows",
+              "weight": 2,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "6/6 success"
+            },
+            {
+              "id": "b3",
+              "title": "Prefiltre RAM/CPU sur runner",
+              "weight": 3,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "resource benchmark completed"
+            },
+            {
+              "id": "b4",
+              "title": "Test realiste multi-pages",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.15,
+              "evidence": "harness next"
+            },
+            {
+              "id": "b5",
+              "title": "Tri technique final",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.35,
+              "evidence": "provisional ranking"
+            },
+            {
+              "id": "b6",
+              "title": "Tests locaux des finalistes",
+              "weight": 3,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "b7",
+              "title": "Migration ou optimisation Edge",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "b8",
+              "title": "Nettoyage des candidats rejetes",
+              "weight": 1,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T14:04:00Z",
+              "type": "test.passed",
+              "summary": "6/6 navigateurs ont passe le smoke-test Windows."
+            },
+            {
+              "at": "2026-09-26T14:32:56Z",
+              "type": "benchmark.completed",
+              "summary": "Prefiltre RAM termine."
+            }
+          ]
+        },
+        {
+          "id": "ram-optimization",
+          "title": "Optimisation RAM Windows",
+          "weight": 2,
+          "state": "WAITING",
+          "last_event": "2026-09-26T13:00:00+01:00",
+          "current_action": "Optimisations finales suspendues jusqu'a la shortlist navigateur pour eviter des reglages contradictoires.",
+          "last_success": "Politique un seul onglet technique adoptee; Google Drive conserve actif.",
+          "next_step": "Appliquer les optimisations Windows reversibles puis mesurer avant/apres.",
+          "blocker": "Depend du navigateur final.",
+          "micro_tasks": [
+            {
+              "id": "r1",
+              "title": "Nettoyer onglets et doublons",
+              "weight": 1,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "measured Edge reduction"
+            },
+            {
+              "id": "r2",
+              "title": "Choisir navigateur final",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.55,
+              "evidence": "resource prefilter complete"
+            },
+            {
+              "id": "r3",
+              "title": "Optimiser demarrage Windows",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "r4",
+              "title": "Optimiser effets/processus non essentiels",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "r5",
+              "title": "Mesurer avant/apres",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T13:00:00+01:00",
+              "type": "policy.set",
+              "summary": "Google Drive Desktop doit rester actif."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
