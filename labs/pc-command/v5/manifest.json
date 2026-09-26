@@ -1,8 +1,8 @@
 {
   "schema": "pc.command.manifest.v1",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "channel": "lab",
-  "generated_at": "2026-09-26T18:31:00+01:00",
+  "generated_at": "2026-09-26T18:48:00+01:00",
   "entrypoint": "PC_COMMAND_V5.ps1",
   "files": [
     {
@@ -11,7 +11,7 @@
     },
     {
       "relative_path": "lib/io.ps1",
-      "git_blob_sha": "4f623a7c3b24583782a473c304236aad101e5ec4"
+      "git_blob_sha": "8c350cb8fbf88e87500c098cf6f52150cf657003"
     },
     {
       "relative_path": "lib/report.ps1",
@@ -19,15 +19,15 @@
     },
     {
       "relative_path": "lib/ui.ps1",
-      "git_blob_sha": "1592e76568c45f4c56ed1e55c2451661ce140fb8"
+      "git_blob_sha": "6fbd00230edf727c8f59a3edfdc8d14e70271fa8"
     },
     {
       "relative_path": "PC_COMMAND_V5.ps1",
-      "git_blob_sha": "943209753e701f81ace486fdab0736db376317df"
+      "git_blob_sha": "259060910d09894f18e4cab783452e4f79126917"
     },
     {
       "relative_path": "config.default.json",
-      "git_blob_sha": "0a8bad6e0c6cbe68931df21395d44469ae69b689"
+      "git_blob_sha": "56bbd9a4d4191419d3af18c3aae182f1847b7e1d"
     }
   ]
 }
