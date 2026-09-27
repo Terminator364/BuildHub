@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.9.9",
+  "version": "1.0.0",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "ship bounded native read-only diagnostics with zero external dependency and no v0.9.8 regressions",
+    "current_goal": "prove action policy decisions, preserve v0.9.9 diagnostics and <=150 MB viewer",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,8 +147,8 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "stable",
-    "objective": "bounded native read-only diagnostics from PowerShell repo audit; zero resident dependency",
+    "stage": "candidate",
+    "objective": "repository-informed L0-L3 action policy gate; no privileged action execution added",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
@@ -267,5 +267,61 @@
       "read_only": true,
       "cache_seconds": 30
     }
+  },
+  "action_policy": {
+    "schema": "pc.command.action.policy.v1",
+    "execution_enabled": false,
+    "default_unknown": "DENY",
+    "levels": {
+      "L0": {
+        "name": "READ",
+        "auto_if": [
+          "read_only",
+          "bounded"
+        ],
+        "requires_approval": false
+      },
+      "L1": {
+        "name": "SAFE",
+        "auto_if": [
+          "bounded",
+          "no_important_system_modification"
+        ],
+        "requires_approval": false
+      },
+      "L2": {
+        "name": "MODIFY",
+        "auto": false,
+        "requires": [
+          "preconditions",
+          "expected_changes",
+          "rollback",
+          "post_verification"
+        ]
+      },
+      "L3": {
+        "name": "SYSTEM",
+        "auto": false,
+        "requires": [
+          "preconditions",
+          "expected_changes",
+          "backup",
+          "rollback",
+          "post_verification",
+          "manual_approval"
+        ]
+      }
+    },
+    "hard_denies": [
+      "remote_pipe_to_execute",
+      "global_debloat_or_tweak_preset"
+    ],
+    "external_source_requires_pin": true,
+    "source_patterns": [
+      "Sophia restore pairs",
+      "PathForge dry-run/quarantine",
+      "repairtools Scan-vs-Repair separation"
+    ],
+    "runtime_effect": "evaluation_only"
   }
 }
