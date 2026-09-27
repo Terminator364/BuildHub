@@ -21,6 +21,8 @@ $script:PcStartupRamCache = $null
 $script:PcStartupRamCacheAt = [datetime]::MinValue
 $script:PcPowerSnapshotCache = $null
 $script:PcPowerSnapshotCacheAt = [datetime]::MinValue
+$script:PcSoftwareInventoryCache = $null
+$script:PcSoftwareInventoryCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -784,6 +786,65 @@ function Get-PcPowerSnapshot {
   }
   $script:PcPowerSnapshotCache=$result
   $script:PcPowerSnapshotCacheAt=$now
+  return $result
+}
+
+function Get-PcInstalledSoftwareSnapshot {
+  param(
+    [int]$TtlSeconds=300,
+    [int]$MaxSamples=8
+  )
+  $now=Get-Date
+  if($script:PcSoftwareInventoryCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcSoftwareInventoryCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcSoftwareInventoryCache
+  }
+
+  $errors=New-Object System.Collections.Generic.List[string]
+  $items=@()
+  $roots=@(
+    [pscustomobject]@{Path='HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall';Scope='Machine';Architecture='64-bit'},
+    [pscustomobject]@{Path='HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall';Scope='Machine';Architecture='32-bit'},
+    [pscustomobject]@{Path='HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall';Scope='User';Architecture='N/A'}
+  )
+
+  foreach($r in $roots){
+    try{
+      if(-not(Test-Path -LiteralPath $r.Path)){continue}
+      foreach($x in @(Get-ItemProperty -Path (Join-Path $r.Path '*') -ErrorAction SilentlyContinue)){
+        if([string]::IsNullOrWhiteSpace([string]$x.DisplayName)){continue}
+        $items += [pscustomobject]@{
+          Name=[string]$x.DisplayName
+          Version=[string]$x.DisplayVersion
+          Publisher=[string]$x.Publisher
+          Scope=[string]$r.Scope
+          Architecture=[string]$r.Architecture
+        }
+      }
+    }catch{$errors.Add('software-registry: '+$_.Exception.Message)}
+  }
+
+  $normalized=@($items |
+    Sort-Object Name,Version,Publisher,Scope,Architecture -Unique |
+    Sort-Object Name)
+
+  $limit=[math]::Max(1,[math]::Min(12,$MaxSamples))
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    Count=[int]$normalized.Count
+    Samples=@($normalized|Select-Object -First $limit)
+    RegistryReadOnly=$true
+    RegistryChangePerformed=$false
+    NetworkTrafficGenerated=$false
+    WingetInventoryUsed=$false
+    WingetSourceRefreshUsed=$false
+    ExternalModuleRequired=$false
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    SourcePolicy='local uninstall registry only; winget reserved for gated L2 actions'
+  }
+
+  $script:PcSoftwareInventoryCache=$result
+  $script:PcSoftwareInventoryCacheAt=$now
   return $result
 }
 
