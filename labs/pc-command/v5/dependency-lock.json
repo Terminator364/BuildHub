@@ -1,0 +1,81 @@
+{
+  "schema": "pc.command.dependencies.v1",
+  "version": "1.0.3",
+  "generated_at": "2026-09-27T11:29:00+01:00",
+  "policy": {
+    "runtime_auto_install": false,
+    "default_decision": "DENY",
+    "exact_version_required": true,
+    "latest_keyword_allowed": false,
+    "approved_repositories": [
+      "PSGallery"
+    ],
+    "install_action_level": "L2",
+    "require_rollback": true,
+    "require_post_verification": true,
+    "require_expected_changes": true,
+    "external_binary_requires_hash": true
+  },
+  "runtime_dependencies": [],
+  "approved_on_demand": [
+    {
+      "name": "Microsoft.PowerShell.PSResourceGet",
+      "repository": "PSGallery",
+      "exact_version": null,
+      "state": "DEFERRED_NO_INSTALL",
+      "role": "dependency-management"
+    },
+    {
+      "name": "ImportExcel",
+      "repository": "PSGallery",
+      "exact_version": null,
+      "state": "DEFERRED_NO_INSTALL",
+      "role": "xlsx-export"
+    },
+    {
+      "name": "InvokeBuild",
+      "repository": "PSGallery",
+      "exact_version": null,
+      "state": "DEFERRED_NO_INSTALL",
+      "role": "build-orchestration"
+    },
+    {
+      "name": "PSScriptTools",
+      "repository": "PSGallery",
+      "exact_version": null,
+      "state": "DEFERRED_NO_INSTALL",
+      "role": "admin-productivity"
+    },
+    {
+      "name": "PSWindowsUpdate",
+      "repository": "PSGallery",
+      "exact_version": null,
+      "state": "DEFERRED_NO_INSTALL",
+      "role": "windows-update-actions"
+    },
+    {
+      "name": "EventViewerX",
+      "repository": "PSGallery",
+      "exact_version": null,
+      "state": "DEFERRED_NO_INSTALL",
+      "role": "advanced-event-diagnostics"
+    }
+  ],
+  "ci_tools": [
+    {
+      "name": "PSScriptAnalyzer",
+      "scope": "GitHub CI",
+      "runtime_dependency": false
+    },
+    {
+      "name": "Pester",
+      "scope": "GitHub CI",
+      "runtime_dependency": false
+    }
+  ],
+  "rationale": [
+    "Zero runtime PowerShell module dependencies remain the default.",
+    "A future dependency becomes installable only after exact version and APPROVED state are committed.",
+    "Installation remains an L2 gated action and is never performed by the runtime viewer."
+  ]
+}
