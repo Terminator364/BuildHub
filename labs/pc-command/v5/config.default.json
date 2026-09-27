@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "surface primary adapter/IP/gateway/DNS without active probes, external lookups or resident network tools",
+    "current_goal": "ship zero-traffic local network snapshot with no active probes, no external dependency and no v1.0.0 regressions",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,7 +147,7 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "candidate",
+    "stage": "stable",
     "objective": "zero-traffic local network snapshot from PowerShell network repository audit",
     "target_user_score_10": 5,
     "command_router": "contextual",
