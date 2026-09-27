@@ -44,7 +44,16 @@ $edgeCandidates=@(
 ) | Where-Object { $_ -and (Test-Path -LiteralPath $_) }
 $edge=$edgeCandidates|Select-Object -First 1
 if($edge){
-  Start-Process -FilePath $edge -ArgumentList @('--app='+$Url,'--start-maximized','--no-first-run')
+  $edgeProfile=Join-Path $LabRoot 'edge-profile'
+  New-Item -ItemType Directory -Force -Path $edgeProfile | Out-Null
+  Start-Process -FilePath $edge -ArgumentList @(
+    '--user-data-dir='+$edgeProfile,
+    '--app='+$Url,
+    '--start-maximized',
+    '--no-first-run',
+    '--no-default-browser-check',
+    '--disable-background-mode'
+  )
 }else{
   Start-Process $Url
 }
