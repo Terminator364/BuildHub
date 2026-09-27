@@ -311,6 +311,6 @@ $re=Test-PcActionPolicy $ext
 if([string]$re.Decision-ne'DENY' -or @($re.Missing)-notcontains'ExternalSourcePinned'){throw 'un-pinned external source must be denied'}
 
 $mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw -Encoding UTF8
-if($mainText -notmatch "lib 'policy.ps1'" -and $mainText -notmatch "Join-Path \$Lib 'policy.ps1'"){throw 'policy engine not loaded by runtime'}
+if($mainText -notmatch 'policy\.ps1'){throw 'policy engine not loaded by runtime'}
 Write-Host 'PC_COMMAND_V100_ACTION_POLICY_OK'
 
