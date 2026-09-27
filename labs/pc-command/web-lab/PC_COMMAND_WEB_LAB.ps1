@@ -38,4 +38,13 @@ if(-not$ready){
   throw ('Le serveur WEB LAB n’a pas répondu sur '+$Url+'. '+$detail)
 }
 
-Start-Process $Url
+$edgeCandidates=@(
+  (Join-Path ${env:ProgramFiles(x86)} 'Microsoft\Edge\Application\msedge.exe'),
+  (Join-Path $env:ProgramFiles 'Microsoft\Edge\Application\msedge.exe')
+) | Where-Object { $_ -and (Test-Path -LiteralPath $_) }
+$edge=$edgeCandidates|Select-Object -First 1
+if($edge){
+  Start-Process -FilePath $edge -ArgumentList @('--app='+$Url,'--start-maximized')
+}else{
+  Start-Process $Url
+}
