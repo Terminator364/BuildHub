@@ -82,7 +82,7 @@ function statusSnapshot() {
   const convs = Array.isArray(overview.conversations) ? overview.conversations : [];
   return {
     lab: {
-      version: '0.2.2',
+      version: '0.2.3',
       mode: 'READ_ONLY',
       serverPid: process.pid,
       serverRssMb: Math.round(process.memoryUsage().rss / 104857.6) / 10,
