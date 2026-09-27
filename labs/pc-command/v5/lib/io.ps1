@@ -19,6 +19,8 @@ $script:PcNetworkSnapshotCache = $null
 $script:PcNetworkSnapshotCacheAt = [datetime]::MinValue
 $script:PcStartupRamCache = $null
 $script:PcStartupRamCacheAt = [datetime]::MinValue
+$script:PcPowerSnapshotCache = $null
+$script:PcPowerSnapshotCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -705,6 +707,83 @@ function Get-PcStartupRamSnapshot {
   }
   $script:PcStartupRamCache=$result
   $script:PcStartupRamCacheAt=$now
+  return $result
+}
+
+function Get-PcPowerSnapshot {
+  param([int]$TtlSeconds=30)
+  $now=Get-Date
+  if($script:PcPowerSnapshotCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcPowerSnapshotCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcPowerSnapshotCache
+  }
+
+  $errors=New-Object System.Collections.Generic.List[string]
+  $battery=$null
+  try{
+    $battery=Get-CimInstance Win32_Battery -ErrorAction SilentlyContinue|Select-Object -First 1
+  }catch{$errors.Add('battery: '+$_.Exception.Message)}
+
+  $statusCode=$null
+  $statusLabel='AUCUNE BATTERIE'
+  $charge=$null
+  $runtimeMin=$null
+  if($battery){
+    $statusCode=[int]$battery.BatteryStatus
+    switch($statusCode){
+      1 {$statusLabel='DECHARGE'}
+      2 {$statusLabel='SECTEUR / NON-DECHARGE'}
+      3 {$statusLabel='PLEINE'}
+      4 {$statusLabel='FAIBLE'}
+      5 {$statusLabel='CRITIQUE'}
+      6 {$statusLabel='CHARGE'}
+      7 {$statusLabel='CHARGE / HAUTE'}
+      8 {$statusLabel='CHARGE / FAIBLE'}
+      9 {$statusLabel='CHARGE / CRITIQUE'}
+      11 {$statusLabel='PARTIELLE'}
+      default {$statusLabel='INCONNU'}
+    }
+    if($null-ne$battery.EstimatedChargeRemaining){
+      $charge=[int]$battery.EstimatedChargeRemaining
+    }
+    if($null-ne$battery.EstimatedRunTime){
+      $r=[double]$battery.EstimatedRunTime
+      if($r-gt0 -and $r-lt1000000){$runtimeMin=[int][math]::Round($r,0)}
+    }
+  }
+
+  $schemeName=$null
+  $schemeGuid=$null
+  try{
+    $pc=Join-Path $env:WINDIR 'System32\powercfg.exe'
+    if(Test-Path -LiteralPath $pc){
+      $raw=((& $pc /getactivescheme 2>$null) -join ' ').Trim()
+      if($raw -match '\(([^()]*)\)\s*$'){$schemeName=[string]$Matches[1]}
+      if($raw -match '([0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12})'){$schemeGuid=[string]$Matches[1]}
+      if(-not$schemeName -and $raw){$schemeName=$raw}
+    }else{$errors.Add('powercfg absent')}
+  }catch{$errors.Add('powercfg: '+$_.Exception.Message)}
+
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    BatteryPresent=[bool]$battery
+    ChargePercent=$charge
+    BatteryStatusCode=$statusCode
+    BatteryStatusLabel=$statusLabel
+    EstimatedRuntimeMinutes=$runtimeMin
+    ActiveSchemeName=$schemeName
+    ActiveSchemeGuid=$schemeGuid
+    ReadOnly=$true
+    NetworkTrafficGenerated=$false
+    PowerPlanChanged=$false
+    BatteryChanged=$false
+    ExternalModuleRequired=$false
+    WinFormsLoaded=$false
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    SourcePolicy='CIM battery + powercfg getactivescheme only'
+  }
+  $script:PcPowerSnapshotCache=$result
+  $script:PcPowerSnapshotCacheAt=$now
   return $result
 }
 
