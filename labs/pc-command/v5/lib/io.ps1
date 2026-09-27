@@ -227,7 +227,7 @@ function Read-PcFeedbackLocal {
   if(Test-Path $ledger){
     $reader=$null
     try{
-      $reader=New-Object IO.StreamReader($ledger,[Text.Encoding]::UTF8,$true,4096)
+      $reader=[IO.StreamReader]::new($ledger,[Text.Encoding]::UTF8,$true,4096)
       while(-not$reader.EndOfStream){
         $line=$reader.ReadLine()
         if([string]::IsNullOrWhiteSpace([string]$line)){continue}
