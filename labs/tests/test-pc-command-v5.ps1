@@ -437,3 +437,30 @@ if([bool]$cfg.pslib_audit.lot7_power.network_traffic){throw 'lot7 network traffi
 if([bool]$cfg.pslib_audit.lot7_power.external_module_required){throw 'lot7 external module must be false'}
 Write-Host 'PC_COMMAND_V104_POWER_SNAPSHOT_OK'
 
+# FB-044 / v1.0.5: software inventory must remain local, read-only and zero-network.
+if(-not(Get-Command Get-PcInstalledSoftwareSnapshot -ErrorAction SilentlyContinue)){throw 'software inventory snapshot missing'}
+$sw=Get-PcInstalledSoftwareSnapshot -TtlSeconds 0 -MaxSamples 8
+if(-not[bool]$sw.RegistryReadOnly){throw 'software inventory must be registry read-only'}
+if([bool]$sw.RegistryChangePerformed){throw 'software inventory must not modify registry'}
+if([bool]$sw.NetworkTrafficGenerated){throw 'software inventory must generate zero network traffic'}
+if([bool]$sw.WingetInventoryUsed){throw 'software inventory must not use winget inventory'}
+if([bool]$sw.WingetSourceRefreshUsed){throw 'software inventory must not refresh winget sources'}
+if([bool]$sw.ExternalModuleRequired){throw 'software inventory must not require external modules'}
+if(@($sw.Samples).Count-gt8){throw 'software inventory sample must remain bounded to 8'}
+if([int]$sw.Count-lt0){throw 'software inventory count invalid'}
+$ioText=Get-Content (Join-Path $root 'pc-command\v5\lib\io.ps1') -Raw -Encoding UTF8
+$softStart=$ioText.IndexOf('function Get-PcInstalledSoftwareSnapshot')
+if($softStart-lt0){throw 'software inventory source block missing'}
+$softFn=$ioText.Substring($softStart)
+foreach($forbidden in @('winget list','winget search','winget source','winget upgrade','winget install','Get-WinGetPackage','Uninstall-Package','Remove-ItemProperty','Set-ItemProperty')){
+  if($softFn -match [regex]::Escape($forbidden)){throw "forbidden software inventory primitive present: $forbidden"}
+}
+if(-not[bool]$cfg.pslib_audit.lot8_software_inventory.read_only){throw 'lot8 software inventory must be read-only'}
+if([bool]$cfg.pslib_audit.lot8_software_inventory.network_traffic){throw 'lot8 network traffic must be false'}
+if([bool]$cfg.pslib_audit.lot8_software_inventory.winget_inventory){throw 'lot8 winget inventory must be false'}
+if([bool]$cfg.pslib_audit.lot8_software_inventory.winget_source_refresh){throw 'lot8 source refresh must be false'}
+if([bool]$cfg.pslib_audit.lot8_software_inventory.uninstall_actions){throw 'lot8 uninstall actions must be false'}
+if([bool]$cfg.pslib_audit.lot8_software_inventory.install_actions){throw 'lot8 install actions must be false'}
+if([bool]$cfg.pslib_audit.lot8_software_inventory.external_module_required){throw 'lot8 external module must be false'}
+Write-Host 'PC_COMMAND_V105_SOFTWARE_INVENTORY_OK'
+
