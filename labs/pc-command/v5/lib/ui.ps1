@@ -243,12 +243,23 @@ function Write-PcSources {
 
 function Write-PcLocal {
   param($LocalEvents)
+  $software=Get-PcLocalSoftwareInventory
   Write-PcLine 'ACTIVITE LOCALE DU PC' Cyan
   Write-PcLine ''
   if($LocalEvents.Count-eq0){Write-PcLine 'Aucune nouvelle activite locale observee.'}
   else{foreach($e in $LocalEvents){Write-PcLine ('  '+$e.At.ToString('HH:mm:ss')+' | '+$e.Text)}}
   Write-PcLine ''
+  Write-PcLine 'LOGICIELS INSTALLES / INVENTAIRE LOCAL' Cyan
+  Write-PcLine ('  Total registre : '+$software.InstalledCount+' | cache '+$software.CacheSeconds+' s | lecture seule') Green
+  Write-PcLine ('  WinGet : '+$(if($software.WinGetDetected){'DETECTE, NON INTERROGE'}else{'ABSENT'})+' | winget list : JAMAIS dans le baseline') DarkCyan
+  foreach($app in @($software.Items|Select-Object -First 10)){
+    $ver=if($app.Version){' | '+$app.Version}else{''}
+    Write-PcLine ('  - '+$app.Name+$ver) DarkGray
+  }
+  if($software.Error){Write-PcLine ('  Inventaire partiel : '+$software.Error) Yellow}
+  Write-PcLine ''
   Write-PcLine 'Observation locale: pas de watcher permanent par defaut; diagnostic charge a la demande.' DarkGray
+  Write-PcLine 'Inventaire logiciel: registre Windows uniquement; zero trafic; aucune action install/uninstall/update.' DarkGray
 }
 
 function Write-PcSettings {
