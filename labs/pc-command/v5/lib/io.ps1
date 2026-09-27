@@ -13,6 +13,8 @@ $script:PcPowerShellCapsCache = $null
 $script:PcPowerShellCapsCacheAt = [datetime]::MinValue
 $script:PcPowerShellCatalogCache = $null
 $script:PcPowerShellCatalogCacheAt = [datetime]::MinValue
+$script:PcReadOnlyDiagCache = $null
+$script:PcReadOnlyDiagCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -449,5 +451,88 @@ function Get-PcPowerShellSourceCatalog {
   }catch{
     return [pscustomobject]@{Total=0;Counts=[pscustomobject]@{};Entries=@();Error=$_.Exception.Message}
   }
+}
+
+function Get-PcReadOnlyDiagnostics {
+  param(
+    [int]$TtlSeconds=30,
+    [int]$RecentErrorHours=6,
+    [int]$MaxRecentErrors=5
+  )
+  $now=Get-Date
+  if($script:PcReadOnlyDiagCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcReadOnlyDiagCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcReadOnlyDiagCache
+  }
+
+  $errors=New-Object System.Collections.Generic.List[string]
+  $drives=@()
+  try{
+    foreach($d in @([IO.DriveInfo]::GetDrives())){
+      if(-not$d.IsReady -or $d.DriveType -ne [IO.DriveType]::Fixed){continue}
+      $total=[double]$d.TotalSize
+      $free=[double]$d.AvailableFreeSpace
+      $pctFree=if($total-gt0){[math]::Round(($free/$total)*100,1)}else{0}
+      $drives += [pscustomobject]@{
+        Name=[string]$d.Name
+        TotalGB=[math]::Round($total/1GB,1)
+        FreeGB=[math]::Round($free/1GB,1)
+        FreePercent=$pctFree
+      }
+    }
+  }catch{$errors.Add('drive: '+$_.Exception.Message)}
+
+  $networkAvailable=$false
+  try{$networkAvailable=[Net.NetworkInformation.NetworkInterface]::GetIsNetworkAvailable()}
+  catch{$errors.Add('network: '+$_.Exception.Message)}
+
+  $freeRamMb=$null
+  $totalRamMb=$null
+  $uptimeHours=$null
+  try{
+    $os=Get-CimInstance Win32_OperatingSystem -ErrorAction Stop
+    $freeRamMb=[math]::Round(([double]$os.FreePhysicalMemory/1024),0)
+    $totalRamMb=[math]::Round(([double]$os.TotalVisibleMemorySize/1024),0)
+    $boot=[Management.ManagementDateTimeConverter]::ToDateTime([string]$os.LastBootUpTime)
+    $uptimeHours=[math]::Round(((Get-Date)-$boot).TotalHours,1)
+  }catch{
+    try{
+      $os=Get-CimInstance Win32_OperatingSystem -ErrorAction Stop
+      $freeRamMb=[math]::Round(([double]$os.FreePhysicalMemory/1024),0)
+      $totalRamMb=[math]::Round(([double]$os.TotalVisibleMemorySize/1024),0)
+      $uptimeHours=[math]::Round(((Get-Date)-[datetime]$os.LastBootUpTime).TotalHours,1)
+    }catch{$errors.Add('os: '+$_.Exception.Message)}
+  }
+
+  $recent=@()
+  try{
+    if($MaxRecentErrors-gt0){
+      $since=(Get-Date).AddHours(-[math]::Abs($RecentErrorHours))
+      $recent=@(Get-WinEvent -FilterHashtable @{LogName='System';Level=2;StartTime=$since} -MaxEvents $MaxRecentErrors -ErrorAction SilentlyContinue |
+        Select-Object TimeCreated,Id,ProviderName,LevelDisplayName)
+    }
+  }catch{$errors.Add('events: '+$_.Exception.Message)}
+
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    NetworkAvailable=[bool]$networkAvailable
+    FreeRamMb=$freeRamMb
+    TotalRamMb=$totalRamMb
+    UptimeHours=$uptimeHours
+    FixedDrives=$drives
+    RecentSystemErrors=$recent
+    RecentErrorHours=$RecentErrorHours
+    MaxRecentErrors=$MaxRecentErrors
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    ReadOnly=$true
+    NetworkTrafficGenerated=$false
+    DnsCacheModified=$false
+    ExternalModuleRequired=$false
+    SourcePolicy='native bounded read-only'
+  }
+
+  $script:PcReadOnlyDiagCache=$result
+  $script:PcReadOnlyDiagCacheAt=$now
+  return $result
 }
 

@@ -247,3 +247,25 @@ if([string]$cfg.pslib_audit.capability_probe_mode-ne'on_demand_cached'){throw 'P
 if([string]$cfg.pslib_audit.pwsh7_install-ne'DEFERRED_UNTIL_MEASURED_GAP'){throw 'pwsh7 install must remain deferred'}
 Write-Host 'PC_COMMAND_V098_PSLIB_ZERO_RESIDENT_OK'
 
+# FB-038 / v0.9.9: lot 2 diagnostics must remain bounded, read-only and native-first.
+if(-not(Get-Command Get-PcReadOnlyDiagnostics -ErrorAction SilentlyContinue)){throw 'bounded native diagnostics function missing'}
+$diag=Get-PcReadOnlyDiagnostics -TtlSeconds 0 -RecentErrorHours 6 -MaxRecentErrors 5
+if(-not[bool]$diag.ReadOnly){throw 'diagnostics must be read-only'}
+if([bool]$diag.NetworkTrafficGenerated){throw 'diagnostics must not generate network traffic'}
+if([bool]$diag.DnsCacheModified){throw 'diagnostics must not modify DNS cache'}
+if([bool]$diag.ExternalModuleRequired){throw 'diagnostics must not require external modules'}
+if([int]$diag.MaxRecentErrors-ne5){throw 'recent error probe must remain bounded to 5'}
+if([int]$diag.RecentErrorHours-ne6){throw 'recent error window must remain 6h by default'}
+if(@($diag.RecentSystemErrors).Count-gt5){throw 'recent error probe returned more than 5 records'}
+$ioText=Get-Content (Join-Path $root 'pc-command\v5\lib\io.ps1') -Raw -Encoding UTF8
+foreach($forbidden in @('Clear-DnsClientCache','Install-WindowsUpdate','Reset-WUComponents','Install-Module EventViewerX','Install-Module PSEventViewer')){
+  if($ioText -match [regex]::Escape($forbidden)){throw "forbidden lot2 operation present: $forbidden"}
+}
+if(-not[bool]$cfg.pslib_audit.lot2.read_only){throw 'lot2 config must be read-only'}
+if([bool]$cfg.pslib_audit.lot2.dns_cache_modification){throw 'lot2 must forbid DNS cache modification'}
+if([bool]$cfg.pslib_audit.lot2.dns_mass_benchmark){throw 'lot2 must forbid mass DNS benchmark'}
+if([bool]$cfg.pslib_audit.lot2.windows_update_actions){throw 'lot2 must not execute Windows Update actions'}
+if([bool]$cfg.pslib_audit.lot2.eventviewerx_dependency){throw 'lot2 must not depend on EventViewerX'}
+if(@($cfg.pslib_audit.lot2.external_modules_installed).Count-ne0){throw 'lot2 must not install external modules'}
+Write-Host 'PC_COMMAND_V099_NATIVE_DIAGNOSTICS_OK'
+

@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "ship zero-resident PowerShell source catalog and native-first capability detection without v0.9.7 regressions",
+    "current_goal": "ship bounded native read-only diagnostics with zero external dependency and no v0.9.8 regressions",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -148,7 +148,7 @@
   },
   "product": {
     "stage": "stable",
-    "objective": "PowerShell source catalog + native-first capability detection + zero-resident integration",
+    "objective": "bounded native read-only diagnostics from PowerShell repo audit; zero resident dependency",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
@@ -244,6 +244,28 @@
     "capability_probe_mode": "on_demand_cached",
     "persistent_api": "REJECT_UNLESS_DEMONSTRATED",
     "pwsh7_install": "DEFERRED_UNTIL_MEASURED_GAP",
-    "idle_ram_target": "no measurable increase from catalog/probe"
+    "idle_ram_target": "no measurable increase from catalog/probe",
+    "lot2": {
+      "strategy": "native bounded read-only first",
+      "audited_sources": [
+        "EvotecIT/EventViewerX",
+        "mgajda83/PSWindowsUpdate",
+        "fleschutz/PowerShell",
+        "jdhitsolutions/PSScriptTools"
+      ],
+      "integrated_primitives": [
+        "fixed-drive free space via System.IO.DriveInfo",
+        "network availability via .NET NetworkInterface",
+        "RAM and uptime via Win32_OperatingSystem CIM",
+        "max 5 recent System errors via Get-WinEvent"
+      ],
+      "external_modules_installed": [],
+      "dns_cache_modification": false,
+      "dns_mass_benchmark": false,
+      "windows_update_actions": false,
+      "eventviewerx_dependency": false,
+      "read_only": true,
+      "cache_seconds": 30
+    }
   }
 }

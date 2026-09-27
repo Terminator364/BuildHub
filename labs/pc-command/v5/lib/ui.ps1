@@ -515,15 +515,29 @@ function Write-PcHealth {
   $h=Get-PcHealthScore $Config $Sync $UpdateInfo
   $caps=Get-PcPowerShellCapabilitySnapshot
   $catalog=Get-PcPowerShellSourceCatalog
+  $diag=Get-PcReadOnlyDiagnostics
   Write-PcLine 'SANTE / DIAGNOSTIC' -ForegroundColor Cyan
   Write-PcLine ''
   Write-PcLine ('Score : '+$h.Score+'/100 | '+$h.Level) -ForegroundColor $h.Color
-  Write-PcLine ('RAM libre : '+$h.FreeRamMb+' MB')
+  Write-PcLine ('RAM libre : '+$h.FreeRamMb+' MB | uptime '+$(if($null-ne$diag.UptimeHours){$diag.UptimeHours.ToString()+' h'}else{'?'}))
+  Write-PcLine ('Reseau local : '+$(if($diag.NetworkAvailable){'DISPONIBLE'}else{'INDISPONIBLE'})+' | probe lecture seule / zero trafic genere')
+  $driveWarn=@($diag.FixedDrives|Where-Object {[double]$_.FreePercent-lt10})
+  foreach($d in @($diag.FixedDrives|Select-Object -First 3)){
+    $col=if([double]$d.FreePercent-lt10){'Yellow'}else{'Gray'}
+    Write-PcLine ('Disque '+$d.Name+' : '+$d.FreeGB+' GB libres / '+$d.TotalGB+' GB ('+$d.FreePercent+'%)') $col
+  }
+  $recentCount=@($diag.RecentSystemErrors).Count
+  Write-PcLine ('Erreurs System recentes : '+$recentCount+' max '+$diag.MaxRecentErrors+' sur '+$diag.RecentErrorHours+' h')
+  foreach($e in @($diag.RecentSystemErrors|Select-Object -First 3)){
+    Write-PcLine ('  '+$e.TimeCreated.ToString('HH:mm')+' | '+$e.ProviderName+' | ID '+$e.Id) DarkGray
+  }
   Write-PcLine ('PowerShell : '+$caps.Engine+' | WinGet '+$(if($caps.WinGetDetected){'OK'}else{'ABSENT'})+' | pwsh7 '+$(if($caps.Pwsh7Detected){'DETECTE'}else{'DIFFERE'}))
   if(-not$catalog.Error){Write-PcLine ('Sources PS : '+$catalog.Total+' auditees | zero installation runtime automatique') DarkCyan}
-  if(@($h.Reasons).Count-eq0){Write-PcLine 'Aucune anomalie prioritaire detectee.' -ForegroundColor Green}
+  if($diag.Error){Write-PcLine ('Diagnostic partiel : '+$diag.Error) Yellow}
+  if(@($h.Reasons).Count-eq0 -and $driveWarn.Count-eq0){Write-PcLine 'Aucune anomalie prioritaire detectee.' -ForegroundColor Green}
   else{
     Write-PcLine 'Points a surveiller :' -ForegroundColor Yellow
     foreach($x in @($h.Reasons)){Write-PcLine ('  - '+$x)}
+    foreach($d in $driveWarn){Write-PcLine ('  - espace faible sur '+$d.Name+' : '+$d.FreePercent+'% libre')}
   }
 }
