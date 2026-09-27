@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "ship exact-pin dependency lock with zero runtime module dependencies and no v1.0.2 regressions",
+    "current_goal": "surface battery charge/status and active scheme with zero network, no WinForms and no power-plan changes",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,8 +147,8 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "stable",
-    "objective": "exact-pin dependency lock with zero runtime module dependencies",
+    "stage": "candidate",
+    "objective": "lightweight read-only battery and active power-plan snapshot",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
@@ -340,6 +340,21 @@
       "reporting_modules_added": [],
       "shell_cosmetic_modules_added": [],
       "build_orchestrator_added": false
+    },
+    "lot7_power": {
+      "audited_sources": [
+        "fleschutz/PowerShell",
+        "Microsoft Win32_Battery documentation"
+      ],
+      "read_only": true,
+      "cache_seconds": 30,
+      "battery_source": "Win32_Battery",
+      "power_scheme_source": "powercfg_getactivescheme",
+      "winforms": false,
+      "power_plan_change": false,
+      "battery_change": false,
+      "network_traffic": false,
+      "external_module_required": false
     }
   },
   "action_policy": {
