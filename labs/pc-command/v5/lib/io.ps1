@@ -486,6 +486,103 @@ function Get-PcPowerShellSourceCatalog {
   }
 }
 
+function Get-PcBoundedRecentSystemErrors {
+  param(
+    [int]$RecentErrorHours=6,
+    [int]$MaxRecentErrors=5,
+    [int]$TimeoutMs=2000
+  )
+
+  $limit=[math]::Max(0,[math]::Min(20,$MaxRecentErrors))
+  $timeout=[math]::Max(250,[math]::Min(5000,$TimeoutMs))
+  if($limit-eq0){
+    return [pscustomobject]@{
+      Items=@();TimedOut=$false;DurationMs=0;ExitCode=0;Error=$null
+      Source='wevtutil-bounded';TimeoutMs=$timeout
+    }
+  }
+
+  $errors=New-Object System.Collections.Generic.List[string]
+  $items=@()
+  $timedOut=$false
+  $exitCode=$null
+  $sw=[Diagnostics.Stopwatch]::StartNew()
+  $proc=$null
+  try{
+    $wevtutil=Join-Path $env:WINDIR 'System32\wevtutil.exe'
+    if(-not(Test-Path -LiteralPath $wevtutil)){throw 'wevtutil absent'}
+    $hours=[math]::Max(1,[math]::Min(168,[math]::Abs($RecentErrorHours)))
+    $windowMs=[int64]$hours*60*60*1000
+    $query='*[System[(Level=2) and TimeCreated[timediff(@SystemTime) <= '+$windowMs+']]]'
+
+    $psi=New-Object Diagnostics.ProcessStartInfo
+    $psi.FileName=$wevtutil
+    $psi.Arguments='qe System /q:"'+$query+'" /c:'+$limit+' /rd:true /f:xml'
+    $psi.UseShellExecute=$false
+    $psi.CreateNoWindow=$true
+    $psi.RedirectStandardOutput=$true
+    $psi.RedirectStandardError=$true
+
+    $proc=[Diagnostics.Process]::Start($psi)
+    if(-not$proc.WaitForExit($timeout)){
+      $timedOut=$true
+      try{$proc.Kill()}catch{}
+      try{$null=$proc.WaitForExit(250)}catch{}
+    }
+
+    $raw=$proc.StandardOutput.ReadToEnd()
+    $stderr=$proc.StandardError.ReadToEnd()
+    if(-not$timedOut){$exitCode=$proc.ExitCode}
+    if($timedOut){
+      $errors.Add('events timeout '+$timeout+' ms')
+    }elseif($exitCode-ne0){
+      $errors.Add('wevtutil exit '+$exitCode+$(if($stderr){': '+$stderr.Trim()}else{''}))
+    }elseif(-not[string]::IsNullOrWhiteSpace($raw)){
+      try{
+        [xml]$doc='<Events>'+$raw+'</Events>'
+        $ns=New-Object Xml.XmlNamespaceManager($doc.NameTable)
+        $ns.AddNamespace('e','http://schemas.microsoft.com/win/2004/08/events/event')
+        foreach($node in @($doc.SelectNodes('/Events/e:Event',$ns))){
+          $sys=$node.SelectSingleNode('e:System',$ns)
+          if(-not$sys){continue}
+          $providerNode=$sys.SelectSingleNode('e:Provider',$ns)
+          $idNode=$sys.SelectSingleNode('e:EventID',$ns)
+          $timeNode=$sys.SelectSingleNode('e:TimeCreated',$ns)
+          $provider=if($providerNode){[string]$providerNode.GetAttribute('Name')}else{'?'}
+          $id=if($idNode){[int]$idNode.InnerText}else{0}
+          $time=$null
+          if($timeNode){
+            $rawTime=[string]$timeNode.GetAttribute('SystemTime')
+            if($rawTime){
+              try{$time=[datetimeoffset]::Parse($rawTime).LocalDateTime}catch{}
+            }
+          }
+          $items += [pscustomobject]@{
+            TimeCreated=$time
+            Id=$id
+            ProviderName=$provider
+            LevelDisplayName='Erreur'
+          }
+        }
+      }catch{$errors.Add('events parse: '+$_.Exception.Message)}
+    }
+  }catch{$errors.Add('events: '+$_.Exception.Message)}
+  finally{
+    if($proc){$proc.Dispose()}
+    $sw.Stop()
+  }
+
+  return [pscustomobject]@{
+    Items=@($items|Select-Object -First $limit)
+    TimedOut=$timedOut
+    DurationMs=[math]::Round($sw.Elapsed.TotalMilliseconds,1)
+    ExitCode=$exitCode
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    Source='wevtutil-bounded'
+    TimeoutMs=$timeout
+  }
+}
+
 function Get-PcReadOnlyDiagnostics {
   param(
     [int]$TtlSeconds=30,
@@ -537,14 +634,9 @@ function Get-PcReadOnlyDiagnostics {
     }catch{$errors.Add('os: '+$_.Exception.Message)}
   }
 
-  $recent=@()
-  try{
-    if($MaxRecentErrors-gt0){
-      $since=(Get-Date).AddHours(-[math]::Abs($RecentErrorHours))
-      $recent=@(Get-WinEvent -FilterHashtable @{LogName='System';Level=2;StartTime=$since} -MaxEvents $MaxRecentErrors -ErrorAction SilentlyContinue |
-        Select-Object TimeCreated,Id,ProviderName,LevelDisplayName)
-    }
-  }catch{$errors.Add('events: '+$_.Exception.Message)}
+  $eventProbe=Get-PcBoundedRecentSystemErrors -RecentErrorHours $RecentErrorHours -MaxRecentErrors $MaxRecentErrors -TimeoutMs 2000
+  $recent=@($eventProbe.Items)
+  if($eventProbe.Error){$errors.Add($eventProbe.Error)}
 
   $result=[pscustomobject]@{
     ObservedAt=$now
@@ -556,12 +648,16 @@ function Get-PcReadOnlyDiagnostics {
     RecentSystemErrors=$recent
     RecentErrorHours=$RecentErrorHours
     MaxRecentErrors=$MaxRecentErrors
+    RecentSystemErrorsTimedOut=[bool]$eventProbe.TimedOut
+    RecentSystemErrorsDurationMs=$eventProbe.DurationMs
+    RecentSystemErrorsSource=[string]$eventProbe.Source
+    RecentSystemErrorsTimeoutMs=$eventProbe.TimeoutMs
     Error=if($errors.Count){$errors -join ' | '}else{$null}
     ReadOnly=$true
     NetworkTrafficGenerated=$false
     DnsCacheModified=$false
     ExternalModuleRequired=$false
-    SourcePolicy='native bounded read-only'
+    SourcePolicy='native bounded read-only; event query hard-timeout'
   }
 
   $script:PcReadOnlyDiagCache=$result
