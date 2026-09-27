@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "prove action policy decisions, preserve v0.9.9 diagnostics and <=150 MB viewer",
+    "current_goal": "ship non-executing L0-L3 action policy with hard-deny patterns and no v0.9.9 regressions",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,7 +147,7 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "candidate",
+    "stage": "stable",
     "objective": "repository-informed L0-L3 action policy gate; no privileged action execution added",
     "target_user_score_10": 5,
     "command_router": "contextual",
