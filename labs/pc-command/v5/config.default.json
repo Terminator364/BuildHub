@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "prove all future dependency requests default DENY unless exact version + approved repository + APPROVED state + L2 gates",
+    "current_goal": "ship exact-pin dependency lock with zero runtime module dependencies and no v1.0.2 regressions",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,7 +147,7 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "candidate",
+    "stage": "stable",
     "objective": "exact-pin dependency lock with zero runtime module dependencies",
     "target_user_score_10": 5,
     "command_router": "contextual",
