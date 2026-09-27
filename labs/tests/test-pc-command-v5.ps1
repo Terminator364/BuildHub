@@ -539,5 +539,20 @@ if([bool]$cfg.pslib_audit.lot9_streaming_trim.trim_network_traffic){throw 'lot9 
 if([bool]$cfg.pslib_audit.lot9_streaming_trim.filesystem_event_baseline){throw 'lot9 slow filesystem event baseline must be disabled'}
 if([bool]$cfg.pslib_audit.lot9_streaming_trim.legacy_smart_baseline){throw 'lot9 legacy SMART baseline must be disabled'}
 if([bool]$cfg.pslib_audit.lot9_streaming_trim.resident_monitoring_added){throw 'lot9 resident monitoring must remain absent'}
+
+if(-not(Get-Command Get-PcBoundedRecentSystemErrors -ErrorAction SilentlyContinue)){throw 'bounded recent System error helper missing'}
+$diagStart106=$ioText.IndexOf('function Get-PcBoundedRecentSystemErrors')
+$diagEnd106=$ioText.IndexOf('function Get-PcLocalNetworkSnapshot')
+if($diagStart106-lt0 -or $diagEnd106-le$diagStart106){throw 'bounded diagnostics source block missing'}
+$diagFn106=$ioText.Substring($diagStart106,$diagEnd106-$diagStart106)
+if($diagFn106 -match 'Get-WinEvent'){throw 'baseline diagnostics must not use unbounded synchronous Get-WinEvent'}
+if($diagFn106 -notmatch 'wevtutil\.exe'){throw 'bounded diagnostics must use wevtutil child process'}
+if($diagFn106 -notmatch 'WaitForExit\(\$timeout\)'){throw 'bounded diagnostics must enforce child-process timeout'}
+$bounded106=Get-PcBoundedRecentSystemErrors -RecentErrorHours 6 -MaxRecentErrors 5 -TimeoutMs 2000
+if([string]$bounded106.Source-ne'wevtutil-bounded'){throw 'bounded diagnostics source marker mismatch'}
+if([int]$bounded106.TimeoutMs-ne2000){throw 'bounded diagnostics timeout must be 2000 ms'}
+if(@($bounded106.Items).Count-gt5){throw 'bounded diagnostics returned too many events'}
+if([string](Get-PcReadOnlyDiagnostics -TtlSeconds 0 -RecentErrorHours 6 -MaxRecentErrors 5).RecentSystemErrorsSource-ne'wevtutil-bounded'){throw 'read-only diagnostics must use bounded event source'}
+
 Write-Host 'PC_COMMAND_V106_STREAMING_TRIM_OK'
 
