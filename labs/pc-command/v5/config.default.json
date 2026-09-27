@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -116,7 +116,9 @@
     "ingest_before_build": true,
     "preserve_previous": true,
     "reader_self_reconcile": true,
-    "independent_section_errors": true
+    "independent_section_errors": true,
+    "streaming_reader": true,
+    "recent_window": 12
   },
   "sync_engine": {
     "process_start_info_compat": "windows_powershell_5_1",
@@ -130,7 +132,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "ship zero-traffic registry-only local software inventory with no winget list, AppX baseline or package modifications",
+    "current_goal": "preserve exact feedback reconciliation while bounding ledger RAM and adding lightweight TRIM status without slow/ambiguous storage probes",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,8 +149,8 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "stable",
-    "objective": "zero-traffic local software inventory from Windows Uninstall registry",
+    "stage": "candidate",
+    "objective": "full 41-repository relevance coverage hardening: streaming feedback ledger + cached read-only TRIM",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
@@ -372,6 +374,49 @@
       "update_action": false,
       "external_module_required": false,
       "local_view_only": true
+    },
+    "relevance_coverage": {
+      "catalog_entries": 41,
+      "covered_entries": 41,
+      "status": "COMPLETE_FOR_CURRENT_PC_COMMAND_RELEVANCE",
+      "note": "Coverage means architecture/recommendations/examples relevant to PC Command were reviewed; it does not mean blindly applying every repository feature."
+    },
+    "lot9_streaming_trim": {
+      "audited_sources": [
+        "PowerShell/PowerShell",
+        "ScoopInstaller/Scoop",
+        "chocolatey/choco",
+        "asheroto/winget-install",
+        "simeononsecurity/Windows-Optimize-Debloat",
+        "zweilosec/PowerShell-Administration-Tools",
+        "SysAdminDoc/PathForge",
+        "Badgerati/Pode",
+        "theohbrothers/ScheduledTaskManagement",
+        "dahlbyk/posh-git",
+        "psake/psake",
+        "MScholtes/PS2EXE",
+        "cloudbase/powershell-yaml",
+        "Icinga/icinga-powershell-framework",
+        "PoshCode/PowerShellPracticeAndStyle",
+        "oazabir/PowershellMonitoring"
+      ],
+      "selected_primitives": [
+        "feedback JSONL streaming via System.IO.StreamReader",
+        "bounded 12-event recent feedback window",
+        "fsutil behavior query DisableDeleteNotify"
+      ],
+      "trim_cache_seconds": 300,
+      "trim_read_only": true,
+      "trim_network_traffic": false,
+      "filesystem_event_baseline": false,
+      "filesystem_event_rejection": "ID-only provider collisions and ~14.9s field latency",
+      "legacy_smart_baseline": false,
+      "legacy_smart_rejection": "~6.2s field latency and zero records on MBMPC",
+      "resident_monitoring_added": false,
+      "package_manager_added": false,
+      "global_debloat_added": false,
+      "yaml_dependency_added": false,
+      "build_orchestrator_added": false
     }
   },
   "action_policy": {
