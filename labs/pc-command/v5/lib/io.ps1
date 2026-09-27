@@ -380,12 +380,19 @@ function Get-PcPowerShellCapabilitySnapshot {
     ScheduledTaskManagement=(Get-PcModuleVersion 'ScheduledTaskManagement')
   }
 
+  # Check the backing Windows modules on disk instead of calling Get-Command
+  # for module-backed cmdlets. Get-Command can warm NetTCPIP/ScheduledTasks
+  # discovery caches and add tens of MB to the first Sources view.
+  $diagAvailable=[bool](Get-PcModuleVersion 'Microsoft.PowerShell.Diagnostics')
+  $scheduledAvailable=[bool](Get-PcModuleVersion 'ScheduledTasks')
+  $netTcpAvailable=[bool](Get-PcModuleVersion 'NetTCPIP')
+  $managementAvailable=[bool](Get-PcModuleVersion 'Microsoft.PowerShell.Management')
   $native=[ordered]@{
-    GetWinEvent=[bool](Get-Command Get-WinEvent -ErrorAction SilentlyContinue)
-    GetScheduledTask=[bool](Get-Command Get-ScheduledTask -ErrorAction SilentlyContinue)
-    GetNetTCPConnection=[bool](Get-Command Get-NetTCPConnection -ErrorAction SilentlyContinue)
-    GetComputerInfo=[bool](Get-Command Get-ComputerInfo -ErrorAction SilentlyContinue)
-    TestNetConnection=[bool](Get-Command Test-NetConnection -ErrorAction SilentlyContinue)
+    GetWinEvent=$diagAvailable
+    GetScheduledTask=$scheduledAvailable
+    GetNetTCPConnection=$netTcpAvailable
+    GetComputerInfo=$managementAvailable
+    TestNetConnection=$netTcpAvailable
   }
 
   $result=[pscustomobject]@{
