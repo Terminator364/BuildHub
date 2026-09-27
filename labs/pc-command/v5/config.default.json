@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "ship non-executing L0-L3 action policy with hard-deny patterns and no v0.9.9 regressions",
+    "current_goal": "ship zero-traffic local network snapshot with no active probes, no external dependency and no v1.0.0 regressions",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -148,7 +148,7 @@
   },
   "product": {
     "stage": "stable",
-    "objective": "repository-informed L0-L3 action policy gate; no privileged action execution added",
+    "objective": "zero-traffic local network snapshot from PowerShell network repository audit",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
@@ -266,6 +266,25 @@
       "eventviewerx_dependency": false,
       "read_only": true,
       "cache_seconds": 30
+    },
+    "lot4_network": {
+      "audited_sources": [
+        "BornToBeRoot/NETworkManager",
+        "tinuwalther/PsNetTools",
+        "psmux/pstop",
+        "JustinGrote/PoshNmap",
+        "bvoris/PSNetMon"
+      ],
+      "selected_primitive": "local .NET NetworkInterface introspection",
+      "active_probe": false,
+      "ping": false,
+      "traceroute": false,
+      "port_scan": false,
+      "external_dns_lookup": false,
+      "dns_cache_modification": false,
+      "external_module_required": false,
+      "cache_seconds": 30,
+      "primary_selection": "Up + non-APIPA IPv4 + gateway; fallback Up + non-APIPA IPv4"
     }
   },
   "action_policy": {

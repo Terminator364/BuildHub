@@ -15,6 +15,8 @@ $script:PcPowerShellCatalogCache = $null
 $script:PcPowerShellCatalogCacheAt = [datetime]::MinValue
 $script:PcReadOnlyDiagCache = $null
 $script:PcReadOnlyDiagCacheAt = [datetime]::MinValue
+$script:PcNetworkSnapshotCache = $null
+$script:PcNetworkSnapshotCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -533,6 +535,76 @@ function Get-PcReadOnlyDiagnostics {
 
   $script:PcReadOnlyDiagCache=$result
   $script:PcReadOnlyDiagCacheAt=$now
+  return $result
+}
+
+function Get-PcLocalNetworkSnapshot {
+  param([int]$TtlSeconds=30)
+  $now=Get-Date
+  if($script:PcNetworkSnapshotCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcNetworkSnapshotCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcNetworkSnapshotCache
+  }
+
+  $rows=@()
+  $errors=New-Object System.Collections.Generic.List[string]
+  try{
+    foreach($nic in @([Net.NetworkInformation.NetworkInterface]::GetAllNetworkInterfaces())){
+      if($nic.NetworkInterfaceType -eq [Net.NetworkInformation.NetworkInterfaceType]::Loopback){continue}
+      $props=$nic.GetIPProperties()
+      $v4=@($props.UnicastAddresses |
+        Where-Object {$_.Address.AddressFamily -eq [Net.Sockets.AddressFamily]::InterNetwork} |
+        ForEach-Object {$_.Address.IPAddressToString} |
+        Where-Object {$_ -and $_ -notmatch '^169\.254\.' -and $_ -notmatch '^127\.'} |
+        Select-Object -Unique)
+      $gw=@($props.GatewayAddresses |
+        Where-Object {$_.Address.AddressFamily -eq [Net.Sockets.AddressFamily]::InterNetwork} |
+        ForEach-Object {$_.Address.IPAddressToString} |
+        Where-Object {$_} |
+        Select-Object -Unique)
+      $dns=@($props.DnsAddresses |
+        Where-Object {$_.AddressFamily -eq [Net.Sockets.AddressFamily]::InterNetwork} |
+        ForEach-Object {$_.IPAddressToString} |
+        Where-Object {$_} |
+        Select-Object -Unique)
+      $rows += [pscustomobject]@{
+        Name=[string]$nic.Name
+        Description=[string]$nic.Description
+        Type=[string]$nic.NetworkInterfaceType
+        Status=[string]$nic.OperationalStatus
+        IPv4=$v4
+        Gateway=$gw
+        DNS=$dns
+        LinkMbps=if([double]$nic.Speed-gt0){[math]::Round(([double]$nic.Speed/1000000),0)}else{0}
+      }
+    }
+  }catch{$errors.Add('network-snapshot: '+$_.Exception.Message)}
+
+  $primary=$null
+  $primary=@($rows | Where-Object {
+    $_.Status -eq 'Up' -and @($_.IPv4).Count-gt0 -and @($_.Gateway).Count-gt0
+  } | Select-Object -First 1)
+  if($primary.Count-eq0){
+    $primary=@($rows | Where-Object {
+      $_.Status -eq 'Up' -and @($_.IPv4).Count-gt0
+    } | Select-Object -First 1)
+  }
+
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    Primary=if($primary.Count){$primary[0]}else{$null}
+    Interfaces=$rows
+    ReadOnly=$true
+    NetworkTrafficGenerated=$false
+    ExternalLookup=$false
+    DnsCacheModified=$false
+    ActiveProbeUsed=$false
+    ExternalModuleRequired=$false
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    SourcePolicy='local .NET network introspection only'
+  }
+  $script:PcNetworkSnapshotCache=$result
+  $script:PcNetworkSnapshotCacheAt=$now
   return $result
 }
 
