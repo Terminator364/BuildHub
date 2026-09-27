@@ -323,12 +323,29 @@ function Complete-PcUpdateProbe {
 
 function Get-PcModuleVersion {
   param([string]$Name)
-  try {
-    $m=Get-Module -ListAvailable -Name $Name -ErrorAction SilentlyContinue |
-      Sort-Object Version -Descending |
-      Select-Object -First 1
-    if($m){return [string]$m.Version}
-  } catch {}
+  # Avoid Get-Module -ListAvailable here: it can populate the module analysis
+  # cache and create a noticeable first-use RAM spike on a 4 GB PC.
+  foreach($root in @($env:PSModulePath -split ';' | Where-Object {$_} | Select-Object -Unique)){
+    try{
+      $dir=Join-Path $root $Name
+      if(-not(Test-Path -LiteralPath $dir -PathType Container)){continue}
+      $versions=New-Object System.Collections.Generic.List[version]
+      foreach($child in @(Get-ChildItem -LiteralPath $dir -Directory -ErrorAction SilentlyContinue)){
+        try{$versions.Add([version]$child.Name)}catch{}
+      }
+      if($versions.Count-gt0){
+        return [string](@($versions|Sort-Object -Descending)[0])
+      }
+      $manifest=Join-Path $dir ($Name+'.psd1')
+      if(Test-Path -LiteralPath $manifest){
+        $line=Select-String -LiteralPath $manifest -Pattern '^\s*ModuleVersion\s*=\s*[''"]?([^''"\s]+)' -ErrorAction SilentlyContinue | Select-Object -First 1
+        if($line -and $line.Matches.Count){
+          return [string]$line.Matches[0].Groups[1].Value
+        }
+      }
+      return 'present'
+    }catch{}
+  }
   return $null
 }
 
