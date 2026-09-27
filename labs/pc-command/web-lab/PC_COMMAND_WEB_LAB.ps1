@@ -39,8 +39,9 @@ if(-not$ready){
 }
 
 $edgeCandidates=@(
-  (Join-Path ${env:ProgramFiles(x86)} 'Microsoft\Edge\Application\msedge.exe'),
-  (Join-Path $env:ProgramFiles 'Microsoft\Edge\Application\msedge.exe')
+  "$env:SystemDrive\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+  "$env:SystemDrive\Program Files\Microsoft\Edge\Application\msedge.exe",
+  "$env:LOCALAPPDATA\Microsoft\Edge\Application\msedge.exe"
 ) | Where-Object { $_ -and (Test-Path -LiteralPath $_) }
 $edge=$edgeCandidates|Select-Object -First 1
 if($edge){
