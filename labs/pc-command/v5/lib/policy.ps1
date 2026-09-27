@@ -1,3 +1,4 @@
+$script:PcDependencyLockCache = $null
 $script:PcActionPolicyVersion='pc.command.action.policy.v1'
 
 function Get-PcBoolProperty {
@@ -117,3 +118,75 @@ function Get-PcActionPolicySummary {
     DeniedPatterns=@('remote pipe-to-execute','global debloat/tweak presets')
   }
 }
+
+function Get-PcDependencyLock {
+  if($script:PcDependencyLockCache){return $script:PcDependencyLockCache}
+  $path=Join-Path (Split-Path $PSScriptRoot -Parent) 'dependency-lock.json'
+  if(-not(Test-Path -LiteralPath $path)){
+    return [pscustomobject]@{Error='dependency-lock.json absent';Policy=$null;RuntimeDependencies=@();ApprovedOnDemand=@()}
+  }
+  try{
+    $raw=Get-Content -LiteralPath $path -Raw -Encoding UTF8|ConvertFrom-Json
+    $result=[pscustomobject]@{
+      Error=$null
+      Schema=[string]$raw.schema
+      Version=[string]$raw.version
+      Policy=$raw.policy
+      RuntimeDependencies=@($raw.runtime_dependencies)
+      ApprovedOnDemand=@($raw.approved_on_demand)
+      CiTools=@($raw.ci_tools)
+    }
+    $script:PcDependencyLockCache=$result
+    return $result
+  }catch{
+    return [pscustomobject]@{Error=$_.Exception.Message;Policy=$null;RuntimeDependencies=@();ApprovedOnDemand=@()}
+  }
+}
+
+function Test-PcDependencyRequest {
+  param(
+    $Lock,
+    [string]$Name,
+    [string]$Version,
+    [string]$Repository='PSGallery',
+    [bool]$AutoInstall=$false
+  )
+  $reasons=New-Object System.Collections.Generic.List[string]
+  $missing=New-Object System.Collections.Generic.List[string]
+
+  if($null-eq$Lock -or $Lock.Error){
+    return [pscustomobject]@{Name=$Name;Version=$Version;Repository=$Repository;Decision='DENY';Level='L2';Reasons=@('verrou de dependances indisponible');Missing=@('DependencyLock')}
+  }
+
+  if($AutoInstall -or [bool]$Lock.Policy.runtime_auto_install){
+    $reasons.Add('installation runtime automatique interdite')
+  }
+  if([string]::IsNullOrWhiteSpace($Name)){$missing.Add('Name')}
+  if([string]::IsNullOrWhiteSpace($Version)){$missing.Add('ExactVersion')}
+  elseif($Version -match '^(latest|\*|current)$'){$reasons.Add('version flottante interdite')}
+  if(@($Lock.Policy.approved_repositories) -notcontains $Repository){$reasons.Add('depot non approuve')}
+
+  $entry=@($Lock.ApprovedOnDemand|Where-Object {[string]$_.name -ieq $Name}|Select-Object -First 1)
+  if($entry.Count-ne1){
+    $reasons.Add('ressource absente de la liste on-demand')
+  }else{
+    if([string]$entry[0].state -ne'APPROVED'){$reasons.Add('ressource non APPROVED')}
+    if([string]::IsNullOrWhiteSpace([string]$entry[0].exact_version)){$missing.Add('CommittedExactVersion')}
+    elseif([string]$entry[0].exact_version -ne$Version){$reasons.Add('version differente du verrou')}
+    if([string]$entry[0].repository -ne$Repository){$reasons.Add('depot different du verrou')}
+  }
+
+  if($missing.Count-gt0 -or $reasons.Count-gt0){
+    return [pscustomobject]@{Name=$Name;Version=$Version;Repository=$Repository;Decision='DENY';Level='L2';Reasons=@($reasons);Missing=@($missing)}
+  }
+  return [pscustomobject]@{
+    Name=$Name
+    Version=$Version
+    Repository=$Repository
+    Decision='ALLOW_GATED'
+    Level='L2'
+    Reasons=@('version exacte et depot approuve; reste soumis au moteur L2')
+    Missing=@()
+  }
+}
+

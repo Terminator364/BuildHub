@@ -373,3 +373,40 @@ if([bool]$cfg.pslib_audit.lot5_startup_ram.service_enumeration){throw 'lot5 serv
 if([bool]$cfg.pslib_audit.lot5_startup_ram.watcher){throw 'lot5 watcher must be false'}
 Write-Host 'PC_COMMAND_V102_STARTUP_RAM_OK'
 
+# FB-042 / v1.0.3: dependency requests must default DENY unless exact-pinned and approved.
+$depPath=Join-Path $root 'pc-command\v5\dependency-lock.json'
+if(-not(Test-Path $depPath)){throw 'dependency lock missing'}
+$depRaw=Get-Content $depPath -Raw -Encoding UTF8|ConvertFrom-Json
+if([string]$depRaw.schema-ne'pc.command.dependencies.v1'){throw 'dependency lock schema mismatch'}
+if(@($depRaw.runtime_dependencies).Count-ne0){throw 'runtime dependency set must remain empty'}
+if([bool]$depRaw.policy.runtime_auto_install){throw 'runtime auto-install must remain disabled'}
+if(-not[bool]$depRaw.policy.exact_version_required){throw 'exact version must be required'}
+if([bool]$depRaw.policy.latest_keyword_allowed){throw 'latest keyword must be forbidden'}
+if(@($depRaw.policy.approved_repositories)-notcontains'PSGallery'){throw 'PSGallery approved repository missing'}
+
+$dep=Get-PcDependencyLock
+if($dep.Error){throw "dependency lock reader failed: $($dep.Error)"}
+if(@($dep.RuntimeDependencies).Count-ne0){throw 'runtime dependency reader count must be zero'}
+$deferred=Test-PcDependencyRequest -Lock $dep -Name 'ImportExcel' -Version '1.2.3' -Repository 'PSGallery'
+if([string]$deferred.Decision-ne'DENY'){throw 'deferred dependency request must be denied'}
+$latest=Test-PcDependencyRequest -Lock $dep -Name 'ImportExcel' -Version 'latest' -Repository 'PSGallery'
+if([string]$latest.Decision-ne'DENY'){throw 'floating latest dependency request must be denied'}
+$unknown=Test-PcDependencyRequest -Lock $dep -Name 'Unknown.Module' -Version '1.0.0' -Repository 'PSGallery'
+if([string]$unknown.Decision-ne'DENY'){throw 'unknown dependency request must be denied'}
+$auto=Test-PcDependencyRequest -Lock $dep -Name 'ImportExcel' -Version '1.2.3' -Repository 'PSGallery' -AutoInstall $true
+if([string]$auto.Decision-ne'DENY'){throw 'runtime automatic dependency request must be denied'}
+
+$synthetic=[pscustomobject]@{
+  Error=$null
+  Policy=[pscustomobject]@{runtime_auto_install=$false;approved_repositories=@('PSGallery')}
+  ApprovedOnDemand=@([pscustomobject]@{name='Pinned.Module';repository='PSGallery';exact_version='2.4.6';state='APPROVED'})
+}
+$ok=Test-PcDependencyRequest -Lock $synthetic -Name 'Pinned.Module' -Version '2.4.6' -Repository 'PSGallery'
+if([string]$ok.Decision-ne'ALLOW_GATED' -or [string]$ok.Level-ne'L2'){throw 'exact pinned approved dependency must reach L2 gate'}
+$wrong=Test-PcDependencyRequest -Lock $synthetic -Name 'Pinned.Module' -Version '2.4.7' -Repository 'PSGallery'
+if([string]$wrong.Decision-ne'DENY'){throw 'wrong dependency version must be denied'}
+if([int]$cfg.pslib_audit.lot6_dependency_lock.runtime_dependencies-ne0){throw 'lot6 runtime dependency count must be zero'}
+if([bool]$cfg.pslib_audit.lot6_dependency_lock.runtime_auto_install){throw 'lot6 auto-install must be false'}
+if(-not[bool]$cfg.pslib_audit.lot6_dependency_lock.exact_version_required){throw 'lot6 exact version requirement missing'}
+Write-Host 'PC_COMMAND_V103_DEPENDENCY_LOCK_OK'
+
