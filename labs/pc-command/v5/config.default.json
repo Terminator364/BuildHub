@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -100,10 +100,6 @@
     "require_manifest_channel": true,
     "post_launch_version_match": true,
     "rollback_restores_root_bootstrap": true,
-    "required_manifest_channel": "stable",
-    "require_manifest_channel": true,
-    "post_launch_version_match": true,
-    "rollback_restores_root_bootstrap": true,
     "recover_interrupted_swap_offline": true,
     "validate_local_backup_before_recovery": true
   },
@@ -134,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "enforce stable-channel promotion + rollback launcher continuity + preserve v0.9.4 field proof",
+    "current_goal": "ship zero-resident PowerShell source catalog and native-first capability detection without v0.9.7 regressions",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -151,8 +147,8 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "candidate",
-    "objective": "promotion-aware updater + rollback-safe launcher + detailed low-RAM reports",
+    "stage": "stable",
+    "objective": "PowerShell source catalog + native-first capability detection + zero-resident integration",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
@@ -201,7 +197,7 @@
   "powershell_runtime": {
     "current_engine": "Windows PowerShell 5.1",
     "pwsh7_detected": false,
-    "migration_status": "DEFERRED_UNTIL_REVERSIBLE_TEST",
+    "migration_status": "DEFERRED_UNTIL_REVERSIBLE_BENCHMARK",
     "task_profile": [
       "-NoProfile",
       "-NonInteractive"
@@ -222,19 +218,32 @@
     "integration_policy": "native_first_atomic_reversible_no_mass_install",
     "first_batch": [
       "PSScriptAnalyzer CI gate",
-      "Pester CI gate"
+      "Pester CI gate",
+      "Native Windows capability probe",
+      "WinGet detection",
+      "Repository classification catalog"
     ],
     "deferred_runtime_modules": [
       "PSResourceGet",
       "EventViewerX",
       "PSWindowsUpdate",
       "PSWriteHTML",
-      "ScheduledTaskManagement"
+      "ImportExcel",
+      "PSScriptTools",
+      "Invoke-Build"
     ],
     "prohibited_mass_actions": [
       "WinUtil presets",
       "Sophia presets",
-      "Win11Debloat presets"
-    ]
+      "Win11Debloat presets",
+      "Windows-Optimize-Debloat presets"
+    ],
+    "catalog_path": "powershell-sources.json",
+    "catalog_entries": 41,
+    "runtime_auto_install": false,
+    "capability_probe_mode": "on_demand_cached",
+    "persistent_api": "REJECT_UNLESS_DEMONSTRATED",
+    "pwsh7_install": "DEFERRED_UNTIL_MEASURED_GAP",
+    "idle_ram_target": "no measurable increase from catalog/probe"
   }
 }

@@ -8,6 +8,11 @@ $script:PcLastPullError = $null
 $script:PcUpdateProcess = $null
 $script:PcUpdateStartedAt = $null
 $script:PcLastUpdateError = $null
+$script:PcIoScriptRoot = $PSScriptRoot
+$script:PcPowerShellCapsCache = $null
+$script:PcPowerShellCapsCacheAt = [datetime]::MinValue
+$script:PcPowerShellCatalogCache = $null
+$script:PcPowerShellCatalogCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -315,3 +320,134 @@ function Complete-PcUpdateProbe {
     return [pscustomobject]@{Completed=$true;Success=$false;Available=$false;Version=[string]$Config.version;Manifest=$null;Error=$_.Exception.Message}
   }
 }
+
+function Get-PcModuleVersion {
+  param([string]$Name)
+  # Avoid Get-Module -ListAvailable here: it can populate the module analysis
+  # cache and create a noticeable first-use RAM spike on a 4 GB PC.
+  foreach($root in @($env:PSModulePath -split ';' | Where-Object {$_} | Select-Object -Unique)){
+    try{
+      $dir=Join-Path $root $Name
+      if(-not(Test-Path -LiteralPath $dir -PathType Container)){continue}
+      $versions=New-Object System.Collections.Generic.List[version]
+      foreach($child in @(Get-ChildItem -LiteralPath $dir -Directory -ErrorAction SilentlyContinue)){
+        try{$versions.Add([version]$child.Name)}catch{}
+      }
+      if($versions.Count-gt0){
+        return [string](@($versions|Sort-Object -Descending)[0])
+      }
+      $manifest=Join-Path $dir ($Name+'.psd1')
+      if(Test-Path -LiteralPath $manifest){
+        $line=Select-String -LiteralPath $manifest -Pattern '^\s*ModuleVersion\s*=\s*[''"]?([^''"\s]+)' -ErrorAction SilentlyContinue | Select-Object -First 1
+        if($line -and $line.Matches.Count){
+          return [string]$line.Matches[0].Groups[1].Value
+        }
+      }
+      return 'present'
+    }catch{}
+  }
+  return $null
+}
+
+function Get-PcPowerShellCapabilitySnapshot {
+  param([int]$TtlSeconds=60)
+  $now=Get-Date
+  if($script:PcPowerShellCapsCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcPowerShellCapsCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcPowerShellCapsCache
+  }
+
+  $pwsh=Get-Command pwsh.exe -ErrorAction SilentlyContinue
+  $winget=Get-Command winget.exe -ErrorAction SilentlyContinue
+  $git=Get-Command git.exe -ErrorAction SilentlyContinue
+  $pwshVersion=$null
+  $pwshPath=$null
+  $wingetPath=$null
+  if($pwsh){
+    $pwshPath=[string]$pwsh.Source
+    try{$pwshVersion=(Get-Item $pwsh.Source -ErrorAction Stop).VersionInfo.ProductVersion}catch{}
+  }
+  if($winget){$wingetPath=[string]$winget.Source}
+
+  $mods=[ordered]@{
+    PSResourceGet=(Get-PcModuleVersion 'Microsoft.PowerShell.PSResourceGet')
+    PSScriptAnalyzer=(Get-PcModuleVersion 'PSScriptAnalyzer')
+    Pester=(Get-PcModuleVersion 'Pester')
+    EventViewerX=(Get-PcModuleVersion 'EventViewerX')
+    PSWindowsUpdate=(Get-PcModuleVersion 'PSWindowsUpdate')
+    PSWriteHTML=(Get-PcModuleVersion 'PSWriteHTML')
+    PowerShellYaml=(Get-PcModuleVersion 'powershell-yaml')
+    ScheduledTaskManagement=(Get-PcModuleVersion 'ScheduledTaskManagement')
+  }
+
+  # Check the backing Windows modules on disk instead of calling Get-Command
+  # for module-backed cmdlets. Get-Command can warm NetTCPIP/ScheduledTasks
+  # discovery caches and add tens of MB to the first Sources view.
+  $diagAvailable=[bool](Get-PcModuleVersion 'Microsoft.PowerShell.Diagnostics')
+  $scheduledAvailable=[bool](Get-PcModuleVersion 'ScheduledTasks')
+  $netTcpAvailable=[bool](Get-PcModuleVersion 'NetTCPIP')
+  $managementAvailable=[bool](Get-PcModuleVersion 'Microsoft.PowerShell.Management')
+  $native=[ordered]@{
+    GetWinEvent=$diagAvailable
+    GetScheduledTask=$scheduledAvailable
+    GetNetTCPConnection=$netTcpAvailable
+    GetComputerInfo=$managementAvailable
+    TestNetConnection=$netTcpAvailable
+  }
+
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    Engine=('Windows PowerShell '+$PSVersionTable.PSVersion.ToString())
+    PSEdition=[string]$PSVersionTable.PSEdition
+    Pwsh7Detected=[bool]$pwsh
+    Pwsh7Path=$pwshPath
+    Pwsh7Version=$pwshVersion
+    WinGetDetected=[bool]$winget
+    WinGetPath=$wingetPath
+    GitDetected=[bool]$git
+    Native=[pscustomobject]$native
+    Modules=[pscustomobject]$mods
+    InstallPerformed=$false
+    ResidentDependencyAdded=$false
+    Policy='native-first / on-demand / no runtime auto-install'
+  }
+  $script:PcPowerShellCapsCache=$result
+  $script:PcPowerShellCapsCacheAt=$now
+  return $result
+}
+
+function Get-PcPowerShellSourceCatalog {
+  param([int]$TtlSeconds=300)
+  $now=Get-Date
+  if($script:PcPowerShellCatalogCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcPowerShellCatalogCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcPowerShellCatalogCache
+  }
+
+  $path=Join-Path (Split-Path $script:PcIoScriptRoot -Parent) 'powershell-sources.json'
+  if(-not(Test-Path $path)){
+    return [pscustomobject]@{Total=0;Counts=[pscustomobject]@{};Entries=@();Error='Catalogue absent'}
+  }
+  try{
+    $raw=Get-Content $path -Raw -Encoding UTF8|ConvertFrom-Json
+    $entries=@($raw.entries)
+    $counts=[ordered]@{}
+    foreach($class in @('CORE','ON-DEMAND','SOURCE-ONLY','EXTERNAL-TOOL','REJECT')){
+      $counts[$class]=@($entries|Where-Object class -eq $class).Count
+    }
+    $result=[pscustomobject]@{
+      Total=$entries.Count
+      Counts=[pscustomobject]$counts
+      Entries=$entries
+      Policy=$raw.policy
+      ObservedAt=$raw.observed_at
+      Error=$null
+    }
+    $script:PcPowerShellCatalogCache=$result
+    $script:PcPowerShellCatalogCacheAt=$now
+    return $result
+  }catch{
+    return [pscustomobject]@{Total=0;Counts=[pscustomobject]@{};Entries=@();Error=$_.Exception.Message}
+  }
+}
+

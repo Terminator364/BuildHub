@@ -194,17 +194,31 @@ function Write-PcTimeline {
 
 function Write-PcSources {
   param($Config,$Sync)
+  $caps=Get-PcPowerShellCapabilitySnapshot
+  $catalog=Get-PcPowerShellSourceCatalog
   Write-PcLine 'SOURCES / ADAPTATEURS' Cyan
   Write-PcLine ''
   Write-PcLine 'Noyau local-first : cache disque + moteur PowerShell.' Green
   Write-PcLine ('Transport actif   : '+$Config.state.transport+' / '+$Config.state.repo)
   Write-PcLine ('Etat transport     : '+$(if($Sync.Online){'ONLINE'}else{'OFFLINE / CACHE'}))
   Write-PcLine ''
-  Write-PcLine 'Adaptateurs disponibles/prevus :'
-  Write-PcLine '  ChatGPT/PCCONNECT | GitHub | Drive | Delivery/Telegram | TLIB | Web/YouTube | WMI | Desktop Commander'
-  Write-PcLine '  Notion/Todoist : miroirs de pilotage optionnels; jamais source canonique.' DarkGray
+  Write-PcLine 'POWERSHELL / CAPACITES LOCALES' Cyan
+  Write-PcLine ('  Moteur : '+$caps.Engine+' | pwsh 7 : '+$(if($caps.Pwsh7Detected){'DETECTE'}else{'ABSENT / NON REQUIS'}))
+  Write-PcLine ('  WinGet : '+$(if($caps.WinGetDetected){'DETECTE'}else{'ABSENT'})+' | Git : '+$(if($caps.GitDetected){'DETECTE'}else{'ABSENT'}))
+  $nativeCount=@($caps.Native.PSObject.Properties|Where-Object {$_.Value -eq $true}).Count
+  Write-PcLine ('  Cmdlets natifs : '+$nativeCount+'/5 disponibles | priorite native-first') Green
+  Write-PcLine ('  Installation automatique runtime : AUCUNE | dependance residente ajoutee : AUCUNE') Green
   Write-PcLine ''
-  Write-PcLine 'Une source n est declaree observee que si un evenement/preuve existe.' Yellow
+  if($catalog.Error){
+    Write-PcLine ('Catalogue PowerShell : indisponible - '+$catalog.Error) Yellow
+  }else{
+    Write-PcLine ('CATALOGUE POWERSHELL : '+$catalog.Total+' depots audites') Cyan
+    Write-PcLine ('  CORE '+$catalog.Counts.CORE+' | ON-DEMAND '+$catalog.Counts.'ON-DEMAND'+' | SOURCE-ONLY '+$catalog.Counts.'SOURCE-ONLY')
+    Write-PcLine ('  EXTERNAL-TOOL '+$catalog.Counts.'EXTERNAL-TOOL'+' | REJECT '+$catalog.Counts.REJECT)
+  }
+  Write-PcLine ''
+  Write-PcLine 'Adaptateurs : ChatGPT/PCCONNECT | GitHub | Drive | Delivery/Telegram | TLIB | Web/YouTube | WMI | Desktop Commander'
+  Write-PcLine 'Une source externe reste optionnelle; aucune source ne devient dependance canonique sans preuve.' DarkGray
   Write-PcLine 'Aucun mot de passe/token ne doit etre stocke dans PC COMMAND.' Yellow
 }
 
@@ -499,10 +513,14 @@ function Write-PcReportCenter {
 function Write-PcHealth {
   param($Config,$Sync,$UpdateInfo)
   $h=Get-PcHealthScore $Config $Sync $UpdateInfo
+  $caps=Get-PcPowerShellCapabilitySnapshot
+  $catalog=Get-PcPowerShellSourceCatalog
   Write-PcLine 'SANTE / DIAGNOSTIC' -ForegroundColor Cyan
   Write-PcLine ''
   Write-PcLine ('Score : '+$h.Score+'/100 | '+$h.Level) -ForegroundColor $h.Color
   Write-PcLine ('RAM libre : '+$h.FreeRamMb+' MB')
+  Write-PcLine ('PowerShell : '+$caps.Engine+' | WinGet '+$(if($caps.WinGetDetected){'OK'}else{'ABSENT'})+' | pwsh7 '+$(if($caps.Pwsh7Detected){'DETECTE'}else{'DIFFERE'}))
+  if(-not$catalog.Error){Write-PcLine ('Sources PS : '+$catalog.Total+' auditees | zero installation runtime automatique') DarkCyan}
   if(@($h.Reasons).Count-eq0){Write-PcLine 'Aucune anomalie prioritaire detectee.' -ForegroundColor Green}
   else{
     Write-PcLine 'Points a surveiller :' -ForegroundColor Yellow
