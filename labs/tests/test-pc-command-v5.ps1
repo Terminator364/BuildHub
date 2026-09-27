@@ -410,3 +410,30 @@ if([bool]$cfg.pslib_audit.lot6_dependency_lock.runtime_auto_install){throw 'lot6
 if(-not[bool]$cfg.pslib_audit.lot6_dependency_lock.exact_version_required){throw 'lot6 exact version requirement missing'}
 Write-Host 'PC_COMMAND_V103_DEPENDENCY_LOCK_OK'
 
+# FB-043 / v1.0.4: power snapshot must remain read-only and dependency-free.
+if(-not(Get-Command Get-PcPowerSnapshot -ErrorAction SilentlyContinue)){throw 'power snapshot missing'}
+$pw=Get-PcPowerSnapshot -TtlSeconds 0
+if(-not[bool]$pw.ReadOnly){throw 'power snapshot must be read-only'}
+if([bool]$pw.NetworkTrafficGenerated){throw 'power snapshot must generate zero network traffic'}
+if([bool]$pw.PowerPlanChanged){throw 'power snapshot must not change power plan'}
+if([bool]$pw.BatteryChanged){throw 'power snapshot must not change battery state'}
+if([bool]$pw.ExternalModuleRequired){throw 'power snapshot must not require external modules'}
+if([bool]$pw.WinFormsLoaded){throw 'power snapshot must not load WinForms'}
+if($pw.BatteryPresent -and $null-ne$pw.ChargePercent){
+  if([int]$pw.ChargePercent-lt0 -or [int]$pw.ChargePercent-gt100){throw 'battery percentage out of range'}
+}
+$ioText=Get-Content (Join-Path $root 'pc-command\v5\lib\io.ps1') -Raw -Encoding UTF8
+$powerStart=$ioText.IndexOf('function Get-PcPowerSnapshot')
+if($powerStart-lt0){throw 'power snapshot source block missing'}
+$powerFn=$ioText.Substring($powerStart)
+foreach($forbidden in @('/setactive','/change','Set-CimInstance','System.Windows.Forms','Set-ItemProperty','/setacvalueindex','/setdcvalueindex')){
+  if($powerFn -match [regex]::Escape($forbidden)){throw "forbidden power primitive present: $forbidden"}
+}
+if(-not[bool]$cfg.pslib_audit.lot7_power.read_only){throw 'lot7 power must be read-only'}
+if([bool]$cfg.pslib_audit.lot7_power.winforms){throw 'lot7 WinForms must be false'}
+if([bool]$cfg.pslib_audit.lot7_power.power_plan_change){throw 'lot7 power-plan changes must be false'}
+if([bool]$cfg.pslib_audit.lot7_power.battery_change){throw 'lot7 battery changes must be false'}
+if([bool]$cfg.pslib_audit.lot7_power.network_traffic){throw 'lot7 network traffic must be false'}
+if([bool]$cfg.pslib_audit.lot7_power.external_module_required){throw 'lot7 external module must be false'}
+Write-Host 'PC_COMMAND_V104_POWER_SNAPSHOT_OK'
+
