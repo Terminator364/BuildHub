@@ -416,7 +416,15 @@
       "package_manager_added": false,
       "global_debloat_added": false,
       "yaml_dependency_added": false,
-      "build_orchestrator_added": false
+      "build_orchestrator_added": false,
+      "recent_system_errors": {
+        "source": "wevtutil child process",
+        "timeout_ms": 2000,
+        "max_events": 5,
+        "default_window_hours": 6,
+        "synchronous_get_winevent": false,
+        "reason": "field regression gate observed ~139s suite due to synchronous event query; child process is hard-bounded"
+      }
     }
   },
   "action_policy": {
