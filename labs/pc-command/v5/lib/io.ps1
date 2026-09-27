@@ -21,6 +21,8 @@ $script:PcStartupRamCache = $null
 $script:PcStartupRamCacheAt = [datetime]::MinValue
 $script:PcPowerSnapshotCache = $null
 $script:PcPowerSnapshotCacheAt = [datetime]::MinValue
+$script:PcSoftwareInventoryCache = $null
+$script:PcSoftwareInventoryCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -784,6 +786,68 @@ function Get-PcPowerSnapshot {
   }
   $script:PcPowerSnapshotCache=$result
   $script:PcPowerSnapshotCacheAt=$now
+  return $result
+}
+
+function Get-PcLocalSoftwareInventory {
+  param(
+    [int]$TtlSeconds=300,
+    [int]$MaxItems=20
+  )
+  $now=Get-Date
+  if($script:PcSoftwareInventoryCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcSoftwareInventoryCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcSoftwareInventoryCache
+  }
+
+  $errors=New-Object System.Collections.Generic.List[string]
+  $apps=@()
+  $paths=@(
+    'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*',
+    'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+    'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
+  )
+  foreach($path in $paths){
+    try{
+      foreach($x in @(Get-ItemProperty $path -ErrorAction SilentlyContinue)){
+        $name=[string]$x.DisplayName
+        if([string]::IsNullOrWhiteSpace($name)){continue}
+        if($null-ne$x.SystemComponent){
+          try{if([int]$x.SystemComponent-eq1){continue}}catch{}
+        }
+        $apps += [pscustomobject]@{
+          Name=$name.Trim()
+          Version=if($x.DisplayVersion){[string]$x.DisplayVersion}else{$null}
+          Publisher=if($x.Publisher){[string]$x.Publisher}else{$null}
+          InstallDate=if($x.InstallDate){[string]$x.InstallDate}else{$null}
+        }
+      }
+    }catch{$errors.Add('registry: '+$_.Exception.Message)}
+  }
+
+  $unique=@($apps|Sort-Object Name,Version,Publisher -Unique)
+  $limit=[math]::Max(1,[math]::Min(50,$MaxItems))
+  $winget=Get-Command winget.exe -ErrorAction SilentlyContinue
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    InstalledCount=$unique.Count
+    Items=@($unique|Sort-Object Name|Select-Object -First $limit)
+    RegistryPathsRead=$paths.Count
+    WinGetDetected=[bool]$winget
+    ReadOnly=$true
+    NetworkTrafficGenerated=$false
+    WingetListExecuted=$false
+    AppxEnumerated=$false
+    InstallActionPerformed=$false
+    UninstallActionPerformed=$false
+    UpdateActionPerformed=$false
+    ExternalModuleRequired=$false
+    CacheSeconds=$TtlSeconds
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    SourcePolicy='Windows Uninstall registry only; winget detection only'
+  }
+  $script:PcSoftwareInventoryCache=$result
+  $script:PcSoftwareInventoryCacheAt=$now
   return $result
 }
 
