@@ -8,7 +8,7 @@ const HOST = '127.0.0.1';
 const PC_ROOT = resolve(process.env.PC_COMMAND_ROOT || join(process.env.LOCALAPPDATA || os.homedir(), 'PC_COMMAND'));
 const LAB_ROOT = resolve(new URL('.', import.meta.url).pathname.replace(/^\/(?:[A-Za-z]:)/, m => m.slice(1)));
 const PUBLIC = join(LAB_ROOT, 'public');
-const IDLE_MS = Number(process.env.PC_COMMAND_WEB_IDLE_MS || 120000);
+const IDLE_MS = Number(process.env.PC_COMMAND_WEB_IDLE_MS || 300000);
 let lastRequestAt = Date.now();
 
 const paths = {
@@ -72,7 +72,7 @@ function statusSnapshot() {
   const convs = Array.isArray(overview.conversations) ? overview.conversations : [];
   return {
     lab: {
-      version: '0.2.0',
+      version: '0.2.1',
       mode: 'READ_ONLY',
       serverPid: process.pid,
       serverRssMb: Math.round(process.memoryUsage().rss / 104857.6) / 10,
