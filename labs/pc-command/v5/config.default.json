@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "ship bounded read-only startup/RAM snapshot with no slow service/task enumeration and no v1.0.1 regressions",
+    "current_goal": "prove all future dependency requests default DENY unless exact version + approved repository + APPROVED state + L2 gates",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,8 +147,8 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "stable",
-    "objective": "bounded read-only startup and RAM snapshot derived from repairtools/pstop patterns",
+    "stage": "candidate",
+    "objective": "exact-pin dependency lock with zero runtime module dependencies",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
@@ -315,6 +315,31 @@
         "automatic process termination",
         "automatic service disabling"
       ]
+    },
+    "lot6_dependency_lock": {
+      "audited_sources": [
+        "PowerShell/PSResourceGet",
+        "PowerShellOrg/PSDepend",
+        "nightroman/Invoke-Build",
+        "EvotecIT/PSWriteHTML",
+        "dfinke/ImportExcel",
+        "PowerShell/PSReadLine",
+        "PowerShell/ConsoleGuiTools",
+        "JanDeDobbeleer/oh-my-posh",
+        "Windos/BurntToast",
+        "jdhitsolutions/PSScriptTools"
+      ],
+      "runtime_dependencies": 0,
+      "runtime_auto_install": false,
+      "exact_version_required": true,
+      "approved_repositories": [
+        "PSGallery"
+      ],
+      "default_request_decision": "DENY",
+      "install_level": "L2",
+      "reporting_modules_added": [],
+      "shell_cosmetic_modules_added": [],
+      "build_orchestrator_added": false
     }
   },
   "action_policy": {
