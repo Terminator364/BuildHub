@@ -111,12 +111,12 @@ function Get-PcLifecycleView {
     if($leaseUntil -and [datetimeoffset]::Now -le $leaseUntil){
       $remaining=[math]::Max(0,($leaseUntil-[datetimeoffset]::Now).TotalSeconds)
       $confidence=if($age-le60){100}elseif($age-le300){95}else{85}
-      return [pscustomobject]@{Label=if($state-eq'TOOL_RUNNING'){'OUTIL / TRAVAIL EN COURS'}else{'TRAVAIL EN COURS'};Color='Green';Detail=("Phase "+$phase+" | duree "+(Format-PcAge $duration)+" | signal "+(Format-PcAge $age)+" | lease "+(Format-PcAge $remaining));AgeSeconds=$age;Confidence=$confidence;DurationSeconds=$duration;LeaseRemainingSeconds=$remaining}
+      return [pscustomobject]@{Label=if($state-eq'TOOL_RUNNING'){'TOOL_RUNNING'}else{'ASSISTANT_PROCESSING'};Color='Green';Detail=("Phase "+$phase+" | duree "+(Format-PcAge $duration)+" | signal "+(Format-PcAge $age)+" | lease "+(Format-PcAge $remaining));AgeSeconds=$age;Confidence=$confidence;DurationSeconds=$duration;LeaseRemainingSeconds=$remaining}
     }
     $confidence = if ($age -le 60) {100} elseif ($age -le 300) {90} elseif ($age -le 900) {70} elseif ($age -le 1800) {45} else {20}
     if ($age -le 300) {
       return [pscustomobject]@{
-        Label = if ($state -eq 'TOOL_RUNNING') {'OUTIL / TRAVAIL EN COURS'} else {'TRAVAIL EN COURS'}
+        Label = if ($state -eq 'TOOL_RUNNING') {'TOOL_RUNNING'} else {'ASSISTANT_PROCESSING'}
         Color='Green'
         Detail=("Phase "+$phase+" | duree "+(Format-PcAge $duration)+" | dernier signal "+(Format-PcAge $age)+" | confiance "+$confidence+"%")
         AgeSeconds=$age
@@ -204,6 +204,36 @@ function Get-PcVisibleMicroTasks {
   $active=@($all|Where-Object state -in @('ACTIVE','BLOCKED')|Select-Object -First ([math]::Min(10,$MaxVisible)))
   $remaining=@($all|Where-Object {$_ -notin $active}|Select-Object -Last ($MaxVisible-$active.Count))
   return [pscustomobject]@{Items=@($active+$remaining);Hidden=$all.Count-($active.Count+$remaining.Count);Total=$all.Count}
+}
+
+function Get-PcMicroPage {
+  param($Macro,[int]$MaxVisible=20,[int]$Page=0,[int]$PageSize=10)
+  if($PageSize-lt1){$PageSize=10}
+  $v=Get-PcVisibleMicroTasks $Macro $MaxVisible
+  $items=@($v.Items)
+  $pages=[math]::Max(1,[int][math]::Ceiling($items.Count/[double]$PageSize))
+  if($Page-lt0){$Page=0}
+  if($Page-ge$pages){$Page=$pages-1}
+  $slice=@($items|Select-Object -Skip ($Page*$PageSize) -First $PageSize)
+  $rawIndexes=@()
+  $raw=@($Macro.micro_tasks)
+  foreach($selected in $slice){
+    $ri=-1
+    for($n=0;$n-lt$raw.Count;$n++){
+      if([object]::ReferenceEquals($raw[$n],$selected)){$ri=$n;break}
+    }
+    $rawIndexes+=$ri
+  }
+  return [pscustomobject]@{
+    Items=$slice
+    RawIndexes=$rawIndexes
+    Page=$Page
+    Pages=$pages
+    PageSize=$PageSize
+    VisibleTotal=$items.Count
+    Total=$v.Total
+    Hidden=$v.Hidden
+  }
 }
 
 function Get-PcRequirementCoverage {

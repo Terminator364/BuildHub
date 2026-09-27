@@ -36,7 +36,7 @@ if(Test-Path $Paths.LocalConfig){
   }catch{}
 }
 
-$View='general';$BackView='general';$ConversationIndex=0;$MacroIndex=0;$MicroIndex=0
+$View='general';$BackView='general';$ConversationIndex=0;$MacroIndex=0;$MicroIndex=0;$MicroPage=0
 $NeedDetail=$false
 $Sync=Read-PcStateLocal $Defaults $Paths $ConversationIndex
 $Feedback=Read-PcFeedbackLocal $Paths
@@ -53,7 +53,6 @@ $script:LastInputAck='Pret.'
 $script:LastInputAckOk=$true
 $script:LastInputAckAt=Get-Date
 $EnableProcessWatcher=($Defaults.local_observability -and [bool]$Defaults.local_observability.process_watcher)
-$ManifestUrl='https://raw.githubusercontent.com/Terminator364/BuildHub/lab/pc-command-v070/labs/pc-command/v5/manifest.json'
 
 if($EnableProcessWatcher){
   try{
@@ -138,6 +137,7 @@ function Process-PcKey {
   if($k-eq'A'){
     $script:View='general'
     $script:BackView='general'
+    $script:MicroPage=0
     Set-PcInputAck $k 'accueil ouvert' $true
   }
   elseif($k-eq'B'){
@@ -183,11 +183,33 @@ function Process-PcKey {
     $script:View='health'
     Set-PcInputAck $k 'diagnostic sante ouvert' $true
   }
+  elseif($k-eq'N' -and $View-eq'macro'){
+    if($Sync.Channel -and @($Sync.Channel.macro_tasks).Count-gt$MacroIndex){
+      $m=$Sync.Channel.macro_tasks[$MacroIndex]
+      $page=Get-PcMicroPage $m ([int]$Defaults.limits.max_visible_microtasks) $MicroPage 10
+      if($page.Pages-gt1){
+        $script:MicroPage=($MicroPage+1)%$page.Pages
+        Set-PcInputAck $k ('page micro '+($script:MicroPage+1)+'/'+$page.Pages) $true
+      }else{
+        Set-PcInputAck $k 'une seule page micro disponible' $false
+      }
+    }else{
+      Set-PcInputAck $k 'macro-tache indisponible' $false
+    }
+  }
   elseif($k-eq'G' -and $View-eq'reports'){
+    # A report requested from Accueil still needs the selected conversation's
+    # detailed macro/micro state; otherwise the PDF can be technically valid
+    # but nearly empty.
+    [void](Ensure-PcChannelDetail)
     $rep=New-PcReport $Defaults $Sync.Overview $Sync.Channel $Paths
     $made=$(if($rep.Pdf){$rep.Pdf}else{$rep.Html})
     Add-LocalPcEvent ("Rapport cree: "+$made)
-    Set-PcInputAck $k ("rapport genere: "+[IO.Path]::GetFileName($made)) ([bool]$made)
+    if($rep.Pdf){
+      Set-PcInputAck $k ("PDF detaille genere: "+[IO.Path]::GetFileName($rep.Pdf)) $true
+    }else{
+      Set-PcInputAck $k ("rapport HTML genere: "+[IO.Path]::GetFileName($made)) ([bool]$made)
+    }
   }
   elseif($k-eq'O' -and $View-eq'reports'){
     $last=Get-ChildItem $Paths.Reports -File -ErrorAction SilentlyContinue|Where-Object Extension -eq '.pdf'|Sort-Object LastWriteTime -Descending|Select-Object -First 1
@@ -244,23 +266,31 @@ function Process-PcKey {
     Save-PcLocalSettings $Paths $App.SyncSeconds $App.EngineSeconds $App.DisplaySeconds $App.Mode
     Set-PcInputAck $k ("parametre applique: sync "+$App.SyncSeconds+"s, moteur "+$App.EngineSeconds+"s, affichage "+$App.DisplaySeconds+"s, profil "+$App.Mode) $true
   }
-  elseif($k-match'^[1-9]$' -and $Sync.Overview){
-    $idx=[int]$k-1
-    if($View-eq'general' -and $idx-lt@($Sync.Overview.conversations).Count){
+  elseif($k-match'^[0-9]$' -and $Sync.Overview){
+    $idx=Get-PcSlotIndexFromKey $k
+    if($View-eq'general' -and $idx-ge0 -and $idx-lt@($Sync.Overview.conversations).Count){
       $script:ConversationIndex=$idx
+      $script:MicroPage=0
       $id=[string]$Sync.Overview.conversations[$idx].id
       $cache=Join-Path $Paths.Cache ("channel-$id.json")
       if(Test-Path $cache){try{$script:Sync.Channel=Get-Content $cache -Raw -Encoding UTF8|ConvertFrom-Json}catch{}}
       $script:View='conversation'
       Set-PcInputAck $k 'conversation ouverte' $true
     }
-    elseif($View-eq'conversation' -and $Sync.Channel -and $idx-lt@($Sync.Channel.macro_tasks).Count){
-      $script:MacroIndex=$idx;$script:View='macro';Set-PcInputAck $k 'macro-tache ouverte' $true
+    elseif($View-eq'conversation' -and $Sync.Channel -and $idx-ge0 -and $idx-lt@($Sync.Channel.macro_tasks).Count){
+      $script:MacroIndex=$idx;$script:MicroPage=0;$script:View='macro';Set-PcInputAck $k 'macro-tache ouverte' $true
     }
     elseif($View-eq'macro' -and $Sync.Channel -and @($Sync.Channel.macro_tasks).Count-gt$MacroIndex){
       $m=$Sync.Channel.macro_tasks[$MacroIndex]
-      if($idx-lt@($m.micro_tasks).Count){$script:MicroIndex=$idx;$script:View='micro';Set-PcInputAck $k 'micro-tache ouverte' $true}
-      else{Set-PcInputAck $k 'aucune micro-tache a ce numero' $false}
+      $page=Get-PcMicroPage $m ([int]$Defaults.limits.max_visible_microtasks) $MicroPage 10
+      if($idx-ge0 -and $idx-lt@($page.Items).Count){
+        $rawIndex=[int]$page.RawIndexes[$idx]
+        if($rawIndex-ge0){
+          $script:MicroIndex=$rawIndex;$script:View='micro';Set-PcInputAck $k 'micro-tache ouverte' $true
+        }else{
+          Set-PcInputAck $k 'index micro introuvable' $false
+        }
+      }else{Set-PcInputAck $k 'aucune micro-tache a ce numero sur cette page' $false}
     }
     else{Set-PcInputAck $k 'aucun element a ce numero dans cette vue' $false}
   }
@@ -352,7 +382,7 @@ while($true){
       switch($View){
         'general'{Write-PcGeneral $Sync.Overview $Feedback $Defaults $Sync $UpdateInfo}
         'conversation'{if($conv){Write-PcConversation $conv $Paths.HistoryFile}else{Write-PcLine 'Detail local indisponible; [R] synchroniser.' -ForegroundColor Yellow}}
-        'macro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex){Write-PcMacro $conv.macro_tasks[$MacroIndex] ([int]$Defaults.limits.max_visible_microtasks)}}
+        'macro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex){Write-PcMacro $conv.macro_tasks[$MacroIndex] ([int]$Defaults.limits.max_visible_microtasks) $MicroPage}}
         'micro'{if($conv -and @($conv.macro_tasks).Count-gt$MacroIndex -and @($conv.macro_tasks[$MacroIndex].micro_tasks).Count-gt$MicroIndex){Write-PcMicro $conv.macro_tasks[$MacroIndex].micro_tasks[$MicroIndex]}}
         'timeline'{if($conv){Write-PcTimeline $conv}}
         'requirements'{if($conv){Write-PcRequirements $conv}}

@@ -113,3 +113,87 @@ if([string]$x.Index.last_feedback_id-ne'FB-002'){throw "feedback reader did not 
 if(@($x.Versions.versions).Count-ne1){throw 'version trace not loaded'}
 Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
 Write-Host 'PC_COMMAND_V094_LEDGER_ROUTER_OK'
+
+
+# v0.9.5: updater must smoke before swap, retain rollback, and report status.
+$bootText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_BOOTSTRAP.ps1') -Raw
+foreach($token in @('SmokeTest','READY_TO_SWAP','ROLLED_BACK','RECOVERY_REQUIRED','update-status.json','Move-Item')){
+  if($bootText -notmatch [regex]::Escape($token)){throw "v0.9.5 updater token missing: $token"}
+}
+if($bootText -notmatch 'Wait-PcViewerExit'){throw 'v0.9.5 must defer swap while viewer is still alive'}
+if($bootText -notmatch 'post-launch' -and $bootText -notmatch 'post-launch'){throw 'post-launch update verification missing'}
+
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -match 'lab/pc-command-v070/labs/pc-command/v5/manifest.json'){throw 'stale hard-coded manifest URL remains'}
+if($mainText -notmatch 'Ensure-PcChannelDetail'){throw 'report detail gate missing'}
+if($mainText -notmatch 'PDF detaille genere'){throw 'human PDF ACK missing'}
+if(-not[bool]$cfg.reports.force_selected_conversation_detail){throw 'report detail policy missing'}
+if([string]$cfg.updater.swap_mode -ne 'same_volume_directory_move'){throw 'updater swap mode missing'}
+if(-not[bool]$cfg.updater.root_bootstrap_self_heal){throw 'root bootstrap self-heal policy missing'}
+if($bootText -notmatch 'RootBootstrap'){throw 'root bootstrap self-heal implementation missing'}
+if($bootText -notmatch 'Copy-Item \$appBootstrap \$RootBootstrap'){throw 'root bootstrap self-heal copy missing'}
+Write-Host 'PC_COMMAND_V096_UPDATE_REPORT_OK'
+
+# v0.9.7: updater must require a promoted stable manifest and restore the root launcher on rollback.
+$bootText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_BOOTSTRAP.ps1') -Raw
+if($bootText -notmatch "RequiredChannel='stable'"){throw 'stable manifest channel gate missing'}
+if($bootText -notmatch 'Canal manifest refuse'){throw 'manifest channel rejection status missing'}
+if($bootText -notmatch 'Sync-PcRootBootstrap'){throw 'root bootstrap sync helper missing'}
+if($bootText -notmatch 'postVersion'){throw 'post-launch version proof missing'}
+if($bootText -notmatch '\[regex\]::Escape\(\$Root\)'){throw 'viewer-exit scope must be tied to the PC Command root'}
+if(-not[bool]$cfg.updater.require_manifest_channel){throw 'manifest channel gate policy missing'}
+if([string]$cfg.updater.required_manifest_channel -ne 'stable'){throw 'required manifest channel must be stable'}
+if(-not[bool]$cfg.updater.post_launch_version_match){throw 'post-launch version match policy missing'}
+if(-not[bool]$cfg.updater.rollback_restores_root_bootstrap){throw 'rollback launcher restore policy missing'}
+Write-Host 'PC_COMMAND_V097_PROMOTION_ROLLBACK_OK'
+
+# v0.9.7: recover the previously valid local tree if a crash/power loss lands between directory renames.
+$bootText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_BOOTSTRAP.ps1') -Raw
+if($bootText -notmatch 'Recover-PcInterruptedSwap'){throw 'interrupted-swap recovery missing'}
+if($bootText -notmatch 'Test-PcInstalledTree'){throw 'local backup validation missing'}
+if($bootText -notmatch 'RECOVERED_PREVIOUS'){throw 'offline recovery status missing'}
+if($bootText -notmatch 'Application precedente restauree avant acces reseau'){throw 'recovery must happen before network dependency'}
+if(-not[bool]$cfg.updater.recover_interrupted_swap_offline){throw 'offline interrupted-swap recovery policy missing'}
+if(-not[bool]$cfg.updater.validate_local_backup_before_recovery){throw 'local backup validation policy missing'}
+Write-Host 'PC_COMMAND_V097_POWERLOSS_RECOVERY_OK'
+
+# FB-034 / v0.9.7: the declared 10-conversation capacity and 20 visible microtasks must be navigable.
+if((Get-PcSlotKey 10) -ne '0'){throw '10th slot must render on key 0'}
+if((Get-PcSlotIndexFromKey '0') -ne 9){throw 'key 0 must route to the 10th slot'}
+foreach($view in @('general','conversation','macro')){
+  $keys=@(Get-PcExpandedKeysForView $view)
+  if($keys -notcontains '0'){throw "10th-slot key missing from $view"}
+}
+$macroKeys=@(Get-PcExpandedKeysForView 'macro')
+if($macroKeys -notcontains 'N'){throw 'microtask page key N missing from macro view'}
+$micro20=@()
+for($n=1;$n-le20;$n++){
+  $micro20 += [pscustomobject]@{title=("micro-"+$n);state='PENDING';weight=1;completion=0;evidence=$null}
+}
+$macro20=[pscustomobject]@{title='macro-20';state='ACTIVE';micro_tasks=$micro20}
+$page0=Get-PcMicroPage $macro20 20 0 10
+$page1=Get-PcMicroPage $macro20 20 1 10
+if(@($page0.Items).Count-ne10 -or @($page1.Items).Count-ne10){throw '20 microtasks must expose two full pages'}
+if($page0.Pages-ne2 -or $page1.Pages-ne2){throw 'microtask page count must be 2'}
+if([int]$page0.RawIndexes[9]-ne9){throw 'page 1 key 0 must resolve raw micro index 9'}
+if([int]$page1.RawIndexes[0]-ne10 -or [int]$page1.RawIndexes[9]-ne19){throw 'page 2 must resolve raw micro indexes 10..19'}
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -notmatch "\^\[0-9\]\$"){throw 'router must accept digit 0'}
+if($mainText -notmatch 'Get-PcMicroPage'){throw 'router must use the shared microtask page model'}
+if($mainText -notmatch 'MicroPage'){throw 'microtask page state missing'}
+Write-Host 'PC_COMMAND_V097_TEN_SLOT_PAGING_OK'
+
+# FB-035 / v0.9.7: 10 conversations must fit the minimum frame and active labels must not invent "TRAVAIL EN COURS".
+$engineText=Get-Content (Join-Path $root 'pc-command\v5\lib\engine.ps1') -Raw
+if($engineText -match 'TRAVAIL EN COURS'){throw 'forbidden inferred active-state label remains'}
+$nowIso=[datetimeoffset]::Now.ToString('o')
+$assistantProbe=[pscustomobject]@{lifecycle=[pscustomobject]@{state='ASSISTANT_PROCESSING';phase='TEST';last_signal_at=$nowIso}}
+$toolProbe=[pscustomobject]@{lifecycle=[pscustomobject]@{state='TOOL_RUNNING';phase='TEST';last_signal_at=$nowIso}}
+if([string](Get-PcLifecycleView $assistantProbe).Label -ne 'ASSISTANT_PROCESSING'){throw 'ASSISTANT_PROCESSING label mismatch'}
+if([string](Get-PcLifecycleView $toolProbe).Label -ne 'TOOL_RUNNING'){throw 'TOOL_RUNNING label mismatch'}
+$script:PcFrameMax=14
+if(-not(Get-PcHomeCompactMode 10)){throw '10-conversation home must use compact mode at minimum frame'}
+if((4+10)-gt$script:PcFrameMax){throw 'compact 10-conversation layout exceeds minimum frame budget'}
+$script:PcFrameMax=34
+if(Get-PcHomeCompactMode 3){throw 'small conversation sets should keep rich layout when space permits'}
+Write-Host 'PC_COMMAND_V097_ADAPTIVE_HOME_STATE_LABELS_OK'

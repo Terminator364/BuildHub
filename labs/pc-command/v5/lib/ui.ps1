@@ -39,6 +39,20 @@ function Get-PcBar {
   '['+('#'*$filled)+('-'*($Width-$filled))+']'
 }
 
+function Get-PcSlotKey {
+  param([int]$Ordinal)
+  if($Ordinal-eq10){return '0'}
+  if($Ordinal-ge1 -and $Ordinal-le9){return [string]$Ordinal}
+  return '?'
+}
+
+function Get-PcSlotIndexFromKey {
+  param([string]$Key)
+  if($Key-eq'0'){return 9}
+  if($Key-match'^[1-9]$'){return ([int]$Key)-1}
+  return -1
+}
+
 function Write-PcHeader {
   param($App,$Config,$Sync,$Conversation,$UpdateInfo,[string]$Spinner)
   $net=if($Sync.Online){'ONLINE'}else{'CACHE/OFFLINE'}
@@ -48,6 +62,13 @@ function Write-PcHeader {
   if($UpdateInfo -and $UpdateInfo.Available){
     Write-PcLine ("Mise a jour v$($UpdateInfo.Version) detectee; installation automatique preparee.") Yellow
   }
+}
+
+function Get-PcHomeCompactMode {
+  param([int]$Count)
+  if($Count-le0){return $false}
+  $richLines=4+($Count*4)
+  return ($Count-gt5 -or $script:PcFrameMax-lt$richLines)
 }
 
 function Write-PcGeneral {
@@ -63,16 +84,23 @@ function Write-PcGeneral {
   $fb=if($Feedback -and $Feedback.Index){[string]$Feedback.Index.last_feedback_id}else{'-'}
   Write-PcLine ("$count conversation(s) connectee(s) | dernier feedback : $fb") DarkCyan
   Write-PcLine ''
+  $compact=Get-PcHomeCompactMode $count
   $i=1
   foreach($x in @($Overview.conversations|Select-Object -First 10)){
     $pct=if($null-ne$x.progress_estimate){[int]$x.progress_estimate}else{0}
     $life=Get-PcLifecycleView $x
-    Write-PcLine ("[$i] $($x.label) | $($x.short_code)") Green
-    Write-PcLine ('    '+(Get-PcBar $pct 36)+' '+$pct+'% | '+$life.Label) $life.Color
-    if($x.current_action){Write-PcLine ('    Maintenant : '+$x.current_action)}
-    if($x.next_step){Write-PcLine ('    Ensuite    : '+$x.next_step) DarkGray}
-    if($x.blocker){Write-PcLine ('    Blocage    : '+$x.blocker) Red}
-    Write-PcLine ''
+    $slot=Get-PcSlotKey $i
+    if($compact){
+      $block=if($x.blocker){' | BLOQUE'}else{''}
+      Write-PcLine ("[$slot] $($x.label) | $pct% | $($life.Label)$block") $(if($x.blocker){'Red'}else{$life.Color})
+    }else{
+      Write-PcLine ("[$slot] $($x.label) | $($x.short_code)") Green
+      Write-PcLine ('    '+(Get-PcBar $pct 36)+' '+$pct+'% | '+$life.Label) $life.Color
+      if($x.current_action){Write-PcLine ('    Maintenant : '+$x.current_action)}
+      if($x.next_step){Write-PcLine ('    Ensuite    : '+$x.next_step) DarkGray}
+      if($x.blocker){Write-PcLine ('    Blocage    : '+$x.blocker) Red}
+      Write-PcLine ''
+    }
     $i++
   }
 }
@@ -95,10 +123,11 @@ function Write-PcConversation {
   Write-PcLine ('Risque       : '+$risk.Level+' ('+$risk.Score+'/100) | ETA: '+$eta) $riskColor
   Write-PcLine ''
   $i=1
-  foreach($m in @($Conversation.macro_tasks|Select-Object -First 9)){
+  foreach($m in @($Conversation.macro_tasks|Select-Object -First 10)){
     $mp=Get-PcMacroProgress $m
     $col=if($m.state-eq'BLOCKED'){'Red'}elseif($m.state-eq'WAITING'){'Yellow'}else{'Green'}
-    Write-PcLine ("[$i] $($m.title) | $($m.state)") $col
+    $slot=Get-PcSlotKey $i
+    Write-PcLine ("[$slot] $($m.title) | $($m.state)") $col
     Write-PcLine ('    '+(Get-PcBar $mp.Percent 30)+' '+$mp.Percent+'% | fiabilite '+$mp.Confidence+'%')
     if($m.current_action){Write-PcLine ('    En cours : '+$m.current_action)}
     Write-PcLine ''
@@ -107,7 +136,7 @@ function Write-PcConversation {
 }
 
 function Write-PcMacro {
-  param($Macro,[int]$MaxVisible=20)
+  param($Macro,[int]$MaxVisible=20,[int]$Page=0)
   $mp=Get-PcMacroProgress $Macro
   Write-PcLine ('MACRO-TACHE : '+$Macro.title) Cyan
   Write-PcLine ('Etat        : '+$Macro.state)
@@ -118,16 +147,18 @@ function Write-PcMacro {
   if($Macro.next_step){Write-PcLine ('Prochaine   : '+$Macro.next_step)}
   if($Macro.blocker){Write-PcLine ('Blocage     : '+$Macro.blocker) Red}else{Write-PcLine 'Blocage     : aucun' Green}
   Write-PcLine ''
-  $v=Get-PcVisibleMicroTasks $Macro $MaxVisible
+  $v=Get-PcMicroPage $Macro $MaxVisible $Page 10
   if($v.Total-eq0){
     Write-PcLine 'Micro-taches detaillees non publiees dans ce snapshot.' DarkGray
   }else{
-    Write-PcLine ("MICRO-TACHES : $($v.Total) total | $($v.Hidden) condensee(s)") Cyan
+    $pageText=if($v.Pages-gt1){' | page '+($v.Page+1)+'/'+$v.Pages}else{''}
+    Write-PcLine ("MICRO-TACHES : $($v.Total) total | $($v.Hidden) condensee(s)$pageText") Cyan
     $i=1
-    foreach($t in @($v.Items|Select-Object -First 9)){
+    foreach($t in @($v.Items)){
       $mark=switch([string]$t.state){'DONE'{'OK'}'ACTIVE'{'>>'}'BLOCKED'{'!!'}default{'..'}}
       $pct=[int][math]::Round((Get-PcMicroCompletion $t)*100,0)
-      Write-PcLine ("  [$i] $mark $($t.title) - $pct%")
+      $slot=Get-PcSlotKey $i
+      Write-PcLine ("  [$slot] $mark $($t.title) - $pct%")
       if($t.evidence){Write-PcLine ('      preuve: '+$t.evidence) DarkGray}
       $i++
     }
@@ -313,6 +344,7 @@ function Get-PcActionsForView {
     'general' {return @(
       [pscustomobject]@{Key='A';Label='Accueil'},
       [pscustomobject]@{Key='1-9';Label='Conversation'},
+      [pscustomobject]@{Key='0';Label='10e conversation'},
       [pscustomobject]@{Key='F';Label='Feedbacks'},
       [pscustomobject]@{Key='V';Label='Versions'},
       [pscustomobject]@{Key='X';Label='Rapports'},
@@ -326,7 +358,8 @@ function Get-PcActionsForView {
     )}
     'conversation' {return @(
       [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
-      [pscustomobject]@{Key='1-9';Label='Macro'},[pscustomobject]@{Key='C';Label='Cahier A+B+C'},
+      [pscustomobject]@{Key='1-9';Label='Macro'},[pscustomobject]@{Key='0';Label='10e macro'},
+      [pscustomobject]@{Key='C';Label='Cahier A+B+C'},
       [pscustomobject]@{Key='T';Label='Chronologie'},[pscustomobject]@{Key='F';Label='Feedbacks'},
       [pscustomobject]@{Key='V';Label='Versions'},[pscustomobject]@{Key='S';Label='Sources'},
       [pscustomobject]@{Key='P';Label='Parametres'},[pscustomobject]@{Key='X';Label='Rapport'},
@@ -334,7 +367,8 @@ function Get-PcActionsForView {
     )}
     'macro' {return @(
       [pscustomobject]@{Key='A';Label='Accueil'},[pscustomobject]@{Key='B';Label='Retour'},
-      [pscustomobject]@{Key='1-9';Label='Micro'},[pscustomobject]@{Key='C';Label='Cahier'},
+      [pscustomobject]@{Key='1-9';Label='Micro'},[pscustomobject]@{Key='0';Label='10e micro'},
+      [pscustomobject]@{Key='N';Label='Page micro'},[pscustomobject]@{Key='C';Label='Cahier'},
       [pscustomobject]@{Key='T';Label='Chronologie'},[pscustomobject]@{Key='F';Label='Feedbacks'},
       [pscustomobject]@{Key='V';Label='Versions'},[pscustomobject]@{Key='P';Label='Parametres'},
       [pscustomobject]@{Key='X';Label='Rapport'},[pscustomobject]@{Key='R';Label='Sync'},
