@@ -589,7 +589,8 @@ function Write-PcHealth {
   $recentCount=@($diag.RecentSystemErrors).Count
   Write-PcLine ('Erreurs System recentes : '+$recentCount+' max '+$diag.MaxRecentErrors+' sur '+$diag.RecentErrorHours+' h')
   foreach($e in @($diag.RecentSystemErrors|Select-Object -First 3)){
-    Write-PcLine ('  '+$e.TimeCreated.ToString('HH:mm')+' | '+$e.ProviderName+' | ID '+$e.Id) DarkGray
+    $etime=if($e.TimeCreated){$e.TimeCreated.ToString('HH:mm')}else{'--:--'}
+    Write-PcLine ('  '+$etime+' | '+$e.ProviderName+' | ID '+$e.Id) DarkGray
   }
   Write-PcLine ('PowerShell : '+$caps.Engine+' | WinGet '+$(if($caps.WinGetDetected){'OK'}else{'ABSENT'})+' | pwsh7 '+$(if($caps.Pwsh7Detected){'DETECTE'}else{'DIFFERE'}))
   if(-not$catalog.Error){Write-PcLine ('Sources PS : '+$catalog.Total+' auditees | zero installation runtime automatique') DarkCyan}
