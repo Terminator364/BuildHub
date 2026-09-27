@@ -346,3 +346,30 @@ if([bool]$cfg.pslib_audit.lot4_network.dns_cache_modification){throw 'lot4 DNS c
 if([bool]$cfg.pslib_audit.lot4_network.external_module_required){throw 'lot4 external module must be disabled'}
 Write-Host 'PC_COMMAND_V101_ZERO_TRAFFIC_NETWORK_OK'
 
+# FB-041 / v1.0.2: startup/RAM snapshot must remain bounded and read-only.
+if(-not(Get-Command Get-PcStartupRamSnapshot -ErrorAction SilentlyContinue)){throw 'startup RAM snapshot missing'}
+$sr=Get-PcStartupRamSnapshot -TtlSeconds 0 -TopProcessGroups 6
+if(-not[bool]$sr.ReadOnly){throw 'startup RAM snapshot must be read-only'}
+if([bool]$sr.ProcessChangePerformed){throw 'startup RAM snapshot must not change processes'}
+if([bool]$sr.ServiceChangePerformed){throw 'startup RAM snapshot must not change services'}
+if([bool]$sr.RegistryChangePerformed){throw 'startup RAM snapshot must not change registry'}
+if([bool]$sr.ScheduledTaskEnumerationPerformed){throw 'startup RAM snapshot must not enumerate scheduled tasks in baseline'}
+if([bool]$sr.ServiceEnumerationPerformed){throw 'startup RAM snapshot must not enumerate services in baseline'}
+if([bool]$sr.WatcherStarted){throw 'startup RAM snapshot must not start a watcher'}
+if(@($sr.TopMemoryProcesses).Count-gt6){throw 'startup RAM snapshot must remain bounded to 6 process groups'}
+$ioText=Get-Content (Join-Path $root 'pc-command\v5\lib\io.ps1') -Raw -Encoding UTF8
+$start=$ioText.IndexOf('function Get-PcStartupRamSnapshot')
+if($start-lt0){throw 'startup RAM source block missing'}
+$fn=$ioText.Substring($start)
+foreach($forbidden in @('Stop-Process','Set-Service','Remove-ItemProperty','Set-ItemProperty','Disable-ScheduledTask','Unregister-ScheduledTask','Get-ScheduledTask','Win32_Service')){
+  if($fn -match [regex]::Escape($forbidden)){throw "forbidden startup/RAM primitive present: $forbidden"}
+}
+if(-not[bool]$cfg.pslib_audit.lot5_startup_ram.read_only){throw 'lot5 must be read-only'}
+if([bool]$cfg.pslib_audit.lot5_startup_ram.process_change){throw 'lot5 process changes must be false'}
+if([bool]$cfg.pslib_audit.lot5_startup_ram.service_change){throw 'lot5 service changes must be false'}
+if([bool]$cfg.pslib_audit.lot5_startup_ram.registry_change){throw 'lot5 registry changes must be false'}
+if([bool]$cfg.pslib_audit.lot5_startup_ram.scheduled_task_enumeration){throw 'lot5 task enumeration must be false'}
+if([bool]$cfg.pslib_audit.lot5_startup_ram.service_enumeration){throw 'lot5 service enumeration must be false'}
+if([bool]$cfg.pslib_audit.lot5_startup_ram.watcher){throw 'lot5 watcher must be false'}
+Write-Host 'PC_COMMAND_V102_STARTUP_RAM_OK'
+
