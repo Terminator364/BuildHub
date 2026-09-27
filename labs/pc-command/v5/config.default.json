@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "surface startup entries and grouped top-memory processes with no process/service/registry changes and no slow services/tasks enumeration",
+    "current_goal": "ship bounded read-only startup/RAM snapshot with no slow service/task enumeration and no v1.0.1 regressions",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,7 +147,7 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "candidate",
+    "stage": "stable",
     "objective": "bounded read-only startup and RAM snapshot derived from repairtools/pstop patterns",
     "target_user_score_10": 5,
     "command_router": "contextual",
