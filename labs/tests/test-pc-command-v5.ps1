@@ -437,3 +437,34 @@ if([bool]$cfg.pslib_audit.lot7_power.network_traffic){throw 'lot7 network traffi
 if([bool]$cfg.pslib_audit.lot7_power.external_module_required){throw 'lot7 external module must be false'}
 Write-Host 'PC_COMMAND_V104_POWER_SNAPSHOT_OK'
 
+# FB-044 / v1.0.5: local software inventory must remain registry-only, zero-traffic and read-only.
+if(-not(Get-Command Get-PcLocalSoftwareInventory -ErrorAction SilentlyContinue)){throw 'local software inventory missing'}
+$sw=Get-PcLocalSoftwareInventory -TtlSeconds 0 -MaxItems 20
+if(-not[bool]$sw.ReadOnly){throw 'software inventory must be read-only'}
+if([bool]$sw.NetworkTrafficGenerated){throw 'software inventory must generate zero network traffic'}
+if([bool]$sw.WingetListExecuted){throw 'software inventory must not execute winget list'}
+if([bool]$sw.AppxEnumerated){throw 'software inventory must not enumerate AppX in baseline'}
+if([bool]$sw.InstallActionPerformed){throw 'software inventory must not install packages'}
+if([bool]$sw.UninstallActionPerformed){throw 'software inventory must not uninstall packages'}
+if([bool]$sw.UpdateActionPerformed){throw 'software inventory must not update packages'}
+if([bool]$sw.ExternalModuleRequired){throw 'software inventory must not require external modules'}
+if([int]$sw.RegistryPathsRead-ne3){throw 'software inventory must read exactly 3 Uninstall registry paths'}
+if(@($sw.Items).Count-gt20){throw 'software inventory result must remain bounded'}
+$ioText=Get-Content (Join-Path $root 'pc-command\v5\lib\io.ps1') -Raw -Encoding UTF8
+$softStart=$ioText.IndexOf('function Get-PcLocalSoftwareInventory')
+if($softStart-lt0){throw 'software inventory source block missing'}
+$softFn=$ioText.Substring($softStart)
+foreach($forbidden in @('winget list','Get-AppxPackage','Install-Package','Uninstall-Package','Install-Module','Install-PSResource','Start-BitsTransfer','Invoke-WebRequest','Invoke-RestMethod')){
+  if($softFn -match [regex]::Escape($forbidden)){throw "forbidden software inventory primitive present: $forbidden"}
+}
+if(-not[bool]$cfg.pslib_audit.lot8_local_software.read_only){throw 'lot8 must be read-only'}
+if([bool]$cfg.pslib_audit.lot8_local_software.winget_list){throw 'lot8 winget list must be false'}
+if([bool]$cfg.pslib_audit.lot8_local_software.appx_baseline){throw 'lot8 AppX baseline must be false'}
+if([bool]$cfg.pslib_audit.lot8_local_software.network_traffic){throw 'lot8 network traffic must be false'}
+if([bool]$cfg.pslib_audit.lot8_local_software.install_action){throw 'lot8 install action must be false'}
+if([bool]$cfg.pslib_audit.lot8_local_software.uninstall_action){throw 'lot8 uninstall action must be false'}
+if([bool]$cfg.pslib_audit.lot8_local_software.update_action){throw 'lot8 update action must be false'}
+if([bool]$cfg.pslib_audit.lot8_local_software.external_module_required){throw 'lot8 external module must be false'}
+if(-not[bool]$cfg.pslib_audit.lot8_local_software.local_view_only){throw 'lot8 must remain Local-view only'}
+Write-Host 'PC_COMMAND_V105_LOCAL_SOFTWARE_OK'
+
