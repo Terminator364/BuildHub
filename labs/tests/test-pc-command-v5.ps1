@@ -197,3 +197,53 @@ if((4+10)-gt$script:PcFrameMax){throw 'compact 10-conversation layout exceeds mi
 $script:PcFrameMax=34
 if(Get-PcHomeCompactMode 3){throw 'small conversation sets should keep rich layout when space permits'}
 Write-Host 'PC_COMMAND_V097_ADAPTIVE_HOME_STATE_LABELS_OK'
+
+# FB-037 / v0.9.8: PowerShell repository integration must remain zero-resident and native-first.
+$catalogPath=Join-Path $root 'pc-command\v5\powershell-sources.json'
+if(-not(Test-Path $catalogPath)){throw 'PowerShell source catalog missing'}
+$catalog=Get-Content $catalogPath -Raw -Encoding UTF8|ConvertFrom-Json
+$entries=@($catalog.entries)
+if($entries.Count-ne41){throw "PowerShell source catalog must contain 41 entries; got $($entries.Count)"}
+$validClasses=@('CORE','ON-DEMAND','SOURCE-ONLY','EXTERNAL-TOOL','REJECT')
+foreach($e in $entries){
+  if($validClasses -notcontains [string]$e.class){throw "invalid PowerShell source class: $($e.repo) / $($e.class)"}
+}
+function Assert-PcSourceClass([string]$Repo,[string]$Class){
+  $x=@($entries|Where-Object repo -eq $Repo|Select-Object -First 1)
+  if($x.Count-ne1){throw "PowerShell source missing: $Repo"}
+  if([string]$x[0].class-ne$Class){throw "PowerShell source class mismatch: $Repo expected $Class got $($x[0].class)"}
+}
+Assert-PcSourceClass 'PowerShell/PowerShell' 'CORE'
+Assert-PcSourceClass 'PowerShell/PSScriptAnalyzer' 'CORE'
+Assert-PcSourceClass 'pester/Pester' 'CORE'
+Assert-PcSourceClass 'microsoft/winget-cli' 'CORE'
+Assert-PcSourceClass 'Badgerati/Pode' 'REJECT'
+Assert-PcSourceClass 'ChrisTitusTech/winutil' 'SOURCE-ONLY'
+Assert-PcSourceClass 'farag2/Sophia-Script-for-Windows' 'SOURCE-ONLY'
+Assert-PcSourceClass 'Raphire/Win11Debloat' 'SOURCE-ONLY'
+if(-not[bool]$catalog.policy.native_first){throw 'PowerShell catalog must be native-first'}
+if(-not[bool]$catalog.policy.no_runtime_auto_install){throw 'runtime auto-install must be forbidden'}
+if(-not[bool]$catalog.policy.no_permanent_watchers){throw 'permanent watchers must be forbidden'}
+if(-not(Get-Command Get-PcPowerShellCapabilitySnapshot -ErrorAction SilentlyContinue)){throw 'PowerShell capability probe missing'}
+if(-not(Get-Command Get-PcPowerShellSourceCatalog -ErrorAction SilentlyContinue)){throw 'PowerShell catalog reader missing'}
+$caps=Get-PcPowerShellCapabilitySnapshot -TtlSeconds 0
+if([bool]$caps.InstallPerformed){throw 'capability probe must not install anything'}
+if([bool]$caps.ResidentDependencyAdded){throw 'capability probe must not add resident dependency'}
+$catalogRuntime=Get-PcPowerShellSourceCatalog -TtlSeconds 0
+if([int]$catalogRuntime.Total-ne41){throw 'runtime PowerShell catalog count mismatch'}
+foreach($runtimeFile in @(
+  (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\io.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\ui.ps1')
+)){
+  $runtimeText=Get-Content $runtimeFile -Raw -Encoding UTF8
+  if($runtimeText -match '(?im)^\s*(Install-Module|Install-PSResource)\b'){
+    throw "runtime auto-install command forbidden: $runtimeFile"
+  }
+}
+if([int]$cfg.pslib_audit.catalog_entries-ne41){throw 'config PowerShell catalog count must be 41'}
+if([bool]$cfg.pslib_audit.runtime_auto_install){throw 'config must forbid runtime auto-install'}
+if([string]$cfg.pslib_audit.capability_probe_mode-ne'on_demand_cached'){throw 'PowerShell capability probe must be on-demand cached'}
+if([string]$cfg.pslib_audit.pwsh7_install-ne'DEFERRED_UNTIL_MEASURED_GAP'){throw 'pwsh7 install must remain deferred'}
+Write-Host 'PC_COMMAND_V098_PSLIB_ZERO_RESIDENT_OK'
+
