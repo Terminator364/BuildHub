@@ -575,7 +575,7 @@ function Get-PcLocalNetworkSnapshot {
         IPv4=$v4
         Gateway=$gw
         DNS=$dns
-        LinkMbps=if([double]$nic.Speed-gt0){[math]::Round(([double]$nic.Speed/1MB)*8,0)}else{0}
+        LinkMbps=if([double]$nic.Speed-gt0){[math]::Round(([double]$nic.Speed/1000000),0)}else{0}
       }
     }
   }catch{$errors.Add('network-snapshot: '+$_.Exception.Message)}
