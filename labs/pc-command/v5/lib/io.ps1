@@ -344,9 +344,13 @@ function Get-PcPowerShellCapabilitySnapshot {
   $winget=Get-Command winget.exe -ErrorAction SilentlyContinue
   $git=Get-Command git.exe -ErrorAction SilentlyContinue
   $pwshVersion=$null
+  $pwshPath=$null
+  $wingetPath=$null
   if($pwsh){
+    $pwshPath=[string]$pwsh.Source
     try{$pwshVersion=(Get-Item $pwsh.Source -ErrorAction Stop).VersionInfo.ProductVersion}catch{}
   }
+  if($winget){$wingetPath=[string]$winget.Source}
 
   $mods=[ordered]@{
     PSResourceGet=(Get-PcModuleVersion 'Microsoft.PowerShell.PSResourceGet')
@@ -372,10 +376,10 @@ function Get-PcPowerShellCapabilitySnapshot {
     Engine=('Windows PowerShell '+$PSVersionTable.PSVersion.ToString())
     PSEdition=[string]$PSVersionTable.PSEdition
     Pwsh7Detected=[bool]$pwsh
-    Pwsh7Path=if($pwsh){[string]$pwsh.Source}else{$null}
+    Pwsh7Path=$pwshPath
     Pwsh7Version=$pwshVersion
     WinGetDetected=[bool]$winget
-    WinGetPath=if($winget){[string]$winget.Source}else{$null}
+    WinGetPath=$wingetPath
     GitDetected=[bool]$git
     Native=[pscustomobject]$native
     Modules=[pscustomobject]$mods
