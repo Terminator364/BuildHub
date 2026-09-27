@@ -1,8 +1,8 @@
 {
   "schema": "pc.command.manifest.v1",
   "version": "1.0.5",
-  "channel": "candidate",
-  "generated_at": "2026-09-27T13:30:00+01:00",
+  "channel": "stable",
+  "generated_at": "2026-09-27T13:34:00+01:00",
   "entrypoint": "PC_COMMAND_V5.ps1",
   "files": [
     {
@@ -39,7 +39,7 @@
     },
     {
       "relative_path": "config.default.json",
-      "git_blob_sha": "c8326ed9303d481ab275b1ec1e35f6af55ecee18"
+      "git_blob_sha": "2b40901c610b8ca075780b79acbeb8e091b6d647"
     },
     {
       "relative_path": "powershell-sources.json",
