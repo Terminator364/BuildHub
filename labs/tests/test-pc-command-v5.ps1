@@ -314,3 +314,35 @@ $mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw -
 if($mainText -notmatch 'policy\.ps1'){throw 'policy engine not loaded by runtime'}
 Write-Host 'PC_COMMAND_V100_ACTION_POLICY_OK'
 
+# FB-040 / v1.0.1: local network snapshot must remain zero-traffic and dependency-free.
+if(-not(Get-Command Get-PcLocalNetworkSnapshot -ErrorAction SilentlyContinue)){throw 'local network snapshot missing'}
+$net=Get-PcLocalNetworkSnapshot -TtlSeconds 0
+if(-not[bool]$net.ReadOnly){throw 'network snapshot must be read-only'}
+if([bool]$net.NetworkTrafficGenerated){throw 'network snapshot must generate zero network traffic'}
+if([bool]$net.ExternalLookup){throw 'network snapshot must not use external lookup'}
+if([bool]$net.DnsCacheModified){throw 'network snapshot must not modify DNS cache'}
+if([bool]$net.ActiveProbeUsed){throw 'network snapshot must not use active probes'}
+if([bool]$net.ExternalModuleRequired){throw 'network snapshot must not require external modules'}
+if($net.Primary){
+  if([string]$net.Primary.Status-ne'Up'){throw 'primary network adapter must be Up'}
+  if(@($net.Primary.IPv4).Count-eq0){throw 'primary network adapter must have IPv4'}
+  foreach($ip in @($net.Primary.IPv4)){
+    if([string]$ip -match '^169\.254\.' -or [string]$ip -match '^127\.'){throw 'primary network adapter must exclude APIPA/loopback'}
+  }
+}
+$ioText=Get-Content (Join-Path $root 'pc-command\v5\lib\io.ps1') -Raw -Encoding UTF8
+$netStart=$ioText.IndexOf('function Get-PcLocalNetworkSnapshot')
+if($netStart-lt0){throw 'network snapshot source block not found'}
+$netFn=$ioText.Substring($netStart)
+foreach($forbidden in @('Test-Connection','Test-NetConnection','Resolve-DnsName','tracert','nmap','Clear-DnsClientCache')){
+  if($netFn -match [regex]::Escape($forbidden)){throw "active network primitive forbidden in snapshot: $forbidden"}
+}
+if([bool]$cfg.pslib_audit.lot4_network.active_probe){throw 'lot4 active probes must be disabled'}
+if([bool]$cfg.pslib_audit.lot4_network.ping){throw 'lot4 ping must be disabled'}
+if([bool]$cfg.pslib_audit.lot4_network.traceroute){throw 'lot4 traceroute must be disabled'}
+if([bool]$cfg.pslib_audit.lot4_network.port_scan){throw 'lot4 port scan must be disabled'}
+if([bool]$cfg.pslib_audit.lot4_network.external_dns_lookup){throw 'lot4 external DNS lookup must be disabled'}
+if([bool]$cfg.pslib_audit.lot4_network.dns_cache_modification){throw 'lot4 DNS cache modification must be disabled'}
+if([bool]$cfg.pslib_audit.lot4_network.external_module_required){throw 'lot4 external module must be disabled'}
+Write-Host 'PC_COMMAND_V101_ZERO_TRAFFIC_NETWORK_OK'
+
