@@ -524,11 +524,20 @@ function Write-PcHealth {
   $caps=Get-PcPowerShellCapabilitySnapshot
   $catalog=Get-PcPowerShellSourceCatalog
   $diag=Get-PcReadOnlyDiagnostics
+  $net=Get-PcLocalNetworkSnapshot
   Write-PcLine 'SANTE / DIAGNOSTIC' -ForegroundColor Cyan
   Write-PcLine ''
   Write-PcLine ('Score : '+$h.Score+'/100 | '+$h.Level) -ForegroundColor $h.Color
   Write-PcLine ('RAM libre : '+$h.FreeRamMb+' MB | uptime '+$(if($null-ne$diag.UptimeHours){$diag.UptimeHours.ToString()+' h'}else{'?'}))
-  Write-PcLine ('Reseau local : '+$(if($diag.NetworkAvailable){'DISPONIBLE'}else{'INDISPONIBLE'})+' | probe lecture seule / zero trafic genere')
+  if($net.Primary){
+    $nip=if(@($net.Primary.IPv4).Count){[string]$net.Primary.IPv4[0]}else{'?'}
+    $ngw=if(@($net.Primary.Gateway).Count){[string]$net.Primary.Gateway[0]}else{'?'}
+    $ndns=if(@($net.Primary.DNS).Count){[string]$net.Primary.DNS[0]}else{'?'}
+    Write-PcLine ('Reseau local : '+$net.Primary.Name+' | '+$net.Primary.Status+' | lien '+$net.Primary.LinkMbps+' Mbit/s | zero trafic genere')
+    Write-PcLine ('  IPv4 '+$nip+' | passerelle '+$ngw+' | DNS '+$ndns) DarkGray
+  }else{
+    Write-PcLine ('Reseau local : '+$(if($diag.NetworkAvailable){'DISPONIBLE sans route primaire'}else{'INDISPONIBLE'})+' | zero trafic genere') Yellow
+  }
   $driveWarn=@($diag.FixedDrives|Where-Object {[double]$_.FreePercent-lt10})
   foreach($d in @($diag.FixedDrives|Select-Object -First 3)){
     $col=if([double]$d.FreePercent-lt10){'Yellow'}else{'Gray'}
@@ -542,6 +551,7 @@ function Write-PcHealth {
   Write-PcLine ('PowerShell : '+$caps.Engine+' | WinGet '+$(if($caps.WinGetDetected){'OK'}else{'ABSENT'})+' | pwsh7 '+$(if($caps.Pwsh7Detected){'DETECTE'}else{'DIFFERE'}))
   if(-not$catalog.Error){Write-PcLine ('Sources PS : '+$catalog.Total+' auditees | zero installation runtime automatique') DarkCyan}
   if($diag.Error){Write-PcLine ('Diagnostic partiel : '+$diag.Error) Yellow}
+  if($net.Error){Write-PcLine ('Snapshot reseau partiel : '+$net.Error) Yellow}
   if(@($h.Reasons).Count-eq0 -and $driveWarn.Count-eq0){Write-PcLine 'Aucune anomalie prioritaire detectee.' -ForegroundColor Green}
   else{
     Write-PcLine 'Points a surveiller :' -ForegroundColor Yellow
