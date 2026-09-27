@@ -13,6 +13,7 @@ $OutputEncoding=[Console]::OutputEncoding
 $Lib=Join-Path $PSScriptRoot 'lib'
 . (Join-Path $Lib 'engine.ps1')
 . (Join-Path $Lib 'io.ps1')
+. (Join-Path $Lib 'policy.ps1')
 . (Join-Path $Lib 'report.ps1')
 . (Join-Path $Lib 'ui.ps1')
 

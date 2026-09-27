@@ -6,6 +6,7 @@ $files=@(
   (Join-Path $root 'pc-command\v5\lib\engine.ps1'),
   (Join-Path $root 'pc-command\v5\lib\eventbus.ps1'),
   (Join-Path $root 'pc-command\v5\lib\io.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\policy.ps1'),
   (Join-Path $root 'pc-command\v5\lib\report.ps1'),
   (Join-Path $root 'pc-command\v5\lib\ui.ps1')
 )
@@ -34,6 +35,7 @@ if($p2-ne50){throw "scope expansion expected 50 got $p2"}
 $manifest=Get-Content (Join-Path $root 'pc-command\v5\manifest.json') -Raw|ConvertFrom-Json
 if([string]$cfg.version -ne [string]$manifest.version){throw "config/manifest version mismatch: cfg=$($cfg.version) manifest=$($manifest.version)"}
 . (Join-Path $root 'pc-command\v5\lib\io.ps1')
+. (Join-Path $root 'pc-command\v5\lib\policy.ps1')
 if(-not(Get-Command Read-PcStateLocal -ErrorAction SilentlyContinue)){throw 'Read-PcStateLocal missing'}
 if(-not(Get-Command Start-PcStatePull -ErrorAction SilentlyContinue)){throw 'Start-PcStatePull missing'}
 if(-not(Get-Command Complete-PcStatePull -ErrorAction SilentlyContinue)){throw 'Complete-PcStatePull missing'}
@@ -268,4 +270,47 @@ if([bool]$cfg.pslib_audit.lot2.windows_update_actions){throw 'lot2 must not exec
 if([bool]$cfg.pslib_audit.lot2.eventviewerx_dependency){throw 'lot2 must not depend on EventViewerX'}
 if(@($cfg.pslib_audit.lot2.external_modules_installed).Count-ne0){throw 'lot2 must not install external modules'}
 Write-Host 'PC_COMMAND_V099_NATIVE_DIAGNOSTICS_OK'
+
+# FB-039 / v1.0.0: L0-L3 policy engine must gate actions without executing them.
+if(-not(Get-Command Test-PcActionPolicy -ErrorAction SilentlyContinue)){throw 'action policy evaluator missing'}
+if(-not(Get-Command Get-PcActionPolicySummary -ErrorAction SilentlyContinue)){throw 'action policy summary missing'}
+if([bool]$cfg.action_policy.execution_enabled){throw 'v1.0.0 policy layer must remain non-executing'}
+if([string]$cfg.action_policy.default_unknown-ne'DENY'){throw 'unknown actions must default DENY'}
+
+$l0=[pscustomobject]@{Name='read-health';Level='L0';ReadOnly=$true;Bounded=$true;ModifiesSystem=$false}
+$r0=Test-PcActionPolicy $l0
+if([string]$r0.Decision-ne'ALLOW_AUTO' -or -not[bool]$r0.Auto){throw 'bounded L0 read should auto-allow'}
+
+$l1=[pscustomobject]@{Name='generate-report';Level='L1';ReadOnly=$false;Bounded=$true;ModifiesSystem=$false}
+$r1=Test-PcActionPolicy $l1
+if([string]$r1.Decision-ne'ALLOW_AUTO' -or -not[bool]$r1.Auto){throw 'bounded L1 safe action should auto-allow'}
+
+$l2Missing=[pscustomobject]@{Name='install-module';Level='L2';Bounded=$true;ModifiesSystem=$true;Preconditions=$true;ExpectedChanges=$true;Rollback=$false;PostVerification=$true}
+$r2m=Test-PcActionPolicy $l2Missing
+if([string]$r2m.Decision-ne'DENY'){throw 'L2 without rollback must be denied'}
+if(@($r2m.Missing)-notcontains'Rollback'){throw 'L2 denial must report missing rollback'}
+
+$l2=[pscustomobject]@{Name='install-module';Level='L2';Bounded=$true;ModifiesSystem=$true;Preconditions=$true;ExpectedChanges=$true;Rollback=$true;PostVerification=$true}
+$r2=Test-PcActionPolicy $l2
+if([string]$r2.Decision-ne'ALLOW_GATED' -or [bool]$r2.Auto){throw 'fully gated L2 must be non-auto ALLOW_GATED'}
+
+$l3=[pscustomobject]@{Name='system-repair';Level='L3';Bounded=$true;ModifiesSystem=$true;Preconditions=$true;ExpectedChanges=$true;Backup=$true;Rollback=$true;PostVerification=$true;ManualApproval=$true}
+$r3=Test-PcActionPolicy $l3
+if([string]$r3.Decision-ne'REQUIRE_EXPLICIT_APPROVAL' -or [bool]$r3.Auto){throw 'L3 must require explicit approval and never auto-run'}
+
+$pipe=[pscustomobject]@{Name='remote-iex';Level='L1';Bounded=$true;RemotePipeExecute=$true}
+$rp=Test-PcActionPolicy $pipe
+if([string]$rp.Decision-ne'DENY'){throw 'remote pipe-to-execute must be hard denied'}
+
+$preset=[pscustomobject]@{Name='debloat-preset';Level='L2';Bounded=$true;GlobalPreset=$true;Preconditions=$true;ExpectedChanges=$true;Rollback=$true;PostVerification=$true}
+$rg=Test-PcActionPolicy $preset
+if([string]$rg.Decision-ne'DENY'){throw 'global debloat/tweak preset must be hard denied'}
+
+$ext=[pscustomobject]@{Name='external-script';Level='L1';Bounded=$true;ExternalSource=$true;ExternalSourcePinned=$false}
+$re=Test-PcActionPolicy $ext
+if([string]$re.Decision-ne'DENY' -or @($re.Missing)-notcontains'ExternalSourcePinned'){throw 'un-pinned external source must be denied'}
+
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw -Encoding UTF8
+if($mainText -notmatch 'policy\.ps1'){throw 'policy engine not loaded by runtime'}
+Write-Host 'PC_COMMAND_V100_ACTION_POLICY_OK'
 
