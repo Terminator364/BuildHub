@@ -645,9 +645,11 @@ function Get-PcStartupRamSnapshot {
   }
 
   $startupItems=@()
+  $commonData=[Environment]::GetFolderPath([Environment+SpecialFolder]::CommonApplicationData)
+  $userData=[Environment]::GetFolderPath([Environment+SpecialFolder]::ApplicationData)
   $startupFolders=@(
-    [pscustomobject]@{Path=(Join-Path $env:ProgramData 'Microsoft\Windows\Start Menu\Programs\Startup');Scope='Machine'},
-    [pscustomobject]@{Path=(Join-Path $env:AppData 'Microsoft\Windows\Start Menu\Programs\Startup');Scope='User'}
+    [pscustomobject]@{Path=(Join-Path $commonData 'Microsoft\Windows\Start Menu\Programs\Startup');Scope='Machine'},
+    [pscustomobject]@{Path=(Join-Path $userData 'Microsoft\Windows\Start Menu\Programs\Startup');Scope='User'}
   )
   foreach($sf in $startupFolders){
     try{
