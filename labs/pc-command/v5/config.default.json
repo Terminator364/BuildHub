@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "ship native read-only health diagnostics without network mutation, auto-install, or v0.9.8 regressions",
+    "current_goal": "ship bounded native read-only diagnostics with zero external dependency and no v0.9.8 regressions",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,7 +147,7 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "candidate",
+    "stage": "stable",
     "objective": "bounded native read-only diagnostics from PowerShell repo audit; zero resident dependency",
     "target_user_score_10": 5,
     "command_router": "contextual",
