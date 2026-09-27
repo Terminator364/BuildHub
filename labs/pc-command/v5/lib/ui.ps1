@@ -537,10 +537,17 @@ function Write-PcHealth {
   $diag=Get-PcReadOnlyDiagnostics
   $net=Get-PcLocalNetworkSnapshot
   $startup=Get-PcStartupRamSnapshot
+  $power=Get-PcPowerSnapshot
   Write-PcLine 'SANTE / DIAGNOSTIC' -ForegroundColor Cyan
   Write-PcLine ''
   Write-PcLine ('Score : '+$h.Score+'/100 | '+$h.Level) -ForegroundColor $h.Color
   Write-PcLine ('RAM libre : '+$h.FreeRamMb+' MB | uptime '+$(if($null-ne$diag.UptimeHours){$diag.UptimeHours.ToString()+' h'}else{'?'}))
+  if($power.BatteryPresent){
+    $runtime=if($null-ne$power.EstimatedRuntimeMinutes){' | autonomie '+$power.EstimatedRuntimeMinutes+' min'}else{''}
+    Write-PcLine ('Alimentation : batterie '+$power.ChargePercent+'% | '+$power.BatteryStatusLabel+$runtime+' | plan '+$(if($power.ActiveSchemeName){$power.ActiveSchemeName}else{'?'}))
+  }else{
+    Write-PcLine ('Alimentation : batterie non detectee | plan '+$(if($power.ActiveSchemeName){$power.ActiveSchemeName}else{'?'}))
+  }
   if($net.Primary){
     $nip=if(@($net.Primary.IPv4).Count){[string]$net.Primary.IPv4[0]}else{'?'}
     $ngw=if(@($net.Primary.Gateway).Count){[string]$net.Primary.Gateway[0]}else{'?'}
@@ -570,6 +577,7 @@ function Write-PcHealth {
   if($diag.Error){Write-PcLine ('Diagnostic partiel : '+$diag.Error) Yellow}
   if($net.Error){Write-PcLine ('Snapshot reseau partiel : '+$net.Error) Yellow}
   if($startup.Error){Write-PcLine ('Snapshot demarrage/RAM partiel : '+$startup.Error) Yellow}
+  if($power.Error){Write-PcLine ('Snapshot alimentation partiel : '+$power.Error) Yellow}
   if(@($h.Reasons).Count-eq0 -and $driveWarn.Count-eq0){Write-PcLine 'Aucune anomalie prioritaire detectee.' -ForegroundColor Green}
   else{
     Write-PcLine 'Points a surveiller :' -ForegroundColor Yellow
