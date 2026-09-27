@@ -1,6 +1,4 @@
-param(
-  [int]$Port = 8791
-)
+param([int]$Port = 8791)
 
 $ErrorActionPreference='Stop'
 $LabRoot=Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -12,28 +10,32 @@ if(-not(Test-Path -LiteralPath $Server)){throw "WEB LAB server absent: $Server"}
 $node=(Get-Command node.exe -ErrorAction SilentlyContinue)
 if(-not$node){throw 'Node.js est requis pour PC COMMAND WEB LAB.'}
 
-$listener=Get-NetTCPConnection -LocalPort $Port -State Listen -ErrorAction SilentlyContinue|Select-Object -First 1
-if($listener){
-  $owner=[int]$listener.OwningProcess
-  $proc=Get-CimInstance Win32_Process -Filter ('ProcessId='+$owner) -ErrorAction SilentlyContinue
-  if(-not$proc -or [string]$proc.CommandLine -notmatch 'PC_COMMAND-WEB-LAB|pc-command\\web-lab|web-lab\\server\.mjs'){
-    throw "Le port $Port est déjà utilisé par un autre processus (PID $owner)."
-  }
-}else{
+function Test-WebLabReady {
+  try{
+    $ping=Invoke-RestMethod -Uri ($Url+'/api/ping') -TimeoutSec 1
+    return [bool]$ping.ok
+  }catch{return $false}
+}
+
+$ready=Test-WebLabReady
+if(-not$ready){
   $env:PC_COMMAND_ROOT=$PcRoot
   $env:PC_COMMAND_WEB_PORT=[string]$Port
   $env:PC_COMMAND_WEB_IDLE_MS='120000'
   $log=Join-Path $LabRoot 'web-lab.log'
-  Start-Process -FilePath $node.Source -ArgumentList @($Server) -WorkingDirectory $LabRoot -WindowStyle Hidden -RedirectStandardOutput $log -RedirectStandardError (Join-Path $LabRoot 'web-lab-error.log')
-  $ready=$false
-  for($i=0;$i-lt25;$i++){
-    Start-Sleep -Milliseconds 200
-    try{
-      $ping=Invoke-RestMethod -Uri ($Url+'/api/ping') -TimeoutSec 1
-      if($ping.ok){$ready=$true;break}
-    }catch{}
+  $err=Join-Path $LabRoot 'web-lab-error.log'
+  Start-Process -FilePath $node.Source -ArgumentList @($Server) -WorkingDirectory $LabRoot -WindowStyle Hidden -RedirectStandardOutput $log -RedirectStandardError $err
+  for($i=0;$i-lt60;$i++){
+    Start-Sleep -Milliseconds 250
+    if(Test-WebLabReady){$ready=$true;break}
   }
-  if(-not$ready){throw 'Le serveur WEB LAB n’a pas répondu dans le délai prévu.'}
+}
+
+if(-not$ready){
+  $detail=''
+  $errFile=Join-Path $LabRoot 'web-lab-error.log'
+  if(Test-Path $errFile){$detail=(Get-Content $errFile -Raw -ErrorAction SilentlyContinue)}
+  throw ('Le serveur WEB LAB n’a pas répondu sur '+$Url+'. '+$detail)
 }
 
 Start-Process $Url
