@@ -1,0 +1,347 @@
+{
+  "schema": "pc.command.powershell.sources.v1",
+  "version": "0.9.8",
+  "observed_at": "2026-09-27T10:02:00+01:00",
+  "policy": {
+    "engine": "PowerShell main; CMD bootstrap/fallback only",
+    "native_first": true,
+    "load_on_demand": true,
+    "no_mass_clone": true,
+    "no_runtime_auto_install": true,
+    "no_permanent_watchers": true,
+    "quality_gates": [
+      "PSScriptAnalyzer",
+      "Pester"
+    ]
+  },
+  "entries": [
+    {
+      "repo": "PowerShell/PowerShell",
+      "class": "CORE",
+      "role": "runtime-family",
+      "ram": "runtime-only",
+      "risk": "low",
+      "reason": "Canonical PowerShell engine family; keep Windows PowerShell 5.1 until pwsh 7 is benchmarked on the 4 GB PC."
+    },
+    {
+      "repo": "PowerShell/PSResourceGet",
+      "class": "ON-DEMAND",
+      "role": "dependency-management",
+      "ram": "ephemeral",
+      "risk": "low",
+      "reason": "Use only when a module dependency is actually justified; pin versions and avoid runtime auto-install."
+    },
+    {
+      "repo": "PowerShell/PSScriptAnalyzer",
+      "class": "CORE",
+      "role": "static-quality-gate",
+      "ram": "ci-only",
+      "risk": "low",
+      "reason": "Already enforced in GitHub CI; no need for a resident local module."
+    },
+    {
+      "repo": "pester/Pester",
+      "class": "CORE",
+      "role": "tests",
+      "ram": "ci-only",
+      "risk": "low",
+      "reason": "Already enforced in GitHub CI; local Pester 3.4.0 is not trusted as the project gate."
+    },
+    {
+      "repo": "PowerShell/PSReadLine",
+      "class": "SOURCE-ONLY",
+      "role": "human-shell-ergonomics",
+      "ram": "human-session-only",
+      "risk": "low",
+      "reason": "Useful for interactive humans, irrelevant to non-interactive PC Command runtime."
+    },
+    {
+      "repo": "microsoft/winget-cli",
+      "class": "CORE",
+      "role": "windows-package-cli",
+      "ram": "ephemeral",
+      "risk": "medium",
+      "reason": "Already installed on MBMPC; preferred package manager for bounded L2 install/update actions."
+    },
+    {
+      "repo": "ScoopInstaller/Scoop",
+      "class": "EXTERNAL-TOOL",
+      "role": "portable-cli-fallback",
+      "ram": "ephemeral",
+      "risk": "medium",
+      "reason": "Fallback for portable CLI packages only; do not duplicate WinGet by default."
+    },
+    {
+      "repo": "chocolatey/choco",
+      "class": "EXTERNAL-TOOL",
+      "role": "package-fallback",
+      "ram": "ephemeral",
+      "risk": "medium",
+      "reason": "Compatibility fallback only; avoid a third default package path."
+    },
+    {
+      "repo": "asheroto/winget-install",
+      "class": "SOURCE-ONLY",
+      "role": "winget-bootstrap",
+      "ram": "one-shot",
+      "risk": "medium",
+      "reason": "Reference only because WinGet is already present on MBMPC."
+    },
+    {
+      "repo": "fleschutz/PowerShell",
+      "class": "SOURCE-ONLY",
+      "role": "script-catalog",
+      "ram": "script-specific",
+      "risk": "variable",
+      "reason": "Mine for atomic primitives; audit and rewrite selected functions rather than cloning/executing the repository."
+    },
+    {
+      "repo": "ChrisTitusTech/winutil",
+      "class": "SOURCE-ONLY",
+      "role": "windows-utility-patterns",
+      "ram": "zero-when-unused",
+      "risk": "high",
+      "reason": "Never run global presets automatically; study atomic patterns only."
+    },
+    {
+      "repo": "farag2/Sophia-Script-for-Windows",
+      "class": "SOURCE-ONLY",
+      "role": "windows-configuration-patterns",
+      "ram": "zero-when-unused",
+      "risk": "high",
+      "reason": "Atomic documented reversible operations only; no presets."
+    },
+    {
+      "repo": "Raphire/Win11Debloat",
+      "class": "SOURCE-ONLY",
+      "role": "debloat-patterns",
+      "ram": "zero-when-unused",
+      "risk": "high",
+      "reason": "Reference only; global debloat conflicts with rollback and workstation safety."
+    },
+    {
+      "repo": "simeononsecurity/Windows-Optimize-Debloat",
+      "class": "SOURCE-ONLY",
+      "role": "optimization-reference",
+      "ram": "zero-when-unused",
+      "risk": "high",
+      "reason": "Older reference for comparison; never execute globally."
+    },
+    {
+      "repo": "zweilosec/PowerShell-Administration-Tools",
+      "class": "SOURCE-ONLY",
+      "role": "admin-forensics-patterns",
+      "ram": "script-specific",
+      "risk": "medium",
+      "reason": "Older repository; use only isolated reviewed primitives."
+    },
+    {
+      "repo": "EvotecIT/EventViewerX",
+      "class": "ON-DEMAND",
+      "role": "advanced-event-log-diagnostics",
+      "ram": "ephemeral",
+      "risk": "low",
+      "reason": "Native Get-WinEvent stays first; add EventViewerX only when typed/high-volume event tooling is measurably needed."
+    },
+    {
+      "repo": "mgajda83/PSWindowsUpdate",
+      "class": "ON-DEMAND",
+      "role": "windows-update-actions",
+      "ram": "ephemeral",
+      "risk": "medium",
+      "reason": "Useful for controlled update workflows; keep diagnostics separate from L2/L3 modification."
+    },
+    {
+      "repo": "MrGary0z/repairtools",
+      "class": "SOURCE-ONLY",
+      "role": "repair-workflow-patterns",
+      "ram": "zero-when-unused",
+      "risk": "high",
+      "reason": "Study repair orchestration only; DISM/SFC/services/registry remain gated."
+    },
+    {
+      "repo": "SysAdminDoc/PathForge",
+      "class": "SOURCE-ONLY",
+      "role": "acl-file-repair-patterns",
+      "ram": "zero-when-unused",
+      "risk": "high",
+      "reason": "Reuse non-GUI primitives only after ACL/delete rollback design."
+    },
+    {
+      "repo": "BornToBeRoot/NETworkManager",
+      "class": "EXTERNAL-TOOL",
+      "role": "deep-network-gui",
+      "ram": "only-when-open",
+      "risk": "medium",
+      "reason": "Human troubleshooting tool; never resident inside PC Command."
+    },
+    {
+      "repo": "tinuwalther/PsNetTools",
+      "class": "SOURCE-ONLY",
+      "role": "network-test-patterns",
+      "ram": "script-specific",
+      "risk": "low",
+      "reason": "Native Test-NetConnection/Get-NetTCPConnection cover first-line needs."
+    },
+    {
+      "repo": "psmux/pstop",
+      "class": "EXTERNAL-TOOL",
+      "role": "human-process-monitor",
+      "ram": "only-when-open",
+      "risk": "low",
+      "reason": "Optional terminal monitor; PC Command uses native process APIs for automated reads."
+    },
+    {
+      "repo": "Badgerati/Pode",
+      "class": "REJECT",
+      "role": "persistent-local-api",
+      "ram": "resident",
+      "risk": "medium",
+      "reason": "No demonstrated need for a local persistent API; violates zero-resident preference."
+    },
+    {
+      "repo": "EvotecIT/PSWriteHTML",
+      "class": "SOURCE-ONLY",
+      "role": "html-report-patterns",
+      "ram": "generation-only",
+      "risk": "low",
+      "reason": "Current pure-PowerShell report/PDF path is already field-proven and lighter; avoid redundant dependency."
+    },
+    {
+      "repo": "dfinke/ImportExcel",
+      "class": "ON-DEMAND",
+      "role": "xlsx-export",
+      "ram": "generation-only",
+      "risk": "low",
+      "reason": "Useful only if PC Command gains a concrete XLSX export requirement."
+    },
+    {
+      "repo": "Windos/BurntToast",
+      "class": "SOURCE-ONLY",
+      "role": "notification-reference",
+      "ram": "ephemeral",
+      "risk": "low",
+      "reason": "Repository archived; do not make it a new core dependency."
+    },
+    {
+      "repo": "theohbrothers/ScheduledTaskManagement",
+      "class": "SOURCE-ONLY",
+      "role": "scheduled-task-patterns",
+      "ram": "zero-when-unused",
+      "risk": "medium",
+      "reason": "Native ScheduledTasks cmdlets already exist; study declarative/idempotent patterns only."
+    },
+    {
+      "repo": "dahlbyk/posh-git",
+      "class": "REJECT",
+      "role": "interactive-git-prompt",
+      "ram": "human-shell",
+      "risk": "low",
+      "reason": "No value in non-interactive runtime; would only add prompt overhead."
+    },
+    {
+      "repo": "nightroman/Invoke-Build",
+      "class": "ON-DEMAND",
+      "role": "build-orchestration",
+      "ram": "build-only",
+      "risk": "low",
+      "reason": "Use only if build graph complexity exceeds simple PowerShell/Actions steps."
+    },
+    {
+      "repo": "psake/psake",
+      "class": "REJECT",
+      "role": "alternative-build-orchestration",
+      "ram": "build-only",
+      "risk": "low",
+      "reason": "Redundant while Invoke-Build is the preferred optional build abstraction."
+    },
+    {
+      "repo": "MScholtes/PS2EXE",
+      "class": "REJECT",
+      "role": "packaging",
+      "ram": "no-guaranteed-saving",
+      "risk": "medium",
+      "reason": "Packaging is not a RAM optimization and complicates debugging/signing."
+    },
+    {
+      "repo": "cloudbase/powershell-yaml",
+      "class": "SOURCE-ONLY",
+      "role": "yaml-parser",
+      "ram": "ephemeral",
+      "risk": "low",
+      "reason": "PC Command already uses JSON; do not add YAML dependency until a real config need exists."
+    },
+    {
+      "repo": "Icinga/icinga-powershell-framework",
+      "class": "SOURCE-ONLY",
+      "role": "monitoring-inventory-patterns",
+      "ram": "potentially-resident",
+      "risk": "medium",
+      "reason": "Reuse inventory patterns only; no resident monitoring agent on 4 GB PC."
+    },
+    {
+      "repo": "PoshCode/PowerShellPracticeAndStyle",
+      "class": "SOURCE-ONLY",
+      "role": "style-guidance",
+      "ram": "none",
+      "risk": "low",
+      "reason": "Development reference for conventions; not a runtime dependency."
+    },
+    {
+      "repo": "jdhitsolutions/PSScriptTools",
+      "class": "ON-DEMAND",
+      "role": "admin-productivity-tools",
+      "ram": "ephemeral",
+      "risk": "low",
+      "reason": "Consider individual commands only when they replace bespoke code with measurable value."
+    },
+    {
+      "repo": "PowerShellOrg/PSDepend",
+      "class": "SOURCE-ONLY",
+      "role": "dependency-patterns",
+      "ram": "build-only",
+      "risk": "low",
+      "reason": "PSResourceGet is preferred; keep PSDepend as a reference for declarative dependency ideas."
+    },
+    {
+      "repo": "PowerShell/ConsoleGuiTools",
+      "class": "REJECT",
+      "role": "console-gui",
+      "ram": "interactive",
+      "risk": "low",
+      "reason": "Archived and unnecessary for the existing lightweight TUI."
+    },
+    {
+      "repo": "JanDeDobbeleer/oh-my-posh",
+      "class": "REJECT",
+      "role": "prompt-theming",
+      "ram": "resident-shell",
+      "risk": "low",
+      "reason": "Pure human prompt cosmetics; no PC Command runtime value."
+    },
+    {
+      "repo": "JustinGrote/PoshNmap",
+      "class": "SOURCE-ONLY",
+      "role": "nmap-integration-reference",
+      "ram": "ephemeral",
+      "risk": "medium",
+      "reason": "Advanced authorized network diagnostics only; not needed for baseline PC Command."
+    },
+    {
+      "repo": "bvoris/PSNetMon",
+      "class": "SOURCE-ONLY",
+      "role": "network-monitor-patterns",
+      "ram": "potentially-resident",
+      "risk": "medium",
+      "reason": "Study collection patterns; avoid persistent monitoring."
+    },
+    {
+      "repo": "oazabir/PowershellMonitoring",
+      "class": "REJECT",
+      "role": "legacy-monitoring-scripts",
+      "ram": "unknown",
+      "risk": "medium",
+      "reason": "Stale since 2015 and superseded by native/current approaches."
+    }
+  ]
+}
