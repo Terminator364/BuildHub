@@ -31,6 +31,16 @@ function readJson(file, fallback=null) {
   catch { return fallback; }
 }
 
+const jsonCache = new Map();
+function readJsonCached(file, fallback=null, ttlMs=1000) {
+  const now = Date.now();
+  const hit = jsonCache.get(file);
+  if (hit && (now - hit.at) < ttlMs) return hit.value;
+  const value = readJson(file, fallback);
+  jsonCache.set(file, { at: now, value });
+  return value;
+}
+
 function tailJsonl(file, limit=12, maxBytes=262144) {
   try {
     const st = statSync(file);
@@ -53,7 +63,7 @@ function safeChannelId(id) {
 }
 
 function sourceSummary() {
-  const catalog = readJson(paths.sources, { entries: [] });
+  const catalog = readJsonCached(paths.sources, { entries: [] }, 60000);
   const entries = Array.isArray(catalog.entries) ? catalog.entries : [];
   const counts = {};
   for (const x of entries) counts[x.class || 'UNKNOWN'] = (counts[x.class || 'UNKNOWN'] || 0) + 1;
@@ -61,23 +71,24 @@ function sourceSummary() {
 }
 
 function statusSnapshot() {
-  const overview = readJson(paths.overview, { conversations: [] });
-  const versions = readJson(paths.versionTrace, { versions: [] });
-  const feedback = readJson(paths.feedbackIndex, {});
-  const manifest = readJson(paths.manifest, {});
-  const update = readJson(paths.update, {});
-  const sync = readJson(paths.sync, {});
-  const config = readJson(paths.appConfig, {});
-  const dep = readJson(paths.depLock, {});
+  const overview = readJsonCached(paths.overview, { conversations: [] }, 1000);
+  const versions = readJsonCached(paths.versionTrace, { versions: [] }, 10000);
+  const feedback = readJsonCached(paths.feedbackIndex, {}, 2000);
+  const manifest = readJsonCached(paths.manifest, {}, 60000);
+  const update = readJsonCached(paths.update, {}, 1000);
+  const sync = readJsonCached(paths.sync, {}, 1000);
+  const config = readJsonCached(paths.appConfig, {}, 60000);
+  const dep = readJsonCached(paths.depLock, {}, 60000);
   const convs = Array.isArray(overview.conversations) ? overview.conversations : [];
   return {
     lab: {
-      version: '0.2.1',
+      version: '0.2.2',
       mode: 'READ_ONLY',
       serverPid: process.pid,
       serverRssMb: Math.round(process.memoryUsage().rss / 104857.6) / 10,
       boundTo: HOST + ':' + PORT,
-      idleShutdownSeconds: Math.round(IDLE_MS/1000)
+      idleShutdownSeconds: Math.round(IDLE_MS/1000),
+      cachePolicy: { dynamicMs: 1000, feedbackMs: 2000, versionsMs: 10000, staticMs: 60000 }
     },
     app: {
       version: manifest.version || config.version || '?',
