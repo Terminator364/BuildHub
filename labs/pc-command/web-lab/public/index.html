@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PC COMMAND — Web Lab</title>
+<style>
+:root{
+  --bg:#090d18;--bg2:#0f1526;--panel:#121b2e;--panel2:#18243b;--line:#283653;
+  --text:#f5f7fb;--muted:#9eaac0;--blue:#6d8fff;--violet:#8f79ff;--ok:#55d49a;
+  --warn:#f0c76d;--bad:#ff7b86;--cyan:#67d6e7;--shadow:0 14px 40px rgba(0,0,0,.24)
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Segoe UI,Inter,Arial,sans-serif;background:
+  radial-gradient(circle at 85% 0%,rgba(111,91,255,.16),transparent 30%),
+  linear-gradient(140deg,#070b14,#0b1220 48%,#0a1020);color:var(--text)}
+button,input{font:inherit}
+.shell{display:grid;grid-template-columns:252px 1fr;min-height:100vh}
+.side{background:rgba(7,11,20,.96);border-right:1px solid var(--line);padding:22px 16px;position:sticky;top:0;height:100vh}
+.brand{display:flex;gap:12px;align-items:center;margin-bottom:24px}
+.logo{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-weight:900;
+ background:linear-gradient(145deg,var(--blue),var(--violet));box-shadow:0 10px 24px rgba(109,143,255,.25)}
+.brand b{display:block;font-size:18px}.brand small{display:block;color:var(--muted);margin-top:2px}
+.labmark{font-size:10px;padding:3px 6px;border:1px solid #6d5d32;border-radius:999px;color:var(--warn);margin-left:4px}
+.nav{display:grid;gap:6px}.nav button{border:0;background:transparent;color:var(--muted);text-align:left;padding:11px 12px;border-radius:11px;cursor:pointer}
+.nav button:hover,.nav button.active{background:var(--panel2);color:white}
+.sidefoot{position:absolute;left:16px;right:16px;bottom:18px;padding:13px;border:1px solid var(--line);border-radius:13px;background:#0d1424;color:var(--muted);font-size:12px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:7px;background:var(--ok);box-shadow:0 0 0 4px rgba(85,212,154,.08)}
+main{padding:28px 34px 60px;max-width:1550px;width:100%;margin:auto}
+.top{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:24px}
+h1{font-size:30px;margin:0}.subtitle{margin-top:7px;color:var(--muted);max-width:820px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.badge{padding:7px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted);background:#0c1322}
+.badge.ok{color:var(--ok)}.badge.warn{color:var(--warn)}
+.section{display:none}.section.active{display:block}
+.grid{display:grid;gap:15px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(24,36,59,.94),rgba(14,22,38,.96));border-radius:17px;padding:18px;box-shadow:var(--shadow)}
+.kpi .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.kpi .value{font-size:30px;font-weight:850;margin:8px 0 3px}.kpi .hint{font-size:12px;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.45fr .95fr;gap:15px;margin-top:15px}.hero h2{font-size:24px;margin:0 0 10px}.hero p{color:var(--muted);line-height:1.55}
+.progress{height:10px;background:#0b1220;border:1px solid var(--line);border-radius:999px;overflow:hidden}.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--violet));width:0}
+.stack{display:grid;gap:10px}.row{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}.row strong{min-width:120px}.row span{color:var(--muted);text-align:right}
+.callout{border-left:4px solid var(--blue);padding:12px 14px;border-radius:9px;background:#10182a;color:#d9e2f3}.callout.warn{border-left-color:var(--warn)}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.btn{border:1px solid var(--line);background:#1b2946;color:white;border-radius:10px;padding:9px 13px;cursor:pointer}.btn:hover{border-color:#688fda}.btn.primary{background:linear-gradient(135deg,#557ff7,#806bf5);border-color:transparent}
+.search{display:flex;gap:9px;margin:12px 0}.search input{flex:1;background:#0b1323;color:white;border:1px solid var(--line);border-radius:11px;padding:11px 13px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.item{cursor:pointer}.item:hover{border-color:#5d79b1;transform:translateY(-1px)}
+.meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px}.pill{font-size:11px;padding:5px 7px;border-radius:999px;border:1px solid var(--line);color:#bcc8dc;background:#0d1628}
+.pill.ok{color:var(--ok)}.pill.warn{color:var(--warn)}.pill.bad{color:var(--bad)}
+.small{font-size:12px}.muted{color:var(--muted)}.mono{font-family:Consolas,monospace}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.threecol{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:top}th{color:var(--muted);font-weight:600}
+pre{margin:0;white-space:pre-wrap;word-break:break-word;background:#0a1120;border:1px solid var(--line);border-radius:12px;padding:13px;color:#cbd6e8;max-height:560px;overflow:auto}
+.timeline{display:grid;gap:10px}.version{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.version:last-child{border-bottom:0}
+.macros{display:grid;gap:10px}.macro{background:#0e1728;border:1px solid var(--line);border-radius:12px;padding:13px}.macrohead{display:flex;justify-content:space-between;gap:10px}.micro{font-size:12px;color:var(--muted);padding:5px 0 0 12px}
+.statusDot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:var(--muted)}.statusDot.ok{background:var(--ok)}.statusDot.warn{background:var(--warn)}.statusDot.bad{background:var(--bad)}
+.empty{padding:24px;color:var(--muted);text-align:center}
+.footerNote{margin-top:18px;font-size:12px;color:var(--muted)}
+@media(max-width:1100px){.kpis{grid-template-columns:repeat(2,1fr)}.hero,.twocol,.threecol{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.shell{grid-template-columns:1fr}.side{position:static;height:auto}.sidefoot{position:static;margin-top:14px}.top{align-items:flex-start;flex-direction:column}.badges{justify-content:flex-start}.kpis,.cards{grid-template-columns:1fr}main{padding:20px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="side">
+  <div class="brand"><div class="logo">PC</div><div><b>PC COMMAND <span class="labmark">WEB LAB</span></b><small>cockpit local humanisé</small></div></div>
+  <div class="nav">
+    <button class="active" data-view="home">🏠 Accueil</button>
+    <button data-view="conversations">💬 Conversations</button>
+    <button data-view="health">🫀 Santé</button>
+    <button data-view="local">🖥️ Local</button>
+    <button data-view="sources">🧩 Sources</button>
+    <button data-view="feedback">🧾 Feedback</button>
+    <button data-view="versions">🕘 Versions</button>
+    <button data-view="technical">🛠 Technique</button>
+  </div>
+  <div class="sidefoot"><span class="dot"></span><span id="sideState">Connexion locale…</span><br><span class="small">Lecture seule · stable PowerShell intact</span><br><span id="serverRam" class="small"></span></div>
+</aside>
+<main>
+  <div class="top">
+    <div><h1 id="pageTitle">Ton centre de commande</h1><div id="pageSubtitle" class="subtitle">Une vue humaine de PC COMMAND, sans remplacer le moteur PowerShell existant.</div></div>
+    <div class="badges"><span class="badge warn">LAB lecture seule</span><span class="badge" id="versionBadge">v…</span><span class="badge ok" id="syncBadge">sync…</span></div>
+  </div>
+
+  <section id="home" class="section active">
+    <div class="grid kpis">
+      <div class="card kpi"><div class="label">Version stable</div><div class="value" id="kVersion">…</div><div class="hint" id="kChannel">canal</div></div>
+      <div class="card kpi"><div class="label">Conversations</div><div class="value" id="kConversations">…</div><div class="hint">maximum 10</div></div>
+      <div class="card kpi"><div class="label">Feedback A+B+C</div><div class="value" id="kFeedback">…</div><div class="hint" id="kFeedbackLast">dernier</div></div>
+      <div class="card kpi"><div class="label">Sources PowerShell</div><div class="value" id="kSources">…</div><div class="hint">catalogue audité</div></div>
+    </div>
+    <div class="hero">
+      <div class="card">
+        <div class="small muted">TRAVAIL ACTUEL</div>
+        <h2 id="workLabel">PC COMMAND</h2>
+        <div class="progress"><i id="workProgress"></i></div>
+        <div class="small muted" style="margin-top:7px" id="workPct"></div>
+        <div class="stack" style="margin-top:12px">
+          <div class="row"><strong>Maintenant</strong><span id="workNow">…</span></div>
+          <div class="row"><strong>Dernier succès</strong><span id="workSuccess">…</span></div>
+          <div class="row"><strong>Ensuite</strong><span id="workNext">…</span></div>
+          <div class="row"><strong>Blocage</strong><span id="workBlocker">Aucun</span></div>
+        </div>
+        <div class="actions"><button class="btn primary" data-go="conversations">Voir les conversations</button><button class="btn" id="refreshNow">Actualiser</button></div>
+      </div>
+      <div class="card">
+        <div class="small muted">ARCHITECTURE DU LAB</div>
+        <h2 style="margin-top:8px">PowerShell reste le moteur</h2>
+        <p>Cette interface lit les mêmes états que le PC COMMAND classique. Elle ne devient pas une seconde source de vérité et n’exécute aucune modification système.</p>
+        <div class="callout"><b>Prototype parallèle.</b><br>Fermer le cockpit n’affecte pas le viewer PowerShell ni ses données.</div>
+        <div class="stack" style="margin-top:12px">
+          <div class="row"><strong>Serveur</strong><span>Node natif · localhost</span></div>
+          <div class="row"><strong>Dépendances</strong><span>0 npm · 0 Electron</span></div>
+          <div class="row"><strong>Actions</strong><span>lecture seule v0.1</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:15px">
+      <h3 style="margin-top:0">Pourquoi ce format ?</h3>
+      <div class="threecol">
+        <div><b>👁 Plus humain</b><p class="muted small">Les états, versions et feedbacks deviennent lisibles sans connaître PowerShell.</p></div>
+        <div><b>⚡ Cache-first</b><p class="muted small">Le navigateur lit des API locales bornées. Pas de scan GitHub au clic.</p></div>
+        <div><b>🛡 Réversible</b><p class="muted small">Le TUI stable reste disponible. Le lab n’est ni service Windows ni démarrage automatique.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="conversations" class="section">
+    <div class="card"><h2 style="margin-top:0">Conversations PC COMMAND</h2><div class="muted">Clique une conversation pour voir objectifs, macros, micro-tâches et état observable.</div></div>
+    <div id="conversationCards" class="cards" style="margin-top:14px"></div>
+    <div id="conversationDetail" class="card" style="display:none;margin-top:14px"></div>
+  </section>
+
+  <section id="health" class="section">
+    <div class="grid kpis">
+      <div class="card kpi"><div class="label">RAM libre</div><div class="value" id="hFree">…</div><div class="hint" id="hUsed">…</div></div>
+      <div class="card kpi"><div class="label">Uptime</div><div class="value" id="hUptime">…</div><div class="hint" id="hHost">…</div></div>
+      <div class="card kpi"><div class="label">Update</div><div class="value" id="hUpdate">…</div><div class="hint" id="hUpdateMsg">…</div></div>
+      <div class="card kpi"><div class="label">Sync état</div><div class="value" id="hSync">…</div><div class="hint" id="hSyncAt">…</div></div>
+    </div>
+    <div class="twocol" style="margin-top:15px">
+      <div class="card"><h3 style="margin-top:0">Réseau local</h3><div id="healthNetwork"></div></div>
+      <div class="card"><h3 style="margin-top:0">Serveur Web Lab</h3><div id="healthServer" class="stack"></div></div>
+    </div>
+  </section>
+
+  <section id="local" class="section">
+    <div class="twocol">
+      <div class="card"><h3 style="margin-top:0">Machine</h3><div id="localMachine" class="stack"></div></div>
+      <div class="card"><h3 style="margin-top:0">Rapports récents</h3><div id="localReports"></div></div>
+    </div>
+    <div class="card" style="margin-top:15px"><h3 style="margin-top:0">Politique locale</h3><div class="callout warn">Le Web Lab 0.1 ne lance ni nettoyage, ni installation, ni arrêt de processus, ni modification Windows. Les futures actions devront repasser par la politique L0–L3 existante.</div></div>
+  </section>
+
+  <section id="sources" class="section">
+    <div class="card"><h2 style="margin-top:0">Sources PowerShell / Windows</h2><div class="muted">Catalogue audité du projet. Recherche locale uniquement.</div><div class="search"><input id="sourceSearch" placeholder="Ex. Pester, réseau, EventViewerX…"><button class="btn" id="sourceClear">Effacer</button></div><div id="sourceStats" class="meta"></div></div>
+    <div id="sourceCards" class="cards" style="margin-top:14px"></div>
+  </section>
+
+  <section id="feedback" class="section">
+    <div class="card"><h2 style="margin-top:0">Cahier A+B+C</h2><div id="feedbackSummary" class="muted"></div></div>
+    <div id="feedbackList" class="timeline card" style="margin-top:14px"></div>
+  </section>
+
+  <section id="versions" class="section">
+    <div class="card"><h2 style="margin-top:0">Version Trace</h2><div class="muted">Historique des versions et preuves terrain, sans supposer que le plus grand numéro est le meilleur.</div></div>
+    <div id="versionList" class="timeline card" style="margin-top:14px"></div>
+  </section>
+
+  <section id="technical" class="section">
+    <div class="twocol">
+      <div class="card"><h3 style="margin-top:0">État brut</h3><pre id="rawStatus">…</pre></div>
+      <div class="card"><h3 style="margin-top:0">Santé brute</h3><pre id="rawHealth">…</pre></div>
+    </div>
+  </section>
+
+  <div class="footerNote">PC COMMAND WEB LAB 0.1 · localhost uniquement · arrêt automatique du serveur après inactivité.</div>
+</main>
+</div>
+
+<script>
+let STATUS=null, HEALTH=null, SOURCES=null, ACTIVE='home';
+const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>Number(n||0).toLocaleString('fr-FR');
+async function api(path){const r=await fetch(path,{cache:'no-store'});const j=await r.json();if(!r.ok)throw new Error(j.message||j.error||'Erreur');return j}
+function stateClass(s){s=String(s||'').toUpperCase();return /DONE|SUCCESS|ONLINE|RESPONDED|COMPLETED/.test(s)?'ok':/ERROR|BLOCK|FAILED|OFFLINE|INTERRUPT/.test(s)?'bad':'warn'}
+function ageText(v){if(!v)return'—';const ms=Date.now()-Date.parse(v);if(!Number.isFinite(ms))return v;const sec=Math.max(0,Math.round(ms/1000));if(sec<60)return sec+' s';if(sec<3600)return Math.round(sec/60)+' min';return (sec/3600).toFixed(1)+' h'}
+function setView(v){
+  ACTIVE=v;$$('.section').forEach(x=>x.classList.toggle('active',x.id===v));$$('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===v));
+  const t={home:['Ton centre de commande','Une vue humaine de PC COMMAND, sans remplacer le moteur PowerShell existant.'],conversations:['Conversations','Progression observable, macros et prochaines actions.'],health:['Santé','État local léger du PC, de la sync et du Web Lab.'],local:['Local','Machine, rapports et politique d’exécution.'],sources:['Sources','Les dépôts et primitives étudiés pour améliorer PC COMMAND.'],feedback:['Feedback','Le cahier A+B+C qui gouverne les évolutions.'],versions:['Versions','Ce qui a été construit, prouvé, régressé ou remplacé.'],technical:['Technique','Données brutes pour audit et maintenance.']};
+  $('#pageTitle').textContent=t[v][0];$('#pageSubtitle').textContent=t[v][1];
+  if(v==='sources')loadSources();if(v==='feedback')loadFeedback();if(v==='versions')loadVersions();if(v==='health'||v==='local')loadHealth();
+}
+$$('.nav button').forEach(b=>b.onclick=()=>setView(b.dataset.view));$$('[data-go]').forEach(b=>b.onclick=()=>setView(b.dataset.go));
+
+function renderHome(){
+  const s=STATUS;if(!s)return;const conv=(s.overview.conversations||[])[0]||{};
+  $('#versionBadge').textContent='v'+s.app.version+' · '+s.app.channel;
+  $('#syncBadge').textContent=s.sync?.last_error?'sync erreur':'sync OK';
+  $('#syncBadge').className='badge '+(s.sync?.last_error?'warn':'ok');
+  $('#sideState').textContent='Web Lab en ligne · '+s.lab.boundTo;
+  $('#serverRam').textContent='Serveur '+s.lab.serverRssMb+' MB';
+  $('#kVersion').textContent=s.app.version||'—';$('#kChannel').textContent=s.app.channel||'—';
+  $('#kConversations').textContent=fmt((s.overview.conversations||[]).length);
+  $('#kFeedback').textContent=fmt(s.feedback.total_feedbacks||0);$('#kFeedbackLast').textContent=s.feedback.last_feedback_id||'—';
+  $('#kSources').textContent=fmt(s.sources.total||0);
+  $('#workLabel').textContent=conv.label||'Aucune conversation';
+  const p=Math.max(0,Math.min(100,Number(conv.progress_estimate||0)));$('#workProgress').style.width=p+'%';$('#workPct').textContent=p+' % estimé';
+  $('#workNow').textContent=conv.current_action||'—';$('#workSuccess').textContent=conv.last_success||'—';$('#workNext').textContent=conv.next_step||'—';$('#workBlocker').textContent=conv.blocker||'Aucun';
+  renderConversationCards();
+  $('#rawStatus').textContent=JSON.stringify(s,null,2);
+}
+function renderConversationCards(){
+  if(!STATUS)return;const root=$('#conversationCards');const rows=STATUS.overview.conversations||[];
+  root.innerHTML=rows.length?rows.map(c=>'<div class="card item conversation" data-id="'+esc(c.id)+'"><div class="small muted">'+esc(c.short_code||c.id)+'</div><h3>'+esc(c.label||c.id)+'</h3><div class="meta"><span class="pill '+stateClass(c.lifecycle?.state)+'">'+esc(c.lifecycle?.state||'INCONNU')+'</span><span class="pill">'+esc(c.progress_estimate||0)+' %</span><span class="pill">signal '+esc(ageText(c.lifecycle?.last_signal_at))+'</span></div><p class="muted small">'+esc(c.current_action||'')+'</p></div>').join(''):'<div class="empty">Aucune conversation.</div>';
+  $$('.conversation').forEach(x=>x.onclick=()=>loadConversation(x.dataset.id));
+}
+async function loadConversation(id){
+  const d=await api('/api/channel?id='+encodeURIComponent(id));const box=$('#conversationDetail');box.style.display='block';
+  const macros=(d.macro_tasks||[]).map(m=>'<div class="macro"><div class="macrohead"><b>'+esc(m.title||m.id)+'</b><span class="pill '+stateClass(m.state)+'">'+esc(m.state||'')+' · '+Math.round(Number(m.completion||0)*100)+' %</span></div><div class="small muted" style="margin-top:7px">'+esc(m.current_action||'')+'</div><div class="micro"><b>Succès:</b> '+esc(m.last_success||'—')+'</div><div class="micro"><b>Suite:</b> '+esc(m.next_step||'—')+'</div>'+((m.micro_tasks||[]).slice(0,8).map(x=>'<div class="micro">• '+esc(x.title||x.id)+' — '+Math.round(Number(x.completion||0)*100)+' %</div>').join(''))+'</div>').join('');
+  box.innerHTML='<div class="small muted">'+esc(d.short_code||d.id)+'</div><h2>'+esc(d.label||d.id)+'</h2><div class="meta"><span class="pill '+stateClass(d.lifecycle?.state)+'">'+esc(d.lifecycle?.state||'')+'</span><span class="pill">signal '+esc(ageText(d.lifecycle?.last_signal_at))+'</span><span class="pill">'+esc(d.version||'')+'</span></div><p>'+esc(d.objective||'')+'</p><div class="macros">'+macros+'</div>';
+  box.scrollIntoView({behavior:'smooth',block:'start'});
+}
+async function loadHealth(){
+  try{HEALTH=await api('/api/health');renderHealth()}catch(e){console.error(e)}
+}
+function renderHealth(){
+  const h=HEALTH;if(!h)return;$('#hFree').textContent=fmt(h.ram.freeMb)+' MB';$('#hUsed').textContent=h.ram.usedPercent+' % utilisé';
+  $('#hUptime').textContent=h.uptimeHours+' h';$('#hHost').textContent=h.hostname+' · '+h.platform;
+  $('#hUpdate').textContent=STATUS?.update?.state||'—';$('#hUpdateMsg').textContent=STATUS?.update?.message||'—';
+  $('#hSync').textContent=STATUS?.sync?.last_error?'ERREUR':'OK';$('#hSyncAt').textContent=STATUS?.sync?.last_success||'—';
+  $('#healthNetwork').innerHTML=(h.network||[]).length?(h.network||[]).map(n=>'<div class="row"><strong>'+esc(n.name)+'</strong><span>'+esc(n.address)+' · '+esc(n.cidr||'')+'</span></div>').join(''):'<div class="empty">Aucune IPv4 locale.</div>';
+  $('#healthServer').innerHTML='<div class="row"><strong>PID</strong><span>'+h.server.pid+'</span></div><div class="row"><strong>RAM Node</strong><span>'+h.server.rssMb+' MB</span></div><div class="row"><strong>Mode</strong><span>lecture seule</span></div><div class="row"><strong>Arrêt idle</strong><span>'+STATUS.lab.idleShutdownSeconds+' s</span></div>';
+  $('#localMachine').innerHTML='<div class="row"><strong>Machine</strong><span>'+esc(h.hostname)+'</span></div><div class="row"><strong>RAM totale</strong><span>'+fmt(h.ram.totalMb)+' MB</span></div><div class="row"><strong>RAM libre</strong><span>'+fmt(h.ram.freeMb)+' MB</span></div><div class="row"><strong>Uptime</strong><span>'+h.uptimeHours+' h</span></div>';
+  $('#localReports').innerHTML=(h.reports||[]).length?h.reports.map(r=>'<div class="row"><strong>'+esc(r.name)+'</strong><span>'+new Date(r.mtime).toLocaleString('fr-FR')+'</span></div>').join(''):'<div class="empty">Aucun rapport.</div>';
+  $('#rawHealth').textContent=JSON.stringify(h,null,2);
+}
+async function loadSources(){
+  if(!SOURCES)SOURCES=await api('/api/sources');renderSources();
+}
+function renderSources(){
+  if(!SOURCES)return;const q=$('#sourceSearch').value.trim().toLowerCase();const entries=SOURCES.catalog.entries||[];
+  const filtered=entries.filter(x=>!q||[x.repo,x.class,x.role,x.reason,x.note].some(v=>String(v||'').toLowerCase().includes(q)));
+  const counts={};entries.forEach(x=>counts[x.class]=(counts[x.class]||0)+1);
+  $('#sourceStats').innerHTML=Object.entries(counts).map(([k,v])=>'<span class="pill">'+esc(k)+' '+v+'</span>').join('')+'<span class="pill ok">runtime deps '+((SOURCES.dependencyLock.runtime_dependencies||[]).length)+'</span>';
+  $('#sourceCards').innerHTML=filtered.map(x=>'<div class="card"><div class="small muted">'+esc(x.class||'')+'</div><h3>'+esc(x.repo||'')+'</h3><p class="muted small">'+esc(x.role||x.reason||'')+'</p><div class="meta"><span class="pill">'+esc(x.ram_impact||'RAM évaluée')+'</span></div></div>').join('');
+}
+$('#sourceSearch').addEventListener('input',renderSources);$('#sourceClear').onclick=()=>{$('#sourceSearch').value='';renderSources()};
+
+async function loadFeedback(){
+  const d=await api('/api/feedback?limit=18');$('#feedbackSummary').textContent=fmt(d.index.total_feedbacks||0)+' feedbacks · dernier '+(d.index.last_feedback_id||'—')+' · politique '+(d.index.policy||'A+B+C');
+  $('#feedbackList').innerHTML=(d.items||[]).slice().reverse().map(x=>'<div class="version"><b>'+esc(x.feedback_id||'—')+'</b><div><div>'+esc(x.evidence||x.source||'')+'</div><div class="meta"><span class="pill">'+esc(x.status||'')+'</span><span class="pill">'+esc(x.target_version||'')+'</span><span class="pill">'+esc(x.at||'')+'</span></div></div></div>').join('');
+}
+async function loadVersions(){
+  const d=await api('/api/versions');$('#versionList').innerHTML=(d.items||[]).map(v=>'<div class="version"><b>'+esc(v.version||'—')+'</b><div><div><span class="pill '+stateClass(v.status)+'">'+esc(v.status||'')+'</span></div><p style="margin:7px 0">'+esc(v.intent||'')+'</p><div class="small muted">'+esc(v.terrain||'')+'</div></div></div>').join('');
+}
+async function refresh(){
+  try{
+    STATUS=await api('/api/status');renderHome();if(!HEALTH||ACTIVE==='health'||ACTIVE==='local')await loadHealth();
+  }catch(e){$('#sideState').textContent='Web Lab indisponible';console.error(e)}
+}
+$('#refreshNow').onclick=refresh;
+refresh();
+setInterval(refresh,5000);
+</script>
+</body>
+</html>
