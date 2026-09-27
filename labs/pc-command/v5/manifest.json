@@ -1,8 +1,8 @@
 {
   "schema": "pc.command.manifest.v1",
-  "version": "0.9.9",
-  "channel": "stable",
-  "generated_at": "2026-09-27T10:44:00+01:00",
+  "version": "1.0.0",
+  "channel": "candidate",
+  "generated_at": "2026-09-27T10:55:00+01:00",
   "entrypoint": "PC_COMMAND_V5.ps1",
   "files": [
     {
@@ -14,6 +14,10 @@
       "git_blob_sha": "3fb5fee132bb78157c071352154ac28f93d48ee5"
     },
     {
+      "relative_path": "lib/policy.ps1",
+      "git_blob_sha": "5b56f517d54afb87562167ad7a009210d9c53415"
+    },
+    {
       "relative_path": "lib/pdf.ps1",
       "git_blob_sha": "db973784c0e142d5583c237c4004cc5b62e750cc"
     },
@@ -23,11 +27,11 @@
     },
     {
       "relative_path": "lib/ui.ps1",
-      "git_blob_sha": "7b45d4d2ee5958ac89f34c0a8b62830904debdcc"
+      "git_blob_sha": "fc54ee0c66fa7380864ab971c8908da69ab5eed6"
     },
     {
       "relative_path": "PC_COMMAND_V5.ps1",
-      "git_blob_sha": "d89639117ef57ba4a6c8df58165c7301a8f66e89"
+      "git_blob_sha": "7e26eb7653464d7dfc6bf58b667b28be56dc7345"
     },
     {
       "relative_path": "PC_COMMAND_BOOTSTRAP.ps1",
@@ -35,7 +39,7 @@
     },
     {
       "relative_path": "config.default.json",
-      "git_blob_sha": "aae4ea758e483b0c1377f5f996182ed3e75072f4"
+      "git_blob_sha": "42c6646b95e3cfb96b9f2a46efe24a427e60d866"
     },
     {
       "relative_path": "powershell-sources.json",
