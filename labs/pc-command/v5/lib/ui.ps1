@@ -196,6 +196,7 @@ function Write-PcSources {
   param($Config,$Sync)
   $caps=Get-PcPowerShellCapabilitySnapshot
   $catalog=Get-PcPowerShellSourceCatalog
+  $policy=Get-PcActionPolicySummary
   Write-PcLine 'SOURCES / ADAPTATEURS' Cyan
   Write-PcLine ''
   Write-PcLine 'Noyau local-first : cache disque + moteur PowerShell.' Green
@@ -216,6 +217,13 @@ function Write-PcSources {
     Write-PcLine ('  CORE '+$catalog.Counts.CORE+' | ON-DEMAND '+$catalog.Counts.'ON-DEMAND'+' | SOURCE-ONLY '+$catalog.Counts.'SOURCE-ONLY')
     Write-PcLine ('  EXTERNAL-TOOL '+$catalog.Counts.'EXTERNAL-TOOL'+' | REJECT '+$catalog.Counts.REJECT)
   }
+  Write-PcLine ''
+  Write-PcLine 'POLITIQUE ACTIONS L0-L3' Cyan
+  Write-PcLine ('  L0 READ   : auto si lecture seule + borne') Green
+  Write-PcLine ('  L1 SAFE   : auto si borne et sans modification systeme importante') Green
+  Write-PcLine ('  L2 MODIFY : gates + rollback + verification; jamais automatique') Yellow
+  Write-PcLine ('  L3 SYSTEM : backup + rollback + preuve + approbation explicite') Yellow
+  Write-PcLine ('  Refus dur : remote pipe-to-execute | presets globaux debloat/tweak') Red
   Write-PcLine ''
   Write-PcLine 'Adaptateurs : ChatGPT/PCCONNECT | GitHub | Drive | Delivery/Telegram | TLIB | Web/YouTube | WMI | Desktop Commander'
   Write-PcLine 'Une source externe reste optionnelle; aucune source ne devient dependance canonique sans preuve.' DarkGray
