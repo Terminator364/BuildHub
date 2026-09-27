@@ -100,6 +100,10 @@
     "require_manifest_channel": true,
     "post_launch_version_match": true,
     "rollback_restores_root_bootstrap": true,
+    "required_manifest_channel": "stable",
+    "require_manifest_channel": true,
+    "post_launch_version_match": true,
+    "rollback_restores_root_bootstrap": true,
     "recover_interrupted_swap_offline": true,
     "validate_local_backup_before_recovery": true
   },
