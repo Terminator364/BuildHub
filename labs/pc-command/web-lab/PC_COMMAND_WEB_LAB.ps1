@@ -21,7 +21,7 @@ $ready=Test-WebLabReady
 if(-not$ready){
   $env:PC_COMMAND_ROOT=$PcRoot
   $env:PC_COMMAND_WEB_PORT=[string]$Port
-  $env:PC_COMMAND_WEB_IDLE_MS='120000'
+  $env:PC_COMMAND_WEB_IDLE_MS='300000'
   $log=Join-Path $LabRoot 'web-lab.log'
   $err=Join-Path $LabRoot 'web-lab-error.log'
   Start-Process -FilePath $node.Source -ArgumentList @($Server) -WorkingDirectory $LabRoot -WindowStyle Hidden -RedirectStandardOutput $log -RedirectStandardError $err
