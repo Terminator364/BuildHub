@@ -549,6 +549,7 @@ function Write-PcHealth {
   $net=Get-PcLocalNetworkSnapshot
   $startup=Get-PcStartupRamSnapshot
   $power=Get-PcPowerSnapshot
+  $trim=Get-PcTrimSnapshot
   Write-PcLine 'SANTE / DIAGNOSTIC' -ForegroundColor Cyan
   Write-PcLine ''
   Write-PcLine ('Score : '+$h.Score+'/100 | '+$h.Level) -ForegroundColor $h.Color
@@ -573,6 +574,13 @@ function Write-PcHealth {
     $col=if([double]$d.FreePercent-lt10){'Yellow'}else{'Gray'}
     Write-PcLine ('Disque '+$d.Name+' : '+$d.FreeGB+' GB libres / '+$d.TotalGB+' GB ('+$d.FreePercent+'%)') $col
   }
+  if(@($trim.Items).Count){
+    $trimText=@($trim.Items|ForEach-Object {([string]$_.FileSystem)+' '+$(if([bool]$_.Enabled){'ON'}else{'OFF'})}) -join ' | '
+    $trimWarn=@($trim.Items|Where-Object {-not[bool]$_.Enabled}).Count -gt 0
+    Write-PcLine ('TRIM stockage : '+$trimText+' | lecture seule') $(if($trimWarn){'Yellow'}else{'Gray'})
+  }else{
+    Write-PcLine 'TRIM stockage : statut indisponible | lecture seule' DarkGray
+  }
   Write-PcLine ('Demarrage : '+@($startup.RunEntries).Count+' Run/RunOnce | '+@($startup.StartupFolderItems).Count+' item(s) dossier Startup | lecture seule')
   Write-PcLine 'Top RAM groupes :' DarkCyan
   foreach($p in @($startup.TopMemoryProcesses|Select-Object -First 5)){
@@ -589,6 +597,7 @@ function Write-PcHealth {
   if($net.Error){Write-PcLine ('Snapshot reseau partiel : '+$net.Error) Yellow}
   if($startup.Error){Write-PcLine ('Snapshot demarrage/RAM partiel : '+$startup.Error) Yellow}
   if($power.Error){Write-PcLine ('Snapshot alimentation partiel : '+$power.Error) Yellow}
+  if($trim.Error){Write-PcLine ('Snapshot TRIM partiel : '+$trim.Error) Yellow}
   if(@($h.Reasons).Count-eq0 -and $driveWarn.Count-eq0){Write-PcLine 'Aucune anomalie prioritaire detectee.' -ForegroundColor Green}
   else{
     Write-PcLine 'Points a surveiller :' -ForegroundColor Yellow
