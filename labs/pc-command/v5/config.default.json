@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "surface installed software locally without winget source access, AppX baseline, or package modification",
+    "current_goal": "ship zero-traffic registry-only local software inventory with no winget list, AppX baseline or package modifications",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -147,7 +147,7 @@
     "force_selected_conversation_detail": true
   },
   "product": {
-    "stage": "candidate",
+    "stage": "stable",
     "objective": "zero-traffic local software inventory from Windows Uninstall registry",
     "target_user_score_10": 5,
     "command_router": "contextual",
