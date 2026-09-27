@@ -26,7 +26,7 @@ foreach($forbidden in @(
 )){
   if($s -match [regex]::Escape($forbidden)){throw "forbidden server primitive: $forbidden"}
 }
-if($s -match "req\.method\s*===\s*['\"]POST['\"]"){throw 'mutation POST endpoint found'}
+if($s.Contains("req.method === 'POST'") -or $s.Contains('req.method === "POST"')){throw 'mutation POST endpoint found'}
 if($s -notmatch "127\.0\.0\.1"){throw 'server must bind localhost'}
 if($s -notmatch "READ_ONLY"){throw 'read-only mode marker missing'}
 if($s -notmatch "300000"){throw '5-minute idle default missing'}
