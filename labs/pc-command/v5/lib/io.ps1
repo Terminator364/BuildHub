@@ -23,6 +23,8 @@ $script:PcPowerSnapshotCache = $null
 $script:PcPowerSnapshotCacheAt = [datetime]::MinValue
 $script:PcSoftwareInventoryCache = $null
 $script:PcSoftwareInventoryCacheAt = [datetime]::MinValue
+$script:PcTrimSnapshotCache = $null
+$script:PcTrimSnapshotCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -206,72 +208,95 @@ function Get-PcUpdateInfo {
 function Read-PcFeedbackLocal {
   param($Paths)
   $base=Join-Path $Paths.StateRepo 'pc-command\feedback'
-  $errors=@()
+  $errors=New-Object System.Collections.Generic.List[string]
   $index=$null
   $versions=$null
-  $events=@()
+  $total=0
+  $unique=New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
+  $recentCandidates=New-Object System.Collections.Generic.List[object]
+  $latestEvent=$null
+  $latestAt=[datetimeoffset]::MinValue
 
   $idx=Join-Path $base 'feedback-index.json'
   if(Test-Path $idx){
     try{$index=Get-Content $idx -Raw -Encoding UTF8|ConvertFrom-Json}
-    catch{$errors+=('index: '+$_.Exception.Message)}
+    catch{$errors.Add('index: '+$_.Exception.Message)}
   }
 
   $ledger=Join-Path $base 'feedback-ledger.jsonl'
   if(Test-Path $ledger){
+    $reader=$null
     try{
-      foreach($line in @(Get-Content $ledger -Encoding UTF8 -ErrorAction Stop)){
+      $reader=New-Object IO.StreamReader($ledger,[Text.Encoding]::UTF8,$true,4096)
+      while(-not$reader.EndOfStream){
+        $line=$reader.ReadLine()
         if([string]::IsNullOrWhiteSpace([string]$line)){continue}
-        try{$events+=($line|ConvertFrom-Json)}
-        catch{$errors+=('ledger-line: '+$_.Exception.Message)}
+        try{
+          $event=$line|ConvertFrom-Json
+          $total++
+          $id=[string]$event.feedback_id
+          if(-not[string]::IsNullOrWhiteSpace($id)){$null=$unique.Add($id)}
+          try{$at=[datetimeoffset]::Parse([string]$event.at)}catch{$at=[datetimeoffset]::MinValue}
+          if($at-ge$latestAt){$latestAt=$at;$latestEvent=$event}
+          $recentCandidates.Add([pscustomobject]@{At=$at;Event=$event})
+          if($recentCandidates.Count-gt24){
+            $keep=@($recentCandidates|Sort-Object At -Descending|Select-Object -First 12)
+            $recentCandidates=New-Object System.Collections.Generic.List[object]
+            foreach($x in $keep){$recentCandidates.Add($x)}
+          }
+        }catch{
+          if($errors.Count-lt10){$errors.Add('ledger-line: '+$_.Exception.Message)}
+        }
       }
-    }catch{$errors+=('ledger: '+$_.Exception.Message)}
+    }catch{
+      $errors.Add('ledger: '+$_.Exception.Message)
+    }finally{
+      if($reader){$reader.Dispose()}
+    }
   }
 
   $vt=Join-Path $base 'version-trace.json'
   if(Test-Path $vt){
     try{$versions=Get-Content $vt -Raw -Encoding UTF8|ConvertFrom-Json}
-    catch{$errors+=('versions: '+$_.Exception.Message)}
+    catch{$errors.Add('versions: '+$_.Exception.Message)}
   }
 
-  # Reconcile the human pointer from the machine ledger instead of trusting
-  # a stale index. The ledger remains the source of truth for chronology.
-  if($events.Count-gt0){
-    $latest=@($events|Sort-Object {
-      try{[datetimeoffset]::Parse([string]$_.at)}catch{[datetimeoffset]::MinValue}
-    }|Select-Object -Last 1)
+  # Reconcile the human pointer from the machine ledger without buffering
+  # the full JSONL file. Total, unique IDs and latest timestamp remain exact.
+  if($total-gt0 -and $latestEvent){
     if(-not$index){
       $index=[pscustomobject]@{
         schema='pc.command.feedback.index.derived.v1'
-        total_feedbacks=$events.Count
-        unique_feedback_ids=@($events.feedback_id|Sort-Object -Unique).Count
-        last_feedback_id=[string]$latest[0].feedback_id
-        last_feedback_at=[string]$latest[0].at
+        total_feedbacks=$total
+        unique_feedback_ids=$unique.Count
+        last_feedback_id=[string]$latestEvent.feedback_id
+        last_feedback_at=[string]$latestEvent.at
         policy='A+B+C -> MERGE+REFINE+PRESERVE'
       }
     }else{
-      $index.total_feedbacks=$events.Count
+      $index.total_feedbacks=$total
       if($index.PSObject.Properties.Name -contains 'unique_feedback_ids'){
-        $index.unique_feedback_ids=@($events.feedback_id|Sort-Object -Unique).Count
+        $index.unique_feedback_ids=$unique.Count
       }
-      $index.last_feedback_id=[string]$latest[0].feedback_id
+      $index.last_feedback_id=[string]$latestEvent.feedback_id
       if($index.PSObject.Properties.Name -contains 'last_feedback_at'){
-        $index.last_feedback_at=[string]$latest[0].at
+        $index.last_feedback_at=[string]$latestEvent.at
       }else{
-        $index|Add-Member -NotePropertyName last_feedback_at -NotePropertyValue ([string]$latest[0].at) -Force
+        $index|Add-Member -NotePropertyName last_feedback_at -NotePropertyValue ([string]$latestEvent.at) -Force
       }
     }
   }
 
-  $recent=@($events|Sort-Object {
-    try{[datetimeoffset]::Parse([string]$_.at)}catch{[datetimeoffset]::MinValue}
-  }|Select-Object -Last 12)
+  $recent=@($recentCandidates|Sort-Object At|Select-Object -Last 12|ForEach-Object {$_.Event})
 
   return [pscustomobject]@{
     Index=$index
     Recent=$recent
     Versions=$versions
     Error=if($errors.Count){$errors -join ' | '}else{$null}
+    LedgerReadMode='streaming'
+    LedgerEventsRead=$total
+    LedgerRecentRetained=$recent.Count
   }
 }
 
@@ -848,6 +873,66 @@ function Get-PcLocalSoftwareInventory {
   }
   $script:PcSoftwareInventoryCache=$result
   $script:PcSoftwareInventoryCacheAt=$now
+  return $result
+}
+
+function ConvertFrom-PcTrimOutput {
+  param([string[]]$InputLine)
+  $items=@()
+  foreach($line in @($InputLine)){
+    $text=[string]$line
+    if([string]::IsNullOrWhiteSpace($text)){continue}
+    $trimmed=$text.Trim()
+    if($trimmed -match '^(.+?)\s+DisableDeleteNotify\s*=\s*(\d+)'){
+      $items += [pscustomobject]@{
+        FileSystem=([string]$Matches[1]).Trim()
+        Enabled=([int]$Matches[2]-eq0)
+        Value=[int]$Matches[2]
+      }
+    }
+  }
+  return @($items)
+}
+
+function Get-PcTrimSnapshot {
+  param([int]$TtlSeconds=300)
+  $now=Get-Date
+  if($script:PcTrimSnapshotCache -and $TtlSeconds -gt0 -and
+     (($now-$script:PcTrimSnapshotCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcTrimSnapshotCache
+  }
+
+  $errors=New-Object System.Collections.Generic.List[string]
+  $items=@()
+  $exitCode=$null
+  try{
+    $fsutil=Join-Path $env:WINDIR 'System32\fsutil.exe'
+    if(Test-Path -LiteralPath $fsutil){
+      $raw=@(& $fsutil behavior query DisableDeleteNotify 2>&1)
+      $exitCode=$LASTEXITCODE
+      $items=@(ConvertFrom-PcTrimOutput -InputLine $raw)
+      if($exitCode-ne0){$errors.Add('fsutil exit '+$exitCode)}
+    }else{
+      $errors.Add('fsutil absent')
+    }
+  }catch{$errors.Add('trim: '+$_.Exception.Message)}
+
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    Items=$items
+    ExitCode=$exitCode
+    ReadOnly=$true
+    NetworkTrafficGenerated=$false
+    SettingChanged=$false
+    SmartQueryUsed=$false
+    FilesystemEventScanUsed=$false
+    ExternalModuleRequired=$false
+    CacheSeconds=$TtlSeconds
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    SourcePolicy='fsutil behavior query DisableDeleteNotify only'
+  }
+  $script:PcTrimSnapshotCache=$result
+  $script:PcTrimSnapshotCacheAt=$now
   return $result
 }
 
