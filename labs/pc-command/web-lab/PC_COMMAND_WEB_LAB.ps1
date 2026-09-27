@@ -44,7 +44,7 @@ $edgeCandidates=@(
 ) | Where-Object { $_ -and (Test-Path -LiteralPath $_) }
 $edge=$edgeCandidates|Select-Object -First 1
 if($edge){
-  Start-Process -FilePath $edge -ArgumentList @('--app='+$Url,'--start-maximized')
+  Start-Process -FilePath $edge -ArgumentList @('--app='+$Url,'--start-maximized','--no-first-run')
 }else{
   Start-Process $Url
 }
