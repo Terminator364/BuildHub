@@ -2,7 +2,7 @@
   "schema": "pc.command.manifest.v1",
   "version": "1.0.2",
   "channel": "candidate",
-  "generated_at": "2026-09-27T11:16:00+01:00",
+  "generated_at": "2026-09-27T11:18:00+01:00",
   "entrypoint": "PC_COMMAND_V5.ps1",
   "files": [
     {
@@ -11,7 +11,7 @@
     },
     {
       "relative_path": "lib/io.ps1",
-      "git_blob_sha": "92077a14fbb9676724c22465d70d198cb3bd38d2"
+      "git_blob_sha": "aab7011e719b270f155ef397b14a1d246021d763"
     },
     {
       "relative_path": "lib/policy.ps1",
