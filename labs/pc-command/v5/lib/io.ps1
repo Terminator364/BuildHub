@@ -17,6 +17,8 @@ $script:PcReadOnlyDiagCache = $null
 $script:PcReadOnlyDiagCacheAt = [datetime]::MinValue
 $script:PcNetworkSnapshotCache = $null
 $script:PcNetworkSnapshotCacheAt = [datetime]::MinValue
+$script:PcStartupRamCache = $null
+$script:PcStartupRamCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -605,6 +607,104 @@ function Get-PcLocalNetworkSnapshot {
   }
   $script:PcNetworkSnapshotCache=$result
   $script:PcNetworkSnapshotCacheAt=$now
+  return $result
+}
+
+function Get-PcStartupRamSnapshot {
+  param(
+    [int]$TtlSeconds=30,
+    [int]$TopProcessGroups=6
+  )
+  $now=Get-Date
+  if($script:PcStartupRamCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcStartupRamCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcStartupRamCache
+  }
+
+  $errors=New-Object System.Collections.Generic.List[string]
+  $runEntries=@()
+  $runKeys=@(
+    [pscustomobject]@{Path='HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run';Scope='Machine'},
+    [pscustomobject]@{Path='HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce';Scope='Machine'},
+    [pscustomobject]@{Path='HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run';Scope='User'},
+    [pscustomobject]@{Path='HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce';Scope='User'}
+  )
+  foreach($rk in $runKeys){
+    try{
+      if(-not(Test-Path -LiteralPath $rk.Path)){continue}
+      $item=Get-ItemProperty -LiteralPath $rk.Path -ErrorAction SilentlyContinue
+      if(-not$item){continue}
+      foreach($p in @($item.PSObject.Properties|Where-Object {$_.Name -notmatch '^PS'})){
+        $runEntries += [pscustomobject]@{
+          Scope=[string]$rk.Scope
+          Name=[string]$p.Name
+          Command=[string]$p.Value
+        }
+      }
+    }catch{$errors.Add('run-key: '+$_.Exception.Message)}
+  }
+
+  $startupItems=@()
+  $commonData=[Environment]::GetFolderPath([Environment+SpecialFolder]::CommonApplicationData)
+  $userData=[Environment]::GetFolderPath([Environment+SpecialFolder]::ApplicationData)
+  $startupFolders=@(
+    [pscustomobject]@{Path=(Join-Path $commonData 'Microsoft\Windows\Start Menu\Programs\Startup');Scope='Machine'},
+    [pscustomobject]@{Path=(Join-Path $userData 'Microsoft\Windows\Start Menu\Programs\Startup');Scope='User'}
+  )
+  foreach($sf in $startupFolders){
+    try{
+      if(-not(Test-Path -LiteralPath $sf.Path)){continue}
+      foreach($item in @(Get-ChildItem -LiteralPath $sf.Path -Force -File -ErrorAction SilentlyContinue)){
+        $startupItems += [pscustomobject]@{
+          Scope=[string]$sf.Scope
+          Name=[string]$item.Name
+          Extension=[string]$item.Extension
+        }
+      }
+    }catch{$errors.Add('startup-folder: '+$_.Exception.Message)}
+  }
+
+  $top=@()
+  try{
+    $groups=@(Get-Process -ErrorAction SilentlyContinue |
+      Where-Object {$_.Id -ne $PID} |
+      Group-Object ProcessName)
+    $rows=@()
+    foreach($g in $groups){
+      $sum=0.0
+      $max=0.0
+      foreach($p in @($g.Group)){
+        $ws=[double]$p.WorkingSet64
+        $sum+=$ws
+        if($ws-gt$max){$max=$ws}
+      }
+      $rows += [pscustomobject]@{
+        ProcessName=[string]$g.Name
+        Count=[int]$g.Count
+        TotalMB=[math]::Round($sum/1MB,1)
+        LargestInstanceMB=[math]::Round($max/1MB,1)
+      }
+    }
+    $top=@($rows|Sort-Object TotalMB -Descending|Select-Object -First ([math]::Max(1,[math]::Min(12,$TopProcessGroups))))
+  }catch{$errors.Add('processes: '+$_.Exception.Message)}
+
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    RunEntries=$runEntries
+    StartupFolderItems=$startupItems
+    TopMemoryProcesses=$top
+    ReadOnly=$true
+    ProcessChangePerformed=$false
+    ServiceChangePerformed=$false
+    RegistryChangePerformed=$false
+    ScheduledTaskEnumerationPerformed=$false
+    ServiceEnumerationPerformed=$false
+    WatcherStarted=$false
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    SourcePolicy='bounded startup and RAM L0 snapshot'
+  }
+  $script:PcStartupRamCache=$result
+  $script:PcStartupRamCacheAt=$now
   return $result
 }
 

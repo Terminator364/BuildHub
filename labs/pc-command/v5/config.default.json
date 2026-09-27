@@ -1,6 +1,6 @@
 {
   "schema": "pc.command.config.v1",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "code": {
     "repo": "Terminator364/BuildHub",
     "branch": "pc-command/stable",
@@ -130,7 +130,7 @@
   },
   "quality_target": {
     "user_perceived_target_10": 5,
-    "current_goal": "ship zero-traffic local network snapshot with no active probes, no external dependency and no v1.0.0 regressions",
+    "current_goal": "ship bounded read-only startup/RAM snapshot with no slow service/task enumeration and no v1.0.1 regressions",
     "promotion_requires_no_open_p0_regression": true,
     "runtime_smoke_required": true,
     "manifest_hashes_required": true
@@ -148,7 +148,7 @@
   },
   "product": {
     "stage": "stable",
-    "objective": "zero-traffic local network snapshot from PowerShell network repository audit",
+    "objective": "bounded read-only startup and RAM snapshot derived from repairtools/pstop patterns",
     "target_user_score_10": 5,
     "command_router": "contextual",
     "health_score": true,
@@ -285,6 +285,36 @@
       "external_module_required": false,
       "cache_seconds": 30,
       "primary_selection": "Up + non-APIPA IPv4 + gateway; fallback Up + non-APIPA IPv4"
+    },
+    "lot5_startup_ram": {
+      "audited_sources": [
+        "MrGary0z/repairtools",
+        "psmux/pstop",
+        "ChrisTitusTech/winutil",
+        "farag2/Sophia-Script-for-Windows",
+        "Raphire/Win11Debloat"
+      ],
+      "selected_primitives": [
+        "Run/RunOnce registry read",
+        "Startup folder read",
+        "grouped Get-Process working set"
+      ],
+      "read_only": true,
+      "process_change": false,
+      "service_change": false,
+      "registry_change": false,
+      "scheduled_task_enumeration": false,
+      "service_enumeration": false,
+      "watcher": false,
+      "cache_seconds": 30,
+      "top_process_groups": 6,
+      "rejected_from_interactive_baseline": [
+        "Get-ScheduledTask startup scan",
+        "Win32_Service auto-service scan",
+        "automatic startup cleanup",
+        "automatic process termination",
+        "automatic service disabling"
+      ]
     }
   },
   "action_policy": {
