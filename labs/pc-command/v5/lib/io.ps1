@@ -8,6 +8,11 @@ $script:PcLastPullError = $null
 $script:PcUpdateProcess = $null
 $script:PcUpdateStartedAt = $null
 $script:PcLastUpdateError = $null
+$script:PcIoScriptRoot = $PSScriptRoot
+$script:PcPowerShellCapsCache = $null
+$script:PcPowerShellCapsCacheAt = [datetime]::MinValue
+$script:PcPowerShellCatalogCache = $null
+$script:PcPowerShellCatalogCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -315,3 +320,106 @@ function Complete-PcUpdateProbe {
     return [pscustomobject]@{Completed=$true;Success=$false;Available=$false;Version=[string]$Config.version;Manifest=$null;Error=$_.Exception.Message}
   }
 }
+
+function Get-PcModuleVersion {
+  param([string]$Name)
+  try {
+    $m=Get-Module -ListAvailable -Name $Name -ErrorAction SilentlyContinue |
+      Sort-Object Version -Descending |
+      Select-Object -First 1
+    if($m){return [string]$m.Version}
+  } catch {}
+  return $null
+}
+
+function Get-PcPowerShellCapabilitySnapshot {
+  param([int]$TtlSeconds=60)
+  $now=Get-Date
+  if($script:PcPowerShellCapsCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcPowerShellCapsCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcPowerShellCapsCache
+  }
+
+  $pwsh=Get-Command pwsh.exe -ErrorAction SilentlyContinue
+  $winget=Get-Command winget.exe -ErrorAction SilentlyContinue
+  $git=Get-Command git.exe -ErrorAction SilentlyContinue
+  $pwshVersion=$null
+  if($pwsh){
+    try{$pwshVersion=(Get-Item $pwsh.Source -ErrorAction Stop).VersionInfo.ProductVersion}catch{}
+  }
+
+  $mods=[ordered]@{
+    PSResourceGet=(Get-PcModuleVersion 'Microsoft.PowerShell.PSResourceGet')
+    PSScriptAnalyzer=(Get-PcModuleVersion 'PSScriptAnalyzer')
+    Pester=(Get-PcModuleVersion 'Pester')
+    EventViewerX=(Get-PcModuleVersion 'EventViewerX')
+    PSWindowsUpdate=(Get-PcModuleVersion 'PSWindowsUpdate')
+    PSWriteHTML=(Get-PcModuleVersion 'PSWriteHTML')
+    PowerShellYaml=(Get-PcModuleVersion 'powershell-yaml')
+    ScheduledTaskManagement=(Get-PcModuleVersion 'ScheduledTaskManagement')
+  }
+
+  $native=[ordered]@{
+    GetWinEvent=[bool](Get-Command Get-WinEvent -ErrorAction SilentlyContinue)
+    GetScheduledTask=[bool](Get-Command Get-ScheduledTask -ErrorAction SilentlyContinue)
+    GetNetTCPConnection=[bool](Get-Command Get-NetTCPConnection -ErrorAction SilentlyContinue)
+    GetComputerInfo=[bool](Get-Command Get-ComputerInfo -ErrorAction SilentlyContinue)
+    TestNetConnection=[bool](Get-Command Test-NetConnection -ErrorAction SilentlyContinue)
+  }
+
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    Engine=('Windows PowerShell '+$PSVersionTable.PSVersion.ToString())
+    PSEdition=[string]$PSVersionTable.PSEdition
+    Pwsh7Detected=[bool]$pwsh
+    Pwsh7Path=if($pwsh){[string]$pwsh.Source}else{$null}
+    Pwsh7Version=$pwshVersion
+    WinGetDetected=[bool]$winget
+    WinGetPath=if($winget){[string]$winget.Source}else{$null}
+    GitDetected=[bool]$git
+    Native=[pscustomobject]$native
+    Modules=[pscustomobject]$mods
+    InstallPerformed=$false
+    ResidentDependencyAdded=$false
+    Policy='native-first / on-demand / no runtime auto-install'
+  }
+  $script:PcPowerShellCapsCache=$result
+  $script:PcPowerShellCapsCacheAt=$now
+  return $result
+}
+
+function Get-PcPowerShellSourceCatalog {
+  param([int]$TtlSeconds=300)
+  $now=Get-Date
+  if($script:PcPowerShellCatalogCache -and $TtlSeconds -gt 0 -and
+     (($now-$script:PcPowerShellCatalogCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcPowerShellCatalogCache
+  }
+
+  $path=Join-Path (Split-Path $script:PcIoScriptRoot -Parent) 'powershell-sources.json'
+  if(-not(Test-Path $path)){
+    return [pscustomobject]@{Total=0;Counts=[pscustomobject]@{};Entries=@();Error='Catalogue absent'}
+  }
+  try{
+    $raw=Get-Content $path -Raw -Encoding UTF8|ConvertFrom-Json
+    $entries=@($raw.entries)
+    $counts=[ordered]@{}
+    foreach($class in @('CORE','ON-DEMAND','SOURCE-ONLY','EXTERNAL-TOOL','REJECT')){
+      $counts[$class]=@($entries|Where-Object class -eq $class).Count
+    }
+    $result=[pscustomobject]@{
+      Total=$entries.Count
+      Counts=[pscustomobject]$counts
+      Entries=$entries
+      Policy=$raw.policy
+      ObservedAt=$raw.observed_at
+      Error=$null
+    }
+    $script:PcPowerShellCatalogCache=$result
+    $script:PcPowerShellCatalogCacheAt=$now
+    return $result
+  }catch{
+    return [pscustomobject]@{Total=0;Counts=[pscustomobject]@{};Entries=@();Error=$_.Exception.Message}
+  }
+}
+
