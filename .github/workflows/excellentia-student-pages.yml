@@ -1,0 +1,48 @@
+name: Excellentia Student Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: excellentia-student-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify student gateway
+        shell: bash
+        run: |
+          test -f excellentia-student/index.html
+          test -f excellentia-student/app.js
+          test -f excellentia-student/sw.js
+          test -f excellentia-student/data/gateway-manifest.json
+          node --check excellentia-student/app.js
+          node -e "const m=require('./excellentia-student/data/gateway-manifest.json'); if(m.expected_questions!==4174||m.timer_seconds!==40) process.exit(2)"
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: excellentia-student
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
