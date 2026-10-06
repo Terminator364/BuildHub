@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "product": "excellentia-study-hub",
+  "channel": "stable",
+  "app_version": "2.3.0",
+  "source_commit": "73f6bc1f841643b5dda94f1c6fd81d56b65780bc",
+  "released_at": "2026-10-06T10:28:00.761Z",
+  "compatibility": {
+    "node": ">=22.5.0",
+    "windows": "11",
+    "data_schema": "sqlite-local-v1"
+  },
+  "transport_preference": [
+    "GITHUB_PRIVATE_AUTH",
+    "HTTPS_PUBLIC_MIRROR",
+    "LOCAL_FILE_MIRROR"
+  ],
+  "rollback": {
+    "required": true
+  },
+  "files": [
+    {
+      "path": "ARCHITECTURE.md",
+      "sha256": "145de666bb443dcca4e1a6bf3995e980a7f60406039867b5784d2ae4a5d5bb91",
+      "bytes": 3297,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2FARCHITECTURE.md"
+    },
+    {
+      "path": "audit.mjs",
+      "sha256": "517a7f686b267993f8642e4d40b7f2a99e6b3602e8e19490dacf3164d67b69f8",
+      "bytes": 17859,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Faudit.mjs"
+    },
+    {
+      "path": "config/corpus-manifest.json",
+      "sha256": "80670f18ae7c40c0cb3884d0eaa7d999259b6fdf20e33aa9ad9c628039c5376b",
+      "bytes": 3968,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fcorpus-manifest.json"
+    },
+    {
+      "path": "config/culture-general-sourcing.json",
+      "sha256": "4c30d69abe75799e905f18c0cd41efca6adf142009d4f6842e6785812fd3a218",
+      "bytes": 3870,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fculture-general-sourcing.json"
+    },
+    {
+      "path": "config/excellentia-prep.json",
+      "sha256": "ea4f12a7f0420644f2fd76037d6fa2d7ae8f193a1f83e111531cd3822ba9d16a",
+      "bytes": 3384,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fexcellentia-prep.json"
+    },
+    {
+      "path": "config/exetat-2025-reported-topics.json",
+      "sha256": "d011740e95cf02470ae5a23ae238112f9b6d57b49c0a6bdaec445fb7ff32a434",
+      "bytes": 752,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fexetat-2025-reported-topics.json"
+    },
+    {
+      "path": "config/exetat-culture-blueprint.json",
+      "sha256": "3c20b8c9ae2c7b7144ef85cad62fdf1a1f2391c32bdae4282271d75fe737f5df",
+      "bytes": 1492,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fexetat-culture-blueprint.json"
+    },
+    {
+      "path": "config/exetat-observed-items.json",
+      "sha256": "e34b75207e47ba6d3d34d3fef298485204a4d45a9b4f7d7e4d32ee01d5af473c",
+      "bytes": 32571,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fexetat-observed-items.json"
+    },
+    {
+      "path": "config/exetat-research-engine.json",
+      "sha256": "dd23a72fbe952b3a803ab24d12968f58e1a1d5b66f0664189efa474d6df8a5dc",
+      "bytes": 4166,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fexetat-research-engine.json"
+    },
+    {
+      "path": "config/exetat-research-plan.json",
+      "sha256": "a03bcaae85c339e50d58fa02d0ec0dfdeb90c9a3ae515306351aeba4c76fc6d0",
+      "bytes": 3795,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fexetat-research-plan.json"
+    },
+    {
+      "path": "config/exetat-source-registry.json",
+      "sha256": "9e4a3ee6497c8d84060857dd4810234b1afb0b123e7c1b5bf0f85dcec0aac0b0",
+      "bytes": 18057,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fexetat-source-registry.json"
+    },
+    {
+      "path": "config/lesson-overrides.json",
+      "sha256": "92337d7edd6880808c04aa4085b1a17804c7398c663f1216820442a1e2e12493",
+      "bytes": 2926,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Flesson-overrides.json"
+    },
+    {
+      "path": "config/lessons-supplement.json",
+      "sha256": "4f7448043d72586f9fe74f8b7093b84bf02d90600c2cc35a8ce63d2d4c5baa04",
+      "bytes": 132670,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Flessons-supplement.json"
+    },
+    {
+      "path": "config/lessons.json",
+      "sha256": "a2630fba1c80084cfe593ca76162193e7d87f5a1be24f88f6401ae971b96f0af",
+      "bytes": 1007327,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Flessons.json"
+    },
+    {
+      "path": "config/modules.json",
+      "sha256": "7e6b5f30ebb216ab0123659926cdeb3d4ccb08e0b06b3d6626f946b9e54a4526",
+      "bytes": 2558,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fmodules.json"
+    },
+    {
+      "path": "config/questions-exetat-2009-2020-gapfill.json",
+      "sha256": "50fc9538000d3921ecf9298e6cdcb58eb73e416101b5cbbd3d25529f00275ab7",
+      "bytes": 10394,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2009-2020-gapfill.json"
+    },
+    {
+      "path": "config/questions-exetat-2013-recovered.json",
+      "sha256": "8ac572b31f776b3630c469091b5188154a19766074842a9fcaf1ff7f1833bfa2",
+      "bytes": 5990,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2013-recovered.json"
+    },
+    {
+      "path": "config/questions-exetat-2015-2017-recovered.json",
+      "sha256": "a7db68ec3acf2d27c8bbb34fc09f9eb1ee4da157a50d657771019d57e8f25db1",
+      "bytes": 3321,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2015-2017-recovered.json"
+    },
+    {
+      "path": "config/questions-exetat-2016-recovered.json",
+      "sha256": "5251df07b3f85b1b6480c22520adc126cad59985869c928f36521aa1008cb1e6",
+      "bytes": 7205,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2016-recovered.json"
+    },
+    {
+      "path": "config/questions-exetat-2017-recovered-v2.json",
+      "sha256": "4ea44d603ba7671a982fadec8488f1cbbfd1ca658203457d96521c9364785c96",
+      "bytes": 8806,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2017-recovered-v2.json"
+    },
+    {
+      "path": "config/questions-exetat-2019-recovered.json",
+      "sha256": "607738b89449929e24071e4033cd7af59b4df1a0f2e530841bb5601e4946da91",
+      "bytes": 29848,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2019-recovered.json"
+    },
+    {
+      "path": "config/questions-exetat-2021-recovered.json",
+      "sha256": "09c77df7dba53470a4167f35c8f1027850a987b75d577047cfe31fdc9a004da4",
+      "bytes": 11029,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2021-recovered.json"
+    },
+    {
+      "path": "config/questions-exetat-2022-recovered.json",
+      "sha256": "fa038b7d8d8f615ec6edf32df91d6596ad5979a8b26b62a1b680ee322568e89e",
+      "bytes": 32872,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2022-recovered.json"
+    },
+    {
+      "path": "config/questions-exetat-2023-recovered.json",
+      "sha256": "d2d31c4e060dd703074053401255c18fa3671dd46d7ca951aae754c7c6d89e01",
+      "bytes": 1113,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2023-recovered.json"
+    },
+    {
+      "path": "config/questions-exetat-2024-reported.json",
+      "sha256": "1fb52a6976fbd19c05eb9b991793a4cb931374b3e5626ada9cfb4b3f2b1df96a",
+      "bytes": 2055,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-2024-reported.json"
+    },
+    {
+      "path": "config/questions-exetat-archive-max-2005-2008.json",
+      "sha256": "583bc7fb59fa1d4b6f6678003630b8c78c13442824ac412f1a2f10d9d954bfdf",
+      "bytes": 46313,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-archive-max-2005-2008.json"
+    },
+    {
+      "path": "config/questions-exetat-archive-max-2009-2015.json",
+      "sha256": "df3d179f2cf93b51c1cf32c09a214ca064aa2ce6e49925ce8ee3040be029e427",
+      "bytes": 36733,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-archive-max-2009-2015.json"
+    },
+    {
+      "path": "config/questions-exetat-archive-max-2010-variants.json",
+      "sha256": "c8fcb214227f3d1d4a2329e15aeaa9692932c59315c988033f7d48b4076ddce8",
+      "bytes": 23972,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-archive-max-2010-variants.json"
+    },
+    {
+      "path": "config/questions-exetat-archive-max-2011-2014.json",
+      "sha256": "ea3146d4933ba20758182043f2adf564ef98cd525d4e19dc9cdf7b68c5d5f99f",
+      "bytes": 30862,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-archive-max-2011-2014.json"
+    },
+    {
+      "path": "config/questions-exetat-archive-max-2026.json",
+      "sha256": "90c6bfb9c9e239b76fd02cc89e6ff2e3338efe579a964d14939fe63a27c1e6cf",
+      "bytes": 79368,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-archive-max-2026.json"
+    },
+    {
+      "path": "config/questions-exetat-archive-max-deep-2013-2024.json",
+      "sha256": "d4c95c4eab74ac2afedbfe874210b4830dfd3a1af38b535e0d684d106f61fd8c",
+      "bytes": 40762,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-archive-max-deep-2013-2024.json"
+    },
+    {
+      "path": "config/questions-exetat-civics-core.json",
+      "sha256": "77cf427dc6214ce9b0bd0364c68150ce426a1bb17885c3c3ba7f9f2cebe4f959",
+      "bytes": 16743,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-civics-core.json"
+    },
+    {
+      "path": "config/questions-exetat-philosophy-core.json",
+      "sha256": "648e378780ddb634622f153435ad5b0f89d4d95cee0b6412f2af4f8e1ff0615a",
+      "bytes": 29941,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-philosophy-core.json"
+    },
+    {
+      "path": "config/questions-exetat-recovered-batch1.json",
+      "sha256": "08395fcf847d1c2263da522bdbc251a8df8c08de52b333d5cc1ddcef3e44e286",
+      "bytes": 19179,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-exetat-recovered-batch1.json"
+    },
+    {
+      "path": "config/questions-expanded.json",
+      "sha256": "f8b87121d20cf79e633ebc07dc27fcbc2e3fc6a45e43be3787f7fbd93b813e92",
+      "bytes": 122717,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-expanded.json"
+    },
+    {
+      "path": "config/questions-generated.json",
+      "sha256": "f58213e4d0073a39811b266847c16d8bca781a5d5120cf6f8e52ae1c69764ad9",
+      "bytes": 160526,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-generated.json"
+    },
+    {
+      "path": "config/questions-seed.json",
+      "sha256": "85fe2edb70aa503fddc5e9eab562acc937192eb2dc28c72c20dfcf9a95bbce98",
+      "bytes": 28403,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-seed.json"
+    },
+    {
+      "path": "config/questions-v2-capitals.json",
+      "sha256": "3d04d1fd1908a0d7764890e4bf6cae373ada81a46b862194f70293ed790ee8bb",
+      "bytes": 98913,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-capitals.json"
+    },
+    {
+      "path": "config/questions-v2-current-2026.json",
+      "sha256": "4be28990ec5a9ef5783bd12d0e5a9e6ad49f6df2b077fa6500c7cc822ef03a5a",
+      "bytes": 25053,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-current-2026.json"
+    },
+    {
+      "path": "config/questions-v2-current-africa.json",
+      "sha256": "d58e2ee4d62ae4ebcdbd1b58ef59b8eca598ec06665f35be73d17eaadd87a00f",
+      "bytes": 5178,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-current-africa.json"
+    },
+    {
+      "path": "config/questions-v2-current.json",
+      "sha256": "529f2d87502127ea6444f964d1c5bcc478d1a1fd5141269256a009b73735de9d",
+      "bytes": 39946,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-current.json"
+    },
+    {
+      "path": "config/questions-v2-discoveries.json",
+      "sha256": "3b949eabd760d6244972995b0fef7e9b09e1f08fbf12614d28b926634220b019",
+      "bytes": 43876,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-discoveries.json"
+    },
+    {
+      "path": "config/questions-v2-elements.json",
+      "sha256": "06a0fd75e5f090372bc1b7d837ab1a8b92b8b17bfb9fe76d42d1273995b818f8",
+      "bytes": 171591,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-elements.json"
+    },
+    {
+      "path": "config/questions-v2-geography.json",
+      "sha256": "229df2dac0fd3977194d4323b280b13823e3c7779f4d05c688ef9da479a20a57",
+      "bytes": 64121,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-geography.json"
+    },
+    {
+      "path": "config/questions-v2-history.json",
+      "sha256": "68b8787fc5aca2ebcd6a550e7636e0454994cd4eea50cc996530dcf0515317fa",
+      "bytes": 64078,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-history.json"
+    },
+    {
+      "path": "config/questions-v2-institutions-depth.json",
+      "sha256": "8a24dd1c57fc13876e7001537827c4548bb824ba57fb05c05cfe861aec3f7e18",
+      "bytes": 6215,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-institutions-depth.json"
+    },
+    {
+      "path": "config/questions-v2-literature.json",
+      "sha256": "fa3474548f33fae89fe48e47c5197b6e6a55964cdd3c200f2c935dc8201338ed",
+      "bytes": 66127,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-literature.json"
+    },
+    {
+      "path": "config/questions-v2-organizations.json",
+      "sha256": "35d15fee5a366a91fb3e83efc4344bf22d184070504c87716f716d6452819817",
+      "bytes": 48015,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-organizations.json"
+    },
+    {
+      "path": "config/questions-v2-quality-gap.json",
+      "sha256": "37a5a0596528d80cc097ce0a808ea2068fecc640fc13be152aff6b9adcbfdb5c",
+      "bytes": 15061,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-quality-gap.json"
+    },
+    {
+      "path": "config/questions-v2-rdc.json",
+      "sha256": "714ffd55aca071988f15ef6ac8a51f286f0fea29f91647b5216fa7fc71cfbc06",
+      "bytes": 81292,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-rdc.json"
+    },
+    {
+      "path": "config/questions-v2-science.json",
+      "sha256": "030bf7758331413ebdd4bd95a43f00f0373780083406a262efc524fc35403374",
+      "bytes": 53516,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-science.json"
+    },
+    {
+      "path": "config/questions-v2-teaching-gaps.json",
+      "sha256": "42a1a5ef0176655dd906b73225e120a14e036772a39063633144f905f2e8b3bd",
+      "bytes": 9220,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v2-teaching-gaps.json"
+    },
+    {
+      "path": "config/questions-v3-africa-organizations.json",
+      "sha256": "1bf6eb914dd7fbb4343f3dc64a82567a15229215b1efc37eca2129e7d9a92b5d",
+      "bytes": 128811,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v3-africa-organizations.json"
+    },
+    {
+      "path": "config/questions-v3-astronomy-tech.json",
+      "sha256": "334a718da7162a67a9bbc9ebbc4b1724d29db201983c9fff6354fa233951ac59",
+      "bytes": 206118,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v3-astronomy-tech.json"
+    },
+    {
+      "path": "config/questions-v3-biology-health.json",
+      "sha256": "d0b9569e506c83871d9587774edb560d8a378c43f0d8a16f14a41d19665a8248",
+      "bytes": 184571,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v3-biology-health.json"
+    },
+    {
+      "path": "config/questions-v3-current-2026-10.json",
+      "sha256": "bba8beede61f8ae84c82bdac752f4d975309339d7d01594c79be790db053aefb",
+      "bytes": 23391,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v3-current-2026-10.json"
+    },
+    {
+      "path": "config/questions-v3-history-culture.json",
+      "sha256": "cf6939447f497a524c1ec37c612a0d5fa05adbc513cece969a0bd0bd360fc87e",
+      "bytes": 192408,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v3-history-culture.json"
+    },
+    {
+      "path": "config/questions-v3-philosophy-civics.json",
+      "sha256": "1245a29e02e57efbbdbb48871b63aa1499f9c5f257159c236dc1617199d87168",
+      "bytes": 242261,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v3-philosophy-civics.json"
+    },
+    {
+      "path": "config/questions-v3-rdc-world-economy.json",
+      "sha256": "da694d64009f65395859518eeca80322935a57bba2f387750866323eed616fbc",
+      "bytes": 109857,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v3-rdc-world-economy.json"
+    },
+    {
+      "path": "config/questions-v3-science-physical-earth.json",
+      "sha256": "dbc10a4932e7ccef20c6e44d1e5f9eca806cbee8fb507dee420a2a15e071d154",
+      "bytes": 190682,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fconfig%2Fquestions-v3-science-physical-earth.json"
+    },
+    {
+      "path": "deep-audit.mjs",
+      "sha256": "08bfe6ec24b119a63cbefb14d075a6be2ed9ce1c04d92db05e59b30b433f923f",
+      "bytes": 20163,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fdeep-audit.mjs"
+    },
+    {
+      "path": "public/app.js",
+      "sha256": "33f60b2f4471402e58059e8ce77ffbff6d99b3d04ec634daa9afd7e250ac8928",
+      "bytes": 162333,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fpublic%2Fapp.js"
+    },
+    {
+      "path": "public/excellentia-icon-maskable.svg",
+      "sha256": "c7186b6563a2a18b6ba440e04b6a9ff738d2aadef4d76d2d5c0e4801f0c067d9",
+      "bytes": 244,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fpublic%2Fexcellentia-icon-maskable.svg"
+    },
+    {
+      "path": "public/excellentia-icon.svg",
+      "sha256": "065eaa26026773387f848c92dfdb33a49667ef6fa2db22156c788f1c00d3d8fa",
+      "bytes": 253,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fpublic%2Fexcellentia-icon.svg"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "8498c973d995241ac8a76eddcfc8577a0d2b1b322945eedc964c7baf1a311ebc",
+      "bytes": 5553,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fpublic%2Findex.html"
+    },
+    {
+      "path": "public/manifest.webmanifest",
+      "sha256": "c27574b15c8bf45c38bd3d167c9f38512eefb58d8647ca46b38eb90e69e1f493",
+      "bytes": 1147,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fpublic%2Fmanifest.webmanifest"
+    },
+    {
+      "path": "public/style.css",
+      "sha256": "fd1052a965fff6260aaf46f37df4be5cd32907bcc7373d03f8317639ee52d351",
+      "bytes": 74119,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fpublic%2Fstyle.css"
+    },
+    {
+      "path": "public/sw.js",
+      "sha256": "a310dde35960781de583ecfa0c1f2c94bffe4dd25415cca4dae66b0fca856605",
+      "bytes": 1815,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fpublic%2Fsw.js"
+    },
+    {
+      "path": "public/vendor/qrcode.min.js",
+      "sha256": "c541ef06327885a8415bca8df6071e14189b4855336def4f36db54bde8484f36",
+      "bytes": 19927,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fpublic%2Fvendor%2Fqrcode.min.js"
+    },
+    {
+      "path": "runtime-audit.mjs",
+      "sha256": "18c0b1c2b63ee7bab95c8df95e79420afd15866eac77162872187a459de26de3",
+      "bytes": 25356,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fruntime-audit.mjs"
+    },
+    {
+      "path": "server.mjs",
+      "sha256": "cad71c6ba9ebd798b5221a0db1d98c44bca172840c5f31ebf079f67feb4f72ec",
+      "bytes": 118351,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fserver.mjs"
+    },
+    {
+      "path": "ui-audit.mjs",
+      "sha256": "88a032fb8639ae5f20fa5e2d31527c605adf293966660e46caedf13ea20c49e3",
+      "bytes": 15796,
+      "url": "github://Terminator364/ChatGPT-PC?ref=73f6bc1f841643b5dda94f1c6fd81d56b65780bc&path=excellentia-study-cockpit%2Fv2%2Fui-audit.mjs"
+    }
+  ],
+  "updater": {
+    "agent": {
+      "url": "github://Terminator364/ChatGPT-PC?ref=99da9ee7562cd85ab1e7b6674d3db37124b5091a&path=excellentia-study-cockpit%2Fupdater%2Fagent.mjs",
+      "sha256": "21f75446ed64ab68ab9add791422c67df7fb50bd1f1352dd59af82c56579e86d",
+      "bytes": 32742,
+      "version": "1.3.3"
+    },
+    "runner": {
+      "url": "github://Terminator364/ChatGPT-PC?ref=2c27cdc684c4ed489b4519164563f0d07b287830&path=excellentia-study-cockpit%2Fupdater%2Frunner.mjs",
+      "sha256": "736d0d42707061f52e614f8e3048ced54c6928dcd6bc0f82e57108ab190cf995",
+      "bytes": 2485,
+      "version": "1.0.1"
+    },
+    "launcher": {
+      "url": "github://Terminator364/ChatGPT-PC?ref=4f3534ec8f06ec3b48fae5396226c7ec68f8f88a&path=excellentia-study-cockpit%2Fupdater%2Flauncher.mjs",
+      "sha256": "8f58a944a44d8fdf20480eee28d67b7bea92529a6b55a807f175336ecf76fcfe",
+      "bytes": 4135,
+      "version": "1.1.1"
+    }
+  },
+  "automation": {
+    "mode": "AUTONOMOUS_MANIFEST",
+    "desktop_commander_required": false,
+    "scheduled_check_minutes": 30,
+    "on_demand_from_admin_ui": true
+  }
+}
