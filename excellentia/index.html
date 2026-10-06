@@ -15,7 +15,7 @@ h1{font-size:28px;margin:12px 0 8px}.card{background:#fff;color:#101828;border-r
 <div class="card"><div class="spin"></div><b id="title">Recherche de la dernière version…</b><p id="msg">Connexion au canal stable.</p><button id="retry" hidden>Réessayer</button></div></main>
 <script>
 const POINTER='https://raw.githubusercontent.com/Terminator364/BuildHub/main/excellentia/latest.json';
-const FALLBACK='https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@ba5b37e028edc398fe1ab4d9a1a6a01abcb80256/excellentia-student/index.html';
+const FALLBACK='https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia-student/index.html';
 async function go(){
  const title=document.getElementById('title'),msg=document.getElementById('msg'),retry=document.getElementById('retry');
  retry.hidden=true; title.textContent='Recherche de la dernière version…'; msg.textContent='Connexion au canal stable.';
@@ -23,7 +23,7 @@ async function go(){
    const r=await fetch(POINTER+'?t='+Date.now(),{cache:'no-store'});
    if(!r.ok) throw new Error('pointer '+r.status);
    const j=await r.json();
-   if(!/^https:\/\/cdn\.jsdelivr\.net\/gh\/Terminator364\/BuildHub@/.test(j.url||'')) throw new Error('route invalid');
+   if(!/^https:\/\/html-preview\.github\.io\/\?url=https:\/\/github\.com\/Terminator364\/BuildHub\/blob\/main\/excellentia-student\/index\.html$/.test(j.url||'')) throw new Error('route invalid');
    localStorage.setItem('excellentia_last_public_url',j.url);
    title.textContent='Excellentia '+j.version+' prête';
    msg.textContent=j.questions.toLocaleString('fr-FR')+' questions · '+j.knowledge_units.toLocaleString('fr-FR')+' connaissances · '+j.timer_seconds+' s/question';
