@@ -2,7 +2,7 @@
   "schema": 1,
   "product": "excellentia-student-gateway",
   "version": "2.3.0",
-  "build": "2026.10.06-v2.3.0-gateway-continuity-304",
+  "build": "2026.10.06-v2.3.0-gateway",
   "question_files": [
     "questions-exetat-2009-2020-gapfill.json",
     "questions-exetat-2013-recovered.json",
@@ -55,17 +55,7 @@
   "timer_seconds": 40,
   "offline_first": true,
   "source_release": "Excellentia V2.3.0",
-  "continuity": {
-    "schema": 1,
-    "event_schema": "excellentia.continuity/1",
-    "mode": "STORE_AND_FORWARD",
-    "local_durable": true,
-    "canonical_nodes": [
-      "PC",
-      "B_EDGE"
-    ],
-    "public_relay": null,
-    "public_relay_status": "NOT_CONFIGURED",
-    "merge_semantics": "IDEMPOTENT_EVENT_LEDGER"
-  }
+  "public_gateway_strategy": "github-pages",
+  "primary_url": "https://terminator364.github.io/BuildHub/excellentia-student/",
+  "fallback_note": "Do not use jsDelivr as the HTML entry point; it may serve HTML as text."
 }
