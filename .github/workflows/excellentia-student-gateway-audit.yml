@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - feat/excellentia-student-gateway
+      - feat/excellentia-continuity-v304
     paths:
       - 'excellentia-student/**'
       - '.github/workflows/excellentia-student-gateway-audit.yml'
@@ -63,5 +64,11 @@ jobs:
           grep -q "mode==='exam'" excellentia-student/app.js
           grep -q "localStorage" excellentia-student/app.js
           grep -q "serviceWorker" excellentia-student/app.js
+          grep -q "appendContinuityEvent" excellentia-student/app.js
+          grep -q "excellentia_continuity_v1" excellentia-student/app.js
+          grep -q "IDEMPOTENT_EVENT_LEDGER" excellentia-student/data/gateway-manifest.json
+          grep -q '"public_relay_status": "NOT_CONFIGURED"' excellentia-student/data/gateway-manifest.json
+          grep -q "v=304" excellentia-student/index.html
+          grep -q "excellentia-student-v304" excellentia-student/sw.js
           test -f excellentia-student/manifest.webmanifest
           test -f excellentia-student/sw.js
