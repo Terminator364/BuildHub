@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <title>Excellentia Study Hub</title>
 <link rel="manifest" href="./manifest.webmanifest">
-<link rel="stylesheet" href="./style.css?v=303">
+<link rel="stylesheet" href="./style.css?v=304">
 </head>
 <body>
 <div class="app-shell" id="appShell">
@@ -54,7 +54,7 @@
         <span class="build-chip" id="buildChip">V2.3.0</span>
         <button class="command-button" id="commandButton"><span>⌕</span><span class="command-label">Rechercher</span><kbd>Ctrl K</kbd></button>
         <button class="ghost-icon" id="refreshButton" title="Actualiser">↻</button>
-        <div class="sync-pill" id="syncPill"><span></span><b id="syncLabel">Connecté</b></div>
+        <div class="sync-pill" id="syncPill"><span></span><b id="syncLabel">Continuité locale</b></div>
       </div>
     </header>
     <div class="context-bar" id="contextBar">
@@ -103,11 +103,11 @@ if('serviceWorker' in navigator){
   navigator.serviceWorker.addEventListener('controllerchange',()=>{
     if(reloading)return;
     reloading=true;
-    const k='exc_gateway_sw303_reloaded';
+    const k='exc_gateway_sw304_reloaded';
     if(!sessionStorage.getItem(k)){sessionStorage.setItem(k,'1');location.reload();}
   });
 }
 </script>
-<script src="./app.js?v=303"></script>
+<script src="./app.js?v=304"></script>
 </body>
 </html>
