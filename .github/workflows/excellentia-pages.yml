@@ -1,0 +1,63 @@
+name: Excellentia Student Gateway Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'excellentia/**'
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: excellentia-pages
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Audit Excellentia public gateway
+        run: node excellentia-student/audit.mjs
+
+      - name: Build Pages artifact
+        shell: bash
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp -a excellentia _site/excellentia
+          cp -a excellentia-student _site/excellentia-student
+          printf '%s
+' '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=./excellentia/"><title>Excellentia</title><a href="./excellentia/">Excellentia</a>' > _site/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: verify
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
