@@ -1,5 +1,8 @@
 const S={questions:[],modules:[],lessons:null,manifest:null,release:null,session:null,timer:null};
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const $=s=>document.querySelector(s), $=s=>[...document.querySelectorAll(s)];
+const IS_PREVIEW=location.hostname==='html-preview.github.io';
+const RAW_BASE='https://raw.githubusercontent.com/Terminator364/BuildHub/main/excellentia-student/';
+const assetUrl=u=>IS_PREVIEW?RAW_BASE+u.replace(/^\.\//,''):u;
 const key='exc_gateway_v230';
 const loadState=()=>{try{return JSON.parse(localStorage.getItem(key)||'{}')}catch{return {}}};
 const saveState=v=>localStorage.setItem(key,JSON.stringify(v));
@@ -8,7 +11,7 @@ const state=loadState(); state.progress=state.progress||{}; state.history=state.
 function netLabel(){const e=$('#net');e.textContent=navigator.onLine?'En ligne · PWA':'Hors ligne · cache';}
 addEventListener('online',netLabel);addEventListener('offline',netLabel);netLabel();
 
-async function j(url){const r=await fetch(url,{cache:'no-cache'});if(!r.ok)throw new Error(url+' '+r.status);return r.json();}
+async function j(url){const finalUrl=assetUrl(url);const r=await fetch(finalUrl,{cache:'no-cache'});if(!r.ok)throw new Error(finalUrl+' '+r.status);return r.json();}
 async function loadAll(){
   S.manifest=await j('./data/gateway-manifest.json');
   const [mods,less,rel]=await Promise.all([j('./data/modules.json'),j('./data/lessons.json'),j('./data/release.json')]);
@@ -26,6 +29,7 @@ async function loadAll(){
   S.questions=clean;
   $('#qCount').textContent=clean.length.toLocaleString('fr-FR');
   $('#kCount').textContent=new Set(clean.map(q=>q.knowledge_id).filter(Boolean)).size.toLocaleString('fr-FR');
+  document.documentElement.dataset.ready=String(clean.length);
   $('#loading').classList.add('hidden');$('#dashboard').classList.remove('hidden');
   renderDashboard();
   const saved=state.session;if(saved&&saved.items?.length) $('[data-action="resume"]').disabled=false; else $('[data-action="resume"]').disabled=true;
@@ -108,5 +112,5 @@ function finish(){
 function home(){clearInterval(S.timer);$('#session').classList.add('hidden');$('#result').classList.add('hidden');$('#dashboard').classList.remove('hidden');renderDashboard()}
 document.addEventListener('click',e=>{const a=e.target.closest('[data-action]');if(!a)return;if(a.dataset.action==='start-mix')start({mode:'training',count:40});if(a.dataset.action==='start-exam')start({mode:'exam',count:100});if(a.dataset.action==='resume')restore()});
 $$('[data-nav]').forEach(b=>b.onclick=()=>home());
-if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if('serviceWorker'in navigator&&!IS_PREVIEW)navigator.serviceWorker.register('./sw.js').catch(()=>{});
 loadAll().catch(err=>{$('#loadText').textContent='Erreur de chargement : '+err.message+' · Réessaie avec Internet une fois, puis le cache prendra le relais.';console.error(err)});
