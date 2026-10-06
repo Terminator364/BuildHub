@@ -1,0 +1,2282 @@
+[
+  {
+    "id": "V2G001A",
+    "knowledge_id": "V2-GEO-001",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Océans",
+    "prompt": "Quel est l’océan le plus vaste de la planète ?",
+    "choices": [
+      "l’océan Pacifique",
+      "l’océan Atlantique",
+      "l’océan Indien",
+      "l’océan Arctique"
+    ],
+    "answer": 0,
+    "explanation": "Le Pacifique est l’océan le plus vaste.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G001B",
+    "knowledge_id": "V2-GEO-001",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Océans",
+    "prompt": "Repère géographique : Quel est l’océan le plus vaste de la planète ?",
+    "choices": [
+      "l’océan Atlantique",
+      "l’océan Indien",
+      "l’océan Arctique",
+      "l’océan Pacifique"
+    ],
+    "answer": 3,
+    "explanation": "Le Pacifique est l’océan le plus vaste.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G002A",
+    "knowledge_id": "V2-GEO-002",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Continents",
+    "prompt": "Quel continent possède la plus grande superficie ?",
+    "choices": [
+      "l’Afrique",
+      "l’Amérique du Nord",
+      "l’Europe",
+      "l’Asie"
+    ],
+    "answer": 3,
+    "explanation": "L’Asie est le plus vaste continent.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G002B",
+    "knowledge_id": "V2-GEO-002",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Continents",
+    "prompt": "Repère géographique : Quel continent possède la plus grande superficie ?",
+    "choices": [
+      "l’Amérique du Nord",
+      "l’Europe",
+      "l’Asie",
+      "l’Afrique"
+    ],
+    "answer": 2,
+    "explanation": "L’Asie est le plus vaste continent.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G003A",
+    "knowledge_id": "V2-GEO-003",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Déserts",
+    "prompt": "Parmi les grands déserts de la planète, lequel est le plus vaste désert chaud ?",
+    "choices": [
+      "le désert d’Arabie",
+      "le Gobi",
+      "le Sahara",
+      "le Kalahari"
+    ],
+    "answer": 2,
+    "explanation": "Le Sahara est le plus grand désert chaud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G003B",
+    "knowledge_id": "V2-GEO-003",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Déserts",
+    "prompt": "Repère géographique : Quel est le plus grand désert chaud du monde ?",
+    "choices": [
+      "le Gobi",
+      "le Sahara",
+      "le Kalahari",
+      "le désert d’Arabie"
+    ],
+    "answer": 1,
+    "explanation": "Le Sahara est le plus grand désert chaud.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G004A",
+    "knowledge_id": "V2-GEO-004",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Quel sommet est le plus élevé au-dessus du niveau de la mer ?",
+    "choices": [
+      "le Kilimandjaro",
+      "l’Everest",
+      "le K2",
+      "le Kangchenjunga"
+    ],
+    "answer": 1,
+    "explanation": "L’Everest est le plus haut sommet au-dessus du niveau de la mer.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G004B",
+    "knowledge_id": "V2-GEO-004",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Repère géographique : Quel sommet est le plus élevé au-dessus du niveau de la mer ?",
+    "choices": [
+      "l’Everest",
+      "le K2",
+      "le Kangchenjunga",
+      "le Kilimandjaro"
+    ],
+    "answer": 0,
+    "explanation": "L’Everest est le plus haut sommet au-dessus du niveau de la mer.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G005A",
+    "knowledge_id": "V2-GEO-005",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Lacs",
+    "prompt": "Quel lac est le plus profond du monde ?",
+    "choices": [
+      "le lac Baïkal",
+      "le lac Tanganyika",
+      "le lac Supérieur",
+      "le lac Victoria"
+    ],
+    "answer": 0,
+    "explanation": "Le Baïkal est le lac le plus profond du monde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G005B",
+    "knowledge_id": "V2-GEO-005",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Lacs",
+    "prompt": "Repère géographique : Quel lac est le plus profond du monde ?",
+    "choices": [
+      "le lac Tanganyika",
+      "le lac Supérieur",
+      "le lac Victoria",
+      "le lac Baïkal"
+    ],
+    "answer": 3,
+    "explanation": "Le Baïkal est le lac le plus profond du monde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G006A",
+    "knowledge_id": "V2-GEO-006",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Lacs",
+    "prompt": "Quel lac africain est le plus grand par superficie ?",
+    "choices": [
+      "le lac Tanganyika",
+      "le lac Malawi",
+      "le lac Kivu",
+      "le lac Victoria"
+    ],
+    "answer": 3,
+    "explanation": "Le lac Victoria est le plus grand lac d’Afrique par superficie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G006B",
+    "knowledge_id": "V2-GEO-006",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Lacs",
+    "prompt": "Repère géographique : Quel lac africain est le plus grand par superficie ?",
+    "choices": [
+      "le lac Malawi",
+      "le lac Kivu",
+      "le lac Victoria",
+      "le lac Tanganyika"
+    ],
+    "answer": 2,
+    "explanation": "Le lac Victoria est le plus grand lac d’Afrique par superficie.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G007A",
+    "knowledge_id": "V2-GEO-007",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Quel fleuve traverse l’Égypte et se jette dans la Méditerranée ?",
+    "choices": [
+      "le Congo",
+      "le Zambèze",
+      "le Nil",
+      "le Niger"
+    ],
+    "answer": 2,
+    "explanation": "Le Nil traverse l’Égypte et se jette dans la Méditerranée.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G007B",
+    "knowledge_id": "V2-GEO-007",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Repère géographique : Quel fleuve traverse l’Égypte et se jette dans la Méditerranée ?",
+    "choices": [
+      "le Zambèze",
+      "le Nil",
+      "le Niger",
+      "le Congo"
+    ],
+    "answer": 1,
+    "explanation": "Le Nil traverse l’Égypte et se jette dans la Méditerranée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G008A",
+    "knowledge_id": "V2-GEO-008",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Quel cours d’eau traverse la capitale française ?",
+    "choices": [
+      "le Rhône",
+      "la Seine",
+      "la Loire",
+      "la Garonne"
+    ],
+    "answer": 1,
+    "explanation": "Paris est traversée par la Seine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G008B",
+    "knowledge_id": "V2-GEO-008",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Repère géographique : Quel fleuve traverse Paris ?",
+    "choices": [
+      "la Seine",
+      "la Loire",
+      "la Garonne",
+      "le Rhône"
+    ],
+    "answer": 0,
+    "explanation": "Paris est traversée par la Seine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G009A",
+    "knowledge_id": "V2-GEO-009",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Quel fleuve traverse Londres ?",
+    "choices": [
+      "la Tamise",
+      "la Seine",
+      "le Rhin",
+      "le Danube"
+    ],
+    "answer": 0,
+    "explanation": "Londres est traversée par la Tamise.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G009B",
+    "knowledge_id": "V2-GEO-009",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Repère géographique : Quel fleuve traverse Londres ?",
+    "choices": [
+      "la Seine",
+      "le Rhin",
+      "le Danube",
+      "la Tamise"
+    ],
+    "answer": 3,
+    "explanation": "Londres est traversée par la Tamise.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G010A",
+    "knowledge_id": "V2-GEO-010",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Quel cours d’eau traverse la ville de Rome ?",
+    "choices": [
+      "le Pô",
+      "l’Arno",
+      "le Danube",
+      "le Tibre"
+    ],
+    "answer": 3,
+    "explanation": "Rome est traversée par le Tibre.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G010B",
+    "knowledge_id": "V2-GEO-010",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Repère géographique : Quel fleuve traverse Rome ?",
+    "choices": [
+      "l’Arno",
+      "le Danube",
+      "le Tibre",
+      "le Pô"
+    ],
+    "answer": 2,
+    "explanation": "Rome est traversée par le Tibre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G011A",
+    "knowledge_id": "V2-GEO-011",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Quel grand fleuve traverse Budapest ?",
+    "choices": [
+      "la Volga",
+      "la Vistule",
+      "le Danube",
+      "le Rhin"
+    ],
+    "answer": 2,
+    "explanation": "Budapest est traversée par le Danube.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G011B",
+    "knowledge_id": "V2-GEO-011",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Repère géographique : Quel grand fleuve traverse Budapest ?",
+    "choices": [
+      "la Vistule",
+      "le Danube",
+      "le Rhin",
+      "la Volga"
+    ],
+    "answer": 1,
+    "explanation": "Budapest est traversée par le Danube.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G012A",
+    "knowledge_id": "V2-GEO-012",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Quel fleuve traverse Bagdad ?",
+    "choices": [
+      "l’Indus",
+      "le Tigre",
+      "l’Euphrate",
+      "le Jourdain"
+    ],
+    "answer": 1,
+    "explanation": "Bagdad est traversée par le Tigre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G012B",
+    "knowledge_id": "V2-GEO-012",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Repère géographique : Quel fleuve traverse Bagdad ?",
+    "choices": [
+      "le Tigre",
+      "l’Euphrate",
+      "le Jourdain",
+      "l’Indus"
+    ],
+    "answer": 0,
+    "explanation": "Bagdad est traversée par le Tigre.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G013A",
+    "knowledge_id": "V2-GEO-013",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Quel fleuve traverse Kinshasa et Brazzaville ?",
+    "choices": [
+      "le fleuve Congo",
+      "le Nil",
+      "le Niger",
+      "le Zambèze"
+    ],
+    "answer": 0,
+    "explanation": "Kinshasa et Brazzaville se font face sur le fleuve Congo.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G013B",
+    "knowledge_id": "V2-GEO-013",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Fleuves",
+    "prompt": "Repère géographique : Quel fleuve traverse Kinshasa et Brazzaville ?",
+    "choices": [
+      "le Nil",
+      "le Niger",
+      "le Zambèze",
+      "le fleuve Congo"
+    ],
+    "answer": 3,
+    "explanation": "Kinshasa et Brazzaville se font face sur le fleuve Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G014A",
+    "knowledge_id": "V2-GEO-014",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Canaux",
+    "prompt": "Quel canal relie la Méditerranée à la mer Rouge ?",
+    "choices": [
+      "le canal de Panama",
+      "le canal de Kiel",
+      "le canal de Corinthe",
+      "le canal de Suez"
+    ],
+    "answer": 3,
+    "explanation": "Le canal de Suez relie la Méditerranée à la mer Rouge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G014B",
+    "knowledge_id": "V2-GEO-014",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Canaux",
+    "prompt": "Repère géographique : Quel canal relie la Méditerranée à la mer Rouge ?",
+    "choices": [
+      "le canal de Kiel",
+      "le canal de Corinthe",
+      "le canal de Suez",
+      "le canal de Panama"
+    ],
+    "answer": 2,
+    "explanation": "Le canal de Suez relie la Méditerranée à la mer Rouge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G015A",
+    "knowledge_id": "V2-GEO-015",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Canaux",
+    "prompt": "Quel canal relie les océans Atlantique et Pacifique à travers l’Amérique centrale ?",
+    "choices": [
+      "le canal de Kiel",
+      "le canal du Midi",
+      "le canal de Panama",
+      "le canal de Suez"
+    ],
+    "answer": 2,
+    "explanation": "Le canal de Panama relie les océans Atlantique et Pacifique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G015B",
+    "knowledge_id": "V2-GEO-015",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Canaux",
+    "prompt": "Repère géographique : Quel canal relie les océans Atlantique et Pacifique à travers l’Amérique centrale ?",
+    "choices": [
+      "le canal du Midi",
+      "le canal de Panama",
+      "le canal de Suez",
+      "le canal de Kiel"
+    ],
+    "answer": 1,
+    "explanation": "Le canal de Panama relie les océans Atlantique et Pacifique.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G016A",
+    "knowledge_id": "V2-GEO-016",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Détroits",
+    "prompt": "Quel passage maritime se situe entre le sud de l’Espagne et le nord du Maroc ?",
+    "choices": [
+      "le détroit d’Ormuz",
+      "le détroit de Gibraltar",
+      "le détroit de Béring",
+      "le Bosphore"
+    ],
+    "answer": 1,
+    "explanation": "Le détroit de Gibraltar sépare l’Espagne du Maroc.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G016B",
+    "knowledge_id": "V2-GEO-016",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Détroits",
+    "prompt": "Repère géographique : Quel détroit sépare l’Espagne du Maroc ?",
+    "choices": [
+      "le détroit de Gibraltar",
+      "le détroit de Béring",
+      "le Bosphore",
+      "le détroit d’Ormuz"
+    ],
+    "answer": 0,
+    "explanation": "Le détroit de Gibraltar sépare l’Espagne du Maroc.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G017A",
+    "knowledge_id": "V2-GEO-017",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Détroits",
+    "prompt": "Quel passage maritime sépare la Sibérie de l’Alaska ?",
+    "choices": [
+      "le détroit de Béring",
+      "le détroit de Gibraltar",
+      "le Bosphore",
+      "le détroit de Malacca"
+    ],
+    "answer": 0,
+    "explanation": "Le détroit de Béring sépare l’Asie de l’Amérique du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G017B",
+    "knowledge_id": "V2-GEO-017",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Détroits",
+    "prompt": "Repère géographique : Quel détroit sépare l’Asie de l’Amérique du Nord ?",
+    "choices": [
+      "le détroit de Gibraltar",
+      "le Bosphore",
+      "le détroit de Malacca",
+      "le détroit de Béring"
+    ],
+    "answer": 3,
+    "explanation": "Le détroit de Béring sépare l’Asie de l’Amérique du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G018A",
+    "knowledge_id": "V2-GEO-018",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Mers",
+    "prompt": "Quelle mer borde notamment l’Égypte, Israël et la Jordanie ?",
+    "choices": [
+      "la mer Noire",
+      "la mer Baltique",
+      "la mer du Nord",
+      "la mer Rouge"
+    ],
+    "answer": 3,
+    "explanation": "La mer Rouge borde notamment l’Égypte, Israël et la Jordanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G018B",
+    "knowledge_id": "V2-GEO-018",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Mers",
+    "prompt": "Repère géographique : Quelle mer borde notamment l’Égypte, Israël et la Jordanie ?",
+    "choices": [
+      "la mer Baltique",
+      "la mer du Nord",
+      "la mer Rouge",
+      "la mer Noire"
+    ],
+    "answer": 2,
+    "explanation": "La mer Rouge borde notamment l’Égypte, Israël et la Jordanie.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G019A",
+    "knowledge_id": "V2-GEO-019",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Mers",
+    "prompt": "Quelle mer sépare l’Europe du Sud et l’Afrique du Nord ?",
+    "choices": [
+      "la mer Noire",
+      "la mer Baltique",
+      "la mer Méditerranée",
+      "la mer Rouge"
+    ],
+    "answer": 2,
+    "explanation": "La Méditerranée sépare l’Europe du Sud et l’Afrique du Nord.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G019B",
+    "knowledge_id": "V2-GEO-019",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Mers",
+    "prompt": "Repère géographique : Quelle mer sépare l’Europe du Sud et l’Afrique du Nord ?",
+    "choices": [
+      "la mer Baltique",
+      "la mer Méditerranée",
+      "la mer Rouge",
+      "la mer Noire"
+    ],
+    "answer": 1,
+    "explanation": "La Méditerranée sépare l’Europe du Sud et l’Afrique du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G020A",
+    "knowledge_id": "V2-GEO-020",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Îles",
+    "prompt": "Hors continents, quelle île possède la plus grande superficie au monde ?",
+    "choices": [
+      "Nouvelle-Guinée",
+      "le Groenland",
+      "Madagascar",
+      "Bornéo"
+    ],
+    "answer": 1,
+    "explanation": "Le Groenland est la plus grande île du monde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G020B",
+    "knowledge_id": "V2-GEO-020",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Îles",
+    "prompt": "Repère géographique : Quelle est la plus grande île du monde, en excluant les continents ?",
+    "choices": [
+      "le Groenland",
+      "Madagascar",
+      "Bornéo",
+      "Nouvelle-Guinée"
+    ],
+    "answer": 0,
+    "explanation": "Le Groenland est la plus grande île du monde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G021A",
+    "knowledge_id": "V2-GEO-021",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Îles",
+    "prompt": "Dans quel océan se trouve Madagascar ?",
+    "choices": [
+      "l’océan Indien",
+      "l’océan Atlantique",
+      "l’océan Pacifique",
+      "l’océan Arctique"
+    ],
+    "answer": 0,
+    "explanation": "Madagascar se trouve dans l’océan Indien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G021B",
+    "knowledge_id": "V2-GEO-021",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Îles",
+    "prompt": "Repère géographique : Dans quel océan se trouve Madagascar ?",
+    "choices": [
+      "l’océan Atlantique",
+      "l’océan Pacifique",
+      "l’océan Arctique",
+      "l’océan Indien"
+    ],
+    "answer": 3,
+    "explanation": "Madagascar se trouve dans l’océan Indien.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G022A",
+    "knowledge_id": "V2-GEO-022",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Le mont Fuji se situe sur le territoire de quel pays ?",
+    "choices": [
+      "la Chine",
+      "la Corée du Sud",
+      "l’Indonésie",
+      "le Japon"
+    ],
+    "answer": 3,
+    "explanation": "Le mont Fuji se trouve au Japon.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G022B",
+    "knowledge_id": "V2-GEO-022",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Repère géographique : Dans quel pays se trouve le mont Fuji ?",
+    "choices": [
+      "la Corée du Sud",
+      "l’Indonésie",
+      "le Japon",
+      "la Chine"
+    ],
+    "answer": 2,
+    "explanation": "Le mont Fuji se trouve au Japon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G023A",
+    "knowledge_id": "V2-GEO-023",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Dans quel pays se trouve le Kilimandjaro ?",
+    "choices": [
+      "l’Ouganda",
+      "l’Éthiopie",
+      "la Tanzanie",
+      "le Kenya"
+    ],
+    "answer": 2,
+    "explanation": "Le Kilimandjaro se trouve en Tanzanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G023B",
+    "knowledge_id": "V2-GEO-023",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Repère géographique : Dans quel pays se trouve le Kilimandjaro ?",
+    "choices": [
+      "l’Éthiopie",
+      "la Tanzanie",
+      "le Kenya",
+      "l’Ouganda"
+    ],
+    "answer": 1,
+    "explanation": "Le Kilimandjaro se trouve en Tanzanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G024A",
+    "knowledge_id": "V2-GEO-024",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Quel massif montagneux sépare en grande partie la France et l’Espagne ?",
+    "choices": [
+      "les Apennins",
+      "les Pyrénées",
+      "les Alpes",
+      "les Carpates"
+    ],
+    "answer": 1,
+    "explanation": "Les Pyrénées séparent en grande partie la France et l’Espagne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G024B",
+    "knowledge_id": "V2-GEO-024",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Repère géographique : Quel massif montagneux sépare en grande partie la France et l’Espagne ?",
+    "choices": [
+      "les Pyrénées",
+      "les Alpes",
+      "les Carpates",
+      "les Apennins"
+    ],
+    "answer": 0,
+    "explanation": "Les Pyrénées séparent en grande partie la France et l’Espagne.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G025A",
+    "knowledge_id": "V2-GEO-025",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Quel massif s’étend sur plusieurs pays d’Amérique du Sud ?",
+    "choices": [
+      "les Andes",
+      "les Rocheuses",
+      "les Alpes",
+      "l’Himalaya"
+    ],
+    "answer": 0,
+    "explanation": "Les Andes s’étendent le long de l’ouest de l’Amérique du Sud.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G025B",
+    "knowledge_id": "V2-GEO-025",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Repère géographique : Quel massif s’étend sur plusieurs pays d’Amérique du Sud ?",
+    "choices": [
+      "les Rocheuses",
+      "les Alpes",
+      "l’Himalaya",
+      "les Andes"
+    ],
+    "answer": 3,
+    "explanation": "Les Andes s’étendent le long de l’ouest de l’Amérique du Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G026A",
+    "knowledge_id": "V2-GEO-026",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Quel massif abrite l’Everest ?",
+    "choices": [
+      "les Andes",
+      "les Alpes",
+      "les Rocheuses",
+      "l’Himalaya"
+    ],
+    "answer": 3,
+    "explanation": "L’Everest se situe dans l’Himalaya.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G026B",
+    "knowledge_id": "V2-GEO-026",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Montagnes",
+    "prompt": "Repère géographique : Quel massif abrite l’Everest ?",
+    "choices": [
+      "les Alpes",
+      "les Rocheuses",
+      "l’Himalaya",
+      "les Andes"
+    ],
+    "answer": 2,
+    "explanation": "L’Everest se situe dans l’Himalaya.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G027A",
+    "knowledge_id": "V2-GEO-027",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Déserts",
+    "prompt": "Sur quel continent se trouve le désert d’Atacama ?",
+    "choices": [
+      "l’Asie",
+      "l’Australie",
+      "l’Amérique du Sud",
+      "l’Afrique"
+    ],
+    "answer": 2,
+    "explanation": "L’Atacama se trouve en Amérique du Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G027B",
+    "knowledge_id": "V2-GEO-027",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Déserts",
+    "prompt": "Repère géographique : Sur quel continent se trouve le désert d’Atacama ?",
+    "choices": [
+      "l’Australie",
+      "l’Amérique du Sud",
+      "l’Afrique",
+      "l’Asie"
+    ],
+    "answer": 1,
+    "explanation": "L’Atacama se trouve en Amérique du Sud.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G028A",
+    "knowledge_id": "V2-GEO-028",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Déserts",
+    "prompt": "Dans quel pays se trouve principalement le désert du Namib ?",
+    "choices": [
+      "l’Afrique du Sud",
+      "la Namibie",
+      "le Botswana",
+      "l’Angola"
+    ],
+    "answer": 1,
+    "explanation": "Le désert du Namib se trouve principalement en Namibie.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G028B",
+    "knowledge_id": "V2-GEO-028",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Déserts",
+    "prompt": "Repère géographique : Dans quel pays se trouve principalement le désert du Namib ?",
+    "choices": [
+      "la Namibie",
+      "le Botswana",
+      "l’Angola",
+      "l’Afrique du Sud"
+    ],
+    "answer": 0,
+    "explanation": "Le désert du Namib se trouve principalement en Namibie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G029A",
+    "knowledge_id": "V2-GEO-029",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Forêts",
+    "prompt": "Dans quel continent se situe principalement la forêt amazonienne ?",
+    "choices": [
+      "l’Amérique du Sud",
+      "l’Afrique",
+      "l’Asie",
+      "l’Amérique du Nord"
+    ],
+    "answer": 0,
+    "explanation": "La forêt amazonienne se situe principalement en Amérique du Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G029B",
+    "knowledge_id": "V2-GEO-029",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Forêts",
+    "prompt": "Repère géographique : Dans quel continent se situe principalement la forêt amazonienne ?",
+    "choices": [
+      "l’Afrique",
+      "l’Asie",
+      "l’Amérique du Nord",
+      "l’Amérique du Sud"
+    ],
+    "answer": 3,
+    "explanation": "La forêt amazonienne se situe principalement en Amérique du Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G030A",
+    "knowledge_id": "V2-GEO-030",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Forêts",
+    "prompt": "Quel bassin forestier est majeur en Afrique centrale ?",
+    "choices": [
+      "le bassin du Nil",
+      "le bassin du Sénégal",
+      "le bassin du Limpopo",
+      "le bassin du Congo"
+    ],
+    "answer": 3,
+    "explanation": "Le bassin du Congo abrite une vaste forêt tropicale d’Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G030B",
+    "knowledge_id": "V2-GEO-030",
+    "module": 4,
+    "domain": "Géographie physique",
+    "subdomain": "Forêts",
+    "prompt": "Repère géographique : Quel bassin forestier est majeur en Afrique centrale ?",
+    "choices": [
+      "le bassin du Sénégal",
+      "le bassin du Limpopo",
+      "le bassin du Congo",
+      "le bassin du Nil"
+    ],
+    "answer": 2,
+    "explanation": "Le bassin du Congo abrite une vaste forêt tropicale d’Afrique centrale.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G031A",
+    "knowledge_id": "V2-GEO-031",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Par superficie totale, quel État est le plus vaste du monde ?",
+    "choices": [
+      "la Chine",
+      "les États-Unis",
+      "la Russie",
+      "le Canada"
+    ],
+    "answer": 2,
+    "explanation": "La Russie est le plus grand pays du monde par superficie.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G031B",
+    "knowledge_id": "V2-GEO-031",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Repère géographique : Quel est le plus grand pays du monde par superficie ?",
+    "choices": [
+      "les États-Unis",
+      "la Russie",
+      "le Canada",
+      "la Chine"
+    ],
+    "answer": 1,
+    "explanation": "La Russie est le plus grand pays du monde par superficie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G032A",
+    "knowledge_id": "V2-GEO-032",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Quel pays occupe la majeure partie de la péninsule Arabique ?",
+    "choices": [
+      "les Émirats arabes unis",
+      "l’Arabie saoudite",
+      "Oman",
+      "le Yémen"
+    ],
+    "answer": 1,
+    "explanation": "L’Arabie saoudite occupe la majeure partie de la péninsule Arabique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G032B",
+    "knowledge_id": "V2-GEO-032",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Repère géographique : Quel pays occupe la majeure partie de la péninsule Arabique ?",
+    "choices": [
+      "l’Arabie saoudite",
+      "Oman",
+      "le Yémen",
+      "les Émirats arabes unis"
+    ],
+    "answer": 0,
+    "explanation": "L’Arabie saoudite occupe la majeure partie de la péninsule Arabique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G033A",
+    "knowledge_id": "V2-GEO-033",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Quel pays est entièrement entouré par l’Afrique du Sud ?",
+    "choices": [
+      "le Lesotho",
+      "l’Eswatini",
+      "le Botswana",
+      "la Namibie"
+    ],
+    "answer": 0,
+    "explanation": "Le Lesotho est enclavé à l’intérieur de l’Afrique du Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G033B",
+    "knowledge_id": "V2-GEO-033",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Repère géographique : Quel pays est entièrement entouré par l’Afrique du Sud ?",
+    "choices": [
+      "l’Eswatini",
+      "le Botswana",
+      "la Namibie",
+      "le Lesotho"
+    ],
+    "answer": 3,
+    "explanation": "Le Lesotho est enclavé à l’intérieur de l’Afrique du Sud.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G034A",
+    "knowledge_id": "V2-GEO-034",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Quel pays d’Amérique du Sud est traversé par l’équateur et porte le même nom ?",
+    "choices": [
+      "la Colombie",
+      "le Pérou",
+      "le Brésil",
+      "l’Équateur"
+    ],
+    "answer": 3,
+    "explanation": "L’Équateur est traversé par la ligne équatoriale.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G034B",
+    "knowledge_id": "V2-GEO-034",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Repère géographique : Quel pays d’Amérique du Sud est traversé par l’équateur et porte le même nom ?",
+    "choices": [
+      "le Pérou",
+      "le Brésil",
+      "l’Équateur",
+      "la Colombie"
+    ],
+    "answer": 2,
+    "explanation": "L’Équateur est traversé par la ligne équatoriale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G035A",
+    "knowledge_id": "V2-GEO-035",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Quel pays a la forme d’une longue bande le long de la côte pacifique sud-américaine ?",
+    "choices": [
+      "l’Argentine",
+      "l’Équateur",
+      "le Chili",
+      "le Pérou"
+    ],
+    "answer": 2,
+    "explanation": "Le Chili forme une longue bande le long de la côte pacifique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G035B",
+    "knowledge_id": "V2-GEO-035",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Pays",
+    "prompt": "Repère géographique : Quel pays a la forme d’une longue bande le long de la côte pacifique sud-américaine ?",
+    "choices": [
+      "l’Équateur",
+      "le Chili",
+      "le Pérou",
+      "l’Argentine"
+    ],
+    "answer": 1,
+    "explanation": "Le Chili forme une longue bande le long de la côte pacifique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G036A",
+    "knowledge_id": "V2-GEO-036",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Dans quel pays se trouve la ville de Marrakech ?",
+    "choices": [
+      "l’Égypte",
+      "le Maroc",
+      "la Tunisie",
+      "l’Algérie"
+    ],
+    "answer": 1,
+    "explanation": "Marrakech se trouve au Maroc.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G036B",
+    "knowledge_id": "V2-GEO-036",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Repère géographique : Dans quel pays se trouve la ville de Marrakech ?",
+    "choices": [
+      "le Maroc",
+      "la Tunisie",
+      "l’Algérie",
+      "l’Égypte"
+    ],
+    "answer": 0,
+    "explanation": "Marrakech se trouve au Maroc.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G037A",
+    "knowledge_id": "V2-GEO-037",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Dans quel pays se trouve la ville de Kyoto ?",
+    "choices": [
+      "le Japon",
+      "la Chine",
+      "la Corée du Sud",
+      "la Thaïlande"
+    ],
+    "answer": 0,
+    "explanation": "Kyoto se trouve au Japon.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G037B",
+    "knowledge_id": "V2-GEO-037",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Repère géographique : Dans quel pays se trouve la ville de Kyoto ?",
+    "choices": [
+      "la Chine",
+      "la Corée du Sud",
+      "la Thaïlande",
+      "le Japon"
+    ],
+    "answer": 3,
+    "explanation": "Kyoto se trouve au Japon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G038A",
+    "knowledge_id": "V2-GEO-038",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Dans quel pays se trouve la ville de São Paulo ?",
+    "choices": [
+      "l’Argentine",
+      "le Portugal",
+      "le Mexique",
+      "le Brésil"
+    ],
+    "answer": 3,
+    "explanation": "São Paulo se trouve au Brésil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G038B",
+    "knowledge_id": "V2-GEO-038",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Repère géographique : Dans quel pays se trouve la ville de São Paulo ?",
+    "choices": [
+      "le Portugal",
+      "le Mexique",
+      "le Brésil",
+      "l’Argentine"
+    ],
+    "answer": 2,
+    "explanation": "São Paulo se trouve au Brésil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G039A",
+    "knowledge_id": "V2-GEO-039",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Dans quel pays se trouve la ville de Casablanca ?",
+    "choices": [
+      "la Tunisie",
+      "l’Espagne",
+      "le Maroc",
+      "l’Algérie"
+    ],
+    "answer": 2,
+    "explanation": "Casablanca se trouve au Maroc.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G039B",
+    "knowledge_id": "V2-GEO-039",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Repère géographique : Dans quel pays se trouve la ville de Casablanca ?",
+    "choices": [
+      "l’Espagne",
+      "le Maroc",
+      "l’Algérie",
+      "la Tunisie"
+    ],
+    "answer": 1,
+    "explanation": "Casablanca se trouve au Maroc.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G040A",
+    "knowledge_id": "V2-GEO-040",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Dans quel pays se trouve la ville de Mumbai ?",
+    "choices": [
+      "le Sri Lanka",
+      "l’Inde",
+      "le Pakistan",
+      "le Bangladesh"
+    ],
+    "answer": 1,
+    "explanation": "Mumbai se trouve en Inde.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G040B",
+    "knowledge_id": "V2-GEO-040",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Villes",
+    "prompt": "Repère géographique : Dans quel pays se trouve la ville de Mumbai ?",
+    "choices": [
+      "l’Inde",
+      "le Pakistan",
+      "le Bangladesh",
+      "le Sri Lanka"
+    ],
+    "answer": 0,
+    "explanation": "Mumbai se trouve en Inde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G041A",
+    "knowledge_id": "V2-GEO-041",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Le site archéologique du Machu Picchu appartient à quel pays ?",
+    "choices": [
+      "le Pérou",
+      "la Bolivie",
+      "le Chili",
+      "l’Équateur"
+    ],
+    "answer": 0,
+    "explanation": "Le Machu Picchu se trouve au Pérou.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G041B",
+    "knowledge_id": "V2-GEO-041",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Repère géographique : Dans quel pays se trouve le Machu Picchu ?",
+    "choices": [
+      "la Bolivie",
+      "le Chili",
+      "l’Équateur",
+      "le Pérou"
+    ],
+    "answer": 3,
+    "explanation": "Le Machu Picchu se trouve au Pérou.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G042A",
+    "knowledge_id": "V2-GEO-042",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Les pyramides du plateau de Gizeh se trouvent dans quel pays ?",
+    "choices": [
+      "le Soudan",
+      "le Maroc",
+      "la Jordanie",
+      "l’Égypte"
+    ],
+    "answer": 3,
+    "explanation": "Les pyramides de Gizeh se trouvent en Égypte.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G042B",
+    "knowledge_id": "V2-GEO-042",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Repère géographique : Dans quel pays se trouvent les pyramides de Gizeh ?",
+    "choices": [
+      "le Maroc",
+      "la Jordanie",
+      "l’Égypte",
+      "le Soudan"
+    ],
+    "answer": 2,
+    "explanation": "Les pyramides de Gizeh se trouvent en Égypte.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G043A",
+    "knowledge_id": "V2-GEO-043",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Dans quel pays se trouve Pétra ?",
+    "choices": [
+      "la Syrie",
+      "l’Égypte",
+      "la Jordanie",
+      "le Liban"
+    ],
+    "answer": 2,
+    "explanation": "Pétra se trouve en Jordanie.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G043B",
+    "knowledge_id": "V2-GEO-043",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Repère géographique : Dans quel pays se trouve Pétra ?",
+    "choices": [
+      "l’Égypte",
+      "la Jordanie",
+      "le Liban",
+      "la Syrie"
+    ],
+    "answer": 1,
+    "explanation": "Pétra se trouve en Jordanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G044A",
+    "knowledge_id": "V2-GEO-044",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Dans quel pays se trouve Angkor Wat ?",
+    "choices": [
+      "le Viêt Nam",
+      "le Cambodge",
+      "la Thaïlande",
+      "le Laos"
+    ],
+    "answer": 1,
+    "explanation": "Angkor Wat se trouve au Cambodge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G044B",
+    "knowledge_id": "V2-GEO-044",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Repère géographique : Dans quel pays se trouve Angkor Wat ?",
+    "choices": [
+      "le Cambodge",
+      "la Thaïlande",
+      "le Laos",
+      "le Viêt Nam"
+    ],
+    "answer": 0,
+    "explanation": "Angkor Wat se trouve au Cambodge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G045A",
+    "knowledge_id": "V2-GEO-045",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Dans quel pays se trouve le Taj Mahal ?",
+    "choices": [
+      "l’Inde",
+      "le Pakistan",
+      "le Népal",
+      "le Bangladesh"
+    ],
+    "answer": 0,
+    "explanation": "Le Taj Mahal se trouve en Inde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G045B",
+    "knowledge_id": "V2-GEO-045",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Repère géographique : Dans quel pays se trouve le Taj Mahal ?",
+    "choices": [
+      "le Pakistan",
+      "le Népal",
+      "le Bangladesh",
+      "l’Inde"
+    ],
+    "answer": 3,
+    "explanation": "Le Taj Mahal se trouve en Inde.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G046A",
+    "knowledge_id": "V2-GEO-046",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Dans quel pays se trouve le Colisée ?",
+    "choices": [
+      "la Grèce",
+      "l’Espagne",
+      "la France",
+      "l’Italie"
+    ],
+    "answer": 3,
+    "explanation": "Le Colisée se trouve à Rome, en Italie.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G046B",
+    "knowledge_id": "V2-GEO-046",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Repère géographique : Dans quel pays se trouve le Colisée ?",
+    "choices": [
+      "l’Espagne",
+      "la France",
+      "l’Italie",
+      "la Grèce"
+    ],
+    "answer": 2,
+    "explanation": "Le Colisée se trouve à Rome, en Italie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G047A",
+    "knowledge_id": "V2-GEO-047",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Dans quel pays se trouve la Grande Muraille ?",
+    "choices": [
+      "le Japon",
+      "la Corée du Sud",
+      "la Chine",
+      "la Mongolie"
+    ],
+    "answer": 2,
+    "explanation": "La Grande Muraille se trouve en Chine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G047B",
+    "knowledge_id": "V2-GEO-047",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Repère géographique : Dans quel pays se trouve la Grande Muraille ?",
+    "choices": [
+      "la Corée du Sud",
+      "la Chine",
+      "la Mongolie",
+      "le Japon"
+    ],
+    "answer": 1,
+    "explanation": "La Grande Muraille se trouve en Chine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G048A",
+    "knowledge_id": "V2-GEO-048",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Dans quel pays se trouve le site de Stonehenge ?",
+    "choices": [
+      "la Belgique",
+      "le Royaume-Uni",
+      "l’Irlande",
+      "la France"
+    ],
+    "answer": 1,
+    "explanation": "Stonehenge se trouve en Angleterre, au Royaume-Uni.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G048B",
+    "knowledge_id": "V2-GEO-048",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Repère géographique : Dans quel pays se trouve le site de Stonehenge ?",
+    "choices": [
+      "le Royaume-Uni",
+      "l’Irlande",
+      "la France",
+      "la Belgique"
+    ],
+    "answer": 0,
+    "explanation": "Stonehenge se trouve en Angleterre, au Royaume-Uni.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G049A",
+    "knowledge_id": "V2-GEO-049",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Dans quel pays se trouve Chichén Itzá ?",
+    "choices": [
+      "le Mexique",
+      "le Guatemala",
+      "le Pérou",
+      "le Belize"
+    ],
+    "answer": 0,
+    "explanation": "Chichén Itzá se trouve au Mexique.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G049B",
+    "knowledge_id": "V2-GEO-049",
+    "module": 4,
+    "domain": "Géographie humaine",
+    "subdomain": "Patrimoine",
+    "prompt": "Repère géographique : Dans quel pays se trouve Chichén Itzá ?",
+    "choices": [
+      "le Guatemala",
+      "le Pérou",
+      "le Belize",
+      "le Mexique"
+    ],
+    "answer": 3,
+    "explanation": "Chichén Itzá se trouve au Mexique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G050A",
+    "knowledge_id": "V2-GEO-050",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Quel lac frontalier se trouve entre la RDC et le Rwanda ?",
+    "choices": [
+      "le lac Victoria",
+      "le lac Tchad",
+      "le lac Turkana",
+      "le lac Kivu"
+    ],
+    "answer": 3,
+    "explanation": "Le lac Kivu est partagé par la RDC et le Rwanda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G050B",
+    "knowledge_id": "V2-GEO-050",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel lac est partagé par la RDC et le Rwanda ?",
+    "choices": [
+      "le lac Tchad",
+      "le lac Turkana",
+      "le lac Kivu",
+      "le lac Victoria"
+    ],
+    "answer": 2,
+    "explanation": "Le lac Kivu est partagé par la RDC et le Rwanda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G051A",
+    "knowledge_id": "V2-GEO-051",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Quel lac est partagé notamment par la Tanzanie, la RDC, le Burundi et la Zambie ?",
+    "choices": [
+      "le lac Malawi",
+      "le lac Kivu",
+      "le lac Tanganyika",
+      "le lac Victoria"
+    ],
+    "answer": 2,
+    "explanation": "Le lac Tanganyika est partagé par quatre pays, dont la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G051B",
+    "knowledge_id": "V2-GEO-051",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel lac est partagé notamment par la Tanzanie, la RDC, le Burundi et la Zambie ?",
+    "choices": [
+      "le lac Kivu",
+      "le lac Tanganyika",
+      "le lac Victoria",
+      "le lac Malawi"
+    ],
+    "answer": 1,
+    "explanation": "Le lac Tanganyika est partagé par quatre pays, dont la RDC.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G052A",
+    "knowledge_id": "V2-GEO-052",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Quel fleuve forme une grande partie de la frontière entre la RDC et la République du Congo ?",
+    "choices": [
+      "le Zambèze",
+      "le fleuve Congo",
+      "le Nil",
+      "le Niger"
+    ],
+    "answer": 1,
+    "explanation": "Le fleuve Congo marque une partie de la frontière entre les deux Congo.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G052B",
+    "knowledge_id": "V2-GEO-052",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel fleuve forme une grande partie de la frontière entre la RDC et la République du Congo ?",
+    "choices": [
+      "le fleuve Congo",
+      "le Nil",
+      "le Niger",
+      "le Zambèze"
+    ],
+    "answer": 0,
+    "explanation": "Le fleuve Congo marque une partie de la frontière entre les deux Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G053A",
+    "knowledge_id": "V2-GEO-053",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Quel fleuve traverse plusieurs pays d’Afrique de l’Ouest avant de se jeter dans le golfe de Guinée ?",
+    "choices": [
+      "le Niger",
+      "le Sénégal",
+      "le Congo",
+      "le Limpopo"
+    ],
+    "answer": 0,
+    "explanation": "Le Niger est un grand fleuve d’Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G053B",
+    "knowledge_id": "V2-GEO-053",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel fleuve traverse plusieurs pays d’Afrique de l’Ouest avant de se jeter dans le golfe de Guinée ?",
+    "choices": [
+      "le Sénégal",
+      "le Congo",
+      "le Limpopo",
+      "le Niger"
+    ],
+    "answer": 3,
+    "explanation": "Le Niger est un grand fleuve d’Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G054A",
+    "knowledge_id": "V2-GEO-054",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Quel fleuve forme les chutes Victoria avec le Zimbabwe et la Zambie ?",
+    "choices": [
+      "le Limpopo",
+      "le Congo",
+      "le Nil",
+      "le Zambèze"
+    ],
+    "answer": 3,
+    "explanation": "Les chutes Victoria se trouvent sur le Zambèze.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G054B",
+    "knowledge_id": "V2-GEO-054",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel fleuve forme les chutes Victoria avec le Zimbabwe et la Zambie ?",
+    "choices": [
+      "le Congo",
+      "le Nil",
+      "le Zambèze",
+      "le Limpopo"
+    ],
+    "answer": 2,
+    "explanation": "Les chutes Victoria se trouvent sur le Zambèze.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G055A",
+    "knowledge_id": "V2-GEO-055",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Quel désert couvre une grande partie du Botswana et de la Namibie orientale ?",
+    "choices": [
+      "le Namib",
+      "le désert d’Arabie",
+      "le Kalahari",
+      "le Sahara"
+    ],
+    "answer": 2,
+    "explanation": "Le Kalahari s’étend notamment sur le Botswana et la Namibie.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G055B",
+    "knowledge_id": "V2-GEO-055",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel désert couvre une grande partie du Botswana et de la Namibie orientale ?",
+    "choices": [
+      "le désert d’Arabie",
+      "le Kalahari",
+      "le Sahara",
+      "le Namib"
+    ],
+    "answer": 1,
+    "explanation": "Le Kalahari s’étend notamment sur le Botswana et la Namibie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G056A",
+    "knowledge_id": "V2-GEO-056",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Quel massif se trouve au nord-ouest de l’Afrique, notamment au Maroc et en Algérie ?",
+    "choices": [
+      "le Tibesti",
+      "l’Atlas",
+      "le Rwenzori",
+      "le Drakensberg"
+    ],
+    "answer": 1,
+    "explanation": "L’Atlas s’étend notamment au Maroc et en Algérie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G056B",
+    "knowledge_id": "V2-GEO-056",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel massif se trouve au nord-ouest de l’Afrique, notamment au Maroc et en Algérie ?",
+    "choices": [
+      "l’Atlas",
+      "le Rwenzori",
+      "le Drakensberg",
+      "le Tibesti"
+    ],
+    "answer": 0,
+    "explanation": "L’Atlas s’étend notamment au Maroc et en Algérie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G057A",
+    "knowledge_id": "V2-GEO-057",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Dans quel massif montagneux de l’est de la RDC se trouve le pic Marguerite ?",
+    "choices": [
+      "le Rwenzori",
+      "l’Atlas",
+      "le Drakensberg",
+      "le Tibesti"
+    ],
+    "answer": 0,
+    "explanation": "Le pic Marguerite se situe dans le massif du Rwenzori.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G057B",
+    "knowledge_id": "V2-GEO-057",
+    "module": 3,
+    "domain": "Géographie physique",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel massif abrite le pic Marguerite, point culminant de la RDC ?",
+    "choices": [
+      "l’Atlas",
+      "le Drakensberg",
+      "le Tibesti",
+      "le Rwenzori"
+    ],
+    "answer": 3,
+    "explanation": "Le pic Marguerite se situe dans le massif du Rwenzori.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G058A",
+    "knowledge_id": "V2-GEO-058",
+    "module": 3,
+    "domain": "Géographie humaine",
+    "subdomain": "Afrique",
+    "prompt": "Quel pays africain est surnommé le « pays des mille collines » ?",
+    "choices": [
+      "le Burundi",
+      "l’Ouganda",
+      "le Kenya",
+      "le Rwanda"
+    ],
+    "answer": 3,
+    "explanation": "Le Rwanda est souvent surnommé le pays des mille collines.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G058B",
+    "knowledge_id": "V2-GEO-058",
+    "module": 3,
+    "domain": "Géographie humaine",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel pays africain est surnommé le « pays des mille collines » ?",
+    "choices": [
+      "l’Ouganda",
+      "le Kenya",
+      "le Rwanda",
+      "le Burundi"
+    ],
+    "answer": 2,
+    "explanation": "Le Rwanda est souvent surnommé le pays des mille collines.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G059A",
+    "knowledge_id": "V2-GEO-059",
+    "module": 3,
+    "domain": "Géographie humaine",
+    "subdomain": "Afrique",
+    "prompt": "Quel pays africain possède l’île de Zanzibar ?",
+    "choices": [
+      "le Mozambique",
+      "Madagascar",
+      "la Tanzanie",
+      "le Kenya"
+    ],
+    "answer": 2,
+    "explanation": "Zanzibar fait partie de la Tanzanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G059B",
+    "knowledge_id": "V2-GEO-059",
+    "module": 3,
+    "domain": "Géographie humaine",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel pays africain possède l’île de Zanzibar ?",
+    "choices": [
+      "Madagascar",
+      "la Tanzanie",
+      "le Kenya",
+      "le Mozambique"
+    ],
+    "answer": 1,
+    "explanation": "Zanzibar fait partie de la Tanzanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G060A",
+    "knowledge_id": "V2-GEO-060",
+    "module": 3,
+    "domain": "Géographie humaine",
+    "subdomain": "Afrique",
+    "prompt": "Quel pays africain possède la ville de Tombouctou ?",
+    "choices": [
+      "la Mauritanie",
+      "le Mali",
+      "le Niger",
+      "le Sénégal"
+    ],
+    "answer": 1,
+    "explanation": "Tombouctou se trouve au Mali.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "V2G060B",
+    "knowledge_id": "V2-GEO-060",
+    "module": 3,
+    "domain": "Géographie humaine",
+    "subdomain": "Afrique",
+    "prompt": "Repère géographique : Quel pays africain possède la ville de Tombouctou ?",
+    "choices": [
+      "le Mali",
+      "le Niger",
+      "le Sénégal",
+      "la Mauritanie"
+    ],
+    "answer": 0,
+    "explanation": "Tombouctou se trouve au Mali.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  }
+]
