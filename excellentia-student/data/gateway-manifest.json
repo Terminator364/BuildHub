@@ -59,5 +59,6 @@
   "primary_url": "https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@main/excellentia-student/index.html",
   "fallback_note": "Do not use jsDelivr as the HTML entry point; it may serve HTML as text.",
   "published_at": "2026-10-06T22:51:00+01:00",
-  "fallback_url": "https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/index.html"
+  "fallback_url": "https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/index.html",
+  "last_external_smoke_requested_at": "2026-10-06T22:56:00+01:00"
 }
