@@ -37,6 +37,9 @@ jobs:
           node --check excellentia-student/app.js
           grep -q "40000" excellentia-student/app.js
           grep -q "timer_seconds.*40" excellentia-student/data/gateway-manifest.json
+          grep -q "appendContinuityEvent" excellentia-student/app.js
+          grep -q '"mode": "STORE_AND_FORWARD"' excellentia-student/data/gateway-manifest.json
+          grep -q '"public_relay_status": "NOT_CONFIGURED"' excellentia-student/data/gateway-manifest.json
       - name: Corpus integrity
         run: |
           node <<'NODE'
@@ -68,7 +71,7 @@ jobs:
           test -f excellentia-student/index.html
           test -f excellentia-student/sw.js
           test -f excellentia-student/manifest.webmanifest
-          grep -q "excellentia-student-v303" excellentia-student/sw.js
+          grep -q "excellentia-student-v304" excellentia-student/sw.js
 
   browser-preview-smoke:
     if: github.event_name != 'pull_request'
