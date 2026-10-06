@@ -1,5 +1,5 @@
-const CACHE='excellentia-student-v303-20261006';
-const CORE=['./','./index.html','./style.css?v=303','./app.js?v=303','./manifest.webmanifest','./data/gateway-manifest.json','./data/modules.json','./data/lessons.json','./data/release.json'];
+const CACHE='excellentia-student-v304-20261006';
+const CORE=['./','./index.html','./style.css?v=304','./app.js?v=304','./manifest.webmanifest','./data/gateway-manifest.json','./data/modules.json','./data/lessons.json','./data/release.json'];
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));

@@ -1,6 +1,14 @@
 
 const qs=(s,r=document)=>r.querySelector(s), qsa=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='excellentia_gateway_student_v231', SESSION='excellentia_gateway_session_v231';
+const CONTINUITY='excellentia_continuity_v1', DEVICE='excellentia_device_id_v1';
+const LEGACY_STORES=['excellentia_gateway_student_v230','excellentia_gateway_student_v231'];
+function stableDeviceId(){
+  let v=localStorage.getItem(DEVICE);
+  if(!v){v='GW-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,10).toUpperCase();localStorage.setItem(DEVICE,v)}
+  return v;
+}
+const DEVICE_ID=stableDeviceId();
 const TABS={
   home:[['overview','Vue d’ensemble'],['mission','Mission'],['day','Journée']],
   learn:[['modules','Modules'],['lessons','Leçons'],['bank','Banque']],
@@ -10,10 +18,40 @@ const TABS={
   progress:[['overview','Vue d’ensemble'],['mastery','Maîtrise'],['history','Historique']]
 };
 const TITLES={home:'Accueil',learn:'Apprendre',train:'S’entraîner',review:'Réviser',exam:'Examens',progress:'Progression'};
-const S={questions:[],modules:[],lessons:{modules:{}},manifest:null,space:'home',tab:'overview',session:null,timer:null,ready:false};
+const S={questions:[],modules:[],lessons:{modules:{}},manifest:null,space:'home',tab:'overview',session:null,timer:null,ready:false,sync:{mode:'LOCAL_QUEUE',pending:0,last_at:0}};
 let P={progress:{},history:[],theme:'light',daily:null};
 try{P={...P,...JSON.parse(localStorage.getItem(STORE)||'{}')}}catch{}
+if(!Object.keys(P.progress||{}).length){
+  for(const k of LEGACY_STORES){
+    if(k===STORE)continue;
+    try{const x=JSON.parse(localStorage.getItem(k)||'null');if(x&&Object.keys(x.progress||{}).length){P={...P,...x};break}}catch{}
+  }
+}
+let C={schema:1,device_id:DEVICE_ID,events:[],acked:[],last_sync_at:0,last_remote_rev:null};
+try{C={...C,...JSON.parse(localStorage.getItem(CONTINUITY)||'{}'),device_id:DEVICE_ID}}catch{}
 function save(){localStorage.setItem(STORE,JSON.stringify(P))}
+function saveContinuity(){
+  if(C.events.length>2500)C.events=C.events.slice(-2500);
+  localStorage.setItem(CONTINUITY,JSON.stringify(C));
+  S.sync.pending=C.events.filter(e=>!e.acked).length;
+}
+function eventId(run,pos,qid){return DEVICE_ID+'|'+String(run||'run')+'|'+String(pos??0)+'|'+String(qid||'event')}
+function appendContinuityEvent(ev){
+  const id=String(ev.id||eventId(ev.run_id,ev.run_position,ev.question_id));
+  if(C.events.some(x=>x.id===id))return;
+  C.events.push({...ev,id,device_id:DEVICE_ID,schema:1,created_at:ev.created_at||new Date().toISOString(),acked:false});
+  saveContinuity();networkUI();
+}
+function mergeRemoteEvents(items){
+  let added=0;
+  for(const ev of Array.isArray(items)?items:[]){
+    if(!ev?.id||C.events.some(x=>x.id===ev.id))continue;
+    C.events.push({...ev,acked:true});added++;
+  }
+  if(added)saveContinuity();
+  return added;
+}
+saveContinuity();
 function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function num(v){return Number(v||0).toLocaleString('fr-FR')}
 function pct(v){return Math.round(Number(v||0))+'%'}
@@ -50,11 +88,12 @@ function lessonRows(){
 function questionsForModule(id){return S.questions.filter(q=>Number(q.module)===Number(id))}
 function moduleById(id){return S.modules.find(m=>Number(m.id)===Number(id))}
 function networkUI(){
-  const on=navigator.onLine;
+  const on=navigator.onLine,pending=C.events.filter(e=>!e.acked).length;
+  S.sync.pending=pending;
   qs('#netDot')?.classList.toggle('off',!on);
-  if(qs('#netLabel'))qs('#netLabel').textContent=on?'Internet + cache local':'Hors ligne · cache local';
-  qs('#syncPill')?.classList.toggle('off',!on);
-  if(qs('#syncLabel'))qs('#syncLabel').textContent=on?'Connecté':'Hors ligne'
+  if(qs('#netLabel'))qs('#netLabel').textContent=on?'Internet · continuité locale':'Hors ligne · continuité locale';
+  qs('#syncPill')?.classList.toggle('off',pending>0||!on);
+  if(qs('#syncLabel'))qs('#syncLabel').textContent=pending?('Local · '+pending+' à fusionner'):(on?'Local à jour':'Hors ligne');
 }
 addEventListener('online',networkUI);addEventListener('offline',networkUI);
 
@@ -77,6 +116,7 @@ async function load(){
   document.body.setAttribute('data-ready',String(S.questions.length));
   if(S.questions.length!==S.manifest.expected_questions)toast('Corpus partiel',S.questions.length+' / '+S.manifest.expected_questions+' questions');
   restoreSession();
+  S.sync.pending=C.events.filter(e=>!e.acked).length;
   render();
 }
 function setActiveNav(){
@@ -228,14 +268,15 @@ function renderProgress(){
   if(S.tab==='history'){
     host.innerHTML='<section class="section"><div class="section-head"><div><h2>Historique récent</h2><p>Sessions terminées sur ce téléphone.</p></div></div><div class="timeline">'+P.history.slice().reverse().slice(0,50).map(x=>'<div class="timeline-item"><b>'+pct(x.score)+'</b><div><strong>'+esc(x.label||x.mode)+'</strong><p>'+x.correct+' / '+x.total+' · '+date(x.at)+'</p></div><span class="pill">'+esc(x.mode)+'</span></div>').join('')+'</div></section>';return
   }
-  host.innerHTML='<section class="hero"><div><div class="eyebrow">PROGRESSION</div><h2>'+Math.round(a.accuracy)+'% de précision mesurée.</h2><p>La progression est locale à ce téléphone et reste disponible après fermeture du navigateur.</p></div></section>'+
+  host.innerHTML='<section class="hero"><div><div class="eyebrow">PROGRESSION · CONTINUITÉ</div><h2>'+Math.round(a.accuracy)+'% de précision mesurée.</h2><p>La progression reste disponible hors ligne sur cet appareil. Chaque réponse est aussi inscrite dans un journal de continuité fusionnable avec le PC/B‑EDGE dès qu’un transport de synchronisation est disponible.</p><div class="hero-actions"><span class="pill">'+S.sync.pending+' événement(s) en attente de fusion</span><span class="pill">Appareil '+esc(DEVICE_ID.slice(-8))+'</span></div></div></section>'+
   '<div class="metric-grid">'+metric(num(a.seen),'réponses')+metric(num(a.correct),'correctes')+metric(num(a.wrong),'incorrectes')+metric(num(a.mastered),'maîtrisées')+metric(num(a.weak),'faiblesses')+'</div>'+
   '<section class="section"><div class="module-grid">'+S.modules.map(moduleCard).join('')+'</div></section>';bindModuleCards()
 }
 function buildSession({mode='training',module=null,count=30,label='Session',pool=null,ids=null}){
   let qpool=ids?ids.map(id=>S.questions.find(q=>q.id===id)).filter(Boolean):(pool|| (module?questionsForModule(module):S.questions));
   const items=choose(qpool,count,mode!=='exam').map(q=>q.id);
-  return {mode,module,label,items,index:0,answers:[],remaining_ms:40000,deadline:Date.now()+40000,paused:false,started_at:Date.now()}
+  const run='GWR-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,8).toUpperCase();
+  return {mode,module,label,items,index:0,answers:[],remaining_ms:40000,deadline:Date.now()+40000,paused:false,started_at:Date.now(),continuity_run_id:run,origin_session_id:localStorage.getItem('exc_origin_session_id')||''}
 }
 function startSession(opts){S.session=buildSession(opts);localStorage.setItem(SESSION,JSON.stringify(S.session));render();startTimer()}
 function restoreSession(){
@@ -266,7 +307,16 @@ function togglePause(){
 function record(q,ok){const k=q.knowledge_id||q.id,p=stat(k);p.seen=(p.seen||0)+1;ok?p.correct=(p.correct||0)+1:p.wrong=(p.wrong||0)+1;p.last_at=Date.now();P.progress[k]=p;save()}
 function submitAnswer(choice,timeout=false){
   if(!S.session)return;clearInterval(S.timer);const q=currentQuestion();if(!q)return;
-  const ok=choice===q.answer;record(q,ok);S.session.answers.push({id:q.id,choice,correct:q.answer,ok,timeout,at:Date.now()});saveSession();
+  const answeredAt=Date.now(),ok=choice===q.answer,elapsed=Math.max(0,Math.min(40000,40000-Number(S.session.remaining_ms||0)));
+  record(q,ok);
+  S.session.answers.push({id:q.id,choice,correct:q.answer,ok,timeout,at:answeredAt,elapsed_ms:elapsed});
+  appendContinuityEvent({
+    event_type:'ANSWER',run_id:S.session.continuity_run_id,run_total:S.session.items.length,run_position:S.session.index+1,
+    origin_session_id:S.session.origin_session_id||'',question_id:q.id,knowledge_id:q.knowledge_id||q.id,
+    selected:choice==null?-1:Number(choice),correct:Number(q.answer),is_correct:ok,timed_out:Boolean(timeout),elapsed_ms:elapsed,
+    at:answeredAt,mode:S.session.mode,module:Number(S.session.module||q.module||0)
+  });
+  saveSession();
   if(S.session.mode==='exam'){return nextQuestion()}
   qsa('[data-answer]').forEach((b,i)=>{b.disabled=true;if(i===q.answer)b.classList.add('selected');if(i===q.answer)b.style.borderColor='var(--good)';if(i===choice&&!ok)b.style.borderColor='var(--bad)'});
   const fb=qs('#sessionFeedback');fb.innerHTML='<div class="lesson-note '+(ok?'':'warn')+'" style="margin-top:14px"><b>'+(timeout?'Temps écoulé':ok?'Correct ✅':'Incorrect')+'</b><p>'+esc(q.explanation||('Bonne réponse : '+q.choices[q.answer]))+'</p><button class="btn small" id="nextQuestion">Question suivante</button></div>';
@@ -280,7 +330,9 @@ function nextQuestion(){
 function finishSession(){
   if(!S.session)return;clearInterval(S.timer);
   const s=S.session,ans=s.answers||[],correct=ans.filter(x=>x.ok).length,total=s.items.length,score=total?Math.round(correct/total*100):0;
-  P.history.push({mode:s.mode,label:s.label,score,correct,total,at:Date.now()});P.history=P.history.slice(-100);save();
+  const finishedAt=Date.now();
+  P.history.push({mode:s.mode,label:s.label,score,correct,total,at:finishedAt,run_id:s.continuity_run_id});P.history=P.history.slice(-100);save();
+  appendContinuityEvent({event_type:'SESSION_FINISHED',run_id:s.continuity_run_id,run_total:total,run_position:total,origin_session_id:s.origin_session_id||'',question_id:'__SESSION__',selected:-1,correct:-1,is_correct:false,timed_out:false,elapsed_ms:0,at:finishedAt,mode:s.mode,module:Number(s.module||0),score});
   S.session=null;saveSession();S.space=s.mode==='exam'?'exam':'progress';S.tab=s.mode==='exam'?'history':'overview';render();
   openDrawer('SESSION TERMINÉE',score+' %','<div class="resultHero"><div class="score">'+score+'%</div><h2>'+correct+' / '+total+'</h2><p>'+(score>=85?'Très solide.':score>=70?'Bon niveau, continue la consolidation.':'Les erreurs doivent être retravaillées avant le prochain blanc.')+'</p><button class="btn good" id="resultClose">Continuer</button></div>');
   qs('#resultClose').onclick=closeDrawer
@@ -310,7 +362,7 @@ qs('#collapseRail').onclick=()=>document.body.classList.toggle('rail-collapsed')
 qs('#railScrollUp').onclick=()=>qs('#railScroll').scrollBy({top:-180,behavior:'smooth'});
 qs('#railScrollDown').onclick=()=>qs('#railScroll').scrollBy({top:180,behavior:'smooth'});
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('./sw.js?v=303',{updateViaCache:'none'}).then(async reg=>{
+  navigator.serviceWorker.register('./sw.js?v=304',{updateViaCache:'none'}).then(async reg=>{
     try{await reg.update()}catch{}
     if(reg.waiting)reg.waiting.postMessage({type:'SKIP_WAITING'});
   }).catch(()=>{});
