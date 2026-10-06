@@ -1,5 +1,5 @@
 const S={questions:[],modules:[],lessons:null,manifest:null,release:null,session:null,timer:null};
-const $=s=>document.querySelector(s), $=s=>[...document.querySelectorAll(s)];
+const $=s=>document.querySelector(s), all=s=>[...document.querySelectorAll(s)];
 const IS_PREVIEW=location.hostname==='html-preview.github.io';
 const RAW_BASE='https://raw.githubusercontent.com/Terminator364/BuildHub/main/excellentia-student/';
 const assetUrl=u=>IS_PREVIEW?RAW_BASE+u.replace(/^\.\//,''):u;
@@ -48,8 +48,8 @@ function renderDashboard(){
   const lessonRows=[];
   for(const [mid,arr] of Object.entries(S.lessons.modules||{})) for(const l of arr) lessonRows.push([mid,l]);
   $('#lessons').innerHTML=lessonRows.slice(0,40).map(([mid,l])=>'<details class="lesson"><summary>'+l.title+'</summary><p>'+l.summary+'</p><ul>'+(l.points||[]).slice(0,4).map(x=>'<li>'+x+'</li>').join('')+'</ul><button data-lesson-module="'+mid+'">Questions du module</button></details>').join('');
-  $$('[data-module]').forEach(b=>b.onclick=()=>start({mode:'training',module:Number(b.dataset.module),count:30}));
-  $$('[data-lesson-module]').forEach(b=>b.onclick=()=>start({mode:'training',module:Number(b.dataset.lessonModule),count:20}));
+  all('[data-module]').forEach(b=>b.onclick=()=>start({mode:'training',module:Number(b.dataset.module),count:30}));
+  all('[data-lesson-module]').forEach(b=>b.onclick=()=>start({mode:'training',module:Number(b.dataset.lessonModule),count:20}));
 }
 function start({mode='training',module=null,count=30}={}){
   let pool=module?S.questions.filter(q=>Number(q.module)===module):S.questions;
@@ -80,7 +80,7 @@ function renderQuestion(){
   const n=S.session.index+1,total=S.session.items.length;
   const paused=S.session.paused;
   $('#session').innerHTML='<div class="card"><div class="sessionTop"><div><b>'+(S.session.mode==='exam'?'Examen blanc':'Entraînement')+'</b><div class="muted">Question '+n+' / '+total+(q.origin_year?' · EXETAT '+q.origin_year:'')+'</div></div><div id="timer" class="timer">'+Math.ceil((S.session.remaining_ms||40000)/1000)+'s</div></div><div class="progress"><i style="width:'+Math.round((n-1)/total*100)+'%"></i></div><div class="question">'+q.prompt+'</div><div class="choices">'+q.choices.map((c,i)=>'<button class="choice" data-choice="'+i+'" '+(paused?'disabled':'')+'>'+String.fromCharCode(65+i)+'. '+c+'</button>').join('')+'</div><div id="feedback"></div><div class="sessionActions"><button id="pauseBtn">'+(paused?'Reprendre':'Pause')+'</button><button id="quitBtn">Quitter</button></div></div>';
-  $$('[data-choice]').forEach(b=>b.onclick=()=>answer(Number(b.dataset.choice),false));
+  all('[data-choice]').forEach(b=>b.onclick=()=>answer(Number(b.dataset.choice),false));
   $('#pauseBtn').onclick=()=>togglePause();$('#quitBtn').onclick=()=>home();
 }
 function togglePause(){
@@ -97,7 +97,7 @@ function answer(choice,timeout=false){
   S.session.answers.push({id:q.id,choice,correct:q.answer,ok,timeout,at:Date.now()});
   state.session=S.session;saveState(state);
   if(S.session.mode==='exam'){next();return}
-  $$('[data-choice]').forEach((b,i)=>{b.disabled=true;if(i===q.answer)b.classList.add('correct');if(i===choice&&!ok)b.classList.add('wrong')});
+  all('[data-choice]').forEach((b,i)=>{b.disabled=true;if(i===q.answer)b.classList.add('correct');if(i===choice&&!ok)b.classList.add('wrong')});
   const fb=$('#feedback');fb.innerHTML='<div class="feedback"><b>'+(timeout?'Temps écoulé':ok?'Correct ✅':'Incorrect')+'</b><p>'+(q.explanation||('Réponse : '+q.choices[q.answer]))+'</p><button id="nextBtn" class="primary">Question suivante</button></div>';
   $('#nextBtn').onclick=next;saveState(state);
 }
@@ -111,6 +111,6 @@ function finish(){
 }
 function home(){clearInterval(S.timer);$('#session').classList.add('hidden');$('#result').classList.add('hidden');$('#dashboard').classList.remove('hidden');renderDashboard()}
 document.addEventListener('click',e=>{const a=e.target.closest('[data-action]');if(!a)return;if(a.dataset.action==='start-mix')start({mode:'training',count:40});if(a.dataset.action==='start-exam')start({mode:'exam',count:100});if(a.dataset.action==='resume')restore()});
-$$('[data-nav]').forEach(b=>b.onclick=()=>home());
+all('[data-nav]').forEach(b=>b.onclick=()=>home());
 if('serviceWorker'in navigator&&!IS_PREVIEW)navigator.serviceWorker.register('./sw.js').catch(()=>{});
 loadAll().catch(err=>{$('#loadText').textContent='Erreur de chargement : '+err.message+' · Réessaie avec Internet une fois, puis le cache prendra le relais.';console.error(err)});
