@@ -55,9 +55,11 @@
   "timer_seconds": 40,
   "offline_first": true,
   "source_release": "Excellentia V2.3.0",
-  "public_gateway_strategy": "github-pages",
-  "primary_url": "https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@main/excellentia-student/index.html",
-  "fallback_note": "Do not use jsDelivr as the HTML entry point; it may serve HTML as text.",
+  "public_gateway_strategy": "html-preview-permanent-entry",
+  "primary_url": "https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia/index.html",
+  "fallback_note": "Permanent entry is the tested html-preview route; GitHub Pages is optional and not required.",
   "published_at": "2026-10-06T22:51:00+01:00",
-  "fallback_url": "https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/index.html"
+  "fallback_url": "https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/index.html",
+  "direct_student_url": "https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia-student/index.html",
+  "github_pages_status": "disabled"
 }
