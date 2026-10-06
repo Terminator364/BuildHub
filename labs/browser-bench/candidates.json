@@ -1,0 +1,71 @@
+{
+  "schema": "browser4g.candidates.v1",
+  "target": {
+    "os": "Windows 11",
+    "ram_gb": 4,
+    "cpu": "Intel Celeron N4020",
+    "disk": "HDD SATA"
+  },
+  "candidates": [
+    {
+      "name": "Microsoft Edge",
+      "engine": "Chromium",
+      "tier": "baseline",
+      "reason": "already installed; best Windows integration"
+    },
+    {
+      "name": "Mozilla Firefox",
+      "engine": "Gecko",
+      "tier": "test",
+      "reason": "independent engine; tab unloading; installed for local A/B"
+    },
+    {
+      "name": "Brave",
+      "engine": "Chromium",
+      "tier": "test",
+      "reason": "mature Chromium alternative; active upstream"
+    },
+    {
+      "name": "Helium",
+      "engine": "Chromium",
+      "tier": "test",
+      "reason": "minimal/optimized Chromium fork; active project"
+    },
+    {
+      "name": "Falkon",
+      "engine": "QtWebEngine",
+      "tier": "test",
+      "reason": "explicit lightweight browser positioning"
+    },
+    {
+      "name": "qutebrowser",
+      "engine": "QtWebEngine",
+      "tier": "technical",
+      "reason": "low-end Chromium mode; keyboard-centric UI"
+    },
+    {
+      "name": "Floorp",
+      "engine": "Gecko",
+      "tier": "secondary",
+      "reason": "active Firefox-derived browser"
+    },
+    {
+      "name": "Waterfox",
+      "engine": "Gecko",
+      "tier": "secondary",
+      "reason": "active Firefox-derived browser"
+    },
+    {
+      "name": "Min",
+      "engine": "Electron",
+      "tier": "deprioritized",
+      "reason": "Electron overhead conflicts with 4 GB target"
+    },
+    {
+      "name": "ungoogled-chromium",
+      "engine": "Chromium",
+      "tier": "secondary",
+      "reason": "lean Google integration but manual maintenance tradeoffs"
+    }
+  ]
+}
