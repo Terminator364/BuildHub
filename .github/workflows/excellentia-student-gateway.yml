@@ -69,25 +69,21 @@ jobs:
           test -f excellentia-student/manifest.webmanifest
           grep -q "excellentia-student-v230" excellentia-student/sw.js
 
-  cdn-smoke:
+  browser-preview-smoke:
     if: github.event_name != 'pull_request'
     needs: audit
     runs-on: ubuntu-latest
     steps:
-      - name: Verify public CDN gateway
+      - name: Verify emergency browser gateway
         shell: bash
         run: |
-          BASE="https://cdn.statically.io/gh/Terminator364/BuildHub@main/excellentia-student"
-          curl -fsSL --retry 5 --retry-delay 2 "$BASE/index.html" -o /tmp/index.html
-          curl -fsSL --retry 5 --retry-delay 2 "$BASE/app.js?v=230" -o /tmp/app.js
-          curl -fsSL --retry 5 --retry-delay 2 "$BASE/data/gateway-manifest.json" -o /tmp/gateway-manifest.json
-          grep -q "EXCELLENTIA STUDY HUB" /tmp/index.html
-          grep -q "const S=" /tmp/app.js
-          grep -q '"expected_questions": 4174' /tmp/gateway-manifest.json
-          curl -fsSI --retry 5 --retry-delay 2 "$BASE/index.html" -o /tmp/headers.txt
-          tr -d '\r' < /tmp/headers.txt | tee /tmp/headers-clean.txt
-          grep -Ei '^content-type: *text/html' /tmp/headers-clean.txt
-          echo "GATEWAY_URL=$BASE/index.html"
+          TARGET="https://github.com/Terminator364/BuildHub/blob/main/excellentia-student/index.html"
+          URL="https://html-preview.github.io/?url=$TARGET"
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=30000 --dump-dom "$URL" > /tmp/dom.html
+          grep -q "EXCELLENTIA STUDY HUB" /tmp/dom.html
+          grep -q "Culture générale" /tmp/dom.html
+          echo "GATEWAY_URL=$URL"
 
   deploy-pages:
     if: github.event_name != 'pull_request' && false
