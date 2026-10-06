@@ -1,10 +1,6 @@
-name: Excellentia Student Gateway
+name: Excellentia Student Pages
 
 on:
-  pull_request:
-    paths:
-      - 'excellentia-student/**'
-      - '.github/workflows/excellentia-student-pages.yml'
   push:
     branches: [main]
     paths:
@@ -19,36 +15,31 @@ permissions:
 
 concurrency:
   group: excellentia-student-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  audit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22.14.0
-      - name: Gateway audit
-        run: |
-          node --check excellentia-student/app.js
-          node excellentia-student/audit.mjs
-          node excellentia-student/gateway-audit.mjs
-
   deploy:
-    if: github.event_name != 'pull_request'
-    needs: audit
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - name: Verify student gateway
+        shell: bash
+        run: |
+          test -f excellentia-student/index.html
+          test -f excellentia-student/app.js
+          test -f excellentia-student/sw.js
+          test -f excellentia-student/data/gateway-manifest.json
+          node --check excellentia-student/app.js
+          node -e "const m=require('./excellentia-student/data/gateway-manifest.json'); if(m.expected_questions!==4174||m.timer_seconds!==40) process.exit(2)"
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
-      - name: Upload Student Gateway
+      - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
           path: excellentia-student

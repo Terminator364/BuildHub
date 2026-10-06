@@ -1,0 +1,29 @@
+name: Excellentia Student Gateway Audit
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-pages.yml'
+      - '.github/workflows/excellentia-student-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.14.0
+      - name: Syntax
+        run: node --check excellentia-student/app.js
+      - name: Corpus and gateway audit
+        run: |
+          node excellentia-student/audit.mjs
+          node excellentia-student/gateway-audit.mjs

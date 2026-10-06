@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "product": "excellentia-student-gateway",
+  "version": "2.3.0",
+  "build": "2026.10.06-v2.3.0-gateway-continuity-304",
+  "commit": "69157876acc135b795effa863e23a9bd74f2d26e",
+  "url": "https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia-student/index.html",
+  "questions": 4174,
+  "knowledge_units": 2667,
+  "timer_seconds": 40,
+  "published_at": "2026-10-06T22:36:00+01:00",
+  "probe_sequence": 2,
+  "entry_transport": "html-preview",
+  "jsdelivr_entry_disabled": true
+}

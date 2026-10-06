@@ -1,7 +1,9 @@
+# smoke-revision-aa0
 name: Excellentia Student Gateway
 
 on:
   pull_request:
+    branches: [main]
     paths:
       - 'excellentia-student/**'
       - '.github/workflows/excellentia-student-gateway.yml'
@@ -10,9 +12,16 @@ on:
     paths:
       - 'excellentia-student/**'
       - '.github/workflows/excellentia-student-gateway.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: excellentia-student-pages
+  cancel-in-progress: false
 
 jobs:
   audit:
@@ -22,8 +31,82 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.14.0
+          node-version: 22
       - name: Syntax
-        run: node --check excellentia-student/app.js && node --check excellentia-student/gateway-audit.mjs
-      - name: Corpus parity
-        run: node excellentia-student/gateway-audit.mjs
+        run: |
+          node --check excellentia-student/app.js
+          grep -q "40000" excellentia-student/app.js
+          grep -q "timer_seconds.*40" excellentia-student/data/gateway-manifest.json
+          grep -q "appendContinuityEvent" excellentia-student/app.js
+          grep -q '"mode": "STORE_AND_FORWARD"' excellentia-student/data/gateway-manifest.json
+          grep -q '"public_relay_status": "NOT_CONFIGURED"' excellentia-student/data/gateway-manifest.json
+      - name: Corpus integrity
+        run: |
+          node <<'NODE'
+          const fs=require('fs'),path=require('path');
+          const root='excellentia-student/data';
+          const m=JSON.parse(fs.readFileSync(path.join(root,'gateway-manifest.json'),'utf8'));
+          let all=[],bad=[];
+          for(const f of m.question_files){
+            const p=path.join(root,f);
+            if(!fs.existsSync(p)){bad.push('missing:'+f);continue}
+            const a=JSON.parse(fs.readFileSync(p,'utf8'));
+            if(!Array.isArray(a)){bad.push('not_array:'+f);continue}
+            all.push(...a);
+          }
+          const ids=new Set(),kids=new Set(),dup=[];
+          for(const q of all){
+            if(!q||!q.id||!Array.isArray(q.choices)||q.choices.length<4||!Number.isInteger(q.answer)||q.answer<0||q.answer>=q.choices.length) bad.push('invalid:'+String(q&&q.id));
+            if(ids.has(q.id))dup.push(q.id); else ids.add(q.id);
+            if(q.knowledge_id)kids.add(q.knowledge_id);
+          }
+          const out={questions:all.length,knowledge_units:kids.size,ids:ids.size,duplicates:dup.length,bad:bad.length,files:m.question_files.length};
+          console.log(JSON.stringify(out,null,2));
+          if(all.length!==m.expected_questions) throw new Error('QUESTION_COUNT '+all.length+' != '+m.expected_questions);
+          if(kids.size!==m.expected_knowledge_units) throw new Error('KNOWLEDGE_COUNT '+kids.size+' != '+m.expected_knowledge_units);
+          if(dup.length||bad.length) throw new Error('CORPUS_INTEGRITY');
+          NODE
+      - name: Offline shell integrity
+        run: |
+          test -f excellentia-student/index.html
+          test -f excellentia-student/sw.js
+          test -f excellentia-student/manifest.webmanifest
+          grep -q "excellentia-student-v304" excellentia-student/sw.js
+
+  browser-preview-smoke:
+    if: github.event_name != 'pull_request'
+    needs: audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify emergency browser gateway
+        shell: bash
+        run: |
+          TARGET="https://github.com/Terminator364/BuildHub/blob/main/excellentia-student/index.html"
+          URL="https://html-preview.github.io/?url=$TARGET"
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=30000 --dump-dom "$URL" > /tmp/dom.html
+          grep -q "EXCELLENTIA STUDY HUB" /tmp/dom.html
+          grep -q "Culture générale" /tmp/dom.html
+          grep -q 'data-ready="4174"' /tmp/dom.html
+          echo "GATEWAY_URL=$URL"
+
+  deploy-pages:
+    if: github.event_name != 'pull_request'
+    needs: audit
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Upload Excellentia Student Gateway
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: excellentia-student
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

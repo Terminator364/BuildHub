@@ -1,0 +1,44 @@
+name: Excellentia Student Package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-package.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify gateway
+        shell: bash
+        run: |
+          test -f excellentia-student/index.html
+          test -f excellentia-student/app.js
+          test -f excellentia-student/data/gateway-manifest.json
+          node --check excellentia-student/app.js
+          node -e "const m=require('./excellentia-student/data/gateway-manifest.json'); if(m.expected_questions!==4174||m.timer_seconds!==40) process.exit(2)"
+      - name: Build ZIP
+        shell: bash
+        run: |
+          cd excellentia-student
+          zip -q -r "$GITHUB_WORKSPACE/Excellentia-Student-Gateway-V2.3.0.zip" .
+          cd "$GITHUB_WORKSPACE"
+          sha256sum Excellentia-Student-Gateway-V2.3.0.zip | tee Excellentia-Student-Gateway-V2.3.0.sha256
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          TAG="excellentia-student-v2.3.0"
+          if gh release view "$TAG" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$TAG" Excellentia-Student-Gateway-V2.3.0.zip Excellentia-Student-Gateway-V2.3.0.sha256 -R "$GITHUB_REPOSITORY" --clobber
+          else
+            gh release create "$TAG" Excellentia-Student-Gateway-V2.3.0.zip Excellentia-Student-Gateway-V2.3.0.sha256 -R "$GITHUB_REPOSITORY" --title "Excellentia Student Gateway V2.3.0" --notes "Final student PWA package: 4,174 questions, 40 seconds/question, local progress and offline-first shell."
+          fi

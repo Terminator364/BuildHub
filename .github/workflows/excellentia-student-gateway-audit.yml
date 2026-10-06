@@ -2,11 +2,16 @@ name: Excellentia Student Gateway Audit
 
 on:
   pull_request:
-    branches: [main]
     paths:
       - 'excellentia-student/**'
       - '.github/workflows/excellentia-student-gateway-audit.yml'
-  workflow_dispatch:
+  push:
+    branches:
+      - feat/excellentia-student-gateway
+      - feat/excellentia-continuity-v304
+    paths:
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-gateway-audit.yml'
 
 permissions:
   contents: read
@@ -24,6 +29,46 @@ jobs:
         run: |
           node --check excellentia-student/app.js
           node --check excellentia-student/sw.js
-          node --check excellentia-student/audit.mjs
-      - name: Corpus and gateway audit
-        run: node excellentia-student/audit.mjs
+      - name: Gateway corpus audit
+        run: |
+          node <<'NODE'
+          const fs=require('fs'),path=require('path');
+          const root='excellentia-student';
+          const m=JSON.parse(fs.readFileSync(path.join(root,'data/gateway-manifest.json'),'utf8'));
+          const all=[];
+          for(const f of m.question_files){
+            const p=path.join(root,'data',f);
+            if(!fs.existsSync(p)) throw new Error('Missing '+f);
+            const a=JSON.parse(fs.readFileSync(p,'utf8'));
+            if(!Array.isArray(a)) throw new Error('Not array '+f);
+            all.push(...a);
+          }
+          const ids=new Set(),kids=new Set(),dups=[];
+          for(const q of all){
+            if(!q?.id||!q?.knowledge_id||!Array.isArray(q.choices)||q.choices.length<4||!Number.isInteger(q.answer)||q.answer<0||q.answer>=q.choices.length){
+              throw new Error('Invalid question '+JSON.stringify(q).slice(0,300));
+            }
+            if(ids.has(q.id)) dups.push(q.id); else ids.add(q.id);
+            kids.add(q.knowledge_id);
+          }
+          if(dups.length) throw new Error('Duplicate ids: '+dups.slice(0,20).join(','));
+          if(all.length!==m.expected_questions) throw new Error('Question count '+all.length+' != '+m.expected_questions);
+          if(kids.size!==m.expected_knowledge_units) throw new Error('Knowledge count '+kids.size+' != '+m.expected_knowledge_units);
+          if(m.timer_seconds!==40) throw new Error('Timer policy mismatch');
+          console.log(JSON.stringify({ok:true,questions:all.length,knowledge_units:kids.size,files:m.question_files.length,timer_seconds:m.timer_seconds},null,2));
+          NODE
+      - name: PWA contract
+        run: |
+          grep -q '"timer_seconds": 40' excellentia-student/data/gateway-manifest.json
+          grep -q "remaining_ms:40000" excellentia-student/app.js
+          grep -q "mode==='exam'" excellentia-student/app.js
+          grep -q "localStorage" excellentia-student/app.js
+          grep -q "serviceWorker" excellentia-student/app.js
+          grep -q "appendContinuityEvent" excellentia-student/app.js
+          grep -q "excellentia_continuity_v1" excellentia-student/app.js
+          grep -q "IDEMPOTENT_EVENT_LEDGER" excellentia-student/data/gateway-manifest.json
+          grep -q '"public_relay_status": "NOT_CONFIGURED"' excellentia-student/data/gateway-manifest.json
+          grep -q "v=304" excellentia-student/index.html
+          grep -q "excellentia-student-v304" excellentia-student/sw.js
+          test -f excellentia-student/manifest.webmanifest
+          test -f excellentia-student/sw.js
