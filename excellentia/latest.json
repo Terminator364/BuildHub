@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "product": "excellentia-student-gateway",
+  "version": "2.3.0",
+  "build": "2026.10.06-v2.3.0-gateway",
+  "commit": "ba5b37e028edc398fe1ab4d9a1a6a01abcb80256",
+  "url": "https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@ba5b37e028edc398fe1ab4d9a1a6a01abcb80256/excellentia-student/index.html",
+  "questions": 4174,
+  "knowledge_units": 2667,
+  "timer_seconds": 40,
+  "published_at": "2026-10-06T20:09:00+01:00"
+}
