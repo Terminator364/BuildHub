@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "V2S001A",
+    "knowledge_id": "V2-SCI-001",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Système solaire",
+    "prompt": "Combien de planètes compte le Système solaire ?",
+    "choices": [
+      "8",
+      "7",
+      "9",
+      "10"
+    ],
+    "answer": 0,
+    "explanation": "Le Système solaire compte huit planètes.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S001B",
+    "knowledge_id": "V2-SCI-001",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Système solaire",
+    "prompt": "Notion scientifique : Combien de planètes compte le Système solaire ?",
+    "choices": [
+      "7",
+      "9",
+      "10",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "Le Système solaire compte huit planètes.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S002A",
+    "knowledge_id": "V2-SCI-002",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Dans le Système solaire, quelle planète orbite le plus près du Soleil ?",
+    "choices": [
+      "Vénus",
+      "Terre",
+      "Mars",
+      "Mercure"
+    ],
+    "answer": 3,
+    "explanation": "Mercure est la planète la plus proche du Soleil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S002B",
+    "knowledge_id": "V2-SCI-002",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Notion scientifique : Quelle planète est la plus proche du Soleil ?",
+    "choices": [
+      "Terre",
+      "Mars",
+      "Mercure",
+      "Vénus"
+    ],
+    "answer": 2,
+    "explanation": "Mercure est la planète la plus proche du Soleil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S003A",
+    "knowledge_id": "V2-SCI-003",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Quelle planète est la troisième à partir du Soleil ?",
+    "choices": [
+      "Vénus",
+      "Jupiter",
+      "la Terre",
+      "Mars"
+    ],
+    "answer": 2,
+    "explanation": "La Terre est la troisième planète à partir du Soleil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S003B",
+    "knowledge_id": "V2-SCI-003",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Notion scientifique : Quelle planète est la troisième à partir du Soleil ?",
+    "choices": [
+      "Jupiter",
+      "la Terre",
+      "Mars",
+      "Vénus"
+    ],
+    "answer": 1,
+    "explanation": "La Terre est la troisième planète à partir du Soleil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S004A",
+    "knowledge_id": "V2-SCI-004",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Quelle planète est la plus grande du Système solaire ?",
+    "choices": [
+      "Terre",
+      "Jupiter",
+      "Saturne",
+      "Neptune"
+    ],
+    "answer": 1,
+    "explanation": "Jupiter est la plus grande planète du Système solaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S004B",
+    "knowledge_id": "V2-SCI-004",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Notion scientifique : Quelle planète est la plus grande du Système solaire ?",
+    "choices": [
+      "Jupiter",
+      "Saturne",
+      "Neptune",
+      "Terre"
+    ],
+    "answer": 0,
+    "explanation": "Jupiter est la plus grande planète du Système solaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S005A",
+    "knowledge_id": "V2-SCI-005",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Quelle planète est la plus chaude en moyenne ?",
+    "choices": [
+      "Vénus",
+      "Mercure",
+      "Mars",
+      "Jupiter"
+    ],
+    "answer": 0,
+    "explanation": "Vénus est la planète la plus chaude en moyenne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S005B",
+    "knowledge_id": "V2-SCI-005",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Notion scientifique : Quelle planète est la plus chaude en moyenne ?",
+    "choices": [
+      "Mercure",
+      "Mars",
+      "Jupiter",
+      "Vénus"
+    ],
+    "answer": 3,
+    "explanation": "Vénus est la planète la plus chaude en moyenne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S006A",
+    "knowledge_id": "V2-SCI-006",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Quelle planète est célèbre pour son vaste système d’anneaux ?",
+    "choices": [
+      "Mars",
+      "Mercure",
+      "Vénus",
+      "Saturne"
+    ],
+    "answer": 3,
+    "explanation": "Saturne est célèbre pour ses anneaux.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S006B",
+    "knowledge_id": "V2-SCI-006",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Planètes",
+    "prompt": "Notion scientifique : Quelle planète est célèbre pour son vaste système d’anneaux ?",
+    "choices": [
+      "Mercure",
+      "Vénus",
+      "Saturne",
+      "Mars"
+    ],
+    "answer": 2,
+    "explanation": "Saturne est célèbre pour ses anneaux.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S007A",
+    "knowledge_id": "V2-SCI-007",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Étoiles",
+    "prompt": "Quelle étoile se trouve au centre du Système solaire ?",
+    "choices": [
+      "Proxima du Centaure",
+      "Polaris",
+      "le Soleil",
+      "Sirius"
+    ],
+    "answer": 2,
+    "explanation": "Le Soleil est l’étoile du Système solaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S007B",
+    "knowledge_id": "V2-SCI-007",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Étoiles",
+    "prompt": "Notion scientifique : Quelle étoile se trouve au centre du Système solaire ?",
+    "choices": [
+      "Polaris",
+      "le Soleil",
+      "Sirius",
+      "Proxima du Centaure"
+    ],
+    "answer": 1,
+    "explanation": "Le Soleil est l’étoile du Système solaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S008A",
+    "knowledge_id": "V2-SCI-008",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Galaxies",
+    "prompt": "Dans quelle galaxie se trouve le Système solaire ?",
+    "choices": [
+      "la galaxie du Sombrero",
+      "la Voie lactée",
+      "Andromède",
+      "le Grand Nuage de Magellan"
+    ],
+    "answer": 1,
+    "explanation": "Le Système solaire se trouve dans la Voie lactée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S008B",
+    "knowledge_id": "V2-SCI-008",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Galaxies",
+    "prompt": "Notion scientifique : Dans quelle galaxie se trouve le Système solaire ?",
+    "choices": [
+      "la Voie lactée",
+      "Andromède",
+      "le Grand Nuage de Magellan",
+      "la galaxie du Sombrero"
+    ],
+    "answer": 0,
+    "explanation": "Le Système solaire se trouve dans la Voie lactée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S009A",
+    "knowledge_id": "V2-SCI-009",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Étoiles",
+    "prompt": "Quelle est l’étoile la plus proche du Soleil ?",
+    "choices": [
+      "Proxima du Centaure",
+      "Sirius",
+      "Bételgeuse",
+      "Véga"
+    ],
+    "answer": 0,
+    "explanation": "Proxima du Centaure est l’étoile connue la plus proche du Soleil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S009B",
+    "knowledge_id": "V2-SCI-009",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Étoiles",
+    "prompt": "Notion scientifique : Quelle est l’étoile la plus proche du Soleil ?",
+    "choices": [
+      "Sirius",
+      "Bételgeuse",
+      "Véga",
+      "Proxima du Centaure"
+    ],
+    "answer": 3,
+    "explanation": "Proxima du Centaure est l’étoile connue la plus proche du Soleil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S010A",
+    "knowledge_id": "V2-SCI-010",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Terre",
+    "prompt": "Environ combien de temps la Terre met-elle pour tourner sur elle-même ?",
+    "choices": [
+      "12 heures",
+      "48 heures",
+      "7 jours",
+      "24 heures"
+    ],
+    "answer": 3,
+    "explanation": "La rotation de la Terre dure environ 24 heures.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S010B",
+    "knowledge_id": "V2-SCI-010",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Terre",
+    "prompt": "Notion scientifique : Environ combien de temps la Terre met-elle pour tourner sur elle-même ?",
+    "choices": [
+      "48 heures",
+      "7 jours",
+      "24 heures",
+      "12 heures"
+    ],
+    "answer": 2,
+    "explanation": "La rotation de la Terre dure environ 24 heures.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S011A",
+    "knowledge_id": "V2-SCI-011",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Terre",
+    "prompt": "Environ combien de temps la Terre met-elle pour faire le tour du Soleil ?",
+    "choices": [
+      "180 jours",
+      "730 jours",
+      "365 jours",
+      "30 jours"
+    ],
+    "answer": 2,
+    "explanation": "La révolution de la Terre dure environ 365 jours.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S011B",
+    "knowledge_id": "V2-SCI-011",
+    "module": 5,
+    "domain": "Astronomie",
+    "subdomain": "Terre",
+    "prompt": "Notion scientifique : Environ combien de temps la Terre met-elle pour faire le tour du Soleil ?",
+    "choices": [
+      "730 jours",
+      "365 jours",
+      "30 jours",
+      "180 jours"
+    ],
+    "answer": 1,
+    "explanation": "La révolution de la Terre dure environ 365 jours.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S012A",
+    "knowledge_id": "V2-SCI-012",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Cellule",
+    "prompt": "Quel organite est souvent qualifié de centrale énergétique de la cellule ?",
+    "choices": [
+      "le centrosome",
+      "la mitochondrie",
+      "le ribosome",
+      "le lysosome"
+    ],
+    "answer": 1,
+    "explanation": "La mitochondrie produit une grande partie de l’ATP cellulaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S012B",
+    "knowledge_id": "V2-SCI-012",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Cellule",
+    "prompt": "Notion scientifique : Quel organite est souvent qualifié de centrale énergétique de la cellule ?",
+    "choices": [
+      "la mitochondrie",
+      "le ribosome",
+      "le lysosome",
+      "le centrosome"
+    ],
+    "answer": 0,
+    "explanation": "La mitochondrie produit une grande partie de l’ATP cellulaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S013A",
+    "knowledge_id": "V2-SCI-013",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Cellule",
+    "prompt": "Quel organite contient l’essentiel de l’ADN d’une cellule eucaryote ?",
+    "choices": [
+      "le noyau",
+      "la vacuole",
+      "le ribosome",
+      "l’appareil de Golgi"
+    ],
+    "answer": 0,
+    "explanation": "Le noyau contient l’essentiel de l’ADN nucléaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S013B",
+    "knowledge_id": "V2-SCI-013",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Cellule",
+    "prompt": "Notion scientifique : Quel organite contient l’essentiel de l’ADN d’une cellule eucaryote ?",
+    "choices": [
+      "la vacuole",
+      "le ribosome",
+      "l’appareil de Golgi",
+      "le noyau"
+    ],
+    "answer": 3,
+    "explanation": "Le noyau contient l’essentiel de l’ADN nucléaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S014A",
+    "knowledge_id": "V2-SCI-014",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Cellule",
+    "prompt": "Quel organite assure la synthèse des protéines ?",
+    "choices": [
+      "le lysosome",
+      "la mitochondrie",
+      "le centriole",
+      "le ribosome"
+    ],
+    "answer": 3,
+    "explanation": "Les ribosomes assurent la synthèse des protéines.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S014B",
+    "knowledge_id": "V2-SCI-014",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Cellule",
+    "prompt": "Notion scientifique : Quel organite assure la synthèse des protéines ?",
+    "choices": [
+      "la mitochondrie",
+      "le centriole",
+      "le ribosome",
+      "le lysosome"
+    ],
+    "answer": 2,
+    "explanation": "Les ribosomes assurent la synthèse des protéines.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S015A",
+    "knowledge_id": "V2-SCI-015",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Génétique",
+    "prompt": "Combien de chromosomes possède normalement une cellule somatique humaine ?",
+    "choices": [
+      "44",
+      "48",
+      "46",
+      "23"
+    ],
+    "answer": 2,
+    "explanation": "Une cellule somatique humaine normale possède 46 chromosomes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S015B",
+    "knowledge_id": "V2-SCI-015",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Génétique",
+    "prompt": "Notion scientifique : Combien de chromosomes possède normalement une cellule somatique humaine ?",
+    "choices": [
+      "48",
+      "46",
+      "23",
+      "44"
+    ],
+    "answer": 1,
+    "explanation": "Une cellule somatique humaine normale possède 46 chromosomes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S016A",
+    "knowledge_id": "V2-SCI-016",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Génétique",
+    "prompt": "Combien de chromosomes possède normalement un gamète humain ?",
+    "choices": [
+      "44",
+      "23",
+      "46",
+      "22"
+    ],
+    "answer": 1,
+    "explanation": "Un gamète humain normal possède 23 chromosomes.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S016B",
+    "knowledge_id": "V2-SCI-016",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Génétique",
+    "prompt": "Notion scientifique : Combien de chromosomes possède normalement un gamète humain ?",
+    "choices": [
+      "23",
+      "46",
+      "22",
+      "44"
+    ],
+    "answer": 0,
+    "explanation": "Un gamète humain normal possède 23 chromosomes.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S017A",
+    "knowledge_id": "V2-SCI-017",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Génétique",
+    "prompt": "Quelle base azotée de l’ARN remplace la thymine présente dans l’ADN ?",
+    "choices": [
+      "l’uracile",
+      "la guanine",
+      "la cytosine",
+      "l’adénine"
+    ],
+    "answer": 0,
+    "explanation": "Dans l’ARN, l’uracile remplace la thymine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S017B",
+    "knowledge_id": "V2-SCI-017",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Génétique",
+    "prompt": "Notion scientifique : Quelle base azotée de l’ARN remplace la thymine présente dans l’ADN ?",
+    "choices": [
+      "la guanine",
+      "la cytosine",
+      "l’adénine",
+      "l’uracile"
+    ],
+    "answer": 3,
+    "explanation": "Dans l’ARN, l’uracile remplace la thymine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S018A",
+    "knowledge_id": "V2-SCI-018",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Sang",
+    "prompt": "Quel pigment des globules rouges transporte principalement l’oxygène ?",
+    "choices": [
+      "la mélanine",
+      "la kératine",
+      "l’insuline",
+      "l’hémoglobine"
+    ],
+    "answer": 3,
+    "explanation": "L’hémoglobine transporte principalement l’oxygène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S018B",
+    "knowledge_id": "V2-SCI-018",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Sang",
+    "prompt": "Notion scientifique : Quel pigment des globules rouges transporte principalement l’oxygène ?",
+    "choices": [
+      "la kératine",
+      "l’insuline",
+      "l’hémoglobine",
+      "la mélanine"
+    ],
+    "answer": 2,
+    "explanation": "L’hémoglobine transporte principalement l’oxygène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S019A",
+    "knowledge_id": "V2-SCI-019",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Corps humain",
+    "prompt": "Combien de cavités principales possède le cœur humain ?",
+    "choices": [
+      "3",
+      "5",
+      "4",
+      "2"
+    ],
+    "answer": 2,
+    "explanation": "Le cœur humain possède quatre cavités.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S019B",
+    "knowledge_id": "V2-SCI-019",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Corps humain",
+    "prompt": "Notion scientifique : Combien de cavités principales possède le cœur humain ?",
+    "choices": [
+      "5",
+      "4",
+      "2",
+      "3"
+    ],
+    "answer": 1,
+    "explanation": "Le cœur humain possède quatre cavités.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S020A",
+    "knowledge_id": "V2-SCI-020",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Corps humain",
+    "prompt": "Quel est le plus grand organe du corps humain ?",
+    "choices": [
+      "le poumon",
+      "la peau",
+      "le foie",
+      "le cerveau"
+    ],
+    "answer": 1,
+    "explanation": "La peau est le plus grand organe du corps humain.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S020B",
+    "knowledge_id": "V2-SCI-020",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Corps humain",
+    "prompt": "Notion scientifique : Quel est le plus grand organe du corps humain ?",
+    "choices": [
+      "la peau",
+      "le foie",
+      "le cerveau",
+      "le poumon"
+    ],
+    "answer": 0,
+    "explanation": "La peau est le plus grand organe du corps humain.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S021A",
+    "knowledge_id": "V2-SCI-021",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Corps humain",
+    "prompt": "Quel est le plus grand organe interne du corps humain ?",
+    "choices": [
+      "le foie",
+      "le cœur",
+      "le rein",
+      "le pancréas"
+    ],
+    "answer": 0,
+    "explanation": "Le foie est le plus grand organe interne.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S021B",
+    "knowledge_id": "V2-SCI-021",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Corps humain",
+    "prompt": "Notion scientifique : Quel est le plus grand organe interne du corps humain ?",
+    "choices": [
+      "le cœur",
+      "le rein",
+      "le pancréas",
+      "le foie"
+    ],
+    "answer": 3,
+    "explanation": "Le foie est le plus grand organe interne.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S022A",
+    "knowledge_id": "V2-SCI-022",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Corps humain",
+    "prompt": "Combien d’os compte généralement le squelette humain adulte ?",
+    "choices": [
+      "186",
+      "226",
+      "246",
+      "206"
+    ],
+    "answer": 3,
+    "explanation": "Le squelette humain adulte compte généralement 206 os.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S022B",
+    "knowledge_id": "V2-SCI-022",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Corps humain",
+    "prompt": "Notion scientifique : Combien d’os compte généralement le squelette humain adulte ?",
+    "choices": [
+      "226",
+      "246",
+      "206",
+      "186"
+    ],
+    "answer": 2,
+    "explanation": "Le squelette humain adulte compte généralement 206 os.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S023A",
+    "knowledge_id": "V2-SCI-023",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Hormones",
+    "prompt": "Quel organe produit l’insuline ?",
+    "choices": [
+      "la thyroïde",
+      "la rate",
+      "le pancréas",
+      "le foie"
+    ],
+    "answer": 2,
+    "explanation": "Le pancréas produit l’insuline.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S023B",
+    "knowledge_id": "V2-SCI-023",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Hormones",
+    "prompt": "Notion scientifique : Quel organe produit l’insuline ?",
+    "choices": [
+      "la rate",
+      "le pancréas",
+      "le foie",
+      "la thyroïde"
+    ],
+    "answer": 1,
+    "explanation": "Le pancréas produit l’insuline.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S024A",
+    "knowledge_id": "V2-SCI-024",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Plantes",
+    "prompt": "Dans quel organite végétal se déroule principalement la photosynthèse ?",
+    "choices": [
+      "le ribosome",
+      "le chloroplaste",
+      "la mitochondrie",
+      "le noyau"
+    ],
+    "answer": 1,
+    "explanation": "La photosynthèse se déroule principalement dans les chloroplastes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S024B",
+    "knowledge_id": "V2-SCI-024",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Plantes",
+    "prompt": "Notion scientifique : Dans quel organite végétal se déroule principalement la photosynthèse ?",
+    "choices": [
+      "le chloroplaste",
+      "la mitochondrie",
+      "le noyau",
+      "le ribosome"
+    ],
+    "answer": 0,
+    "explanation": "La photosynthèse se déroule principalement dans les chloroplastes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S025A",
+    "knowledge_id": "V2-SCI-025",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Plantes",
+    "prompt": "Quelles structures foliaires permettent principalement les échanges gazeux chez les plantes ?",
+    "choices": [
+      "les stomates",
+      "les racines",
+      "les pétales",
+      "les sépales"
+    ],
+    "answer": 0,
+    "explanation": "Les stomates permettent les échanges gazeux des feuilles.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S025B",
+    "knowledge_id": "V2-SCI-025",
+    "module": 5,
+    "domain": "Biologie",
+    "subdomain": "Plantes",
+    "prompt": "Notion scientifique : Quelles structures foliaires permettent principalement les échanges gazeux chez les plantes ?",
+    "choices": [
+      "les racines",
+      "les pétales",
+      "les sépales",
+      "les stomates"
+    ],
+    "answer": 3,
+    "explanation": "Les stomates permettent les échanges gazeux des feuilles.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S026A",
+    "knowledge_id": "V2-SCI-026",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Solutions",
+    "prompt": "Quel pH correspond à une solution neutre à température ambiante ?",
+    "choices": [
+      "0",
+      "5",
+      "14",
+      "7"
+    ],
+    "answer": 3,
+    "explanation": "Un pH de 7 correspond à une solution neutre.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S026B",
+    "knowledge_id": "V2-SCI-026",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Solutions",
+    "prompt": "Notion scientifique : Quel pH correspond à une solution neutre à température ambiante ?",
+    "choices": [
+      "5",
+      "14",
+      "7",
+      "0"
+    ],
+    "answer": 2,
+    "explanation": "Un pH de 7 correspond à une solution neutre.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S027A",
+    "knowledge_id": "V2-SCI-027",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Quelle est la formule chimique du méthane ?",
+    "choices": [
+      "NH₃",
+      "H₂O",
+      "CH₄",
+      "CO₂"
+    ],
+    "answer": 2,
+    "explanation": "Le méthane a pour formule CH₄.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S027B",
+    "knowledge_id": "V2-SCI-027",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Notion scientifique : Quelle est la formule chimique du méthane ?",
+    "choices": [
+      "H₂O",
+      "CH₄",
+      "CO₂",
+      "NH₃"
+    ],
+    "answer": 1,
+    "explanation": "Le méthane a pour formule CH₄.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S028A",
+    "knowledge_id": "V2-SCI-028",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Quelle est la formule chimique du chlorure de sodium ?",
+    "choices": [
+      "HCl",
+      "NaCl",
+      "KCl",
+      "NaOH"
+    ],
+    "answer": 1,
+    "explanation": "Le chlorure de sodium a pour formule NaCl.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S028B",
+    "knowledge_id": "V2-SCI-028",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Notion scientifique : Quelle est la formule chimique du chlorure de sodium ?",
+    "choices": [
+      "NaCl",
+      "KCl",
+      "NaOH",
+      "HCl"
+    ],
+    "answer": 0,
+    "explanation": "Le chlorure de sodium a pour formule NaCl.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S029A",
+    "knowledge_id": "V2-SCI-029",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Quelle est la formule chimique de l’acide sulfurique ?",
+    "choices": [
+      "H₂SO₄",
+      "HCl",
+      "HNO₃",
+      "NaOH"
+    ],
+    "answer": 0,
+    "explanation": "L’acide sulfurique a pour formule H₂SO₄.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S029B",
+    "knowledge_id": "V2-SCI-029",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Notion scientifique : Quelle est la formule chimique de l’acide sulfurique ?",
+    "choices": [
+      "HCl",
+      "HNO₃",
+      "NaOH",
+      "H₂SO₄"
+    ],
+    "answer": 3,
+    "explanation": "L’acide sulfurique a pour formule H₂SO₄.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S030A",
+    "knowledge_id": "V2-SCI-030",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Quelle est la formule chimique de l’acide chlorhydrique ?",
+    "choices": [
+      "H₂SO₄",
+      "HNO₃",
+      "NaCl",
+      "HCl"
+    ],
+    "answer": 3,
+    "explanation": "L’acide chlorhydrique a pour formule HCl.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S030B",
+    "knowledge_id": "V2-SCI-030",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Notion scientifique : Quelle est la formule chimique de l’acide chlorhydrique ?",
+    "choices": [
+      "HNO₃",
+      "NaCl",
+      "HCl",
+      "H₂SO₄"
+    ],
+    "answer": 2,
+    "explanation": "L’acide chlorhydrique a pour formule HCl.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S031A",
+    "knowledge_id": "V2-SCI-031",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Quelle est la formule moléculaire du glucose ?",
+    "choices": [
+      "CH₄",
+      "C₂H₅OH",
+      "C₆H₁₂O₆",
+      "CO₂"
+    ],
+    "answer": 2,
+    "explanation": "Le glucose a pour formule C₆H₁₂O₆.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S031B",
+    "knowledge_id": "V2-SCI-031",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Composés",
+    "prompt": "Notion scientifique : Quelle est la formule moléculaire du glucose ?",
+    "choices": [
+      "C₂H₅OH",
+      "C₆H₁₂O₆",
+      "CO₂",
+      "CH₄"
+    ],
+    "answer": 1,
+    "explanation": "Le glucose a pour formule C₆H₁₂O₆.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S032A",
+    "knowledge_id": "V2-SCI-032",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Atmosphère",
+    "prompt": "Quel gaz constitue la plus grande part de l’atmosphère terrestre ?",
+    "choices": [
+      "l’argon",
+      "l’azote",
+      "l’oxygène",
+      "le dioxyde de carbone"
+    ],
+    "answer": 1,
+    "explanation": "L’azote représente environ 78 % de l’atmosphère terrestre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S032B",
+    "knowledge_id": "V2-SCI-032",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Atmosphère",
+    "prompt": "Notion scientifique : Quel gaz constitue la plus grande part de l’atmosphère terrestre ?",
+    "choices": [
+      "l’azote",
+      "l’oxygène",
+      "le dioxyde de carbone",
+      "l’argon"
+    ],
+    "answer": 0,
+    "explanation": "L’azote représente environ 78 % de l’atmosphère terrestre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S033A",
+    "knowledge_id": "V2-SCI-033",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Atmosphère",
+    "prompt": "Quel gaz représente environ 21 % de l’atmosphère terrestre ?",
+    "choices": [
+      "l’oxygène",
+      "l’azote",
+      "le dioxyde de carbone",
+      "l’hélium"
+    ],
+    "answer": 0,
+    "explanation": "L’oxygène représente environ 21 % de l’atmosphère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S033B",
+    "knowledge_id": "V2-SCI-033",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Atmosphère",
+    "prompt": "Notion scientifique : Quel gaz représente environ 21 % de l’atmosphère terrestre ?",
+    "choices": [
+      "l’azote",
+      "le dioxyde de carbone",
+      "l’hélium",
+      "l’oxygène"
+    ],
+    "answer": 3,
+    "explanation": "L’oxygène représente environ 21 % de l’atmosphère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S034A",
+    "knowledge_id": "V2-SCI-034",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Tableau périodique",
+    "prompt": "Combien de périodes compte le tableau périodique moderne ?",
+    "choices": [
+      "6",
+      "8",
+      "18",
+      "7"
+    ],
+    "answer": 3,
+    "explanation": "Le tableau périodique moderne compte sept périodes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S034B",
+    "knowledge_id": "V2-SCI-034",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Tableau périodique",
+    "prompt": "Notion scientifique : Combien de périodes compte le tableau périodique moderne ?",
+    "choices": [
+      "8",
+      "18",
+      "7",
+      "6"
+    ],
+    "answer": 2,
+    "explanation": "Le tableau périodique moderne compte sept périodes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S035A",
+    "knowledge_id": "V2-SCI-035",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Tableau périodique",
+    "prompt": "Combien de groupes compte le tableau périodique moderne ?",
+    "choices": [
+      "12",
+      "20",
+      "18",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "Le tableau périodique moderne compte 18 groupes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S035B",
+    "knowledge_id": "V2-SCI-035",
+    "module": 5,
+    "domain": "Chimie",
+    "subdomain": "Tableau périodique",
+    "prompt": "Notion scientifique : Combien de groupes compte le tableau périodique moderne ?",
+    "choices": [
+      "20",
+      "18",
+      "8",
+      "12"
+    ],
+    "answer": 1,
+    "explanation": "Le tableau périodique moderne compte 18 groupes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S036A",
+    "knowledge_id": "V2-SCI-036",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Ondes",
+    "prompt": "Le son peut-il se propager dans le vide ?",
+    "choices": [
+      "oui, à basse température",
+      "non",
+      "oui, toujours",
+      "oui, seulement la nuit"
+    ],
+    "answer": 1,
+    "explanation": "Le son nécessite un milieu matériel pour se propager.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S036B",
+    "knowledge_id": "V2-SCI-036",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Ondes",
+    "prompt": "Notion scientifique : Le son peut-il se propager dans le vide ?",
+    "choices": [
+      "non",
+      "oui, toujours",
+      "oui, seulement la nuit",
+      "oui, à basse température"
+    ],
+    "answer": 0,
+    "explanation": "Le son nécessite un milieu matériel pour se propager.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S037A",
+    "knowledge_id": "V2-SCI-037",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Ondes",
+    "prompt": "Qu’est-ce qui se propage le plus vite dans l’air : la lumière ou le son ?",
+    "choices": [
+      "la lumière",
+      "le son",
+      "les deux à la même vitesse",
+      "cela dépend de la couleur"
+    ],
+    "answer": 0,
+    "explanation": "La lumière se propage beaucoup plus vite que le son.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S037B",
+    "knowledge_id": "V2-SCI-037",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Ondes",
+    "prompt": "Notion scientifique : Qu’est-ce qui se propage le plus vite dans l’air : la lumière ou le son ?",
+    "choices": [
+      "le son",
+      "les deux à la même vitesse",
+      "cela dépend de la couleur",
+      "la lumière"
+    ],
+    "answer": 3,
+    "explanation": "La lumière se propage beaucoup plus vite que le son.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S038A",
+    "knowledge_id": "V2-SCI-038",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Mécanique",
+    "prompt": "Quelle relation définit la masse volumique ?",
+    "choices": [
+      "volume divisé par masse",
+      "force divisée par temps",
+      "énergie multipliée par volume",
+      "masse divisée par volume"
+    ],
+    "answer": 3,
+    "explanation": "La masse volumique est le rapport masse/volume.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S038B",
+    "knowledge_id": "V2-SCI-038",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Mécanique",
+    "prompt": "Notion scientifique : Quelle relation définit la masse volumique ?",
+    "choices": [
+      "force divisée par temps",
+      "énergie multipliée par volume",
+      "masse divisée par volume",
+      "volume divisé par masse"
+    ],
+    "answer": 2,
+    "explanation": "La masse volumique est le rapport masse/volume.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S039A",
+    "knowledge_id": "V2-SCI-039",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Électricité",
+    "prompt": "Quelle relation exprime la loi d’Ohm ?",
+    "choices": [
+      "E = m × c²",
+      "F = m × a",
+      "U = R × I",
+      "P = U × I"
+    ],
+    "answer": 2,
+    "explanation": "La loi d’Ohm s’écrit U = R × I.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S039B",
+    "knowledge_id": "V2-SCI-039",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Électricité",
+    "prompt": "Notion scientifique : Quelle relation exprime la loi d’Ohm ?",
+    "choices": [
+      "F = m × a",
+      "U = R × I",
+      "P = U × I",
+      "E = m × c²"
+    ],
+    "answer": 1,
+    "explanation": "La loi d’Ohm s’écrit U = R × I.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S040A",
+    "knowledge_id": "V2-SCI-040",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Électricité",
+    "prompt": "Quelle relation donne la puissance électrique en courant continu ?",
+    "choices": [
+      "E = h × f",
+      "P = U × I",
+      "U = R × I",
+      "F = m × a"
+    ],
+    "answer": 1,
+    "explanation": "La puissance électrique s’écrit P = U × I.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S040B",
+    "knowledge_id": "V2-SCI-040",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Électricité",
+    "prompt": "Notion scientifique : Quelle relation donne la puissance électrique en courant continu ?",
+    "choices": [
+      "P = U × I",
+      "U = R × I",
+      "F = m × a",
+      "E = h × f"
+    ],
+    "answer": 0,
+    "explanation": "La puissance électrique s’écrit P = U × I.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S041A",
+    "knowledge_id": "V2-SCI-041",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Mécanique",
+    "prompt": "Quelle relation exprime la deuxième loi de Newton dans sa forme simple ?",
+    "choices": [
+      "F = m × a",
+      "P = U × I",
+      "U = R × I",
+      "E = m × c²"
+    ],
+    "answer": 0,
+    "explanation": "La deuxième loi de Newton relie force, masse et accélération.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S041B",
+    "knowledge_id": "V2-SCI-041",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Mécanique",
+    "prompt": "Notion scientifique : Quelle relation exprime la deuxième loi de Newton dans sa forme simple ?",
+    "choices": [
+      "P = U × I",
+      "U = R × I",
+      "E = m × c²",
+      "F = m × a"
+    ],
+    "answer": 3,
+    "explanation": "La deuxième loi de Newton relie force, masse et accélération.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S042A",
+    "knowledge_id": "V2-SCI-042",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Relativité",
+    "prompt": "Quelle relation est associée à l’équivalence masse-énergie d’Einstein ?",
+    "choices": [
+      "F = m × a",
+      "U = R × I",
+      "P = U × I",
+      "E = m × c²"
+    ],
+    "answer": 3,
+    "explanation": "Einstein a établi la relation E = mc².",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S042B",
+    "knowledge_id": "V2-SCI-042",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Relativité",
+    "prompt": "Notion scientifique : Quelle relation est associée à l’équivalence masse-énergie d’Einstein ?",
+    "choices": [
+      "U = R × I",
+      "P = U × I",
+      "E = m × c²",
+      "F = m × a"
+    ],
+    "answer": 2,
+    "explanation": "Einstein a établi la relation E = mc².",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S043A",
+    "knowledge_id": "V2-SCI-043",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Lumière",
+    "prompt": "Quelle est approximativement la vitesse de la lumière dans le vide ?",
+    "choices": [
+      "3 000 km/s",
+      "3 000 000 km/s",
+      "300 000 km/s",
+      "30 000 km/s"
+    ],
+    "answer": 2,
+    "explanation": "La lumière se propage dans le vide à environ 300 000 km/s.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S043B",
+    "knowledge_id": "V2-SCI-043",
+    "module": 5,
+    "domain": "Physique",
+    "subdomain": "Lumière",
+    "prompt": "Notion scientifique : Quelle est approximativement la vitesse de la lumière dans le vide ?",
+    "choices": [
+      "3 000 000 km/s",
+      "300 000 km/s",
+      "30 000 km/s",
+      "3 000 km/s"
+    ],
+    "answer": 1,
+    "explanation": "La lumière se propage dans le vide à environ 300 000 km/s.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S044A",
+    "knowledge_id": "V2-SCI-044",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Structure interne",
+    "prompt": "Quelle couche de la Terre se situe sous la croûte ?",
+    "choices": [
+      "l’hydrosphère",
+      "le manteau",
+      "le noyau interne",
+      "l’atmosphère"
+    ],
+    "answer": 1,
+    "explanation": "Le manteau se situe sous la croûte terrestre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S044B",
+    "knowledge_id": "V2-SCI-044",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Structure interne",
+    "prompt": "Notion scientifique : Quelle couche de la Terre se situe sous la croûte ?",
+    "choices": [
+      "le manteau",
+      "le noyau interne",
+      "l’atmosphère",
+      "l’hydrosphère"
+    ],
+    "answer": 0,
+    "explanation": "Le manteau se situe sous la croûte terrestre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S045A",
+    "knowledge_id": "V2-SCI-045",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Volcanisme",
+    "prompt": "Comment appelle-t-on la roche en fusion lorsqu’elle atteint la surface ?",
+    "choices": [
+      "la lave",
+      "le magma",
+      "le granite",
+      "le basalte solide"
+    ],
+    "answer": 0,
+    "explanation": "Le magma qui atteint la surface est appelé lave.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S045B",
+    "knowledge_id": "V2-SCI-045",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Volcanisme",
+    "prompt": "Notion scientifique : Comment appelle-t-on la roche en fusion lorsqu’elle atteint la surface ?",
+    "choices": [
+      "le magma",
+      "le granite",
+      "le basalte solide",
+      "la lave"
+    ],
+    "answer": 3,
+    "explanation": "Le magma qui atteint la surface est appelé lave.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S046A",
+    "knowledge_id": "V2-SCI-046",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Tectonique",
+    "prompt": "Quel phénomène est directement lié au déplacement brutal le long d’une faille ?",
+    "choices": [
+      "une marée",
+      "une éclipse",
+      "une mousson",
+      "un séisme"
+    ],
+    "answer": 3,
+    "explanation": "Les séismes résultent souvent d’un déplacement brutal le long d’une faille.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S046B",
+    "knowledge_id": "V2-SCI-046",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Tectonique",
+    "prompt": "Notion scientifique : Quel phénomène est directement lié au déplacement brutal le long d’une faille ?",
+    "choices": [
+      "une éclipse",
+      "une mousson",
+      "un séisme",
+      "une marée"
+    ],
+    "answer": 2,
+    "explanation": "Les séismes résultent souvent d’un déplacement brutal le long d’une faille.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S047A",
+    "knowledge_id": "V2-SCI-047",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Cycle de l’eau",
+    "prompt": "Quel processus transforme l’eau liquide en vapeur ?",
+    "choices": [
+      "la précipitation",
+      "la solidification",
+      "l’évaporation",
+      "la condensation"
+    ],
+    "answer": 2,
+    "explanation": "L’évaporation transforme l’eau liquide en vapeur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S047B",
+    "knowledge_id": "V2-SCI-047",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Cycle de l’eau",
+    "prompt": "Notion scientifique : Quel processus transforme l’eau liquide en vapeur ?",
+    "choices": [
+      "la solidification",
+      "l’évaporation",
+      "la condensation",
+      "la précipitation"
+    ],
+    "answer": 1,
+    "explanation": "L’évaporation transforme l’eau liquide en vapeur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S048A",
+    "knowledge_id": "V2-SCI-048",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Cycle de l’eau",
+    "prompt": "Quel processus transforme la vapeur d’eau en gouttelettes liquides ?",
+    "choices": [
+      "la sublimation",
+      "la condensation",
+      "l’évaporation",
+      "la fusion"
+    ],
+    "answer": 1,
+    "explanation": "La condensation transforme la vapeur en eau liquide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S048B",
+    "knowledge_id": "V2-SCI-048",
+    "module": 5,
+    "domain": "Sciences de la Terre",
+    "subdomain": "Cycle de l’eau",
+    "prompt": "Notion scientifique : Quel processus transforme la vapeur d’eau en gouttelettes liquides ?",
+    "choices": [
+      "la condensation",
+      "l’évaporation",
+      "la fusion",
+      "la sublimation"
+    ],
+    "answer": 0,
+    "explanation": "La condensation transforme la vapeur en eau liquide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S049A",
+    "knowledge_id": "V2-SCI-049",
+    "module": 5,
+    "domain": "Environnement",
+    "subdomain": "Climat",
+    "prompt": "Quel gaz est le principal gaz à effet de serre d’origine humaine lié à la combustion des énergies fossiles ?",
+    "choices": [
+      "le dioxyde de carbone",
+      "l’hélium",
+      "le néon",
+      "l’hydrogène"
+    ],
+    "answer": 0,
+    "explanation": "Le CO₂ est le principal gaz à effet de serre d’origine humaine lié aux combustibles fossiles.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S049B",
+    "knowledge_id": "V2-SCI-049",
+    "module": 5,
+    "domain": "Environnement",
+    "subdomain": "Climat",
+    "prompt": "Notion scientifique : Quel gaz est le principal gaz à effet de serre d’origine humaine lié à la combustion des énergies fossiles ?",
+    "choices": [
+      "l’hélium",
+      "le néon",
+      "l’hydrogène",
+      "le dioxyde de carbone"
+    ],
+    "answer": 3,
+    "explanation": "Le CO₂ est le principal gaz à effet de serre d’origine humaine lié aux combustibles fossiles.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S050A",
+    "knowledge_id": "V2-SCI-050",
+    "module": 5,
+    "domain": "Environnement",
+    "subdomain": "Écologie",
+    "prompt": "Comment appelle-t-on l’ensemble des êtres vivants et de leurs interactions avec leur milieu ?",
+    "choices": [
+      "un atome",
+      "un organe",
+      "une molécule",
+      "un écosystème"
+    ],
+    "answer": 3,
+    "explanation": "Un écosystème associe les êtres vivants et leur milieu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  },
+  {
+    "id": "V2S050B",
+    "knowledge_id": "V2-SCI-050",
+    "module": 5,
+    "domain": "Environnement",
+    "subdomain": "Écologie",
+    "prompt": "Notion scientifique : Comment appelle-t-on l’ensemble des êtres vivants et de leurs interactions avec leur milieu ?",
+    "choices": [
+      "un organe",
+      "une molécule",
+      "un écosystème",
+      "un atome"
+    ],
+    "answer": 2,
+    "explanation": "Un écosystème associe les êtres vivants et leur milieu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — connaissances stables"
+  }
+]

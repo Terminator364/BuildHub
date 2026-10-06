@@ -1,0 +1,3346 @@
+[
+  {
+    "id": "V3GW0001",
+    "knowledge_id": "V3-GW-RDC-PROV-001",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Bas-Uele ?",
+    "choices": [
+      "Gbadolite",
+      "Buta",
+      "Bunia",
+      "Kenge"
+    ],
+    "answer": 1,
+    "explanation": "Buta est le chef-lieu du Bas-Uele.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0002",
+    "knowledge_id": "V3-GW-RDC-PROV-002",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Équateur ?",
+    "choices": [
+      "Bandundu",
+      "Lusambo",
+      "Mbandaka",
+      "Tshikapa"
+    ],
+    "answer": 2,
+    "explanation": "Mbandaka est le chef-lieu du Équateur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0003",
+    "knowledge_id": "V3-GW-RDC-PROV-003",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Haut-Katanga ?",
+    "choices": [
+      "Kananga",
+      "Kabinda",
+      "Bukavu",
+      "Lubumbashi"
+    ],
+    "answer": 3,
+    "explanation": "Lubumbashi est le chef-lieu du Haut-Katanga.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0004",
+    "knowledge_id": "V3-GW-RDC-PROV-004",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Haut-Lomami ?",
+    "choices": [
+      "Kamina",
+      "Mbuji-Mayi",
+      "Kolwezi",
+      "Gemena"
+    ],
+    "answer": 0,
+    "explanation": "Kamina est le chef-lieu du Haut-Lomami.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0005",
+    "knowledge_id": "V3-GW-RDC-PROV-005",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Haut-Uele ?",
+    "choices": [
+      "Kalemie",
+      "Isiro",
+      "Kinshasa",
+      "Inongo"
+    ],
+    "answer": 1,
+    "explanation": "Isiro est le chef-lieu du Haut-Uele.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0006",
+    "knowledge_id": "V3-GW-RDC-PROV-006",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Ituri ?",
+    "choices": [
+      "Kindu",
+      "Kisangani",
+      "Bunia",
+      "Matadi"
+    ],
+    "answer": 2,
+    "explanation": "Bunia est le chef-lieu du Ituri.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0007",
+    "knowledge_id": "V3-GW-RDC-PROV-007",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Kasaï ?",
+    "choices": [
+      "Kenge",
+      "Lisala",
+      "Boende",
+      "Tshikapa"
+    ],
+    "answer": 3,
+    "explanation": "Tshikapa est le chef-lieu du Kasaï.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0008",
+    "knowledge_id": "V3-GW-RDC-PROV-008",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Kasaï-Central ?",
+    "choices": [
+      "Kananga",
+      "Bandundu",
+      "Goma",
+      "Buta"
+    ],
+    "answer": 0,
+    "explanation": "Kananga est le chef-lieu du Kasaï-Central.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0009",
+    "knowledge_id": "V3-GW-RDC-PROV-009",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Kasaï-Oriental ?",
+    "choices": [
+      "Mbandaka",
+      "Mbuji-Mayi",
+      "Kabinda",
+      "Gbadolite"
+    ],
+    "answer": 1,
+    "explanation": "Mbuji-Mayi est le chef-lieu du Kasaï-Oriental.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0010",
+    "knowledge_id": "V3-GW-RDC-PROV-010",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Kinshasa ?",
+    "choices": [
+      "Lusambo",
+      "Lubumbashi",
+      "Kinshasa",
+      "Kolwezi"
+    ],
+    "answer": 2,
+    "explanation": "Kinshasa est le chef-lieu du Kinshasa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0011",
+    "knowledge_id": "V3-GW-RDC-PROV-011",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Kongo-Central ?",
+    "choices": [
+      "Inongo",
+      "Bukavu",
+      "Kamina",
+      "Matadi"
+    ],
+    "answer": 3,
+    "explanation": "Matadi est le chef-lieu du Kongo-Central.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0012",
+    "knowledge_id": "V3-GW-RDC-PROV-012",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Kwango ?",
+    "choices": [
+      "Kenge",
+      "Kindu",
+      "Gemena",
+      "Isiro"
+    ],
+    "answer": 0,
+    "explanation": "Kenge est le chef-lieu du Kwango.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0013",
+    "knowledge_id": "V3-GW-RDC-PROV-013",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Kwilu ?",
+    "choices": [
+      "Bunia",
+      "Bandundu",
+      "Lisala",
+      "Kalemie"
+    ],
+    "answer": 1,
+    "explanation": "Bandundu est le chef-lieu du Kwilu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0014",
+    "knowledge_id": "V3-GW-RDC-PROV-014",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Lomami ?",
+    "choices": [
+      "Kisangani",
+      "Tshikapa",
+      "Kabinda",
+      "Goma"
+    ],
+    "answer": 2,
+    "explanation": "Kabinda est le chef-lieu du Lomami.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0015",
+    "knowledge_id": "V3-GW-RDC-PROV-015",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Lualaba ?",
+    "choices": [
+      "Gbadolite",
+      "Boende",
+      "Kananga",
+      "Kolwezi"
+    ],
+    "answer": 3,
+    "explanation": "Kolwezi est le chef-lieu du Lualaba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0016",
+    "knowledge_id": "V3-GW-RDC-PROV-016",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Mai-Ndombe ?",
+    "choices": [
+      "Inongo",
+      "Lusambo",
+      "Buta",
+      "Mbuji-Mayi"
+    ],
+    "answer": 0,
+    "explanation": "Inongo est le chef-lieu du Mai-Ndombe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0017",
+    "knowledge_id": "V3-GW-RDC-PROV-017",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Maniema ?",
+    "choices": [
+      "Kinshasa",
+      "Kindu",
+      "Bukavu",
+      "Mbandaka"
+    ],
+    "answer": 1,
+    "explanation": "Kindu est le chef-lieu du Maniema.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0018",
+    "knowledge_id": "V3-GW-RDC-PROV-018",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Mongala ?",
+    "choices": [
+      "Lubumbashi",
+      "Matadi",
+      "Lisala",
+      "Gemena"
+    ],
+    "answer": 2,
+    "explanation": "Lisala est le chef-lieu du Mongala.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0019",
+    "knowledge_id": "V3-GW-RDC-PROV-019",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Nord-Kivu ?",
+    "choices": [
+      "Kalemie",
+      "Kamina",
+      "Kenge",
+      "Goma"
+    ],
+    "answer": 3,
+    "explanation": "Goma est le chef-lieu du Nord-Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0020",
+    "knowledge_id": "V3-GW-RDC-PROV-020",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Nord-Ubangi ?",
+    "choices": [
+      "Gbadolite",
+      "Kisangani",
+      "Isiro",
+      "Bandundu"
+    ],
+    "answer": 0,
+    "explanation": "Gbadolite est le chef-lieu du Nord-Ubangi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0021",
+    "knowledge_id": "V3-GW-RDC-PROV-021",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Sankuru ?",
+    "choices": [
+      "Kabinda",
+      "Lusambo",
+      "Boende",
+      "Bunia"
+    ],
+    "answer": 1,
+    "explanation": "Lusambo est le chef-lieu du Sankuru.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0022",
+    "knowledge_id": "V3-GW-RDC-PROV-022",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Sud-Kivu ?",
+    "choices": [
+      "Tshikapa",
+      "Kolwezi",
+      "Bukavu",
+      "Buta"
+    ],
+    "answer": 2,
+    "explanation": "Bukavu est le chef-lieu du Sud-Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0023",
+    "knowledge_id": "V3-GW-RDC-PROV-023",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Sud-Ubangi ?",
+    "choices": [
+      "Mbandaka",
+      "Kananga",
+      "Inongo",
+      "Gemena"
+    ],
+    "answer": 3,
+    "explanation": "Gemena est le chef-lieu du Sud-Ubangi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0024",
+    "knowledge_id": "V3-GW-RDC-PROV-024",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Tanganyika ?",
+    "choices": [
+      "Kalemie",
+      "Lubumbashi",
+      "Mbuji-Mayi",
+      "Kindu"
+    ],
+    "answer": 0,
+    "explanation": "Kalemie est le chef-lieu du Tanganyika.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0025",
+    "knowledge_id": "V3-GW-RDC-PROV-025",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Tshopo ?",
+    "choices": [
+      "Lisala",
+      "Kisangani",
+      "Kamina",
+      "Kinshasa"
+    ],
+    "answer": 1,
+    "explanation": "Kisangani est le chef-lieu du Tshopo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0026",
+    "knowledge_id": "V3-GW-RDC-PROV-026",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province congolaise du Tshuapa ?",
+    "choices": [
+      "Matadi",
+      "Goma",
+      "Boende",
+      "Isiro"
+    ],
+    "answer": 2,
+    "explanation": "Boende est le chef-lieu du Tshuapa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC et organisation territoriale — repères administratifs vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3GW0027",
+    "knowledge_id": "V3-GW-RDC-IND-DATE",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle date correspond à l’indépendance de la République démocratique du Congo ?",
+    "choices": [
+      "17 mai 1997",
+      "24 novembre 1965",
+      "18 février 2006",
+      "30 juin 1960"
+    ],
+    "answer": 3,
+    "explanation": "La RDC a accédé à l’indépendance le 30 juin 1960.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire nationale RDC"
+  },
+  {
+    "id": "V3GW0028",
+    "knowledge_id": "V3-GW-RDC-CAP",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Parmi ces villes, laquelle exerce la fonction de capitale nationale de la République démocratique du Congo ?",
+    "choices": [
+      "Kinshasa",
+      "Lubumbashi",
+      "Kisangani",
+      "Mbuji-Mayi"
+    ],
+    "answer": 0,
+    "explanation": "Kinshasa est la capitale de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "V3GW0029",
+    "knowledge_id": "V3-GW-RDC-OFFICIAL-LANG",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle langue la Constitution de la RDC reconnaît-elle comme langue officielle de l’État ?",
+    "choices": [
+      "le tshiluba",
+      "le français",
+      "le lingala",
+      "le swahili"
+    ],
+    "answer": 1,
+    "explanation": "Le français est la langue officielle de la RDC; plusieurs langues nationales sont reconnues.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "V3GW0030",
+    "knowledge_id": "V3-GW-RDC-NATLANG-COUNT",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Combien de langues nationales majeures la Constitution cite-t-elle en RDC ?",
+    "choices": [
+      "trois",
+      "six",
+      "quatre",
+      "deux"
+    ],
+    "answer": 2,
+    "explanation": "Lingala, swahili, kikongo ya leta et tshiluba constituent les quatre langues nationales couramment citées.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "V3GW0031",
+    "knowledge_id": "V3-GW-RDC-PROV-COUNT",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Combien de provinces compte la RDC, Kinshasa comprise ?",
+    "choices": [
+      "11",
+      "21",
+      "30",
+      "26"
+    ],
+    "answer": 3,
+    "explanation": "La RDC compte 26 provinces, dont la ville-province de Kinshasa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC, art. 2"
+  },
+  {
+    "id": "V3GW0032",
+    "knowledge_id": "V3-GW-RDC-OCEAN",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Sur quel océan la RDC possède-t-elle un littoral ?",
+    "choices": [
+      "l’océan Atlantique",
+      "l’océan Indien",
+      "l’océan Pacifique",
+      "l’océan Arctique"
+    ],
+    "answer": 0,
+    "explanation": "Le court littoral congolais se trouve sur l’Atlantique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas de la RDC"
+  },
+  {
+    "id": "V3GW0033",
+    "knowledge_id": "V3-GW-RDC-RIVER",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel grand fleuve structure le bassin hydrographique de la RDC ?",
+    "choices": [
+      "le Zambèze",
+      "le fleuve Congo",
+      "le Nil",
+      "le Niger"
+    ],
+    "answer": 1,
+    "explanation": "Le fleuve Congo draine l’essentiel du territoire congolais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas hydrographique RDC"
+  },
+  {
+    "id": "V3GW0034",
+    "knowledge_id": "V3-GW-RDC-PORT-MATADI",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Sur quel fleuve se situe le port de Matadi ?",
+    "choices": [
+      "le fleuve Sénégal",
+      "le Zambèze",
+      "le fleuve Congo",
+      "le fleuve Niger"
+    ],
+    "answer": 2,
+    "explanation": "Matadi est un port fluvial majeur sur le Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas RDC"
+  },
+  {
+    "id": "V3GW0035",
+    "knowledge_id": "V3-GW-RDC-INGA",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Les barrages d’Inga sont aménagés sur quel cours d’eau ?",
+    "choices": [
+      "la rivière Kasaï",
+      "la rivière Lualaba",
+      "la rivière Ubangi",
+      "le fleuve Congo"
+    ],
+    "answer": 3,
+    "explanation": "Le complexe hydroélectrique d’Inga est installé sur le fleuve Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "SNEL / repères énergétiques RDC"
+  },
+  {
+    "id": "V3GW0036",
+    "knowledge_id": "V3-GW-RDC-PEAK",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel sommet constitue le point culminant de la RDC ?",
+    "choices": [
+      "le pic Marguerite du mont Stanley",
+      "le mont Nyiragongo",
+      "le mont Kahuzi",
+      "le mont Mangengenge"
+    ],
+    "answer": 0,
+    "explanation": "Le pic Marguerite, dans le massif du Rwenzori, est le point culminant de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique RDC"
+  },
+  {
+    "id": "V3GW0037",
+    "knowledge_id": "V3-GW-RDC-RWENZORI",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Le massif du Rwenzori se situe à la frontière de la RDC avec quel pays ?",
+    "choices": [
+      "le Rwanda",
+      "l’Ouganda",
+      "l’Angola",
+      "la Zambie"
+    ],
+    "answer": 1,
+    "explanation": "Le Rwenzori s’élève à la frontière entre la RDC et l’Ouganda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Afrique centrale"
+  },
+  {
+    "id": "V3GW0038",
+    "knowledge_id": "V3-GW-RDC-LUKUGA",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "La Lukuga est l’exutoire de quel lac ?",
+    "choices": [
+      "le lac Édouard",
+      "le lac Mai-Ndombe",
+      "le lac Tanganyika",
+      "le lac Kivu"
+    ],
+    "answer": 2,
+    "explanation": "La Lukuga évacue les eaux du lac Tanganyika vers le bassin du Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Hydrographie RDC"
+  },
+  {
+    "id": "V3GW0039",
+    "knowledge_id": "V3-GW-RDC-LAKE-KIVU",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Le lac Kivu est partagé par la RDC et quel pays ?",
+    "choices": [
+      "le Burundi",
+      "l’Ouganda",
+      "la Tanzanie",
+      "le Rwanda"
+    ],
+    "answer": 3,
+    "explanation": "Le lac Kivu se trouve sur la frontière entre la RDC et le Rwanda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Grands Lacs"
+  },
+  {
+    "id": "V3GW0040",
+    "knowledge_id": "V3-GW-RDC-LAKE-EDWARD",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Le lac Édouard est partagé par la RDC et quel pays ?",
+    "choices": [
+      "l’Ouganda",
+      "le Rwanda",
+      "la Zambie",
+      "le Burundi"
+    ],
+    "answer": 0,
+    "explanation": "Le lac Édouard est partagé entre la RDC et l’Ouganda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Grands Lacs"
+  },
+  {
+    "id": "V3GW0041",
+    "knowledge_id": "V3-GW-RDC-VIRUNGA-YEAR",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "En quelle année le parc national des Virunga a-t-il été créé sous son nom historique de parc Albert ?",
+    "choices": [
+      "1975",
+      "1925",
+      "1939",
+      "1969"
+    ],
+    "answer": 1,
+    "explanation": "Créé en 1925, il est le plus ancien parc national d’Afrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ICCN / UNESCO"
+  },
+  {
+    "id": "V3GW0042",
+    "knowledge_id": "V3-GW-RDC-VIRUNGA",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel parc national congolais est célèbre pour les gorilles de montagne et les volcans Nyiragongo et Nyamuragira ?",
+    "choices": [
+      "le parc de l’Upemba",
+      "le parc de la Garamba",
+      "le parc national des Virunga",
+      "le parc de la Salonga"
+    ],
+    "answer": 2,
+    "explanation": "Le parc des Virunga associe biodiversité montagnarde et volcanisme actif.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ICCN / UNESCO"
+  },
+  {
+    "id": "V3GW0043",
+    "knowledge_id": "V3-GW-RDC-SALONGA",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel parc de la RDC est l’un des plus vastes parcs de forêt tropicale d’Afrique ?",
+    "choices": [
+      "le parc de Kundelungu",
+      "le parc de la Garamba",
+      "le parc de l’Upemba",
+      "le parc national de la Salonga"
+    ],
+    "answer": 3,
+    "explanation": "La Salonga protège une immense zone de forêt équatoriale du bassin du Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ICCN / UNESCO"
+  },
+  {
+    "id": "V3GW0044",
+    "knowledge_id": "V3-GW-RDC-KAHUZI",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel parc national du Sud-Kivu est associé au gorille de Grauer ?",
+    "choices": [
+      "Kahuzi-Biega",
+      "Garamba",
+      "Maiko",
+      "Lomami"
+    ],
+    "answer": 0,
+    "explanation": "Kahuzi-Biega protège notamment le gorille de Grauer.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ICCN / UNESCO"
+  },
+  {
+    "id": "V3GW0045",
+    "knowledge_id": "V3-GW-RDC-GARAMBA",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel parc national du nord-est de la RDC est connu pour ses savanes et sa grande faune ?",
+    "choices": [
+      "Lomami",
+      "Garamba",
+      "Salonga",
+      "Kundelungu"
+    ],
+    "answer": 1,
+    "explanation": "Garamba se situe dans le nord-est de la RDC et protège des écosystèmes de savane.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ICCN / UNESCO"
+  },
+  {
+    "id": "V3GW0046",
+    "knowledge_id": "V3-GW-RDC-LOMAMI",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel parc national créé en 2016 protège notamment des forêts du bassin de la Lomami ?",
+    "choices": [
+      "le parc de l’Upemba",
+      "le parc de la Salonga",
+      "le parc national de la Lomami",
+      "le parc de la Maiko"
+    ],
+    "answer": 2,
+    "explanation": "Le parc national de la Lomami a été officiellement créé en 2016.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ICCN"
+  },
+  {
+    "id": "V3GW0047",
+    "knowledge_id": "V3-GW-RDC-MIN-COPPER",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle région minière congolaise est particulièrement associée au cuivre et au cobalt ?",
+    "choices": [
+      "l’Équateur",
+      "le Kongo-Central",
+      "le Kwilu",
+      "le Katanga historique"
+    ],
+    "answer": 3,
+    "explanation": "Le sud-est congolais, notamment Haut-Katanga et Lualaba, concentre d’importants gisements de cuivre et cobalt.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS / ministère des Mines RDC"
+  },
+  {
+    "id": "V3GW0048",
+    "knowledge_id": "V3-GW-RDC-MIN-DIAMOND",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle région de la RDC est historiquement associée à l’exploitation du diamant ?",
+    "choices": [
+      "le Kasaï",
+      "le Nord-Ubangi",
+      "le Kwango",
+      "le Kongo-Central"
+    ],
+    "answer": 0,
+    "explanation": "Le bassin du Kasaï est historiquement un grand espace diamantifère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Ministère des Mines RDC"
+  },
+  {
+    "id": "V3GW0049",
+    "knowledge_id": "V3-GW-RDC-STATE-1885",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel État colonial a précédé le Congo belge entre 1885 et 1908 ?",
+    "choices": [
+      "le Ruanda-Urundi",
+      "l’État indépendant du Congo",
+      "l’Afrique-Équatoriale française",
+      "le Congo français"
+    ],
+    "answer": 1,
+    "explanation": "L’État indépendant du Congo a existé de 1885 à 1908.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire du Congo"
+  },
+  {
+    "id": "V3GW0050",
+    "knowledge_id": "V3-GW-RDC-BELGIAN-1908",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "En quelle année l’État indépendant du Congo devient-il officiellement le Congo belge ?",
+    "choices": [
+      "1914",
+      "1945",
+      "1908",
+      "1885"
+    ],
+    "answer": 2,
+    "explanation": "La Belgique annexe l’État indépendant du Congo en 1908.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire du Congo"
+  },
+  {
+    "id": "V3GW0051",
+    "knowledge_id": "V3-GW-RDC-FIRST-PM",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "À l’accession du Congo à l’indépendance en 1960, qui dirige le premier gouvernement comme Premier ministre ?",
+    "choices": [
+      "Joseph Kasa-Vubu",
+      "Cyrille Adoula",
+      "Moïse Tshombe",
+      "Patrice Lumumba"
+    ],
+    "answer": 3,
+    "explanation": "Patrice Lumumba fut le premier Premier ministre du Congo indépendant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Archives historiques RDC"
+  },
+  {
+    "id": "V3GW0052",
+    "knowledge_id": "V3-GW-RDC-FIRST-PRES",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Qui fut le premier président du Congo indépendant en 1960 ?",
+    "choices": [
+      "Joseph Kasa-Vubu",
+      "Patrice Lumumba",
+      "Joseph Mobutu",
+      "Laurent-Désiré Kabila"
+    ],
+    "answer": 0,
+    "explanation": "Joseph Kasa-Vubu fut le premier président du Congo indépendant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Archives historiques RDC"
+  },
+  {
+    "id": "V3GW0053",
+    "knowledge_id": "V3-GW-RDC-1965",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel événement politique majeur survient le 24 novembre 1965 ?",
+    "choices": [
+      "le retour du nom Congo en 1997",
+      "la prise de pouvoir de Joseph-Désiré Mobutu",
+      "la proclamation de l’indépendance",
+      "la promulgation de la Constitution de 2006"
+    ],
+    "answer": 1,
+    "explanation": "Mobutu prend le pouvoir le 24 novembre 1965.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire politique RDC"
+  },
+  {
+    "id": "V3GW0054",
+    "knowledge_id": "V3-GW-RDC-ZAIRE",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "En quelle année le pays prend-il le nom de Zaïre ?",
+    "choices": [
+      "1965",
+      "1990",
+      "1971",
+      "1960"
+    ],
+    "answer": 2,
+    "explanation": "Le changement de nom en Zaïre intervient en 1971.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire politique RDC"
+  },
+  {
+    "id": "V3GW0055",
+    "knowledge_id": "V3-GW-RDC-NAME-1997",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "En quelle année le nom « République démocratique du Congo » est-il restauré après la période Zaïre ?",
+    "choices": [
+      "1990",
+      "1994",
+      "2006",
+      "1997"
+    ],
+    "answer": 3,
+    "explanation": "Le nom République démocratique du Congo est restauré en mai 1997.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire politique RDC"
+  },
+  {
+    "id": "V3GW0056",
+    "knowledge_id": "V3-GW-RDC-CONST-DATE",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle date correspond à la promulgation de la Constitution actuellement en vigueur en RDC ?",
+    "choices": [
+      "18 février 2006",
+      "30 juin 1960",
+      "17 mai 1997",
+      "24 juin 1967"
+    ],
+    "answer": 0,
+    "explanation": "La Constitution de la Troisième République a été promulguée le 18 février 2006.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "V3GW0057",
+    "knowledge_id": "V3-GW-RDC-PARL",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "De quelles chambres se compose le Parlement de la RDC ?",
+    "choices": [
+      "Gouvernement et Sénat",
+      "Assemblée nationale et Sénat",
+      "Assemblée nationale et Cour constitutionnelle",
+      "Sénat et Conseil d’État"
+    ],
+    "answer": 1,
+    "explanation": "Le Parlement congolais est bicaméral : Assemblée nationale et Sénat.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "V3GW0058",
+    "knowledge_id": "V3-GW-RDC-EXEC",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Qui dirige le Gouvernement de la RDC au sens constitutionnel ?",
+    "choices": [
+      "le procureur général",
+      "le gouverneur de la Banque centrale",
+      "le Premier ministre",
+      "le président du Sénat"
+    ],
+    "answer": 2,
+    "explanation": "Le Premier ministre est le chef du Gouvernement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "V3GW0059",
+    "knowledge_id": "V3-GW-RDC-PRES-TERM",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle est la durée constitutionnelle du mandat présidentiel en RDC ?",
+    "choices": [
+      "quatre ans",
+      "six ans",
+      "sept ans",
+      "cinq ans"
+    ],
+    "answer": 3,
+    "explanation": "Le mandat du président de la République est de cinq ans.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "V3GW0060",
+    "knowledge_id": "V3-GW-RDC-PRES-RENEW",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Combien de fois le mandat présidentiel est-il renouvelable selon la Constitution de la RDC ?",
+    "choices": [
+      "une seule fois",
+      "sans limite",
+      "deux fois",
+      "jamais"
+    ],
+    "answer": 0,
+    "explanation": "La Constitution prévoit un mandat de cinq ans renouvelable une seule fois.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "V3GW0061",
+    "knowledge_id": "V3-GW-RDC-CONST-COURT",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle juridiction contrôle notamment la constitutionnalité des lois en RDC ?",
+    "choices": [
+      "la Cour des comptes",
+      "la Cour constitutionnelle",
+      "la Cour de cassation",
+      "le Conseil d’État"
+    ],
+    "answer": 1,
+    "explanation": "La Cour constitutionnelle exerce notamment le contrôle de constitutionnalité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "V3GW0062",
+    "knowledge_id": "V3-GW-RDC-BC",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle institution émet la monnaie nationale de la RDC ?",
+    "choices": [
+      "la BAD",
+      "la Banque mondiale",
+      "la Banque centrale du Congo",
+      "le ministère des Finances"
+    ],
+    "answer": 2,
+    "explanation": "La Banque centrale du Congo est l’institut d’émission national.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banque centrale du Congo"
+  },
+  {
+    "id": "V3GW0063",
+    "knowledge_id": "V3-GW-RDC-FLAG",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle couleur n’appartient pas aux trois couleurs dominantes du drapeau actuel de la RDC ?",
+    "choices": [
+      "le bleu",
+      "le rouge",
+      "le jaune",
+      "le vert"
+    ],
+    "answer": 3,
+    "explanation": "Le drapeau actuel est principalement bleu, rouge et jaune.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution / symboles nationaux"
+  },
+  {
+    "id": "V3GW0064",
+    "knowledge_id": "V3-GW-RDC-MOTTO",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle est la devise nationale de la RDC ?",
+    "choices": [
+      "Justice – Paix – Travail",
+      "Unité – Travail – Progrès",
+      "Travail – Liberté – Patrie",
+      "Paix – Unité – Justice"
+    ],
+    "answer": 0,
+    "explanation": "La devise nationale est « Justice – Paix – Travail ».",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Constitution / symboles nationaux"
+  },
+  {
+    "id": "V3GW0065",
+    "knowledge_id": "V3-GW-RDC-ANTHEM",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Comment s’intitule l’hymne national actuellement utilisé par la République démocratique du Congo ?",
+    "choices": [
+      "Congo Nouveau",
+      "Debout Congolais",
+      "La Zaïroise",
+      "Indépendance Cha Cha"
+    ],
+    "answer": 1,
+    "explanation": "« Debout Congolais » est l’hymne national.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Symboles nationaux RDC"
+  },
+  {
+    "id": "V3GW0066",
+    "knowledge_id": "V3-GW-GEO-PACIFIC",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Parmi les grands océans terrestres, lequel possède la plus vaste superficie ?",
+    "choices": [
+      "l’océan Indien",
+      "l’océan Arctique",
+      "l’océan Pacifique",
+      "l’océan Atlantique"
+    ],
+    "answer": 2,
+    "explanation": "Le Pacifique est le plus vaste océan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0067",
+    "knowledge_id": "V3-GW-GEO-ARCTIC",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel est le plus petit des cinq grands océans ?",
+    "choices": [
+      "l’océan Indien",
+      "l’océan Atlantique",
+      "l’océan Austral",
+      "l’océan Arctique"
+    ],
+    "answer": 3,
+    "explanation": "L’Arctique est le plus petit des grands océans.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0068",
+    "knowledge_id": "V3-GW-GEO-EVEREST",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel sommet détient le record mondial d’altitude mesurée au-dessus du niveau moyen de la mer ?",
+    "choices": [
+      "l’Everest",
+      "le K2",
+      "le Kilimandjaro",
+      "l’Aconcagua"
+    ],
+    "answer": 0,
+    "explanation": "L’Everest est le point culminant de la Terre au-dessus du niveau marin.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "National Geographic / atlas"
+  },
+  {
+    "id": "V3GW0069",
+    "knowledge_id": "V3-GW-GEO-ANDES",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quelle chaîne constitue la plus longue chaîne montagneuse continentale émergée ?",
+    "choices": [
+      "les Rocheuses",
+      "les Andes",
+      "les Alpes",
+      "l’Himalaya"
+    ],
+    "answer": 1,
+    "explanation": "Les Andes longent l’ouest de l’Amérique du Sud sur plusieurs milliers de kilomètres.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0070",
+    "knowledge_id": "V3-GW-GEO-HOT-DESERT",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel désert détient le record de superficie parmi les déserts chauds de la planète ?",
+    "choices": [
+      "le Gobi",
+      "le Namib",
+      "le Sahara",
+      "le Kalahari"
+    ],
+    "answer": 2,
+    "explanation": "Le Sahara est le plus vaste désert chaud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0071",
+    "knowledge_id": "V3-GW-GEO-ISLAND",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quelle est la plus grande île du monde si l’on exclut les continents ?",
+    "choices": [
+      "Madagascar",
+      "Bornéo",
+      "Nouvelle-Guinée",
+      "le Groenland"
+    ],
+    "answer": 3,
+    "explanation": "Le Groenland est la plus grande île non continentale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0072",
+    "knowledge_id": "V3-GW-GEO-LAKE-AREA",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quelle étendue d’eau fermée est le plus grand lac du monde par superficie ?",
+    "choices": [
+      "la mer Caspienne",
+      "le lac Supérieur",
+      "le lac Victoria",
+      "le lac Baïkal"
+    ],
+    "answer": 0,
+    "explanation": "Malgré son nom, la Caspienne est un lac endoréique et le plus vaste par superficie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0073",
+    "knowledge_id": "V3-GW-GEO-LAKE-FRESH",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel est le plus grand lac d’eau douce du monde par superficie ?",
+    "choices": [
+      "le lac Baïkal",
+      "le lac Supérieur",
+      "le lac Victoria",
+      "le lac Tanganyika"
+    ],
+    "answer": 1,
+    "explanation": "Le lac Supérieur est le plus grand lac d’eau douce par superficie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0074",
+    "knowledge_id": "V3-GW-GEO-LAKE-DEEP",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel lac détient le record mondial de profondeur maximale ?",
+    "choices": [
+      "le lac Malawi",
+      "le lac Supérieur",
+      "le lac Baïkal",
+      "le lac Tanganyika"
+    ],
+    "answer": 2,
+    "explanation": "Le Baïkal est le lac le plus profond connu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0075",
+    "knowledge_id": "V3-GW-GEO-AMAZON-DISCHARGE",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel fleuve possède le plus grand débit moyen au monde ?",
+    "choices": [
+      "le Nil",
+      "le Congo",
+      "le Mississippi",
+      "l’Amazone"
+    ],
+    "answer": 3,
+    "explanation": "L’Amazone a le plus grand débit moyen fluvial.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Hydrologie mondiale"
+  },
+  {
+    "id": "V3GW0076",
+    "knowledge_id": "V3-GW-GEO-CONGO-EQUATOR",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel grand fleuve africain traverse l’équateur à deux reprises ?",
+    "choices": [
+      "le Congo",
+      "le Nil",
+      "le Niger",
+      "le Zambèze"
+    ],
+    "answer": 0,
+    "explanation": "Le fleuve Congo traverse l’équateur deux fois.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Hydrographie africaine"
+  },
+  {
+    "id": "V3GW0077",
+    "knowledge_id": "V3-GW-GEO-NILE-SEA",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Dans quelle mer se jette le Nil ?",
+    "choices": [
+      "la mer d’Arabie",
+      "la mer Méditerranée",
+      "la mer Rouge",
+      "la mer Noire"
+    ],
+    "answer": 1,
+    "explanation": "Le Nil atteint la Méditerranée par son delta en Égypte.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0078",
+    "knowledge_id": "V3-GW-GEO-DANUBE-SEA",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Le delta du Danube débouche dans quelle mer européenne ?",
+    "choices": [
+      "la mer Adriatique",
+      "la mer du Nord",
+      "la mer Noire",
+      "la mer Baltique"
+    ],
+    "answer": 2,
+    "explanation": "Le Danube se jette dans la mer Noire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Europe"
+  },
+  {
+    "id": "V3GW0079",
+    "knowledge_id": "V3-GW-GEO-RHINE-SEA",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Dans quelle mer se jette le Rhin ?",
+    "choices": [
+      "la mer Baltique",
+      "la mer Noire",
+      "la Méditerranée",
+      "la mer du Nord"
+    ],
+    "answer": 3,
+    "explanation": "Le Rhin atteint la mer du Nord aux Pays-Bas.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Europe"
+  },
+  {
+    "id": "V3GW0080",
+    "knowledge_id": "V3-GW-GEO-VOLGA",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Dans quelle mer intérieure se jette la Volga ?",
+    "choices": [
+      "la mer Caspienne",
+      "la mer Noire",
+      "la mer d’Aral",
+      "la mer Baltique"
+    ],
+    "answer": 0,
+    "explanation": "La Volga se jette dans la mer Caspienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Europe-Asie"
+  },
+  {
+    "id": "V3GW0081",
+    "knowledge_id": "V3-GW-GEO-GANGES",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Dans quelle baie se jette le système Gange-Brahmapoutre ?",
+    "choices": [
+      "le golfe de Guinée",
+      "la baie du Bengale",
+      "le golfe Persique",
+      "la baie d’Hudson"
+    ],
+    "answer": 1,
+    "explanation": "Le delta du Gange-Brahmapoutre débouche dans la baie du Bengale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Asie"
+  },
+  {
+    "id": "V3GW0082",
+    "knowledge_id": "V3-GW-GEO-MISSISSIPPI",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Dans quel golfe se jette le Mississippi ?",
+    "choices": [
+      "le golfe d’Alaska",
+      "le golfe du Saint-Laurent",
+      "le golfe du Mexique",
+      "le golfe de Californie"
+    ],
+    "answer": 2,
+    "explanation": "Le Mississippi se jette dans le golfe du Mexique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Amérique du Nord"
+  },
+  {
+    "id": "V3GW0083",
+    "knowledge_id": "V3-GW-GEO-SUEZ",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quelles mers le canal de Suez relie-t-il directement ?",
+    "choices": [
+      "la mer Noire et la mer Égée",
+      "l’Atlantique et le Pacifique",
+      "la mer Rouge et l’océan Indien",
+      "la Méditerranée et la mer Rouge"
+    ],
+    "answer": 3,
+    "explanation": "Le canal de Suez relie la Méditerranée à la mer Rouge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Autorité du canal de Suez / atlas"
+  },
+  {
+    "id": "V3GW0084",
+    "knowledge_id": "V3-GW-GEO-PANAMA",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quels océans le canal de Panama permet-il de relier par voie maritime ?",
+    "choices": [
+      "l’Atlantique et le Pacifique",
+      "l’Atlantique et l’Indien",
+      "le Pacifique et l’Arctique",
+      "l’Indien et le Pacifique"
+    ],
+    "answer": 0,
+    "explanation": "Le canal de Panama raccourcit la liaison maritime entre Atlantique et Pacifique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Autorité du canal de Panama / atlas"
+  },
+  {
+    "id": "V3GW0085",
+    "knowledge_id": "V3-GW-GEO-GIBRALTAR",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Le détroit de Gibraltar relie la Méditerranée à quel océan ?",
+    "choices": [
+      "l’océan Arctique",
+      "l’océan Atlantique",
+      "l’océan Indien",
+      "l’océan Pacifique"
+    ],
+    "answer": 1,
+    "explanation": "Le détroit de Gibraltar ouvre la Méditerranée sur l’Atlantique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0086",
+    "knowledge_id": "V3-GW-GEO-HORMUZ",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel détroit commande l’accès maritime au golfe Persique ?",
+    "choices": [
+      "le Bosphore",
+      "le détroit de Béring",
+      "le détroit d’Ormuz",
+      "le détroit de Gibraltar"
+    ],
+    "answer": 2,
+    "explanation": "Le détroit d’Ormuz relie le golfe Persique au golfe d’Oman.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0087",
+    "knowledge_id": "V3-GW-GEO-BAB",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel détroit relie la mer Rouge au golfe d’Aden ?",
+    "choices": [
+      "Ormuz",
+      "Malacca",
+      "Béring",
+      "Bab el-Mandeb"
+    ],
+    "answer": 3,
+    "explanation": "Bab el-Mandeb est le passage entre mer Rouge et golfe d’Aden.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0088",
+    "knowledge_id": "V3-GW-GEO-BOSPORUS",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel détroit sépare en partie l’Europe de l’Asie à Istanbul ?",
+    "choices": [
+      "le Bosphore",
+      "le détroit de Magellan",
+      "le détroit de Malacca",
+      "le détroit de Davis"
+    ],
+    "answer": 0,
+    "explanation": "Le Bosphore traverse Istanbul entre Europe et Asie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0089",
+    "knowledge_id": "V3-GW-GEO-MALACCA",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel détroit est une voie maritime majeure entre la péninsule Malaise et Sumatra ?",
+    "choices": [
+      "le détroit de Messine",
+      "le détroit de Malacca",
+      "le détroit de Béring",
+      "le détroit de Gibraltar"
+    ],
+    "answer": 1,
+    "explanation": "Le détroit de Malacca est un axe maritime majeur d’Asie du Sud-Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0090",
+    "knowledge_id": "V3-GW-GEO-KILI",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Sur le territoire de quel État africain s’élève le massif du Kilimandjaro ?",
+    "choices": [
+      "l’Ouganda",
+      "l’Éthiopie",
+      "la Tanzanie",
+      "le Kenya"
+    ],
+    "answer": 2,
+    "explanation": "Le Kilimandjaro se situe en Tanzanie près de la frontière kényane.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Afrique"
+  },
+  {
+    "id": "V3GW0091",
+    "knowledge_id": "V3-GW-GEO-OKAVANGO",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Dans quel pays se trouve principalement le delta de l’Okavango ?",
+    "choices": [
+      "la Namibie",
+      "la Zambie",
+      "l’Angola",
+      "le Botswana"
+    ],
+    "answer": 3,
+    "explanation": "Le delta intérieur de l’Okavango s’étend principalement au Botswana.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "UNESCO / atlas"
+  },
+  {
+    "id": "V3GW0092",
+    "knowledge_id": "V3-GW-GEO-VICTORIA-FALLS",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Les chutes Victoria se trouvent sur la frontière entre la Zambie et quel pays ?",
+    "choices": [
+      "le Zimbabwe",
+      "le Botswana",
+      "le Mozambique",
+      "le Malawi"
+    ],
+    "answer": 0,
+    "explanation": "Les chutes Victoria sont sur le Zambèze entre Zambie et Zimbabwe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "UNESCO / atlas"
+  },
+  {
+    "id": "V3GW0093",
+    "knowledge_id": "V3-GW-GEO-LAKE-VICTORIA",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quels trois pays bordent le lac Victoria ?",
+    "choices": [
+      "Ouganda, RDC et Rwanda",
+      "Kenya, Ouganda et Tanzanie",
+      "Rwanda, Burundi et Tanzanie",
+      "Kenya, Éthiopie et Somalie"
+    ],
+    "answer": 1,
+    "explanation": "Le lac Victoria est partagé par le Kenya, l’Ouganda et la Tanzanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Afrique"
+  },
+  {
+    "id": "V3GW0094",
+    "knowledge_id": "V3-GW-GEO-NAMIB",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Sur la côte de quel pays s’étend principalement le désert du Namib ?",
+    "choices": [
+      "l’Afrique du Sud",
+      "le Botswana",
+      "la Namibie",
+      "l’Angola"
+    ],
+    "answer": 2,
+    "explanation": "Le Namib longe surtout la côte namibienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Afrique"
+  },
+  {
+    "id": "V3GW0095",
+    "knowledge_id": "V3-GW-GEO-KALAHARI",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Le désert du Kalahari se situe principalement dans quelle partie de l’Afrique ?",
+    "choices": [
+      "l’Afrique du Nord",
+      "l’Afrique de l’Ouest",
+      "l’Afrique centrale",
+      "l’Afrique australe"
+    ],
+    "answer": 3,
+    "explanation": "Le Kalahari s’étend surtout au Botswana, en Namibie et en Afrique du Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Afrique"
+  },
+  {
+    "id": "V3GW0096",
+    "knowledge_id": "V3-GW-GEO-ATLAS-MTS",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Dans quelle région se trouve la chaîne de l’Atlas ?",
+    "choices": [
+      "le Maghreb",
+      "la Corne de l’Afrique",
+      "le bassin du Congo",
+      "la vallée du Rift austral"
+    ],
+    "answer": 0,
+    "explanation": "L’Atlas traverse notamment le Maroc, l’Algérie et la Tunisie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas Afrique"
+  },
+  {
+    "id": "V3GW0097",
+    "knowledge_id": "V3-GW-GEO-RIFT",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "La vallée du Grand Rift est surtout associée à quelle partie du continent africain ?",
+    "choices": [
+      "le Maghreb",
+      "l’Afrique de l’Est",
+      "l’Afrique de l’Ouest",
+      "l’Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Le système du Rift est-africain structure une large partie de l’Afrique orientale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géologie africaine"
+  },
+  {
+    "id": "V3GW0098",
+    "knowledge_id": "V3-GW-GEO-ANTARCTICA",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel continent entoure le pôle Sud ?",
+    "choices": [
+      "l’Australie",
+      "l’Amérique du Sud",
+      "l’Antarctique",
+      "l’Arctique"
+    ],
+    "answer": 2,
+    "explanation": "L’Antarctique entoure le pôle Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0099",
+    "knowledge_id": "V3-GW-GEO-ARCTIC-POLE",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel océan entoure principalement le pôle Nord ?",
+    "choices": [
+      "l’océan Atlantique",
+      "l’océan Austral",
+      "l’océan Indien",
+      "l’océan Arctique"
+    ],
+    "answer": 3,
+    "explanation": "Le pôle Nord se situe dans l’océan Arctique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas mondial"
+  },
+  {
+    "id": "V3GW0100",
+    "knowledge_id": "V3-GW-GEO-PRIME-MERIDIAN",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel méridien sert de référence conventionnelle pour la longitude 0° ?",
+    "choices": [
+      "le méridien de Greenwich",
+      "le tropique du Cancer",
+      "l’équateur",
+      "la ligne de changement de date"
+    ],
+    "answer": 0,
+    "explanation": "Le méridien de Greenwich définit conventionnellement la longitude 0°.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IERS / géographie"
+  },
+  {
+    "id": "V3GW0101",
+    "knowledge_id": "V3-GW-GEO-EQUATOR",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "Quelle latitude correspond à l’équateur ?",
+    "choices": [
+      "90° S",
+      "0°",
+      "23,5° N",
+      "45°"
+    ],
+    "answer": 1,
+    "explanation": "L’équateur est le parallèle de latitude 0°.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "V3GW0102",
+    "knowledge_id": "V3-GW-GEO-TROPIC-CANCER",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "À quelle latitude approximative se situe le tropique du Cancer ?",
+    "choices": [
+      "23,5° S",
+      "66,5° N",
+      "23,5° N",
+      "0°"
+    ],
+    "answer": 2,
+    "explanation": "Le tropique du Cancer se trouve vers 23,5° nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Astronomie/géographie"
+  },
+  {
+    "id": "V3GW0103",
+    "knowledge_id": "V3-GW-GEO-ARCTIC-CIRCLE",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Géographie physique",
+    "prompt": "À quelle latitude approximative se situe le cercle polaire arctique ?",
+    "choices": [
+      "23,5° N",
+      "45° N",
+      "90° N",
+      "66,5° N"
+    ],
+    "answer": 3,
+    "explanation": "Le cercle polaire arctique se situe vers 66,5° nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Astronomie/géographie"
+  },
+  {
+    "id": "V3GW0104",
+    "knowledge_id": "V3-GW-ECO-001",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « valeur totale des biens et services finaux produits sur un territoire pendant une période donnée » ?",
+    "choices": [
+      "PIB",
+      "politique monétaire",
+      "importation",
+      "capital humain"
+    ],
+    "answer": 0,
+    "explanation": "PIB désigne : valeur totale des biens et services finaux produits sur un territoire pendant une période donnée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0105",
+    "knowledge_id": "V3-GW-ECO-002",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « hausse générale et durable du niveau des prix » ?",
+    "choices": [
+      "monopole",
+      "inflation",
+      "politique budgétaire",
+      "tarif douanier"
+    ],
+    "answer": 1,
+    "explanation": "inflation désigne : hausse générale et durable du niveau des prix.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0106",
+    "knowledge_id": "V3-GW-ECO-003",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « baisse générale et durable du niveau des prix » ?",
+    "choices": [
+      "quota d’importation",
+      "oligopole",
+      "déflation",
+      "taux directeur"
+    ],
+    "answer": 2,
+    "explanation": "déflation désigne : baisse générale et durable du niveau des prix.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0107",
+    "knowledge_id": "V3-GW-ECO-004",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « ralentissement du rythme de l’inflation » ?",
+    "choices": [
+      "taux de change",
+      "subvention",
+      "concurrence parfaite",
+      "désinflation"
+    ],
+    "answer": 3,
+    "explanation": "désinflation désigne : ralentissement du rythme de l’inflation.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0108",
+    "knowledge_id": "V3-GW-ECO-005",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « contraction significative de l’activité économique » ?",
+    "choices": [
+      "récession",
+      "dévaluation",
+      "investissement direct étranger",
+      "demande"
+    ],
+    "answer": 0,
+    "explanation": "récession désigne : contraction significative de l’activité économique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0109",
+    "knowledge_id": "V3-GW-ECO-006",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « augmentation durable de la production réelle d’une économie » ?",
+    "choices": [
+      "offre",
+      "croissance économique",
+      "appréciation monétaire",
+      "dette publique"
+    ],
+    "answer": 1,
+    "explanation": "croissance économique désigne : augmentation durable de la production réelle d’une économie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0110",
+    "knowledge_id": "V3-GW-ECO-007",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « part de la population active sans emploi et recherchant un travail » ?",
+    "choices": [
+      "déficit budgétaire",
+      "élasticité-prix de la demande",
+      "taux de chômage",
+      "dépréciation monétaire"
+    ],
+    "answer": 2,
+    "explanation": "taux de chômage désigne : part de la population active sans emploi et recherchant un travail.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0111",
+    "knowledge_id": "V3-GW-ECO-008",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « action de la banque centrale sur la monnaie, le crédit et les taux » ?",
+    "choices": [
+      "balance commerciale",
+      "excédent budgétaire",
+      "bien public",
+      "politique monétaire"
+    ],
+    "answer": 3,
+    "explanation": "politique monétaire désigne : action de la banque centrale sur la monnaie, le crédit et les taux.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0112",
+    "knowledge_id": "V3-GW-ECO-009",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « utilisation des dépenses publiques et de la fiscalité par l’État » ?",
+    "choices": [
+      "politique budgétaire",
+      "balance des paiements",
+      "impôt direct",
+      "externalité"
+    ],
+    "answer": 0,
+    "explanation": "politique budgétaire désigne : utilisation des dépenses publiques et de la fiscalité par l’État.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0113",
+    "knowledge_id": "V3-GW-ECO-010",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « taux fixé ou piloté par une banque centrale pour influencer les conditions monétaires » ?",
+    "choices": [
+      "bien inférieur",
+      "taux directeur",
+      "exportation",
+      "impôt indirect"
+    ],
+    "answer": 1,
+    "explanation": "taux directeur désigne : taux fixé ou piloté par une banque centrale pour influencer les conditions monétaires.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0114",
+    "knowledge_id": "V3-GW-ECO-011",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « prix d’une monnaie exprimé dans une autre monnaie » ?",
+    "choices": [
+      "TVA",
+      "bien normal",
+      "taux de change",
+      "importation"
+    ],
+    "answer": 2,
+    "explanation": "taux de change désigne : prix d’une monnaie exprimé dans une autre monnaie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0115",
+    "knowledge_id": "V3-GW-ECO-012",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « baisse officielle de la valeur d’une monnaie dans un régime de change fixe » ?",
+    "choices": [
+      "tarif douanier",
+      "coût d’opportunité",
+      "marché du travail",
+      "dévaluation"
+    ],
+    "answer": 3,
+    "explanation": "dévaluation désigne : baisse officielle de la valeur d’une monnaie dans un régime de change fixe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0116",
+    "knowledge_id": "V3-GW-ECO-013",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « hausse de la valeur d’une monnaie par rapport à une autre » ?",
+    "choices": [
+      "appréciation monétaire",
+      "quota d’importation",
+      "avantage comparatif",
+      "salaire réel"
+    ],
+    "answer": 0,
+    "explanation": "appréciation monétaire désigne : hausse de la valeur d’une monnaie par rapport à une autre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0117",
+    "knowledge_id": "V3-GW-ECO-014",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « baisse de la valeur de marché d’une monnaie par rapport à une autre » ?",
+    "choices": [
+      "salaire nominal",
+      "dépréciation monétaire",
+      "subvention",
+      "productivité"
+    ],
+    "answer": 1,
+    "explanation": "dépréciation monétaire désigne : baisse de la valeur de marché d’une monnaie par rapport à une autre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0118",
+    "knowledge_id": "V3-GW-ECO-015",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « différence entre exportations et importations de biens » ?",
+    "choices": [
+      "capital humain",
+      "taux d’intérêt réel",
+      "balance commerciale",
+      "investissement direct étranger"
+    ],
+    "answer": 2,
+    "explanation": "balance commerciale désigne : différence entre exportations et importations de biens.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0119",
+    "knowledge_id": "V3-GW-ECO-016",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « état comptable des transactions économiques entre résidents et reste du monde » ?",
+    "choices": [
+      "dette publique",
+      "monopole",
+      "taux d’intérêt nominal",
+      "balance des paiements"
+    ],
+    "answer": 3,
+    "explanation": "balance des paiements désigne : état comptable des transactions économiques entre résidents et reste du monde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0120",
+    "knowledge_id": "V3-GW-ECO-017",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « vente de biens ou services à l’étranger » ?",
+    "choices": [
+      "exportation",
+      "déficit budgétaire",
+      "oligopole",
+      "réserve obligatoire"
+    ],
+    "answer": 0,
+    "explanation": "exportation désigne : vente de biens ou services à l’étranger.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0121",
+    "knowledge_id": "V3-GW-ECO-018",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « achat de biens ou services provenant de l’étranger » ?",
+    "choices": [
+      "liquidité",
+      "importation",
+      "excédent budgétaire",
+      "concurrence parfaite"
+    ],
+    "answer": 1,
+    "explanation": "importation désigne : achat de biens ou services provenant de l’étranger.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0122",
+    "knowledge_id": "V3-GW-ECO-019",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « taxe appliquée à un produit lors de son passage en douane » ?",
+    "choices": [
+      "demande",
+      "solvabilité",
+      "tarif douanier",
+      "impôt direct"
+    ],
+    "answer": 2,
+    "explanation": "tarif douanier désigne : taxe appliquée à un produit lors de son passage en douane.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0123",
+    "knowledge_id": "V3-GW-ECO-020",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « limite quantitative imposée aux importations d’un produit » ?",
+    "choices": [
+      "impôt indirect",
+      "offre",
+      "capitalisation boursière",
+      "quota d’importation"
+    ],
+    "answer": 3,
+    "explanation": "quota d’importation désigne : limite quantitative imposée aux importations d’un produit.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0124",
+    "knowledge_id": "V3-GW-ECO-021",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « aide financière accordée pour soutenir une activité ou réduire un coût » ?",
+    "choices": [
+      "subvention",
+      "TVA",
+      "élasticité-prix de la demande",
+      "action"
+    ],
+    "answer": 0,
+    "explanation": "subvention désigne : aide financière accordée pour soutenir une activité ou réduire un coût.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0125",
+    "knowledge_id": "V3-GW-ECO-022",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « investissement transfrontalier visant une influence durable dans une entreprise » ?",
+    "choices": [
+      "obligation",
+      "investissement direct étranger",
+      "coût d’opportunité",
+      "bien public"
+    ],
+    "answer": 1,
+    "explanation": "investissement direct étranger désigne : investissement transfrontalier visant une influence durable dans une entreprise.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0126",
+    "knowledge_id": "V3-GW-ECO-023",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « ensemble des engagements financiers des administrations publiques » ?",
+    "choices": [
+      "externalité",
+      "dividende",
+      "dette publique",
+      "avantage comparatif"
+    ],
+    "answer": 2,
+    "explanation": "dette publique désigne : ensemble des engagements financiers des administrations publiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0127",
+    "knowledge_id": "V3-GW-ECO-024",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « situation où les dépenses publiques dépassent les recettes sur une période » ?",
+    "choices": [
+      "productivité",
+      "bien inférieur",
+      "taux de pauvreté",
+      "déficit budgétaire"
+    ],
+    "answer": 3,
+    "explanation": "déficit budgétaire désigne : situation où les dépenses publiques dépassent les recettes sur une période.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0128",
+    "knowledge_id": "V3-GW-ECO-025",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « situation où les recettes publiques dépassent les dépenses » ?",
+    "choices": [
+      "excédent budgétaire",
+      "capital humain",
+      "bien normal",
+      "indice des prix à la consommation"
+    ],
+    "answer": 0,
+    "explanation": "excédent budgétaire désigne : situation où les recettes publiques dépassent les dépenses.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0129",
+    "knowledge_id": "V3-GW-ECO-026",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « prélèvement supporté directement par le contribuable visé » ?",
+    "choices": [
+      "revenu national brut",
+      "impôt direct",
+      "monopole",
+      "marché du travail"
+    ],
+    "answer": 1,
+    "explanation": "impôt direct désigne : prélèvement supporté directement par le contribuable visé.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0130",
+    "knowledge_id": "V3-GW-ECO-027",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « prélèvement incorporé au prix d’un bien ou service et collecté par un intermédiaire » ?",
+    "choices": [
+      "salaire réel",
+      "PIB réel",
+      "impôt indirect",
+      "oligopole"
+    ],
+    "answer": 2,
+    "explanation": "impôt indirect désigne : prélèvement incorporé au prix d’un bien ou service et collecté par un intermédiaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0131",
+    "knowledge_id": "V3-GW-ECO-028",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « impôt indirect portant sur la valeur ajoutée lors des transactions » ?",
+    "choices": [
+      "concurrence parfaite",
+      "salaire nominal",
+      "PIB nominal",
+      "TVA"
+    ],
+    "answer": 3,
+    "explanation": "TVA désigne : impôt indirect portant sur la valeur ajoutée lors des transactions.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0132",
+    "knowledge_id": "V3-GW-ECO-029",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « valeur de la meilleure alternative à laquelle on renonce » ?",
+    "choices": [
+      "coût d’opportunité",
+      "demande",
+      "taux d’intérêt réel",
+      "parité de pouvoir d’achat"
+    ],
+    "answer": 0,
+    "explanation": "coût d’opportunité désigne : valeur de la meilleure alternative à laquelle on renonce.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0133",
+    "knowledge_id": "V3-GW-ECO-030",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « capacité à produire un bien à un coût d’opportunité relativement plus faible » ?",
+    "choices": [
+      "économie informelle",
+      "avantage comparatif",
+      "offre",
+      "taux d’intérêt nominal"
+    ],
+    "answer": 1,
+    "explanation": "avantage comparatif désigne : capacité à produire un bien à un coût d’opportunité relativement plus faible.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0134",
+    "knowledge_id": "V3-GW-ECO-031",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « quantité produite rapportée aux ressources utilisées » ?",
+    "choices": [
+      "réserve obligatoire",
+      "microfinance",
+      "productivité",
+      "élasticité-prix de la demande"
+    ],
+    "answer": 2,
+    "explanation": "productivité désigne : quantité produite rapportée aux ressources utilisées.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0135",
+    "knowledge_id": "V3-GW-ECO-032",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « ensemble des connaissances, compétences et capacités productives des personnes » ?",
+    "choices": [
+      "bien public",
+      "liquidité",
+      "diversification économique",
+      "capital humain"
+    ],
+    "answer": 3,
+    "explanation": "capital humain désigne : ensemble des connaissances, compétences et capacités productives des personnes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0136",
+    "knowledge_id": "V3-GW-ECO-033",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « marché dominé par un seul offreur » ?",
+    "choices": [
+      "monopole",
+      "externalité",
+      "solvabilité",
+      "industrialisation"
+    ],
+    "answer": 0,
+    "explanation": "monopole désigne : marché dominé par un seul offreur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0137",
+    "knowledge_id": "V3-GW-ECO-034",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « marché dominé par un petit nombre de grands offreurs » ?",
+    "choices": [
+      "chaîne de valeur",
+      "oligopole",
+      "bien inférieur",
+      "capitalisation boursière"
+    ],
+    "answer": 1,
+    "explanation": "oligopole désigne : marché dominé par un petit nombre de grands offreurs.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0138",
+    "knowledge_id": "V3-GW-ECO-035",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « modèle de marché avec nombreux offreurs et demandeurs et absence de pouvoir individuel sur le prix » ?",
+    "choices": [
+      "action",
+      "matière première",
+      "concurrence parfaite",
+      "bien normal"
+    ],
+    "answer": 2,
+    "explanation": "concurrence parfaite désigne : modèle de marché avec nombreux offreurs et demandeurs et absence de pouvoir individuel sur le prix.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0139",
+    "knowledge_id": "V3-GW-ECO-036",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « quantité d’un bien que les consommateurs souhaitent acheter selon le prix et les conditions » ?",
+    "choices": [
+      "marché du travail",
+      "obligation",
+      "termes de l’échange",
+      "demande"
+    ],
+    "answer": 3,
+    "explanation": "demande désigne : quantité d’un bien que les consommateurs souhaitent acheter selon le prix et les conditions.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0140",
+    "knowledge_id": "V3-GW-ECO-037",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « quantité d’un bien que les producteurs souhaitent vendre selon le prix et les conditions » ?",
+    "choices": [
+      "offre",
+      "salaire réel",
+      "dividende",
+      "protectionnisme"
+    ],
+    "answer": 0,
+    "explanation": "offre désigne : quantité d’un bien que les producteurs souhaitent vendre selon le prix et les conditions.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0141",
+    "knowledge_id": "V3-GW-ECO-038",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « sensibilité de la quantité demandée à une variation du prix » ?",
+    "choices": [
+      "libre-échange",
+      "élasticité-prix de la demande",
+      "salaire nominal",
+      "taux de pauvreté"
+    ],
+    "answer": 1,
+    "explanation": "élasticité-prix de la demande désigne : sensibilité de la quantité demandée à une variation du prix.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0142",
+    "knowledge_id": "V3-GW-ECO-039",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « bien généralement non rival et non excluable » ?",
+    "choices": [
+      "indice des prix à la consommation",
+      "union douanière",
+      "bien public",
+      "taux d’intérêt réel"
+    ],
+    "answer": 2,
+    "explanation": "bien public désigne : bien généralement non rival et non excluable.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0143",
+    "knowledge_id": "V3-GW-ECO-040",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « effet d’une activité économique sur un tiers non reflété directement dans le prix » ?",
+    "choices": [
+      "taux d’intérêt nominal",
+      "revenu national brut",
+      "marché commun",
+      "externalité"
+    ],
+    "answer": 3,
+    "explanation": "externalité désigne : effet d’une activité économique sur un tiers non reflété directement dans le prix.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0144",
+    "knowledge_id": "V3-GW-ECO-041",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « bien dont la demande tend à diminuer lorsque le revenu augmente, toutes choses égales par ailleurs » ?",
+    "choices": [
+      "bien inférieur",
+      "réserve obligatoire",
+      "PIB réel",
+      "zone de libre-échange"
+    ],
+    "answer": 0,
+    "explanation": "bien inférieur désigne : bien dont la demande tend à diminuer lorsque le revenu augmente, toutes choses égales par ailleurs.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0145",
+    "knowledge_id": "V3-GW-ECO-042",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « bien dont la demande tend à augmenter lorsque le revenu augmente » ?",
+    "choices": [
+      "intégration économique",
+      "bien normal",
+      "liquidité",
+      "PIB nominal"
+    ],
+    "answer": 1,
+    "explanation": "bien normal désigne : bien dont la demande tend à augmenter lorsque le revenu augmente.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0146",
+    "knowledge_id": "V3-GW-ECO-043",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « marché où se rencontrent offre et demande de travail » ?",
+    "choices": [
+      "parité de pouvoir d’achat",
+      "PIB",
+      "marché du travail",
+      "solvabilité"
+    ],
+    "answer": 2,
+    "explanation": "marché du travail désigne : marché où se rencontrent offre et demande de travail.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0147",
+    "knowledge_id": "V3-GW-ECO-044",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « pouvoir d’achat du salaire nominal corrigé des prix » ?",
+    "choices": [
+      "capitalisation boursière",
+      "économie informelle",
+      "inflation",
+      "salaire réel"
+    ],
+    "answer": 3,
+    "explanation": "salaire réel désigne : pouvoir d’achat du salaire nominal corrigé des prix.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0148",
+    "knowledge_id": "V3-GW-ECO-045",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « montant du salaire exprimé en unités monétaires courantes » ?",
+    "choices": [
+      "salaire nominal",
+      "action",
+      "microfinance",
+      "déflation"
+    ],
+    "answer": 0,
+    "explanation": "salaire nominal désigne : montant du salaire exprimé en unités monétaires courantes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0149",
+    "knowledge_id": "V3-GW-ECO-046",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « taux d’intérêt corrigé de l’inflation » ?",
+    "choices": [
+      "désinflation",
+      "taux d’intérêt réel",
+      "obligation",
+      "diversification économique"
+    ],
+    "answer": 1,
+    "explanation": "taux d’intérêt réel désigne : taux d’intérêt corrigé de l’inflation.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0150",
+    "knowledge_id": "V3-GW-ECO-047",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « taux affiché avant correction de l’inflation » ?",
+    "choices": [
+      "industrialisation",
+      "récession",
+      "taux d’intérêt nominal",
+      "dividende"
+    ],
+    "answer": 2,
+    "explanation": "taux d’intérêt nominal désigne : taux affiché avant correction de l’inflation.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0151",
+    "knowledge_id": "V3-GW-ECO-048",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « fraction des dépôts que les banques doivent conserver selon les règles monétaires » ?",
+    "choices": [
+      "taux de pauvreté",
+      "chaîne de valeur",
+      "croissance économique",
+      "réserve obligatoire"
+    ],
+    "answer": 3,
+    "explanation": "réserve obligatoire désigne : fraction des dépôts que les banques doivent conserver selon les règles monétaires.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0152",
+    "knowledge_id": "V3-GW-ECO-049",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « facilité avec laquelle un actif peut être converti en moyen de paiement sans forte perte de valeur » ?",
+    "choices": [
+      "liquidité",
+      "indice des prix à la consommation",
+      "matière première",
+      "taux de chômage"
+    ],
+    "answer": 0,
+    "explanation": "liquidité désigne : facilité avec laquelle un actif peut être converti en moyen de paiement sans forte perte de valeur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0153",
+    "knowledge_id": "V3-GW-ECO-050",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « capacité à honorer durablement ses dettes et engagements » ?",
+    "choices": [
+      "politique monétaire",
+      "solvabilité",
+      "revenu national brut",
+      "termes de l’échange"
+    ],
+    "answer": 1,
+    "explanation": "solvabilité désigne : capacité à honorer durablement ses dettes et engagements.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0154",
+    "knowledge_id": "V3-GW-ECO-051",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « valeur de marché totale des actions cotées d’une entreprise » ?",
+    "choices": [
+      "protectionnisme",
+      "politique budgétaire",
+      "capitalisation boursière",
+      "PIB réel"
+    ],
+    "answer": 2,
+    "explanation": "capitalisation boursière désigne : valeur de marché totale des actions cotées d’une entreprise.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0155",
+    "knowledge_id": "V3-GW-ECO-052",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « titre représentant une part de propriété dans une société » ?",
+    "choices": [
+      "PIB nominal",
+      "libre-échange",
+      "taux directeur",
+      "action"
+    ],
+    "answer": 3,
+    "explanation": "action désigne : titre représentant une part de propriété dans une société.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0156",
+    "knowledge_id": "V3-GW-ECO-053",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « titre de dette émis par une entreprise ou une administration » ?",
+    "choices": [
+      "obligation",
+      "parité de pouvoir d’achat",
+      "union douanière",
+      "taux de change"
+    ],
+    "answer": 0,
+    "explanation": "obligation désigne : titre de dette émis par une entreprise ou une administration.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0157",
+    "knowledge_id": "V3-GW-ECO-054",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « part du bénéfice distribuée aux actionnaires » ?",
+    "choices": [
+      "dévaluation",
+      "dividende",
+      "économie informelle",
+      "marché commun"
+    ],
+    "answer": 1,
+    "explanation": "dividende désigne : part du bénéfice distribuée aux actionnaires.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0158",
+    "knowledge_id": "V3-GW-ECO-055",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « proportion d’une population vivant sous un seuil de pauvreté défini » ?",
+    "choices": [
+      "zone de libre-échange",
+      "appréciation monétaire",
+      "taux de pauvreté",
+      "microfinance"
+    ],
+    "answer": 2,
+    "explanation": "taux de pauvreté désigne : proportion d’une population vivant sous un seuil de pauvreté défini.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0159",
+    "knowledge_id": "V3-GW-ECO-056",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « indicateur suivant l’évolution du prix d’un panier de biens et services consommés par les ménages » ?",
+    "choices": [
+      "diversification économique",
+      "intégration économique",
+      "dépréciation monétaire",
+      "indice des prix à la consommation"
+    ],
+    "answer": 3,
+    "explanation": "indice des prix à la consommation désigne : indicateur suivant l’évolution du prix d’un panier de biens et services consommés par les ménages.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0160",
+    "knowledge_id": "V3-GW-ECO-057",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « revenu total reçu par les résidents d’un pays, incluant les revenus nets provenant de l’étranger » ?",
+    "choices": [
+      "revenu national brut",
+      "industrialisation",
+      "PIB",
+      "balance commerciale"
+    ],
+    "answer": 0,
+    "explanation": "revenu national brut désigne : revenu total reçu par les résidents d’un pays, incluant les revenus nets provenant de l’étranger.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0161",
+    "knowledge_id": "V3-GW-ECO-058",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « PIB corrigé des variations de prix afin de mesurer les volumes » ?",
+    "choices": [
+      "balance des paiements",
+      "PIB réel",
+      "chaîne de valeur",
+      "inflation"
+    ],
+    "answer": 1,
+    "explanation": "PIB réel désigne : PIB corrigé des variations de prix afin de mesurer les volumes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0162",
+    "knowledge_id": "V3-GW-ECO-059",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « PIB évalué aux prix courants » ?",
+    "choices": [
+      "déflation",
+      "exportation",
+      "PIB nominal",
+      "matière première"
+    ],
+    "answer": 2,
+    "explanation": "PIB nominal désigne : PIB évalué aux prix courants.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0163",
+    "knowledge_id": "V3-GW-ECO-060",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « méthode comparant le pouvoir d’achat des monnaies à partir de niveaux de prix » ?",
+    "choices": [
+      "termes de l’échange",
+      "désinflation",
+      "importation",
+      "parité de pouvoir d’achat"
+    ],
+    "answer": 3,
+    "explanation": "parité de pouvoir d’achat désigne : méthode comparant le pouvoir d’achat des monnaies à partir de niveaux de prix.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0164",
+    "knowledge_id": "V3-GW-ECO-061",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « activités productives non ou insuffisamment enregistrées dans les cadres administratifs usuels » ?",
+    "choices": [
+      "économie informelle",
+      "protectionnisme",
+      "récession",
+      "tarif douanier"
+    ],
+    "answer": 0,
+    "explanation": "économie informelle désigne : activités productives non ou insuffisamment enregistrées dans les cadres administratifs usuels.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0165",
+    "knowledge_id": "V3-GW-ECO-062",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « services financiers destinés notamment aux personnes ou petites activités peu servies par la banque classique » ?",
+    "choices": [
+      "quota d’importation",
+      "microfinance",
+      "libre-échange",
+      "croissance économique"
+    ],
+    "answer": 1,
+    "explanation": "microfinance désigne : services financiers destinés notamment aux personnes ou petites activités peu servies par la banque classique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0166",
+    "knowledge_id": "V3-GW-ECO-063",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « réduction de la dépendance à un nombre limité de secteurs ou produits » ?",
+    "choices": [
+      "taux de chômage",
+      "subvention",
+      "diversification économique",
+      "union douanière"
+    ],
+    "answer": 2,
+    "explanation": "diversification économique désigne : réduction de la dépendance à un nombre limité de secteurs ou produits.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0167",
+    "knowledge_id": "V3-GW-ECO-064",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « développement de la production manufacturière et des capacités industrielles » ?",
+    "choices": [
+      "marché commun",
+      "politique monétaire",
+      "investissement direct étranger",
+      "industrialisation"
+    ],
+    "answer": 3,
+    "explanation": "industrialisation désigne : développement de la production manufacturière et des capacités industrielles.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0168",
+    "knowledge_id": "V3-GW-ECO-065",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « ensemble des étapes qui ajoutent de la valeur de la conception jusqu’au produit final » ?",
+    "choices": [
+      "chaîne de valeur",
+      "zone de libre-échange",
+      "politique budgétaire",
+      "dette publique"
+    ],
+    "answer": 0,
+    "explanation": "chaîne de valeur désigne : ensemble des étapes qui ajoutent de la valeur de la conception jusqu’au produit final.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0169",
+    "knowledge_id": "V3-GW-ECO-066",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « ressource de base utilisée pour produire d’autres biens » ?",
+    "choices": [
+      "déficit budgétaire",
+      "matière première",
+      "intégration économique",
+      "taux directeur"
+    ],
+    "answer": 1,
+    "explanation": "matière première désigne : ressource de base utilisée pour produire d’autres biens.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0170",
+    "knowledge_id": "V3-GW-ECO-067",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « rapport entre prix des exportations et prix des importations » ?",
+    "choices": [
+      "taux de change",
+      "excédent budgétaire",
+      "termes de l’échange",
+      "PIB"
+    ],
+    "answer": 2,
+    "explanation": "termes de l’échange désigne : rapport entre prix des exportations et prix des importations.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0171",
+    "knowledge_id": "V3-GW-ECO-068",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « politique visant à protéger la production nationale de la concurrence extérieure » ?",
+    "choices": [
+      "inflation",
+      "dévaluation",
+      "impôt direct",
+      "protectionnisme"
+    ],
+    "answer": 3,
+    "explanation": "protectionnisme désigne : politique visant à protéger la production nationale de la concurrence extérieure.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0172",
+    "knowledge_id": "V3-GW-ECO-069",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « réduction des obstacles aux échanges internationaux » ?",
+    "choices": [
+      "libre-échange",
+      "déflation",
+      "appréciation monétaire",
+      "impôt indirect"
+    ],
+    "answer": 0,
+    "explanation": "libre-échange désigne : réduction des obstacles aux échanges internationaux.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0173",
+    "knowledge_id": "V3-GW-ECO-070",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « zone où les membres suppriment les droits internes et appliquent un tarif extérieur commun » ?",
+    "choices": [
+      "TVA",
+      "union douanière",
+      "désinflation",
+      "dépréciation monétaire"
+    ],
+    "answer": 1,
+    "explanation": "union douanière désigne : zone où les membres suppriment les droits internes et appliquent un tarif extérieur commun.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0174",
+    "knowledge_id": "V3-GW-ECO-071",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « intégration permettant en principe libre circulation des biens, services, capitaux et personnes » ?",
+    "choices": [
+      "balance commerciale",
+      "coût d’opportunité",
+      "marché commun",
+      "récession"
+    ],
+    "answer": 2,
+    "explanation": "marché commun désigne : intégration permettant en principe libre circulation des biens, services, capitaux et personnes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0175",
+    "knowledge_id": "V3-GW-ECO-072",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « accord supprimant ou réduisant les droits de douane entre membres sans imposer nécessairement un tarif extérieur commun » ?",
+    "choices": [
+      "croissance économique",
+      "balance des paiements",
+      "avantage comparatif",
+      "zone de libre-échange"
+    ],
+    "answer": 3,
+    "explanation": "zone de libre-échange désigne : accord supprimant ou réduisant les droits de douane entre membres sans imposer nécessairement un tarif extérieur commun.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  },
+  {
+    "id": "V3GW0176",
+    "knowledge_id": "V3-GW-ECO-073",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Quel terme économique correspond à la définition suivante : « processus de rapprochement des économies par réduction des barrières et coordination des politiques » ?",
+    "choices": [
+      "intégration économique",
+      "taux de chômage",
+      "exportation",
+      "productivité"
+    ],
+    "answer": 0,
+    "explanation": "intégration économique désigne : processus de rapprochement des économies par réduction des barrières et coordination des politiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels d’économie générale / FMI-Banque mondiale — définitions de base"
+  }
+]

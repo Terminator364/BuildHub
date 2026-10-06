@@ -1,0 +1,1066 @@
+[
+  {
+    "id": "Q001",
+    "knowledge_id": "AFR-UA-SEAT",
+    "module": 1,
+    "domain": "Afrique",
+    "subdomain": "Union africaine",
+    "prompt": "Dans quelle ville se trouve le siège de l’Union africaine ?",
+    "choices": [
+      "Nairobi",
+      "Addis-Abeba",
+      "Le Caire",
+      "Pretoria"
+    ],
+    "answer": 1,
+    "explanation": "Le siège de l’Union africaine se trouve à Addis-Abeba, en Éthiopie.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Union africaine"
+  },
+  {
+    "id": "Q002",
+    "knowledge_id": "AFR-UA-MEMBERS",
+    "module": 1,
+    "domain": "Afrique",
+    "subdomain": "Union africaine",
+    "prompt": "Combien d’États membres compte l’Union africaine ?",
+    "choices": [
+      "54",
+      "55",
+      "56",
+      "57"
+    ],
+    "answer": 1,
+    "explanation": "L’Union africaine compte 55 États membres.",
+    "difficulty": 1,
+    "stability": "SEMI-STABLE",
+    "source": "Union africaine"
+  },
+  {
+    "id": "Q003",
+    "knowledge_id": "AFR-OUA-MEANING",
+    "module": 1,
+    "domain": "Afrique",
+    "subdomain": "OUA",
+    "prompt": "Que signifie le sigle OUA ?",
+    "choices": [
+      "Organisation de l’unité africaine",
+      "Organisation universelle africaine",
+      "Office de l’Union africaine",
+      "Organisation unifiée des Africains"
+    ],
+    "answer": 0,
+    "explanation": "OUA signifie Organisation de l’unité africaine.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Union africaine"
+  },
+  {
+    "id": "Q004",
+    "knowledge_id": "AFR-OUA-YEAR",
+    "module": 1,
+    "domain": "Afrique",
+    "subdomain": "OUA",
+    "prompt": "En quelle année l’OUA a-t-elle été fondée ?",
+    "choices": [
+      "1958",
+      "1960",
+      "1963",
+      "1971"
+    ],
+    "answer": 2,
+    "explanation": "L’OUA a été fondée en 1963.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Union africaine"
+  },
+  {
+    "id": "Q005",
+    "knowledge_id": "AFR-SADC-MEANING",
+    "module": 1,
+    "domain": "Afrique",
+    "subdomain": "SADC",
+    "prompt": "Que signifie SADC en français ?",
+    "choices": [
+      "Société africaine de développement continental",
+      "Communauté de développement de l’Afrique australe",
+      "Système africain de défense commune",
+      "Service africain de développement communautaire"
+    ],
+    "answer": 1,
+    "explanation": "SADC signifie Communauté de développement de l’Afrique australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "SADC"
+  },
+  {
+    "id": "Q006",
+    "knowledge_id": "AFR-CEEAC-MEANING",
+    "module": 1,
+    "domain": "Afrique",
+    "subdomain": "CEEAC",
+    "prompt": "Que signifie CEEAC ?",
+    "choices": [
+      "Communauté économique des États de l’Afrique centrale",
+      "Conseil économique des États africains centraux",
+      "Communauté européenne et africaine de coopération",
+      "Confédération économique de l’Afrique centrale"
+    ],
+    "answer": 0,
+    "explanation": "CEEAC signifie Communauté économique des États de l’Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "CEEAC"
+  },
+  {
+    "id": "Q007",
+    "knowledge_id": "INT-OMS-SEAT",
+    "module": 1,
+    "domain": "Organisations",
+    "subdomain": "OMS",
+    "prompt": "Où se trouve le siège de l’OMS ?",
+    "choices": [
+      "Paris",
+      "Genève",
+      "New York",
+      "Vienne"
+    ],
+    "answer": 1,
+    "explanation": "Le siège de l’Organisation mondiale de la Santé se trouve à Genève.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "OMS"
+  },
+  {
+    "id": "Q008",
+    "knowledge_id": "INT-UNICEF-SEAT",
+    "module": 1,
+    "domain": "Organisations",
+    "subdomain": "UNICEF",
+    "prompt": "Où se trouve le siège de l’UNICEF ?",
+    "choices": [
+      "New York",
+      "Genève",
+      "Paris",
+      "Rome"
+    ],
+    "answer": 0,
+    "explanation": "Le siège de l’UNICEF se trouve à New York.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "UNICEF"
+  },
+  {
+    "id": "Q009",
+    "knowledge_id": "INT-UNESCO-MEANING",
+    "module": 1,
+    "domain": "Organisations",
+    "subdomain": "UNESCO",
+    "prompt": "Quelle est la signification correcte de l’UNESCO ?",
+    "choices": [
+      "Organisation des Nations Unies pour l’éducation, la science et la culture",
+      "Union des Nations pour l’économie, la science et la culture",
+      "Organisation universelle pour l’éducation et la coopération",
+      "Union internationale pour la culture et l’enseignement"
+    ],
+    "answer": 0,
+    "explanation": "UNESCO signifie Organisation des Nations Unies pour l’éducation, la science et la culture.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "UNESCO"
+  },
+  {
+    "id": "Q010",
+    "knowledge_id": "INT-FMI-MEANING",
+    "module": 1,
+    "domain": "Organisations",
+    "subdomain": "FMI",
+    "prompt": "Que signifie FMI ?",
+    "choices": [
+      "Fonds monétaire international",
+      "Forum mondial des investissements",
+      "Fédération monétaire internationale",
+      "Fonds mondial d’innovation"
+    ],
+    "answer": 0,
+    "explanation": "FMI signifie Fonds monétaire international.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "FMI"
+  },
+  {
+    "id": "Q011",
+    "knowledge_id": "INT-UNSC-P5",
+    "module": 1,
+    "domain": "Organisations",
+    "subdomain": "ONU",
+    "prompt": "Combien de membres permanents compte le Conseil de sécurité de l’ONU ?",
+    "choices": [
+      "4",
+      "5",
+      "10",
+      "15"
+    ],
+    "answer": 1,
+    "explanation": "Le Conseil de sécurité compte cinq membres permanents.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "ONU"
+  },
+  {
+    "id": "Q012",
+    "knowledge_id": "INT-UNSC-P5-NAMES",
+    "module": 1,
+    "domain": "Organisations",
+    "subdomain": "ONU",
+    "prompt": "Quel pays n’est PAS membre permanent du Conseil de sécurité de l’ONU ?",
+    "choices": [
+      "France",
+      "Chine",
+      "Allemagne",
+      "Royaume-Uni"
+    ],
+    "answer": 2,
+    "explanation": "L’Allemagne n’est pas membre permanent. Les cinq sont Chine, États-Unis, France, Royaume-Uni et Russie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ONU"
+  },
+  {
+    "id": "Q013",
+    "knowledge_id": "RDC-INDEP-DATE",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Histoire",
+    "prompt": "Quelle est la date de l’indépendance de la RDC ?",
+    "choices": [
+      "30 juin 1960",
+      "17 mai 1997",
+      "18 février 2006",
+      "24 novembre 1965"
+    ],
+    "answer": 0,
+    "explanation": "La RDC accède à l’indépendance le 30 juin 1960.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Histoire de la RDC"
+  },
+  {
+    "id": "Q014",
+    "knowledge_id": "RDC-LUMUMBA",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Histoire",
+    "prompt": "Qui fut le premier Premier ministre du Congo indépendant en 1960 ?",
+    "choices": [
+      "Joseph Kasa-Vubu",
+      "Patrice Emery Lumumba",
+      "Joseph-Désiré Mobutu",
+      "Laurent-Désiré Kabila"
+    ],
+    "answer": 1,
+    "explanation": "Patrice Emery Lumumba fut le premier Premier ministre du Congo indépendant.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Histoire de la RDC"
+  },
+  {
+    "id": "Q015",
+    "knowledge_id": "RDC-1908",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Histoire",
+    "prompt": "Que se passe-t-il en 1908 dans l’histoire institutionnelle du Congo ?",
+    "choices": [
+      "Indépendance du Congo",
+      "Création du Zaïre",
+      "Annexion par la Belgique et naissance du Congo belge",
+      "Promulgation de la Constitution actuelle"
+    ],
+    "answer": 2,
+    "explanation": "En 1908, l’État indépendant du Congo est annexé par la Belgique et devient le Congo belge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire de la RDC"
+  },
+  {
+    "id": "Q016",
+    "knowledge_id": "RDC-1971",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Histoire",
+    "prompt": "Quel nom le pays adopte-t-il en 1971 ?",
+    "choices": [
+      "Congo-Kinshasa",
+      "Zaïre",
+      "République du Congo",
+      "Congo belge"
+    ],
+    "answer": 1,
+    "explanation": "En 1971, le pays prend le nom de Zaïre.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Histoire de la RDC"
+  },
+  {
+    "id": "Q017",
+    "knowledge_id": "RDC-1997",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Histoire",
+    "prompt": "Quel nom est rétabli en 1997 ?",
+    "choices": [
+      "Zaïre",
+      "État indépendant du Congo",
+      "République démocratique du Congo",
+      "Congo belge"
+    ],
+    "answer": 2,
+    "explanation": "En 1997, le nom République démocratique du Congo est rétabli.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Histoire de la RDC"
+  },
+  {
+    "id": "Q018",
+    "knowledge_id": "RDC-CONST-2006",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Institutions",
+    "prompt": "Quand l’actuelle Constitution de la RDC a-t-elle été promulguée ?",
+    "choices": [
+      "30 juin 1960",
+      "17 mai 1997",
+      "18 février 2006",
+      "20 janvier 2011"
+    ],
+    "answer": 2,
+    "explanation": "L’actuelle Constitution a été promulguée le 18 février 2006.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "Q019",
+    "knowledge_id": "RDC-PARLIAMENT",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Institutions",
+    "prompt": "De quelles deux chambres se compose le Parlement de la RDC ?",
+    "choices": [
+      "Assemblée nationale et Sénat",
+      "Sénat et Cour constitutionnelle",
+      "Assemblée provinciale et Sénat",
+      "Gouvernement et Assemblée nationale"
+    ],
+    "answer": 0,
+    "explanation": "Le Parlement comprend l’Assemblée nationale et le Sénat.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  },
+  {
+    "id": "Q020",
+    "knowledge_id": "RDC-PROVINCES",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Géographie administrative",
+    "prompt": "Combien de provinces compte la RDC en incluant Kinshasa ?",
+    "choices": [
+      "24",
+      "25",
+      "26",
+      "27"
+    ],
+    "answer": 2,
+    "explanation": "La RDC compte 26 provinces, Kinshasa comprise.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "RDC"
+  },
+  {
+    "id": "Q021",
+    "knowledge_id": "RDC-KONGO-CENTRAL-CAPITAL",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces",
+    "prompt": "Quel est le chef-lieu du Kongo Central ?",
+    "choices": [
+      "Boma",
+      "Matadi",
+      "Mbanza-Ngungu",
+      "Muanda"
+    ],
+    "answer": 1,
+    "explanation": "Matadi est le chef-lieu du Kongo Central.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "RDC"
+  },
+  {
+    "id": "Q022",
+    "knowledge_id": "RDC-LUALABA-CAPITAL",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces",
+    "prompt": "Quel est le chef-lieu du Lualaba ?",
+    "choices": [
+      "Likasi",
+      "Kolwezi",
+      "Lubumbashi",
+      "Kamina"
+    ],
+    "answer": 1,
+    "explanation": "Kolwezi est le chef-lieu du Lualaba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "RDC"
+  },
+  {
+    "id": "Q023",
+    "knowledge_id": "RDC-KIVU-LAKE",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Géographie physique",
+    "prompt": "Quel lac est partagé entre la RDC et le Rwanda ?",
+    "choices": [
+      "Lac Tanganyika",
+      "Lac Kivu",
+      "Lac Albert",
+      "Lac Édouard"
+    ],
+    "answer": 1,
+    "explanation": "Le lac Kivu est partagé entre la RDC et le Rwanda.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie de la RDC"
+  },
+  {
+    "id": "Q024",
+    "knowledge_id": "RDC-RWENZORI",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Relief",
+    "prompt": "Quel massif abrite le pic Marguerite, point culminant de la RDC ?",
+    "choices": [
+      "Virunga",
+      "Rwenzori",
+      "Mayombe",
+      "Mitumba"
+    ],
+    "answer": 1,
+    "explanation": "Le pic Marguerite se trouve dans le massif du Rwenzori.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie de la RDC"
+  },
+  {
+    "id": "Q025",
+    "knowledge_id": "RDC-UNESCO-COUNT",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Patrimoine",
+    "prompt": "Combien de biens naturels congolais figurent au patrimoine mondial de l’UNESCO dans le socle étudié ?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 2,
+    "explanation": "Le socle étudié retient cinq biens naturels de la RDC inscrits au patrimoine mondial.",
+    "difficulty": 2,
+    "stability": "SEMI-STABLE",
+    "source": "UNESCO"
+  },
+  {
+    "id": "Q026",
+    "knowledge_id": "RDC-MUKWEGE-NOBEL",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Personnalités",
+    "prompt": "Quel médecin congolais a reçu le prix Nobel de la paix en 2018 ?",
+    "choices": [
+      "Jean-Jacques Muyembe",
+      "Denis Mukwege",
+      "Étienne Tshisekedi",
+      "Léonard Mashako"
+    ],
+    "answer": 1,
+    "explanation": "Le Dr Denis Mukwege a reçu le prix Nobel de la paix 2018 avec Nadia Murad.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Nobel Prize"
+  },
+  {
+    "id": "Q027",
+    "knowledge_id": "AFR-NIGERIA-CAPITAL",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales",
+    "prompt": "Quelle est la capitale du Nigeria ?",
+    "choices": [
+      "Lagos",
+      "Abuja",
+      "Kano",
+      "Ibadan"
+    ],
+    "answer": 1,
+    "explanation": "La capitale du Nigeria est Abuja.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Afrique"
+  },
+  {
+    "id": "Q028",
+    "knowledge_id": "AFR-NIGERIA-CURRENCY",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie du Nigeria ?",
+    "choices": [
+      "Cedi",
+      "Naira",
+      "Rand",
+      "Shilling"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie du Nigeria est le naira.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Afrique"
+  },
+  {
+    "id": "Q029",
+    "knowledge_id": "AFR-KENYA-CAPITAL",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales",
+    "prompt": "Quelle est la capitale du Kenya ?",
+    "choices": [
+      "Mombasa",
+      "Nairobi",
+      "Kampala",
+      "Kigali"
+    ],
+    "answer": 1,
+    "explanation": "La capitale du Kenya est Nairobi.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Afrique"
+  },
+  {
+    "id": "Q030",
+    "knowledge_id": "AFR-EGYPT-CAPITAL",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales",
+    "prompt": "Quelle est la capitale de l’Égypte ?",
+    "choices": [
+      "Alexandrie",
+      "Le Caire",
+      "Gizeh",
+      "Louxor"
+    ],
+    "answer": 1,
+    "explanation": "La capitale de l’Égypte est Le Caire.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Afrique"
+  },
+  {
+    "id": "Q031",
+    "knowledge_id": "AFR-SA-CURRENCY",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de l’Afrique du Sud ?",
+    "choices": [
+      "Rand",
+      "Naira",
+      "Pula",
+      "Birr"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie de l’Afrique du Sud est le rand.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Afrique"
+  },
+  {
+    "id": "Q032",
+    "knowledge_id": "AFR-NILE-SEA",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Hydrographie",
+    "prompt": "Dans quelle mer le Nil se jette-t-il ?",
+    "choices": [
+      "Mer Rouge",
+      "Mer Méditerranée",
+      "Mer Noire",
+      "Mer d’Arabie"
+    ],
+    "answer": 1,
+    "explanation": "Le Nil se jette dans la mer Méditerranée.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie"
+  },
+  {
+    "id": "Q033",
+    "knowledge_id": "AFR-CONGO-DISCHARGE",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Hydrographie",
+    "prompt": "Quel fleuve africain est généralement classé deuxième du monde par débit après l’Amazone ?",
+    "choices": [
+      "Nil",
+      "Niger",
+      "Congo",
+      "Zambèze"
+    ],
+    "answer": 2,
+    "explanation": "Le fleuve Congo est généralement classé deuxième au monde par débit après l’Amazone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie"
+  },
+  {
+    "id": "Q034",
+    "knowledge_id": "AFR-ETHIOPIA-CAPITAL",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales",
+    "prompt": "Quelle est la capitale de l’Éthiopie ?",
+    "choices": [
+      "Asmara",
+      "Addis-Abeba",
+      "Dire Dawa",
+      "Nairobi"
+    ],
+    "answer": 1,
+    "explanation": "La capitale de l’Éthiopie est Addis-Abeba.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Afrique"
+  },
+  {
+    "id": "Q035",
+    "knowledge_id": "INT-UN-YEAR",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "ONU",
+    "prompt": "En quelle année l’Organisation des Nations Unies a-t-elle été créée ?",
+    "choices": [
+      "1919",
+      "1945",
+      "1948",
+      "1955"
+    ],
+    "answer": 1,
+    "explanation": "L’ONU a été créée en 1945.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "ONU"
+  },
+  {
+    "id": "Q036",
+    "knowledge_id": "INT-UN-MEMBERS",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "ONU",
+    "prompt": "Combien d’États membres compte l’ONU ?",
+    "choices": [
+      "191",
+      "192",
+      "193",
+      "195"
+    ],
+    "answer": 2,
+    "explanation": "L’ONU compte 193 États membres.",
+    "difficulty": 1,
+    "stability": "SEMI-STABLE",
+    "source": "ONU"
+  },
+  {
+    "id": "Q037",
+    "knowledge_id": "INT-UN-DAY",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "ONU",
+    "prompt": "À quelle date célèbre-t-on la Journée des Nations Unies ?",
+    "choices": [
+      "24 octobre",
+      "10 décembre",
+      "7 avril",
+      "5 juin"
+    ],
+    "answer": 0,
+    "explanation": "La Journée des Nations Unies est célébrée le 24 octobre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ONU"
+  },
+  {
+    "id": "Q038",
+    "knowledge_id": "ECO-INFLATION",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions",
+    "prompt": "Quelle définition décrit le mieux l’inflation ?",
+    "choices": [
+      "Une baisse générale des prix",
+      "Une hausse générale et durable du niveau des prix",
+      "Une hausse des exportations",
+      "Une baisse du PIB"
+    ],
+    "answer": 1,
+    "explanation": "L’inflation est une hausse générale et durable du niveau des prix.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "FMI"
+  },
+  {
+    "id": "Q039",
+    "knowledge_id": "ECO-GDP",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions",
+    "prompt": "Que mesure principalement le PIB ?",
+    "choices": [
+      "La dette publique",
+      "La valeur des biens et services finaux produits sur un territoire",
+      "Le taux d’alphabétisation",
+      "Le nombre d’entreprises"
+    ],
+    "answer": 1,
+    "explanation": "Le PIB mesure la valeur des biens et services finaux produits sur un territoire pendant une période donnée.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Économie"
+  },
+  {
+    "id": "Q040",
+    "knowledge_id": "ECO-EXPORT",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Commerce",
+    "prompt": "Une exportation correspond à…",
+    "choices": [
+      "un achat depuis l’étranger",
+      "une vente vers l’étranger",
+      "une baisse des taxes",
+      "une création monétaire"
+    ],
+    "answer": 1,
+    "explanation": "Exporter signifie vendre des biens ou services vers l’étranger.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Économie"
+  },
+  {
+    "id": "Q041",
+    "knowledge_id": "ECO-IMPORT",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Commerce",
+    "prompt": "Une importation correspond à…",
+    "choices": [
+      "un achat de biens ou services provenant de l’étranger",
+      "une vente vers l’étranger",
+      "une suppression d’impôts",
+      "une baisse des salaires"
+    ],
+    "answer": 0,
+    "explanation": "Importer signifie acheter des biens ou services provenant de l’étranger.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Économie"
+  },
+  {
+    "id": "Q042",
+    "knowledge_id": "INT-WHO-ROLE",
+    "module": 4,
+    "domain": "Organisations",
+    "subdomain": "OMS",
+    "prompt": "Quel domaine est au cœur de la mission de l’OMS ?",
+    "choices": [
+      "Sécurité militaire",
+      "Santé publique internationale",
+      "Commerce mondial",
+      "Transport aérien"
+    ],
+    "answer": 1,
+    "explanation": "L’OMS coordonne et soutient l’action internationale en matière de santé publique.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "OMS"
+  },
+  {
+    "id": "Q043",
+    "knowledge_id": "SCI-NEWTON",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Physique",
+    "prompt": "Quel scientifique est associé aux lois classiques du mouvement et à la gravitation universelle ?",
+    "choices": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Charles Darwin",
+      "Louis Pasteur"
+    ],
+    "answer": 1,
+    "explanation": "Isaac Newton est associé aux lois du mouvement et à la gravitation universelle.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences"
+  },
+  {
+    "id": "Q044",
+    "knowledge_id": "SCI-EINSTEIN",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Physique",
+    "prompt": "Quel scientifique est associé aux théories de la relativité ?",
+    "choices": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Galilée",
+      "Niels Bohr"
+    ],
+    "answer": 1,
+    "explanation": "Albert Einstein est associé aux théories de la relativité.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences"
+  },
+  {
+    "id": "Q045",
+    "knowledge_id": "SCI-PHOTOSYNTHESIS",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Comment s’appelle le processus par lequel les plantes utilisent l’énergie lumineuse pour produire de la matière organique ?",
+    "choices": [
+      "Fermentation",
+      "Respiration",
+      "Photosynthèse",
+      "Diffusion"
+    ],
+    "answer": 2,
+    "explanation": "Ce processus s’appelle la photosynthèse.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Biologie"
+  },
+  {
+    "id": "Q046",
+    "knowledge_id": "SCI-MERCURY",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Astronomie",
+    "prompt": "Quelle planète est la plus proche du Soleil ?",
+    "choices": [
+      "Vénus",
+      "Mercure",
+      "Mars",
+      "Terre"
+    ],
+    "answer": 1,
+    "explanation": "Mercure est la planète la plus proche du Soleil.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Astronomie"
+  },
+  {
+    "id": "Q047",
+    "knowledge_id": "SCI-MARS",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Astronomie",
+    "prompt": "Quelle planète est surnommée la planète rouge ?",
+    "choices": [
+      "Jupiter",
+      "Mars",
+      "Mercure",
+      "Saturne"
+    ],
+    "answer": 1,
+    "explanation": "Mars est surnommée la planète rouge.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Astronomie"
+  },
+  {
+    "id": "Q048",
+    "knowledge_id": "SCI-HEART",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel organe propulse le sang dans l’organisme ?",
+    "choices": [
+      "Foie",
+      "Poumons",
+      "Cœur",
+      "Reins"
+    ],
+    "answer": 2,
+    "explanation": "Le cœur assure la propulsion du sang dans la circulation.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Biologie"
+  },
+  {
+    "id": "Q049",
+    "knowledge_id": "SCI-CO2",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel gaz les plantes absorbent-elles notamment pour la photosynthèse ?",
+    "choices": [
+      "Oxygène",
+      "Dioxyde de carbone",
+      "Azote",
+      "Hydrogène"
+    ],
+    "answer": 1,
+    "explanation": "Les plantes absorbent notamment du dioxyde de carbone pour la photosynthèse.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Biologie"
+  },
+  {
+    "id": "Q050",
+    "knowledge_id": "SCI-OXYGEN-PHOTO",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel gaz est notamment libéré au cours de la photosynthèse ?",
+    "choices": [
+      "Oxygène",
+      "Méthane",
+      "Azote",
+      "Monoxyde de carbone"
+    ],
+    "answer": 0,
+    "explanation": "La photosynthèse libère notamment de l’oxygène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Biologie"
+  },
+  {
+    "id": "Q051",
+    "knowledge_id": "HIST-UN-1945",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Monde contemporain",
+    "prompt": "La création de l’ONU intervient à la fin de quelle guerre mondiale ?",
+    "choices": [
+      "Première Guerre mondiale",
+      "Deuxième Guerre mondiale",
+      "Guerre froide",
+      "Guerre de Corée"
+    ],
+    "answer": 1,
+    "explanation": "L’ONU est créée en 1945, à la fin de la Deuxième Guerre mondiale.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Histoire"
+  },
+  {
+    "id": "Q052",
+    "knowledge_id": "HIST-OUA-ADDIS",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Afrique",
+    "prompt": "Dans quelle ville l’OUA a-t-elle été fondée en 1963 ?",
+    "choices": [
+      "Accra",
+      "Addis-Abeba",
+      "Lagos",
+      "Dakar"
+    ],
+    "answer": 1,
+    "explanation": "L’OUA a été fondée à Addis-Abeba en 1963.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Union africaine"
+  },
+  {
+    "id": "Q053",
+    "knowledge_id": "CULT-NOBEL-MUKWEGE",
+    "module": 6,
+    "domain": "Culture",
+    "subdomain": "Prix",
+    "prompt": "Denis Mukwege a reçu quel grand prix international en 2018 ?",
+    "choices": [
+      "Prix Nobel de littérature",
+      "Prix Nobel de la paix",
+      "Prix Nobel de médecine",
+      "Prix Pulitzer"
+    ],
+    "answer": 1,
+    "explanation": "Denis Mukwege a reçu le prix Nobel de la paix en 2018 avec Nadia Murad.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Nobel Prize"
+  },
+  {
+    "id": "Q054",
+    "knowledge_id": "CULT-RDC-ANTHEM",
+    "module": 6,
+    "domain": "Culture",
+    "subdomain": "RDC",
+    "prompt": "Quel est l’hymne national de la RDC ?",
+    "choices": [
+      "La Congolaise",
+      "Debout Congolais",
+      "Indépendance Cha Cha",
+      "Justice-Paix-Travail"
+    ],
+    "answer": 1,
+    "explanation": "L’hymne national de la RDC est « Debout Congolais ».",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "RDC"
+  },
+  {
+    "id": "Q055",
+    "knowledge_id": "CULT-RDC-MOTTO",
+    "module": 6,
+    "domain": "Culture",
+    "subdomain": "RDC",
+    "prompt": "Quelle est la devise de la RDC ?",
+    "choices": [
+      "Unité-Travail-Progrès",
+      "Justice-Paix-Travail",
+      "Paix-Justice-Unité",
+      "Travail-Famille-Patrie"
+    ],
+    "answer": 1,
+    "explanation": "La devise de la RDC est « Justice-Paix-Travail ».",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "RDC"
+  },
+  {
+    "id": "Q056",
+    "knowledge_id": "CULT-RDC-LANGS",
+    "module": 6,
+    "domain": "Culture",
+    "subdomain": "Langues",
+    "prompt": "Lequel de ces ensembles contient les quatre langues nationales de la RDC ?",
+    "choices": [
+      "Lingala, Swahili, Tshiluba, Kikongo",
+      "Français, Lingala, Swahili, Anglais",
+      "Lingala, Kikongo, Portugais, Tshiluba",
+      "Swahili, Français, Kikongo, Arabe"
+    ],
+    "answer": 0,
+    "explanation": "Les quatre langues nationales sont le kikongo, le lingala, le swahili et le tshiluba.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Constitution de la RDC"
+  }
+]

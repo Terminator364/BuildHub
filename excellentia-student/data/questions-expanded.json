@@ -1,0 +1,4619 @@
+[
+  {
+    "id": "E0001",
+    "knowledge_id": "CHEM-ELEM-01",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Hydrogène ?",
+    "choices": [
+      "He",
+      "Mg",
+      "Ca",
+      "H"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Hydrogène est H.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0002",
+    "knowledge_id": "CHEM-ELEM-01",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole H ?",
+    "choices": [
+      "Aluminium",
+      "Fer",
+      "Hydrogène",
+      "Hélium"
+    ],
+    "answer": 2,
+    "explanation": "H est le symbole de Hydrogène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0003",
+    "knowledge_id": "CHEM-ELEM-02",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Hélium ?",
+    "choices": [
+      "Fe",
+      "He",
+      "C",
+      "Al"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Hélium est He.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0004",
+    "knowledge_id": "CHEM-ELEM-02",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole He ?",
+    "choices": [
+      "Hélium",
+      "Carbone",
+      "Silicium",
+      "Cuivre"
+    ],
+    "answer": 0,
+    "explanation": "He est le symbole de Hélium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0005",
+    "knowledge_id": "CHEM-ELEM-03",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Carbone ?",
+    "choices": [
+      "N",
+      "Si",
+      "Cu",
+      "C"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Carbone est C.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0006",
+    "knowledge_id": "CHEM-ELEM-03",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole C ?",
+    "choices": [
+      "Phosphore",
+      "Zinc",
+      "Carbone",
+      "Azote"
+    ],
+    "answer": 2,
+    "explanation": "C est le symbole de Carbone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0007",
+    "knowledge_id": "CHEM-ELEM-04",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Azote ?",
+    "choices": [
+      "Zn",
+      "N",
+      "O",
+      "P"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Azote est N.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0008",
+    "knowledge_id": "CHEM-ELEM-04",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole N ?",
+    "choices": [
+      "Azote",
+      "Oxygène",
+      "Soufre",
+      "Argent"
+    ],
+    "answer": 0,
+    "explanation": "N est le symbole de Azote.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0009",
+    "knowledge_id": "CHEM-ELEM-05",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Oxygène ?",
+    "choices": [
+      "Na",
+      "S",
+      "Ag",
+      "O"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Oxygène est O.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0010",
+    "knowledge_id": "CHEM-ELEM-05",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole O ?",
+    "choices": [
+      "Chlore",
+      "Or",
+      "Oxygène",
+      "Sodium"
+    ],
+    "answer": 2,
+    "explanation": "O est le symbole de Oxygène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0011",
+    "knowledge_id": "CHEM-ELEM-06",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Sodium ?",
+    "choices": [
+      "Au",
+      "Na",
+      "Mg",
+      "Cl"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Sodium est Na.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0012",
+    "knowledge_id": "CHEM-ELEM-06",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Na ?",
+    "choices": [
+      "Sodium",
+      "Magnésium",
+      "Potassium",
+      "Mercure"
+    ],
+    "answer": 0,
+    "explanation": "Na est le symbole de Sodium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0013",
+    "knowledge_id": "CHEM-ELEM-07",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Magnésium ?",
+    "choices": [
+      "Al",
+      "K",
+      "Hg",
+      "Mg"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Magnésium est Mg.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0014",
+    "knowledge_id": "CHEM-ELEM-07",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Mg ?",
+    "choices": [
+      "Calcium",
+      "Plomb",
+      "Magnésium",
+      "Aluminium"
+    ],
+    "answer": 2,
+    "explanation": "Mg est le symbole de Magnésium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0015",
+    "knowledge_id": "CHEM-ELEM-08",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Aluminium ?",
+    "choices": [
+      "Pb",
+      "Al",
+      "Si",
+      "Ca"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Aluminium est Al.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0016",
+    "knowledge_id": "CHEM-ELEM-08",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Al ?",
+    "choices": [
+      "Aluminium",
+      "Silicium",
+      "Fer",
+      "Étain"
+    ],
+    "answer": 0,
+    "explanation": "Al est le symbole de Aluminium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0017",
+    "knowledge_id": "CHEM-ELEM-09",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Silicium ?",
+    "choices": [
+      "P",
+      "Fe",
+      "Sn",
+      "Si"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Silicium est Si.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0018",
+    "knowledge_id": "CHEM-ELEM-09",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Si ?",
+    "choices": [
+      "Cuivre",
+      "Iode",
+      "Silicium",
+      "Phosphore"
+    ],
+    "answer": 2,
+    "explanation": "Si est le symbole de Silicium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0019",
+    "knowledge_id": "CHEM-ELEM-10",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Phosphore ?",
+    "choices": [
+      "I",
+      "P",
+      "S",
+      "Cu"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Phosphore est P.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0020",
+    "knowledge_id": "CHEM-ELEM-10",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole P ?",
+    "choices": [
+      "Phosphore",
+      "Soufre",
+      "Zinc",
+      "Cobalt"
+    ],
+    "answer": 0,
+    "explanation": "P est le symbole de Phosphore.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0021",
+    "knowledge_id": "CHEM-ELEM-11",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Soufre ?",
+    "choices": [
+      "Cl",
+      "Zn",
+      "Co",
+      "S"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Soufre est S.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0022",
+    "knowledge_id": "CHEM-ELEM-11",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole S ?",
+    "choices": [
+      "Argent",
+      "Nickel",
+      "Soufre",
+      "Chlore"
+    ],
+    "answer": 2,
+    "explanation": "S est le symbole de Soufre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0023",
+    "knowledge_id": "CHEM-ELEM-12",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Chlore ?",
+    "choices": [
+      "Ni",
+      "Cl",
+      "K",
+      "Ag"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Chlore est Cl.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0024",
+    "knowledge_id": "CHEM-ELEM-12",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Cl ?",
+    "choices": [
+      "Chlore",
+      "Potassium",
+      "Or",
+      "Hydrogène"
+    ],
+    "answer": 0,
+    "explanation": "Cl est le symbole de Chlore.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0025",
+    "knowledge_id": "CHEM-ELEM-13",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Potassium ?",
+    "choices": [
+      "Ca",
+      "Au",
+      "H",
+      "K"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Potassium est K.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0026",
+    "knowledge_id": "CHEM-ELEM-13",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole K ?",
+    "choices": [
+      "Mercure",
+      "Hélium",
+      "Potassium",
+      "Calcium"
+    ],
+    "answer": 2,
+    "explanation": "K est le symbole de Potassium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0027",
+    "knowledge_id": "CHEM-ELEM-14",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Calcium ?",
+    "choices": [
+      "He",
+      "Ca",
+      "Fe",
+      "Hg"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Calcium est Ca.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0028",
+    "knowledge_id": "CHEM-ELEM-14",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Ca ?",
+    "choices": [
+      "Calcium",
+      "Fer",
+      "Plomb",
+      "Carbone"
+    ],
+    "answer": 0,
+    "explanation": "Ca est le symbole de Calcium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0029",
+    "knowledge_id": "CHEM-ELEM-15",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Fer ?",
+    "choices": [
+      "Cu",
+      "Pb",
+      "C",
+      "Fe"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Fer est Fe.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0030",
+    "knowledge_id": "CHEM-ELEM-15",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Fe ?",
+    "choices": [
+      "Étain",
+      "Azote",
+      "Fer",
+      "Cuivre"
+    ],
+    "answer": 2,
+    "explanation": "Fe est le symbole de Fer.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0031",
+    "knowledge_id": "CHEM-ELEM-16",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Cuivre ?",
+    "choices": [
+      "N",
+      "Cu",
+      "Zn",
+      "Sn"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Cuivre est Cu.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0032",
+    "knowledge_id": "CHEM-ELEM-16",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Cu ?",
+    "choices": [
+      "Cuivre",
+      "Zinc",
+      "Iode",
+      "Oxygène"
+    ],
+    "answer": 0,
+    "explanation": "Cu est le symbole de Cuivre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0033",
+    "knowledge_id": "CHEM-ELEM-17",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Zinc ?",
+    "choices": [
+      "Ag",
+      "I",
+      "O",
+      "Zn"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Zinc est Zn.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0034",
+    "knowledge_id": "CHEM-ELEM-17",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Zn ?",
+    "choices": [
+      "Cobalt",
+      "Sodium",
+      "Zinc",
+      "Argent"
+    ],
+    "answer": 2,
+    "explanation": "Zn est le symbole de Zinc.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0035",
+    "knowledge_id": "CHEM-ELEM-18",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Argent ?",
+    "choices": [
+      "Na",
+      "Ag",
+      "Au",
+      "Co"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Argent est Ag.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0036",
+    "knowledge_id": "CHEM-ELEM-18",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Ag ?",
+    "choices": [
+      "Argent",
+      "Or",
+      "Nickel",
+      "Magnésium"
+    ],
+    "answer": 0,
+    "explanation": "Ag est le symbole de Argent.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0037",
+    "knowledge_id": "CHEM-ELEM-19",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Or ?",
+    "choices": [
+      "Hg",
+      "Ni",
+      "Mg",
+      "Au"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Or est Au.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0038",
+    "knowledge_id": "CHEM-ELEM-19",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Au ?",
+    "choices": [
+      "Hydrogène",
+      "Aluminium",
+      "Or",
+      "Mercure"
+    ],
+    "answer": 2,
+    "explanation": "Au est le symbole de Or.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0039",
+    "knowledge_id": "CHEM-ELEM-20",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Mercure ?",
+    "choices": [
+      "Al",
+      "Hg",
+      "Pb",
+      "H"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Mercure est Hg.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0040",
+    "knowledge_id": "CHEM-ELEM-20",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Hg ?",
+    "choices": [
+      "Mercure",
+      "Plomb",
+      "Hélium",
+      "Silicium"
+    ],
+    "answer": 0,
+    "explanation": "Hg est le symbole de Mercure.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0041",
+    "knowledge_id": "CHEM-ELEM-21",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Plomb ?",
+    "choices": [
+      "Sn",
+      "He",
+      "Si",
+      "Pb"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Plomb est Pb.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0042",
+    "knowledge_id": "CHEM-ELEM-21",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Pb ?",
+    "choices": [
+      "Carbone",
+      "Phosphore",
+      "Plomb",
+      "Étain"
+    ],
+    "answer": 2,
+    "explanation": "Pb est le symbole de Plomb.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0043",
+    "knowledge_id": "CHEM-ELEM-22",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Étain ?",
+    "choices": [
+      "P",
+      "Sn",
+      "I",
+      "C"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Étain est Sn.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0044",
+    "knowledge_id": "CHEM-ELEM-22",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Sn ?",
+    "choices": [
+      "Étain",
+      "Iode",
+      "Azote",
+      "Soufre"
+    ],
+    "answer": 0,
+    "explanation": "Sn est le symbole de Étain.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0045",
+    "knowledge_id": "CHEM-ELEM-23",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Iode ?",
+    "choices": [
+      "Co",
+      "N",
+      "S",
+      "I"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Iode est I.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0046",
+    "knowledge_id": "CHEM-ELEM-23",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole I ?",
+    "choices": [
+      "Oxygène",
+      "Chlore",
+      "Iode",
+      "Cobalt"
+    ],
+    "answer": 2,
+    "explanation": "I est le symbole de Iode.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0047",
+    "knowledge_id": "CHEM-ELEM-24",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Cobalt ?",
+    "choices": [
+      "Cl",
+      "Co",
+      "Ni",
+      "O"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole chimique de Cobalt est Co.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0048",
+    "knowledge_id": "CHEM-ELEM-24",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Co ?",
+    "choices": [
+      "Cobalt",
+      "Nickel",
+      "Sodium",
+      "Potassium"
+    ],
+    "answer": 0,
+    "explanation": "Co est le symbole de Cobalt.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0049",
+    "knowledge_id": "CHEM-ELEM-25",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’élément suivant : Nickel ?",
+    "choices": [
+      "H",
+      "Na",
+      "K",
+      "Ni"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole chimique de Nickel est Ni.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0050",
+    "knowledge_id": "CHEM-ELEM-25",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel élément chimique a pour symbole Ni ?",
+    "choices": [
+      "Magnésium",
+      "Calcium",
+      "Nickel",
+      "Hydrogène"
+    ],
+    "answer": 2,
+    "explanation": "Ni est le symbole de Nickel.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Tableau périodique"
+  },
+  {
+    "id": "E0051",
+    "knowledge_id": "SI-01",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la longueur ?",
+    "choices": [
+      "watt",
+      "mètre",
+      "kilogramme",
+      "mole"
+    ],
+    "answer": 1,
+    "explanation": "L’unité SI correspondante est mètre (m).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0052",
+    "knowledge_id": "SI-01",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en mètre (m) ?",
+    "choices": [
+      "longueur",
+      "masse",
+      "intensité électrique",
+      "énergie"
+    ],
+    "answer": 0,
+    "explanation": "Le mètre mesure la longueur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0053",
+    "knowledge_id": "SI-02",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la masse ?",
+    "choices": [
+      "seconde",
+      "candela",
+      "pascal",
+      "kilogramme"
+    ],
+    "answer": 3,
+    "explanation": "L’unité SI correspondante est kilogramme (kg).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0054",
+    "knowledge_id": "SI-02",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en kilogramme (kg) ?",
+    "choices": [
+      "quantité de matière",
+      "puissance",
+      "masse",
+      "temps"
+    ],
+    "answer": 2,
+    "explanation": "Le kilogramme mesure la masse.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0055",
+    "knowledge_id": "SI-03",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la temps ?",
+    "choices": [
+      "hertz",
+      "seconde",
+      "kelvin",
+      "newton"
+    ],
+    "answer": 1,
+    "explanation": "L’unité SI correspondante est seconde (s).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0056",
+    "knowledge_id": "SI-03",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en seconde (s) ?",
+    "choices": [
+      "temps",
+      "température thermodynamique",
+      "intensité lumineuse",
+      "pression"
+    ],
+    "answer": 0,
+    "explanation": "Le seconde mesure la temps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0057",
+    "knowledge_id": "SI-04",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la température thermodynamique ?",
+    "choices": [
+      "ampère",
+      "joule",
+      "coulomb",
+      "kelvin"
+    ],
+    "answer": 3,
+    "explanation": "L’unité SI correspondante est kelvin (K).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0058",
+    "knowledge_id": "SI-04",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en kelvin (K) ?",
+    "choices": [
+      "force",
+      "fréquence",
+      "température thermodynamique",
+      "intensité électrique"
+    ],
+    "answer": 2,
+    "explanation": "Le kelvin mesure la température thermodynamique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0059",
+    "knowledge_id": "SI-05",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la intensité électrique ?",
+    "choices": [
+      "volt",
+      "ampère",
+      "mole",
+      "watt"
+    ],
+    "answer": 1,
+    "explanation": "L’unité SI correspondante est ampère (A).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0060",
+    "knowledge_id": "SI-05",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en ampère (A) ?",
+    "choices": [
+      "intensité électrique",
+      "quantité de matière",
+      "énergie",
+      "charge électrique"
+    ],
+    "answer": 0,
+    "explanation": "Le ampère mesure la intensité électrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0061",
+    "knowledge_id": "SI-06",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la quantité de matière ?",
+    "choices": [
+      "candela",
+      "pascal",
+      "ohm",
+      "mole"
+    ],
+    "answer": 3,
+    "explanation": "L’unité SI correspondante est mole (mol).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0062",
+    "knowledge_id": "SI-06",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en mole (mol) ?",
+    "choices": [
+      "puissance",
+      "tension électrique",
+      "quantité de matière",
+      "intensité lumineuse"
+    ],
+    "answer": 2,
+    "explanation": "Le mole mesure la quantité de matière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0063",
+    "knowledge_id": "SI-07",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la intensité lumineuse ?",
+    "choices": [
+      "mètre",
+      "candela",
+      "newton",
+      "hertz"
+    ],
+    "answer": 1,
+    "explanation": "L’unité SI correspondante est candela (cd).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0064",
+    "knowledge_id": "SI-07",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en candela (cd) ?",
+    "choices": [
+      "intensité lumineuse",
+      "force",
+      "pression",
+      "résistance électrique"
+    ],
+    "answer": 0,
+    "explanation": "Le candela mesure la intensité lumineuse.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0065",
+    "knowledge_id": "SI-08",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la force ?",
+    "choices": [
+      "joule",
+      "coulomb",
+      "kilogramme",
+      "newton"
+    ],
+    "answer": 3,
+    "explanation": "L’unité SI correspondante est newton (N).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0066",
+    "knowledge_id": "SI-08",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en newton (N) ?",
+    "choices": [
+      "fréquence",
+      "longueur",
+      "force",
+      "énergie"
+    ],
+    "answer": 2,
+    "explanation": "Le newton mesure la force.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0067",
+    "knowledge_id": "SI-09",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la énergie ?",
+    "choices": [
+      "seconde",
+      "joule",
+      "watt",
+      "volt"
+    ],
+    "answer": 1,
+    "explanation": "L’unité SI correspondante est joule (J).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0068",
+    "knowledge_id": "SI-09",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en joule (J) ?",
+    "choices": [
+      "énergie",
+      "puissance",
+      "charge électrique",
+      "masse"
+    ],
+    "answer": 0,
+    "explanation": "Le joule mesure la énergie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0069",
+    "knowledge_id": "SI-10",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la puissance ?",
+    "choices": [
+      "pascal",
+      "ohm",
+      "kelvin",
+      "watt"
+    ],
+    "answer": 3,
+    "explanation": "L’unité SI correspondante est watt (W).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0070",
+    "knowledge_id": "SI-10",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en watt (W) ?",
+    "choices": [
+      "tension électrique",
+      "temps",
+      "puissance",
+      "pression"
+    ],
+    "answer": 2,
+    "explanation": "Le watt mesure la puissance.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0071",
+    "knowledge_id": "SI-11",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la pression ?",
+    "choices": [
+      "ampère",
+      "pascal",
+      "hertz",
+      "mètre"
+    ],
+    "answer": 1,
+    "explanation": "L’unité SI correspondante est pascal (Pa).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0072",
+    "knowledge_id": "SI-11",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en pascal (Pa) ?",
+    "choices": [
+      "pression",
+      "fréquence",
+      "résistance électrique",
+      "température thermodynamique"
+    ],
+    "answer": 0,
+    "explanation": "Le pascal mesure la pression.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0073",
+    "knowledge_id": "SI-12",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la fréquence ?",
+    "choices": [
+      "coulomb",
+      "kilogramme",
+      "mole",
+      "hertz"
+    ],
+    "answer": 3,
+    "explanation": "L’unité SI correspondante est hertz (Hz).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0074",
+    "knowledge_id": "SI-12",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en hertz (Hz) ?",
+    "choices": [
+      "longueur",
+      "intensité électrique",
+      "fréquence",
+      "charge électrique"
+    ],
+    "answer": 2,
+    "explanation": "Le hertz mesure la fréquence.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0075",
+    "knowledge_id": "SI-13",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la charge électrique ?",
+    "choices": [
+      "candela",
+      "coulomb",
+      "volt",
+      "seconde"
+    ],
+    "answer": 1,
+    "explanation": "L’unité SI correspondante est coulomb (C).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0076",
+    "knowledge_id": "SI-13",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en coulomb (C) ?",
+    "choices": [
+      "charge électrique",
+      "tension électrique",
+      "masse",
+      "quantité de matière"
+    ],
+    "answer": 0,
+    "explanation": "Le coulomb mesure la charge électrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0077",
+    "knowledge_id": "SI-14",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la tension électrique ?",
+    "choices": [
+      "ohm",
+      "kelvin",
+      "newton",
+      "volt"
+    ],
+    "answer": 3,
+    "explanation": "L’unité SI correspondante est volt (V).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0078",
+    "knowledge_id": "SI-14",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en volt (V) ?",
+    "choices": [
+      "temps",
+      "intensité lumineuse",
+      "tension électrique",
+      "résistance électrique"
+    ],
+    "answer": 2,
+    "explanation": "Le volt mesure la tension électrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0079",
+    "knowledge_id": "SI-15",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle unité SI mesure principalement la résistance électrique ?",
+    "choices": [
+      "joule",
+      "ohm",
+      "mètre",
+      "ampère"
+    ],
+    "answer": 1,
+    "explanation": "L’unité SI correspondante est ohm (Ω).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0080",
+    "knowledge_id": "SI-15",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Laquelle de ces grandeurs se mesure en ohm (Ω) ?",
+    "choices": [
+      "résistance électrique",
+      "longueur",
+      "température thermodynamique",
+      "force"
+    ],
+    "answer": 0,
+    "explanation": "Le ohm mesure la résistance électrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Système international d’unités"
+  },
+  {
+    "id": "E0081",
+    "knowledge_id": "ANAT-01",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « propulse le sang dans la circulation » ?",
+    "choices": [
+      "poumons",
+      "intestin grêle",
+      "peau",
+      "cœur"
+    ],
+    "answer": 3,
+    "explanation": "Réponse : cœur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0082",
+    "knowledge_id": "ANAT-02",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « assurent les échanges gazeux respiratoires » ?",
+    "choices": [
+      "gros intestin",
+      "rate",
+      "poumons",
+      "reins"
+    ],
+    "answer": 2,
+    "explanation": "Réponse : poumons.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0083",
+    "knowledge_id": "ANAT-03",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « filtrent le sang et participent à la production de l’urine » ?",
+    "choices": [
+      "vessie",
+      "reins",
+      "foie",
+      "pancréas"
+    ],
+    "answer": 1,
+    "explanation": "Réponse : reins.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0084",
+    "knowledge_id": "ANAT-04",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « produit la bile et joue un rôle majeur dans le métabolisme » ?",
+    "choices": [
+      "foie",
+      "estomac",
+      "thyroïde",
+      "œil"
+    ],
+    "answer": 0,
+    "explanation": "Réponse : foie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0085",
+    "knowledge_id": "ANAT-05",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « participe à la digestion des aliments » ?",
+    "choices": [
+      "intestin grêle",
+      "cerveau",
+      "oreille",
+      "estomac"
+    ],
+    "answer": 3,
+    "explanation": "Réponse : estomac.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0086",
+    "knowledge_id": "ANAT-06",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « assure l’essentiel de l’absorption des nutriments » ?",
+    "choices": [
+      "moelle épinière",
+      "trachée",
+      "intestin grêle",
+      "gros intestin"
+    ],
+    "answer": 2,
+    "explanation": "Réponse : intestin grêle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0087",
+    "knowledge_id": "ANAT-07",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « absorbe notamment de l’eau et participe à la formation des selles » ?",
+    "choices": [
+      "œsophage",
+      "gros intestin",
+      "pancréas",
+      "peau"
+    ],
+    "answer": 1,
+    "explanation": "Réponse : gros intestin.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0088",
+    "knowledge_id": "ANAT-08",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « produit des enzymes digestives et des hormones comme l’insuline » ?",
+    "choices": [
+      "pancréas",
+      "thyroïde",
+      "rate",
+      "globules rouges"
+    ],
+    "answer": 0,
+    "explanation": "Réponse : pancréas.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0089",
+    "knowledge_id": "ANAT-09",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « produit des hormones qui participent à la régulation du métabolisme » ?",
+    "choices": [
+      "cerveau",
+      "vessie",
+      "globules blancs",
+      "thyroïde"
+    ],
+    "answer": 3,
+    "explanation": "Réponse : thyroïde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0090",
+    "knowledge_id": "ANAT-10",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « coordonne de nombreuses fonctions du système nerveux » ?",
+    "choices": [
+      "œil",
+      "cœur",
+      "cerveau",
+      "moelle épinière"
+    ],
+    "answer": 2,
+    "explanation": "Réponse : cerveau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0091",
+    "knowledge_id": "ANAT-11",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « transmet des messages nerveux entre le cerveau et le reste du corps » ?",
+    "choices": [
+      "poumons",
+      "moelle épinière",
+      "peau",
+      "oreille"
+    ],
+    "answer": 1,
+    "explanation": "Réponse : moelle épinière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0092",
+    "knowledge_id": "ANAT-12",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « forme une barrière protectrice externe » ?",
+    "choices": [
+      "peau",
+      "rate",
+      "trachée",
+      "reins"
+    ],
+    "answer": 0,
+    "explanation": "Réponse : peau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0093",
+    "knowledge_id": "ANAT-13",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « participe notamment à la filtration du sang et aux fonctions immunitaires » ?",
+    "choices": [
+      "vessie",
+      "œsophage",
+      "foie",
+      "rate"
+    ],
+    "answer": 3,
+    "explanation": "Réponse : rate.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0094",
+    "knowledge_id": "ANAT-14",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « stocke l’urine avant son élimination » ?",
+    "choices": [
+      "globules rouges",
+      "estomac",
+      "vessie",
+      "œil"
+    ],
+    "answer": 2,
+    "explanation": "Réponse : vessie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0095",
+    "knowledge_id": "ANAT-15",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « organe principal de la vision » ?",
+    "choices": [
+      "intestin grêle",
+      "œil",
+      "oreille",
+      "globules blancs"
+    ],
+    "answer": 1,
+    "explanation": "Réponse : œil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0096",
+    "knowledge_id": "ANAT-16",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « participe à l’audition et à l’équilibre » ?",
+    "choices": [
+      "oreille",
+      "trachée",
+      "cœur",
+      "gros intestin"
+    ],
+    "answer": 0,
+    "explanation": "Réponse : oreille.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0097",
+    "knowledge_id": "ANAT-17",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « conduit l’air vers les bronches » ?",
+    "choices": [
+      "œsophage",
+      "poumons",
+      "pancréas",
+      "trachée"
+    ],
+    "answer": 3,
+    "explanation": "Réponse : trachée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0098",
+    "knowledge_id": "ANAT-18",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « conduit les aliments vers l’estomac » ?",
+    "choices": [
+      "reins",
+      "thyroïde",
+      "œsophage",
+      "globules rouges"
+    ],
+    "answer": 2,
+    "explanation": "Réponse : œsophage.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0099",
+    "knowledge_id": "ANAT-19",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « transportent principalement l’oxygène grâce à l’hémoglobine » ?",
+    "choices": [
+      "cerveau",
+      "globules rouges",
+      "globules blancs",
+      "foie"
+    ],
+    "answer": 1,
+    "explanation": "Réponse : globules rouges.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0100",
+    "knowledge_id": "ANAT-20",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Corps humain",
+    "prompt": "Quelle structure correspond à cette fonction : « participent aux défenses immunitaires » ?",
+    "choices": [
+      "globules blancs",
+      "cœur",
+      "estomac",
+      "moelle épinière"
+    ],
+    "answer": 0,
+    "explanation": "Réponse : globules blancs.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Anatomie humaine"
+  },
+  {
+    "id": "E0101",
+    "knowledge_id": "LIT-01",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Les Misérables » ?",
+    "choices": [
+      "Molière",
+      "Jules Verne",
+      "Fiodor Dostoïevski",
+      "Victor Hugo"
+    ],
+    "answer": 3,
+    "explanation": "Les Misérables est une œuvre de Victor Hugo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0102",
+    "knowledge_id": "LIT-01",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Victor Hugo ?",
+    "choices": [
+      "Candide",
+      "1984",
+      "Les Misérables",
+      "Le Malade imaginaire"
+    ],
+    "answer": 2,
+    "explanation": "Victor Hugo est l’auteur de Les Misérables.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0103",
+    "knowledge_id": "LIT-02",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Malade imaginaire » ?",
+    "choices": [
+      "George Orwell",
+      "Molière",
+      "Albert Camus",
+      "Miguel de Cervantès"
+    ],
+    "answer": 1,
+    "explanation": "Le Malade imaginaire est une œuvre de Molière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0104",
+    "knowledge_id": "LIT-02",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Molière ?",
+    "choices": [
+      "Le Malade imaginaire",
+      "L’Étranger",
+      "Vingt mille lieues sous les mers",
+      "Le Monde s’effondre"
+    ],
+    "answer": 0,
+    "explanation": "Molière est l’auteur de Le Malade imaginaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0105",
+    "knowledge_id": "LIT-03",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « L’Étranger » ?",
+    "choices": [
+      "Émile Zola",
+      "William Shakespeare",
+      "Chinua Achebe",
+      "Albert Camus"
+    ],
+    "answer": 3,
+    "explanation": "L’Étranger est une œuvre de Albert Camus.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0106",
+    "knowledge_id": "LIT-03",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Albert Camus ?",
+    "choices": [
+      "Don Quichotte",
+      "Chants d’ombre",
+      "L’Étranger",
+      "Germinal"
+    ],
+    "answer": 2,
+    "explanation": "Albert Camus est l’auteur de L’Étranger.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0107",
+    "knowledge_id": "LIT-04",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Germinal » ?",
+    "choices": [
+      "Léopold Sédar Senghor",
+      "Émile Zola",
+      "Antoine de Saint-Exupéry",
+      "Johann Wolfgang von Goethe"
+    ],
+    "answer": 1,
+    "explanation": "Germinal est une œuvre de Émile Zola.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0108",
+    "knowledge_id": "LIT-04",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Émile Zola ?",
+    "choices": [
+      "Germinal",
+      "Le Petit Prince",
+      "Hamlet",
+      "Cahier d’un retour au pays natal"
+    ],
+    "answer": 0,
+    "explanation": "Émile Zola est l’auteur de Germinal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0109",
+    "knowledge_id": "LIT-05",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Petit Prince » ?",
+    "choices": [
+      "Voltaire",
+      "Dante Alighieri",
+      "Aimé Césaire",
+      "Antoine de Saint-Exupéry"
+    ],
+    "answer": 3,
+    "explanation": "Le Petit Prince est une œuvre de Antoine de Saint-Exupéry.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0110",
+    "knowledge_id": "LIT-05",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Antoine de Saint-Exupéry ?",
+    "choices": [
+      "Faust",
+      "Une si longue lettre",
+      "Le Petit Prince",
+      "Candide"
+    ],
+    "answer": 2,
+    "explanation": "Antoine de Saint-Exupéry est l’auteur de Le Petit Prince.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0111",
+    "knowledge_id": "LIT-06",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Candide » ?",
+    "choices": [
+      "Mariama Bâ",
+      "Voltaire",
+      "Jules Verne",
+      "Léon Tolstoï"
+    ],
+    "answer": 1,
+    "explanation": "Candide est une œuvre de Voltaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0112",
+    "knowledge_id": "LIT-06",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Voltaire ?",
+    "choices": [
+      "Candide",
+      "Vingt mille lieues sous les mers",
+      "La Divine Comédie",
+      "Mission terminée"
+    ],
+    "answer": 0,
+    "explanation": "Voltaire est l’auteur de Candide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0113",
+    "knowledge_id": "LIT-07",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Vingt mille lieues sous les mers » ?",
+    "choices": [
+      "Miguel de Cervantès",
+      "Fiodor Dostoïevski",
+      "Mongo Beti",
+      "Jules Verne"
+    ],
+    "answer": 3,
+    "explanation": "Vingt mille lieues sous les mers est une œuvre de Jules Verne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0114",
+    "knowledge_id": "LIT-07",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Jules Verne ?",
+    "choices": [
+      "Guerre et Paix",
+      "L’Enfant noir",
+      "Vingt mille lieues sous les mers",
+      "Don Quichotte"
+    ],
+    "answer": 2,
+    "explanation": "Jules Verne est l’auteur de Vingt mille lieues sous les mers.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0115",
+    "knowledge_id": "LIT-08",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Don Quichotte » ?",
+    "choices": [
+      "Camara Laye",
+      "Miguel de Cervantès",
+      "William Shakespeare",
+      "George Orwell"
+    ],
+    "answer": 1,
+    "explanation": "Don Quichotte est une œuvre de Miguel de Cervantès.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0116",
+    "knowledge_id": "LIT-08",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Miguel de Cervantès ?",
+    "choices": [
+      "Don Quichotte",
+      "Hamlet",
+      "Crime et Châtiment",
+      "Les Misérables"
+    ],
+    "answer": 0,
+    "explanation": "Miguel de Cervantès est l’auteur de Don Quichotte.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0117",
+    "knowledge_id": "LIT-09",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Hamlet » ?",
+    "choices": [
+      "Johann Wolfgang von Goethe",
+      "Chinua Achebe",
+      "Victor Hugo",
+      "William Shakespeare"
+    ],
+    "answer": 3,
+    "explanation": "Hamlet est une œuvre de William Shakespeare.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0118",
+    "knowledge_id": "LIT-09",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à William Shakespeare ?",
+    "choices": [
+      "1984",
+      "Le Malade imaginaire",
+      "Hamlet",
+      "Faust"
+    ],
+    "answer": 2,
+    "explanation": "William Shakespeare est l’auteur de Hamlet.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0119",
+    "knowledge_id": "LIT-10",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Faust » ?",
+    "choices": [
+      "Molière",
+      "Johann Wolfgang von Goethe",
+      "Dante Alighieri",
+      "Léopold Sédar Senghor"
+    ],
+    "answer": 1,
+    "explanation": "Faust est une œuvre de Johann Wolfgang von Goethe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0120",
+    "knowledge_id": "LIT-10",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Johann Wolfgang von Goethe ?",
+    "choices": [
+      "Faust",
+      "La Divine Comédie",
+      "Le Monde s’effondre",
+      "L’Étranger"
+    ],
+    "answer": 0,
+    "explanation": "Johann Wolfgang von Goethe est l’auteur de Faust.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0121",
+    "knowledge_id": "LIT-11",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « La Divine Comédie » ?",
+    "choices": [
+      "Léon Tolstoï",
+      "Aimé Césaire",
+      "Albert Camus",
+      "Dante Alighieri"
+    ],
+    "answer": 3,
+    "explanation": "La Divine Comédie est une œuvre de Dante Alighieri.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0122",
+    "knowledge_id": "LIT-11",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Dante Alighieri ?",
+    "choices": [
+      "Chants d’ombre",
+      "Germinal",
+      "La Divine Comédie",
+      "Guerre et Paix"
+    ],
+    "answer": 2,
+    "explanation": "Dante Alighieri est l’auteur de La Divine Comédie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0123",
+    "knowledge_id": "LIT-12",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Guerre et Paix » ?",
+    "choices": [
+      "Émile Zola",
+      "Léon Tolstoï",
+      "Fiodor Dostoïevski",
+      "Mariama Bâ"
+    ],
+    "answer": 1,
+    "explanation": "Guerre et Paix est une œuvre de Léon Tolstoï.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0124",
+    "knowledge_id": "LIT-12",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Léon Tolstoï ?",
+    "choices": [
+      "Guerre et Paix",
+      "Crime et Châtiment",
+      "Cahier d’un retour au pays natal",
+      "Le Petit Prince"
+    ],
+    "answer": 0,
+    "explanation": "Léon Tolstoï est l’auteur de Guerre et Paix.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0125",
+    "knowledge_id": "LIT-13",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Crime et Châtiment » ?",
+    "choices": [
+      "George Orwell",
+      "Mongo Beti",
+      "Antoine de Saint-Exupéry",
+      "Fiodor Dostoïevski"
+    ],
+    "answer": 3,
+    "explanation": "Crime et Châtiment est une œuvre de Fiodor Dostoïevski.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0126",
+    "knowledge_id": "LIT-13",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Fiodor Dostoïevski ?",
+    "choices": [
+      "Une si longue lettre",
+      "Candide",
+      "Crime et Châtiment",
+      "1984"
+    ],
+    "answer": 2,
+    "explanation": "Fiodor Dostoïevski est l’auteur de Crime et Châtiment.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0127",
+    "knowledge_id": "LIT-14",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « 1984 » ?",
+    "choices": [
+      "Voltaire",
+      "George Orwell",
+      "Chinua Achebe",
+      "Camara Laye"
+    ],
+    "answer": 1,
+    "explanation": "1984 est une œuvre de George Orwell.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0128",
+    "knowledge_id": "LIT-14",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à George Orwell ?",
+    "choices": [
+      "1984",
+      "Le Monde s’effondre",
+      "Mission terminée",
+      "Vingt mille lieues sous les mers"
+    ],
+    "answer": 0,
+    "explanation": "George Orwell est l’auteur de 1984.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0129",
+    "knowledge_id": "LIT-15",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Monde s’effondre » ?",
+    "choices": [
+      "Léopold Sédar Senghor",
+      "Victor Hugo",
+      "Jules Verne",
+      "Chinua Achebe"
+    ],
+    "answer": 3,
+    "explanation": "Le Monde s’effondre est une œuvre de Chinua Achebe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0130",
+    "knowledge_id": "LIT-15",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Chinua Achebe ?",
+    "choices": [
+      "L’Enfant noir",
+      "Don Quichotte",
+      "Le Monde s’effondre",
+      "Chants d’ombre"
+    ],
+    "answer": 2,
+    "explanation": "Chinua Achebe est l’auteur de Le Monde s’effondre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0131",
+    "knowledge_id": "LIT-16",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Chants d’ombre » ?",
+    "choices": [
+      "Miguel de Cervantès",
+      "Léopold Sédar Senghor",
+      "Aimé Césaire",
+      "Molière"
+    ],
+    "answer": 1,
+    "explanation": "Chants d’ombre est une œuvre de Léopold Sédar Senghor.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0132",
+    "knowledge_id": "LIT-16",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Léopold Sédar Senghor ?",
+    "choices": [
+      "Chants d’ombre",
+      "Cahier d’un retour au pays natal",
+      "Les Misérables",
+      "Hamlet"
+    ],
+    "answer": 0,
+    "explanation": "Léopold Sédar Senghor est l’auteur de Chants d’ombre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0133",
+    "knowledge_id": "LIT-17",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Cahier d’un retour au pays natal » ?",
+    "choices": [
+      "Mariama Bâ",
+      "Albert Camus",
+      "William Shakespeare",
+      "Aimé Césaire"
+    ],
+    "answer": 3,
+    "explanation": "Cahier d’un retour au pays natal est une œuvre de Aimé Césaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0134",
+    "knowledge_id": "LIT-17",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Aimé Césaire ?",
+    "choices": [
+      "Le Malade imaginaire",
+      "Faust",
+      "Cahier d’un retour au pays natal",
+      "Une si longue lettre"
+    ],
+    "answer": 2,
+    "explanation": "Aimé Césaire est l’auteur de Cahier d’un retour au pays natal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0135",
+    "knowledge_id": "LIT-18",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Une si longue lettre » ?",
+    "choices": [
+      "Johann Wolfgang von Goethe",
+      "Mariama Bâ",
+      "Mongo Beti",
+      "Émile Zola"
+    ],
+    "answer": 1,
+    "explanation": "Une si longue lettre est une œuvre de Mariama Bâ.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0136",
+    "knowledge_id": "LIT-18",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Mariama Bâ ?",
+    "choices": [
+      "Une si longue lettre",
+      "Mission terminée",
+      "L’Étranger",
+      "La Divine Comédie"
+    ],
+    "answer": 0,
+    "explanation": "Mariama Bâ est l’auteur de Une si longue lettre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0137",
+    "knowledge_id": "LIT-19",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Mission terminée » ?",
+    "choices": [
+      "Camara Laye",
+      "Antoine de Saint-Exupéry",
+      "Dante Alighieri",
+      "Mongo Beti"
+    ],
+    "answer": 3,
+    "explanation": "Mission terminée est une œuvre de Mongo Beti.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0138",
+    "knowledge_id": "LIT-19",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Mongo Beti ?",
+    "choices": [
+      "Germinal",
+      "Guerre et Paix",
+      "Mission terminée",
+      "L’Enfant noir"
+    ],
+    "answer": 2,
+    "explanation": "Mongo Beti est l’auteur de Mission terminée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0139",
+    "knowledge_id": "LIT-20",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « L’Enfant noir » ?",
+    "choices": [
+      "Léon Tolstoï",
+      "Camara Laye",
+      "Victor Hugo",
+      "Voltaire"
+    ],
+    "answer": 1,
+    "explanation": "L’Enfant noir est une œuvre de Camara Laye.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0140",
+    "knowledge_id": "LIT-20",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre est associée à Camara Laye ?",
+    "choices": [
+      "L’Enfant noir",
+      "Les Misérables",
+      "Le Petit Prince",
+      "Crime et Châtiment"
+    ],
+    "answer": 0,
+    "explanation": "Camara Laye est l’auteur de L’Enfant noir.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Littérature générale"
+  },
+  {
+    "id": "E0141",
+    "knowledge_id": "HIST-01",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique ?",
+    "choices": [
+      "1776",
+      "1918",
+      "1948",
+      "1492"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 1492.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0142",
+    "knowledge_id": "HIST-01",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1492 ?",
+    "choices": [
+      "la Deuxième Guerre mondiale se termine",
+      "le mur de Berlin s’ouvre puis tombe",
+      "Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique",
+      "la Déclaration d’indépendance des États-Unis est adoptée"
+    ],
+    "answer": 2,
+    "explanation": "1492 : Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0143",
+    "knowledge_id": "HIST-02",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année la Déclaration d’indépendance des États-Unis est adoptée ?",
+    "choices": [
+      "1960",
+      "1776",
+      "1789",
+      "1939"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 1776.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0144",
+    "knowledge_id": "HIST-02",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1776 ?",
+    "choices": [
+      "la Déclaration d’indépendance des États-Unis est adoptée",
+      "la Révolution française commence",
+      "l’Organisation des Nations Unies est créée",
+      "l’Union soviétique se dissout"
+    ],
+    "answer": 0,
+    "explanation": "1776 : la Déclaration d’indépendance des États-Unis est adoptée.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0145",
+    "knowledge_id": "HIST-03",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année la Révolution française commence ?",
+    "choices": [
+      "1914",
+      "1945",
+      "1963",
+      "1789"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 1789.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0146",
+    "knowledge_id": "HIST-03",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1789 ?",
+    "choices": [
+      "la Déclaration universelle des droits de l’homme est adoptée",
+      "l’Union africaine succède à l’OUA",
+      "la Révolution française commence",
+      "la Première Guerre mondiale commence"
+    ],
+    "answer": 2,
+    "explanation": "1789 : la Révolution française commence.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0147",
+    "knowledge_id": "HIST-04",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année la Première Guerre mondiale commence ?",
+    "choices": [
+      "1969",
+      "1914",
+      "1918",
+      "1948"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 1914.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0148",
+    "knowledge_id": "HIST-04",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1914 ?",
+    "choices": [
+      "la Première Guerre mondiale commence",
+      "la Première Guerre mondiale se termine",
+      "la RDC accède à l’indépendance",
+      "le Congo devient officiellement une colonie belge sous le nom de Congo belge"
+    ],
+    "answer": 0,
+    "explanation": "1914 : la Première Guerre mondiale commence.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0149",
+    "knowledge_id": "HIST-05",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année la Première Guerre mondiale se termine ?",
+    "choices": [
+      "1939",
+      "1960",
+      "1989",
+      "1918"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 1918.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0150",
+    "knowledge_id": "HIST-05",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1918 ?",
+    "choices": [
+      "l’Organisation de l’unité africaine est créée",
+      "le Congo-Kinshasa prend le nom de Zaïre",
+      "la Première Guerre mondiale se termine",
+      "la Deuxième Guerre mondiale commence"
+    ],
+    "answer": 2,
+    "explanation": "1918 : la Première Guerre mondiale se termine.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0151",
+    "knowledge_id": "HIST-06",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année la Deuxième Guerre mondiale commence ?",
+    "choices": [
+      "1991",
+      "1939",
+      "1945",
+      "1963"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 1939.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0152",
+    "knowledge_id": "HIST-06",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1939 ?",
+    "choices": [
+      "la Deuxième Guerre mondiale commence",
+      "la Deuxième Guerre mondiale se termine",
+      "Apollo 11 réalise le premier alunissage habité",
+      "le nom République démocratique du Congo est rétabli"
+    ],
+    "answer": 0,
+    "explanation": "1939 : la Deuxième Guerre mondiale commence.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0153",
+    "knowledge_id": "HIST-07",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année la Deuxième Guerre mondiale se termine ?",
+    "choices": [
+      "1948",
+      "1969",
+      "2002",
+      "1945"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 1945.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0154",
+    "knowledge_id": "HIST-07",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1945 ?",
+    "choices": [
+      "le mur de Berlin s’ouvre puis tombe",
+      "l’actuelle Constitution de la RDC est promulguée",
+      "la Deuxième Guerre mondiale se termine",
+      "l’Organisation des Nations Unies est créée"
+    ],
+    "answer": 2,
+    "explanation": "1945 : la Deuxième Guerre mondiale se termine.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0155",
+    "knowledge_id": "HIST-08",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année l’Organisation des Nations Unies est créée ?",
+    "choices": [
+      "1908",
+      "1945",
+      "1960",
+      "1989"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 1945.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0157",
+    "knowledge_id": "HIST-09",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année la Déclaration universelle des droits de l’homme est adoptée ?",
+    "choices": [
+      "1963",
+      "1991",
+      "1971",
+      "1948"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 1948.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0158",
+    "knowledge_id": "HIST-09",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1948 ?",
+    "choices": [
+      "l’Union africaine succède à l’OUA",
+      "Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique",
+      "la Déclaration universelle des droits de l’homme est adoptée",
+      "la RDC accède à l’indépendance"
+    ],
+    "answer": 2,
+    "explanation": "1948 : la Déclaration universelle des droits de l’homme est adoptée.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0159",
+    "knowledge_id": "HIST-10",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année la RDC accède à l’indépendance ?",
+    "choices": [
+      "1997",
+      "1960",
+      "1969",
+      "2002"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 1960.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0160",
+    "knowledge_id": "HIST-10",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1960 ?",
+    "choices": [
+      "la RDC accède à l’indépendance",
+      "l’Organisation de l’unité africaine est créée",
+      "le Congo devient officiellement une colonie belge sous le nom de Congo belge",
+      "la Déclaration d’indépendance des États-Unis est adoptée"
+    ],
+    "answer": 0,
+    "explanation": "1960 : la RDC accède à l’indépendance.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0161",
+    "knowledge_id": "HIST-11",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année l’Organisation de l’unité africaine est créée ?",
+    "choices": [
+      "1989",
+      "1908",
+      "2006",
+      "1963"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 1963.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0162",
+    "knowledge_id": "HIST-11",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1963 ?",
+    "choices": [
+      "le Congo-Kinshasa prend le nom de Zaïre",
+      "la Révolution française commence",
+      "l’Organisation de l’unité africaine est créée",
+      "Apollo 11 réalise le premier alunissage habité"
+    ],
+    "answer": 2,
+    "explanation": "1963 : l’Organisation de l’unité africaine est créée.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0163",
+    "knowledge_id": "HIST-12",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année Apollo 11 réalise le premier alunissage habité ?",
+    "choices": [
+      "2018",
+      "1969",
+      "1991",
+      "1971"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 1969.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0164",
+    "knowledge_id": "HIST-12",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1969 ?",
+    "choices": [
+      "Apollo 11 réalise le premier alunissage habité",
+      "le mur de Berlin s’ouvre puis tombe",
+      "le nom République démocratique du Congo est rétabli",
+      "la Première Guerre mondiale commence"
+    ],
+    "answer": 0,
+    "explanation": "1969 : Apollo 11 réalise le premier alunissage habité.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0165",
+    "knowledge_id": "HIST-13",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année le mur de Berlin s’ouvre puis tombe ?",
+    "choices": [
+      "2002",
+      "1997",
+      "1492",
+      "1989"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 1989.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0166",
+    "knowledge_id": "HIST-13",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1989 ?",
+    "choices": [
+      "l’actuelle Constitution de la RDC est promulguée",
+      "la Première Guerre mondiale se termine",
+      "le mur de Berlin s’ouvre puis tombe",
+      "l’Union soviétique se dissout"
+    ],
+    "answer": 2,
+    "explanation": "1989 : le mur de Berlin s’ouvre puis tombe.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0167",
+    "knowledge_id": "HIST-14",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année l’Union soviétique se dissout ?",
+    "choices": [
+      "1776",
+      "1991",
+      "1908",
+      "2006"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 1991.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0168",
+    "knowledge_id": "HIST-14",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1991 ?",
+    "choices": [
+      "l’Union soviétique se dissout",
+      "l’Union africaine succède à l’OUA",
+      "Denis Mukwege reçoit le prix Nobel de la paix avec Nadia Murad",
+      "la Deuxième Guerre mondiale commence"
+    ],
+    "answer": 0,
+    "explanation": "1991 : l’Union soviétique se dissout.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0169",
+    "knowledge_id": "HIST-15",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année l’Union africaine succède à l’OUA ?",
+    "choices": [
+      "1971",
+      "2018",
+      "1789",
+      "2002"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 2002.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0170",
+    "knowledge_id": "HIST-15",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 2002 ?",
+    "choices": [
+      "Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique",
+      "la Deuxième Guerre mondiale se termine",
+      "l’Union africaine succède à l’OUA",
+      "le Congo devient officiellement une colonie belge sous le nom de Congo belge"
+    ],
+    "answer": 2,
+    "explanation": "2002 : l’Union africaine succède à l’OUA.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0171",
+    "knowledge_id": "HIST-16",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année le Congo devient officiellement une colonie belge sous le nom de Congo belge ?",
+    "choices": [
+      "1914",
+      "1908",
+      "1997",
+      "1492"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 1908.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0172",
+    "knowledge_id": "HIST-16",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1908 ?",
+    "choices": [
+      "le Congo devient officiellement une colonie belge sous le nom de Congo belge",
+      "le Congo-Kinshasa prend le nom de Zaïre",
+      "la Déclaration d’indépendance des États-Unis est adoptée",
+      "l’Organisation des Nations Unies est créée"
+    ],
+    "answer": 0,
+    "explanation": "1908 : le Congo devient officiellement une colonie belge sous le nom de Congo belge.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0173",
+    "knowledge_id": "HIST-17",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année le Congo-Kinshasa prend le nom de Zaïre ?",
+    "choices": [
+      "2006",
+      "1776",
+      "1918",
+      "1971"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 1971.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0174",
+    "knowledge_id": "HIST-17",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1971 ?",
+    "choices": [
+      "la Révolution française commence",
+      "la Déclaration universelle des droits de l’homme est adoptée",
+      "le Congo-Kinshasa prend le nom de Zaïre",
+      "le nom République démocratique du Congo est rétabli"
+    ],
+    "answer": 2,
+    "explanation": "1971 : le Congo-Kinshasa prend le nom de Zaïre.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0175",
+    "knowledge_id": "HIST-18",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année le nom République démocratique du Congo est rétabli ?",
+    "choices": [
+      "1939",
+      "1997",
+      "2018",
+      "1789"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 1997.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0176",
+    "knowledge_id": "HIST-18",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 1997 ?",
+    "choices": [
+      "le nom République démocratique du Congo est rétabli",
+      "l’actuelle Constitution de la RDC est promulguée",
+      "la Première Guerre mondiale commence",
+      "la RDC accède à l’indépendance"
+    ],
+    "answer": 0,
+    "explanation": "1997 : le nom République démocratique du Congo est rétabli.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0177",
+    "knowledge_id": "HIST-19",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année l’actuelle Constitution de la RDC est promulguée ?",
+    "choices": [
+      "1492",
+      "1914",
+      "1945",
+      "2006"
+    ],
+    "answer": 3,
+    "explanation": "Repère chronologique : 2006.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0178",
+    "knowledge_id": "HIST-19",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 2006 ?",
+    "choices": [
+      "la Première Guerre mondiale se termine",
+      "l’Organisation de l’unité africaine est créée",
+      "l’actuelle Constitution de la RDC est promulguée",
+      "Denis Mukwege reçoit le prix Nobel de la paix avec Nadia Murad"
+    ],
+    "answer": 2,
+    "explanation": "2006 : l’actuelle Constitution de la RDC est promulguée.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0179",
+    "knowledge_id": "HIST-20",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "En quelle année Denis Mukwege reçoit le prix Nobel de la paix avec Nadia Murad ?",
+    "choices": [
+      "1948",
+      "2018",
+      "1776",
+      "1918"
+    ],
+    "answer": 1,
+    "explanation": "Repère chronologique : 2018.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0180",
+    "knowledge_id": "HIST-20",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond à l’année 2018 ?",
+    "choices": [
+      "Denis Mukwege reçoit le prix Nobel de la paix avec Nadia Murad",
+      "Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique",
+      "la Deuxième Guerre mondiale commence",
+      "Apollo 11 réalise le premier alunissage habité"
+    ],
+    "answer": 0,
+    "explanation": "2018 : Denis Mukwege reçoit le prix Nobel de la paix avec Nadia Murad.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale"
+  },
+  {
+    "id": "E0183",
+    "knowledge_id": "GEO-03",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel est le plus grand désert chaud du monde ?",
+    "choices": [
+      "l’Atacama",
+      "le Sahara",
+      "le Kalahari",
+      "le Gobi"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : le Sahara.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0184",
+    "knowledge_id": "GEO-04",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quelle est la plus haute montagne du monde au-dessus du niveau de la mer ?",
+    "choices": [
+      "l’Everest",
+      "le K2",
+      "le Kilimandjaro",
+      "le Mont Blanc"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : l’Everest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0185",
+    "knowledge_id": "GEO-05",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel est le plus grand pays du monde par superficie ?",
+    "choices": [
+      "le Canada",
+      "la Chine",
+      "les États-Unis",
+      "la Russie"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : la Russie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0186",
+    "knowledge_id": "GEO-06",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel est le plus grand lac du monde par superficie ?",
+    "choices": [
+      "le lac Victoria",
+      "le lac Baïkal",
+      "la mer Caspienne",
+      "le lac Supérieur"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : la mer Caspienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0187",
+    "knowledge_id": "GEO-07",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel est le lac le plus profond du monde ?",
+    "choices": [
+      "le lac Supérieur",
+      "le lac Baïkal",
+      "le lac Victoria",
+      "le lac Tanganyika"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : le lac Baïkal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0188",
+    "knowledge_id": "GEO-08",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quelle est la plus grande île du monde, en excluant les continents ?",
+    "choices": [
+      "le Groenland",
+      "Madagascar",
+      "Bornéo",
+      "Nouvelle-Guinée"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : le Groenland.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0189",
+    "knowledge_id": "GEO-09",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel canal relie la mer Méditerranée et la mer Rouge ?",
+    "choices": [
+      "le canal de Panama",
+      "le canal de Kiel",
+      "le canal de Corinthe",
+      "le canal de Suez"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : le canal de Suez.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0190",
+    "knowledge_id": "GEO-10",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel canal relie l’océan Atlantique et l’océan Pacifique à travers l’isthme de Panama ?",
+    "choices": [
+      "le canal du Midi",
+      "le canal de Kiel",
+      "le canal de Panama",
+      "le canal de Suez"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : le canal de Panama.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0192",
+    "knowledge_id": "GEO-12",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel fleuve traverse notamment Londres ?",
+    "choices": [
+      "la Tamise",
+      "la Seine",
+      "le Danube",
+      "le Rhin"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : la Tamise.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0193",
+    "knowledge_id": "GEO-13",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel fleuve traverse Paris ?",
+    "choices": [
+      "la Loire",
+      "le Rhône",
+      "la Tamise",
+      "la Seine"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : la Seine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0194",
+    "knowledge_id": "GEO-14",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel fleuve traverse Rome ?",
+    "choices": [
+      "l’Arno",
+      "le Danube",
+      "le Tibre",
+      "le Pô"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : le Tibre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0195",
+    "knowledge_id": "GEO-15",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel fleuve traverse Budapest ?",
+    "choices": [
+      "la Seine",
+      "le Danube",
+      "le Rhin",
+      "la Volga"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : le Danube.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0196",
+    "knowledge_id": "GEO-16",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Dans quel continent se trouve le désert du Sahara ?",
+    "choices": [
+      "l’Afrique",
+      "l’Asie",
+      "l’Amérique du Sud",
+      "l’Australie"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : l’Afrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0197",
+    "knowledge_id": "GEO-17",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Dans quel continent se trouve la forêt amazonienne principalement ?",
+    "choices": [
+      "l’Afrique",
+      "l’Asie",
+      "l’Amérique du Nord",
+      "l’Amérique du Sud"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : l’Amérique du Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0198",
+    "knowledge_id": "GEO-18",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel océan borde la côte ouest de l’Afrique ?",
+    "choices": [
+      "l’océan Pacifique",
+      "l’océan Arctique",
+      "l’océan Atlantique",
+      "l’océan Indien"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : l’océan Atlantique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0199",
+    "knowledge_id": "GEO-19",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel océan borde la côte est de l’Afrique ?",
+    "choices": [
+      "l’océan Arctique",
+      "l’océan Indien",
+      "l’océan Atlantique",
+      "l’océan Pacifique"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : l’océan Indien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0200",
+    "knowledge_id": "GEO-20",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quelle mer sépare notamment l’Europe du Nord de l’Afrique ?",
+    "choices": [
+      "la mer Méditerranée",
+      "la mer Rouge",
+      "la mer Noire",
+      "la mer Baltique"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : la mer Méditerranée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0201",
+    "knowledge_id": "GEO-21",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel détroit sépare l’Espagne du Maroc ?",
+    "choices": [
+      "le détroit de Béring",
+      "le Bosphore",
+      "le détroit de Malacca",
+      "le détroit de Gibraltar"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : le détroit de Gibraltar.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0202",
+    "knowledge_id": "GEO-22",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel détroit sépare l’Asie de l’Amérique du Nord ?",
+    "choices": [
+      "le Bosphore",
+      "le détroit d’Ormuz",
+      "le détroit de Béring",
+      "le détroit de Gibraltar"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : le détroit de Béring.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0203",
+    "knowledge_id": "GEO-23",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel massif abrite le mont Kilimandjaro ?",
+    "choices": [
+      "les Andes",
+      "un massif volcanique de Tanzanie",
+      "les Alpes",
+      "l’Himalaya"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : un massif volcanique de Tanzanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0204",
+    "knowledge_id": "GEO-24",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Dans quel pays se trouve le mont Kilimandjaro ?",
+    "choices": [
+      "la Tanzanie",
+      "le Kenya",
+      "l’Éthiopie",
+      "l’Ouganda"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : la Tanzanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0205",
+    "knowledge_id": "GEO-25",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Dans quel pays se trouve le mont Fuji ?",
+    "choices": [
+      "la Chine",
+      "la Corée du Sud",
+      "l’Indonésie",
+      "le Japon"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : le Japon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0206",
+    "knowledge_id": "GEO-26",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Dans quel pays se trouve le Machu Picchu ?",
+    "choices": [
+      "la Bolivie",
+      "l’Équateur",
+      "le Pérou",
+      "le Chili"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : le Pérou.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0207",
+    "knowledge_id": "GEO-27",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Dans quel pays se trouvent les pyramides de Gizeh ?",
+    "choices": [
+      "la Tunisie",
+      "l’Égypte",
+      "le Soudan",
+      "le Maroc"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : l’Égypte.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0208",
+    "knowledge_id": "GEO-28",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel lac est partagé notamment par le Kenya, l’Ouganda et la Tanzanie ?",
+    "choices": [
+      "le lac Victoria",
+      "le lac Kivu",
+      "le lac Tchad",
+      "le lac Malawi"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : le lac Victoria.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0209",
+    "knowledge_id": "GEO-29",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Monde et Afrique",
+    "prompt": "Quel lac est partagé par la RDC et le Rwanda ?",
+    "choices": [
+      "le lac Victoria",
+      "le lac Tchad",
+      "le lac Turkana",
+      "le lac Kivu"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : le lac Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie générale"
+  },
+  {
+    "id": "E0211",
+    "knowledge_id": "ORG-MISS-01",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à OMS ?",
+    "choices": [
+      "l’environnement",
+      "la santé publique internationale",
+      "la protection et le bien-être des enfants",
+      "l’aviation civile internationale"
+    ],
+    "answer": 1,
+    "explanation": "OMS agit principalement dans la santé publique internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0212",
+    "knowledge_id": "ORG-MISS-02",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à UNICEF ?",
+    "choices": [
+      "la protection et le bien-être des enfants",
+      "l’éducation, la science et la culture",
+      "la coopération nucléaire et les garanties de non-prolifération",
+      "le financement du développement en Afrique"
+    ],
+    "answer": 0,
+    "explanation": "UNICEF agit principalement dans la protection et le bien-être des enfants.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0213",
+    "knowledge_id": "ORG-MISS-03",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à UNESCO ?",
+    "choices": [
+      "l’alimentation et l’agriculture",
+      "la coopération policière internationale",
+      "la coopération et l’intégration continentales africaines",
+      "l’éducation, la science et la culture"
+    ],
+    "answer": 3,
+    "explanation": "UNESCO agit principalement dans l’éducation, la science et la culture.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0214",
+    "knowledge_id": "ORG-MISS-04",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à FAO ?",
+    "choices": [
+      "la protection des réfugiés",
+      "la coopération et le développement en Afrique australe",
+      "l’alimentation et l’agriculture",
+      "les normes et questions internationales du travail"
+    ],
+    "answer": 2,
+    "explanation": "FAO agit principalement dans l’alimentation et l’agriculture.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0215",
+    "knowledge_id": "ORG-MISS-05",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à OIT ?",
+    "choices": [
+      "la coopération économique en Afrique centrale",
+      "les normes et questions internationales du travail",
+      "la coopération monétaire et la stabilité financière internationale",
+      "l’aide alimentaire humanitaire"
+    ],
+    "answer": 1,
+    "explanation": "OIT agit principalement dans les normes et questions internationales du travail.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0216",
+    "knowledge_id": "ORG-MISS-06",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à FMI ?",
+    "choices": [
+      "la coopération monétaire et la stabilité financière internationale",
+      "les règles du commerce international",
+      "le développement",
+      "l’intégration économique de l’Afrique orientale et australe"
+    ],
+    "answer": 0,
+    "explanation": "FMI agit principalement dans la coopération monétaire et la stabilité financière internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0217",
+    "knowledge_id": "ORG-MISS-07",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à OMC ?",
+    "choices": [
+      "l’aviation civile internationale",
+      "l’environnement",
+      "la coopération entre pays et communautés francophones",
+      "les règles du commerce international"
+    ],
+    "answer": 3,
+    "explanation": "OMC agit principalement dans les règles du commerce international.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0218",
+    "knowledge_id": "ORG-MISS-08",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à OACI ?",
+    "choices": [
+      "le financement du développement en Afrique",
+      "la santé publique internationale",
+      "l’aviation civile internationale",
+      "la coopération nucléaire et les garanties de non-prolifération"
+    ],
+    "answer": 2,
+    "explanation": "OACI agit principalement dans l’aviation civile internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0219",
+    "knowledge_id": "ORG-MISS-09",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à AIEA ?",
+    "choices": [
+      "la protection et le bien-être des enfants",
+      "la coopération nucléaire et les garanties de non-prolifération",
+      "la coopération policière internationale",
+      "la coopération et l’intégration continentales africaines"
+    ],
+    "answer": 1,
+    "explanation": "AIEA agit principalement dans la coopération nucléaire et les garanties de non-prolifération.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0220",
+    "knowledge_id": "ORG-MISS-10",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à INTERPOL ?",
+    "choices": [
+      "la coopération policière internationale",
+      "la protection des réfugiés",
+      "la coopération et le développement en Afrique australe",
+      "l’éducation, la science et la culture"
+    ],
+    "answer": 0,
+    "explanation": "INTERPOL agit principalement dans la coopération policière internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0221",
+    "knowledge_id": "ORG-MISS-11",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à HCR ?",
+    "choices": [
+      "l’aide alimentaire humanitaire",
+      "la coopération économique en Afrique centrale",
+      "l’alimentation et l’agriculture",
+      "la protection des réfugiés"
+    ],
+    "answer": 3,
+    "explanation": "HCR agit principalement dans la protection des réfugiés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0222",
+    "knowledge_id": "ORG-MISS-12",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à PAM ?",
+    "choices": [
+      "l’intégration économique de l’Afrique orientale et australe",
+      "les normes et questions internationales du travail",
+      "l’aide alimentaire humanitaire",
+      "le développement"
+    ],
+    "answer": 2,
+    "explanation": "PAM agit principalement dans l’aide alimentaire humanitaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0223",
+    "knowledge_id": "ORG-MISS-13",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à PNUD ?",
+    "choices": [
+      "la coopération monétaire et la stabilité financière internationale",
+      "le développement",
+      "l’environnement",
+      "la coopération entre pays et communautés francophones"
+    ],
+    "answer": 1,
+    "explanation": "PNUD agit principalement dans le développement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0224",
+    "knowledge_id": "ORG-MISS-14",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à PNUE ?",
+    "choices": [
+      "l’environnement",
+      "le financement du développement en Afrique",
+      "la santé publique internationale",
+      "les règles du commerce international"
+    ],
+    "answer": 0,
+    "explanation": "PNUE agit principalement dans l’environnement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0225",
+    "knowledge_id": "ORG-MISS-15",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à BAD ?",
+    "choices": [
+      "la coopération et l’intégration continentales africaines",
+      "la protection et le bien-être des enfants",
+      "l’aviation civile internationale",
+      "le financement du développement en Afrique"
+    ],
+    "answer": 3,
+    "explanation": "BAD agit principalement dans le financement du développement en Afrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0226",
+    "knowledge_id": "ORG-MISS-16",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à UA ?",
+    "choices": [
+      "l’éducation, la science et la culture",
+      "la coopération nucléaire et les garanties de non-prolifération",
+      "la coopération et l’intégration continentales africaines",
+      "la coopération et le développement en Afrique australe"
+    ],
+    "answer": 2,
+    "explanation": "UA agit principalement dans la coopération et l’intégration continentales africaines.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0227",
+    "knowledge_id": "ORG-MISS-17",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à SADC ?",
+    "choices": [
+      "la coopération policière internationale",
+      "la coopération et le développement en Afrique australe",
+      "la coopération économique en Afrique centrale",
+      "l’alimentation et l’agriculture"
+    ],
+    "answer": 1,
+    "explanation": "SADC agit principalement dans la coopération et le développement en Afrique australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0228",
+    "knowledge_id": "ORG-MISS-18",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à CEEAC ?",
+    "choices": [
+      "la coopération économique en Afrique centrale",
+      "l’intégration économique de l’Afrique orientale et australe",
+      "les normes et questions internationales du travail",
+      "la protection des réfugiés"
+    ],
+    "answer": 0,
+    "explanation": "CEEAC agit principalement dans la coopération économique en Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0229",
+    "knowledge_id": "ORG-MISS-19",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à COMESA ?",
+    "choices": [
+      "la coopération entre pays et communautés francophones",
+      "la coopération monétaire et la stabilité financière internationale",
+      "l’aide alimentaire humanitaire",
+      "l’intégration économique de l’Afrique orientale et australe"
+    ],
+    "answer": 3,
+    "explanation": "COMESA agit principalement dans l’intégration économique de l’Afrique orientale et australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0230",
+    "knowledge_id": "ORG-MISS-20",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quel domaine correspond principalement à OIF ?",
+    "choices": [
+      "les règles du commerce international",
+      "le développement",
+      "la coopération entre pays et communautés francophones",
+      "la santé publique internationale"
+    ],
+    "answer": 2,
+    "explanation": "OIF agit principalement dans la coopération entre pays et communautés francophones.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "E0231",
+    "knowledge_id": "RDC-EXP-01",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle est la capitale de la RDC ?",
+    "choices": [
+      "Kisangani",
+      "Kinshasa",
+      "Matadi",
+      "Lubumbashi"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : Kinshasa.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0232",
+    "knowledge_id": "RDC-EXP-02",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle est la langue officielle de la RDC ?",
+    "choices": [
+      "le français",
+      "le lingala",
+      "le swahili",
+      "le tshiluba"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : le français.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0233",
+    "knowledge_id": "RDC-EXP-03",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Combien de langues nationales sont reconnues en RDC ?",
+    "choices": [
+      "2",
+      "3",
+      "5",
+      "4"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : 4.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0234",
+    "knowledge_id": "RDC-EXP-04",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Laquelle est une langue nationale de la RDC ?",
+    "choices": [
+      "l’espagnol",
+      "l’allemand",
+      "le lingala",
+      "le portugais"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : le lingala.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0238",
+    "knowledge_id": "RDC-EXP-08",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quelle est la monnaie de la RDC ?",
+    "choices": [
+      "le rand",
+      "le shilling",
+      "le franc congolais",
+      "le naira"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : le franc congolais.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0241",
+    "knowledge_id": "RDC-EXP-11",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Combien de pays ont une frontière terrestre avec la RDC ?",
+    "choices": [
+      "7",
+      "8",
+      "10",
+      "9"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : 9.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0242",
+    "knowledge_id": "RDC-EXP-12",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel pays partage une frontière avec la RDC ?",
+    "choices": [
+      "le Sénégal",
+      "le Mali",
+      "l’Angola",
+      "le Ghana"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : l’Angola.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0247",
+    "knowledge_id": "RDC-EXP-17",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel parc national congolais est célèbre pour les gorilles de montagne ?",
+    "choices": [
+      "le parc national de l’Upemba",
+      "le parc national des Virunga",
+      "le parc national de la Salonga",
+      "le parc national de la Garamba"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : le parc national des Virunga.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0248",
+    "knowledge_id": "RDC-EXP-18",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel site congolais protège notamment l’okapi ?",
+    "choices": [
+      "la Réserve de faune à okapis",
+      "le parc national de la Salonga",
+      "le parc national de la Garamba",
+      "le parc national de Kundelungu"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : la Réserve de faune à okapis.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0249",
+    "knowledge_id": "RDC-EXP-19",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel minerai stratégique est particulièrement associé à la RDC ?",
+    "choices": [
+      "la bauxite",
+      "l’étain seulement",
+      "le sel gemme",
+      "le cobalt"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : le cobalt.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0250",
+    "knowledge_id": "RDC-EXP-20",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel métal est historiquement important dans la ceinture minière du Katanga ?",
+    "choices": [
+      "le mercure",
+      "l’argent seulement",
+      "le cuivre",
+      "l’aluminium"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : le cuivre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0251",
+    "knowledge_id": "RDC-EXP-21",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel fleuve donne son nom au pays ?",
+    "choices": [
+      "le Sénégal",
+      "le fleuve Congo",
+      "le Nil",
+      "le Niger"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : le fleuve Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0253",
+    "knowledge_id": "RDC-EXP-23",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel chef-lieu correspond au Kongo Central ?",
+    "choices": [
+      "Boma",
+      "Kenge",
+      "Bandundu",
+      "Matadi"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : Matadi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0254",
+    "knowledge_id": "RDC-EXP-24",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel chef-lieu correspond au Lualaba ?",
+    "choices": [
+      "Likasi",
+      "Bunia",
+      "Kolwezi",
+      "Kamina"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : Kolwezi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0255",
+    "knowledge_id": "RDC-EXP-25",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel chef-lieu correspond au Nord-Kivu ?",
+    "choices": [
+      "Butembo",
+      "Goma",
+      "Bukavu",
+      "Bunia"
+    ],
+    "answer": 1,
+    "explanation": "Réponse correcte : Goma.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0256",
+    "knowledge_id": "RDC-EXP-26",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel chef-lieu correspond au Sud-Kivu ?",
+    "choices": [
+      "Bukavu",
+      "Goma",
+      "Uvira",
+      "Kindu"
+    ],
+    "answer": 0,
+    "explanation": "Réponse correcte : Bukavu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0257",
+    "knowledge_id": "RDC-EXP-27",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel chef-lieu correspond à l’Ituri ?",
+    "choices": [
+      "Isiro",
+      "Buta",
+      "Lisala",
+      "Bunia"
+    ],
+    "answer": 3,
+    "explanation": "Réponse correcte : Bunia.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  },
+  {
+    "id": "E0258",
+    "knowledge_id": "RDC-EXP-28",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Socle national",
+    "prompt": "Quel chef-lieu correspond à la Tshopo ?",
+    "choices": [
+      "Mbandaka",
+      "Boende",
+      "Kisangani",
+      "Bunia"
+    ],
+    "answer": 2,
+    "explanation": "Réponse correcte : Kisangani.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Socle RDC — fait stable"
+  }
+]

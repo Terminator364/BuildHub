@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101828">
+<title>Excellentia Study Hub — Élève</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./style.css?v=230">
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+  <div>
+    <div class="eyebrow">EXCELLENTIA STUDY HUB</div>
+    <h1>Plateforme Élève</h1>
+  </div>
+  <div id="net" class="pill">Initialisation…</div>
+</header>
+<main id="view">
+  <section class="hero card">
+    <div>
+      <span class="badge">V2.3.0 · autonome</span>
+      <h2>Culture générale — préparation intensive</h2>
+      <p>Corpus complet, annales EXETAT renforcées, 40 s par question, progression conservée sur ce téléphone.</p>
+    </div>
+    <div class="heroStats">
+      <div><b id="qCount">—</b><span>questions</span></div>
+      <div><b id="kCount">—</b><span>connaissances</span></div>
+      <div><b>40 s</b><span>par question</span></div>
+    </div>
+  </section>
+  <section id="loading" class="card">
+    <div class="row"><b>Chargement du corpus</b><span id="loadPct">0%</span></div>
+    <div class="progress"><i id="loadBar"></i></div>
+    <p id="loadText" class="muted">Préparation du mode hors ligne…</p>
+  </section>
+  <section id="dashboard" class="hidden">
+    <div class="actions">
+      <button class="primary" data-action="start-mix">Grand Mix</button>
+      <button data-action="start-exam">Examen blanc · 100</button>
+      <button data-action="resume">Reprendre</button>
+    </div>
+    <div id="stats" class="statsGrid"></div>
+    <h3>Modules</h3>
+    <div id="modules" class="moduleGrid"></div>
+    <h3>Leçons</h3>
+    <div id="lessons" class="lessonList"></div>
+  </section>
+  <section id="session" class="hidden"></section>
+  <section id="result" class="hidden"></section>
+</main>
+<nav class="dock">
+  <button data-nav="home">Accueil</button>
+  <button data-nav="modules">Modules</button>
+  <button data-nav="stats">Progression</button>
+</nav>
+</div>
+<script src="./app.js?v=230" defer></script>
+</body>
+</html>

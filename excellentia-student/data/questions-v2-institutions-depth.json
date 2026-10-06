@@ -1,0 +1,154 @@
+[
+  {
+    "id": "V2ID001",
+    "knowledge_id": "V2-ID-IMF-SDR-1969",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FMI · DTS",
+    "prompt": "En quelle année le FMI a-t-il créé le droit de tirage spécial (DTS) comme actif de réserve international complémentaire ?",
+    "choices": [
+      "1969",
+      "1944",
+      "1973",
+      "1985"
+    ],
+    "answer": 0,
+    "explanation": "Le FMI a créé le DTS en 1969 afin de compléter les avoirs de réserve officiels de ses pays membres.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://www.imf.org/en/about/factsheets/sheets/2023/special-drawing-rights-sdr"
+  },
+  {
+    "id": "V2ID002",
+    "knowledge_id": "V2-ID-IMF-SDR-ASSET",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FMI · DTS",
+    "prompt": "Comment le FMI définit-il principalement le droit de tirage spécial (DTS) ?",
+    "choices": [
+      "Une monnaie ayant cours légal",
+      "Un actif de réserve international",
+      "Un prêt de développement",
+      "Un indice boursier"
+    ],
+    "answer": 1,
+    "explanation": "Le DTS est un actif de réserve international créé par le FMI ; ce n’est pas une monnaie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://www.imf.org/en/about/factsheets/sheets/2023/special-drawing-rights-sdr"
+  },
+  {
+    "id": "V2ID003",
+    "knowledge_id": "V2-ID-IMF-SDR-NOT-CURRENCY",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FMI · DTS",
+    "prompt": "Le droit de tirage spécial (DTS) du FMI n’est pas quoi ?",
+    "choices": [
+      "Un actif de réserve international",
+      "Un instrument dont la valeur repose sur un panier de monnaies",
+      "Une monnaie",
+      "Un actif créé par le FMI"
+    ],
+    "answer": 2,
+    "explanation": "Le FMI précise que le DTS n’est pas une monnaie ; c’est un actif de réserve international.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "https://www.imf.org/en/topics/special-drawing-right"
+  },
+  {
+    "id": "V2ID004",
+    "knowledge_id": "V2-ID-IMF-ARTICLE4",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FMI · Surveillance",
+    "prompt": "Dans le cadre des consultations au titre de l’article IV, que fait principalement la surveillance du FMI ?",
+    "choices": [
+      "Elle organise les élections nationales",
+      "Elle fixe directement les budgets des États",
+      "Elle délivre des visas internationaux",
+      "Elle suit les politiques économiques et financières des pays membres et leurs effets sur la stabilité"
+    ],
+    "answer": 3,
+    "explanation": "La surveillance du FMI comprend le suivi continu des politiques économiques et financières des membres et de leurs effets sur la stabilité nationale et mondiale.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "https://www.imf.org/en/publications/policy-papers/issues/2016/12/31/guidance-note-for-article-iv-consultations-pp4711"
+  },
+  {
+    "id": "V2ID005",
+    "knowledge_id": "V2-ID-IBRD-ORIGIN",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Banque mondiale · BIRD",
+    "prompt": "Pourquoi la Banque internationale pour la reconstruction et le développement (BIRD/IBRD) a-t-elle été créée en 1944 ?",
+    "choices": [
+      "Pour aider à la reconstruction de l’Europe après la Seconde Guerre mondiale",
+      "Pour créer une monnaie mondiale",
+      "Pour remplacer l’ONU",
+      "Pour administrer les banques centrales"
+    ],
+    "answer": 0,
+    "explanation": "La BIRD a été créée en 1944 notamment pour aider l’Europe à se reconstruire après la Seconde Guerre mondiale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://www.worldbank.org/en/who-we-are/ibrd"
+  },
+  {
+    "id": "V2ID006",
+    "knowledge_id": "V2-ID-WB-IBRD-IDA",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Banque mondiale · Structure",
+    "prompt": "Quelles deux institutions forment ensemble ce que la Banque mondiale appelle la « World Bank » ?",
+    "choices": [
+      "FMI et OMC",
+      "BIRD (IBRD) et IDA",
+      "BAD et FAD",
+      "ONU et PNUD"
+    ],
+    "answer": 1,
+    "explanation": "La BIRD (IBRD) et l’Association internationale de développement (IDA) forment ensemble la Banque mondiale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://www.worldbank.org/en/who-we-are/ibrd"
+  },
+  {
+    "id": "V2ID007",
+    "knowledge_id": "V2-ID-AFDB-GROUP",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "BAD · Structure",
+    "prompt": "Quel ensemble correspond aux trois entités du Groupe de la Banque africaine de développement ?",
+    "choices": [
+      "BAD, FMI et Banque mondiale",
+      "BAD, OMC et UA",
+      "BAD, Fonds africain de développement et Nigeria Trust Fund",
+      "BAD, UNICEF et PNUD"
+    ],
+    "answer": 2,
+    "explanation": "Le Groupe de la BAD comprend la Banque africaine de développement, le Fonds africain de développement et le Nigeria Trust Fund.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "https://adf.afdb.org/faq/"
+  },
+  {
+    "id": "V2ID008",
+    "knowledge_id": "V2-ID-AFDB-MISSION",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "BAD · Mission",
+    "prompt": "Quelle formulation correspond le mieux à la mission générale de la Banque africaine de développement ?",
+    "choices": [
+      "Fixer les monnaies africaines",
+      "Administrer les élections nationales",
+      "Diriger les armées régionales",
+      "Soutenir le développement économique et social, réduire la pauvreté et améliorer les conditions de vie en Afrique"
+    ],
+    "answer": 3,
+    "explanation": "La BAD se présente comme une institution de financement du développement visant la croissance et le progrès social, la réduction de la pauvreté et l’amélioration des conditions de vie en Afrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://www.afdb.org/en/african-development-bank-group"
+  }
+]

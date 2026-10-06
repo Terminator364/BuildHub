@@ -1,0 +1,230 @@
+[
+  {
+    "id": "V2TG001",
+    "knowledge_id": "V2-TG-MONUC-001",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "MONUC/MONUSCO",
+    "prompt": "Par quelle résolution du Conseil de sécurité la MONUC a-t-elle été créée en 1999 ?",
+    "choices": [
+      "Résolution 1279",
+      "Résolution 1925",
+      "Résolution 2250",
+      "Résolution 1325"
+    ],
+    "answer": 0,
+    "explanation": "La MONUC a été établie par la résolution 1279 du Conseil de sécurité du 30 novembre 1999.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://peacekeeping.un.org/sites/default/files/past/monuc/index.shtml"
+  },
+  {
+    "id": "V2TG002",
+    "knowledge_id": "V2-TG-MONUC-002",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "MONUC/MONUSCO",
+    "prompt": "Quel était le siège de la MONUC en République démocratique du Congo ?",
+    "choices": [
+      "Goma",
+      "Kinshasa",
+      "Lubumbashi",
+      "Kisangani"
+    ],
+    "answer": 1,
+    "explanation": "La fiche officielle des Nations Unies sur la MONUC indique Kinshasa comme quartier général.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "https://peacekeeping.un.org/sites/default/files/past/monuc/index.shtml"
+  },
+  {
+    "id": "V2TG003",
+    "knowledge_id": "V2-TG-MONUC-003",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "MONUC/MONUSCO",
+    "prompt": "À quelle date la MONUSCO a-t-elle remplacé la MONUC ?",
+    "choices": [
+      "30 juin 2006",
+      "1er janvier 2011",
+      "1er juillet 2010",
+      "28 mai 2008"
+    ],
+    "answer": 2,
+    "explanation": "La MONUSCO a pris le relais de la MONUC le 1er juillet 2010.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "https://peacekeeping.un.org/fr/node/104027"
+  },
+  {
+    "id": "V2TG004",
+    "knowledge_id": "V2-TG-MONUC-004",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "MONUC/MONUSCO",
+    "prompt": "Quelle résolution du Conseil de sécurité a décidé le passage de la MONUC à la MONUSCO ?",
+    "choices": [
+      "Résolution 1279",
+      "Résolution 1540",
+      "Résolution 2254",
+      "Résolution 1925"
+    ],
+    "answer": 3,
+    "explanation": "La résolution 1925 du Conseil de sécurité, adoptée le 28 mai 2010, a décidé que la mission prendrait le nom de MONUSCO à partir du 1er juillet 2010.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://monusco.unmissions.org/fr/media/11553"
+  },
+  {
+    "id": "V2TG005",
+    "knowledge_id": "V2-TG-MONUSCO-005",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "MONUC/MONUSCO",
+    "prompt": "Quel objectif figure parmi les missions centrales de la MONUSCO ?",
+    "choices": [
+      "Protéger les civils menacés de violences physiques",
+      "Fixer les taux directeurs de la RDC",
+      "Administrer les universités publiques",
+      "Émettre le franc congolais"
+    ],
+    "answer": 0,
+    "explanation": "La MONUSCO est notamment chargée de protéger les civils sous menace imminente de violences physiques et d'appuyer les efforts de stabilisation.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "https://peacekeeping.un.org/fr/node/104027"
+  },
+  {
+    "id": "V2TG006",
+    "knowledge_id": "V2-TG-MONUC-006",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "MONUC/MONUSCO",
+    "prompt": "Entre quelles dates la MONUC a-t-elle existé sous ce nom selon la fiche historique de l’ONU ?",
+    "choices": [
+      "1er juillet 2010 – 30 juin 2020",
+      "30 novembre 1999 – 30 juin 2010",
+      "1994 – 2006",
+      "2001 – 2015"
+    ],
+    "answer": 1,
+    "explanation": "La fiche historique de l’ONU donne à la MONUC une durée allant du 30 novembre 1999 au 30 juin 2010.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://peacekeeping.un.org/sites/default/files/past/monuc/index.shtml"
+  },
+  {
+    "id": "V2TG007",
+    "knowledge_id": "V2-TG-URB-001",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Démographie et urbanisation",
+    "prompt": "Comment la Banque mondiale caractérise-t-elle les taux de croissance urbaine de l’Afrique dans son étude sur les tendances démographiques ?",
+    "choices": [
+      "Parmi les plus faibles au monde",
+      "Stables depuis un siècle",
+      "Parmi les plus élevés au monde",
+      "En diminution continue"
+    ],
+    "answer": 2,
+    "explanation": "La Banque mondiale indique que l’Afrique présente les taux de croissance urbaine les plus élevés au monde.",
+    "difficulty": 2,
+    "stability": "SEMI-STABLE",
+    "source": "https://www.worldbank.org/en/topic/urbandevelopment/publication/demographic-trends-and-urbanization"
+  },
+  {
+    "id": "V2TG008",
+    "knowledge_id": "V2-TG-URB-002",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Démographie et urbanisation",
+    "prompt": "Quel type de villes devrait absorber une grande part de la future croissance urbaine africaine selon la Banque mondiale ?",
+    "choices": [
+      "Uniquement les mégapoles côtières",
+      "Uniquement les capitales nationales",
+      "Les villes minières seulement",
+      "Les petites et moyennes villes"
+    ],
+    "answer": 3,
+    "explanation": "La Banque mondiale souligne que les petites et moyennes villes devraient absorber une grande part de la croissance urbaine future.",
+    "difficulty": 2,
+    "stability": "SEMI-STABLE",
+    "source": "https://www.worldbank.org/en/topic/urbandevelopment/publication/demographic-trends-and-urbanization"
+  },
+  {
+    "id": "V2TG009",
+    "knowledge_id": "V2-TG-URB-003",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Démographie et urbanisation",
+    "prompt": "Quel avantage économique majeur l’urbanisation peut-elle produire lorsqu’elle est bien gérée ?",
+    "choices": [
+      "Des économies d’agglomération et des gains de productivité",
+      "La disparition automatique du chômage",
+      "La suppression de tout besoin d’infrastructures",
+      "La baisse automatique de la population"
+    ],
+    "answer": 0,
+    "explanation": "La concentration urbaine peut créer des économies d’agglomération, améliorer l’accès aux marchés et soutenir la productivité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://www.worldbank.org/en/programs/africa-regional-studies/publication/african-cities-opening-doors-to-the-world"
+  },
+  {
+    "id": "V2TG010",
+    "knowledge_id": "V2-TG-URB-004",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Démographie et urbanisation",
+    "prompt": "Quels trois qualificatifs la Banque mondiale utilise-t-elle pour résumer plusieurs contraintes structurelles des villes d’Afrique subsaharienne ?",
+    "choices": [
+      "Petites, vides et bon marché",
+      "Encombrées, déconnectées et coûteuses",
+      "Rurales, isolées et vieillissantes",
+      "Portuaires, froides et industrielles"
+    ],
+    "answer": 1,
+    "explanation": "L’étude « Africa's Cities: Opening Doors to the World » décrit de nombreuses villes comme crowded, disconnected and costly : encombrées, déconnectées et coûteuses.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://www.worldbank.org/en/programs/africa-regional-studies/publication/african-cities-opening-doors-to-the-world"
+  },
+  {
+    "id": "V2TG011",
+    "knowledge_id": "V2-TG-URB-005",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Démographie et urbanisation",
+    "prompt": "Quel défi accompagne directement la croissance rapide des villes africaines ?",
+    "choices": [
+      "Réduire toutes les liaisons de transport",
+      "Supprimer la planification urbaine",
+      "Financer et étendre infrastructures, logements et services",
+      "Éviter toute densification économique"
+    ],
+    "answer": 2,
+    "explanation": "La croissance urbaine accroît fortement les besoins en infrastructures, logements, mobilité et services urbains.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "https://unhabitat.org/state-of-african-cities-report-2026-harnessing-the-value-of-urban-land-for-socioeconomic"
+  },
+  {
+    "id": "V2TG012",
+    "knowledge_id": "V2-TG-URB-006",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Démographie et urbanisation",
+    "prompt": "Quel rôle ONU-Habitat attribue-t-il aux villes africaines lorsqu’elles sont bien planifiées et équipées ?",
+    "choices": [
+      "Des espaces sans importance économique",
+      "Des zones devant rester séparées des emplois",
+      "Des territoires sans besoin de services publics",
+      "Des moteurs potentiels de croissance inclusive et de résilience"
+    ],
+    "answer": 3,
+    "explanation": "ONU-Habitat souligne que des villes mieux planifiées, équipées et financées peuvent soutenir croissance inclusive, résilience et qualité de vie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "https://unhabitat.org/state-of-african-cities-report-2026-harnessing-the-value-of-urban-land-for-socioeconomic"
+  }
+]

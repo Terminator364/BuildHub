@@ -1,0 +1,58 @@
+[
+  {
+    "id": "EXR24-001",
+    "knowledge_id": "RDC-CIV-COMMUNE-BOURGMESTRE",
+    "module": 2,
+    "domain": "Civisme",
+    "subdomain": "Administration territoriale",
+    "prompt": "Quelle autorité dirige une commune en République démocratique du Congo ?",
+    "choices": [
+      "Le bourgmestre",
+      "Le gouverneur",
+      "Le chef de secteur",
+      "Le président de l’Assemblée provinciale",
+      "Le maire"
+    ],
+    "answer": 0,
+    "explanation": "Une commune est dirigée par un bourgmestre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Question rapportée après EXETAT 2024",
+    "source_url": "https://7sur7.cd/index.php/2024/06/24/exetat-plus-de-28000-candidats-passent-les-epreuves-au-nord-kivu-2",
+    "content_status": "ACTIVE",
+    "origin_kind": "REPORTED_ACTUAL_ITEM",
+    "source_confidence": "MEDIUM",
+    "origin_year": 2024,
+    "origin_item_number": "reported-commune",
+    "exam_lane": "civics",
+    "verification_status": "ARCHIVE_ONLY"
+  },
+  {
+    "id": "EXR24-002",
+    "knowledge_id": "DZA-GEO-ENERGY-PETROLEUM",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Énergie",
+    "prompt": "Quelle ressource énergétique est historiquement majeure en Algérie ?",
+    "choices": [
+      "La tourbe",
+      "Le pétrole",
+      "Le bois de chauffage",
+      "L’uranium",
+      "L’hydroélectricité"
+    ],
+    "answer": 1,
+    "explanation": "L’Algérie est un important producteur d’hydrocarbures; le pétrole est l’une de ses grandes ressources énergétiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Question rapportée après EXETAT 2024",
+    "source_url": "https://actualite.cd/2024/06/24/exetat-2024-ce-que-les-finalistes-retiennent-du-premier-jour-consacre-la-culture",
+    "content_status": "ACTIVE",
+    "origin_kind": "REPORTED_ACTUAL_ITEM",
+    "source_confidence": "MEDIUM",
+    "origin_year": 2024,
+    "origin_item_number": "reported-algeria-energy",
+    "exam_lane": "geography",
+    "verification_status": "ARCHIVE_ONLY"
+  }
+]

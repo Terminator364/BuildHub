@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Afrique et organisations internationales",
+    "short": "Afrique + Organisations",
+    "description": "Union africaine, OUA, ONU, institutions mondiales et régionales, sièges, missions, sous-régions, monnaies et repères africains à forte fréquence EXETAT.",
+    "status": "ready",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "title": "RDC — socle national et civique",
+    "short": "RDC Master Core",
+    "description": "Provinces, chefs-lieux, institutions, Constitution, civisme, histoire politique, géographie, hydrographie, ressources, patrimoine et repères EXETAT de la RDC.",
+    "status": "active",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "title": "Afrique — pays, géographie et histoire",
+    "short": "Afrique II",
+    "description": "Pays, sous-régions, monnaies, reliefs, fleuves, lacs, climats, empires, décolonisation et repères historiques africains.",
+    "status": "ready",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "title": "Monde, géographie et économie",
+    "short": "Monde + Économie",
+    "description": "Géographie mondiale, grands passages maritimes, économie fondamentale, intégration régionale et institutions économiques.",
+    "status": "ready",
+    "order": 4
+  },
+  {
+    "id": 5,
+    "title": "Sciences, santé, environnement et technologie",
+    "short": "Sciences + Tech",
+    "description": "Physique, chimie, biologie, génétique, physiologie, microbiologie, Terre, environnement, astronomie, informatique, mesures et histoire des sciences.",
+    "status": "ready",
+    "order": 5
+  },
+  {
+    "id": 6,
+    "title": "Histoire, culture, philosophie et logique",
+    "short": "Histoire + Philo",
+    "description": "Histoire mondiale et africaine, littérature, arts, patrimoine, philosophes, doctrines, logique classique et raisonnement — avec forte calibration EXETAT.",
+    "status": "ready",
+    "order": 6
+  },
+  {
+    "id": 7,
+    "title": "Actualité vérifiée 2025–2026",
+    "short": "Actualité",
+    "description": "RDC, Afrique, ONU, santé, climat, économie et sport : faits datés, sourcés, avec date de vérification et échéance de revue.",
+    "status": "dynamic",
+    "order": 7
+  },
+  {
+    "id": 8,
+    "title": "Grand Mix — Annales et consolidation",
+    "short": "Grand Mix EXETAT",
+    "description": "Interleaving adaptatif, anciennes notions EXETAT, séries mixtes, erreurs, vitesse, répétition espacée et examens blancs selon le blueprint civisme–géographie–histoire–philosophie.",
+    "status": "mix",
+    "order": 8
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "V2CAF001",
+    "knowledge_id": "V2-CUR-AFR-AU-CHAIR-2026",
+    "module": 7,
+    "domain": "Actualité Afrique",
+    "subdomain": "Union africaine",
+    "prompt": "Qui exerce la présidence tournante de l’Union africaine en 2026 ?",
+    "choices": [
+      "Évariste Ndayishimiye",
+      "João Lourenço",
+      "Mahmoud Ali Youssouf",
+      "Moussa Faki Mahamat"
+    ],
+    "answer": 0,
+    "explanation": "L’Union africaine indique qu’Évariste Ndayishimiye, président du Burundi, exerce la présidence de l’UA de février 2026 à février 2027.",
+    "difficulty": 2,
+    "stability": "CURRENT",
+    "source": "Union africaine",
+    "source_url": "https://www.au.int/en/page/au-chairperson",
+    "verified_at": "2026-09-29",
+    "review_by": "2026-10-06"
+  },
+  {
+    "id": "V2CAF002",
+    "knowledge_id": "V2-CUR-AFR-AUC-CHAIR-2026",
+    "module": 7,
+    "domain": "Actualité Afrique",
+    "subdomain": "Union africaine",
+    "prompt": "Qui est le président de la Commission de l’Union africaine en septembre 2026 ?",
+    "choices": [
+      "Évariste Ndayishimiye",
+      "Mahmoud Ali Youssouf",
+      "João Lourenço",
+      "António Guterres"
+    ],
+    "answer": 1,
+    "explanation": "Les publications officielles de l’Union africaine en 2026 identifient Mahmoud Ali Youssouf comme président de la Commission de l’UA.",
+    "difficulty": 2,
+    "stability": "CURRENT",
+    "source": "Union africaine",
+    "source_url": "https://www.au.int/en/documents/20260601/auc-chairperson-engagements-may-2026",
+    "verified_at": "2026-09-29",
+    "review_by": "2026-10-06"
+  },
+  {
+    "id": "V2CAF003",
+    "knowledge_id": "V2-CUR-AFR-AU-THEME-2026",
+    "module": 7,
+    "domain": "Actualité Afrique",
+    "subdomain": "Union africaine",
+    "prompt": "Quel thème l’Union africaine a-t-elle retenu pour l’année 2026 ?",
+    "choices": [
+      "Accélérer uniquement l’industrialisation minière",
+      "Créer une monnaie unique africaine avant 2027",
+      "Garantir une disponibilité durable de l’eau et des systèmes d’assainissement sûrs pour atteindre les objectifs de l’Agenda 2063",
+      "Supprimer les frontières terrestres africaines"
+    ],
+    "answer": 2,
+    "explanation": "Le 39e Sommet de l’UA a lancé le thème 2026 consacré à la disponibilité durable de l’eau et à l’assainissement sûr, en lien avec l’Agenda 2063.",
+    "difficulty": 2,
+    "stability": "CURRENT",
+    "source": "Union africaine",
+    "source_url": "https://www.au.int/en/pressreleases/20260215/39th-ordinary-session-assembly-african-union-concludes",
+    "verified_at": "2026-09-29",
+    "review_by": "2026-10-06"
+  },
+  {
+    "id": "V2CAF004",
+    "knowledge_id": "V2-CUR-AFR-AU-SUMMIT39-PLACE",
+    "module": 7,
+    "domain": "Actualité Afrique",
+    "subdomain": "Sommets",
+    "prompt": "Où s’est tenue la 39e session ordinaire de l’Assemblée de l’Union africaine en février 2026 ?",
+    "choices": [
+      "À Nairobi",
+      "À Kigali",
+      "À Abuja",
+      "Au siège de l’UA à Addis-Abeba"
+    ],
+    "answer": 3,
+    "explanation": "La 39e session ordinaire de l’Assemblée de l’UA s’est tenue au siège de l’Union africaine à Addis-Abeba, en Éthiopie.",
+    "difficulty": 1,
+    "stability": "CURRENT",
+    "source": "Union africaine",
+    "source_url": "https://www.au.int/en/pressreleases/20260215/39th-ordinary-session-assembly-african-union-concludes",
+    "verified_at": "2026-09-29",
+    "review_by": "2026-10-06"
+  },
+  {
+    "id": "V2CAF005",
+    "knowledge_id": "V2-CUR-AFR-AU-SUMMIT39-CHAIR-TRANSITION",
+    "module": 7,
+    "domain": "Actualité Afrique",
+    "subdomain": "Sommets",
+    "prompt": "Lors du sommet de février 2026, quel dirigeant a succédé à João Lourenço à la présidence tournante de l’Union africaine ?",
+    "choices": [
+      "Évariste Ndayishimiye",
+      "Mahmoud Ali Youssouf",
+      "William Ruto",
+      "Paul Kagame"
+    ],
+    "answer": 0,
+    "explanation": "Le sommet a accueilli l’entrée en fonction d’Évariste Ndayishimiye comme président de l’UA pour 2026, succédant à João Lourenço.",
+    "difficulty": 2,
+    "stability": "CURRENT",
+    "source": "Union africaine",
+    "source_url": "https://www.au.int/en/pressreleases/20260215/39th-ordinary-session-assembly-african-union-concludes",
+    "verified_at": "2026-09-29",
+    "review_by": "2026-10-06"
+  },
+  {
+    "id": "V2CAF006",
+    "knowledge_id": "V2-CUR-AFR-AU-ANNIVERSARY-2026",
+    "module": 7,
+    "domain": "Actualité Afrique",
+    "subdomain": "Union africaine",
+    "prompt": "Quel anniversaire de son lancement l’Union africaine a-t-elle commémoré le 9 septembre 2026 ?",
+    "choices": [
+      "20e anniversaire",
+      "24e anniversaire",
+      "25e anniversaire",
+      "30e anniversaire"
+    ],
+    "answer": 1,
+    "explanation": "L’Union africaine a annoncé la commémoration du 24e anniversaire de son lancement le 9 septembre 2026.",
+    "difficulty": 2,
+    "stability": "CURRENT",
+    "source": "Union africaine",
+    "source_url": "https://www.au.int/en/cpau",
+    "verified_at": "2026-09-29",
+    "review_by": "2026-10-06"
+  }
+]
