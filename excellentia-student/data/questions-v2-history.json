@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "V2H001A",
+    "knowledge_id": "V2-HIST-001",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la chute de l’Empire romain d’Occident ?",
+    "choices": [
+      "476",
+      "1789",
+      "1920",
+      "1965"
+    ],
+    "answer": 0,
+    "explanation": "la chute de l’Empire romain d’Occident : 476.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H001B",
+    "knowledge_id": "V2-HIST-001",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 476 ?",
+    "choices": [
+      "la Révolution française commence",
+      "la Société des Nations commence ses activités",
+      "le Ghana accède à l’indépendance",
+      "la chute de l’Empire romain d’Occident"
+    ],
+    "answer": 3,
+    "explanation": "476 : la chute de l’Empire romain d’Occident.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H002A",
+    "knowledge_id": "V2-HIST-002",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la Magna Carta est scellée en Angleterre ?",
+    "choices": [
+      "1804",
+      "1928",
+      "1969",
+      "1215"
+    ],
+    "answer": 3,
+    "explanation": "la Magna Carta est scellée en Angleterre : 1215.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H002B",
+    "knowledge_id": "V2-HIST-002",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1215 ?",
+    "choices": [
+      "Alexander Fleming observe l’effet antibactérien de la pénicilline",
+      "Spoutnik 1 devient le premier satellite artificiel en orbite",
+      "la Magna Carta est scellée en Angleterre",
+      "Haïti proclame son indépendance"
+    ],
+    "answer": 2,
+    "explanation": "1215 : la Magna Carta est scellée en Angleterre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H003A",
+    "knowledge_id": "V2-HIST-003",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique ?",
+    "choices": [
+      "1930",
+      "1971",
+      "1492",
+      "1861"
+    ],
+    "answer": 2,
+    "explanation": "Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique : 1492.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H003B",
+    "knowledge_id": "V2-HIST-003",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1492 ?",
+    "choices": [
+      "le traité de Rome fonde la Communauté économique européenne",
+      "Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique",
+      "la guerre de Sécession américaine commence",
+      "la première Coupe du monde de football a lieu en Uruguay"
+    ],
+    "answer": 1,
+    "explanation": "1492 : Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H004A",
+    "knowledge_id": "V2-HIST-004",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Martin Luther publie ses 95 thèses ?",
+    "choices": [
+      "1976",
+      "1517",
+      "1869",
+      "1939"
+    ],
+    "answer": 1,
+    "explanation": "Martin Luther publie ses 95 thèses : 1517.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H004B",
+    "knowledge_id": "V2-HIST-004",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1517 ?",
+    "choices": [
+      "Martin Luther publie ses 95 thèses",
+      "le canal de Suez est inauguré",
+      "la Deuxième Guerre mondiale commence",
+      "la RDC accède à l’indépendance"
+    ],
+    "answer": 0,
+    "explanation": "1517 : Martin Luther publie ses 95 thèses.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H005A",
+    "knowledge_id": "V2-HIST-005",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la Déclaration d’indépendance des États-Unis est adoptée ?",
+    "choices": [
+      "1776",
+      "1884",
+      "1944",
+      "1989"
+    ],
+    "answer": 0,
+    "explanation": "la Déclaration d’indépendance des États-Unis est adoptée : 1776.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H005B",
+    "knowledge_id": "V2-HIST-005",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1776 ?",
+    "choices": [
+      "la conférence de Berlin commence",
+      "la conférence de Bretton Woods pose les bases du FMI et de la Banque mondiale",
+      "Youri Gagarine devient le premier humain dans l’espace",
+      "la Déclaration d’indépendance des États-Unis est adoptée"
+    ],
+    "answer": 3,
+    "explanation": "1776 : la Déclaration d’indépendance des États-Unis est adoptée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H006A",
+    "knowledge_id": "V2-HIST-006",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la Révolution française commence ?",
+    "choices": [
+      "1896",
+      "1945",
+      "1991",
+      "1789"
+    ],
+    "answer": 3,
+    "explanation": "la Révolution française commence : 1789.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H006B",
+    "knowledge_id": "V2-HIST-006",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1789 ?",
+    "choices": [
+      "la Deuxième Guerre mondiale se termine",
+      "l’Organisation de l’unité africaine est créée",
+      "la Révolution française commence",
+      "les premiers Jeux olympiques modernes ont lieu à Athènes"
+    ],
+    "answer": 2,
+    "explanation": "1789 : la Révolution française commence.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H007A",
+    "knowledge_id": "V2-HIST-007",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Haïti proclame son indépendance ?",
+    "choices": [
+      "1947",
+      "1992",
+      "1804",
+      "1901"
+    ],
+    "answer": 2,
+    "explanation": "Haïti proclame son indépendance : 1804.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H007B",
+    "knowledge_id": "V2-HIST-007",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1804 ?",
+    "choices": [
+      "Valentina Terechkova devient la première femme dans l’espace",
+      "Haïti proclame son indépendance",
+      "les premiers prix Nobel sont attribués",
+      "l’Organisation des Nations Unies est créée"
+    ],
+    "answer": 1,
+    "explanation": "1804 : Haïti proclame son indépendance.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H008A",
+    "knowledge_id": "V2-HIST-008",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la guerre de Sécession américaine commence ?",
+    "choices": [
+      "1994",
+      "1861",
+      "1903",
+      "1948"
+    ],
+    "answer": 1,
+    "explanation": "la guerre de Sécession américaine commence : 1861.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H008B",
+    "knowledge_id": "V2-HIST-008",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1861 ?",
+    "choices": [
+      "la guerre de Sécession américaine commence",
+      "les frères Wright réalisent un vol motorisé contrôlé",
+      "l’UNESCO est fondée",
+      "Joseph-Désiré Mobutu prend le pouvoir au Congo"
+    ],
+    "answer": 0,
+    "explanation": "1861 : la guerre de Sécession américaine commence.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H009A",
+    "knowledge_id": "V2-HIST-009",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : le canal de Suez est inauguré ?",
+    "choices": [
+      "1869",
+      "1914",
+      "1949",
+      "1997"
+    ],
+    "answer": 0,
+    "explanation": "le canal de Suez est inauguré : 1869.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H009B",
+    "knowledge_id": "V2-HIST-009",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1869 ?",
+    "choices": [
+      "la Première Guerre mondiale commence",
+      "l’Inde accède à l’indépendance",
+      "Apollo 11 réalise le premier alunissage habité",
+      "le canal de Suez est inauguré"
+    ],
+    "answer": 3,
+    "explanation": "1869 : le canal de Suez est inauguré.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H010A",
+    "knowledge_id": "V2-HIST-010",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la conférence de Berlin commence ?",
+    "choices": [
+      "1917",
+      "1955",
+      "2002",
+      "1884"
+    ],
+    "answer": 3,
+    "explanation": "la conférence de Berlin commence : 1884.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H010B",
+    "knowledge_id": "V2-HIST-010",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1884 ?",
+    "choices": [
+      "la Déclaration universelle des droits de l’homme est adoptée",
+      "le Congo-Kinshasa prend le nom de Zaïre",
+      "la conférence de Berlin commence",
+      "la révolution russe renverse le régime tsariste"
+    ],
+    "answer": 2,
+    "explanation": "1884 : la conférence de Berlin commence.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H011A",
+    "knowledge_id": "V2-HIST-011",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : les premiers Jeux olympiques modernes ont lieu à Athènes ?",
+    "choices": [
+      "1957",
+      "2006",
+      "1896",
+      "1918"
+    ],
+    "answer": 2,
+    "explanation": "les premiers Jeux olympiques modernes ont lieu à Athènes : 1896.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H011B",
+    "knowledge_id": "V2-HIST-011",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1896 ?",
+    "choices": [
+      "le virus Ebola est identifié pour la première fois lors d’épidémies en Afrique centrale",
+      "les premiers Jeux olympiques modernes ont lieu à Athènes",
+      "la Première Guerre mondiale se termine",
+      "l’Organisation mondiale de la Santé entre en fonction"
+    ],
+    "answer": 1,
+    "explanation": "1896 : les premiers Jeux olympiques modernes ont lieu à Athènes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H012A",
+    "knowledge_id": "V2-HIST-012",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : les premiers prix Nobel sont attribués ?",
+    "choices": [
+      "476",
+      "1901",
+      "1919",
+      "1960"
+    ],
+    "answer": 1,
+    "explanation": "les premiers prix Nobel sont attribués : 1901.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H012B",
+    "knowledge_id": "V2-HIST-012",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1901 ?",
+    "choices": [
+      "les premiers prix Nobel sont attribués",
+      "l’Organisation internationale du Travail est fondée",
+      "l’OTAN est créée",
+      "le mur de Berlin s’ouvre et tombe"
+    ],
+    "answer": 0,
+    "explanation": "1901 : les premiers prix Nobel sont attribués.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H013A",
+    "knowledge_id": "V2-HIST-013",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : les frères Wright réalisent un vol motorisé contrôlé ?",
+    "choices": [
+      "1903",
+      "1920",
+      "1961",
+      "1215"
+    ],
+    "answer": 0,
+    "explanation": "les frères Wright réalisent un vol motorisé contrôlé : 1903.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H013B",
+    "knowledge_id": "V2-HIST-013",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1903 ?",
+    "choices": [
+      "la Société des Nations commence ses activités",
+      "la République populaire de Chine est proclamée",
+      "Tim Berners-Lee propose le World Wide Web",
+      "les frères Wright réalisent un vol motorisé contrôlé"
+    ],
+    "answer": 3,
+    "explanation": "1903 : les frères Wright réalisent un vol motorisé contrôlé.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H014A",
+    "knowledge_id": "V2-HIST-014",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la Première Guerre mondiale commence ?",
+    "choices": [
+      "1928",
+      "1963",
+      "1492",
+      "1914"
+    ],
+    "answer": 3,
+    "explanation": "la Première Guerre mondiale commence : 1914.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H014B",
+    "knowledge_id": "V2-HIST-014",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1914 ?",
+    "choices": [
+      "la conférence de Bandung réunit des pays d’Afrique et d’Asie",
+      "l’Union soviétique se dissout",
+      "la Première Guerre mondiale commence",
+      "Alexander Fleming observe l’effet antibactérien de la pénicilline"
+    ],
+    "answer": 2,
+    "explanation": "1914 : la Première Guerre mondiale commence.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H015A",
+    "knowledge_id": "V2-HIST-015",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la révolution russe renverse le régime tsariste ?",
+    "choices": [
+      "1965",
+      "1517",
+      "1917",
+      "1930"
+    ],
+    "answer": 2,
+    "explanation": "la révolution russe renverse le régime tsariste : 1917.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H015B",
+    "knowledge_id": "V2-HIST-015",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1917 ?",
+    "choices": [
+      "le traité de Maastricht est signé",
+      "la révolution russe renverse le régime tsariste",
+      "la première Coupe du monde de football a lieu en Uruguay",
+      "le Ghana accède à l’indépendance"
+    ],
+    "answer": 1,
+    "explanation": "1917 : la révolution russe renverse le régime tsariste.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H016A",
+    "knowledge_id": "V2-HIST-016",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la Première Guerre mondiale se termine ?",
+    "choices": [
+      "1776",
+      "1918",
+      "1939",
+      "1969"
+    ],
+    "answer": 1,
+    "explanation": "la Première Guerre mondiale se termine : 1918.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H016B",
+    "knowledge_id": "V2-HIST-016",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1918 ?",
+    "choices": [
+      "la Première Guerre mondiale se termine",
+      "la Deuxième Guerre mondiale commence",
+      "Spoutnik 1 devient le premier satellite artificiel en orbite",
+      "l’Afrique du Sud organise ses premières élections nationales multiraciales"
+    ],
+    "answer": 0,
+    "explanation": "1918 : la Première Guerre mondiale se termine.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H017A",
+    "knowledge_id": "V2-HIST-017",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’Organisation internationale du Travail est fondée ?",
+    "choices": [
+      "1919",
+      "1944",
+      "1971",
+      "1789"
+    ],
+    "answer": 0,
+    "explanation": "l’Organisation internationale du Travail est fondée : 1919.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H017B",
+    "knowledge_id": "V2-HIST-017",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1919 ?",
+    "choices": [
+      "la conférence de Bretton Woods pose les bases du FMI et de la Banque mondiale",
+      "le traité de Rome fonde la Communauté économique européenne",
+      "le nom République démocratique du Congo est rétabli",
+      "l’Organisation internationale du Travail est fondée"
+    ],
+    "answer": 3,
+    "explanation": "1919 : l’Organisation internationale du Travail est fondée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H018A",
+    "knowledge_id": "V2-HIST-018",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la Société des Nations commence ses activités ?",
+    "choices": [
+      "1945",
+      "1976",
+      "1804",
+      "1920"
+    ],
+    "answer": 3,
+    "explanation": "la Société des Nations commence ses activités : 1920.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H018B",
+    "knowledge_id": "V2-HIST-018",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1920 ?",
+    "choices": [
+      "la RDC accède à l’indépendance",
+      "l’Union africaine succède à l’OUA",
+      "la Société des Nations commence ses activités",
+      "la Deuxième Guerre mondiale se termine"
+    ],
+    "answer": 2,
+    "explanation": "1920 : la Société des Nations commence ses activités.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H019A",
+    "knowledge_id": "V2-HIST-019",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Alexander Fleming observe l’effet antibactérien de la pénicilline ?",
+    "choices": [
+      "1989",
+      "1861",
+      "1928",
+      "1947"
+    ],
+    "answer": 2,
+    "explanation": "Alexander Fleming observe l’effet antibactérien de la pénicilline : 1928.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H019B",
+    "knowledge_id": "V2-HIST-019",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1928 ?",
+    "choices": [
+      "l’actuelle Constitution de la RDC est promulguée",
+      "Alexander Fleming observe l’effet antibactérien de la pénicilline",
+      "l’Organisation des Nations Unies est créée",
+      "Youri Gagarine devient le premier humain dans l’espace"
+    ],
+    "answer": 1,
+    "explanation": "1928 : Alexander Fleming observe l’effet antibactérien de la pénicilline.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H020A",
+    "knowledge_id": "V2-HIST-020",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la première Coupe du monde de football a lieu en Uruguay ?",
+    "choices": [
+      "1869",
+      "1930",
+      "1948",
+      "1991"
+    ],
+    "answer": 1,
+    "explanation": "la première Coupe du monde de football a lieu en Uruguay : 1930.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H020B",
+    "knowledge_id": "V2-HIST-020",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1930 ?",
+    "choices": [
+      "la première Coupe du monde de football a lieu en Uruguay",
+      "l’UNESCO est fondée",
+      "l’Organisation de l’unité africaine est créée",
+      "la chute de l’Empire romain d’Occident"
+    ],
+    "answer": 0,
+    "explanation": "1930 : la première Coupe du monde de football a lieu en Uruguay.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H021A",
+    "knowledge_id": "V2-HIST-021",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la Deuxième Guerre mondiale commence ?",
+    "choices": [
+      "1939",
+      "1949",
+      "1992",
+      "1884"
+    ],
+    "answer": 0,
+    "explanation": "la Deuxième Guerre mondiale commence : 1939.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H021B",
+    "knowledge_id": "V2-HIST-021",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1939 ?",
+    "choices": [
+      "l’Inde accède à l’indépendance",
+      "Valentina Terechkova devient la première femme dans l’espace",
+      "la Magna Carta est scellée en Angleterre",
+      "la Deuxième Guerre mondiale commence"
+    ],
+    "answer": 3,
+    "explanation": "1939 : la Deuxième Guerre mondiale commence.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H022A",
+    "knowledge_id": "V2-HIST-022",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la conférence de Bretton Woods pose les bases du FMI et de la Banque mondiale ?",
+    "choices": [
+      "1955",
+      "1994",
+      "1896",
+      "1944"
+    ],
+    "answer": 3,
+    "explanation": "la conférence de Bretton Woods pose les bases du FMI et de la Banque mondiale : 1944.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H022B",
+    "knowledge_id": "V2-HIST-022",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1944 ?",
+    "choices": [
+      "Joseph-Désiré Mobutu prend le pouvoir au Congo",
+      "Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique",
+      "la conférence de Bretton Woods pose les bases du FMI et de la Banque mondiale",
+      "la Déclaration universelle des droits de l’homme est adoptée"
+    ],
+    "answer": 2,
+    "explanation": "1944 : la conférence de Bretton Woods pose les bases du FMI et de la Banque mondiale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H023A",
+    "knowledge_id": "V2-HIST-023",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la Deuxième Guerre mondiale se termine ?",
+    "choices": [
+      "1997",
+      "1901",
+      "1945",
+      "1957"
+    ],
+    "answer": 2,
+    "explanation": "la Deuxième Guerre mondiale se termine : 1945.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H023B",
+    "knowledge_id": "V2-HIST-023",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement majeur de 1945 marque la fin du second conflit mondial ?",
+    "choices": [
+      "Martin Luther publie ses 95 thèses",
+      "la Deuxième Guerre mondiale se termine",
+      "l’Organisation mondiale de la Santé entre en fonction",
+      "Apollo 11 réalise le premier alunissage habité"
+    ],
+    "answer": 1,
+    "explanation": "1945 : la Deuxième Guerre mondiale se termine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H024A",
+    "knowledge_id": "V2-HIST-024",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’Organisation des Nations Unies est créée ?",
+    "choices": [
+      "1903",
+      "1945",
+      "1960",
+      "2002"
+    ],
+    "answer": 1,
+    "explanation": "l’Organisation des Nations Unies est créée : 1945.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H024B",
+    "knowledge_id": "V2-HIST-024",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quelle création institutionnelle internationale majeure date de 1945 ?",
+    "choices": [
+      "l’Organisation des Nations Unies est créée",
+      "l’OTAN est créée",
+      "le Congo-Kinshasa prend le nom de Zaïre",
+      "la Déclaration d’indépendance des États-Unis est adoptée"
+    ],
+    "answer": 0,
+    "explanation": "1945 : l’Organisation des Nations Unies est créée.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H025A",
+    "knowledge_id": "V2-HIST-025",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’UNESCO est fondée ?",
+    "choices": [
+      "1945",
+      "1961",
+      "2006",
+      "1914"
+    ],
+    "answer": 0,
+    "explanation": "l’UNESCO est fondée : 1945.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H025B",
+    "knowledge_id": "V2-HIST-025",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement de 1945 concerne l’UNESCO ?",
+    "choices": [
+      "la République populaire de Chine est proclamée",
+      "le virus Ebola est identifié pour la première fois lors d’épidémies en Afrique centrale",
+      "la Révolution française commence",
+      "l’UNESCO est fondée"
+    ],
+    "answer": 3,
+    "explanation": "1945 : l’UNESCO est fondée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H026A",
+    "knowledge_id": "V2-HIST-026",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’Inde accède à l’indépendance ?",
+    "choices": [
+      "1963",
+      "476",
+      "1917",
+      "1947"
+    ],
+    "answer": 3,
+    "explanation": "l’Inde accède à l’indépendance : 1947.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H026B",
+    "knowledge_id": "V2-HIST-026",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1947 ?",
+    "choices": [
+      "le mur de Berlin s’ouvre et tombe",
+      "Haïti proclame son indépendance",
+      "l’Inde accède à l’indépendance",
+      "la conférence de Bandung réunit des pays d’Afrique et d’Asie"
+    ],
+    "answer": 2,
+    "explanation": "1947 : l’Inde accède à l’indépendance.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H027A",
+    "knowledge_id": "V2-HIST-027",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la Déclaration universelle des droits de l’homme est adoptée ?",
+    "choices": [
+      "1215",
+      "1918",
+      "1948",
+      "1965"
+    ],
+    "answer": 2,
+    "explanation": "la Déclaration universelle des droits de l’homme est adoptée : 1948.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H027B",
+    "knowledge_id": "V2-HIST-027",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement de 1948 concerne la Déclaration universelle des droits de l’homme ?",
+    "choices": [
+      "la guerre de Sécession américaine commence",
+      "la Déclaration universelle des droits de l’homme est adoptée",
+      "le Ghana accède à l’indépendance",
+      "Tim Berners-Lee propose le World Wide Web"
+    ],
+    "answer": 1,
+    "explanation": "1948 : la Déclaration universelle des droits de l’homme est adoptée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H028A",
+    "knowledge_id": "V2-HIST-028",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’Organisation mondiale de la Santé entre en fonction ?",
+    "choices": [
+      "1919",
+      "1948",
+      "1969",
+      "1492"
+    ],
+    "answer": 1,
+    "explanation": "l’Organisation mondiale de la Santé entre en fonction : 1948.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H028B",
+    "knowledge_id": "V2-HIST-028",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement de 1948 concerne l’Organisation mondiale de la Santé ?",
+    "choices": [
+      "l’Organisation mondiale de la Santé entre en fonction",
+      "Spoutnik 1 devient le premier satellite artificiel en orbite",
+      "l’Union soviétique se dissout",
+      "le canal de Suez est inauguré"
+    ],
+    "answer": 0,
+    "explanation": "1948 : l’Organisation mondiale de la Santé entre en fonction.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H029A",
+    "knowledge_id": "V2-HIST-029",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’OTAN est créée ?",
+    "choices": [
+      "1949",
+      "1971",
+      "1517",
+      "1920"
+    ],
+    "answer": 0,
+    "explanation": "l’OTAN est créée : 1949.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H029B",
+    "knowledge_id": "V2-HIST-029",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement de 1949 concerne l’Alliance atlantique ?",
+    "choices": [
+      "le traité de Rome fonde la Communauté économique européenne",
+      "le traité de Maastricht est signé",
+      "la conférence de Berlin commence",
+      "l’OTAN est créée"
+    ],
+    "answer": 3,
+    "explanation": "1949 : l’OTAN est créée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H030A",
+    "knowledge_id": "V2-HIST-030",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la République populaire de Chine est proclamée ?",
+    "choices": [
+      "1976",
+      "1776",
+      "1928",
+      "1949"
+    ],
+    "answer": 3,
+    "explanation": "la République populaire de Chine est proclamée : 1949.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H030B",
+    "knowledge_id": "V2-HIST-030",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement de 1949 concerne la République populaire de Chine ?",
+    "choices": [
+      "l’Afrique du Sud organise ses premières élections nationales multiraciales",
+      "les premiers Jeux olympiques modernes ont lieu à Athènes",
+      "la République populaire de Chine est proclamée",
+      "la RDC accède à l’indépendance"
+    ],
+    "answer": 2,
+    "explanation": "1949 : la République populaire de Chine est proclamée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H031A",
+    "knowledge_id": "V2-HIST-031",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la conférence de Bandung réunit des pays d’Afrique et d’Asie ?",
+    "choices": [
+      "1789",
+      "1930",
+      "1955",
+      "1989"
+    ],
+    "answer": 2,
+    "explanation": "la conférence de Bandung réunit des pays d’Afrique et d’Asie : 1955.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H031B",
+    "knowledge_id": "V2-HIST-031",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1955 ?",
+    "choices": [
+      "les premiers prix Nobel sont attribués",
+      "la conférence de Bandung réunit des pays d’Afrique et d’Asie",
+      "Youri Gagarine devient le premier humain dans l’espace",
+      "le nom République démocratique du Congo est rétabli"
+    ],
+    "answer": 1,
+    "explanation": "1955 : la conférence de Bandung réunit des pays d’Afrique et d’Asie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H032A",
+    "knowledge_id": "V2-HIST-032",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : le Ghana accède à l’indépendance ?",
+    "choices": [
+      "1939",
+      "1957",
+      "1991",
+      "1804"
+    ],
+    "answer": 1,
+    "explanation": "le Ghana accède à l’indépendance : 1957.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H032B",
+    "knowledge_id": "V2-HIST-032",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement de 1957 concerne l’indépendance du Ghana ?",
+    "choices": [
+      "le Ghana accède à l’indépendance",
+      "l’Organisation de l’unité africaine est créée",
+      "l’Union africaine succède à l’OUA",
+      "les frères Wright réalisent un vol motorisé contrôlé"
+    ],
+    "answer": 0,
+    "explanation": "1957 : le Ghana accède à l’indépendance.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H033A",
+    "knowledge_id": "V2-HIST-033",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Spoutnik 1 devient le premier satellite artificiel en orbite ?",
+    "choices": [
+      "1957",
+      "1992",
+      "1861",
+      "1944"
+    ],
+    "answer": 0,
+    "explanation": "Spoutnik 1 devient le premier satellite artificiel en orbite : 1957.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H033B",
+    "knowledge_id": "V2-HIST-033",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement scientifique de 1957 concerne Spoutnik 1 ?",
+    "choices": [
+      "Valentina Terechkova devient la première femme dans l’espace",
+      "l’actuelle Constitution de la RDC est promulguée",
+      "la Première Guerre mondiale commence",
+      "Spoutnik 1 devient le premier satellite artificiel en orbite"
+    ],
+    "answer": 3,
+    "explanation": "1957 : Spoutnik 1 devient le premier satellite artificiel en orbite.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H034A",
+    "knowledge_id": "V2-HIST-034",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : le traité de Rome fonde la Communauté économique européenne ?",
+    "choices": [
+      "1994",
+      "1869",
+      "1945",
+      "1957"
+    ],
+    "answer": 3,
+    "explanation": "le traité de Rome fonde la Communauté économique européenne : 1957.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H034B",
+    "knowledge_id": "V2-HIST-034",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement européen de 1957 concerne le traité de Rome ?",
+    "choices": [
+      "la chute de l’Empire romain d’Occident",
+      "la révolution russe renverse le régime tsariste",
+      "le traité de Rome fonde la Communauté économique européenne",
+      "Joseph-Désiré Mobutu prend le pouvoir au Congo"
+    ],
+    "answer": 2,
+    "explanation": "1957 : le traité de Rome fonde la Communauté économique européenne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H035A",
+    "knowledge_id": "V2-HIST-035",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : la RDC accède à l’indépendance ?",
+    "choices": [
+      "1884",
+      "1947",
+      "1960",
+      "1997"
+    ],
+    "answer": 2,
+    "explanation": "la RDC accède à l’indépendance : 1960.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H035B",
+    "knowledge_id": "V2-HIST-035",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1960 ?",
+    "choices": [
+      "la Première Guerre mondiale se termine",
+      "la RDC accède à l’indépendance",
+      "Apollo 11 réalise le premier alunissage habité",
+      "la Magna Carta est scellée en Angleterre"
+    ],
+    "answer": 1,
+    "explanation": "1960 : la RDC accède à l’indépendance.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H036A",
+    "knowledge_id": "V2-HIST-036",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Youri Gagarine devient le premier humain dans l’espace ?",
+    "choices": [
+      "1948",
+      "1961",
+      "2002",
+      "1896"
+    ],
+    "answer": 1,
+    "explanation": "Youri Gagarine devient le premier humain dans l’espace : 1961.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H036B",
+    "knowledge_id": "V2-HIST-036",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1961 ?",
+    "choices": [
+      "Youri Gagarine devient le premier humain dans l’espace",
+      "le Congo-Kinshasa prend le nom de Zaïre",
+      "Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique",
+      "l’Organisation internationale du Travail est fondée"
+    ],
+    "answer": 0,
+    "explanation": "1961 : Youri Gagarine devient le premier humain dans l’espace.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H037A",
+    "knowledge_id": "V2-HIST-037",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’Organisation de l’unité africaine est créée ?",
+    "choices": [
+      "1963",
+      "2006",
+      "1901",
+      "1949"
+    ],
+    "answer": 0,
+    "explanation": "l’Organisation de l’unité africaine est créée : 1963.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H037B",
+    "knowledge_id": "V2-HIST-037",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement africain de 1963 concerne l’Organisation de l’unité africaine ?",
+    "choices": [
+      "le virus Ebola est identifié pour la première fois lors d’épidémies en Afrique centrale",
+      "Martin Luther publie ses 95 thèses",
+      "la Société des Nations commence ses activités",
+      "l’Organisation de l’unité africaine est créée"
+    ],
+    "answer": 3,
+    "explanation": "1963 : l’Organisation de l’unité africaine est créée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H038A",
+    "knowledge_id": "V2-HIST-038",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Valentina Terechkova devient la première femme dans l’espace ?",
+    "choices": [
+      "476",
+      "1903",
+      "1955",
+      "1963"
+    ],
+    "answer": 3,
+    "explanation": "Valentina Terechkova devient la première femme dans l’espace : 1963.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H038B",
+    "knowledge_id": "V2-HIST-038",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement spatial de 1963 concerne Valentina Terechkova ?",
+    "choices": [
+      "la Déclaration d’indépendance des États-Unis est adoptée",
+      "Alexander Fleming observe l’effet antibactérien de la pénicilline",
+      "Valentina Terechkova devient la première femme dans l’espace",
+      "le mur de Berlin s’ouvre et tombe"
+    ],
+    "answer": 2,
+    "explanation": "1963 : Valentina Terechkova devient la première femme dans l’espace.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H039A",
+    "knowledge_id": "V2-HIST-039",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Joseph-Désiré Mobutu prend le pouvoir au Congo ?",
+    "choices": [
+      "1914",
+      "1957",
+      "1965",
+      "1215"
+    ],
+    "answer": 2,
+    "explanation": "Joseph-Désiré Mobutu prend le pouvoir au Congo : 1965.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H039B",
+    "knowledge_id": "V2-HIST-039",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1965 ?",
+    "choices": [
+      "la première Coupe du monde de football a lieu en Uruguay",
+      "Joseph-Désiré Mobutu prend le pouvoir au Congo",
+      "Tim Berners-Lee propose le World Wide Web",
+      "la Révolution française commence"
+    ],
+    "answer": 1,
+    "explanation": "1965 : Joseph-Désiré Mobutu prend le pouvoir au Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H040A",
+    "knowledge_id": "V2-HIST-040",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Apollo 11 réalise le premier alunissage habité ?",
+    "choices": [
+      "1960",
+      "1969",
+      "1492",
+      "1917"
+    ],
+    "answer": 1,
+    "explanation": "Apollo 11 réalise le premier alunissage habité : 1969.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H040B",
+    "knowledge_id": "V2-HIST-040",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1969 ?",
+    "choices": [
+      "Apollo 11 réalise le premier alunissage habité",
+      "l’Union soviétique se dissout",
+      "Haïti proclame son indépendance",
+      "la Deuxième Guerre mondiale commence"
+    ],
+    "answer": 0,
+    "explanation": "1969 : Apollo 11 réalise le premier alunissage habité.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H041A",
+    "knowledge_id": "V2-HIST-041",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : le Congo-Kinshasa prend le nom de Zaïre ?",
+    "choices": [
+      "1971",
+      "1517",
+      "1918",
+      "1961"
+    ],
+    "answer": 0,
+    "explanation": "le Congo-Kinshasa prend le nom de Zaïre : 1971.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H041B",
+    "knowledge_id": "V2-HIST-041",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1971 ?",
+    "choices": [
+      "le traité de Maastricht est signé",
+      "la guerre de Sécession américaine commence",
+      "la conférence de Bretton Woods pose les bases du FMI et de la Banque mondiale",
+      "le Congo-Kinshasa prend le nom de Zaïre"
+    ],
+    "answer": 3,
+    "explanation": "1971 : le Congo-Kinshasa prend le nom de Zaïre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H042A",
+    "knowledge_id": "V2-HIST-042",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : le virus Ebola est identifié pour la première fois lors d’épidémies en Afrique centrale ?",
+    "choices": [
+      "1776",
+      "1919",
+      "1963",
+      "1976"
+    ],
+    "answer": 3,
+    "explanation": "le virus Ebola est identifié pour la première fois lors d’épidémies en Afrique centrale : 1976.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H042B",
+    "knowledge_id": "V2-HIST-042",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1976 ?",
+    "choices": [
+      "le canal de Suez est inauguré",
+      "la Deuxième Guerre mondiale se termine",
+      "le virus Ebola est identifié pour la première fois lors d’épidémies en Afrique centrale",
+      "l’Afrique du Sud organise ses premières élections nationales multiraciales"
+    ],
+    "answer": 2,
+    "explanation": "1976 : le virus Ebola est identifié pour la première fois lors d’épidémies en Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H043A",
+    "knowledge_id": "V2-HIST-043",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : le mur de Berlin s’ouvre et tombe ?",
+    "choices": [
+      "1920",
+      "1965",
+      "1989",
+      "1789"
+    ],
+    "answer": 2,
+    "explanation": "le mur de Berlin s’ouvre et tombe : 1989.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H043B",
+    "knowledge_id": "V2-HIST-043",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement européen de 1989 concerne le mur de Berlin ?",
+    "choices": [
+      "l’Organisation des Nations Unies est créée",
+      "le mur de Berlin s’ouvre et tombe",
+      "le nom République démocratique du Congo est rétabli",
+      "la conférence de Berlin commence"
+    ],
+    "answer": 1,
+    "explanation": "1989 : le mur de Berlin s’ouvre et tombe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H044A",
+    "knowledge_id": "V2-HIST-044",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : Tim Berners-Lee propose le World Wide Web ?",
+    "choices": [
+      "1969",
+      "1989",
+      "1804",
+      "1928"
+    ],
+    "answer": 1,
+    "explanation": "Tim Berners-Lee propose le World Wide Web : 1989.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H044B",
+    "knowledge_id": "V2-HIST-044",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement technologique de 1989 concerne Tim Berners-Lee ?",
+    "choices": [
+      "Tim Berners-Lee propose le World Wide Web",
+      "l’Union africaine succède à l’OUA",
+      "les premiers Jeux olympiques modernes ont lieu à Athènes",
+      "l’UNESCO est fondée"
+    ],
+    "answer": 0,
+    "explanation": "1989 : Tim Berners-Lee propose le World Wide Web.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H045A",
+    "knowledge_id": "V2-HIST-045",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’Union soviétique se dissout ?",
+    "choices": [
+      "1991",
+      "1861",
+      "1930",
+      "1971"
+    ],
+    "answer": 0,
+    "explanation": "l’Union soviétique se dissout : 1991.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H045B",
+    "knowledge_id": "V2-HIST-045",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1991 ?",
+    "choices": [
+      "l’actuelle Constitution de la RDC est promulguée",
+      "les premiers prix Nobel sont attribués",
+      "l’Inde accède à l’indépendance",
+      "l’Union soviétique se dissout"
+    ],
+    "answer": 3,
+    "explanation": "1991 : l’Union soviétique se dissout.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H046A",
+    "knowledge_id": "V2-HIST-046",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : le traité de Maastricht est signé ?",
+    "choices": [
+      "1869",
+      "1939",
+      "1976",
+      "1992"
+    ],
+    "answer": 3,
+    "explanation": "le traité de Maastricht est signé : 1992.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H046B",
+    "knowledge_id": "V2-HIST-046",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1992 ?",
+    "choices": [
+      "les frères Wright réalisent un vol motorisé contrôlé",
+      "la Déclaration universelle des droits de l’homme est adoptée",
+      "le traité de Maastricht est signé",
+      "la chute de l’Empire romain d’Occident"
+    ],
+    "answer": 2,
+    "explanation": "1992 : le traité de Maastricht est signé.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H047A",
+    "knowledge_id": "V2-HIST-047",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’Afrique du Sud organise ses premières élections nationales multiraciales ?",
+    "choices": [
+      "1944",
+      "1989",
+      "1994",
+      "1884"
+    ],
+    "answer": 2,
+    "explanation": "l’Afrique du Sud organise ses premières élections nationales multiraciales : 1994.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H047B",
+    "knowledge_id": "V2-HIST-047",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1994 ?",
+    "choices": [
+      "l’Organisation mondiale de la Santé entre en fonction",
+      "l’Afrique du Sud organise ses premières élections nationales multiraciales",
+      "la Magna Carta est scellée en Angleterre",
+      "la Première Guerre mondiale commence"
+    ],
+    "answer": 1,
+    "explanation": "1994 : l’Afrique du Sud organise ses premières élections nationales multiraciales.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H048A",
+    "knowledge_id": "V2-HIST-048",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : le nom République démocratique du Congo est rétabli ?",
+    "choices": [
+      "1991",
+      "1997",
+      "1896",
+      "1945"
+    ],
+    "answer": 1,
+    "explanation": "le nom République démocratique du Congo est rétabli : 1997.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H048B",
+    "knowledge_id": "V2-HIST-048",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 1997 ?",
+    "choices": [
+      "le nom République démocratique du Congo est rétabli",
+      "Christophe Colomb atteint les Amériques lors de son premier voyage transatlantique",
+      "la révolution russe renverse le régime tsariste",
+      "l’OTAN est créée"
+    ],
+    "answer": 0,
+    "explanation": "1997 : le nom République démocratique du Congo est rétabli.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H049A",
+    "knowledge_id": "V2-HIST-049",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’Union africaine succède à l’OUA ?",
+    "choices": [
+      "2002",
+      "1901",
+      "1947",
+      "1992"
+    ],
+    "answer": 0,
+    "explanation": "l’Union africaine succède à l’OUA : 2002.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H049B",
+    "knowledge_id": "V2-HIST-049",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 2002 ?",
+    "choices": [
+      "Martin Luther publie ses 95 thèses",
+      "la Première Guerre mondiale se termine",
+      "la République populaire de Chine est proclamée",
+      "l’Union africaine succède à l’OUA"
+    ],
+    "answer": 3,
+    "explanation": "2002 : l’Union africaine succède à l’OUA.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H050A",
+    "knowledge_id": "V2-HIST-050",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "À quelle année associe-t-on l’événement suivant : l’actuelle Constitution de la RDC est promulguée ?",
+    "choices": [
+      "1903",
+      "1948",
+      "1994",
+      "2006"
+    ],
+    "answer": 3,
+    "explanation": "l’actuelle Constitution de la RDC est promulguée : 2006.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  },
+  {
+    "id": "V2H050B",
+    "knowledge_id": "V2-HIST-050",
+    "module": 6,
+    "domain": "Histoire générale",
+    "subdomain": "Repères chronologiques",
+    "prompt": "Quel événement correspond au repère chronologique 2006 ?",
+    "choices": [
+      "l’Organisation internationale du Travail est fondée",
+      "la conférence de Bandung réunit des pays d’Afrique et d’Asie",
+      "l’actuelle Constitution de la RDC est promulguée",
+      "la Déclaration d’indépendance des États-Unis est adoptée"
+    ],
+    "answer": 2,
+    "explanation": "2006 : l’actuelle Constitution de la RDC est promulguée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire générale — repères chronologiques"
+  }
+]
