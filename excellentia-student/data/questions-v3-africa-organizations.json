@@ -1,0 +1,3840 @@
+[
+  {
+    "id": "V3AO0001",
+    "knowledge_id": "V3-AO-CUR-01",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Algérie ?",
+    "choices": [
+      "dinar algérien",
+      "franc comorien",
+      "birr",
+      "ouguiya"
+    ],
+    "answer": 0,
+    "explanation": "Algérie utilise dinar algérien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0002",
+    "knowledge_id": "V3-AO-REG-01",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Algérie ?",
+    "choices": [
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord"
+    ],
+    "answer": 3,
+    "explanation": "Algérie est classé ici dans Afrique du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0003",
+    "knowledge_id": "V3-AO-CUR-02",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Angola ?",
+    "choices": [
+      "dalasi",
+      "roupie mauricienne",
+      "kwanza",
+      "franc congolais"
+    ],
+    "answer": 2,
+    "explanation": "Angola utilise kwanza.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0004",
+    "knowledge_id": "V3-AO-REG-02",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Angola ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique centrale",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Angola est classé ici dans Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0005",
+    "knowledge_id": "V3-AO-CUR-03",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Bénin ?",
+    "choices": [
+      "franc CFA (BCEAO)",
+      "franc djiboutien",
+      "cedi",
+      "dirham marocain"
+    ],
+    "answer": 0,
+    "explanation": "Bénin utilise franc CFA (BCEAO).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0006",
+    "knowledge_id": "V3-AO-REG-03",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Bénin ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 3,
+    "explanation": "Bénin est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0007",
+    "knowledge_id": "V3-AO-CUR-04",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Botswana ?",
+    "choices": [
+      "franc guinéen",
+      "metical",
+      "pula",
+      "livre égyptienne"
+    ],
+    "answer": 2,
+    "explanation": "Botswana utilise pula.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0008",
+    "knowledge_id": "V3-AO-REG-04",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Botswana ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique australe",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Botswana est classé ici dans Afrique australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0009",
+    "knowledge_id": "V3-AO-CUR-05",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Burkina Faso ?",
+    "choices": [
+      "franc CFA (BCEAO)",
+      "nakfa",
+      "shilling kényan",
+      "dollar namibien"
+    ],
+    "answer": 0,
+    "explanation": "Burkina Faso utilise franc CFA (BCEAO).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0010",
+    "knowledge_id": "V3-AO-REG-05",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Burkina Faso ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 3,
+    "explanation": "Burkina Faso est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0011",
+    "knowledge_id": "V3-AO-CUR-06",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Burundi ?",
+    "choices": [
+      "loti",
+      "naira",
+      "franc burundais",
+      "lilangeni"
+    ],
+    "answer": 2,
+    "explanation": "Burundi utilise franc burundais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0012",
+    "knowledge_id": "V3-AO-REG-06",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Burundi ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Burundi est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0013",
+    "knowledge_id": "V3-AO-CUR-07",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Cabo Verde ?",
+    "choices": [
+      "escudo cap-verdien",
+      "birr",
+      "dollar libérien",
+      "franc rwandais"
+    ],
+    "answer": 0,
+    "explanation": "Cabo Verde utilise escudo cap-verdien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0014",
+    "knowledge_id": "V3-AO-REG-07",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Cabo Verde ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 3,
+    "explanation": "Cabo Verde est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0015",
+    "knowledge_id": "V3-AO-CUR-08",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Cameroun ?",
+    "choices": [
+      "dinar libyen",
+      "dobra",
+      "franc CFA (BEAC)",
+      "dalasi"
+    ],
+    "answer": 2,
+    "explanation": "Cameroun utilise franc CFA (BEAC).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0016",
+    "knowledge_id": "V3-AO-REG-08",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Cameroun ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique centrale",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Cameroun est classé ici dans Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0017",
+    "knowledge_id": "V3-AO-CUR-09",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en République centrafricaine ?",
+    "choices": [
+      "franc CFA (BEAC)",
+      "cedi",
+      "ariary",
+      "roupie seychelloise"
+    ],
+    "answer": 0,
+    "explanation": "République centrafricaine utilise franc CFA (BEAC).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0018",
+    "knowledge_id": "V3-AO-REG-09",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on République centrafricaine ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique de l’Est",
+      "Afrique centrale"
+    ],
+    "answer": 3,
+    "explanation": "République centrafricaine est classé ici dans Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0019",
+    "knowledge_id": "V3-AO-CUR-10",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Tchad ?",
+    "choices": [
+      "kwacha malawite",
+      "leone",
+      "franc CFA (BEAC)",
+      "franc guinéen"
+    ],
+    "answer": 2,
+    "explanation": "Tchad utilise franc CFA (BEAC).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0020",
+    "knowledge_id": "V3-AO-REG-10",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Tchad ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique centrale",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Tchad est classé ici dans Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0021",
+    "knowledge_id": "V3-AO-CUR-11",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Comores ?",
+    "choices": [
+      "franc comorien",
+      "shilling kényan",
+      "ouguiya",
+      "shilling somalien"
+    ],
+    "answer": 0,
+    "explanation": "Comores utilise franc comorien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0022",
+    "knowledge_id": "V3-AO-REG-11",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Comores ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est"
+    ],
+    "answer": 3,
+    "explanation": "Comores est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0023",
+    "knowledge_id": "V3-AO-CUR-12",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en République du Congo ?",
+    "choices": [
+      "roupie mauricienne",
+      "rand",
+      "franc CFA (BEAC)",
+      "loti"
+    ],
+    "answer": 2,
+    "explanation": "République du Congo utilise franc CFA (BEAC).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0024",
+    "knowledge_id": "V3-AO-REG-12",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on République du Congo ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique centrale",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "République du Congo est classé ici dans Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0025",
+    "knowledge_id": "V3-AO-CUR-13",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en RDC ?",
+    "choices": [
+      "franc congolais",
+      "dollar libérien",
+      "dirham marocain",
+      "livre sud-soudanaise"
+    ],
+    "answer": 0,
+    "explanation": "RDC utilise franc congolais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0026",
+    "knowledge_id": "V3-AO-REG-13",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on RDC ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique de l’Est",
+      "Afrique centrale"
+    ],
+    "answer": 3,
+    "explanation": "RDC est classé ici dans Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0027",
+    "knowledge_id": "V3-AO-CUR-14",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Côte d’Ivoire ?",
+    "choices": [
+      "metical",
+      "livre soudanaise",
+      "franc CFA (BCEAO)",
+      "dinar libyen"
+    ],
+    "answer": 2,
+    "explanation": "Côte d’Ivoire utilise franc CFA (BCEAO).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0028",
+    "knowledge_id": "V3-AO-REG-14",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Côte d’Ivoire ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique de l’Ouest",
+      "Afrique du Nord",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Côte d’Ivoire est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0029",
+    "knowledge_id": "V3-AO-CUR-15",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Djibouti ?",
+    "choices": [
+      "franc djiboutien",
+      "ariary",
+      "dollar namibien",
+      "shilling tanzanien"
+    ],
+    "answer": 0,
+    "explanation": "Djibouti utilise franc djiboutien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0030",
+    "knowledge_id": "V3-AO-REG-15",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Djibouti ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est"
+    ],
+    "answer": 3,
+    "explanation": "Djibouti est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0031",
+    "knowledge_id": "V3-AO-CUR-16",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Égypte ?",
+    "choices": [
+      "naira",
+      "dinar tunisien",
+      "livre égyptienne",
+      "kwacha malawite"
+    ],
+    "answer": 2,
+    "explanation": "Égypte utilise livre égyptienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0032",
+    "knowledge_id": "V3-AO-REG-16",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Égypte ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Égypte est classé ici dans Afrique du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0033",
+    "knowledge_id": "V3-AO-CUR-17",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Guinée équatoriale ?",
+    "choices": [
+      "franc CFA (BEAC)",
+      "ouguiya",
+      "franc rwandais",
+      "shilling ougandais"
+    ],
+    "answer": 0,
+    "explanation": "Guinée équatoriale utilise franc CFA (BEAC).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0034",
+    "knowledge_id": "V3-AO-REG-17",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Guinée équatoriale ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique de l’Est",
+      "Afrique centrale"
+    ],
+    "answer": 3,
+    "explanation": "Guinée équatoriale est classé ici dans Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0035",
+    "knowledge_id": "V3-AO-CUR-18",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Érythrée ?",
+    "choices": [
+      "dobra",
+      "kwacha zambien",
+      "nakfa",
+      "roupie mauricienne"
+    ],
+    "answer": 2,
+    "explanation": "Érythrée utilise nakfa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0036",
+    "knowledge_id": "V3-AO-REG-18",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Érythrée ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Érythrée est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0037",
+    "knowledge_id": "V3-AO-CUR-19",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Eswatini ?",
+    "choices": [
+      "lilangeni",
+      "dirham marocain",
+      "roupie seychelloise",
+      "dinar algérien"
+    ],
+    "answer": 0,
+    "explanation": "Eswatini utilise lilangeni.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0038",
+    "knowledge_id": "V3-AO-REG-19",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Eswatini ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique australe"
+    ],
+    "answer": 3,
+    "explanation": "Eswatini est classé ici dans Afrique australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0039",
+    "knowledge_id": "V3-AO-CUR-20",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Éthiopie ?",
+    "choices": [
+      "leone",
+      "kwanza",
+      "birr",
+      "metical"
+    ],
+    "answer": 2,
+    "explanation": "Éthiopie utilise birr.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0040",
+    "knowledge_id": "V3-AO-REG-20",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Éthiopie ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Éthiopie est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0041",
+    "knowledge_id": "V3-AO-CUR-21",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Gabon ?",
+    "choices": [
+      "franc CFA (BEAC)",
+      "dollar namibien",
+      "shilling somalien",
+      "franc CFA (BCEAO)"
+    ],
+    "answer": 0,
+    "explanation": "Gabon utilise franc CFA (BEAC).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0042",
+    "knowledge_id": "V3-AO-REG-21",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Gabon ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique de l’Est",
+      "Afrique centrale"
+    ],
+    "answer": 3,
+    "explanation": "Gabon est classé ici dans Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0043",
+    "knowledge_id": "V3-AO-CUR-22",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Gambie ?",
+    "choices": [
+      "rand",
+      "pula",
+      "dalasi",
+      "naira"
+    ],
+    "answer": 2,
+    "explanation": "Gambie utilise dalasi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0044",
+    "knowledge_id": "V3-AO-REG-22",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Gambie ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique de l’Ouest",
+      "Afrique du Nord",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Gambie est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0045",
+    "knowledge_id": "V3-AO-CUR-23",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Ghana ?",
+    "choices": [
+      "cedi",
+      "franc rwandais",
+      "livre sud-soudanaise",
+      "franc burundais"
+    ],
+    "answer": 0,
+    "explanation": "Ghana utilise cedi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0046",
+    "knowledge_id": "V3-AO-REG-23",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Ghana ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 3,
+    "explanation": "Ghana est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0047",
+    "knowledge_id": "V3-AO-CUR-24",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Guinée ?",
+    "choices": [
+      "livre soudanaise",
+      "escudo cap-verdien",
+      "franc guinéen",
+      "dobra"
+    ],
+    "answer": 2,
+    "explanation": "Guinée utilise franc guinéen.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0048",
+    "knowledge_id": "V3-AO-REG-24",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Guinée ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique de l’Ouest",
+      "Afrique du Nord",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Guinée est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0049",
+    "knowledge_id": "V3-AO-CUR-25",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Guinée-Bissau ?",
+    "choices": [
+      "franc CFA (BCEAO)",
+      "roupie seychelloise",
+      "shilling tanzanien",
+      "franc CFA (BEAC)"
+    ],
+    "answer": 0,
+    "explanation": "Guinée-Bissau utilise franc CFA (BCEAO).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0050",
+    "knowledge_id": "V3-AO-REG-25",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Guinée-Bissau ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 3,
+    "explanation": "Guinée-Bissau est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0051",
+    "knowledge_id": "V3-AO-CUR-26",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Kenya ?",
+    "choices": [
+      "dinar tunisien",
+      "franc comorien",
+      "shilling kényan",
+      "leone"
+    ],
+    "answer": 2,
+    "explanation": "Kenya utilise shilling kényan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0052",
+    "knowledge_id": "V3-AO-REG-26",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Kenya ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Kenya est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0053",
+    "knowledge_id": "V3-AO-CUR-27",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Lesotho ?",
+    "choices": [
+      "loti",
+      "shilling somalien",
+      "shilling ougandais",
+      "franc congolais"
+    ],
+    "answer": 0,
+    "explanation": "Lesotho utilise loti.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0054",
+    "knowledge_id": "V3-AO-REG-27",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Lesotho ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique australe"
+    ],
+    "answer": 3,
+    "explanation": "Lesotho est classé ici dans Afrique australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0055",
+    "knowledge_id": "V3-AO-CUR-28",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Liberia ?",
+    "choices": [
+      "kwacha zambien",
+      "franc djiboutien",
+      "dollar libérien",
+      "rand"
+    ],
+    "answer": 2,
+    "explanation": "Liberia utilise dollar libérien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0056",
+    "knowledge_id": "V3-AO-REG-28",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Liberia ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique de l’Ouest",
+      "Afrique du Nord",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Liberia est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0057",
+    "knowledge_id": "V3-AO-CUR-29",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Libye ?",
+    "choices": [
+      "dinar libyen",
+      "livre sud-soudanaise",
+      "dinar algérien",
+      "livre égyptienne"
+    ],
+    "answer": 0,
+    "explanation": "Libye utilise dinar libyen.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0058",
+    "knowledge_id": "V3-AO-REG-29",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Libye ?",
+    "choices": [
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord"
+    ],
+    "answer": 3,
+    "explanation": "Libye est classé ici dans Afrique du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0059",
+    "knowledge_id": "V3-AO-CUR-30",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Madagascar ?",
+    "choices": [
+      "kwanza",
+      "nakfa",
+      "ariary",
+      "livre soudanaise"
+    ],
+    "answer": 2,
+    "explanation": "Madagascar utilise ariary.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0060",
+    "knowledge_id": "V3-AO-REG-30",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Madagascar ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Madagascar est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0061",
+    "knowledge_id": "V3-AO-CUR-31",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Malawi ?",
+    "choices": [
+      "kwacha malawite",
+      "shilling tanzanien",
+      "franc CFA (BCEAO)",
+      "lilangeni"
+    ],
+    "answer": 0,
+    "explanation": "Malawi utilise kwacha malawite.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0062",
+    "knowledge_id": "V3-AO-REG-31",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Malawi ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est"
+    ],
+    "answer": 3,
+    "explanation": "Malawi est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0063",
+    "knowledge_id": "V3-AO-CUR-32",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Mali ?",
+    "choices": [
+      "pula",
+      "birr",
+      "franc CFA (BCEAO)",
+      "dinar tunisien"
+    ],
+    "answer": 2,
+    "explanation": "Mali utilise franc CFA (BCEAO).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0064",
+    "knowledge_id": "V3-AO-REG-32",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Mali ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique de l’Ouest",
+      "Afrique du Nord",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Mali est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0065",
+    "knowledge_id": "V3-AO-CUR-33",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Mauritanie ?",
+    "choices": [
+      "ouguiya",
+      "shilling ougandais",
+      "franc burundais",
+      "dalasi"
+    ],
+    "answer": 0,
+    "explanation": "Mauritanie utilise ouguiya.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0066",
+    "knowledge_id": "V3-AO-REG-33",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Mauritanie ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 3,
+    "explanation": "Mauritanie est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0067",
+    "knowledge_id": "V3-AO-CUR-34",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Maurice ?",
+    "choices": [
+      "escudo cap-verdien",
+      "cedi",
+      "roupie mauricienne",
+      "kwacha zambien"
+    ],
+    "answer": 2,
+    "explanation": "Maurice utilise roupie mauricienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0068",
+    "knowledge_id": "V3-AO-REG-34",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Maurice ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Maurice est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0069",
+    "knowledge_id": "V3-AO-CUR-35",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Maroc ?",
+    "choices": [
+      "dirham marocain",
+      "dinar algérien",
+      "franc CFA (BEAC)",
+      "franc guinéen"
+    ],
+    "answer": 0,
+    "explanation": "Maroc utilise dirham marocain.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0070",
+    "knowledge_id": "V3-AO-REG-35",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Maroc ?",
+    "choices": [
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord"
+    ],
+    "answer": 3,
+    "explanation": "Maroc est classé ici dans Afrique du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0071",
+    "knowledge_id": "V3-AO-CUR-36",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Mozambique ?",
+    "choices": [
+      "franc comorien",
+      "shilling kényan",
+      "metical",
+      "kwanza"
+    ],
+    "answer": 2,
+    "explanation": "Mozambique utilise metical.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0072",
+    "knowledge_id": "V3-AO-REG-36",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Mozambique ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Mozambique est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0073",
+    "knowledge_id": "V3-AO-CUR-37",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Namibie ?",
+    "choices": [
+      "dollar namibien",
+      "franc CFA (BCEAO)",
+      "franc congolais",
+      "loti"
+    ],
+    "answer": 0,
+    "explanation": "Namibie utilise dollar namibien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0074",
+    "knowledge_id": "V3-AO-REG-37",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Namibie ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique australe"
+    ],
+    "answer": 3,
+    "explanation": "Namibie est classé ici dans Afrique australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0075",
+    "knowledge_id": "V3-AO-CUR-38",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Niger ?",
+    "choices": [
+      "franc djiboutien",
+      "dollar libérien",
+      "franc CFA (BCEAO)",
+      "pula"
+    ],
+    "answer": 2,
+    "explanation": "Niger utilise franc CFA (BCEAO).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0076",
+    "knowledge_id": "V3-AO-REG-38",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Niger ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique de l’Ouest",
+      "Afrique du Nord",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Niger est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0077",
+    "knowledge_id": "V3-AO-CUR-39",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Nigeria ?",
+    "choices": [
+      "naira",
+      "franc burundais",
+      "livre égyptienne",
+      "dinar libyen"
+    ],
+    "answer": 0,
+    "explanation": "Nigeria utilise naira.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0078",
+    "knowledge_id": "V3-AO-REG-39",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Nigeria ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 3,
+    "explanation": "Nigeria est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0079",
+    "knowledge_id": "V3-AO-CUR-40",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Rwanda ?",
+    "choices": [
+      "nakfa",
+      "ariary",
+      "franc rwandais",
+      "escudo cap-verdien"
+    ],
+    "answer": 2,
+    "explanation": "Rwanda utilise franc rwandais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0080",
+    "knowledge_id": "V3-AO-REG-40",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Rwanda ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Rwanda est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0081",
+    "knowledge_id": "V3-AO-CUR-41",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Sao Tomé-et-Principe ?",
+    "choices": [
+      "dobra",
+      "franc CFA (BEAC)",
+      "lilangeni",
+      "kwacha malawite"
+    ],
+    "answer": 0,
+    "explanation": "Sao Tomé-et-Principe utilise dobra.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0082",
+    "knowledge_id": "V3-AO-REG-41",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Sao Tomé-et-Principe ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique de l’Est",
+      "Afrique centrale"
+    ],
+    "answer": 3,
+    "explanation": "Sao Tomé-et-Principe est classé ici dans Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0083",
+    "knowledge_id": "V3-AO-CUR-42",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Sénégal ?",
+    "choices": [
+      "birr",
+      "ouguiya",
+      "franc CFA (BCEAO)",
+      "franc comorien"
+    ],
+    "answer": 2,
+    "explanation": "Sénégal utilise franc CFA (BCEAO).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0084",
+    "knowledge_id": "V3-AO-REG-42",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Sénégal ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique de l’Ouest",
+      "Afrique du Nord",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Sénégal est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0085",
+    "knowledge_id": "V3-AO-CUR-43",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Seychelles ?",
+    "choices": [
+      "roupie seychelloise",
+      "franc congolais",
+      "dalasi",
+      "roupie mauricienne"
+    ],
+    "answer": 0,
+    "explanation": "Seychelles utilise roupie seychelloise.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0086",
+    "knowledge_id": "V3-AO-REG-43",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Seychelles ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est"
+    ],
+    "answer": 3,
+    "explanation": "Seychelles est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0087",
+    "knowledge_id": "V3-AO-CUR-44",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Sierra Leone ?",
+    "choices": [
+      "cedi",
+      "dirham marocain",
+      "leone",
+      "franc djiboutien"
+    ],
+    "answer": 2,
+    "explanation": "Sierra Leone utilise leone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0088",
+    "knowledge_id": "V3-AO-REG-44",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Sierra Leone ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique de l’Ouest",
+      "Afrique du Nord",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Sierra Leone est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0089",
+    "knowledge_id": "V3-AO-CUR-45",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Somalie ?",
+    "choices": [
+      "shilling somalien",
+      "livre égyptienne",
+      "franc guinéen",
+      "metical"
+    ],
+    "answer": 0,
+    "explanation": "Somalie utilise shilling somalien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0090",
+    "knowledge_id": "V3-AO-REG-45",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Somalie ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est"
+    ],
+    "answer": 3,
+    "explanation": "Somalie est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0091",
+    "knowledge_id": "V3-AO-CUR-46",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Afrique du Sud ?",
+    "choices": [
+      "shilling kényan",
+      "dollar namibien",
+      "rand",
+      "nakfa"
+    ],
+    "answer": 2,
+    "explanation": "Afrique du Sud utilise rand.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0092",
+    "knowledge_id": "V3-AO-REG-46",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Afrique du Sud ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique australe",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Afrique du Sud est classé ici dans Afrique australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0093",
+    "knowledge_id": "V3-AO-CUR-47",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Soudan du Sud ?",
+    "choices": [
+      "livre sud-soudanaise",
+      "lilangeni",
+      "loti",
+      "naira"
+    ],
+    "answer": 0,
+    "explanation": "Soudan du Sud utilise livre sud-soudanaise.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0094",
+    "knowledge_id": "V3-AO-REG-47",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Soudan du Sud ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est"
+    ],
+    "answer": 3,
+    "explanation": "Soudan du Sud est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0095",
+    "knowledge_id": "V3-AO-CUR-48",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Soudan ?",
+    "choices": [
+      "dollar libérien",
+      "franc rwandais",
+      "livre soudanaise",
+      "birr"
+    ],
+    "answer": 2,
+    "explanation": "Soudan utilise livre soudanaise.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0096",
+    "knowledge_id": "V3-AO-REG-48",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Soudan ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Soudan est classé ici dans Afrique du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0097",
+    "knowledge_id": "V3-AO-CUR-49",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Tanzanie ?",
+    "choices": [
+      "shilling tanzanien",
+      "dalasi",
+      "dinar libyen",
+      "dobra"
+    ],
+    "answer": 0,
+    "explanation": "Tanzanie utilise shilling tanzanien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0098",
+    "knowledge_id": "V3-AO-REG-49",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Tanzanie ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est"
+    ],
+    "answer": 3,
+    "explanation": "Tanzanie est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0099",
+    "knowledge_id": "V3-AO-CUR-50",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Togo ?",
+    "choices": [
+      "ariary",
+      "roupie seychelloise",
+      "franc CFA (BCEAO)",
+      "cedi"
+    ],
+    "answer": 2,
+    "explanation": "Togo utilise franc CFA (BCEAO).",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0100",
+    "knowledge_id": "V3-AO-REG-50",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Togo ?",
+    "choices": [
+      "Afrique de l’Est",
+      "Afrique de l’Ouest",
+      "Afrique du Nord",
+      "Afrique centrale"
+    ],
+    "answer": 1,
+    "explanation": "Togo est classé ici dans Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0101",
+    "knowledge_id": "V3-AO-CUR-51",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Tunisie ?",
+    "choices": [
+      "dinar tunisien",
+      "franc guinéen",
+      "kwacha malawite",
+      "leone"
+    ],
+    "answer": 0,
+    "explanation": "Tunisie utilise dinar tunisien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0102",
+    "knowledge_id": "V3-AO-REG-51",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Tunisie ?",
+    "choices": [
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord"
+    ],
+    "answer": 3,
+    "explanation": "Tunisie est classé ici dans Afrique du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0103",
+    "knowledge_id": "V3-AO-CUR-52",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Ouganda ?",
+    "choices": [
+      "ouguiya",
+      "shilling somalien",
+      "shilling ougandais",
+      "shilling kényan"
+    ],
+    "answer": 2,
+    "explanation": "Ouganda utilise shilling ougandais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0104",
+    "knowledge_id": "V3-AO-REG-52",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Ouganda ?",
+    "choices": [
+      "Afrique centrale",
+      "Afrique de l’Est",
+      "Afrique du Nord",
+      "Afrique de l’Ouest"
+    ],
+    "answer": 1,
+    "explanation": "Ouganda est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0105",
+    "knowledge_id": "V3-AO-CUR-53",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies africaines",
+    "prompt": "Quelle est la monnaie nationale ou principale ayant cours en Zambie ?",
+    "choices": [
+      "kwacha zambien",
+      "loti",
+      "roupie mauricienne",
+      "rand"
+    ],
+    "answer": 0,
+    "explanation": "Zambie utilise kwacha zambien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "ISO 4217 et banques centrales africaines — socle vérifié 2026-10-06"
+  },
+  {
+    "id": "V3AO0106",
+    "knowledge_id": "V3-AO-REG-53",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Sous-régions",
+    "prompt": "Dans quelle grande sous-région africaine classe-t-on Zambie ?",
+    "choices": [
+      "Afrique du Nord",
+      "Afrique de l’Ouest",
+      "Afrique centrale",
+      "Afrique de l’Est"
+    ],
+    "answer": 3,
+    "explanation": "Zambie est classé ici dans Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Nations Unies — nomenclature géographique M49, vérifiée 2026-10-06"
+  },
+  {
+    "id": "V3AO0107",
+    "knowledge_id": "V3-AO-HQ-01",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation des Nations Unies (ONU) ?",
+    "choices": [
+      "Londres",
+      "Abuja",
+      "New York",
+      "Paris"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Organisation des Nations Unies (ONU) est à New York.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0108",
+    "knowledge_id": "V3-AO-MIS-01",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation des Nations Unies (ONU) ?",
+    "choices": [
+      "coopération postale internationale",
+      "coopération internationale, paix et sécurité collective",
+      "financement du développement et réduction de la pauvreté",
+      "aide alimentaire et lutte contre la faim"
+    ],
+    "answer": 1,
+    "explanation": "Organisation des Nations Unies (ONU) a notamment pour mission : coopération internationale, paix et sécurité collective.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0109",
+    "knowledge_id": "V3-AO-HQ-02",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Union africaine (UA) ?",
+    "choices": [
+      "Addis-Abeba",
+      "Washington",
+      "Berne",
+      "Gaborone"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Union africaine (UA) est à Addis-Abeba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0110",
+    "knowledge_id": "V3-AO-MIS-02",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Union africaine (UA) ?",
+    "choices": [
+      "règles du commerce international",
+      "droits, santé et bien-être de l’enfant",
+      "protection et coopération en matière de propriété intellectuelle",
+      "intégration continentale et coopération entre États africains"
+    ],
+    "answer": 3,
+    "explanation": "Union africaine (UA) a notamment pour mission : intégration continentale et coopération entre États africains.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0111",
+    "knowledge_id": "V3-AO-HQ-03",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation mondiale de la Santé (OMS) ?",
+    "choices": [
+      "Vienne",
+      "Arusha",
+      "Genève",
+      "Rome"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Organisation mondiale de la Santé (OMS) est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0112",
+    "knowledge_id": "V3-AO-MIS-03",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation mondiale de la Santé (OMS) ?",
+    "choices": [
+      "usages pacifiques et sûreté de l’énergie nucléaire",
+      "santé publique internationale",
+      "normes internationales du travail et justice sociale",
+      "protection internationale des réfugiés"
+    ],
+    "answer": 1,
+    "explanation": "Organisation mondiale de la Santé (OMS) a notamment pour mission : santé publique internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0113",
+    "knowledge_id": "V3-AO-HQ-04",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de UNESCO ?",
+    "choices": [
+      "Paris",
+      "Montréal",
+      "Bruxelles",
+      "Lusaka"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de UNESCO est à Paris.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0114",
+    "knowledge_id": "V3-AO-MIS-04",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à UNESCO ?",
+    "choices": [
+      "alimentation et agriculture",
+      "normes de l’aviation civile internationale",
+      "coordination des politiques pétrolières de ses membres",
+      "éducation, science, culture et patrimoine"
+    ],
+    "answer": 3,
+    "explanation": "UNESCO a notamment pour mission : éducation, science, culture et patrimoine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0115",
+    "knowledge_id": "V3-AO-HQ-05",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Fonds monétaire international (FMI) ?",
+    "choices": [
+      "Abuja",
+      "Libreville",
+      "Washington",
+      "Londres"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Fonds monétaire international (FMI) est à Washington.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0116",
+    "knowledge_id": "V3-AO-MIS-05",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Fonds monétaire international (FMI) ?",
+    "choices": [
+      "coopération économique et politiques publiques comparées",
+      "stabilité monétaire et coopération financière internationale",
+      "aide alimentaire et lutte contre la faim",
+      "sécurité et réglementation du transport maritime"
+    ],
+    "answer": 1,
+    "explanation": "Fonds monétaire international (FMI) a notamment pour mission : stabilité monétaire et coopération financière internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0117",
+    "knowledge_id": "V3-AO-HQ-06",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Groupe de la Banque mondiale ?",
+    "choices": [
+      "Washington",
+      "Berne",
+      "Gaborone",
+      "Djibouti"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Groupe de la Banque mondiale est à Washington.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0118",
+    "knowledge_id": "V3-AO-MIS-06",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Groupe de la Banque mondiale ?",
+    "choices": [
+      "droits, santé et bien-être de l’enfant",
+      "coopération et normes mondiales des télécommunications",
+      "alliance politique et militaire de défense collective",
+      "financement du développement et réduction de la pauvreté"
+    ],
+    "answer": 3,
+    "explanation": "Groupe de la Banque mondiale a notamment pour mission : financement du développement et réduction de la pauvreté.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0119",
+    "knowledge_id": "V3-AO-HQ-07",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation mondiale du commerce (OMC) ?",
+    "choices": [
+      "Arusha",
+      "Abidjan",
+      "Genève",
+      "Vienne"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Organisation mondiale du commerce (OMC) est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0120",
+    "knowledge_id": "V3-AO-MIS-07",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation mondiale du commerce (OMC) ?",
+    "choices": [
+      "intégration politique et économique européenne",
+      "règles du commerce international",
+      "protection internationale des réfugiés",
+      "coopération postale internationale"
+    ],
+    "answer": 1,
+    "explanation": "Organisation mondiale du commerce (OMC) a notamment pour mission : règles du commerce international.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0121",
+    "knowledge_id": "V3-AO-HQ-08",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation internationale du Travail (OIT) ?",
+    "choices": [
+      "Genève",
+      "Bruxelles",
+      "Lusaka",
+      "Le Caire"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Organisation internationale du Travail (OIT) est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0122",
+    "knowledge_id": "V3-AO-MIS-08",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation internationale du Travail (OIT) ?",
+    "choices": [
+      "normes de l’aviation civile internationale",
+      "protection et coopération en matière de propriété intellectuelle",
+      "intégration économique et coopération en Afrique de l’Ouest",
+      "normes internationales du travail et justice sociale"
+    ],
+    "answer": 3,
+    "explanation": "Organisation internationale du Travail (OIT) a notamment pour mission : normes internationales du travail et justice sociale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0123",
+    "knowledge_id": "V3-AO-HQ-09",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de FAO ?",
+    "choices": [
+      "Libreville",
+      "Lomé",
+      "Rome",
+      "Abuja"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de FAO est à Rome.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0124",
+    "knowledge_id": "V3-AO-MIS-09",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à FAO ?",
+    "choices": [
+      "développement et intégration en Afrique australe",
+      "alimentation et agriculture",
+      "sécurité et réglementation du transport maritime",
+      "usages pacifiques et sûreté de l’énergie nucléaire"
+    ],
+    "answer": 1,
+    "explanation": "FAO a notamment pour mission : alimentation et agriculture.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0125",
+    "knowledge_id": "V3-AO-HQ-10",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Programme alimentaire mondial (PAM) ?",
+    "choices": [
+      "Rome",
+      "Gaborone",
+      "Djibouti",
+      "Djeddah"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Programme alimentaire mondial (PAM) est à Rome.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0126",
+    "knowledge_id": "V3-AO-MIS-10",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Programme alimentaire mondial (PAM) ?",
+    "choices": [
+      "coopération et normes mondiales des télécommunications",
+      "coordination des politiques pétrolières de ses membres",
+      "intégration régionale en Afrique de l’Est",
+      "aide alimentaire et lutte contre la faim"
+    ],
+    "answer": 3,
+    "explanation": "Programme alimentaire mondial (PAM) a notamment pour mission : aide alimentaire et lutte contre la faim.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0127",
+    "knowledge_id": "V3-AO-HQ-11",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de UNICEF ?",
+    "choices": [
+      "Abidjan",
+      "Jakarta",
+      "New York",
+      "Arusha"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de UNICEF est à New York.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0128",
+    "knowledge_id": "V3-AO-MIS-11",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à UNICEF ?",
+    "choices": [
+      "marché commun de l’Afrique orientale et australe",
+      "droits, santé et bien-être de l’enfant",
+      "coopération postale internationale",
+      "coopération économique et politiques publiques comparées"
+    ],
+    "answer": 1,
+    "explanation": "UNICEF a notamment pour mission : droits, santé et bien-être de l’enfant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0129",
+    "knowledge_id": "V3-AO-HQ-12",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Haut-Commissariat des Nations Unies pour les réfugiés (HCR) ?",
+    "choices": [
+      "Genève",
+      "Lusaka",
+      "Le Caire",
+      "Georgetown"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Haut-Commissariat des Nations Unies pour les réfugiés (HCR) est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0130",
+    "knowledge_id": "V3-AO-MIS-12",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Haut-Commissariat des Nations Unies pour les réfugiés (HCR) ?",
+    "choices": [
+      "protection et coopération en matière de propriété intellectuelle",
+      "alliance politique et militaire de défense collective",
+      "coopération et intégration en Afrique centrale",
+      "protection internationale des réfugiés"
+    ],
+    "answer": 3,
+    "explanation": "Haut-Commissariat des Nations Unies pour les réfugiés (HCR) a notamment pour mission : protection internationale des réfugiés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0131",
+    "knowledge_id": "V3-AO-HQ-13",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation de l’aviation civile internationale (OACI) ?",
+    "choices": [
+      "Lomé",
+      "Lyon",
+      "Montréal",
+      "Libreville"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Organisation de l’aviation civile internationale (OACI) est à Montréal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0132",
+    "knowledge_id": "V3-AO-MIS-13",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation de l’aviation civile internationale (OACI) ?",
+    "choices": [
+      "coopération régionale dans la Corne de l’Afrique",
+      "normes de l’aviation civile internationale",
+      "usages pacifiques et sûreté de l’énergie nucléaire",
+      "intégration politique et économique européenne"
+    ],
+    "answer": 1,
+    "explanation": "Organisation de l’aviation civile internationale (OACI) a notamment pour mission : normes de l’aviation civile internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0133",
+    "knowledge_id": "V3-AO-HQ-14",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation maritime internationale (OMI) ?",
+    "choices": [
+      "Londres",
+      "Djibouti",
+      "Djeddah",
+      "Lausanne"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Organisation maritime internationale (OMI) est à Londres.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0134",
+    "knowledge_id": "V3-AO-MIS-14",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation maritime internationale (OMI) ?",
+    "choices": [
+      "coordination des politiques pétrolières de ses membres",
+      "intégration économique et coopération en Afrique de l’Ouest",
+      "financement du développement en Afrique",
+      "sécurité et réglementation du transport maritime"
+    ],
+    "answer": 3,
+    "explanation": "Organisation maritime internationale (OMI) a notamment pour mission : sécurité et réglementation du transport maritime.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0135",
+    "knowledge_id": "V3-AO-HQ-15",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Union internationale des télécommunications (UIT) ?",
+    "choices": [
+      "Jakarta",
+      "Zurich",
+      "Genève",
+      "Abidjan"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Union internationale des télécommunications (UIT) est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0136",
+    "knowledge_id": "V3-AO-MIS-15",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Union internationale des télécommunications (UIT) ?",
+    "choices": [
+      "financement du commerce intra-africain et extérieur de l’Afrique",
+      "coopération et normes mondiales des télécommunications",
+      "coopération économique et politiques publiques comparées",
+      "développement et intégration en Afrique australe"
+    ],
+    "answer": 1,
+    "explanation": "Union internationale des télécommunications (UIT) a notamment pour mission : coopération et normes mondiales des télécommunications.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0137",
+    "knowledge_id": "V3-AO-HQ-16",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Union postale universelle (UPU) ?",
+    "choices": [
+      "Berne",
+      "Le Caire",
+      "Georgetown",
+      "Madrid"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Union postale universelle (UPU) est à Berne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0138",
+    "knowledge_id": "V3-AO-MIS-16",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Union postale universelle (UPU) ?",
+    "choices": [
+      "alliance politique et militaire de défense collective",
+      "intégration régionale en Afrique de l’Est",
+      "financement du développement dans l’UEMOA",
+      "coopération postale internationale"
+    ],
+    "answer": 3,
+    "explanation": "Union postale universelle (UPU) a notamment pour mission : coopération postale internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0139",
+    "knowledge_id": "V3-AO-HQ-17",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation mondiale de la propriété intellectuelle (OMPI) ?",
+    "choices": [
+      "Lyon",
+      "Nairobi",
+      "Genève",
+      "Lomé"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Organisation mondiale de la propriété intellectuelle (OMPI) est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0140",
+    "knowledge_id": "V3-AO-MIS-17",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation mondiale de la propriété intellectuelle (OMPI) ?",
+    "choices": [
+      "coopération politique entre États arabes",
+      "protection et coopération en matière de propriété intellectuelle",
+      "intégration politique et économique européenne",
+      "marché commun de l’Afrique orientale et australe"
+    ],
+    "answer": 1,
+    "explanation": "Organisation mondiale de la propriété intellectuelle (OMPI) a notamment pour mission : protection et coopération en matière de propriété intellectuelle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0141",
+    "knowledge_id": "V3-AO-HQ-18",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Agence internationale de l’énergie atomique (AIEA) ?",
+    "choices": [
+      "Vienne",
+      "Djeddah",
+      "Lausanne",
+      "La Haye"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Agence internationale de l’énergie atomique (AIEA) est à Vienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0142",
+    "knowledge_id": "V3-AO-MIS-18",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Agence internationale de l’énergie atomique (AIEA) ?",
+    "choices": [
+      "intégration économique et coopération en Afrique de l’Ouest",
+      "coopération et intégration en Afrique centrale",
+      "coopération entre États membres du monde musulman",
+      "usages pacifiques et sûreté de l’énergie nucléaire"
+    ],
+    "answer": 3,
+    "explanation": "Agence internationale de l’énergie atomique (AIEA) a notamment pour mission : usages pacifiques et sûreté de l’énergie nucléaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0143",
+    "knowledge_id": "V3-AO-HQ-19",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation des pays exportateurs de pétrole (OPEP) ?",
+    "choices": [
+      "Zurich",
+      "New York",
+      "Vienne",
+      "Jakarta"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Organisation des pays exportateurs de pétrole (OPEP) est à Vienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0144",
+    "knowledge_id": "V3-AO-MIS-19",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation des pays exportateurs de pétrole (OPEP) ?",
+    "choices": [
+      "coopération politique et économique en Asie du Sud-Est",
+      "coordination des politiques pétrolières de ses membres",
+      "développement et intégration en Afrique australe",
+      "coopération régionale dans la Corne de l’Afrique"
+    ],
+    "answer": 1,
+    "explanation": "Organisation des pays exportateurs de pétrole (OPEP) a notamment pour mission : coordination des politiques pétrolières de ses membres.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0145",
+    "knowledge_id": "V3-AO-HQ-20",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation de coopération et de développement économiques (OCDE) ?",
+    "choices": [
+      "Paris",
+      "Georgetown",
+      "Madrid",
+      "Addis-Abeba"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Organisation de coopération et de développement économiques (OCDE) est à Paris.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0146",
+    "knowledge_id": "V3-AO-MIS-20",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation de coopération et de développement économiques (OCDE) ?",
+    "choices": [
+      "intégration régionale en Afrique de l’Est",
+      "financement du développement en Afrique",
+      "coopération politique entre États des Amériques",
+      "coopération économique et politiques publiques comparées"
+    ],
+    "answer": 3,
+    "explanation": "Organisation de coopération et de développement économiques (OCDE) a notamment pour mission : coopération économique et politiques publiques comparées.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0147",
+    "knowledge_id": "V3-AO-HQ-21",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation du traité de l’Atlantique Nord (OTAN) ?",
+    "choices": [
+      "Nairobi",
+      "Genève",
+      "Bruxelles",
+      "Lyon"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Organisation du traité de l’Atlantique Nord (OTAN) est à Bruxelles.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0148",
+    "knowledge_id": "V3-AO-MIS-21",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation du traité de l’Atlantique Nord (OTAN) ?",
+    "choices": [
+      "intégration et coopération dans les Caraïbes",
+      "alliance politique et militaire de défense collective",
+      "marché commun de l’Afrique orientale et australe",
+      "financement du commerce intra-africain et extérieur de l’Afrique"
+    ],
+    "answer": 1,
+    "explanation": "Organisation du traité de l’Atlantique Nord (OTAN) a notamment pour mission : alliance politique et militaire de défense collective.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0149",
+    "knowledge_id": "V3-AO-HQ-22",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Union européenne (UE) ?",
+    "choices": [
+      "Bruxelles",
+      "Lausanne",
+      "La Haye",
+      "Paris"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Union européenne (UE) est à Bruxelles.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0150",
+    "knowledge_id": "V3-AO-MIS-22",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Union européenne (UE) ?",
+    "choices": [
+      "coopération et intégration en Afrique centrale",
+      "financement du développement dans l’UEMOA",
+      "coopération entre les États membres du Commonwealth",
+      "intégration politique et économique européenne"
+    ],
+    "answer": 3,
+    "explanation": "Union européenne (UE) a notamment pour mission : intégration politique et économique européenne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0151",
+    "knowledge_id": "V3-AO-HQ-23",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de CEDEAO ?",
+    "choices": [
+      "New York",
+      "Washington",
+      "Abuja",
+      "Zurich"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de CEDEAO est à Abuja.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0152",
+    "knowledge_id": "V3-AO-MIS-23",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à CEDEAO ?",
+    "choices": [
+      "coopération policière internationale",
+      "intégration économique et coopération en Afrique de l’Ouest",
+      "coopération régionale dans la Corne de l’Afrique",
+      "coopération politique entre États arabes"
+    ],
+    "answer": 1,
+    "explanation": "CEDEAO a notamment pour mission : intégration économique et coopération en Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0153",
+    "knowledge_id": "V3-AO-HQ-24",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de SADC ?",
+    "choices": [
+      "Gaborone",
+      "Madrid",
+      "Addis-Abeba",
+      "Rome"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de SADC est à Gaborone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0154",
+    "knowledge_id": "V3-AO-MIS-24",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à SADC ?",
+    "choices": [
+      "financement du développement en Afrique",
+      "coopération entre États membres du monde musulman",
+      "mouvement olympique international",
+      "développement et intégration en Afrique australe"
+    ],
+    "answer": 3,
+    "explanation": "SADC a notamment pour mission : développement et intégration en Afrique australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0155",
+    "knowledge_id": "V3-AO-HQ-25",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Communauté d’Afrique de l’Est (EAC) ?",
+    "choices": [
+      "Genève",
+      "Montréal",
+      "Arusha",
+      "Nairobi"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Communauté d’Afrique de l’Est (EAC) est à Arusha.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0156",
+    "knowledge_id": "V3-AO-MIS-25",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Communauté d’Afrique de l’Est (EAC) ?",
+    "choices": [
+      "gouvernance internationale du football association",
+      "intégration régionale en Afrique de l’Est",
+      "financement du commerce intra-africain et extérieur de l’Afrique",
+      "coopération politique et économique en Asie du Sud-Est"
+    ],
+    "answer": 1,
+    "explanation": "Communauté d’Afrique de l’Est (EAC) a notamment pour mission : intégration régionale en Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0157",
+    "knowledge_id": "V3-AO-HQ-26",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de COMESA ?",
+    "choices": [
+      "Lusaka",
+      "La Haye",
+      "Paris",
+      "Londres"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de COMESA est à Lusaka.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0158",
+    "knowledge_id": "V3-AO-MIS-26",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à COMESA ?",
+    "choices": [
+      "financement du développement dans l’UEMOA",
+      "coopération politique entre États des Amériques",
+      "développement industriel inclusif et durable",
+      "marché commun de l’Afrique orientale et australe"
+    ],
+    "answer": 3,
+    "explanation": "COMESA a notamment pour mission : marché commun de l’Afrique orientale et australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0159",
+    "knowledge_id": "V3-AO-HQ-27",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de CEEAC ?",
+    "choices": [
+      "Washington",
+      "Berne",
+      "Libreville",
+      "New York"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de CEEAC est à Libreville.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0160",
+    "knowledge_id": "V3-AO-MIS-27",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à CEEAC ?",
+    "choices": [
+      "coopération internationale dans le tourisme",
+      "coopération et intégration en Afrique centrale",
+      "coopération politique entre États arabes",
+      "intégration et coopération dans les Caraïbes"
+    ],
+    "answer": 1,
+    "explanation": "CEEAC a notamment pour mission : coopération et intégration en Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0161",
+    "knowledge_id": "V3-AO-HQ-28",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de IGAD ?",
+    "choices": [
+      "Djibouti",
+      "Addis-Abeba",
+      "Rome",
+      "Vienne"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de IGAD est à Djibouti.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0162",
+    "knowledge_id": "V3-AO-MIS-28",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à IGAD ?",
+    "choices": [
+      "coopération entre États membres du monde musulman",
+      "coopération entre les États membres du Commonwealth",
+      "commerce et développement au sein du système des Nations Unies",
+      "coopération régionale dans la Corne de l’Afrique"
+    ],
+    "answer": 3,
+    "explanation": "IGAD a notamment pour mission : coopération régionale dans la Corne de l’Afrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0163",
+    "knowledge_id": "V3-AO-HQ-29",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Banque africaine de développement (BAD) ?",
+    "choices": [
+      "Montréal",
+      "Bruxelles",
+      "Abidjan",
+      "Genève"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Banque africaine de développement (BAD) est à Abidjan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0164",
+    "knowledge_id": "V3-AO-MIS-29",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Banque africaine de développement (BAD) ?",
+    "choices": [
+      "coordination de l’action environnementale de l’ONU",
+      "financement du développement en Afrique",
+      "coopération politique et économique en Asie du Sud-Est",
+      "coopération policière internationale"
+    ],
+    "answer": 1,
+    "explanation": "Banque africaine de développement (BAD) a notamment pour mission : financement du développement en Afrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0165",
+    "knowledge_id": "V3-AO-HQ-30",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Afreximbank ?",
+    "choices": [
+      "Le Caire",
+      "Paris",
+      "Londres",
+      "Abuja"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Afreximbank est à Le Caire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0166",
+    "knowledge_id": "V3-AO-MIS-30",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Afreximbank ?",
+    "choices": [
+      "coopération politique entre États des Amériques",
+      "mouvement olympique international",
+      "villes et établissements humains durables",
+      "financement du commerce intra-africain et extérieur de l’Afrique"
+    ],
+    "answer": 3,
+    "explanation": "Afreximbank a notamment pour mission : financement du commerce intra-africain et extérieur de l’Afrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0167",
+    "knowledge_id": "V3-AO-HQ-31",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Banque ouest-africaine de développement (BOAD) ?",
+    "choices": [
+      "Berne",
+      "Gaborone",
+      "Lomé",
+      "Washington"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Banque ouest-africaine de développement (BOAD) est à Lomé.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0168",
+    "knowledge_id": "V3-AO-MIS-31",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Banque ouest-africaine de développement (BOAD) ?",
+    "choices": [
+      "règlement judiciaire des différends entre États",
+      "financement du développement dans l’UEMOA",
+      "intégration et coopération dans les Caraïbes",
+      "gouvernance internationale du football association"
+    ],
+    "answer": 1,
+    "explanation": "Banque ouest-africaine de développement (BOAD) a notamment pour mission : financement du développement dans l’UEMOA.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0169",
+    "knowledge_id": "V3-AO-HQ-32",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Ligue des États arabes ?",
+    "choices": [
+      "Le Caire",
+      "Rome",
+      "Vienne",
+      "Arusha"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Ligue des États arabes est à Le Caire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0170",
+    "knowledge_id": "V3-AO-MIS-32",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Ligue des États arabes ?",
+    "choices": [
+      "coopération entre les États membres du Commonwealth",
+      "développement industriel inclusif et durable",
+      "poursuite des crimes internationaux relevant de sa compétence",
+      "coopération politique entre États arabes"
+    ],
+    "answer": 3,
+    "explanation": "Ligue des États arabes a notamment pour mission : coopération politique entre États arabes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0171",
+    "knowledge_id": "V3-AO-HQ-33",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation de la coopération islamique (OCI) ?",
+    "choices": [
+      "Bruxelles",
+      "Lusaka",
+      "Djeddah",
+      "Montréal"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Organisation de la coopération islamique (OCI) est à Djeddah.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0172",
+    "knowledge_id": "V3-AO-MIS-33",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation de la coopération islamique (OCI) ?",
+    "choices": [
+      "protection juridictionnelle des droits humains en Afrique",
+      "coopération entre États membres du monde musulman",
+      "coopération policière internationale",
+      "coopération internationale dans le tourisme"
+    ],
+    "answer": 1,
+    "explanation": "Organisation de la coopération islamique (OCI) a notamment pour mission : coopération entre États membres du monde musulman.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0173",
+    "knowledge_id": "V3-AO-HQ-34",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de ASEAN ?",
+    "choices": [
+      "Jakarta",
+      "Londres",
+      "Abuja",
+      "Libreville"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de ASEAN est à Jakarta.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0174",
+    "knowledge_id": "V3-AO-MIS-34",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à ASEAN ?",
+    "choices": [
+      "mouvement olympique international",
+      "commerce et développement au sein du système des Nations Unies",
+      "coopération internationale, paix et sécurité collective",
+      "coopération politique et économique en Asie du Sud-Est"
+    ],
+    "answer": 3,
+    "explanation": "ASEAN a notamment pour mission : coopération politique et économique en Asie du Sud-Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0175",
+    "knowledge_id": "V3-AO-HQ-35",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Organisation des États américains (OEA) ?",
+    "choices": [
+      "Gaborone",
+      "Djibouti",
+      "Washington",
+      "Berne"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Organisation des États américains (OEA) est à Washington.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0176",
+    "knowledge_id": "V3-AO-MIS-35",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Organisation des États américains (OEA) ?",
+    "choices": [
+      "intégration continentale et coopération entre États africains",
+      "coopération politique entre États des Amériques",
+      "gouvernance internationale du football association",
+      "coordination de l’action environnementale de l’ONU"
+    ],
+    "answer": 1,
+    "explanation": "Organisation des États américains (OEA) a notamment pour mission : coopération politique entre États des Amériques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0177",
+    "knowledge_id": "V3-AO-HQ-36",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de CARICOM ?",
+    "choices": [
+      "Georgetown",
+      "Vienne",
+      "Arusha",
+      "Abidjan"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de CARICOM est à Georgetown.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0178",
+    "knowledge_id": "V3-AO-MIS-36",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à CARICOM ?",
+    "choices": [
+      "développement industriel inclusif et durable",
+      "villes et établissements humains durables",
+      "santé publique internationale",
+      "intégration et coopération dans les Caraïbes"
+    ],
+    "answer": 3,
+    "explanation": "CARICOM a notamment pour mission : intégration et coopération dans les Caraïbes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0179",
+    "knowledge_id": "V3-AO-HQ-37",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Secrétariat du Commonwealth ?",
+    "choices": [
+      "Lusaka",
+      "Le Caire",
+      "Londres",
+      "Bruxelles"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Secrétariat du Commonwealth est à Londres.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0180",
+    "knowledge_id": "V3-AO-MIS-37",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Secrétariat du Commonwealth ?",
+    "choices": [
+      "éducation, science, culture et patrimoine",
+      "coopération entre les États membres du Commonwealth",
+      "coopération internationale dans le tourisme",
+      "règlement judiciaire des différends entre États"
+    ],
+    "answer": 1,
+    "explanation": "Secrétariat du Commonwealth a notamment pour mission : coopération entre les États membres du Commonwealth.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0181",
+    "knowledge_id": "V3-AO-HQ-38",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de INTERPOL ?",
+    "choices": [
+      "Lyon",
+      "Abuja",
+      "Libreville",
+      "Lomé"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de INTERPOL est à Lyon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0182",
+    "knowledge_id": "V3-AO-MIS-38",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à INTERPOL ?",
+    "choices": [
+      "commerce et développement au sein du système des Nations Unies",
+      "poursuite des crimes internationaux relevant de sa compétence",
+      "stabilité monétaire et coopération financière internationale",
+      "coopération policière internationale"
+    ],
+    "answer": 3,
+    "explanation": "INTERPOL a notamment pour mission : coopération policière internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0183",
+    "knowledge_id": "V3-AO-HQ-39",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Comité international olympique (CIO) ?",
+    "choices": [
+      "Djibouti",
+      "Djeddah",
+      "Lausanne",
+      "Gaborone"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Comité international olympique (CIO) est à Lausanne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0184",
+    "knowledge_id": "V3-AO-MIS-39",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Comité international olympique (CIO) ?",
+    "choices": [
+      "financement du développement et réduction de la pauvreté",
+      "mouvement olympique international",
+      "coordination de l’action environnementale de l’ONU",
+      "protection juridictionnelle des droits humains en Afrique"
+    ],
+    "answer": 1,
+    "explanation": "Comité international olympique (CIO) a notamment pour mission : mouvement olympique international.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0185",
+    "knowledge_id": "V3-AO-HQ-40",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de FIFA ?",
+    "choices": [
+      "Zurich",
+      "Arusha",
+      "Abidjan",
+      "Jakarta"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de FIFA est à Zurich.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0186",
+    "knowledge_id": "V3-AO-MIS-40",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à FIFA ?",
+    "choices": [
+      "villes et établissements humains durables",
+      "coopération internationale, paix et sécurité collective",
+      "règles du commerce international",
+      "gouvernance internationale du football association"
+    ],
+    "answer": 3,
+    "explanation": "FIFA a notamment pour mission : gouvernance internationale du football association.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0187",
+    "knowledge_id": "V3-AO-HQ-41",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de ONUDI ?",
+    "choices": [
+      "Le Caire",
+      "Georgetown",
+      "Vienne",
+      "Lusaka"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de ONUDI est à Vienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0188",
+    "knowledge_id": "V3-AO-MIS-41",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à ONUDI ?",
+    "choices": [
+      "normes internationales du travail et justice sociale",
+      "développement industriel inclusif et durable",
+      "règlement judiciaire des différends entre États",
+      "intégration continentale et coopération entre États africains"
+    ],
+    "answer": 1,
+    "explanation": "ONUDI a notamment pour mission : développement industriel inclusif et durable.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0189",
+    "knowledge_id": "V3-AO-HQ-42",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de ONU Tourisme ?",
+    "choices": [
+      "Madrid",
+      "Libreville",
+      "Lomé",
+      "Lyon"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de ONU Tourisme est à Madrid.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0190",
+    "knowledge_id": "V3-AO-MIS-42",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à ONU Tourisme ?",
+    "choices": [
+      "poursuite des crimes internationaux relevant de sa compétence",
+      "santé publique internationale",
+      "alimentation et agriculture",
+      "coopération internationale dans le tourisme"
+    ],
+    "answer": 3,
+    "explanation": "ONU Tourisme a notamment pour mission : coopération internationale dans le tourisme.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0191",
+    "knowledge_id": "V3-AO-HQ-43",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de CNUCED ?",
+    "choices": [
+      "Djeddah",
+      "Lausanne",
+      "Genève",
+      "Djibouti"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de CNUCED est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0192",
+    "knowledge_id": "V3-AO-MIS-43",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à CNUCED ?",
+    "choices": [
+      "aide alimentaire et lutte contre la faim",
+      "commerce et développement au sein du système des Nations Unies",
+      "protection juridictionnelle des droits humains en Afrique",
+      "éducation, science, culture et patrimoine"
+    ],
+    "answer": 1,
+    "explanation": "CNUCED a notamment pour mission : commerce et développement au sein du système des Nations Unies.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0193",
+    "knowledge_id": "V3-AO-HQ-44",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Programme des Nations Unies pour l’environnement (PNUE) ?",
+    "choices": [
+      "Nairobi",
+      "Abidjan",
+      "Jakarta",
+      "Zurich"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Programme des Nations Unies pour l’environnement (PNUE) est à Nairobi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0194",
+    "knowledge_id": "V3-AO-MIS-44",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Programme des Nations Unies pour l’environnement (PNUE) ?",
+    "choices": [
+      "coopération internationale, paix et sécurité collective",
+      "stabilité monétaire et coopération financière internationale",
+      "droits, santé et bien-être de l’enfant",
+      "coordination de l’action environnementale de l’ONU"
+    ],
+    "answer": 3,
+    "explanation": "Programme des Nations Unies pour l’environnement (PNUE) a notamment pour mission : coordination de l’action environnementale de l’ONU.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0195",
+    "knowledge_id": "V3-AO-HQ-45",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de ONU-Habitat ?",
+    "choices": [
+      "Georgetown",
+      "Madrid",
+      "Nairobi",
+      "Le Caire"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de ONU-Habitat est à Nairobi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0196",
+    "knowledge_id": "V3-AO-MIS-45",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à ONU-Habitat ?",
+    "choices": [
+      "protection internationale des réfugiés",
+      "villes et établissements humains durables",
+      "intégration continentale et coopération entre États africains",
+      "financement du développement et réduction de la pauvreté"
+    ],
+    "answer": 1,
+    "explanation": "ONU-Habitat a notamment pour mission : villes et établissements humains durables.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0197",
+    "knowledge_id": "V3-AO-HQ-46",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Cour internationale de Justice (CIJ) ?",
+    "choices": [
+      "La Haye",
+      "Lomé",
+      "Lyon",
+      "Nairobi"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Cour internationale de Justice (CIJ) est à La Haye.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0198",
+    "knowledge_id": "V3-AO-MIS-46",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Cour internationale de Justice (CIJ) ?",
+    "choices": [
+      "santé publique internationale",
+      "règles du commerce international",
+      "normes de l’aviation civile internationale",
+      "règlement judiciaire des différends entre États"
+    ],
+    "answer": 3,
+    "explanation": "Cour internationale de Justice (CIJ) a notamment pour mission : règlement judiciaire des différends entre États.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0199",
+    "knowledge_id": "V3-AO-HQ-47",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Cour pénale internationale (CPI) ?",
+    "choices": [
+      "Lausanne",
+      "Rome",
+      "La Haye",
+      "Djeddah"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de Cour pénale internationale (CPI) est à La Haye.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0200",
+    "knowledge_id": "V3-AO-MIS-47",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Cour pénale internationale (CPI) ?",
+    "choices": [
+      "sécurité et réglementation du transport maritime",
+      "poursuite des crimes internationaux relevant de sa compétence",
+      "éducation, science, culture et patrimoine",
+      "normes internationales du travail et justice sociale"
+    ],
+    "answer": 1,
+    "explanation": "Cour pénale internationale (CPI) a notamment pour mission : poursuite des crimes internationaux relevant de sa compétence.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  },
+  {
+    "id": "V3AO0201",
+    "knowledge_id": "V3-AO-HQ-48",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Dans quelle ville se trouve le siège principal de Cour africaine des droits de l’homme et des peuples ?",
+    "choices": [
+      "Arusha",
+      "Jakarta",
+      "Zurich",
+      "New York"
+    ],
+    "answer": 0,
+    "explanation": "Le siège principal de Cour africaine des droits de l’homme et des peuples est à Arusha.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — repères organisationnels vérifiés 2026-10-06"
+  },
+  {
+    "id": "V3AO0202",
+    "knowledge_id": "V3-AO-MIS-48",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Missions",
+    "prompt": "Quelle mission correspond le mieux à Cour africaine des droits de l’homme et des peuples ?",
+    "choices": [
+      "stabilité monétaire et coopération financière internationale",
+      "alimentation et agriculture",
+      "coopération et normes mondiales des télécommunications",
+      "protection juridictionnelle des droits humains en Afrique"
+    ],
+    "answer": 3,
+    "explanation": "Cour africaine des droits de l’homme et des peuples a notamment pour mission : protection juridictionnelle des droits humains en Afrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sites institutionnels officiels — missions statutaires synthétisées, vérifiées 2026-10-06"
+  }
+]
