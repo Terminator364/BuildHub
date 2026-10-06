@@ -1,0 +1,31 @@
+[
+  {
+    "id": "EXR23-001",
+    "knowledge_id": "EX23-PHI-MONTESQUIEU-SPIRIT-LAWS",
+    "module": 6,
+    "domain": "Philosophie",
+    "subdomain": "Philosophie politique",
+    "prompt": "À quel auteur attribue-t-on l’ouvrage « De l’esprit des lois » ?",
+    "choices": [
+      "Montesquieu",
+      "Jean-Jacques Rousseau",
+      "Voltaire",
+      "Molière",
+      "Denis Diderot"
+    ],
+    "answer": 0,
+    "explanation": "Montesquieu est l’auteur de De l’esprit des lois, ouvrage majeur du XVIIIe siècle consacré notamment aux institutions et à la séparation des pouvoirs.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Manuels scolaires RDC · annales Latin-Philosophie · Session 2023",
+    "source_url": "https://manuels-scolaires-rdc.com/exetat-items-latin-philo/",
+    "content_status": "ACTIVE",
+    "origin_kind": "CURATED_PAST_PAPER_ARCHIVE",
+    "source_confidence": "MEDIUM",
+    "origin_year": 2023,
+    "origin_series": "Culture générale littéraire",
+    "origin_item_number": 189,
+    "exam_lane": "philosophy",
+    "verification_status": "ARCHIVE_ONLY"
+  }
+]
