@@ -1,0 +1,3802 @@
+[
+  {
+    "id": "V2C001A",
+    "knowledge_id": "V2-CAP-001",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Albanie ?",
+    "choices": [
+      "Riga",
+      "Dacca",
+      "Achgabat",
+      "Tirana"
+    ],
+    "answer": 3,
+    "explanation": "Tirana est la capitale de Albanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C001B",
+    "knowledge_id": "V2-CAP-001",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Tirana est la capitale de quel pays ?",
+    "choices": [
+      "Bangladesh",
+      "Turkménistan",
+      "Albanie",
+      "Lettonie"
+    ],
+    "answer": 2,
+    "explanation": "Tirana est la capitale de Albanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C002A",
+    "knowledge_id": "V2-CAP-002",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Andorre ?",
+    "choices": [
+      "Thimphou",
+      "Abou Dabi",
+      "Andorre-la-Vieille",
+      "Vaduz"
+    ],
+    "answer": 2,
+    "explanation": "Andorre-la-Vieille est la capitale de Andorre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C002B",
+    "knowledge_id": "V2-CAP-002",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Andorre-la-Vieille est la capitale de quel pays ?",
+    "choices": [
+      "Émirats arabes unis",
+      "Andorre",
+      "Liechtenstein",
+      "Bhoutan"
+    ],
+    "answer": 1,
+    "explanation": "Andorre-la-Vieille est la capitale de Andorre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C003A",
+    "knowledge_id": "V2-CAP-003",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Biélorussie ?",
+    "choices": [
+      "Tachkent",
+      "Minsk",
+      "Vilnius",
+      "Bandar Seri Begawan"
+    ],
+    "answer": 1,
+    "explanation": "Minsk est la capitale de Biélorussie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C003B",
+    "knowledge_id": "V2-CAP-003",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Minsk est la capitale de quel pays ?",
+    "choices": [
+      "Biélorussie",
+      "Lituanie",
+      "Brunei",
+      "Ouzbékistan"
+    ],
+    "answer": 0,
+    "explanation": "Minsk est la capitale de Biélorussie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C004A",
+    "knowledge_id": "V2-CAP-004",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Bosnie-Herzégovine ?",
+    "choices": [
+      "Sarajevo",
+      "Luxembourg",
+      "Phnom Penh",
+      "Hanoï"
+    ],
+    "answer": 0,
+    "explanation": "Sarajevo est la capitale de Bosnie-Herzégovine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C004B",
+    "knowledge_id": "V2-CAP-004",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Sarajevo est la capitale de quel pays ?",
+    "choices": [
+      "Luxembourg",
+      "Cambodge",
+      "Viêt Nam",
+      "Bosnie-Herzégovine"
+    ],
+    "answer": 3,
+    "explanation": "Sarajevo est la capitale de Bosnie-Herzégovine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C005A",
+    "knowledge_id": "V2-CAP-005",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Bulgarie ?",
+    "choices": [
+      "La Valette",
+      "Tbilissi",
+      "Saint John's",
+      "Sofia"
+    ],
+    "answer": 3,
+    "explanation": "Sofia est la capitale de Bulgarie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C005B",
+    "knowledge_id": "V2-CAP-005",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Sofia est la capitale de quel pays ?",
+    "choices": [
+      "Géorgie",
+      "Antigua-et-Barbuda",
+      "Bulgarie",
+      "Malte"
+    ],
+    "answer": 2,
+    "explanation": "Sofia est la capitale de Bulgarie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C006A",
+    "knowledge_id": "V2-CAP-006",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Croatie ?",
+    "choices": [
+      "Bagdad",
+      "Nassau",
+      "Zagreb",
+      "Chișinău"
+    ],
+    "answer": 2,
+    "explanation": "Zagreb est la capitale de Croatie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C006B",
+    "knowledge_id": "V2-CAP-006",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Zagreb est la capitale de quel pays ?",
+    "choices": [
+      "Bahamas",
+      "Croatie",
+      "Moldavie",
+      "Irak"
+    ],
+    "answer": 1,
+    "explanation": "Zagreb est la capitale de Croatie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C007A",
+    "knowledge_id": "V2-CAP-007",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Chypre ?",
+    "choices": [
+      "Bridgetown",
+      "Nicosie",
+      "Monaco",
+      "Téhéran"
+    ],
+    "answer": 1,
+    "explanation": "Nicosie est la capitale de Chypre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C007B",
+    "knowledge_id": "V2-CAP-007",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Nicosie est la capitale de quel pays ?",
+    "choices": [
+      "Chypre",
+      "Monaco",
+      "Iran",
+      "Barbade"
+    ],
+    "answer": 0,
+    "explanation": "Nicosie est la capitale de Chypre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C008A",
+    "knowledge_id": "V2-CAP-008",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Tchéquie ?",
+    "choices": [
+      "Prague",
+      "Podgorica",
+      "Amman",
+      "Belmopan"
+    ],
+    "answer": 0,
+    "explanation": "Prague est la capitale de Tchéquie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C008B",
+    "knowledge_id": "V2-CAP-008",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Prague est la capitale de quel pays ?",
+    "choices": [
+      "Monténégro",
+      "Jordanie",
+      "Belize",
+      "Tchéquie"
+    ],
+    "answer": 3,
+    "explanation": "Prague est la capitale de Tchéquie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C009A",
+    "knowledge_id": "V2-CAP-009",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Estonie ?",
+    "choices": [
+      "Skopje",
+      "Astana",
+      "Santiago",
+      "Tallinn"
+    ],
+    "answer": 3,
+    "explanation": "Tallinn est la capitale de Estonie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C009B",
+    "knowledge_id": "V2-CAP-009",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Tallinn est la capitale de quel pays ?",
+    "choices": [
+      "Kazakhstan",
+      "Chili",
+      "Estonie",
+      "Macédoine du Nord"
+    ],
+    "answer": 2,
+    "explanation": "Tallinn est la capitale de Estonie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C010A",
+    "knowledge_id": "V2-CAP-010",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Hongrie ?",
+    "choices": [
+      "Bucarest",
+      "Koweït",
+      "Bogota",
+      "Budapest"
+    ],
+    "answer": 3,
+    "explanation": "Budapest est la capitale de Hongrie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C010B",
+    "knowledge_id": "V2-CAP-010",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Budapest est la capitale de quel pays ?",
+    "choices": [
+      "Koweït",
+      "Colombie",
+      "Hongrie",
+      "Roumanie"
+    ],
+    "answer": 2,
+    "explanation": "Budapest est la capitale de Hongrie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C011A",
+    "knowledge_id": "V2-CAP-011",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Islande ?",
+    "choices": [
+      "Bichkek",
+      "San José",
+      "Reykjavik",
+      "Saint-Marin"
+    ],
+    "answer": 2,
+    "explanation": "Reykjavik est la capitale de Islande.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C011B",
+    "knowledge_id": "V2-CAP-011",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Reykjavik est la capitale de quel pays ?",
+    "choices": [
+      "Costa Rica",
+      "Islande",
+      "Saint-Marin",
+      "Kirghizistan"
+    ],
+    "answer": 1,
+    "explanation": "Reykjavik est la capitale de Islande.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C012A",
+    "knowledge_id": "V2-CAP-012",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Lettonie ?",
+    "choices": [
+      "La Havane",
+      "Riga",
+      "Belgrade",
+      "Vientiane"
+    ],
+    "answer": 1,
+    "explanation": "Riga est la capitale de Lettonie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C012B",
+    "knowledge_id": "V2-CAP-012",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Riga est la capitale de quel pays ?",
+    "choices": [
+      "Lettonie",
+      "Serbie",
+      "Laos",
+      "Cuba"
+    ],
+    "answer": 0,
+    "explanation": "Riga est la capitale de Lettonie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C013A",
+    "knowledge_id": "V2-CAP-013",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Liechtenstein ?",
+    "choices": [
+      "Vaduz",
+      "Bratislava",
+      "Beyrouth",
+      "Roseau"
+    ],
+    "answer": 0,
+    "explanation": "Vaduz est la capitale de Liechtenstein.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C013B",
+    "knowledge_id": "V2-CAP-013",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Vaduz est la capitale de quel pays ?",
+    "choices": [
+      "Slovaquie",
+      "Liban",
+      "Dominique",
+      "Liechtenstein"
+    ],
+    "answer": 3,
+    "explanation": "Vaduz est la capitale de Liechtenstein.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C014A",
+    "knowledge_id": "V2-CAP-014",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Lituanie ?",
+    "choices": [
+      "Ljubljana",
+      "Malé",
+      "Saint-Domingue",
+      "Vilnius"
+    ],
+    "answer": 3,
+    "explanation": "Vilnius est la capitale de Lituanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C014B",
+    "knowledge_id": "V2-CAP-014",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Vilnius est la capitale de quel pays ?",
+    "choices": [
+      "Maldives",
+      "République dominicaine",
+      "Lituanie",
+      "Slovénie"
+    ],
+    "answer": 2,
+    "explanation": "Vilnius est la capitale de Lituanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C015A",
+    "knowledge_id": "V2-CAP-015",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Luxembourg ?",
+    "choices": [
+      "Oulan-Bator",
+      "Quito",
+      "Luxembourg",
+      "Kyiv"
+    ],
+    "answer": 2,
+    "explanation": "Luxembourg est la capitale de Luxembourg.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C015B",
+    "knowledge_id": "V2-CAP-015",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Luxembourg est la capitale de quel pays ?",
+    "choices": [
+      "Équateur",
+      "Luxembourg",
+      "Ukraine",
+      "Mongolie"
+    ],
+    "answer": 1,
+    "explanation": "Luxembourg est la capitale de Luxembourg.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C016A",
+    "knowledge_id": "V2-CAP-016",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Malte ?",
+    "choices": [
+      "San Salvador",
+      "La Valette",
+      "Cité du Vatican",
+      "Naypyidaw"
+    ],
+    "answer": 1,
+    "explanation": "La Valette est la capitale de Malte.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C016B",
+    "knowledge_id": "V2-CAP-016",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "La Valette est la capitale de quel pays ?",
+    "choices": [
+      "Malte",
+      "Cité du Vatican",
+      "Myanmar",
+      "Salvador"
+    ],
+    "answer": 0,
+    "explanation": "La Valette est la capitale de Malte.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C017A",
+    "knowledge_id": "V2-CAP-017",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Moldavie ?",
+    "choices": [
+      "Chișinău",
+      "Kaboul",
+      "Katmandou",
+      "Saint George's"
+    ],
+    "answer": 0,
+    "explanation": "Chișinău est la capitale de Moldavie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C017B",
+    "knowledge_id": "V2-CAP-017",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Chișinău est la capitale de quel pays ?",
+    "choices": [
+      "Afghanistan",
+      "Népal",
+      "Grenade",
+      "Moldavie"
+    ],
+    "answer": 3,
+    "explanation": "Chișinău est la capitale de Moldavie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C018A",
+    "knowledge_id": "V2-CAP-018",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Monaco ?",
+    "choices": [
+      "Erevan",
+      "Pyongyang",
+      "Guatemala",
+      "Monaco"
+    ],
+    "answer": 3,
+    "explanation": "Monaco est la capitale de Monaco.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C018B",
+    "knowledge_id": "V2-CAP-018",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Monaco est la capitale de quel pays ?",
+    "choices": [
+      "Corée du Nord",
+      "Guatemala",
+      "Monaco",
+      "Arménie"
+    ],
+    "answer": 2,
+    "explanation": "Monaco est la capitale de Monaco.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C019A",
+    "knowledge_id": "V2-CAP-019",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Monténégro ?",
+    "choices": [
+      "Mascate",
+      "Georgetown",
+      "Podgorica",
+      "Bakou"
+    ],
+    "answer": 2,
+    "explanation": "Podgorica est la capitale de Monténégro.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C019B",
+    "knowledge_id": "V2-CAP-019",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Podgorica est la capitale de quel pays ?",
+    "choices": [
+      "Guyana",
+      "Monténégro",
+      "Azerbaïdjan",
+      "Oman"
+    ],
+    "answer": 1,
+    "explanation": "Podgorica est la capitale de Monténégro.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C020A",
+    "knowledge_id": "V2-CAP-020",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Macédoine du Nord ?",
+    "choices": [
+      "Manille",
+      "Port-au-Prince",
+      "Skopje",
+      "Manama"
+    ],
+    "answer": 2,
+    "explanation": "Skopje est la capitale de Macédoine du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C020B",
+    "knowledge_id": "V2-CAP-020",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Skopje est la capitale de quel pays ?",
+    "choices": [
+      "Haïti",
+      "Macédoine du Nord",
+      "Bahreïn",
+      "Philippines"
+    ],
+    "answer": 1,
+    "explanation": "Skopje est la capitale de Macédoine du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C021A",
+    "knowledge_id": "V2-CAP-021",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Roumanie ?",
+    "choices": [
+      "Tegucigalpa",
+      "Bucarest",
+      "Dacca",
+      "Doha"
+    ],
+    "answer": 1,
+    "explanation": "Bucarest est la capitale de Roumanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C021B",
+    "knowledge_id": "V2-CAP-021",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Bucarest est la capitale de quel pays ?",
+    "choices": [
+      "Roumanie",
+      "Bangladesh",
+      "Qatar",
+      "Honduras"
+    ],
+    "answer": 0,
+    "explanation": "Bucarest est la capitale de Roumanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C022A",
+    "knowledge_id": "V2-CAP-022",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Saint-Marin ?",
+    "choices": [
+      "Saint-Marin",
+      "Thimphou",
+      "Riyad",
+      "Kingston"
+    ],
+    "answer": 0,
+    "explanation": "Saint-Marin est la capitale de Saint-Marin.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C022B",
+    "knowledge_id": "V2-CAP-022",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Saint-Marin est la capitale de quel pays ?",
+    "choices": [
+      "Bhoutan",
+      "Arabie saoudite",
+      "Jamaïque",
+      "Saint-Marin"
+    ],
+    "answer": 3,
+    "explanation": "Saint-Marin est la capitale de Saint-Marin.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C023A",
+    "knowledge_id": "V2-CAP-023",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Serbie ?",
+    "choices": [
+      "Bandar Seri Begawan",
+      "Singapour",
+      "Managua",
+      "Belgrade"
+    ],
+    "answer": 3,
+    "explanation": "Belgrade est la capitale de Serbie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C023B",
+    "knowledge_id": "V2-CAP-023",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Belgrade est la capitale de quel pays ?",
+    "choices": [
+      "Singapour",
+      "Nicaragua",
+      "Serbie",
+      "Brunei"
+    ],
+    "answer": 2,
+    "explanation": "Belgrade est la capitale de Serbie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C024A",
+    "knowledge_id": "V2-CAP-024",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Slovaquie ?",
+    "choices": [
+      "Damas",
+      "Panama",
+      "Bratislava",
+      "Phnom Penh"
+    ],
+    "answer": 2,
+    "explanation": "Bratislava est la capitale de Slovaquie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C024B",
+    "knowledge_id": "V2-CAP-024",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Bratislava est la capitale de quel pays ?",
+    "choices": [
+      "Panama",
+      "Slovaquie",
+      "Cambodge",
+      "Syrie"
+    ],
+    "answer": 1,
+    "explanation": "Bratislava est la capitale de Slovaquie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C025A",
+    "knowledge_id": "V2-CAP-025",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Slovénie ?",
+    "choices": [
+      "Asuncion",
+      "Ljubljana",
+      "Tbilissi",
+      "Douchanbé"
+    ],
+    "answer": 1,
+    "explanation": "Ljubljana est la capitale de Slovénie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C025B",
+    "knowledge_id": "V2-CAP-025",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Ljubljana est la capitale de quel pays ?",
+    "choices": [
+      "Slovénie",
+      "Géorgie",
+      "Tadjikistan",
+      "Paraguay"
+    ],
+    "answer": 0,
+    "explanation": "Ljubljana est la capitale de Slovénie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C026A",
+    "knowledge_id": "V2-CAP-026",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Ukraine ?",
+    "choices": [
+      "Kyiv",
+      "Bagdad",
+      "Dili",
+      "Basseterre"
+    ],
+    "answer": 0,
+    "explanation": "Kyiv est la capitale de Ukraine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C026B",
+    "knowledge_id": "V2-CAP-026",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Kyiv est la capitale de quel pays ?",
+    "choices": [
+      "Irak",
+      "Timor oriental",
+      "Saint-Christophe-et-Niévès",
+      "Ukraine"
+    ],
+    "answer": 3,
+    "explanation": "Kyiv est la capitale de Ukraine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C027A",
+    "knowledge_id": "V2-CAP-027",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Cité du Vatican ?",
+    "choices": [
+      "Téhéran",
+      "Achgabat",
+      "Castries",
+      "Cité du Vatican"
+    ],
+    "answer": 3,
+    "explanation": "Cité du Vatican est la capitale de Cité du Vatican.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C027B",
+    "knowledge_id": "V2-CAP-027",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Cité du Vatican est la capitale de quel pays ?",
+    "choices": [
+      "Turkménistan",
+      "Sainte-Lucie",
+      "Cité du Vatican",
+      "Iran"
+    ],
+    "answer": 2,
+    "explanation": "Cité du Vatican est la capitale de Cité du Vatican.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C028A",
+    "knowledge_id": "V2-CAP-028",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Afghanistan ?",
+    "choices": [
+      "Abou Dabi",
+      "Kingstown",
+      "Kaboul",
+      "Amman"
+    ],
+    "answer": 2,
+    "explanation": "Kaboul est la capitale de Afghanistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C028B",
+    "knowledge_id": "V2-CAP-028",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Kaboul est la capitale de quel pays ?",
+    "choices": [
+      "Saint-Vincent-et-les-Grenadines",
+      "Afghanistan",
+      "Jordanie",
+      "Émirats arabes unis"
+    ],
+    "answer": 1,
+    "explanation": "Kaboul est la capitale de Afghanistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C029A",
+    "knowledge_id": "V2-CAP-029",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Arménie ?",
+    "choices": [
+      "Paramaribo",
+      "Erevan",
+      "Astana",
+      "Tachkent"
+    ],
+    "answer": 1,
+    "explanation": "Erevan est la capitale de Arménie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C029B",
+    "knowledge_id": "V2-CAP-029",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Erevan est la capitale de quel pays ?",
+    "choices": [
+      "Arménie",
+      "Kazakhstan",
+      "Ouzbékistan",
+      "Suriname"
+    ],
+    "answer": 0,
+    "explanation": "Erevan est la capitale de Arménie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C030A",
+    "knowledge_id": "V2-CAP-030",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Azerbaïdjan ?",
+    "choices": [
+      "Port-d'Espagne",
+      "Bakou",
+      "Koweït",
+      "Hanoï"
+    ],
+    "answer": 1,
+    "explanation": "Bakou est la capitale de Azerbaïdjan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C030B",
+    "knowledge_id": "V2-CAP-030",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Bakou est la capitale de quel pays ?",
+    "choices": [
+      "Azerbaïdjan",
+      "Koweït",
+      "Viêt Nam",
+      "Trinité-et-Tobago"
+    ],
+    "answer": 0,
+    "explanation": "Bakou est la capitale de Azerbaïdjan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C031A",
+    "knowledge_id": "V2-CAP-031",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Bahreïn ?",
+    "choices": [
+      "Manama",
+      "Bichkek",
+      "Saint John's",
+      "Montevideo"
+    ],
+    "answer": 0,
+    "explanation": "Manama est la capitale de Bahreïn.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C031B",
+    "knowledge_id": "V2-CAP-031",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Manama est la capitale de quel pays ?",
+    "choices": [
+      "Kirghizistan",
+      "Antigua-et-Barbuda",
+      "Uruguay",
+      "Bahreïn"
+    ],
+    "answer": 3,
+    "explanation": "Manama est la capitale de Bahreïn.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C032A",
+    "knowledge_id": "V2-CAP-032",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Bangladesh ?",
+    "choices": [
+      "Vientiane",
+      "Nassau",
+      "Caracas",
+      "Dacca"
+    ],
+    "answer": 3,
+    "explanation": "Dacca est la capitale de Bangladesh.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C032B",
+    "knowledge_id": "V2-CAP-032",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Dacca est la capitale de quel pays ?",
+    "choices": [
+      "Bahamas",
+      "Venezuela",
+      "Bangladesh",
+      "Laos"
+    ],
+    "answer": 2,
+    "explanation": "Dacca est la capitale de Bangladesh.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C033A",
+    "knowledge_id": "V2-CAP-033",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Bhoutan ?",
+    "choices": [
+      "Bridgetown",
+      "Suva",
+      "Thimphou",
+      "Beyrouth"
+    ],
+    "answer": 2,
+    "explanation": "Thimphou est la capitale de Bhoutan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C033B",
+    "knowledge_id": "V2-CAP-033",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Thimphou est la capitale de quel pays ?",
+    "choices": [
+      "Fidji",
+      "Bhoutan",
+      "Liban",
+      "Barbade"
+    ],
+    "answer": 1,
+    "explanation": "Thimphou est la capitale de Bhoutan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C034A",
+    "knowledge_id": "V2-CAP-034",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Brunei ?",
+    "choices": [
+      "Tarawa-Sud",
+      "Bandar Seri Begawan",
+      "Malé",
+      "Belmopan"
+    ],
+    "answer": 1,
+    "explanation": "Bandar Seri Begawan est la capitale de Brunei.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C034B",
+    "knowledge_id": "V2-CAP-034",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Bandar Seri Begawan est la capitale de quel pays ?",
+    "choices": [
+      "Brunei",
+      "Maldives",
+      "Belize",
+      "Kiribati"
+    ],
+    "answer": 0,
+    "explanation": "Bandar Seri Begawan est la capitale de Brunei.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C035A",
+    "knowledge_id": "V2-CAP-035",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Cambodge ?",
+    "choices": [
+      "Phnom Penh",
+      "Oulan-Bator",
+      "Santiago",
+      "Majuro"
+    ],
+    "answer": 0,
+    "explanation": "Phnom Penh est la capitale de Cambodge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C035B",
+    "knowledge_id": "V2-CAP-035",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Phnom Penh est la capitale de quel pays ?",
+    "choices": [
+      "Mongolie",
+      "Chili",
+      "Îles Marshall",
+      "Cambodge"
+    ],
+    "answer": 3,
+    "explanation": "Phnom Penh est la capitale de Cambodge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C036A",
+    "knowledge_id": "V2-CAP-036",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Géorgie ?",
+    "choices": [
+      "Naypyidaw",
+      "Bogota",
+      "Palikir",
+      "Tbilissi"
+    ],
+    "answer": 3,
+    "explanation": "Tbilissi est la capitale de Géorgie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C036B",
+    "knowledge_id": "V2-CAP-036",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Tbilissi est la capitale de quel pays ?",
+    "choices": [
+      "Colombie",
+      "Micronésie",
+      "Géorgie",
+      "Myanmar"
+    ],
+    "answer": 2,
+    "explanation": "Tbilissi est la capitale de Géorgie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C037A",
+    "knowledge_id": "V2-CAP-037",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Irak ?",
+    "choices": [
+      "San José",
+      "Ngerulmud",
+      "Bagdad",
+      "Katmandou"
+    ],
+    "answer": 2,
+    "explanation": "Bagdad est la capitale de Irak.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C037B",
+    "knowledge_id": "V2-CAP-037",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Bagdad est la capitale de quel pays ?",
+    "choices": [
+      "Palaos",
+      "Irak",
+      "Népal",
+      "Costa Rica"
+    ],
+    "answer": 1,
+    "explanation": "Bagdad est la capitale de Irak.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C038A",
+    "knowledge_id": "V2-CAP-038",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Iran ?",
+    "choices": [
+      "Port Moresby",
+      "Téhéran",
+      "Pyongyang",
+      "La Havane"
+    ],
+    "answer": 1,
+    "explanation": "Téhéran est la capitale de Iran.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C038B",
+    "knowledge_id": "V2-CAP-038",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Téhéran est la capitale de quel pays ?",
+    "choices": [
+      "Iran",
+      "Corée du Nord",
+      "Cuba",
+      "Papouasie-Nouvelle-Guinée"
+    ],
+    "answer": 0,
+    "explanation": "Téhéran est la capitale de Iran.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C039A",
+    "knowledge_id": "V2-CAP-039",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Jordanie ?",
+    "choices": [
+      "Amman",
+      "Mascate",
+      "Roseau",
+      "Apia"
+    ],
+    "answer": 0,
+    "explanation": "Amman est la capitale de Jordanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C039B",
+    "knowledge_id": "V2-CAP-039",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Amman est la capitale de quel pays ?",
+    "choices": [
+      "Oman",
+      "Dominique",
+      "Samoa",
+      "Jordanie"
+    ],
+    "answer": 3,
+    "explanation": "Amman est la capitale de Jordanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C040A",
+    "knowledge_id": "V2-CAP-040",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Kazakhstan ?",
+    "choices": [
+      "Astana",
+      "Manille",
+      "Saint-Domingue",
+      "Honiara"
+    ],
+    "answer": 0,
+    "explanation": "Astana est la capitale de Kazakhstan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C040B",
+    "knowledge_id": "V2-CAP-040",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Astana est la capitale de quel pays ?",
+    "choices": [
+      "Philippines",
+      "République dominicaine",
+      "Îles Salomon",
+      "Kazakhstan"
+    ],
+    "answer": 3,
+    "explanation": "Astana est la capitale de Kazakhstan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C041A",
+    "knowledge_id": "V2-CAP-041",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Koweït ?",
+    "choices": [
+      "Doha",
+      "Quito",
+      "Nuku'alofa",
+      "Koweït"
+    ],
+    "answer": 3,
+    "explanation": "Koweït est la capitale de Koweït.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C041B",
+    "knowledge_id": "V2-CAP-041",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Koweït est la capitale de quel pays ?",
+    "choices": [
+      "Équateur",
+      "Tonga",
+      "Koweït",
+      "Qatar"
+    ],
+    "answer": 2,
+    "explanation": "Koweït est la capitale de Koweït.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C042A",
+    "knowledge_id": "V2-CAP-042",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Kirghizistan ?",
+    "choices": [
+      "San Salvador",
+      "Funafuti",
+      "Bichkek",
+      "Riyad"
+    ],
+    "answer": 2,
+    "explanation": "Bichkek est la capitale de Kirghizistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C042B",
+    "knowledge_id": "V2-CAP-042",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Bichkek est la capitale de quel pays ?",
+    "choices": [
+      "Tuvalu",
+      "Kirghizistan",
+      "Arabie saoudite",
+      "Salvador"
+    ],
+    "answer": 1,
+    "explanation": "Bichkek est la capitale de Kirghizistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C043A",
+    "knowledge_id": "V2-CAP-043",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Laos ?",
+    "choices": [
+      "Port-Vila",
+      "Vientiane",
+      "Singapour",
+      "Saint George's"
+    ],
+    "answer": 1,
+    "explanation": "Vientiane est la capitale de Laos.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C043B",
+    "knowledge_id": "V2-CAP-043",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Vientiane est la capitale de quel pays ?",
+    "choices": [
+      "Laos",
+      "Singapour",
+      "Grenade",
+      "Vanuatu"
+    ],
+    "answer": 0,
+    "explanation": "Vientiane est la capitale de Laos.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C044A",
+    "knowledge_id": "V2-CAP-044",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Liban ?",
+    "choices": [
+      "Beyrouth",
+      "Damas",
+      "Guatemala",
+      "Tirana"
+    ],
+    "answer": 0,
+    "explanation": "Beyrouth est la capitale de Liban.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C044B",
+    "knowledge_id": "V2-CAP-044",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Beyrouth est la capitale de quel pays ?",
+    "choices": [
+      "Syrie",
+      "Guatemala",
+      "Albanie",
+      "Liban"
+    ],
+    "answer": 3,
+    "explanation": "Beyrouth est la capitale de Liban.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C045A",
+    "knowledge_id": "V2-CAP-045",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Maldives ?",
+    "choices": [
+      "Douchanbé",
+      "Georgetown",
+      "Andorre-la-Vieille",
+      "Malé"
+    ],
+    "answer": 3,
+    "explanation": "Malé est la capitale de Maldives.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C045B",
+    "knowledge_id": "V2-CAP-045",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Malé est la capitale de quel pays ?",
+    "choices": [
+      "Guyana",
+      "Andorre",
+      "Maldives",
+      "Tadjikistan"
+    ],
+    "answer": 2,
+    "explanation": "Malé est la capitale de Maldives.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C046A",
+    "knowledge_id": "V2-CAP-046",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Mongolie ?",
+    "choices": [
+      "Port-au-Prince",
+      "Minsk",
+      "Oulan-Bator",
+      "Dili"
+    ],
+    "answer": 2,
+    "explanation": "Oulan-Bator est la capitale de Mongolie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C046B",
+    "knowledge_id": "V2-CAP-046",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Oulan-Bator est la capitale de quel pays ?",
+    "choices": [
+      "Biélorussie",
+      "Mongolie",
+      "Timor oriental",
+      "Haïti"
+    ],
+    "answer": 1,
+    "explanation": "Oulan-Bator est la capitale de Mongolie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C047A",
+    "knowledge_id": "V2-CAP-047",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Myanmar ?",
+    "choices": [
+      "Sarajevo",
+      "Naypyidaw",
+      "Achgabat",
+      "Tegucigalpa"
+    ],
+    "answer": 1,
+    "explanation": "Naypyidaw est la capitale de Myanmar.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C047B",
+    "knowledge_id": "V2-CAP-047",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Naypyidaw est la capitale de quel pays ?",
+    "choices": [
+      "Myanmar",
+      "Turkménistan",
+      "Honduras",
+      "Bosnie-Herzégovine"
+    ],
+    "answer": 0,
+    "explanation": "Naypyidaw est la capitale de Myanmar.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C048A",
+    "knowledge_id": "V2-CAP-048",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Népal ?",
+    "choices": [
+      "Katmandou",
+      "Abou Dabi",
+      "Kingston",
+      "Sofia"
+    ],
+    "answer": 0,
+    "explanation": "Katmandou est la capitale de Népal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C048B",
+    "knowledge_id": "V2-CAP-048",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Katmandou est la capitale de quel pays ?",
+    "choices": [
+      "Émirats arabes unis",
+      "Jamaïque",
+      "Bulgarie",
+      "Népal"
+    ],
+    "answer": 3,
+    "explanation": "Katmandou est la capitale de Népal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C049A",
+    "knowledge_id": "V2-CAP-049",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Corée du Nord ?",
+    "choices": [
+      "Tachkent",
+      "Managua",
+      "Zagreb",
+      "Pyongyang"
+    ],
+    "answer": 3,
+    "explanation": "Pyongyang est la capitale de Corée du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C049B",
+    "knowledge_id": "V2-CAP-049",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Pyongyang est la capitale de quel pays ?",
+    "choices": [
+      "Nicaragua",
+      "Croatie",
+      "Corée du Nord",
+      "Ouzbékistan"
+    ],
+    "answer": 2,
+    "explanation": "Pyongyang est la capitale de Corée du Nord.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C050A",
+    "knowledge_id": "V2-CAP-050",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Oman ?",
+    "choices": [
+      "Hanoï",
+      "Panama",
+      "Nicosie",
+      "Mascate"
+    ],
+    "answer": 3,
+    "explanation": "Mascate est la capitale de Oman.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C050B",
+    "knowledge_id": "V2-CAP-050",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Mascate est la capitale de quel pays ?",
+    "choices": [
+      "Panama",
+      "Chypre",
+      "Oman",
+      "Viêt Nam"
+    ],
+    "answer": 2,
+    "explanation": "Mascate est la capitale de Oman.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C051A",
+    "knowledge_id": "V2-CAP-051",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Philippines ?",
+    "choices": [
+      "Asuncion",
+      "Prague",
+      "Manille",
+      "Saint John's"
+    ],
+    "answer": 2,
+    "explanation": "Manille est la capitale de Philippines.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C051B",
+    "knowledge_id": "V2-CAP-051",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Manille est la capitale de quel pays ?",
+    "choices": [
+      "Tchéquie",
+      "Philippines",
+      "Antigua-et-Barbuda",
+      "Paraguay"
+    ],
+    "answer": 1,
+    "explanation": "Manille est la capitale de Philippines.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C052A",
+    "knowledge_id": "V2-CAP-052",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Qatar ?",
+    "choices": [
+      "Tallinn",
+      "Doha",
+      "Nassau",
+      "Basseterre"
+    ],
+    "answer": 1,
+    "explanation": "Doha est la capitale de Qatar.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C052B",
+    "knowledge_id": "V2-CAP-052",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Doha est la capitale de quel pays ?",
+    "choices": [
+      "Qatar",
+      "Bahamas",
+      "Saint-Christophe-et-Niévès",
+      "Estonie"
+    ],
+    "answer": 0,
+    "explanation": "Doha est la capitale de Qatar.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C053A",
+    "knowledge_id": "V2-CAP-053",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Arabie saoudite ?",
+    "choices": [
+      "Riyad",
+      "Bridgetown",
+      "Castries",
+      "Budapest"
+    ],
+    "answer": 0,
+    "explanation": "Riyad est la capitale de Arabie saoudite.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C053B",
+    "knowledge_id": "V2-CAP-053",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Riyad est la capitale de quel pays ?",
+    "choices": [
+      "Barbade",
+      "Sainte-Lucie",
+      "Hongrie",
+      "Arabie saoudite"
+    ],
+    "answer": 3,
+    "explanation": "Riyad est la capitale de Arabie saoudite.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C054A",
+    "knowledge_id": "V2-CAP-054",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Singapour ?",
+    "choices": [
+      "Belmopan",
+      "Kingstown",
+      "Reykjavik",
+      "Singapour"
+    ],
+    "answer": 3,
+    "explanation": "Singapour est la capitale de Singapour.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C054B",
+    "knowledge_id": "V2-CAP-054",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Singapour est la capitale de quel pays ?",
+    "choices": [
+      "Saint-Vincent-et-les-Grenadines",
+      "Islande",
+      "Singapour",
+      "Belize"
+    ],
+    "answer": 2,
+    "explanation": "Singapour est la capitale de Singapour.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C055A",
+    "knowledge_id": "V2-CAP-055",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Syrie ?",
+    "choices": [
+      "Paramaribo",
+      "Riga",
+      "Damas",
+      "Santiago"
+    ],
+    "answer": 2,
+    "explanation": "Damas est la capitale de Syrie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C055B",
+    "knowledge_id": "V2-CAP-055",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Damas est la capitale de quel pays ?",
+    "choices": [
+      "Lettonie",
+      "Syrie",
+      "Chili",
+      "Suriname"
+    ],
+    "answer": 1,
+    "explanation": "Damas est la capitale de Syrie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C056A",
+    "knowledge_id": "V2-CAP-056",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Tadjikistan ?",
+    "choices": [
+      "Vaduz",
+      "Douchanbé",
+      "Bogota",
+      "Port-d'Espagne"
+    ],
+    "answer": 1,
+    "explanation": "Douchanbé est la capitale de Tadjikistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C056B",
+    "knowledge_id": "V2-CAP-056",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Douchanbé est la capitale de quel pays ?",
+    "choices": [
+      "Tadjikistan",
+      "Colombie",
+      "Trinité-et-Tobago",
+      "Liechtenstein"
+    ],
+    "answer": 0,
+    "explanation": "Douchanbé est la capitale de Tadjikistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C057A",
+    "knowledge_id": "V2-CAP-057",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Timor oriental ?",
+    "choices": [
+      "Dili",
+      "San José",
+      "Montevideo",
+      "Vilnius"
+    ],
+    "answer": 0,
+    "explanation": "Dili est la capitale de Timor oriental.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C057B",
+    "knowledge_id": "V2-CAP-057",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Dili est la capitale de quel pays ?",
+    "choices": [
+      "Costa Rica",
+      "Uruguay",
+      "Lituanie",
+      "Timor oriental"
+    ],
+    "answer": 3,
+    "explanation": "Dili est la capitale de Timor oriental.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C058A",
+    "knowledge_id": "V2-CAP-058",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Turkménistan ?",
+    "choices": [
+      "La Havane",
+      "Caracas",
+      "Luxembourg",
+      "Achgabat"
+    ],
+    "answer": 3,
+    "explanation": "Achgabat est la capitale de Turkménistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C058B",
+    "knowledge_id": "V2-CAP-058",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Achgabat est la capitale de quel pays ?",
+    "choices": [
+      "Venezuela",
+      "Luxembourg",
+      "Turkménistan",
+      "Cuba"
+    ],
+    "answer": 2,
+    "explanation": "Achgabat est la capitale de Turkménistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C059A",
+    "knowledge_id": "V2-CAP-059",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Émirats arabes unis ?",
+    "choices": [
+      "Suva",
+      "La Valette",
+      "Abou Dabi",
+      "Roseau"
+    ],
+    "answer": 2,
+    "explanation": "Abou Dabi est la capitale de Émirats arabes unis.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C059B",
+    "knowledge_id": "V2-CAP-059",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Abou Dabi est la capitale de quel pays ?",
+    "choices": [
+      "Malte",
+      "Émirats arabes unis",
+      "Dominique",
+      "Fidji"
+    ],
+    "answer": 1,
+    "explanation": "Abou Dabi est la capitale de Émirats arabes unis.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C060A",
+    "knowledge_id": "V2-CAP-060",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Ouzbékistan ?",
+    "choices": [
+      "Tarawa-Sud",
+      "Chișinău",
+      "Tachkent",
+      "Saint-Domingue"
+    ],
+    "answer": 2,
+    "explanation": "Tachkent est la capitale de Ouzbékistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C060B",
+    "knowledge_id": "V2-CAP-060",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Tachkent est la capitale de quel pays ?",
+    "choices": [
+      "Moldavie",
+      "Ouzbékistan",
+      "République dominicaine",
+      "Kiribati"
+    ],
+    "answer": 1,
+    "explanation": "Tachkent est la capitale de Ouzbékistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C061A",
+    "knowledge_id": "V2-CAP-061",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Viêt Nam ?",
+    "choices": [
+      "Monaco",
+      "Hanoï",
+      "Quito",
+      "Majuro"
+    ],
+    "answer": 1,
+    "explanation": "Hanoï est la capitale de Viêt Nam.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C061B",
+    "knowledge_id": "V2-CAP-061",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Hanoï est la capitale de quel pays ?",
+    "choices": [
+      "Viêt Nam",
+      "Équateur",
+      "Îles Marshall",
+      "Monaco"
+    ],
+    "answer": 0,
+    "explanation": "Hanoï est la capitale de Viêt Nam.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C062A",
+    "knowledge_id": "V2-CAP-062",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Antigua-et-Barbuda ?",
+    "choices": [
+      "Saint John's",
+      "San Salvador",
+      "Palikir",
+      "Podgorica"
+    ],
+    "answer": 0,
+    "explanation": "Saint John's est la capitale de Antigua-et-Barbuda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C062B",
+    "knowledge_id": "V2-CAP-062",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Saint John's est la capitale de quel pays ?",
+    "choices": [
+      "Salvador",
+      "Micronésie",
+      "Monténégro",
+      "Antigua-et-Barbuda"
+    ],
+    "answer": 3,
+    "explanation": "Saint John's est la capitale de Antigua-et-Barbuda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C063A",
+    "knowledge_id": "V2-CAP-063",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Bahamas ?",
+    "choices": [
+      "Saint George's",
+      "Ngerulmud",
+      "Skopje",
+      "Nassau"
+    ],
+    "answer": 3,
+    "explanation": "Nassau est la capitale de Bahamas.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C063B",
+    "knowledge_id": "V2-CAP-063",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Nassau est la capitale de quel pays ?",
+    "choices": [
+      "Palaos",
+      "Macédoine du Nord",
+      "Bahamas",
+      "Grenade"
+    ],
+    "answer": 2,
+    "explanation": "Nassau est la capitale de Bahamas.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C064A",
+    "knowledge_id": "V2-CAP-064",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Barbade ?",
+    "choices": [
+      "Port Moresby",
+      "Bucarest",
+      "Bridgetown",
+      "Guatemala"
+    ],
+    "answer": 2,
+    "explanation": "Bridgetown est la capitale de Barbade.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C064B",
+    "knowledge_id": "V2-CAP-064",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Bridgetown est la capitale de quel pays ?",
+    "choices": [
+      "Roumanie",
+      "Barbade",
+      "Guatemala",
+      "Papouasie-Nouvelle-Guinée"
+    ],
+    "answer": 1,
+    "explanation": "Bridgetown est la capitale de Barbade.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C065A",
+    "knowledge_id": "V2-CAP-065",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Belize ?",
+    "choices": [
+      "Saint-Marin",
+      "Belmopan",
+      "Georgetown",
+      "Apia"
+    ],
+    "answer": 1,
+    "explanation": "Belmopan est la capitale de Belize.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C065B",
+    "knowledge_id": "V2-CAP-065",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Belmopan est la capitale de quel pays ?",
+    "choices": [
+      "Belize",
+      "Guyana",
+      "Samoa",
+      "Saint-Marin"
+    ],
+    "answer": 0,
+    "explanation": "Belmopan est la capitale de Belize.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C066A",
+    "knowledge_id": "V2-CAP-066",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Chili ?",
+    "choices": [
+      "Santiago",
+      "Port-au-Prince",
+      "Honiara",
+      "Belgrade"
+    ],
+    "answer": 0,
+    "explanation": "Santiago est la capitale de Chili.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C066B",
+    "knowledge_id": "V2-CAP-066",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Santiago est la capitale de quel pays ?",
+    "choices": [
+      "Haïti",
+      "Îles Salomon",
+      "Serbie",
+      "Chili"
+    ],
+    "answer": 3,
+    "explanation": "Santiago est la capitale de Chili.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C067A",
+    "knowledge_id": "V2-CAP-067",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Colombie ?",
+    "choices": [
+      "Tegucigalpa",
+      "Nuku'alofa",
+      "Bratislava",
+      "Bogota"
+    ],
+    "answer": 3,
+    "explanation": "Bogota est la capitale de Colombie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C067B",
+    "knowledge_id": "V2-CAP-067",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Bogota est la capitale de quel pays ?",
+    "choices": [
+      "Tonga",
+      "Slovaquie",
+      "Colombie",
+      "Honduras"
+    ],
+    "answer": 2,
+    "explanation": "Bogota est la capitale de Colombie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C068A",
+    "knowledge_id": "V2-CAP-068",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Costa Rica ?",
+    "choices": [
+      "Funafuti",
+      "Ljubljana",
+      "San José",
+      "Kingston"
+    ],
+    "answer": 2,
+    "explanation": "San José est la capitale de Costa Rica.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C068B",
+    "knowledge_id": "V2-CAP-068",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "San José est la capitale de quel pays ?",
+    "choices": [
+      "Slovénie",
+      "Costa Rica",
+      "Jamaïque",
+      "Tuvalu"
+    ],
+    "answer": 1,
+    "explanation": "San José est la capitale de Costa Rica.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C069A",
+    "knowledge_id": "V2-CAP-069",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Cuba ?",
+    "choices": [
+      "Kyiv",
+      "La Havane",
+      "Managua",
+      "Port-Vila"
+    ],
+    "answer": 1,
+    "explanation": "La Havane est la capitale de Cuba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C069B",
+    "knowledge_id": "V2-CAP-069",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "La Havane est la capitale de quel pays ?",
+    "choices": [
+      "Cuba",
+      "Nicaragua",
+      "Vanuatu",
+      "Ukraine"
+    ],
+    "answer": 0,
+    "explanation": "La Havane est la capitale de Cuba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C070A",
+    "knowledge_id": "V2-CAP-070",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Dominique ?",
+    "choices": [
+      "Cité du Vatican",
+      "Roseau",
+      "Panama",
+      "Tirana"
+    ],
+    "answer": 1,
+    "explanation": "Roseau est la capitale de Dominique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C070B",
+    "knowledge_id": "V2-CAP-070",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Roseau est la capitale de quel pays ?",
+    "choices": [
+      "Dominique",
+      "Panama",
+      "Albanie",
+      "Cité du Vatican"
+    ],
+    "answer": 0,
+    "explanation": "Roseau est la capitale de Dominique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C071A",
+    "knowledge_id": "V2-CAP-071",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de République dominicaine ?",
+    "choices": [
+      "Saint-Domingue",
+      "Asuncion",
+      "Andorre-la-Vieille",
+      "Kaboul"
+    ],
+    "answer": 0,
+    "explanation": "Saint-Domingue est la capitale de République dominicaine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C071B",
+    "knowledge_id": "V2-CAP-071",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Saint-Domingue est la capitale de quel pays ?",
+    "choices": [
+      "Paraguay",
+      "Andorre",
+      "Afghanistan",
+      "République dominicaine"
+    ],
+    "answer": 3,
+    "explanation": "Saint-Domingue est la capitale de République dominicaine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C072A",
+    "knowledge_id": "V2-CAP-072",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Équateur ?",
+    "choices": [
+      "Basseterre",
+      "Minsk",
+      "Erevan",
+      "Quito"
+    ],
+    "answer": 3,
+    "explanation": "Quito est la capitale de Équateur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C072B",
+    "knowledge_id": "V2-CAP-072",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quito est la capitale de quel pays ?",
+    "choices": [
+      "Biélorussie",
+      "Arménie",
+      "Équateur",
+      "Saint-Christophe-et-Niévès"
+    ],
+    "answer": 2,
+    "explanation": "Quito est la capitale de Équateur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C073A",
+    "knowledge_id": "V2-CAP-073",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Salvador ?",
+    "choices": [
+      "Sarajevo",
+      "Bakou",
+      "San Salvador",
+      "Castries"
+    ],
+    "answer": 2,
+    "explanation": "San Salvador est la capitale de Salvador.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C073B",
+    "knowledge_id": "V2-CAP-073",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "San Salvador est la capitale de quel pays ?",
+    "choices": [
+      "Azerbaïdjan",
+      "Salvador",
+      "Sainte-Lucie",
+      "Bosnie-Herzégovine"
+    ],
+    "answer": 1,
+    "explanation": "San Salvador est la capitale de Salvador.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C074A",
+    "knowledge_id": "V2-CAP-074",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Grenade ?",
+    "choices": [
+      "Manama",
+      "Saint George's",
+      "Kingstown",
+      "Sofia"
+    ],
+    "answer": 1,
+    "explanation": "Saint George's est la capitale de Grenade.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C074B",
+    "knowledge_id": "V2-CAP-074",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Saint George's est la capitale de quel pays ?",
+    "choices": [
+      "Grenade",
+      "Saint-Vincent-et-les-Grenadines",
+      "Bulgarie",
+      "Bahreïn"
+    ],
+    "answer": 0,
+    "explanation": "Saint George's est la capitale de Grenade.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C075A",
+    "knowledge_id": "V2-CAP-075",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Guatemala ?",
+    "choices": [
+      "Guatemala",
+      "Paramaribo",
+      "Zagreb",
+      "Dacca"
+    ],
+    "answer": 0,
+    "explanation": "Guatemala est la capitale de Guatemala.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C075B",
+    "knowledge_id": "V2-CAP-075",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Guatemala est la capitale de quel pays ?",
+    "choices": [
+      "Suriname",
+      "Croatie",
+      "Bangladesh",
+      "Guatemala"
+    ],
+    "answer": 3,
+    "explanation": "Guatemala est la capitale de Guatemala.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C076A",
+    "knowledge_id": "V2-CAP-076",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Guyana ?",
+    "choices": [
+      "Port-d'Espagne",
+      "Nicosie",
+      "Thimphou",
+      "Georgetown"
+    ],
+    "answer": 3,
+    "explanation": "Georgetown est la capitale de Guyana.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C076B",
+    "knowledge_id": "V2-CAP-076",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Georgetown est la capitale de quel pays ?",
+    "choices": [
+      "Chypre",
+      "Bhoutan",
+      "Guyana",
+      "Trinité-et-Tobago"
+    ],
+    "answer": 2,
+    "explanation": "Georgetown est la capitale de Guyana.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C077A",
+    "knowledge_id": "V2-CAP-077",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Haïti ?",
+    "choices": [
+      "Prague",
+      "Bandar Seri Begawan",
+      "Port-au-Prince",
+      "Montevideo"
+    ],
+    "answer": 2,
+    "explanation": "Port-au-Prince est la capitale de Haïti.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C077B",
+    "knowledge_id": "V2-CAP-077",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Port-au-Prince est la capitale de quel pays ?",
+    "choices": [
+      "Brunei",
+      "Haïti",
+      "Uruguay",
+      "Tchéquie"
+    ],
+    "answer": 1,
+    "explanation": "Port-au-Prince est la capitale de Haïti.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C078A",
+    "knowledge_id": "V2-CAP-078",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Honduras ?",
+    "choices": [
+      "Phnom Penh",
+      "Tegucigalpa",
+      "Caracas",
+      "Tallinn"
+    ],
+    "answer": 1,
+    "explanation": "Tegucigalpa est la capitale de Honduras.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C078B",
+    "knowledge_id": "V2-CAP-078",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Tegucigalpa est la capitale de quel pays ?",
+    "choices": [
+      "Honduras",
+      "Venezuela",
+      "Estonie",
+      "Cambodge"
+    ],
+    "answer": 0,
+    "explanation": "Tegucigalpa est la capitale de Honduras.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C079A",
+    "knowledge_id": "V2-CAP-079",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Jamaïque ?",
+    "choices": [
+      "Kingston",
+      "Suva",
+      "Budapest",
+      "Tbilissi"
+    ],
+    "answer": 0,
+    "explanation": "Kingston est la capitale de Jamaïque.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C079B",
+    "knowledge_id": "V2-CAP-079",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Kingston est la capitale de quel pays ?",
+    "choices": [
+      "Fidji",
+      "Hongrie",
+      "Géorgie",
+      "Jamaïque"
+    ],
+    "answer": 3,
+    "explanation": "Kingston est la capitale de Jamaïque.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C080A",
+    "knowledge_id": "V2-CAP-080",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Nicaragua ?",
+    "choices": [
+      "Managua",
+      "Tarawa-Sud",
+      "Reykjavik",
+      "Bagdad"
+    ],
+    "answer": 0,
+    "explanation": "Managua est la capitale de Nicaragua.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C080B",
+    "knowledge_id": "V2-CAP-080",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Managua est la capitale de quel pays ?",
+    "choices": [
+      "Kiribati",
+      "Islande",
+      "Irak",
+      "Nicaragua"
+    ],
+    "answer": 3,
+    "explanation": "Managua est la capitale de Nicaragua.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C081A",
+    "knowledge_id": "V2-CAP-081",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Panama ?",
+    "choices": [
+      "Majuro",
+      "Riga",
+      "Téhéran",
+      "Panama"
+    ],
+    "answer": 3,
+    "explanation": "Panama est la capitale de Panama.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C081B",
+    "knowledge_id": "V2-CAP-081",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Panama est la capitale de quel pays ?",
+    "choices": [
+      "Lettonie",
+      "Iran",
+      "Panama",
+      "Îles Marshall"
+    ],
+    "answer": 2,
+    "explanation": "Panama est la capitale de Panama.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C082A",
+    "knowledge_id": "V2-CAP-082",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Paraguay ?",
+    "choices": [
+      "Vaduz",
+      "Amman",
+      "Asuncion",
+      "Palikir"
+    ],
+    "answer": 2,
+    "explanation": "Asuncion est la capitale de Paraguay.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C082B",
+    "knowledge_id": "V2-CAP-082",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Asuncion est la capitale de quel pays ?",
+    "choices": [
+      "Jordanie",
+      "Paraguay",
+      "Micronésie",
+      "Liechtenstein"
+    ],
+    "answer": 1,
+    "explanation": "Asuncion est la capitale de Paraguay.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C083A",
+    "knowledge_id": "V2-CAP-083",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Saint-Christophe-et-Niévès ?",
+    "choices": [
+      "Astana",
+      "Basseterre",
+      "Ngerulmud",
+      "Vilnius"
+    ],
+    "answer": 1,
+    "explanation": "Basseterre est la capitale de Saint-Christophe-et-Niévès.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C083B",
+    "knowledge_id": "V2-CAP-083",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Basseterre est la capitale de quel pays ?",
+    "choices": [
+      "Saint-Christophe-et-Niévès",
+      "Palaos",
+      "Lituanie",
+      "Kazakhstan"
+    ],
+    "answer": 0,
+    "explanation": "Basseterre est la capitale de Saint-Christophe-et-Niévès.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C084A",
+    "knowledge_id": "V2-CAP-084",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Sainte-Lucie ?",
+    "choices": [
+      "Castries",
+      "Port Moresby",
+      "Luxembourg",
+      "Koweït"
+    ],
+    "answer": 0,
+    "explanation": "Castries est la capitale de Sainte-Lucie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C084B",
+    "knowledge_id": "V2-CAP-084",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Castries est la capitale de quel pays ?",
+    "choices": [
+      "Papouasie-Nouvelle-Guinée",
+      "Luxembourg",
+      "Koweït",
+      "Sainte-Lucie"
+    ],
+    "answer": 3,
+    "explanation": "Castries est la capitale de Sainte-Lucie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C085A",
+    "knowledge_id": "V2-CAP-085",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Saint-Vincent-et-les-Grenadines ?",
+    "choices": [
+      "Apia",
+      "La Valette",
+      "Bichkek",
+      "Kingstown"
+    ],
+    "answer": 3,
+    "explanation": "Kingstown est la capitale de Saint-Vincent-et-les-Grenadines.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C085B",
+    "knowledge_id": "V2-CAP-085",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Kingstown est la capitale de quel pays ?",
+    "choices": [
+      "Malte",
+      "Kirghizistan",
+      "Saint-Vincent-et-les-Grenadines",
+      "Samoa"
+    ],
+    "answer": 2,
+    "explanation": "Kingstown est la capitale de Saint-Vincent-et-les-Grenadines.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C086A",
+    "knowledge_id": "V2-CAP-086",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Suriname ?",
+    "choices": [
+      "Chișinău",
+      "Vientiane",
+      "Paramaribo",
+      "Honiara"
+    ],
+    "answer": 2,
+    "explanation": "Paramaribo est la capitale de Suriname.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C086B",
+    "knowledge_id": "V2-CAP-086",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Paramaribo est la capitale de quel pays ?",
+    "choices": [
+      "Laos",
+      "Suriname",
+      "Îles Salomon",
+      "Moldavie"
+    ],
+    "answer": 1,
+    "explanation": "Paramaribo est la capitale de Suriname.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C087A",
+    "knowledge_id": "V2-CAP-087",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Trinité-et-Tobago ?",
+    "choices": [
+      "Beyrouth",
+      "Port-d'Espagne",
+      "Nuku'alofa",
+      "Monaco"
+    ],
+    "answer": 1,
+    "explanation": "Port-d'Espagne est la capitale de Trinité-et-Tobago.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C087B",
+    "knowledge_id": "V2-CAP-087",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Port-d'Espagne est la capitale de quel pays ?",
+    "choices": [
+      "Trinité-et-Tobago",
+      "Tonga",
+      "Monaco",
+      "Liban"
+    ],
+    "answer": 0,
+    "explanation": "Port-d'Espagne est la capitale de Trinité-et-Tobago.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C088A",
+    "knowledge_id": "V2-CAP-088",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Uruguay ?",
+    "choices": [
+      "Montevideo",
+      "Funafuti",
+      "Podgorica",
+      "Malé"
+    ],
+    "answer": 0,
+    "explanation": "Montevideo est la capitale de Uruguay.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C088B",
+    "knowledge_id": "V2-CAP-088",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Montevideo est la capitale de quel pays ?",
+    "choices": [
+      "Tuvalu",
+      "Monténégro",
+      "Maldives",
+      "Uruguay"
+    ],
+    "answer": 3,
+    "explanation": "Montevideo est la capitale de Uruguay.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C089A",
+    "knowledge_id": "V2-CAP-089",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Venezuela ?",
+    "choices": [
+      "Port-Vila",
+      "Skopje",
+      "Oulan-Bator",
+      "Caracas"
+    ],
+    "answer": 3,
+    "explanation": "Caracas est la capitale de Venezuela.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C089B",
+    "knowledge_id": "V2-CAP-089",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Caracas est la capitale de quel pays ?",
+    "choices": [
+      "Macédoine du Nord",
+      "Mongolie",
+      "Venezuela",
+      "Vanuatu"
+    ],
+    "answer": 2,
+    "explanation": "Caracas est la capitale de Venezuela.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C090A",
+    "knowledge_id": "V2-CAP-090",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Fidji ?",
+    "choices": [
+      "Tirana",
+      "Bucarest",
+      "Naypyidaw",
+      "Suva"
+    ],
+    "answer": 3,
+    "explanation": "Suva est la capitale de Fidji.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C090B",
+    "knowledge_id": "V2-CAP-090",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Suva est la capitale de quel pays ?",
+    "choices": [
+      "Roumanie",
+      "Myanmar",
+      "Fidji",
+      "Albanie"
+    ],
+    "answer": 2,
+    "explanation": "Suva est la capitale de Fidji.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C091A",
+    "knowledge_id": "V2-CAP-091",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Kiribati ?",
+    "choices": [
+      "Saint-Marin",
+      "Katmandou",
+      "Tarawa-Sud",
+      "Andorre-la-Vieille"
+    ],
+    "answer": 2,
+    "explanation": "Tarawa-Sud est la capitale de Kiribati.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C091B",
+    "knowledge_id": "V2-CAP-091",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Tarawa-Sud est la capitale de quel pays ?",
+    "choices": [
+      "Népal",
+      "Kiribati",
+      "Andorre",
+      "Saint-Marin"
+    ],
+    "answer": 1,
+    "explanation": "Tarawa-Sud est la capitale de Kiribati.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C092A",
+    "knowledge_id": "V2-CAP-092",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Îles Marshall ?",
+    "choices": [
+      "Pyongyang",
+      "Majuro",
+      "Minsk",
+      "Belgrade"
+    ],
+    "answer": 1,
+    "explanation": "Majuro est la capitale de Îles Marshall.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C092B",
+    "knowledge_id": "V2-CAP-092",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Majuro est la capitale de quel pays ?",
+    "choices": [
+      "Îles Marshall",
+      "Biélorussie",
+      "Serbie",
+      "Corée du Nord"
+    ],
+    "answer": 0,
+    "explanation": "Majuro est la capitale de Îles Marshall.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C093A",
+    "knowledge_id": "V2-CAP-093",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Micronésie ?",
+    "choices": [
+      "Palikir",
+      "Sarajevo",
+      "Bratislava",
+      "Mascate"
+    ],
+    "answer": 0,
+    "explanation": "Palikir est la capitale de Micronésie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C093B",
+    "knowledge_id": "V2-CAP-093",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Palikir est la capitale de quel pays ?",
+    "choices": [
+      "Bosnie-Herzégovine",
+      "Slovaquie",
+      "Oman",
+      "Micronésie"
+    ],
+    "answer": 3,
+    "explanation": "Palikir est la capitale de Micronésie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C094A",
+    "knowledge_id": "V2-CAP-094",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Palaos ?",
+    "choices": [
+      "Sofia",
+      "Ljubljana",
+      "Manille",
+      "Ngerulmud"
+    ],
+    "answer": 3,
+    "explanation": "Ngerulmud est la capitale de Palaos.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C094B",
+    "knowledge_id": "V2-CAP-094",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Ngerulmud est la capitale de quel pays ?",
+    "choices": [
+      "Slovénie",
+      "Philippines",
+      "Palaos",
+      "Bulgarie"
+    ],
+    "answer": 2,
+    "explanation": "Ngerulmud est la capitale de Palaos.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C095A",
+    "knowledge_id": "V2-CAP-095",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Papouasie-Nouvelle-Guinée ?",
+    "choices": [
+      "Kyiv",
+      "Doha",
+      "Port Moresby",
+      "Zagreb"
+    ],
+    "answer": 2,
+    "explanation": "Port Moresby est la capitale de Papouasie-Nouvelle-Guinée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C095B",
+    "knowledge_id": "V2-CAP-095",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Port Moresby est la capitale de quel pays ?",
+    "choices": [
+      "Qatar",
+      "Papouasie-Nouvelle-Guinée",
+      "Croatie",
+      "Ukraine"
+    ],
+    "answer": 1,
+    "explanation": "Port Moresby est la capitale de Papouasie-Nouvelle-Guinée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C096A",
+    "knowledge_id": "V2-CAP-096",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Samoa ?",
+    "choices": [
+      "Riyad",
+      "Apia",
+      "Nicosie",
+      "Cité du Vatican"
+    ],
+    "answer": 1,
+    "explanation": "Apia est la capitale de Samoa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C096B",
+    "knowledge_id": "V2-CAP-096",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Apia est la capitale de quel pays ?",
+    "choices": [
+      "Samoa",
+      "Chypre",
+      "Cité du Vatican",
+      "Arabie saoudite"
+    ],
+    "answer": 0,
+    "explanation": "Apia est la capitale de Samoa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C097A",
+    "knowledge_id": "V2-CAP-097",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Îles Salomon ?",
+    "choices": [
+      "Honiara",
+      "Prague",
+      "Kaboul",
+      "Singapour"
+    ],
+    "answer": 0,
+    "explanation": "Honiara est la capitale de Îles Salomon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C097B",
+    "knowledge_id": "V2-CAP-097",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Honiara est la capitale de quel pays ?",
+    "choices": [
+      "Tchéquie",
+      "Afghanistan",
+      "Singapour",
+      "Îles Salomon"
+    ],
+    "answer": 3,
+    "explanation": "Honiara est la capitale de Îles Salomon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C098A",
+    "knowledge_id": "V2-CAP-098",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Tonga ?",
+    "choices": [
+      "Tallinn",
+      "Erevan",
+      "Damas",
+      "Nuku'alofa"
+    ],
+    "answer": 3,
+    "explanation": "Nuku'alofa est la capitale de Tonga.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C098B",
+    "knowledge_id": "V2-CAP-098",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Nuku'alofa est la capitale de quel pays ?",
+    "choices": [
+      "Arménie",
+      "Syrie",
+      "Tonga",
+      "Estonie"
+    ],
+    "answer": 2,
+    "explanation": "Nuku'alofa est la capitale de Tonga.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C099A",
+    "knowledge_id": "V2-CAP-099",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Tuvalu ?",
+    "choices": [
+      "Bakou",
+      "Douchanbé",
+      "Funafuti",
+      "Budapest"
+    ],
+    "answer": 2,
+    "explanation": "Funafuti est la capitale de Tuvalu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C099B",
+    "knowledge_id": "V2-CAP-099",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Funafuti est la capitale de quel pays ?",
+    "choices": [
+      "Tadjikistan",
+      "Tuvalu",
+      "Hongrie",
+      "Azerbaïdjan"
+    ],
+    "answer": 1,
+    "explanation": "Funafuti est la capitale de Tuvalu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C100A",
+    "knowledge_id": "V2-CAP-100",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Quelle ville est la capitale de Vanuatu ?",
+    "choices": [
+      "Reykjavik",
+      "Manama",
+      "Dili",
+      "Port-Vila"
+    ],
+    "answer": 3,
+    "explanation": "Port-Vila est la capitale de Vanuatu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  },
+  {
+    "id": "V2C100B",
+    "knowledge_id": "V2-CAP-100",
+    "module": 4,
+    "domain": "Géographie",
+    "subdomain": "Capitales du monde",
+    "prompt": "Port-Vila est la capitale de quel pays ?",
+    "choices": [
+      "Bahreïn",
+      "Timor oriental",
+      "Vanuatu",
+      "Islande"
+    ],
+    "answer": 2,
+    "explanation": "Port-Vila est la capitale de Vanuatu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — capitales nationales"
+  }
+]
