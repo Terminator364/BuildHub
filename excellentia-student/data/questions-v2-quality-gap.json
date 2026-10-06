@@ -1,0 +1,515 @@
+[
+  {
+    "id": "V2QG001",
+    "knowledge_id": "V2-QG-001",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Océans",
+    "prompt": "Quel est le plus vaste océan de la planète ?",
+    "choices": [
+      "l’océan Atlantique",
+      "l’océan Indien",
+      "l’océan Pacifique",
+      "l’océan Arctique"
+    ],
+    "answer": 2,
+    "explanation": "L’océan Pacifique est le plus vaste océan de la planète.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "NOAA / références géographiques internationales"
+  },
+  {
+    "id": "V2QG002",
+    "knowledge_id": "V2-QG-002",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Canaux",
+    "prompt": "Quels espaces maritimes le canal de Suez relie-t-il ?",
+    "choices": [
+      "la mer Méditerranée et la mer Rouge",
+      "la mer Noire et la mer Caspienne",
+      "l’océan Atlantique et l’océan Pacifique",
+      "la mer Rouge et le golfe Persique"
+    ],
+    "answer": 0,
+    "explanation": "Le canal de Suez relie la mer Méditerranée à la mer Rouge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Suez Canal Authority / références géographiques"
+  },
+  {
+    "id": "V2QG003",
+    "knowledge_id": "V2-QG-003",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Canaux",
+    "prompt": "Quels océans le canal de Panama met-il directement en communication ?",
+    "choices": [
+      "l’océan Indien et l’océan Pacifique",
+      "l’océan Atlantique et l’océan Pacifique",
+      "l’océan Atlantique et l’océan Indien",
+      "l’océan Arctique et l’océan Atlantique"
+    ],
+    "answer": 1,
+    "explanation": "Le canal de Panama relie les façades atlantique et pacifique de l’isthme de Panama.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Panama Canal Authority"
+  },
+  {
+    "id": "V2QG004",
+    "knowledge_id": "V2-QG-004",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Détroits",
+    "prompt": "Quel détroit relie l’océan Atlantique à la mer Méditerranée ?",
+    "choices": [
+      "le détroit de Béring",
+      "le détroit d’Ormuz",
+      "le détroit de Gibraltar",
+      "le détroit de Malacca"
+    ],
+    "answer": 2,
+    "explanation": "Le détroit de Gibraltar relie l’Atlantique à la Méditerranée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références géographiques internationales"
+  },
+  {
+    "id": "V2QG005",
+    "knowledge_id": "V2-QG-005",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Relief",
+    "prompt": "Sur quel continent se trouve la cordillère des Andes ?",
+    "choices": [
+      "Afrique",
+      "Amérique du Sud",
+      "Asie",
+      "Europe"
+    ],
+    "answer": 1,
+    "explanation": "La cordillère des Andes longe l’ouest de l’Amérique du Sud.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Références géographiques internationales"
+  },
+  {
+    "id": "V2QG006",
+    "knowledge_id": "V2-QG-006",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Hydrographie",
+    "prompt": "Quel fleuve européen traverse notamment Vienne, Bratislava, Budapest et Belgrade ?",
+    "choices": [
+      "le Rhin",
+      "le Danube",
+      "la Volga",
+      "la Seine"
+    ],
+    "answer": 1,
+    "explanation": "Le Danube traverse ou borde plusieurs capitales et grandes villes d’Europe centrale et orientale.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Commission internationale pour la protection du Danube / références géographiques"
+  },
+  {
+    "id": "V2QG007",
+    "knowledge_id": "V2-QG-007",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Lacs",
+    "prompt": "Dans quel pays se trouve le lac Baïkal ?",
+    "choices": [
+      "Mongolie",
+      "Russie",
+      "Kazakhstan",
+      "Chine"
+    ],
+    "answer": 1,
+    "explanation": "Le lac Baïkal se trouve en Russie, en Sibérie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "UNESCO / références géographiques"
+  },
+  {
+    "id": "V2QG008",
+    "knowledge_id": "V2-QG-008",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Hydrographie",
+    "prompt": "Quel fleuve traverse notamment le Brésil et possède le plus vaste bassin versant du monde ?",
+    "choices": [
+      "le Mississippi",
+      "le Yangtsé",
+      "l’Amazone",
+      "le Danube"
+    ],
+    "answer": 2,
+    "explanation": "L’Amazone possède le plus vaste bassin versant du monde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références géographiques internationales"
+  },
+  {
+    "id": "V2QG009",
+    "knowledge_id": "V2-QG-009",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle est l’unité SI de la pression ?",
+    "choices": [
+      "le joule",
+      "le pascal",
+      "le watt",
+      "le tesla"
+    ],
+    "answer": 1,
+    "explanation": "L’unité SI de pression est le pascal (Pa).",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "BIPM — Système international d’unités"
+  },
+  {
+    "id": "V2QG010",
+    "knowledge_id": "V2-QG-010",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Unités SI",
+    "prompt": "Quelle est l’unité SI de la fréquence ?",
+    "choices": [
+      "le hertz",
+      "le newton",
+      "le volt",
+      "le lumen"
+    ],
+    "answer": 0,
+    "explanation": "L’unité SI de fréquence est le hertz (Hz).",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "BIPM — Système international d’unités"
+  },
+  {
+    "id": "V2QG011",
+    "knowledge_id": "V2-QG-011",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Physique",
+    "prompt": "Quelle valeur approche le mieux la vitesse de la lumière dans le vide ?",
+    "choices": [
+      "3 × 10⁴ m/s",
+      "3 × 10⁶ m/s",
+      "3 × 10⁸ m/s",
+      "3 × 10¹⁰ m/s"
+    ],
+    "answer": 2,
+    "explanation": "La vitesse de la lumière dans le vide est d’environ 3 × 10⁸ m/s.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / CODATA"
+  },
+  {
+    "id": "V2QG012",
+    "knowledge_id": "V2-QG-012",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel ordre de grandeur correspond à la constante d’Avogadro ?",
+    "choices": [
+      "6,02 × 10²³ mol⁻¹",
+      "9,81 × 10² mol⁻¹",
+      "3,00 × 10⁸ mol⁻¹",
+      "1,60 × 10⁻¹⁹ mol⁻¹"
+    ],
+    "answer": 0,
+    "explanation": "La constante d’Avogadro vaut exactement 6,02214076 × 10²³ mol⁻¹ dans le SI.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "BIPM — SI Brochure"
+  },
+  {
+    "id": "V2QG013",
+    "knowledge_id": "V2-QG-013",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel sucre entre dans la composition de l’ADN ?",
+    "choices": [
+      "le ribose",
+      "le glucose",
+      "le désoxyribose",
+      "le fructose"
+    ],
+    "answer": 2,
+    "explanation": "L’ADN contient du désoxyribose ; l’ARN contient du ribose.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références standard de biologie moléculaire"
+  },
+  {
+    "id": "V2QG014",
+    "knowledge_id": "V2-QG-014",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Dans quel organite des cellules végétales se déroule principalement la photosynthèse ?",
+    "choices": [
+      "le lysosome",
+      "le chloroplaste",
+      "le ribosome",
+      "le centrosome"
+    ],
+    "answer": 1,
+    "explanation": "La photosynthèse se déroule principalement dans les chloroplastes.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Références standard de biologie cellulaire"
+  },
+  {
+    "id": "V2QG015",
+    "knowledge_id": "V2-QG-015",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Terre",
+    "prompt": "Quel gaz est le plus abondant dans l’atmosphère terrestre ?",
+    "choices": [
+      "l’oxygène",
+      "le dioxyde de carbone",
+      "l’azote",
+      "l’argon"
+    ],
+    "answer": 2,
+    "explanation": "L’azote constitue environ 78 % de l’atmosphère terrestre.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "NASA / NOAA"
+  },
+  {
+    "id": "V2QG016",
+    "knowledge_id": "V2-QG-016",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "À 25 °C, quel pH correspond à une eau pure neutre ?",
+    "choices": [
+      "0",
+      "5",
+      "7",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "À 25 °C, une solution aqueuse neutre a un pH de 7.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Références standard de chimie"
+  },
+  {
+    "id": "V2QG017",
+    "knowledge_id": "V2-QG-017",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Que désigne l’inflation en économie ?",
+    "choices": [
+      "une baisse durable de la production uniquement",
+      "une hausse générale et durable du niveau des prix",
+      "une hausse automatique des salaires",
+      "une baisse du taux de change uniquement"
+    ],
+    "answer": 1,
+    "explanation": "L’inflation désigne une hausse générale et durable du niveau des prix.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "FMI — ressources pédagogiques sur l’inflation"
+  },
+  {
+    "id": "V2QG018",
+    "knowledge_id": "V2-QG-018",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Notions fondamentales",
+    "prompt": "Que mesure principalement le produit intérieur brut (PIB) ?",
+    "choices": [
+      "la valeur de la production finale réalisée sur un territoire pendant une période",
+      "la richesse détenue uniquement par l’État",
+      "le nombre d’entreprises d’un pays",
+      "la quantité totale de monnaie en circulation"
+    ],
+    "answer": 0,
+    "explanation": "Le PIB mesure la valeur des biens et services finaux produits sur un territoire pendant une période donnée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banque mondiale / FMI — comptes nationaux"
+  },
+  {
+    "id": "V2QG019",
+    "knowledge_id": "V2-QG-019",
+    "module": 4,
+    "domain": "Économie",
+    "subdomain": "Commerce",
+    "prompt": "Dans la théorie économique, un avantage comparatif repose principalement sur quoi ?",
+    "choices": [
+      "le coût d’opportunité relatif",
+      "la taille de la population",
+      "la quantité d’or détenue",
+      "le niveau absolu des salaires"
+    ],
+    "answer": 0,
+    "explanation": "L’avantage comparatif repose sur un coût d’opportunité relatif plus faible.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "OMC / références d’économie internationale"
+  },
+  {
+    "id": "V2QG020",
+    "knowledge_id": "V2-QG-020",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMC",
+    "prompt": "Dans quelle ville se trouve le siège de l’Organisation mondiale du commerce ?",
+    "choices": [
+      "New York",
+      "Genève",
+      "Vienne",
+      "Bruxelles"
+    ],
+    "answer": 1,
+    "explanation": "Le siège de l’OMC est à Genève, en Suisse.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Organisation mondiale du commerce"
+  },
+  {
+    "id": "V2QG021",
+    "knowledge_id": "V2-QG-021",
+    "module": 6,
+    "domain": "Culture",
+    "subdomain": "Littérature africaine",
+    "prompt": "Qui a écrit « Things Fall Apart » (« Le Monde s’effondre ») ?",
+    "choices": [
+      "Wole Soyinka",
+      "Chinua Achebe",
+      "Ngũgĩ wa Thiong’o",
+      "Léopold Sédar Senghor"
+    ],
+    "answer": 1,
+    "explanation": "Chinua Achebe est l’auteur du roman Things Fall Apart.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques de littérature africaine"
+  },
+  {
+    "id": "V2QG023",
+    "knowledge_id": "V2-QG-023",
+    "module": 6,
+    "domain": "Culture",
+    "subdomain": "Littérature mondiale",
+    "prompt": "Quel écrivain est l’auteur de « L’Étranger » ?",
+    "choices": [
+      "Jean-Paul Sartre",
+      "Albert Camus",
+      "André Gide",
+      "Émile Zola"
+    ],
+    "answer": 1,
+    "explanation": "L’Étranger est un roman d’Albert Camus.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Références bibliographiques françaises"
+  },
+  {
+    "id": "V2QG024",
+    "knowledge_id": "V2-QG-024",
+    "module": 6,
+    "domain": "Culture",
+    "subdomain": "Littérature mondiale",
+    "prompt": "Qui est l’auteur de « Les Misérables » ?",
+    "choices": [
+      "Honoré de Balzac",
+      "Victor Hugo",
+      "Gustave Flaubert",
+      "Alexandre Dumas"
+    ],
+    "answer": 1,
+    "explanation": "Les Misérables est un roman de Victor Hugo.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Références bibliographiques françaises"
+  },
+  {
+    "id": "V2QG025",
+    "knowledge_id": "V2-QG-025",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Relief",
+    "prompt": "Quel désert couvre une partie importante du Botswana ?",
+    "choices": [
+      "le Sahara",
+      "le Namib",
+      "le Kalahari",
+      "le désert de Nubie"
+    ],
+    "answer": 2,
+    "explanation": "Le désert du Kalahari s’étend notamment sur une grande partie du Botswana.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Références géographiques africaines"
+  },
+  {
+    "id": "V2QG026",
+    "knowledge_id": "V2-QG-026",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Hydrographie",
+    "prompt": "Dans quel pays se trouve le delta de l’Okavango ?",
+    "choices": [
+      "Botswana",
+      "Namibie",
+      "Angola",
+      "Zambie"
+    ],
+    "answer": 0,
+    "explanation": "Le delta intérieur de l’Okavango se trouve principalement au Botswana.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "UNESCO / références géographiques africaines"
+  },
+  {
+    "id": "V2QG027",
+    "knowledge_id": "V2-QG-027",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Hydrographie",
+    "prompt": "Dans quel pays se trouve le lac Volta ?",
+    "choices": [
+      "Ghana",
+      "Côte d’Ivoire",
+      "Nigeria",
+      "Bénin"
+    ],
+    "answer": 0,
+    "explanation": "Le lac Volta se trouve au Ghana.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références géographiques africaines"
+  },
+  {
+    "id": "V2QG028",
+    "knowledge_id": "V2-QG-028",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Hydrographie",
+    "prompt": "Sur quel fleuve se trouvent les chutes Victoria ?",
+    "choices": [
+      "le Niger",
+      "le Zambèze",
+      "le Congo",
+      "le Limpopo"
+    ],
+    "answer": 1,
+    "explanation": "Les chutes Victoria se trouvent sur le fleuve Zambèze, à la frontière entre la Zambie et le Zimbabwe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "UNESCO / références géographiques africaines"
+  }
+]
