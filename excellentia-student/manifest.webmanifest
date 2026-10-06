@@ -1,0 +1,10 @@
+{
+  "name": "Excellentia Study Hub — Élève",
+  "short_name": "Excellentia",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f4f7",
+  "theme_color": "#101828",
+  "description": "Culture générale — V2.3.0, annales EXETAT, 40 secondes par question, progression locale."
+}
