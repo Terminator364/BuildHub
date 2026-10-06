@@ -83,6 +83,7 @@ jobs:
           "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=30000 --dump-dom "$URL" > /tmp/dom.html
           grep -q "EXCELLENTIA STUDY HUB" /tmp/dom.html
           grep -q "Culture générale" /tmp/dom.html
+          grep -q 'data-ready="4174"' /tmp/dom.html
           echo "GATEWAY_URL=$URL"
 
   deploy-pages:
