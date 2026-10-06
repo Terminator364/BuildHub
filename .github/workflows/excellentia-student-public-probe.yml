@@ -47,7 +47,7 @@ jobs:
       - name: Browser proof of permanent entry
         shell: bash
         run: |
-          ENTRY="https://raw.githack.com/Terminator364/BuildHub/main/excellentia/index.html"
+          ENTRY="https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/index.html"
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
           test -n "$CHROME"
           "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=90000 --dump-dom "$ENTRY" > /tmp/entry-dom.html
