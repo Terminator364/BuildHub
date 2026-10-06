@@ -7,6 +7,11 @@ on:
       - 'excellentia/**'
       - 'excellentia-student/**'
       - '.github/workflows/excellentia-student-public-probe.yml'
+  pull_request:
+    paths:
+      - 'excellentia/**'
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-public-probe.yml'
   workflow_dispatch:
 
 permissions:
