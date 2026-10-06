@@ -43,8 +43,8 @@ jobs:
             const browser=await chromium.launch({headless:true});
             const page=await browser.newPage({viewport:{width:412,height:915},isMobile:true,hasTouch:true});
             const errors=[];page.on('pageerror',e=>errors.push(String(e)));
-            await page.goto('http://127.0.0.1:4173/',{waitUntil:'networkidle',timeout:120000});
-            await page.waitForFunction(()=>document.querySelector('#versionBadge')?.textContent.includes('V2.3.0'),null,{timeout:120000});
+            page.on('console',m=>console.log('BROWSER',m.type(),m.text()));\n            await page.goto('http://127.0.0.1:4173/',{waitUntil:'domcontentloaded',timeout:60000});
+            await page.waitForFunction(()=>document.querySelector('#versionBadge')?.textContent.includes('V2.3.0'),null,{timeout:60000});
             const title=async expected=>{await page.waitForFunction(e=>document.querySelector('#pageTitle')?.textContent.trim()===e,expected,{timeout:30000})};
             await title('Accueil');
             const nav=async(space,expected)=>{
