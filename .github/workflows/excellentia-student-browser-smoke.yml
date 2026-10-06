@@ -63,12 +63,12 @@ jobs:
             await nav('train',"S’entraîner");
             await page.waitForSelector('#ctxQuick',{timeout:30000});
             await page.locator('#ctxQuick').click();
-            await page.waitForSelector('.question-shell',{timeout:30000});
+            await page.waitForSelector('.session-workspace',{timeout:30000});
             await page.locator('.answer').first().click();
             await page.waitForTimeout(300);
-            const hasSession=await page.locator('.question-shell').count();
+            const hasSession=await page.locator('.session-workspace').count();
             if(!hasSession)throw new Error('TRAIN_SESSION_NOT_ACTIVE');
-            const leave=page.locator('#leaveSession');if(await leave.count())await leave.click();
+            const leave=page.locator('#exitSession');if(await leave.count())await leave.click();
 
             await nav('review','Réviser');
             await title('Réviser');
