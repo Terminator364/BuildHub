@@ -1,0 +1,1560 @@
+[
+  {
+    "id": "V2O001A",
+    "knowledge_id": "V2-ORG-001",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Que signifie le sigle ONU ?",
+    "choices": [
+      "Organisation des Nations Unies",
+      "Organisation des Nations Universelles",
+      "Office des Nations Unies",
+      "Organisation nationale unifiée"
+    ],
+    "answer": 0,
+    "explanation": "ONU signifie Organisation des Nations Unies.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O002B",
+    "knowledge_id": "V2-ORG-002",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Organisation / institution : En quelle année l’ONU est-elle créée ?",
+    "choices": [
+      "1919",
+      "1948",
+      "1963",
+      "1945"
+    ],
+    "answer": 3,
+    "explanation": "L’ONU est créée en 1945.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O003A",
+    "knowledge_id": "V2-ORG-003",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Dans quelle ville se trouve le siège principal de l’ONU ?",
+    "choices": [
+      "Paris",
+      "Vienne",
+      "New York",
+      "Genève"
+    ],
+    "answer": 2,
+    "explanation": "Le siège principal de l’ONU se trouve à New York.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O004B",
+    "knowledge_id": "V2-ORG-004",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Organisation / institution : Combien d’États membres compte l’ONU ?",
+    "choices": [
+      "206",
+      "193",
+      "55",
+      "195"
+    ],
+    "answer": 1,
+    "explanation": "L’ONU compte 193 États membres.",
+    "difficulty": 2,
+    "stability": "SEMI-STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O005A",
+    "knowledge_id": "V2-ORG-005",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Quand célèbre-t-on la Journée des Nations Unies ?",
+    "choices": [
+      "24 octobre",
+      "1er janvier",
+      "10 décembre",
+      "26 juin"
+    ],
+    "answer": 0,
+    "explanation": "La Journée des Nations Unies est célébrée le 24 octobre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O006A",
+    "knowledge_id": "V2-ORG-006",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Combien d’organes principaux la Charte de l’ONU prévoit-elle ?",
+    "choices": [
+      "4",
+      "5",
+      "7",
+      "6"
+    ],
+    "answer": 3,
+    "explanation": "La Charte prévoit six organes principaux.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O007A",
+    "knowledge_id": "V2-ORG-007",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Quel organe de l’ONU réunit l’ensemble des États membres ?",
+    "choices": [
+      "la Cour internationale de Justice",
+      "le Secrétariat",
+      "l’Assemblée générale",
+      "le Conseil de sécurité"
+    ],
+    "answer": 2,
+    "explanation": "Tous les États membres siègent à l’Assemblée générale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O008A",
+    "knowledge_id": "V2-ORG-008",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Combien de membres compte le Conseil de sécurité de l’ONU ?",
+    "choices": [
+      "20",
+      "15",
+      "10",
+      "12"
+    ],
+    "answer": 1,
+    "explanation": "Le Conseil de sécurité compte 15 membres.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O009A",
+    "knowledge_id": "V2-ORG-009",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Combien de membres permanents compte le Conseil de sécurité ?",
+    "choices": [
+      "5",
+      "3",
+      "7",
+      "10"
+    ],
+    "answer": 0,
+    "explanation": "Le Conseil de sécurité compte cinq membres permanents.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O010A",
+    "knowledge_id": "V2-ORG-010",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Quel ensemble contient uniquement les cinq membres permanents du Conseil de sécurité ?",
+    "choices": [
+      "Allemagne, Chine, États-Unis, France et Japon",
+      "Brésil, Chine, Inde, Russie et États-Unis",
+      "Canada, Chine, France, Royaume-Uni et Russie",
+      "Chine, États-Unis, France, Royaume-Uni et Russie"
+    ],
+    "answer": 3,
+    "explanation": "Les cinq membres permanents sont la Chine, les États-Unis, la France, le Royaume-Uni et la Russie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O011A",
+    "knowledge_id": "V2-ORG-011",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Où siège la Cour internationale de Justice ?",
+    "choices": [
+      "Genève",
+      "Bruxelles",
+      "La Haye",
+      "New York"
+    ],
+    "answer": 2,
+    "explanation": "La Cour internationale de Justice siège à La Haye.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O012A",
+    "knowledge_id": "V2-ORG-012",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "ONU",
+    "prompt": "Quel organe assure notamment l’administration quotidienne de l’ONU ?",
+    "choices": [
+      "la Banque mondiale",
+      "le Secrétariat",
+      "le Conseil de tutelle",
+      "l’Assemblée générale uniquement"
+    ],
+    "answer": 1,
+    "explanation": "Le Secrétariat assure l’administration quotidienne de l’ONU.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O013A",
+    "knowledge_id": "V2-ORG-013",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMS",
+    "prompt": "Que signifie OMS ?",
+    "choices": [
+      "Organisation mondiale de la Santé",
+      "Organisation médicale sanitaire",
+      "Office mondial de secours",
+      "Organisation multilatérale de sécurité"
+    ],
+    "answer": 0,
+    "explanation": "OMS signifie Organisation mondiale de la Santé.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O014B",
+    "knowledge_id": "V2-ORG-014",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMS",
+    "prompt": "Organisation / institution : Où se trouve le siège de l’OMS ?",
+    "choices": [
+      "New York",
+      "Rome",
+      "Nairobi",
+      "Genève"
+    ],
+    "answer": 3,
+    "explanation": "Le siège de l’OMS est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O015A",
+    "knowledge_id": "V2-ORG-015",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMS",
+    "prompt": "En quelle année l’OMS entre-t-elle en fonction ?",
+    "choices": [
+      "1945",
+      "1963",
+      "1948",
+      "1919"
+    ],
+    "answer": 2,
+    "explanation": "L’OMS entre en fonction en 1948.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O016B",
+    "knowledge_id": "V2-ORG-016",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMS",
+    "prompt": "Organisation / institution : Quel domaine est au cœur de la mission de l’OMS ?",
+    "choices": [
+      "les télécommunications",
+      "la santé publique internationale",
+      "le commerce maritime",
+      "la propriété intellectuelle"
+    ],
+    "answer": 1,
+    "explanation": "L’OMS coordonne l’action internationale en santé publique.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O017A",
+    "knowledge_id": "V2-ORG-017",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "UNICEF",
+    "prompt": "Quel public est au cœur du mandat de l’UNICEF ?",
+    "choices": [
+      "les enfants",
+      "les banques centrales",
+      "les compagnies aériennes",
+      "les tribunaux"
+    ],
+    "answer": 0,
+    "explanation": "L’UNICEF agit principalement pour les droits et le bien-être des enfants.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O018B",
+    "knowledge_id": "V2-ORG-018",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "UNICEF",
+    "prompt": "Organisation / institution : Où se trouve le siège de l’UNICEF ?",
+    "choices": [
+      "Paris",
+      "Rome",
+      "Addis-Abeba",
+      "New York"
+    ],
+    "answer": 3,
+    "explanation": "Le siège de l’UNICEF se trouve à New York.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O019A",
+    "knowledge_id": "V2-ORG-019",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "UNICEF",
+    "prompt": "En quelle année l’UNICEF est-il créé ?",
+    "choices": [
+      "1948",
+      "1965",
+      "1946",
+      "1919"
+    ],
+    "answer": 2,
+    "explanation": "L’UNICEF est créé en 1946.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O020A",
+    "knowledge_id": "V2-ORG-020",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "UNESCO",
+    "prompt": "Que signifie UNESCO en français ?",
+    "choices": [
+      "Office des Nations Unies pour l’environnement",
+      "Organisation des Nations Unies pour l’éducation, la science et la culture",
+      "Organisation universelle pour l’économie et le commerce",
+      "Union des nations pour la sécurité et la culture"
+    ],
+    "answer": 1,
+    "explanation": "L’UNESCO est l’Organisation des Nations Unies pour l’éducation, la science et la culture.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O021A",
+    "knowledge_id": "V2-ORG-021",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "UNESCO",
+    "prompt": "Où se trouve le siège de l’UNESCO ?",
+    "choices": [
+      "Paris",
+      "Genève",
+      "Rome",
+      "New York"
+    ],
+    "answer": 0,
+    "explanation": "Le siège de l’UNESCO est à Paris.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O022A",
+    "knowledge_id": "V2-ORG-022",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "UNESCO",
+    "prompt": "Quels domaines associe principalement l’UNESCO ?",
+    "choices": [
+      "santé, monnaie et commerce",
+      "aviation, marine et postes",
+      "défense, justice et police",
+      "éducation, science et culture"
+    ],
+    "answer": 3,
+    "explanation": "L’UNESCO travaille notamment sur l’éducation, la science et la culture.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O023A",
+    "knowledge_id": "V2-ORG-023",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FAO",
+    "prompt": "Que signifie FAO en français ?",
+    "choices": [
+      "Fédération agricole occidentale",
+      "Forum alimentaire international",
+      "Organisation des Nations Unies pour l’alimentation et l’agriculture",
+      "Fonds africain d’orientation"
+    ],
+    "answer": 2,
+    "explanation": "La FAO est l’Organisation des Nations Unies pour l’alimentation et l’agriculture.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O024A",
+    "knowledge_id": "V2-ORG-024",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FAO",
+    "prompt": "Où se trouve le siège de la FAO ?",
+    "choices": [
+      "Nairobi",
+      "Rome",
+      "Paris",
+      "Genève"
+    ],
+    "answer": 1,
+    "explanation": "Le siège de la FAO est à Rome.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O025A",
+    "knowledge_id": "V2-ORG-025",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FAO",
+    "prompt": "Quel domaine est au cœur de l’action de la FAO ?",
+    "choices": [
+      "l’alimentation et l’agriculture",
+      "la défense collective",
+      "les télécommunications",
+      "le transport aérien"
+    ],
+    "answer": 0,
+    "explanation": "La FAO travaille sur l’alimentation et l’agriculture.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O026A",
+    "knowledge_id": "V2-ORG-026",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OIT",
+    "prompt": "Que signifie OIT ?",
+    "choices": [
+      "Organisation interafricaine du Transport",
+      "Office international du Tourisme",
+      "Organisation industrielle et technique",
+      "Organisation internationale du Travail"
+    ],
+    "answer": 3,
+    "explanation": "OIT signifie Organisation internationale du Travail.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O027A",
+    "knowledge_id": "V2-ORG-027",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OIT",
+    "prompt": "Où se trouve le siège de l’OIT ?",
+    "choices": [
+      "Paris",
+      "Vienne",
+      "Genève",
+      "Rome"
+    ],
+    "answer": 2,
+    "explanation": "Le siège de l’OIT est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O028A",
+    "knowledge_id": "V2-ORG-028",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OIT",
+    "prompt": "En quelle année l’OIT est-elle fondée ?",
+    "choices": [
+      "1961",
+      "1919",
+      "1945",
+      "1948"
+    ],
+    "answer": 1,
+    "explanation": "L’OIT est fondée en 1919.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O029B",
+    "knowledge_id": "V2-ORG-029",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FMI",
+    "prompt": "Organisation / institution : Que signifie FMI ?",
+    "choices": [
+      "Fonds monétaire international",
+      "Fédération monétaire internationale",
+      "Fonds mondial d’investissement",
+      "Forum monétaire interétatique"
+    ],
+    "answer": 0,
+    "explanation": "FMI signifie Fonds monétaire international.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O030A",
+    "knowledge_id": "V2-ORG-030",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FMI",
+    "prompt": "Dans quelle ville se trouve le siège du FMI ?",
+    "choices": [
+      "New York",
+      "Genève",
+      "Londres",
+      "Washington, D.C."
+    ],
+    "answer": 3,
+    "explanation": "Le FMI a son siège à Washington, D.C.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O031A",
+    "knowledge_id": "V2-ORG-031",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "FMI",
+    "prompt": "À quelle conférence de 1944 les bases du FMI sont-elles posées ?",
+    "choices": [
+      "Yalta",
+      "San Francisco",
+      "Bretton Woods",
+      "Bandung"
+    ],
+    "answer": 2,
+    "explanation": "Le FMI naît du système de Bretton Woods en 1944.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O032A",
+    "knowledge_id": "V2-ORG-032",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Banque mondiale",
+    "prompt": "Quel est l’un des grands objectifs de la Banque mondiale ?",
+    "choices": [
+      "réglementer le transport maritime",
+      "financer le développement et la réduction de la pauvreté",
+      "organiser les Jeux olympiques",
+      "diriger les opérations militaires de l’ONU"
+    ],
+    "answer": 1,
+    "explanation": "Le Groupe de la Banque mondiale finance notamment le développement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O033A",
+    "knowledge_id": "V2-ORG-033",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Banque mondiale",
+    "prompt": "Où se trouve le siège de la Banque mondiale ?",
+    "choices": [
+      "Washington, D.C.",
+      "Paris",
+      "Bruxelles",
+      "Rome"
+    ],
+    "answer": 0,
+    "explanation": "La Banque mondiale a son siège à Washington, D.C.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O034A",
+    "knowledge_id": "V2-ORG-034",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMC",
+    "prompt": "Que signifie OMC ?",
+    "choices": [
+      "Organisation monétaire commune",
+      "Office maritime du commerce",
+      "Organisation mondiale de la consommation",
+      "Organisation mondiale du commerce"
+    ],
+    "answer": 3,
+    "explanation": "OMC signifie Organisation mondiale du commerce.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O035A",
+    "knowledge_id": "V2-ORG-035",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMC",
+    "prompt": "En quelle année l’OMC est-elle créée ?",
+    "choices": [
+      "1975",
+      "2002",
+      "1995",
+      "1945"
+    ],
+    "answer": 2,
+    "explanation": "L’OMC est créée en 1995.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O036A",
+    "knowledge_id": "V2-ORG-036",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMC",
+    "prompt": "Où se trouve le siège de l’OMC ?",
+    "choices": [
+      "Vienne",
+      "Genève",
+      "New York",
+      "La Haye"
+    ],
+    "answer": 1,
+    "explanation": "Le siège de l’OMC est à Genève.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O037A",
+    "knowledge_id": "V2-ORG-037",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "AIEA",
+    "prompt": "Que signifie AIEA ?",
+    "choices": [
+      "Agence internationale de l’énergie atomique",
+      "Agence interafricaine de l’énergie",
+      "Association internationale des États atomiques",
+      "Agence internationale de l’environnement aérien"
+    ],
+    "answer": 0,
+    "explanation": "AIEA signifie Agence internationale de l’énergie atomique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O038A",
+    "knowledge_id": "V2-ORG-038",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "AIEA",
+    "prompt": "Où se trouve le siège de l’AIEA ?",
+    "choices": [
+      "Genève",
+      "Bruxelles",
+      "Paris",
+      "Vienne"
+    ],
+    "answer": 3,
+    "explanation": "Le siège de l’AIEA est à Vienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O039A",
+    "knowledge_id": "V2-ORG-039",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "AIEA",
+    "prompt": "Quel domaine est au cœur du mandat de l’AIEA ?",
+    "choices": [
+      "la météorologie",
+      "la propriété intellectuelle",
+      "les usages pacifiques et le contrôle de l’énergie nucléaire",
+      "le commerce du pétrole"
+    ],
+    "answer": 2,
+    "explanation": "L’AIEA travaille notamment sur les usages pacifiques du nucléaire et les garanties.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O040A",
+    "knowledge_id": "V2-ORG-040",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OACI",
+    "prompt": "Que signifie OACI ?",
+    "choices": [
+      "Organisation autonome des compagnies intercontinentales",
+      "Organisation de l’aviation civile internationale",
+      "Organisation africaine du commerce intérieur",
+      "Office aérien de coopération internationale"
+    ],
+    "answer": 1,
+    "explanation": "OACI signifie Organisation de l’aviation civile internationale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O041A",
+    "knowledge_id": "V2-ORG-041",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OACI",
+    "prompt": "Où se trouve le siège de l’OACI ?",
+    "choices": [
+      "Montréal",
+      "Toronto",
+      "Genève",
+      "Londres"
+    ],
+    "answer": 0,
+    "explanation": "Le siège de l’OACI est à Montréal.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O042A",
+    "knowledge_id": "V2-ORG-042",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMI",
+    "prompt": "Quel secteur relève principalement de l’Organisation maritime internationale ?",
+    "choices": [
+      "l’aviation civile",
+      "la santé publique",
+      "l’éducation",
+      "le transport maritime"
+    ],
+    "answer": 3,
+    "explanation": "L’OMI traite de la sécurité et de la réglementation du transport maritime international.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O043A",
+    "knowledge_id": "V2-ORG-043",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMI",
+    "prompt": "Où se trouve le siège de l’Organisation maritime internationale ?",
+    "choices": [
+      "Rome",
+      "New York",
+      "Londres",
+      "Paris"
+    ],
+    "answer": 2,
+    "explanation": "Le siège de l’OMI est à Londres.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O044A",
+    "knowledge_id": "V2-ORG-044",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMM",
+    "prompt": "Que signifie OMM ?",
+    "choices": [
+      "Organisation médicale mondiale",
+      "Organisation météorologique mondiale",
+      "Organisation monétaire mondiale",
+      "Office maritime mondial"
+    ],
+    "answer": 1,
+    "explanation": "OMM signifie Organisation météorologique mondiale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O045A",
+    "knowledge_id": "V2-ORG-045",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OMM",
+    "prompt": "Où se trouve le siège de l’Organisation météorologique mondiale ?",
+    "choices": [
+      "Genève",
+      "Nairobi",
+      "Rome",
+      "Montréal"
+    ],
+    "answer": 0,
+    "explanation": "Le siège de l’OMM est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O046A",
+    "knowledge_id": "V2-ORG-046",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "HCR",
+    "prompt": "Quelle population est au cœur du mandat du Haut-Commissariat des Nations Unies pour les réfugiés ?",
+    "choices": [
+      "les sportifs professionnels",
+      "les banques commerciales",
+      "les compagnies maritimes",
+      "les réfugiés et personnes déplacées relevant de son mandat"
+    ],
+    "answer": 3,
+    "explanation": "Le HCR protège et assiste notamment les réfugiés.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O047A",
+    "knowledge_id": "V2-ORG-047",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "HCR",
+    "prompt": "Où se trouve le siège du HCR ?",
+    "choices": [
+      "Paris",
+      "Addis-Abeba",
+      "Genève",
+      "New York"
+    ],
+    "answer": 2,
+    "explanation": "Le siège du HCR se trouve à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O048A",
+    "knowledge_id": "V2-ORG-048",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "PNUE",
+    "prompt": "Quel domaine est au cœur du Programme des Nations Unies pour l’environnement ?",
+    "choices": [
+      "les postes",
+      "l’environnement",
+      "la défense collective",
+      "les brevets"
+    ],
+    "answer": 1,
+    "explanation": "Le PNUE coordonne des activités environnementales du système des Nations Unies.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O049A",
+    "knowledge_id": "V2-ORG-049",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "PNUE",
+    "prompt": "Où se trouve le siège du PNUE ?",
+    "choices": [
+      "Nairobi",
+      "Genève",
+      "New York",
+      "Rome"
+    ],
+    "answer": 0,
+    "explanation": "Le siège du PNUE est à Nairobi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O050A",
+    "knowledge_id": "V2-ORG-050",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "PNUD",
+    "prompt": "Quel domaine est au cœur du Programme des Nations Unies pour le développement ?",
+    "choices": [
+      "le transport aérien",
+      "la défense",
+      "la réglementation sportive",
+      "le développement"
+    ],
+    "answer": 3,
+    "explanation": "Le PNUD travaille sur le développement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O051A",
+    "knowledge_id": "V2-ORG-051",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Union africaine",
+    "prompt": "Que signifie UA ?",
+    "choices": [
+      "Unité africaine",
+      "Union arabe",
+      "Union africaine",
+      "Union atlantique"
+    ],
+    "answer": 2,
+    "explanation": "UA signifie Union africaine.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O052B",
+    "knowledge_id": "V2-ORG-052",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Union africaine",
+    "prompt": "Organisation / institution : Combien d’États membres compte l’Union africaine ?",
+    "choices": [
+      "56",
+      "55",
+      "50",
+      "54"
+    ],
+    "answer": 1,
+    "explanation": "L’Union africaine compte 55 États membres.",
+    "difficulty": 2,
+    "stability": "SEMI-STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O053A",
+    "knowledge_id": "V2-ORG-053",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Union africaine",
+    "prompt": "Où se trouve le siège de l’Union africaine ?",
+    "choices": [
+      "Addis-Abeba",
+      "Nairobi",
+      "Abuja",
+      "Pretoria"
+    ],
+    "answer": 0,
+    "explanation": "Le siège de l’Union africaine est à Addis-Abeba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O054A",
+    "knowledge_id": "V2-ORG-054",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "Union africaine",
+    "prompt": "En quelle année l’Union africaine est-elle lancée comme successeur de l’OUA ?",
+    "choices": [
+      "1963",
+      "1994",
+      "2010",
+      "2002"
+    ],
+    "answer": 3,
+    "explanation": "L’Union africaine est lancée en 2002.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O055A",
+    "knowledge_id": "V2-ORG-055",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OUA",
+    "prompt": "En quelle année l’Organisation de l’unité africaine est-elle créée ?",
+    "choices": [
+      "1975",
+      "2002",
+      "1963",
+      "1945"
+    ],
+    "answer": 2,
+    "explanation": "L’OUA est créée en 1963.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O056A",
+    "knowledge_id": "V2-ORG-056",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OUA",
+    "prompt": "Dans quelle ville l’OUA est-elle fondée ?",
+    "choices": [
+      "Dakar",
+      "Addis-Abeba",
+      "Accra",
+      "Nairobi"
+    ],
+    "answer": 1,
+    "explanation": "L’OUA est fondée à Addis-Abeba.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O057A",
+    "knowledge_id": "V2-ORG-057",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OUA",
+    "prompt": "Quelle organisation succède à l’OUA ?",
+    "choices": [
+      "l’Union africaine",
+      "la SADC",
+      "la CEEAC",
+      "la CEDEAO"
+    ],
+    "answer": 0,
+    "explanation": "L’Union africaine succède à l’OUA.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O058A",
+    "knowledge_id": "V2-ORG-058",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "BAD",
+    "prompt": "Que signifie BAD dans le contexte du développement africain ?",
+    "choices": [
+      "Banque africaine des dépôts",
+      "Bureau africain du développement",
+      "Banque agricole durable",
+      "Banque africaine de développement"
+    ],
+    "answer": 3,
+    "explanation": "BAD signifie Banque africaine de développement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O059A",
+    "knowledge_id": "V2-ORG-059",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "BAD",
+    "prompt": "Où se trouve le siège de la Banque africaine de développement ?",
+    "choices": [
+      "Nairobi",
+      "Lagos",
+      "Abidjan",
+      "Addis-Abeba"
+    ],
+    "answer": 2,
+    "explanation": "Le siège de la BAD est à Abidjan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O060A",
+    "knowledge_id": "V2-ORG-060",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "BAD",
+    "prompt": "Quel est le rôle général de la BAD ?",
+    "choices": [
+      "réguler l’aviation mondiale",
+      "financer et soutenir le développement en Afrique",
+      "organiser les élections nationales",
+      "diriger l’Union africaine"
+    ],
+    "answer": 1,
+    "explanation": "La BAD finance et soutient des projets de développement en Afrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O061A",
+    "knowledge_id": "V2-ORG-061",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "SADC",
+    "prompt": "Que signifie SADC ?",
+    "choices": [
+      "Communauté de développement de l’Afrique australe",
+      "Communauté des États d’Afrique centrale",
+      "Système africain de défense commune",
+      "Syndicat africain du commerce"
+    ],
+    "answer": 0,
+    "explanation": "SADC signifie Communauté de développement de l’Afrique australe.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O062A",
+    "knowledge_id": "V2-ORG-062",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "SADC",
+    "prompt": "Où se trouve le siège de la SADC ?",
+    "choices": [
+      "Lusaka",
+      "Harare",
+      "Pretoria",
+      "Gaborone"
+    ],
+    "answer": 3,
+    "explanation": "Le siège de la SADC est à Gaborone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O063B",
+    "knowledge_id": "V2-ORG-063",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "CEEAC",
+    "prompt": "Organisation / institution : Que signifie CEEAC ?",
+    "choices": [
+      "Conférence des États africains centraux",
+      "Commission économique est-africaine",
+      "Communauté économique des États de l’Afrique centrale",
+      "Communauté économique de l’Afrique côtière"
+    ],
+    "answer": 2,
+    "explanation": "CEEAC signifie Communauté économique des États de l’Afrique centrale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O064A",
+    "knowledge_id": "V2-ORG-064",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "CEEAC",
+    "prompt": "Où se trouve le siège de la CEEAC ?",
+    "choices": [
+      "Brazzaville",
+      "Libreville",
+      "Kinshasa",
+      "Yaoundé"
+    ],
+    "answer": 1,
+    "explanation": "Le siège de la CEEAC est à Libreville.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O065A",
+    "knowledge_id": "V2-ORG-065",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "COMESA",
+    "prompt": "Que signifie COMESA ?",
+    "choices": [
+      "Marché commun de l’Afrique orientale et australe",
+      "Communauté monétaire des États sahéliens",
+      "Conseil maritime de l’Afrique",
+      "Commission économique sud-africaine"
+    ],
+    "answer": 0,
+    "explanation": "COMESA signifie Marché commun de l’Afrique orientale et australe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O066A",
+    "knowledge_id": "V2-ORG-066",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "COMESA",
+    "prompt": "Où se trouve le siège du COMESA ?",
+    "choices": [
+      "Nairobi",
+      "Kampala",
+      "Gaborone",
+      "Lusaka"
+    ],
+    "answer": 3,
+    "explanation": "Le siège du COMESA est à Lusaka.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O067A",
+    "knowledge_id": "V2-ORG-067",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "EAC",
+    "prompt": "Que signifie EAC ?",
+    "choices": [
+      "Conseil africain de l’énergie",
+      "Union des capitales est-africaines",
+      "Communauté d’Afrique de l’Est",
+      "Communauté économique africaine centrale"
+    ],
+    "answer": 2,
+    "explanation": "EAC désigne la Communauté d’Afrique de l’Est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O068A",
+    "knowledge_id": "V2-ORG-068",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "EAC",
+    "prompt": "Où se trouve le siège de la Communauté d’Afrique de l’Est ?",
+    "choices": [
+      "Kigali",
+      "Arusha",
+      "Dodoma",
+      "Nairobi"
+    ],
+    "answer": 1,
+    "explanation": "Le siège de l’EAC est à Arusha.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O069A",
+    "knowledge_id": "V2-ORG-069",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "CEDEAO",
+    "prompt": "Que signifie CEDEAO ?",
+    "choices": [
+      "Communauté économique des États de l’Afrique de l’Ouest",
+      "Communauté des États de l’Afrique orientale",
+      "Conseil économique des États africains océaniques",
+      "Commission économique et douanière africaine"
+    ],
+    "answer": 0,
+    "explanation": "CEDEAO signifie Communauté économique des États de l’Afrique de l’Ouest.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O070A",
+    "knowledge_id": "V2-ORG-070",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "CEDEAO",
+    "prompt": "Où se trouve le siège de la CEDEAO ?",
+    "choices": [
+      "Accra",
+      "Dakar",
+      "Lomé",
+      "Abuja"
+    ],
+    "answer": 3,
+    "explanation": "Le siège de la CEDEAO est à Abuja.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O071A",
+    "knowledge_id": "V2-ORG-071",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "IGAD",
+    "prompt": "Que signifie IGAD ?",
+    "choices": [
+      "Initiative globale africaine de défense",
+      "Institution géographique africaine de développement",
+      "Autorité intergouvernementale pour le développement",
+      "Institut général africain du développement"
+    ],
+    "answer": 2,
+    "explanation": "IGAD signifie Autorité intergouvernementale pour le développement.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O072A",
+    "knowledge_id": "V2-ORG-072",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "IGAD",
+    "prompt": "Où se trouve le siège de l’IGAD ?",
+    "choices": [
+      "Khartoum",
+      "Djibouti",
+      "Addis-Abeba",
+      "Nairobi"
+    ],
+    "answer": 1,
+    "explanation": "Le siège de l’IGAD est à Djibouti.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O073A",
+    "knowledge_id": "V2-ORG-073",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OIF",
+    "prompt": "Que signifie OIF ?",
+    "choices": [
+      "Organisation internationale de la Francophonie",
+      "Organisation interafricaine francophone",
+      "Office international du français",
+      "Organisation internationale des finances"
+    ],
+    "answer": 0,
+    "explanation": "OIF signifie Organisation internationale de la Francophonie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O074A",
+    "knowledge_id": "V2-ORG-074",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OIF",
+    "prompt": "Où se trouve le siège de l’OIF ?",
+    "choices": [
+      "Bruxelles",
+      "Genève",
+      "Montréal",
+      "Paris"
+    ],
+    "answer": 3,
+    "explanation": "Le siège de l’OIF est à Paris.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O075A",
+    "knowledge_id": "V2-ORG-075",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "INTERPOL",
+    "prompt": "Où se trouve le siège d’INTERPOL ?",
+    "choices": [
+      "La Haye",
+      "Genève",
+      "Lyon",
+      "Paris"
+    ],
+    "answer": 2,
+    "explanation": "Le siège d’INTERPOL se trouve à Lyon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O076A",
+    "knowledge_id": "V2-ORG-076",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "INTERPOL",
+    "prompt": "Quel est le rôle général d’INTERPOL ?",
+    "choices": [
+      "organiser les Jeux olympiques",
+      "faciliter la coopération policière internationale",
+      "diriger les armées nationales",
+      "réglementer les monnaies"
+    ],
+    "answer": 1,
+    "explanation": "INTERPOL facilite la coopération policière internationale.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O077A",
+    "knowledge_id": "V2-ORG-077",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OTAN",
+    "prompt": "En quelle année l’OTAN est-elle fondée ?",
+    "choices": [
+      "1949",
+      "1919",
+      "1945",
+      "1961"
+    ],
+    "answer": 0,
+    "explanation": "L’OTAN est fondée en 1949.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O078A",
+    "knowledge_id": "V2-ORG-078",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OTAN",
+    "prompt": "Où se trouve le siège de l’OTAN ?",
+    "choices": [
+      "Paris",
+      "Londres",
+      "Washington, D.C.",
+      "Bruxelles"
+    ],
+    "answer": 3,
+    "explanation": "Le siège de l’OTAN se trouve à Bruxelles.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O079A",
+    "knowledge_id": "V2-ORG-079",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OPEP",
+    "prompt": "Que signifie OPEP ?",
+    "choices": [
+      "Office des producteurs énergétiques publics",
+      "Organisation pétrolière européenne",
+      "Organisation des pays exportateurs de pétrole",
+      "Organisation pour l’énergie et le pétrole"
+    ],
+    "answer": 2,
+    "explanation": "OPEP signifie Organisation des pays exportateurs de pétrole.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O080A",
+    "knowledge_id": "V2-ORG-080",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OPEP",
+    "prompt": "Où se trouve le Secrétariat de l’OPEP ?",
+    "choices": [
+      "Genève",
+      "Vienne",
+      "Riyad",
+      "Abou Dabi"
+    ],
+    "answer": 1,
+    "explanation": "Le Secrétariat de l’OPEP se trouve à Vienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O081A",
+    "knowledge_id": "V2-ORG-081",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OCDE",
+    "prompt": "Que signifie OCDE ?",
+    "choices": [
+      "Organisation de coopération et de développement économiques",
+      "Office central du développement économique",
+      "Organisation commerciale des États développés",
+      "Organisation commune de défense économique"
+    ],
+    "answer": 0,
+    "explanation": "OCDE signifie Organisation de coopération et de développement économiques.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  },
+  {
+    "id": "V2O082A",
+    "knowledge_id": "V2-ORG-082",
+    "module": 1,
+    "domain": "Organisations internationales",
+    "subdomain": "OCDE",
+    "prompt": "Où se trouve le siège de l’OCDE ?",
+    "choices": [
+      "Bruxelles",
+      "Genève",
+      "Londres",
+      "Paris"
+    ],
+    "answer": 3,
+    "explanation": "Le siège de l’OCDE est à Paris.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sources institutionnelles officielles ONU / UA / organisations concernées"
+  }
+]
