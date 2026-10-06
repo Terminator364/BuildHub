@@ -73,6 +73,8 @@ async function load(){
   }
   const seen=new Set();S.questions=all.filter(q=>q&&q.id&&Array.isArray(q.choices)&&Number.isInteger(q.answer)&&!seen.has(q.id)&&seen.add(q.id));
   S.ready=true;
+  document.documentElement.setAttribute('data-ready',String(S.questions.length));
+  document.body.setAttribute('data-ready',String(S.questions.length));
   if(S.questions.length!==S.manifest.expected_questions)toast('Corpus partiel',S.questions.length+' / '+S.manifest.expected_questions+' questions');
   restoreSession();
   render();
@@ -110,7 +112,7 @@ function render(){
 }
 function homeHero(){
   const a=allStats(),last=P.history.at(-1);
-  return '<section class="hero coach-hero"><div><div class="eyebrow">EXCELLENTIA STUDY HUB · V'+esc(S.manifest.version)+'</div><h2>Ne choisis plus au hasard quoi réviser.</h2><p>La même plateforme Excellentia, maintenant accessible sans PC. Le moteur privilégie les notions faibles, les erreurs et les connaissances peu vues.</p><div class="hero-actions">'+
+  return '<section class="hero coach-hero"><div><div class="eyebrow">CULTURE GÉNÉRALE · EXCELLENTIA STUDY HUB · V'+esc(S.manifest.version)+'</div><h2>Ne choisis plus au hasard quoi réviser.</h2><p>La même plateforme Excellentia, maintenant accessible sans PC. Le moteur privilégie les notions faibles, les erreurs et les connaissances peu vues.</p><div class="hero-actions">'+
     (localStorage.getItem(SESSION)?'<button class="btn good" data-act="resume">Reprendre la session</button>':'<button class="btn good" data-act="mission">Voir ma mission</button>')+
     '<button class="btn secondary" data-act="sprint">Sprint 10 min</button></div></div>'+
     '<div class="readiness-ring" style="--score:'+Math.round(a.accuracy)+'"><div><b>'+Math.round(a.accuracy)+'</b><span>précision</span><small>'+(a.seen?'mesurée':'DÉMARRAGE')+'</small></div></div></section>'+
@@ -308,7 +310,7 @@ qs('#collapseRail').onclick=()=>document.body.classList.toggle('rail-collapsed')
 qs('#railScrollUp').onclick=()=>qs('#railScroll').scrollBy({top:-180,behavior:'smooth'});
 qs('#railScrollDown').onclick=()=>qs('#railScroll').scrollBy({top:180,behavior:'smooth'});
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('./sw.js?v=302',{updateViaCache:'none'}).then(async reg=>{
+  navigator.serviceWorker.register('./sw.js?v=303',{updateViaCache:'none'}).then(async reg=>{
     try{await reg.update()}catch{}
     if(reg.waiting)reg.waiting.postMessage({type:'SKIP_WAITING'});
   }).catch(()=>{});
