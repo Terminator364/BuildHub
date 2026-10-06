@@ -1,0 +1,6728 @@
+[
+  {
+    "id": "V2E001A",
+    "knowledge_id": "V2-ELEM-001",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Hydrogène ?",
+    "choices": [
+      "O",
+      "Zn",
+      "Sm",
+      "H"
+    ],
+    "answer": 3,
+    "explanation": "Hydrogène porte le symbole H.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E001B",
+    "knowledge_id": "V2-ELEM-001",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole H correspond à quel élément ?",
+    "choices": [
+      "Oxygène",
+      "Zinc",
+      "Samarium",
+      "Hydrogène"
+    ],
+    "answer": 3,
+    "explanation": "H est le symbole de Hydrogène.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E001C",
+    "knowledge_id": "V2-ELEM-001",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Hydrogène ?",
+    "choices": [
+      "8",
+      "30",
+      "62",
+      "1"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Hydrogène est 1.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E002A",
+    "knowledge_id": "V2-ELEM-002",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Hélium ?",
+    "choices": [
+      "Ga",
+      "Eu",
+      "He",
+      "F"
+    ],
+    "answer": 2,
+    "explanation": "Hélium porte le symbole He.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E002B",
+    "knowledge_id": "V2-ELEM-002",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole He correspond à quel élément ?",
+    "choices": [
+      "Gallium",
+      "Europium",
+      "Hélium",
+      "Fluor"
+    ],
+    "answer": 2,
+    "explanation": "He est le symbole de Hélium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E002C",
+    "knowledge_id": "V2-ELEM-002",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Hélium ?",
+    "choices": [
+      "31",
+      "63",
+      "2",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Hélium est 2.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E003A",
+    "knowledge_id": "V2-ELEM-003",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Lithium ?",
+    "choices": [
+      "Gd",
+      "Li",
+      "Ne",
+      "Ge"
+    ],
+    "answer": 1,
+    "explanation": "Lithium porte le symbole Li.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E003B",
+    "knowledge_id": "V2-ELEM-003",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Li correspond à quel élément ?",
+    "choices": [
+      "Gadolinium",
+      "Lithium",
+      "Néon",
+      "Germanium"
+    ],
+    "answer": 1,
+    "explanation": "Li est le symbole de Lithium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E003C",
+    "knowledge_id": "V2-ELEM-003",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Lithium ?",
+    "choices": [
+      "64",
+      "3",
+      "10",
+      "32"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Lithium est 3.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E004A",
+    "knowledge_id": "V2-ELEM-004",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Béryllium ?",
+    "choices": [
+      "Be",
+      "Na",
+      "As",
+      "Tb"
+    ],
+    "answer": 0,
+    "explanation": "Béryllium porte le symbole Be.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E004B",
+    "knowledge_id": "V2-ELEM-004",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Be correspond à quel élément ?",
+    "choices": [
+      "Béryllium",
+      "Sodium",
+      "Arsenic",
+      "Terbium"
+    ],
+    "answer": 0,
+    "explanation": "Be est le symbole de Béryllium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E004C",
+    "knowledge_id": "V2-ELEM-004",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Béryllium ?",
+    "choices": [
+      "4",
+      "11",
+      "33",
+      "65"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Béryllium est 4.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E005A",
+    "knowledge_id": "V2-ELEM-005",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Bore ?",
+    "choices": [
+      "Mg",
+      "Se",
+      "Dy",
+      "B"
+    ],
+    "answer": 3,
+    "explanation": "Bore porte le symbole B.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E005B",
+    "knowledge_id": "V2-ELEM-005",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole B correspond à quel élément ?",
+    "choices": [
+      "Magnésium",
+      "Sélénium",
+      "Dysprosium",
+      "Bore"
+    ],
+    "answer": 3,
+    "explanation": "B est le symbole de Bore.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E005C",
+    "knowledge_id": "V2-ELEM-005",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Bore ?",
+    "choices": [
+      "12",
+      "34",
+      "66",
+      "5"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Bore est 5.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E006A",
+    "knowledge_id": "V2-ELEM-006",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Carbone ?",
+    "choices": [
+      "Br",
+      "Ho",
+      "C",
+      "Al"
+    ],
+    "answer": 2,
+    "explanation": "Carbone porte le symbole C.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E006B",
+    "knowledge_id": "V2-ELEM-006",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole C correspond à quel élément ?",
+    "choices": [
+      "Brome",
+      "Holmium",
+      "Carbone",
+      "Aluminium"
+    ],
+    "answer": 2,
+    "explanation": "C est le symbole de Carbone.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E006C",
+    "knowledge_id": "V2-ELEM-006",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Carbone ?",
+    "choices": [
+      "35",
+      "67",
+      "6",
+      "13"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Carbone est 6.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E007A",
+    "knowledge_id": "V2-ELEM-007",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Azote ?",
+    "choices": [
+      "Er",
+      "N",
+      "Si",
+      "Kr"
+    ],
+    "answer": 1,
+    "explanation": "Azote porte le symbole N.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E007B",
+    "knowledge_id": "V2-ELEM-007",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole N correspond à quel élément ?",
+    "choices": [
+      "Erbium",
+      "Azote",
+      "Silicium",
+      "Krypton"
+    ],
+    "answer": 1,
+    "explanation": "N est le symbole de Azote.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E007C",
+    "knowledge_id": "V2-ELEM-007",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Azote ?",
+    "choices": [
+      "68",
+      "7",
+      "14",
+      "36"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Azote est 7.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E008A",
+    "knowledge_id": "V2-ELEM-008",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Oxygène ?",
+    "choices": [
+      "O",
+      "P",
+      "Rb",
+      "Tm"
+    ],
+    "answer": 0,
+    "explanation": "Oxygène porte le symbole O.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E008B",
+    "knowledge_id": "V2-ELEM-008",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole O correspond à quel élément ?",
+    "choices": [
+      "Oxygène",
+      "Phosphore",
+      "Rubidium",
+      "Thulium"
+    ],
+    "answer": 0,
+    "explanation": "O est le symbole de Oxygène.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E008C",
+    "knowledge_id": "V2-ELEM-008",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Oxygène ?",
+    "choices": [
+      "8",
+      "15",
+      "37",
+      "69"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Oxygène est 8.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E009A",
+    "knowledge_id": "V2-ELEM-009",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Fluor ?",
+    "choices": [
+      "S",
+      "Sr",
+      "Yb",
+      "F"
+    ],
+    "answer": 3,
+    "explanation": "Fluor porte le symbole F.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E009B",
+    "knowledge_id": "V2-ELEM-009",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole F correspond à quel élément ?",
+    "choices": [
+      "Soufre",
+      "Strontium",
+      "Ytterbium",
+      "Fluor"
+    ],
+    "answer": 3,
+    "explanation": "F est le symbole de Fluor.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E009C",
+    "knowledge_id": "V2-ELEM-009",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Fluor ?",
+    "choices": [
+      "16",
+      "38",
+      "70",
+      "9"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Fluor est 9.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E010A",
+    "knowledge_id": "V2-ELEM-010",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Néon ?",
+    "choices": [
+      "Y",
+      "Lu",
+      "Ne",
+      "Cl"
+    ],
+    "answer": 2,
+    "explanation": "Néon porte le symbole Ne.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E010B",
+    "knowledge_id": "V2-ELEM-010",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ne correspond à quel élément ?",
+    "choices": [
+      "Yttrium",
+      "Lutécium",
+      "Néon",
+      "Chlore"
+    ],
+    "answer": 2,
+    "explanation": "Ne est le symbole de Néon.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E010C",
+    "knowledge_id": "V2-ELEM-010",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Néon ?",
+    "choices": [
+      "39",
+      "71",
+      "10",
+      "17"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Néon est 10.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E011A",
+    "knowledge_id": "V2-ELEM-011",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Sodium ?",
+    "choices": [
+      "Hf",
+      "Na",
+      "Ar",
+      "Zr"
+    ],
+    "answer": 1,
+    "explanation": "Sodium porte le symbole Na.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E011B",
+    "knowledge_id": "V2-ELEM-011",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Na correspond à quel élément ?",
+    "choices": [
+      "Hafnium",
+      "Sodium",
+      "Argon",
+      "Zirconium"
+    ],
+    "answer": 1,
+    "explanation": "Na est le symbole de Sodium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E011C",
+    "knowledge_id": "V2-ELEM-011",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Sodium ?",
+    "choices": [
+      "72",
+      "11",
+      "18",
+      "40"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Sodium est 11.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E012A",
+    "knowledge_id": "V2-ELEM-012",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Magnésium ?",
+    "choices": [
+      "Mg",
+      "K",
+      "Nb",
+      "Ta"
+    ],
+    "answer": 0,
+    "explanation": "Magnésium porte le symbole Mg.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E012B",
+    "knowledge_id": "V2-ELEM-012",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Mg correspond à quel élément ?",
+    "choices": [
+      "Magnésium",
+      "Potassium",
+      "Niobium",
+      "Tantale"
+    ],
+    "answer": 0,
+    "explanation": "Mg est le symbole de Magnésium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E012C",
+    "knowledge_id": "V2-ELEM-012",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Magnésium ?",
+    "choices": [
+      "12",
+      "19",
+      "41",
+      "73"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Magnésium est 12.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E013A",
+    "knowledge_id": "V2-ELEM-013",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Aluminium ?",
+    "choices": [
+      "Ca",
+      "Mo",
+      "W",
+      "Al"
+    ],
+    "answer": 3,
+    "explanation": "Aluminium porte le symbole Al.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E013B",
+    "knowledge_id": "V2-ELEM-013",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Al correspond à quel élément ?",
+    "choices": [
+      "Calcium",
+      "Molybdène",
+      "Tungstène",
+      "Aluminium"
+    ],
+    "answer": 3,
+    "explanation": "Al est le symbole de Aluminium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E013C",
+    "knowledge_id": "V2-ELEM-013",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Aluminium ?",
+    "choices": [
+      "20",
+      "42",
+      "74",
+      "13"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Aluminium est 13.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E014A",
+    "knowledge_id": "V2-ELEM-014",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Silicium ?",
+    "choices": [
+      "Tc",
+      "Re",
+      "Si",
+      "Sc"
+    ],
+    "answer": 2,
+    "explanation": "Silicium porte le symbole Si.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E014B",
+    "knowledge_id": "V2-ELEM-014",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Si correspond à quel élément ?",
+    "choices": [
+      "Technétium",
+      "Rhénium",
+      "Silicium",
+      "Scandium"
+    ],
+    "answer": 2,
+    "explanation": "Si est le symbole de Silicium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E014C",
+    "knowledge_id": "V2-ELEM-014",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Silicium ?",
+    "choices": [
+      "43",
+      "75",
+      "14",
+      "21"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Silicium est 14.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E015A",
+    "knowledge_id": "V2-ELEM-015",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Phosphore ?",
+    "choices": [
+      "Os",
+      "P",
+      "Ti",
+      "Ru"
+    ],
+    "answer": 1,
+    "explanation": "Phosphore porte le symbole P.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E015B",
+    "knowledge_id": "V2-ELEM-015",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole P correspond à quel élément ?",
+    "choices": [
+      "Osmium",
+      "Phosphore",
+      "Titane",
+      "Ruthénium"
+    ],
+    "answer": 1,
+    "explanation": "P est le symbole de Phosphore.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E015C",
+    "knowledge_id": "V2-ELEM-015",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Phosphore ?",
+    "choices": [
+      "76",
+      "15",
+      "22",
+      "44"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Phosphore est 15.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E016A",
+    "knowledge_id": "V2-ELEM-016",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Soufre ?",
+    "choices": [
+      "S",
+      "V",
+      "Rh",
+      "Ir"
+    ],
+    "answer": 0,
+    "explanation": "Soufre porte le symbole S.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E016B",
+    "knowledge_id": "V2-ELEM-016",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole S correspond à quel élément ?",
+    "choices": [
+      "Soufre",
+      "Vanadium",
+      "Rhodium",
+      "Iridium"
+    ],
+    "answer": 0,
+    "explanation": "S est le symbole de Soufre.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E016C",
+    "knowledge_id": "V2-ELEM-016",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Soufre ?",
+    "choices": [
+      "16",
+      "23",
+      "45",
+      "77"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Soufre est 16.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E017A",
+    "knowledge_id": "V2-ELEM-017",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Chlore ?",
+    "choices": [
+      "Cr",
+      "Pd",
+      "Pt",
+      "Cl"
+    ],
+    "answer": 3,
+    "explanation": "Chlore porte le symbole Cl.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E017B",
+    "knowledge_id": "V2-ELEM-017",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Cl correspond à quel élément ?",
+    "choices": [
+      "Chrome",
+      "Palladium",
+      "Platine",
+      "Chlore"
+    ],
+    "answer": 3,
+    "explanation": "Cl est le symbole de Chlore.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E017C",
+    "knowledge_id": "V2-ELEM-017",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Chlore ?",
+    "choices": [
+      "24",
+      "46",
+      "78",
+      "17"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Chlore est 17.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E018A",
+    "knowledge_id": "V2-ELEM-018",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Argon ?",
+    "choices": [
+      "Ag",
+      "Au",
+      "Ar",
+      "Mn"
+    ],
+    "answer": 2,
+    "explanation": "Argon porte le symbole Ar.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E018B",
+    "knowledge_id": "V2-ELEM-018",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ar correspond à quel élément ?",
+    "choices": [
+      "Argent",
+      "Or",
+      "Argon",
+      "Manganèse"
+    ],
+    "answer": 2,
+    "explanation": "Ar est le symbole de Argon.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E018C",
+    "knowledge_id": "V2-ELEM-018",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Argon ?",
+    "choices": [
+      "47",
+      "79",
+      "18",
+      "25"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Argon est 18.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E019A",
+    "knowledge_id": "V2-ELEM-019",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Potassium ?",
+    "choices": [
+      "Hg",
+      "K",
+      "Fe",
+      "Cd"
+    ],
+    "answer": 1,
+    "explanation": "Potassium porte le symbole K.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E019B",
+    "knowledge_id": "V2-ELEM-019",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole K correspond à quel élément ?",
+    "choices": [
+      "Mercure",
+      "Potassium",
+      "Fer",
+      "Cadmium"
+    ],
+    "answer": 1,
+    "explanation": "K est le symbole de Potassium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E019C",
+    "knowledge_id": "V2-ELEM-019",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Potassium ?",
+    "choices": [
+      "80",
+      "19",
+      "26",
+      "48"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Potassium est 19.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E020A",
+    "knowledge_id": "V2-ELEM-020",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Calcium ?",
+    "choices": [
+      "Ca",
+      "Co",
+      "In",
+      "Tl"
+    ],
+    "answer": 0,
+    "explanation": "Calcium porte le symbole Ca.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E020B",
+    "knowledge_id": "V2-ELEM-020",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ca correspond à quel élément ?",
+    "choices": [
+      "Calcium",
+      "Cobalt",
+      "Indium",
+      "Thallium"
+    ],
+    "answer": 0,
+    "explanation": "Ca est le symbole de Calcium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E020C",
+    "knowledge_id": "V2-ELEM-020",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Calcium ?",
+    "choices": [
+      "20",
+      "27",
+      "49",
+      "81"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Calcium est 20.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E021A",
+    "knowledge_id": "V2-ELEM-021",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Scandium ?",
+    "choices": [
+      "Ni",
+      "Sn",
+      "Pb",
+      "Sc"
+    ],
+    "answer": 3,
+    "explanation": "Scandium porte le symbole Sc.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E021B",
+    "knowledge_id": "V2-ELEM-021",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Sc correspond à quel élément ?",
+    "choices": [
+      "Nickel",
+      "Étain",
+      "Plomb",
+      "Scandium"
+    ],
+    "answer": 3,
+    "explanation": "Sc est le symbole de Scandium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E021C",
+    "knowledge_id": "V2-ELEM-021",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Scandium ?",
+    "choices": [
+      "28",
+      "50",
+      "82",
+      "21"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Scandium est 21.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E022A",
+    "knowledge_id": "V2-ELEM-022",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Titane ?",
+    "choices": [
+      "Sb",
+      "Bi",
+      "Ti",
+      "Cu"
+    ],
+    "answer": 2,
+    "explanation": "Titane porte le symbole Ti.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E022B",
+    "knowledge_id": "V2-ELEM-022",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ti correspond à quel élément ?",
+    "choices": [
+      "Antimoine",
+      "Bismuth",
+      "Titane",
+      "Cuivre"
+    ],
+    "answer": 2,
+    "explanation": "Ti est le symbole de Titane.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E022C",
+    "knowledge_id": "V2-ELEM-022",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Titane ?",
+    "choices": [
+      "51",
+      "83",
+      "22",
+      "29"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Titane est 22.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E023A",
+    "knowledge_id": "V2-ELEM-023",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Vanadium ?",
+    "choices": [
+      "Po",
+      "V",
+      "Zn",
+      "Te"
+    ],
+    "answer": 1,
+    "explanation": "Vanadium porte le symbole V.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E023B",
+    "knowledge_id": "V2-ELEM-023",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole V correspond à quel élément ?",
+    "choices": [
+      "Polonium",
+      "Vanadium",
+      "Zinc",
+      "Tellure"
+    ],
+    "answer": 1,
+    "explanation": "V est le symbole de Vanadium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E023C",
+    "knowledge_id": "V2-ELEM-023",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Vanadium ?",
+    "choices": [
+      "84",
+      "23",
+      "30",
+      "52"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Vanadium est 23.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E024A",
+    "knowledge_id": "V2-ELEM-024",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Chrome ?",
+    "choices": [
+      "Cr",
+      "Ga",
+      "I",
+      "At"
+    ],
+    "answer": 0,
+    "explanation": "Chrome porte le symbole Cr.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E024B",
+    "knowledge_id": "V2-ELEM-024",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Cr correspond à quel élément ?",
+    "choices": [
+      "Chrome",
+      "Gallium",
+      "Iode",
+      "Astate"
+    ],
+    "answer": 0,
+    "explanation": "Cr est le symbole de Chrome.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E024C",
+    "knowledge_id": "V2-ELEM-024",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Chrome ?",
+    "choices": [
+      "24",
+      "31",
+      "53",
+      "85"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Chrome est 24.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E025A",
+    "knowledge_id": "V2-ELEM-025",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Manganèse ?",
+    "choices": [
+      "Ge",
+      "Xe",
+      "Rn",
+      "Mn"
+    ],
+    "answer": 3,
+    "explanation": "Manganèse porte le symbole Mn.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E025B",
+    "knowledge_id": "V2-ELEM-025",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Mn correspond à quel élément ?",
+    "choices": [
+      "Germanium",
+      "Xénon",
+      "Radon",
+      "Manganèse"
+    ],
+    "answer": 3,
+    "explanation": "Mn est le symbole de Manganèse.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E025C",
+    "knowledge_id": "V2-ELEM-025",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Manganèse ?",
+    "choices": [
+      "32",
+      "54",
+      "86",
+      "25"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Manganèse est 25.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E026A",
+    "knowledge_id": "V2-ELEM-026",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Fer ?",
+    "choices": [
+      "Cs",
+      "Fr",
+      "Fe",
+      "As"
+    ],
+    "answer": 2,
+    "explanation": "Fer porte le symbole Fe.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E026B",
+    "knowledge_id": "V2-ELEM-026",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Fe correspond à quel élément ?",
+    "choices": [
+      "Césium",
+      "Francium",
+      "Fer",
+      "Arsenic"
+    ],
+    "answer": 2,
+    "explanation": "Fe est le symbole de Fer.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E026C",
+    "knowledge_id": "V2-ELEM-026",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Fer ?",
+    "choices": [
+      "55",
+      "87",
+      "26",
+      "33"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Fer est 26.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E027A",
+    "knowledge_id": "V2-ELEM-027",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Cobalt ?",
+    "choices": [
+      "Ra",
+      "Co",
+      "Se",
+      "Ba"
+    ],
+    "answer": 1,
+    "explanation": "Cobalt porte le symbole Co.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E027B",
+    "knowledge_id": "V2-ELEM-027",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Co correspond à quel élément ?",
+    "choices": [
+      "Radium",
+      "Cobalt",
+      "Sélénium",
+      "Baryum"
+    ],
+    "answer": 1,
+    "explanation": "Co est le symbole de Cobalt.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E027C",
+    "knowledge_id": "V2-ELEM-027",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Cobalt ?",
+    "choices": [
+      "88",
+      "27",
+      "34",
+      "56"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Cobalt est 27.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E028A",
+    "knowledge_id": "V2-ELEM-028",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Nickel ?",
+    "choices": [
+      "Ni",
+      "Br",
+      "La",
+      "Ac"
+    ],
+    "answer": 0,
+    "explanation": "Nickel porte le symbole Ni.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E028B",
+    "knowledge_id": "V2-ELEM-028",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ni correspond à quel élément ?",
+    "choices": [
+      "Nickel",
+      "Brome",
+      "Lanthane",
+      "Actinium"
+    ],
+    "answer": 0,
+    "explanation": "Ni est le symbole de Nickel.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E028C",
+    "knowledge_id": "V2-ELEM-028",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Nickel ?",
+    "choices": [
+      "28",
+      "35",
+      "57",
+      "89"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Nickel est 28.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E029A",
+    "knowledge_id": "V2-ELEM-029",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Cuivre ?",
+    "choices": [
+      "Kr",
+      "Ce",
+      "Th",
+      "Cu"
+    ],
+    "answer": 3,
+    "explanation": "Cuivre porte le symbole Cu.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E029B",
+    "knowledge_id": "V2-ELEM-029",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Cu correspond à quel élément ?",
+    "choices": [
+      "Krypton",
+      "Cérium",
+      "Thorium",
+      "Cuivre"
+    ],
+    "answer": 3,
+    "explanation": "Cu est le symbole de Cuivre.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E029C",
+    "knowledge_id": "V2-ELEM-029",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Cuivre ?",
+    "choices": [
+      "36",
+      "58",
+      "90",
+      "29"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Cuivre est 29.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E030A",
+    "knowledge_id": "V2-ELEM-030",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Zinc ?",
+    "choices": [
+      "Pr",
+      "Pa",
+      "Zn",
+      "Rb"
+    ],
+    "answer": 2,
+    "explanation": "Zinc porte le symbole Zn.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E030B",
+    "knowledge_id": "V2-ELEM-030",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Zn correspond à quel élément ?",
+    "choices": [
+      "Praséodyme",
+      "Protactinium",
+      "Zinc",
+      "Rubidium"
+    ],
+    "answer": 2,
+    "explanation": "Zn est le symbole de Zinc.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E030C",
+    "knowledge_id": "V2-ELEM-030",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Zinc ?",
+    "choices": [
+      "59",
+      "91",
+      "30",
+      "37"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Zinc est 30.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E031A",
+    "knowledge_id": "V2-ELEM-031",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Gallium ?",
+    "choices": [
+      "U",
+      "Ga",
+      "Sr",
+      "Nd"
+    ],
+    "answer": 1,
+    "explanation": "Gallium porte le symbole Ga.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E031B",
+    "knowledge_id": "V2-ELEM-031",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ga correspond à quel élément ?",
+    "choices": [
+      "Uranium",
+      "Gallium",
+      "Strontium",
+      "Néodyme"
+    ],
+    "answer": 1,
+    "explanation": "Ga est le symbole de Gallium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E031C",
+    "knowledge_id": "V2-ELEM-031",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Gallium ?",
+    "choices": [
+      "92",
+      "31",
+      "38",
+      "60"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Gallium est 31.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E032A",
+    "knowledge_id": "V2-ELEM-032",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Germanium ?",
+    "choices": [
+      "Ge",
+      "Y",
+      "Pm",
+      "Np"
+    ],
+    "answer": 0,
+    "explanation": "Germanium porte le symbole Ge.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E032B",
+    "knowledge_id": "V2-ELEM-032",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ge correspond à quel élément ?",
+    "choices": [
+      "Germanium",
+      "Yttrium",
+      "Prométhium",
+      "Neptunium"
+    ],
+    "answer": 0,
+    "explanation": "Ge est le symbole de Germanium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E032C",
+    "knowledge_id": "V2-ELEM-032",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Germanium ?",
+    "choices": [
+      "32",
+      "39",
+      "61",
+      "93"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Germanium est 32.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E033A",
+    "knowledge_id": "V2-ELEM-033",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Arsenic ?",
+    "choices": [
+      "Zr",
+      "Sm",
+      "Pu",
+      "As"
+    ],
+    "answer": 3,
+    "explanation": "Arsenic porte le symbole As.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E033B",
+    "knowledge_id": "V2-ELEM-033",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole As correspond à quel élément ?",
+    "choices": [
+      "Zirconium",
+      "Samarium",
+      "Plutonium",
+      "Arsenic"
+    ],
+    "answer": 3,
+    "explanation": "As est le symbole de Arsenic.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E033C",
+    "knowledge_id": "V2-ELEM-033",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Arsenic ?",
+    "choices": [
+      "40",
+      "62",
+      "94",
+      "33"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Arsenic est 33.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E034A",
+    "knowledge_id": "V2-ELEM-034",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Sélénium ?",
+    "choices": [
+      "Eu",
+      "Am",
+      "Se",
+      "Nb"
+    ],
+    "answer": 2,
+    "explanation": "Sélénium porte le symbole Se.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E034B",
+    "knowledge_id": "V2-ELEM-034",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Se correspond à quel élément ?",
+    "choices": [
+      "Europium",
+      "Américium",
+      "Sélénium",
+      "Niobium"
+    ],
+    "answer": 2,
+    "explanation": "Se est le symbole de Sélénium.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E034C",
+    "knowledge_id": "V2-ELEM-034",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Sélénium ?",
+    "choices": [
+      "63",
+      "95",
+      "34",
+      "41"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Sélénium est 34.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E035A",
+    "knowledge_id": "V2-ELEM-035",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Brome ?",
+    "choices": [
+      "Cm",
+      "Br",
+      "Mo",
+      "Gd"
+    ],
+    "answer": 1,
+    "explanation": "Brome porte le symbole Br.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E035B",
+    "knowledge_id": "V2-ELEM-035",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Br correspond à quel élément ?",
+    "choices": [
+      "Curium",
+      "Brome",
+      "Molybdène",
+      "Gadolinium"
+    ],
+    "answer": 1,
+    "explanation": "Br est le symbole de Brome.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E035C",
+    "knowledge_id": "V2-ELEM-035",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Brome ?",
+    "choices": [
+      "96",
+      "35",
+      "42",
+      "64"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Brome est 35.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E036A",
+    "knowledge_id": "V2-ELEM-036",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Krypton ?",
+    "choices": [
+      "Kr",
+      "Tc",
+      "Tb",
+      "Bk"
+    ],
+    "answer": 0,
+    "explanation": "Krypton porte le symbole Kr.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E036B",
+    "knowledge_id": "V2-ELEM-036",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Kr correspond à quel élément ?",
+    "choices": [
+      "Krypton",
+      "Technétium",
+      "Terbium",
+      "Berkélium"
+    ],
+    "answer": 0,
+    "explanation": "Kr est le symbole de Krypton.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E036C",
+    "knowledge_id": "V2-ELEM-036",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Krypton ?",
+    "choices": [
+      "36",
+      "43",
+      "65",
+      "97"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Krypton est 36.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E037A",
+    "knowledge_id": "V2-ELEM-037",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Rubidium ?",
+    "choices": [
+      "Ru",
+      "Dy",
+      "Cf",
+      "Rb"
+    ],
+    "answer": 3,
+    "explanation": "Rubidium porte le symbole Rb.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E037B",
+    "knowledge_id": "V2-ELEM-037",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Rb correspond à quel élément ?",
+    "choices": [
+      "Ruthénium",
+      "Dysprosium",
+      "Californium",
+      "Rubidium"
+    ],
+    "answer": 3,
+    "explanation": "Rb est le symbole de Rubidium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E037C",
+    "knowledge_id": "V2-ELEM-037",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Rubidium ?",
+    "choices": [
+      "44",
+      "66",
+      "98",
+      "37"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Rubidium est 37.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E038A",
+    "knowledge_id": "V2-ELEM-038",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Strontium ?",
+    "choices": [
+      "Ho",
+      "Es",
+      "Sr",
+      "Rh"
+    ],
+    "answer": 2,
+    "explanation": "Strontium porte le symbole Sr.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E038B",
+    "knowledge_id": "V2-ELEM-038",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Sr correspond à quel élément ?",
+    "choices": [
+      "Holmium",
+      "Einsteinium",
+      "Strontium",
+      "Rhodium"
+    ],
+    "answer": 2,
+    "explanation": "Sr est le symbole de Strontium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E038C",
+    "knowledge_id": "V2-ELEM-038",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Strontium ?",
+    "choices": [
+      "67",
+      "99",
+      "38",
+      "45"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Strontium est 38.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E039A",
+    "knowledge_id": "V2-ELEM-039",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Yttrium ?",
+    "choices": [
+      "Fm",
+      "Y",
+      "Pd",
+      "Er"
+    ],
+    "answer": 1,
+    "explanation": "Yttrium porte le symbole Y.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E039B",
+    "knowledge_id": "V2-ELEM-039",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Y correspond à quel élément ?",
+    "choices": [
+      "Fermium",
+      "Yttrium",
+      "Palladium",
+      "Erbium"
+    ],
+    "answer": 1,
+    "explanation": "Y est le symbole de Yttrium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E039C",
+    "knowledge_id": "V2-ELEM-039",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Yttrium ?",
+    "choices": [
+      "100",
+      "39",
+      "46",
+      "68"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Yttrium est 39.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E040A",
+    "knowledge_id": "V2-ELEM-040",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Zirconium ?",
+    "choices": [
+      "Zr",
+      "Ag",
+      "Tm",
+      "Md"
+    ],
+    "answer": 0,
+    "explanation": "Zirconium porte le symbole Zr.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E040B",
+    "knowledge_id": "V2-ELEM-040",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Zr correspond à quel élément ?",
+    "choices": [
+      "Zirconium",
+      "Argent",
+      "Thulium",
+      "Mendélévium"
+    ],
+    "answer": 0,
+    "explanation": "Zr est le symbole de Zirconium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E040C",
+    "knowledge_id": "V2-ELEM-040",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Zirconium ?",
+    "choices": [
+      "40",
+      "47",
+      "69",
+      "101"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Zirconium est 40.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E041A",
+    "knowledge_id": "V2-ELEM-041",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Niobium ?",
+    "choices": [
+      "Cd",
+      "Yb",
+      "No",
+      "Nb"
+    ],
+    "answer": 3,
+    "explanation": "Niobium porte le symbole Nb.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E041B",
+    "knowledge_id": "V2-ELEM-041",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Nb correspond à quel élément ?",
+    "choices": [
+      "Cadmium",
+      "Ytterbium",
+      "Nobélium",
+      "Niobium"
+    ],
+    "answer": 3,
+    "explanation": "Nb est le symbole de Niobium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E041C",
+    "knowledge_id": "V2-ELEM-041",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Niobium ?",
+    "choices": [
+      "48",
+      "70",
+      "102",
+      "41"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Niobium est 41.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E042A",
+    "knowledge_id": "V2-ELEM-042",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Molybdène ?",
+    "choices": [
+      "Lu",
+      "Lr",
+      "Mo",
+      "In"
+    ],
+    "answer": 2,
+    "explanation": "Molybdène porte le symbole Mo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E042B",
+    "knowledge_id": "V2-ELEM-042",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Mo correspond à quel élément ?",
+    "choices": [
+      "Lutécium",
+      "Lawrencium",
+      "Molybdène",
+      "Indium"
+    ],
+    "answer": 2,
+    "explanation": "Mo est le symbole de Molybdène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E042C",
+    "knowledge_id": "V2-ELEM-042",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Molybdène ?",
+    "choices": [
+      "71",
+      "103",
+      "42",
+      "49"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Molybdène est 42.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E043A",
+    "knowledge_id": "V2-ELEM-043",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Technétium ?",
+    "choices": [
+      "Rf",
+      "Tc",
+      "Sn",
+      "Hf"
+    ],
+    "answer": 1,
+    "explanation": "Technétium porte le symbole Tc.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E043B",
+    "knowledge_id": "V2-ELEM-043",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Tc correspond à quel élément ?",
+    "choices": [
+      "Rutherfordium",
+      "Technétium",
+      "Étain",
+      "Hafnium"
+    ],
+    "answer": 1,
+    "explanation": "Tc est le symbole de Technétium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E043C",
+    "knowledge_id": "V2-ELEM-043",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Technétium ?",
+    "choices": [
+      "104",
+      "43",
+      "50",
+      "72"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Technétium est 43.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E044A",
+    "knowledge_id": "V2-ELEM-044",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Ruthénium ?",
+    "choices": [
+      "Ru",
+      "Sb",
+      "Ta",
+      "Db"
+    ],
+    "answer": 0,
+    "explanation": "Ruthénium porte le symbole Ru.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E044B",
+    "knowledge_id": "V2-ELEM-044",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ru correspond à quel élément ?",
+    "choices": [
+      "Ruthénium",
+      "Antimoine",
+      "Tantale",
+      "Dubnium"
+    ],
+    "answer": 0,
+    "explanation": "Ru est le symbole de Ruthénium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E044C",
+    "knowledge_id": "V2-ELEM-044",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Ruthénium ?",
+    "choices": [
+      "44",
+      "51",
+      "73",
+      "105"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Ruthénium est 44.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E045A",
+    "knowledge_id": "V2-ELEM-045",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Rhodium ?",
+    "choices": [
+      "Te",
+      "W",
+      "Sg",
+      "Rh"
+    ],
+    "answer": 3,
+    "explanation": "Rhodium porte le symbole Rh.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E045B",
+    "knowledge_id": "V2-ELEM-045",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Rh correspond à quel élément ?",
+    "choices": [
+      "Tellure",
+      "Tungstène",
+      "Seaborgium",
+      "Rhodium"
+    ],
+    "answer": 3,
+    "explanation": "Rh est le symbole de Rhodium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E045C",
+    "knowledge_id": "V2-ELEM-045",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Rhodium ?",
+    "choices": [
+      "52",
+      "74",
+      "106",
+      "45"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Rhodium est 45.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E046A",
+    "knowledge_id": "V2-ELEM-046",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Palladium ?",
+    "choices": [
+      "Re",
+      "Bh",
+      "Pd",
+      "I"
+    ],
+    "answer": 2,
+    "explanation": "Palladium porte le symbole Pd.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E046B",
+    "knowledge_id": "V2-ELEM-046",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Pd correspond à quel élément ?",
+    "choices": [
+      "Rhénium",
+      "Bohrium",
+      "Palladium",
+      "Iode"
+    ],
+    "answer": 2,
+    "explanation": "Pd est le symbole de Palladium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E046C",
+    "knowledge_id": "V2-ELEM-046",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Palladium ?",
+    "choices": [
+      "75",
+      "107",
+      "46",
+      "53"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Palladium est 46.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E047A",
+    "knowledge_id": "V2-ELEM-047",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Argent ?",
+    "choices": [
+      "Hs",
+      "Ag",
+      "Xe",
+      "Os"
+    ],
+    "answer": 1,
+    "explanation": "Argent porte le symbole Ag.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E047B",
+    "knowledge_id": "V2-ELEM-047",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ag correspond à quel élément ?",
+    "choices": [
+      "Hassium",
+      "Argent",
+      "Xénon",
+      "Osmium"
+    ],
+    "answer": 1,
+    "explanation": "Ag est le symbole de Argent.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E047C",
+    "knowledge_id": "V2-ELEM-047",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Argent ?",
+    "choices": [
+      "108",
+      "47",
+      "54",
+      "76"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Argent est 47.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E048A",
+    "knowledge_id": "V2-ELEM-048",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Cadmium ?",
+    "choices": [
+      "Cd",
+      "Cs",
+      "Ir",
+      "Mt"
+    ],
+    "answer": 0,
+    "explanation": "Cadmium porte le symbole Cd.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E048B",
+    "knowledge_id": "V2-ELEM-048",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Cd correspond à quel élément ?",
+    "choices": [
+      "Cadmium",
+      "Césium",
+      "Iridium",
+      "Meitnérium"
+    ],
+    "answer": 0,
+    "explanation": "Cd est le symbole de Cadmium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E048C",
+    "knowledge_id": "V2-ELEM-048",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Cadmium ?",
+    "choices": [
+      "48",
+      "55",
+      "77",
+      "109"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Cadmium est 48.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E049A",
+    "knowledge_id": "V2-ELEM-049",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Indium ?",
+    "choices": [
+      "Ba",
+      "Pt",
+      "Ds",
+      "In"
+    ],
+    "answer": 3,
+    "explanation": "Indium porte le symbole In.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E049B",
+    "knowledge_id": "V2-ELEM-049",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole In correspond à quel élément ?",
+    "choices": [
+      "Baryum",
+      "Platine",
+      "Darmstadtium",
+      "Indium"
+    ],
+    "answer": 3,
+    "explanation": "In est le symbole de Indium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E049C",
+    "knowledge_id": "V2-ELEM-049",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Indium ?",
+    "choices": [
+      "56",
+      "78",
+      "110",
+      "49"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Indium est 49.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E050A",
+    "knowledge_id": "V2-ELEM-050",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Étain ?",
+    "choices": [
+      "Au",
+      "Rg",
+      "Sn",
+      "La"
+    ],
+    "answer": 2,
+    "explanation": "Étain porte le symbole Sn.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E050B",
+    "knowledge_id": "V2-ELEM-050",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Sn correspond à quel élément ?",
+    "choices": [
+      "Or",
+      "Roentgenium",
+      "Étain",
+      "Lanthane"
+    ],
+    "answer": 2,
+    "explanation": "Sn est le symbole de Étain.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E050C",
+    "knowledge_id": "V2-ELEM-050",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Étain ?",
+    "choices": [
+      "79",
+      "111",
+      "50",
+      "57"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Étain est 50.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E051A",
+    "knowledge_id": "V2-ELEM-051",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Antimoine ?",
+    "choices": [
+      "Cn",
+      "Sb",
+      "Ce",
+      "Hg"
+    ],
+    "answer": 1,
+    "explanation": "Antimoine porte le symbole Sb.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E051B",
+    "knowledge_id": "V2-ELEM-051",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Sb correspond à quel élément ?",
+    "choices": [
+      "Copernicium",
+      "Antimoine",
+      "Cérium",
+      "Mercure"
+    ],
+    "answer": 1,
+    "explanation": "Sb est le symbole de Antimoine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E051C",
+    "knowledge_id": "V2-ELEM-051",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Antimoine ?",
+    "choices": [
+      "112",
+      "51",
+      "58",
+      "80"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Antimoine est 51.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E052A",
+    "knowledge_id": "V2-ELEM-052",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Tellure ?",
+    "choices": [
+      "Te",
+      "Pr",
+      "Tl",
+      "Nh"
+    ],
+    "answer": 0,
+    "explanation": "Tellure porte le symbole Te.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E052B",
+    "knowledge_id": "V2-ELEM-052",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Te correspond à quel élément ?",
+    "choices": [
+      "Tellure",
+      "Praséodyme",
+      "Thallium",
+      "Nihonium"
+    ],
+    "answer": 0,
+    "explanation": "Te est le symbole de Tellure.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E052C",
+    "knowledge_id": "V2-ELEM-052",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Tellure ?",
+    "choices": [
+      "52",
+      "59",
+      "81",
+      "113"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Tellure est 52.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E053A",
+    "knowledge_id": "V2-ELEM-053",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Iode ?",
+    "choices": [
+      "Nd",
+      "Pb",
+      "Fl",
+      "I"
+    ],
+    "answer": 3,
+    "explanation": "Iode porte le symbole I.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E053B",
+    "knowledge_id": "V2-ELEM-053",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole I correspond à quel élément ?",
+    "choices": [
+      "Néodyme",
+      "Plomb",
+      "Flérovium",
+      "Iode"
+    ],
+    "answer": 3,
+    "explanation": "I est le symbole de Iode.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E053C",
+    "knowledge_id": "V2-ELEM-053",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Iode ?",
+    "choices": [
+      "60",
+      "82",
+      "114",
+      "53"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Iode est 53.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E054A",
+    "knowledge_id": "V2-ELEM-054",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Xénon ?",
+    "choices": [
+      "Bi",
+      "Mc",
+      "Xe",
+      "Pm"
+    ],
+    "answer": 2,
+    "explanation": "Xénon porte le symbole Xe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E054B",
+    "knowledge_id": "V2-ELEM-054",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Xe correspond à quel élément ?",
+    "choices": [
+      "Bismuth",
+      "Moscovium",
+      "Xénon",
+      "Prométhium"
+    ],
+    "answer": 2,
+    "explanation": "Xe est le symbole de Xénon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E054C",
+    "knowledge_id": "V2-ELEM-054",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Xénon ?",
+    "choices": [
+      "83",
+      "115",
+      "54",
+      "61"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Xénon est 54.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E055A",
+    "knowledge_id": "V2-ELEM-055",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Césium ?",
+    "choices": [
+      "Lv",
+      "Cs",
+      "Sm",
+      "Po"
+    ],
+    "answer": 1,
+    "explanation": "Césium porte le symbole Cs.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E055B",
+    "knowledge_id": "V2-ELEM-055",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Cs correspond à quel élément ?",
+    "choices": [
+      "Livermorium",
+      "Césium",
+      "Samarium",
+      "Polonium"
+    ],
+    "answer": 1,
+    "explanation": "Cs est le symbole de Césium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E055C",
+    "knowledge_id": "V2-ELEM-055",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Césium ?",
+    "choices": [
+      "116",
+      "55",
+      "62",
+      "84"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Césium est 55.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E056A",
+    "knowledge_id": "V2-ELEM-056",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Baryum ?",
+    "choices": [
+      "Ba",
+      "Eu",
+      "At",
+      "Ts"
+    ],
+    "answer": 0,
+    "explanation": "Baryum porte le symbole Ba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E056B",
+    "knowledge_id": "V2-ELEM-056",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ba correspond à quel élément ?",
+    "choices": [
+      "Baryum",
+      "Europium",
+      "Astate",
+      "Tennesse"
+    ],
+    "answer": 0,
+    "explanation": "Ba est le symbole de Baryum.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E056C",
+    "knowledge_id": "V2-ELEM-056",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Baryum ?",
+    "choices": [
+      "56",
+      "63",
+      "85",
+      "117"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Baryum est 56.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E057A",
+    "knowledge_id": "V2-ELEM-057",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Lanthane ?",
+    "choices": [
+      "Gd",
+      "Rn",
+      "Og",
+      "La"
+    ],
+    "answer": 3,
+    "explanation": "Lanthane porte le symbole La.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E057B",
+    "knowledge_id": "V2-ELEM-057",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole La correspond à quel élément ?",
+    "choices": [
+      "Gadolinium",
+      "Radon",
+      "Oganesson",
+      "Lanthane"
+    ],
+    "answer": 3,
+    "explanation": "La est le symbole de Lanthane.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E057C",
+    "knowledge_id": "V2-ELEM-057",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Lanthane ?",
+    "choices": [
+      "64",
+      "86",
+      "118",
+      "57"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Lanthane est 57.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E058A",
+    "knowledge_id": "V2-ELEM-058",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Cérium ?",
+    "choices": [
+      "Fr",
+      "H",
+      "Ce",
+      "Tb"
+    ],
+    "answer": 2,
+    "explanation": "Cérium porte le symbole Ce.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E058B",
+    "knowledge_id": "V2-ELEM-058",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ce correspond à quel élément ?",
+    "choices": [
+      "Francium",
+      "Hydrogène",
+      "Cérium",
+      "Terbium"
+    ],
+    "answer": 2,
+    "explanation": "Ce est le symbole de Cérium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E058C",
+    "knowledge_id": "V2-ELEM-058",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Cérium ?",
+    "choices": [
+      "87",
+      "1",
+      "58",
+      "65"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Cérium est 58.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E059A",
+    "knowledge_id": "V2-ELEM-059",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Praséodyme ?",
+    "choices": [
+      "He",
+      "Pr",
+      "Dy",
+      "Ra"
+    ],
+    "answer": 1,
+    "explanation": "Praséodyme porte le symbole Pr.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E059B",
+    "knowledge_id": "V2-ELEM-059",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Pr correspond à quel élément ?",
+    "choices": [
+      "Hélium",
+      "Praséodyme",
+      "Dysprosium",
+      "Radium"
+    ],
+    "answer": 1,
+    "explanation": "Pr est le symbole de Praséodyme.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E059C",
+    "knowledge_id": "V2-ELEM-059",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Praséodyme ?",
+    "choices": [
+      "2",
+      "59",
+      "66",
+      "88"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Praséodyme est 59.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E060A",
+    "knowledge_id": "V2-ELEM-060",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Néodyme ?",
+    "choices": [
+      "Nd",
+      "Ho",
+      "Ac",
+      "Li"
+    ],
+    "answer": 0,
+    "explanation": "Néodyme porte le symbole Nd.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E060B",
+    "knowledge_id": "V2-ELEM-060",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Nd correspond à quel élément ?",
+    "choices": [
+      "Néodyme",
+      "Holmium",
+      "Actinium",
+      "Lithium"
+    ],
+    "answer": 0,
+    "explanation": "Nd est le symbole de Néodyme.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E060C",
+    "knowledge_id": "V2-ELEM-060",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Néodyme ?",
+    "choices": [
+      "60",
+      "67",
+      "89",
+      "3"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Néodyme est 60.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E061A",
+    "knowledge_id": "V2-ELEM-061",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Prométhium ?",
+    "choices": [
+      "Er",
+      "Th",
+      "Be",
+      "Pm"
+    ],
+    "answer": 3,
+    "explanation": "Prométhium porte le symbole Pm.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E061B",
+    "knowledge_id": "V2-ELEM-061",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Pm correspond à quel élément ?",
+    "choices": [
+      "Erbium",
+      "Thorium",
+      "Béryllium",
+      "Prométhium"
+    ],
+    "answer": 3,
+    "explanation": "Pm est le symbole de Prométhium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E061C",
+    "knowledge_id": "V2-ELEM-061",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Prométhium ?",
+    "choices": [
+      "68",
+      "90",
+      "4",
+      "61"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Prométhium est 61.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E062A",
+    "knowledge_id": "V2-ELEM-062",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Samarium ?",
+    "choices": [
+      "Pa",
+      "B",
+      "Sm",
+      "Tm"
+    ],
+    "answer": 2,
+    "explanation": "Samarium porte le symbole Sm.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E062B",
+    "knowledge_id": "V2-ELEM-062",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Sm correspond à quel élément ?",
+    "choices": [
+      "Protactinium",
+      "Bore",
+      "Samarium",
+      "Thulium"
+    ],
+    "answer": 2,
+    "explanation": "Sm est le symbole de Samarium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E062C",
+    "knowledge_id": "V2-ELEM-062",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Samarium ?",
+    "choices": [
+      "91",
+      "5",
+      "62",
+      "69"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Samarium est 62.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E063A",
+    "knowledge_id": "V2-ELEM-063",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Europium ?",
+    "choices": [
+      "C",
+      "Eu",
+      "Yb",
+      "U"
+    ],
+    "answer": 1,
+    "explanation": "Europium porte le symbole Eu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E063B",
+    "knowledge_id": "V2-ELEM-063",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Eu correspond à quel élément ?",
+    "choices": [
+      "Carbone",
+      "Europium",
+      "Ytterbium",
+      "Uranium"
+    ],
+    "answer": 1,
+    "explanation": "Eu est le symbole de Europium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E063C",
+    "knowledge_id": "V2-ELEM-063",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Europium ?",
+    "choices": [
+      "6",
+      "63",
+      "70",
+      "92"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Europium est 63.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E064A",
+    "knowledge_id": "V2-ELEM-064",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Gadolinium ?",
+    "choices": [
+      "Gd",
+      "Lu",
+      "Np",
+      "N"
+    ],
+    "answer": 0,
+    "explanation": "Gadolinium porte le symbole Gd.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E064B",
+    "knowledge_id": "V2-ELEM-064",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Gd correspond à quel élément ?",
+    "choices": [
+      "Gadolinium",
+      "Lutécium",
+      "Neptunium",
+      "Azote"
+    ],
+    "answer": 0,
+    "explanation": "Gd est le symbole de Gadolinium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E064C",
+    "knowledge_id": "V2-ELEM-064",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Gadolinium ?",
+    "choices": [
+      "64",
+      "71",
+      "93",
+      "7"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Gadolinium est 64.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E065A",
+    "knowledge_id": "V2-ELEM-065",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Terbium ?",
+    "choices": [
+      "Hf",
+      "Pu",
+      "O",
+      "Tb"
+    ],
+    "answer": 3,
+    "explanation": "Terbium porte le symbole Tb.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E065B",
+    "knowledge_id": "V2-ELEM-065",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Tb correspond à quel élément ?",
+    "choices": [
+      "Hafnium",
+      "Plutonium",
+      "Oxygène",
+      "Terbium"
+    ],
+    "answer": 3,
+    "explanation": "Tb est le symbole de Terbium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E065C",
+    "knowledge_id": "V2-ELEM-065",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Terbium ?",
+    "choices": [
+      "72",
+      "94",
+      "8",
+      "65"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Terbium est 65.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E066A",
+    "knowledge_id": "V2-ELEM-066",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Dysprosium ?",
+    "choices": [
+      "Am",
+      "F",
+      "Dy",
+      "Ta"
+    ],
+    "answer": 2,
+    "explanation": "Dysprosium porte le symbole Dy.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E066B",
+    "knowledge_id": "V2-ELEM-066",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Dy correspond à quel élément ?",
+    "choices": [
+      "Américium",
+      "Fluor",
+      "Dysprosium",
+      "Tantale"
+    ],
+    "answer": 2,
+    "explanation": "Dy est le symbole de Dysprosium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E066C",
+    "knowledge_id": "V2-ELEM-066",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Dysprosium ?",
+    "choices": [
+      "95",
+      "9",
+      "66",
+      "73"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Dysprosium est 66.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E067A",
+    "knowledge_id": "V2-ELEM-067",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Holmium ?",
+    "choices": [
+      "Ne",
+      "Ho",
+      "W",
+      "Cm"
+    ],
+    "answer": 1,
+    "explanation": "Holmium porte le symbole Ho.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E067B",
+    "knowledge_id": "V2-ELEM-067",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ho correspond à quel élément ?",
+    "choices": [
+      "Néon",
+      "Holmium",
+      "Tungstène",
+      "Curium"
+    ],
+    "answer": 1,
+    "explanation": "Ho est le symbole de Holmium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E067C",
+    "knowledge_id": "V2-ELEM-067",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Holmium ?",
+    "choices": [
+      "10",
+      "67",
+      "74",
+      "96"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Holmium est 67.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E068A",
+    "knowledge_id": "V2-ELEM-068",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Erbium ?",
+    "choices": [
+      "Er",
+      "Re",
+      "Bk",
+      "Na"
+    ],
+    "answer": 0,
+    "explanation": "Erbium porte le symbole Er.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E068B",
+    "knowledge_id": "V2-ELEM-068",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Er correspond à quel élément ?",
+    "choices": [
+      "Erbium",
+      "Rhénium",
+      "Berkélium",
+      "Sodium"
+    ],
+    "answer": 0,
+    "explanation": "Er est le symbole de Erbium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E068C",
+    "knowledge_id": "V2-ELEM-068",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Erbium ?",
+    "choices": [
+      "68",
+      "75",
+      "97",
+      "11"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Erbium est 68.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E069A",
+    "knowledge_id": "V2-ELEM-069",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Thulium ?",
+    "choices": [
+      "Os",
+      "Cf",
+      "Mg",
+      "Tm"
+    ],
+    "answer": 3,
+    "explanation": "Thulium porte le symbole Tm.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E069B",
+    "knowledge_id": "V2-ELEM-069",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Tm correspond à quel élément ?",
+    "choices": [
+      "Osmium",
+      "Californium",
+      "Magnésium",
+      "Thulium"
+    ],
+    "answer": 3,
+    "explanation": "Tm est le symbole de Thulium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E069C",
+    "knowledge_id": "V2-ELEM-069",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Thulium ?",
+    "choices": [
+      "76",
+      "98",
+      "12",
+      "69"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Thulium est 69.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E070A",
+    "knowledge_id": "V2-ELEM-070",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Ytterbium ?",
+    "choices": [
+      "Es",
+      "Al",
+      "Yb",
+      "Ir"
+    ],
+    "answer": 2,
+    "explanation": "Ytterbium porte le symbole Yb.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E070B",
+    "knowledge_id": "V2-ELEM-070",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Yb correspond à quel élément ?",
+    "choices": [
+      "Einsteinium",
+      "Aluminium",
+      "Ytterbium",
+      "Iridium"
+    ],
+    "answer": 2,
+    "explanation": "Yb est le symbole de Ytterbium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E070C",
+    "knowledge_id": "V2-ELEM-070",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Ytterbium ?",
+    "choices": [
+      "99",
+      "13",
+      "70",
+      "77"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Ytterbium est 70.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E071A",
+    "knowledge_id": "V2-ELEM-071",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Lutécium ?",
+    "choices": [
+      "Si",
+      "Lu",
+      "Pt",
+      "Fm"
+    ],
+    "answer": 1,
+    "explanation": "Lutécium porte le symbole Lu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E071B",
+    "knowledge_id": "V2-ELEM-071",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Lu correspond à quel élément ?",
+    "choices": [
+      "Silicium",
+      "Lutécium",
+      "Platine",
+      "Fermium"
+    ],
+    "answer": 1,
+    "explanation": "Lu est le symbole de Lutécium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E071C",
+    "knowledge_id": "V2-ELEM-071",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Lutécium ?",
+    "choices": [
+      "14",
+      "71",
+      "78",
+      "100"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Lutécium est 71.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E072A",
+    "knowledge_id": "V2-ELEM-072",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Hafnium ?",
+    "choices": [
+      "Hf",
+      "Au",
+      "Md",
+      "P"
+    ],
+    "answer": 0,
+    "explanation": "Hafnium porte le symbole Hf.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E072B",
+    "knowledge_id": "V2-ELEM-072",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Hf correspond à quel élément ?",
+    "choices": [
+      "Hafnium",
+      "Or",
+      "Mendélévium",
+      "Phosphore"
+    ],
+    "answer": 0,
+    "explanation": "Hf est le symbole de Hafnium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E072C",
+    "knowledge_id": "V2-ELEM-072",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Hafnium ?",
+    "choices": [
+      "72",
+      "79",
+      "101",
+      "15"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Hafnium est 72.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E073A",
+    "knowledge_id": "V2-ELEM-073",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Tantale ?",
+    "choices": [
+      "Hg",
+      "No",
+      "S",
+      "Ta"
+    ],
+    "answer": 3,
+    "explanation": "Tantale porte le symbole Ta.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E073B",
+    "knowledge_id": "V2-ELEM-073",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ta correspond à quel élément ?",
+    "choices": [
+      "Mercure",
+      "Nobélium",
+      "Soufre",
+      "Tantale"
+    ],
+    "answer": 3,
+    "explanation": "Ta est le symbole de Tantale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E073C",
+    "knowledge_id": "V2-ELEM-073",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Tantale ?",
+    "choices": [
+      "80",
+      "102",
+      "16",
+      "73"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Tantale est 73.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E074A",
+    "knowledge_id": "V2-ELEM-074",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Tungstène ?",
+    "choices": [
+      "Lr",
+      "Cl",
+      "W",
+      "Tl"
+    ],
+    "answer": 2,
+    "explanation": "Tungstène porte le symbole W.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E074B",
+    "knowledge_id": "V2-ELEM-074",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole W correspond à quel élément ?",
+    "choices": [
+      "Lawrencium",
+      "Chlore",
+      "Tungstène",
+      "Thallium"
+    ],
+    "answer": 2,
+    "explanation": "W est le symbole de Tungstène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E074C",
+    "knowledge_id": "V2-ELEM-074",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Tungstène ?",
+    "choices": [
+      "103",
+      "17",
+      "74",
+      "81"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Tungstène est 74.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E075A",
+    "knowledge_id": "V2-ELEM-075",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Rhénium ?",
+    "choices": [
+      "Ar",
+      "Re",
+      "Pb",
+      "Rf"
+    ],
+    "answer": 1,
+    "explanation": "Rhénium porte le symbole Re.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E075B",
+    "knowledge_id": "V2-ELEM-075",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Re correspond à quel élément ?",
+    "choices": [
+      "Argon",
+      "Rhénium",
+      "Plomb",
+      "Rutherfordium"
+    ],
+    "answer": 1,
+    "explanation": "Re est le symbole de Rhénium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E075C",
+    "knowledge_id": "V2-ELEM-075",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Rhénium ?",
+    "choices": [
+      "18",
+      "75",
+      "82",
+      "104"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Rhénium est 75.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E076A",
+    "knowledge_id": "V2-ELEM-076",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Osmium ?",
+    "choices": [
+      "Os",
+      "Bi",
+      "Db",
+      "K"
+    ],
+    "answer": 0,
+    "explanation": "Osmium porte le symbole Os.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E076B",
+    "knowledge_id": "V2-ELEM-076",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Os correspond à quel élément ?",
+    "choices": [
+      "Osmium",
+      "Bismuth",
+      "Dubnium",
+      "Potassium"
+    ],
+    "answer": 0,
+    "explanation": "Os est le symbole de Osmium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E076C",
+    "knowledge_id": "V2-ELEM-076",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Osmium ?",
+    "choices": [
+      "76",
+      "83",
+      "105",
+      "19"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Osmium est 76.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E077A",
+    "knowledge_id": "V2-ELEM-077",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Iridium ?",
+    "choices": [
+      "Po",
+      "Sg",
+      "Ca",
+      "Ir"
+    ],
+    "answer": 3,
+    "explanation": "Iridium porte le symbole Ir.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E077B",
+    "knowledge_id": "V2-ELEM-077",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ir correspond à quel élément ?",
+    "choices": [
+      "Polonium",
+      "Seaborgium",
+      "Calcium",
+      "Iridium"
+    ],
+    "answer": 3,
+    "explanation": "Ir est le symbole de Iridium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E077C",
+    "knowledge_id": "V2-ELEM-077",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Iridium ?",
+    "choices": [
+      "84",
+      "106",
+      "20",
+      "77"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Iridium est 77.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E078A",
+    "knowledge_id": "V2-ELEM-078",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Platine ?",
+    "choices": [
+      "Bh",
+      "Sc",
+      "Pt",
+      "At"
+    ],
+    "answer": 2,
+    "explanation": "Platine porte le symbole Pt.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E078B",
+    "knowledge_id": "V2-ELEM-078",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Pt correspond à quel élément ?",
+    "choices": [
+      "Bohrium",
+      "Scandium",
+      "Platine",
+      "Astate"
+    ],
+    "answer": 2,
+    "explanation": "Pt est le symbole de Platine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E078C",
+    "knowledge_id": "V2-ELEM-078",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Platine ?",
+    "choices": [
+      "107",
+      "21",
+      "78",
+      "85"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Platine est 78.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E079A",
+    "knowledge_id": "V2-ELEM-079",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Or ?",
+    "choices": [
+      "Ti",
+      "Au",
+      "Rn",
+      "Hs"
+    ],
+    "answer": 1,
+    "explanation": "Or porte le symbole Au.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E079B",
+    "knowledge_id": "V2-ELEM-079",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Au correspond à quel élément ?",
+    "choices": [
+      "Titane",
+      "Or",
+      "Radon",
+      "Hassium"
+    ],
+    "answer": 1,
+    "explanation": "Au est le symbole de Or.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E079C",
+    "knowledge_id": "V2-ELEM-079",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Or ?",
+    "choices": [
+      "22",
+      "79",
+      "86",
+      "108"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Or est 79.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E080A",
+    "knowledge_id": "V2-ELEM-080",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Mercure ?",
+    "choices": [
+      "Hg",
+      "Fr",
+      "Mt",
+      "V"
+    ],
+    "answer": 0,
+    "explanation": "Mercure porte le symbole Hg.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E080B",
+    "knowledge_id": "V2-ELEM-080",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Hg correspond à quel élément ?",
+    "choices": [
+      "Mercure",
+      "Francium",
+      "Meitnérium",
+      "Vanadium"
+    ],
+    "answer": 0,
+    "explanation": "Hg est le symbole de Mercure.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E080C",
+    "knowledge_id": "V2-ELEM-080",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Mercure ?",
+    "choices": [
+      "80",
+      "87",
+      "109",
+      "23"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Mercure est 80.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E081A",
+    "knowledge_id": "V2-ELEM-081",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Thallium ?",
+    "choices": [
+      "Ra",
+      "Ds",
+      "Cr",
+      "Tl"
+    ],
+    "answer": 3,
+    "explanation": "Thallium porte le symbole Tl.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E081B",
+    "knowledge_id": "V2-ELEM-081",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Tl correspond à quel élément ?",
+    "choices": [
+      "Radium",
+      "Darmstadtium",
+      "Chrome",
+      "Thallium"
+    ],
+    "answer": 3,
+    "explanation": "Tl est le symbole de Thallium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E081C",
+    "knowledge_id": "V2-ELEM-081",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Thallium ?",
+    "choices": [
+      "88",
+      "110",
+      "24",
+      "81"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Thallium est 81.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E082A",
+    "knowledge_id": "V2-ELEM-082",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Plomb ?",
+    "choices": [
+      "Rg",
+      "Mn",
+      "Pb",
+      "Ac"
+    ],
+    "answer": 2,
+    "explanation": "Plomb porte le symbole Pb.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E082B",
+    "knowledge_id": "V2-ELEM-082",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Pb correspond à quel élément ?",
+    "choices": [
+      "Roentgenium",
+      "Manganèse",
+      "Plomb",
+      "Actinium"
+    ],
+    "answer": 2,
+    "explanation": "Pb est le symbole de Plomb.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E082C",
+    "knowledge_id": "V2-ELEM-082",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Plomb ?",
+    "choices": [
+      "111",
+      "25",
+      "82",
+      "89"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Plomb est 82.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E083A",
+    "knowledge_id": "V2-ELEM-083",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Bismuth ?",
+    "choices": [
+      "Fe",
+      "Bi",
+      "Th",
+      "Cn"
+    ],
+    "answer": 1,
+    "explanation": "Bismuth porte le symbole Bi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E083B",
+    "knowledge_id": "V2-ELEM-083",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Bi correspond à quel élément ?",
+    "choices": [
+      "Fer",
+      "Bismuth",
+      "Thorium",
+      "Copernicium"
+    ],
+    "answer": 1,
+    "explanation": "Bi est le symbole de Bismuth.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E083C",
+    "knowledge_id": "V2-ELEM-083",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Bismuth ?",
+    "choices": [
+      "26",
+      "83",
+      "90",
+      "112"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Bismuth est 83.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E084A",
+    "knowledge_id": "V2-ELEM-084",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Polonium ?",
+    "choices": [
+      "Po",
+      "Pa",
+      "Nh",
+      "Co"
+    ],
+    "answer": 0,
+    "explanation": "Polonium porte le symbole Po.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E084B",
+    "knowledge_id": "V2-ELEM-084",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Po correspond à quel élément ?",
+    "choices": [
+      "Polonium",
+      "Protactinium",
+      "Nihonium",
+      "Cobalt"
+    ],
+    "answer": 0,
+    "explanation": "Po est le symbole de Polonium.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E084C",
+    "knowledge_id": "V2-ELEM-084",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Polonium ?",
+    "choices": [
+      "84",
+      "91",
+      "113",
+      "27"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Polonium est 84.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E085A",
+    "knowledge_id": "V2-ELEM-085",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Astate ?",
+    "choices": [
+      "U",
+      "Fl",
+      "Ni",
+      "At"
+    ],
+    "answer": 3,
+    "explanation": "Astate porte le symbole At.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E085B",
+    "knowledge_id": "V2-ELEM-085",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole At correspond à quel élément ?",
+    "choices": [
+      "Uranium",
+      "Flérovium",
+      "Nickel",
+      "Astate"
+    ],
+    "answer": 3,
+    "explanation": "At est le symbole de Astate.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E085C",
+    "knowledge_id": "V2-ELEM-085",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Astate ?",
+    "choices": [
+      "92",
+      "114",
+      "28",
+      "85"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Astate est 85.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E086A",
+    "knowledge_id": "V2-ELEM-086",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Radon ?",
+    "choices": [
+      "Mc",
+      "Cu",
+      "Rn",
+      "Np"
+    ],
+    "answer": 2,
+    "explanation": "Radon porte le symbole Rn.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E086B",
+    "knowledge_id": "V2-ELEM-086",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Rn correspond à quel élément ?",
+    "choices": [
+      "Moscovium",
+      "Cuivre",
+      "Radon",
+      "Neptunium"
+    ],
+    "answer": 2,
+    "explanation": "Rn est le symbole de Radon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E086C",
+    "knowledge_id": "V2-ELEM-086",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Radon ?",
+    "choices": [
+      "115",
+      "29",
+      "86",
+      "93"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Radon est 86.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E087A",
+    "knowledge_id": "V2-ELEM-087",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Francium ?",
+    "choices": [
+      "Zn",
+      "Fr",
+      "Pu",
+      "Lv"
+    ],
+    "answer": 1,
+    "explanation": "Francium porte le symbole Fr.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E087B",
+    "knowledge_id": "V2-ELEM-087",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Fr correspond à quel élément ?",
+    "choices": [
+      "Zinc",
+      "Francium",
+      "Plutonium",
+      "Livermorium"
+    ],
+    "answer": 1,
+    "explanation": "Fr est le symbole de Francium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E087C",
+    "knowledge_id": "V2-ELEM-087",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Francium ?",
+    "choices": [
+      "30",
+      "87",
+      "94",
+      "116"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Francium est 87.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E088A",
+    "knowledge_id": "V2-ELEM-088",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Radium ?",
+    "choices": [
+      "Ra",
+      "Am",
+      "Ts",
+      "Ga"
+    ],
+    "answer": 0,
+    "explanation": "Radium porte le symbole Ra.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E088B",
+    "knowledge_id": "V2-ELEM-088",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ra correspond à quel élément ?",
+    "choices": [
+      "Radium",
+      "Américium",
+      "Tennesse",
+      "Gallium"
+    ],
+    "answer": 0,
+    "explanation": "Ra est le symbole de Radium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E088C",
+    "knowledge_id": "V2-ELEM-088",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Radium ?",
+    "choices": [
+      "88",
+      "95",
+      "117",
+      "31"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Radium est 88.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E089A",
+    "knowledge_id": "V2-ELEM-089",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Actinium ?",
+    "choices": [
+      "Cm",
+      "Og",
+      "Ge",
+      "Ac"
+    ],
+    "answer": 3,
+    "explanation": "Actinium porte le symbole Ac.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E089B",
+    "knowledge_id": "V2-ELEM-089",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ac correspond à quel élément ?",
+    "choices": [
+      "Curium",
+      "Oganesson",
+      "Germanium",
+      "Actinium"
+    ],
+    "answer": 3,
+    "explanation": "Ac est le symbole de Actinium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E089C",
+    "knowledge_id": "V2-ELEM-089",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Actinium ?",
+    "choices": [
+      "96",
+      "118",
+      "32",
+      "89"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Actinium est 89.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E090A",
+    "knowledge_id": "V2-ELEM-090",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Thorium ?",
+    "choices": [
+      "H",
+      "As",
+      "Th",
+      "Bk"
+    ],
+    "answer": 2,
+    "explanation": "Thorium porte le symbole Th.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E090B",
+    "knowledge_id": "V2-ELEM-090",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Th correspond à quel élément ?",
+    "choices": [
+      "Hydrogène",
+      "Arsenic",
+      "Thorium",
+      "Berkélium"
+    ],
+    "answer": 2,
+    "explanation": "Th est le symbole de Thorium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E090C",
+    "knowledge_id": "V2-ELEM-090",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Thorium ?",
+    "choices": [
+      "1",
+      "33",
+      "90",
+      "97"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Thorium est 90.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E091A",
+    "knowledge_id": "V2-ELEM-091",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Protactinium ?",
+    "choices": [
+      "Se",
+      "Pa",
+      "Cf",
+      "He"
+    ],
+    "answer": 1,
+    "explanation": "Protactinium porte le symbole Pa.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E091B",
+    "knowledge_id": "V2-ELEM-091",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Pa correspond à quel élément ?",
+    "choices": [
+      "Sélénium",
+      "Protactinium",
+      "Californium",
+      "Hélium"
+    ],
+    "answer": 1,
+    "explanation": "Pa est le symbole de Protactinium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E091C",
+    "knowledge_id": "V2-ELEM-091",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Protactinium ?",
+    "choices": [
+      "34",
+      "91",
+      "98",
+      "2"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Protactinium est 91.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E092A",
+    "knowledge_id": "V2-ELEM-092",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Uranium ?",
+    "choices": [
+      "U",
+      "Es",
+      "Li",
+      "Br"
+    ],
+    "answer": 0,
+    "explanation": "Uranium porte le symbole U.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E092B",
+    "knowledge_id": "V2-ELEM-092",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole U correspond à quel élément ?",
+    "choices": [
+      "Uranium",
+      "Einsteinium",
+      "Lithium",
+      "Brome"
+    ],
+    "answer": 0,
+    "explanation": "U est le symbole de Uranium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E092C",
+    "knowledge_id": "V2-ELEM-092",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Uranium ?",
+    "choices": [
+      "92",
+      "99",
+      "3",
+      "35"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Uranium est 92.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E093A",
+    "knowledge_id": "V2-ELEM-093",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Neptunium ?",
+    "choices": [
+      "Fm",
+      "Be",
+      "Kr",
+      "Np"
+    ],
+    "answer": 3,
+    "explanation": "Neptunium porte le symbole Np.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E093B",
+    "knowledge_id": "V2-ELEM-093",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Np correspond à quel élément ?",
+    "choices": [
+      "Fermium",
+      "Béryllium",
+      "Krypton",
+      "Neptunium"
+    ],
+    "answer": 3,
+    "explanation": "Np est le symbole de Neptunium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E093C",
+    "knowledge_id": "V2-ELEM-093",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Neptunium ?",
+    "choices": [
+      "100",
+      "4",
+      "36",
+      "93"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Neptunium est 93.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E094A",
+    "knowledge_id": "V2-ELEM-094",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Plutonium ?",
+    "choices": [
+      "B",
+      "Rb",
+      "Pu",
+      "Md"
+    ],
+    "answer": 2,
+    "explanation": "Plutonium porte le symbole Pu.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E094B",
+    "knowledge_id": "V2-ELEM-094",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Pu correspond à quel élément ?",
+    "choices": [
+      "Bore",
+      "Rubidium",
+      "Plutonium",
+      "Mendélévium"
+    ],
+    "answer": 2,
+    "explanation": "Pu est le symbole de Plutonium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E094C",
+    "knowledge_id": "V2-ELEM-094",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Plutonium ?",
+    "choices": [
+      "5",
+      "37",
+      "94",
+      "101"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Plutonium est 94.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E095A",
+    "knowledge_id": "V2-ELEM-095",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Américium ?",
+    "choices": [
+      "Sr",
+      "Am",
+      "No",
+      "C"
+    ],
+    "answer": 1,
+    "explanation": "Américium porte le symbole Am.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E095B",
+    "knowledge_id": "V2-ELEM-095",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Am correspond à quel élément ?",
+    "choices": [
+      "Strontium",
+      "Américium",
+      "Nobélium",
+      "Carbone"
+    ],
+    "answer": 1,
+    "explanation": "Am est le symbole de Américium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E095C",
+    "knowledge_id": "V2-ELEM-095",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Américium ?",
+    "choices": [
+      "38",
+      "95",
+      "102",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Américium est 95.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E096A",
+    "knowledge_id": "V2-ELEM-096",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Curium ?",
+    "choices": [
+      "Cm",
+      "Lr",
+      "N",
+      "Y"
+    ],
+    "answer": 0,
+    "explanation": "Curium porte le symbole Cm.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E096B",
+    "knowledge_id": "V2-ELEM-096",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Cm correspond à quel élément ?",
+    "choices": [
+      "Curium",
+      "Lawrencium",
+      "Azote",
+      "Yttrium"
+    ],
+    "answer": 0,
+    "explanation": "Cm est le symbole de Curium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E096C",
+    "knowledge_id": "V2-ELEM-096",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Curium ?",
+    "choices": [
+      "96",
+      "103",
+      "7",
+      "39"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Curium est 96.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E097A",
+    "knowledge_id": "V2-ELEM-097",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Berkélium ?",
+    "choices": [
+      "Rf",
+      "O",
+      "Zr",
+      "Bk"
+    ],
+    "answer": 3,
+    "explanation": "Berkélium porte le symbole Bk.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E097B",
+    "knowledge_id": "V2-ELEM-097",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Bk correspond à quel élément ?",
+    "choices": [
+      "Rutherfordium",
+      "Oxygène",
+      "Zirconium",
+      "Berkélium"
+    ],
+    "answer": 3,
+    "explanation": "Bk est le symbole de Berkélium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E097C",
+    "knowledge_id": "V2-ELEM-097",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Berkélium ?",
+    "choices": [
+      "104",
+      "8",
+      "40",
+      "97"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Berkélium est 97.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E098A",
+    "knowledge_id": "V2-ELEM-098",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Californium ?",
+    "choices": [
+      "F",
+      "Nb",
+      "Cf",
+      "Db"
+    ],
+    "answer": 2,
+    "explanation": "Californium porte le symbole Cf.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E098B",
+    "knowledge_id": "V2-ELEM-098",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Cf correspond à quel élément ?",
+    "choices": [
+      "Fluor",
+      "Niobium",
+      "Californium",
+      "Dubnium"
+    ],
+    "answer": 2,
+    "explanation": "Cf est le symbole de Californium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E098C",
+    "knowledge_id": "V2-ELEM-098",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Californium ?",
+    "choices": [
+      "9",
+      "41",
+      "98",
+      "105"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Californium est 98.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E099A",
+    "knowledge_id": "V2-ELEM-099",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Einsteinium ?",
+    "choices": [
+      "Mo",
+      "Es",
+      "Sg",
+      "Ne"
+    ],
+    "answer": 1,
+    "explanation": "Einsteinium porte le symbole Es.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E099B",
+    "knowledge_id": "V2-ELEM-099",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Es correspond à quel élément ?",
+    "choices": [
+      "Molybdène",
+      "Einsteinium",
+      "Seaborgium",
+      "Néon"
+    ],
+    "answer": 1,
+    "explanation": "Es est le symbole de Einsteinium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E099C",
+    "knowledge_id": "V2-ELEM-099",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Einsteinium ?",
+    "choices": [
+      "42",
+      "99",
+      "106",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Einsteinium est 99.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E100A",
+    "knowledge_id": "V2-ELEM-100",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Fermium ?",
+    "choices": [
+      "Fm",
+      "Bh",
+      "Na",
+      "Tc"
+    ],
+    "answer": 0,
+    "explanation": "Fermium porte le symbole Fm.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E100B",
+    "knowledge_id": "V2-ELEM-100",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Fm correspond à quel élément ?",
+    "choices": [
+      "Fermium",
+      "Bohrium",
+      "Sodium",
+      "Technétium"
+    ],
+    "answer": 0,
+    "explanation": "Fm est le symbole de Fermium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E100C",
+    "knowledge_id": "V2-ELEM-100",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Fermium ?",
+    "choices": [
+      "100",
+      "107",
+      "11",
+      "43"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Fermium est 100.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E101A",
+    "knowledge_id": "V2-ELEM-101",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Mendélévium ?",
+    "choices": [
+      "Hs",
+      "Mg",
+      "Ru",
+      "Md"
+    ],
+    "answer": 3,
+    "explanation": "Mendélévium porte le symbole Md.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E101B",
+    "knowledge_id": "V2-ELEM-101",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Md correspond à quel élément ?",
+    "choices": [
+      "Hassium",
+      "Magnésium",
+      "Ruthénium",
+      "Mendélévium"
+    ],
+    "answer": 3,
+    "explanation": "Md est le symbole de Mendélévium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E101C",
+    "knowledge_id": "V2-ELEM-101",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Mendélévium ?",
+    "choices": [
+      "108",
+      "12",
+      "44",
+      "101"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Mendélévium est 101.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E102A",
+    "knowledge_id": "V2-ELEM-102",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Nobélium ?",
+    "choices": [
+      "Al",
+      "Rh",
+      "No",
+      "Mt"
+    ],
+    "answer": 2,
+    "explanation": "Nobélium porte le symbole No.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E102B",
+    "knowledge_id": "V2-ELEM-102",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole No correspond à quel élément ?",
+    "choices": [
+      "Aluminium",
+      "Rhodium",
+      "Nobélium",
+      "Meitnérium"
+    ],
+    "answer": 2,
+    "explanation": "No est le symbole de Nobélium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E102C",
+    "knowledge_id": "V2-ELEM-102",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Nobélium ?",
+    "choices": [
+      "13",
+      "45",
+      "102",
+      "109"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Nobélium est 102.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E103A",
+    "knowledge_id": "V2-ELEM-103",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Lawrencium ?",
+    "choices": [
+      "Pd",
+      "Lr",
+      "Ds",
+      "Si"
+    ],
+    "answer": 1,
+    "explanation": "Lawrencium porte le symbole Lr.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E103B",
+    "knowledge_id": "V2-ELEM-103",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Lr correspond à quel élément ?",
+    "choices": [
+      "Palladium",
+      "Lawrencium",
+      "Darmstadtium",
+      "Silicium"
+    ],
+    "answer": 1,
+    "explanation": "Lr est le symbole de Lawrencium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E103C",
+    "knowledge_id": "V2-ELEM-103",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Lawrencium ?",
+    "choices": [
+      "46",
+      "103",
+      "110",
+      "14"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Lawrencium est 103.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E104A",
+    "knowledge_id": "V2-ELEM-104",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Rutherfordium ?",
+    "choices": [
+      "Rf",
+      "Rg",
+      "P",
+      "Ag"
+    ],
+    "answer": 0,
+    "explanation": "Rutherfordium porte le symbole Rf.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E104B",
+    "knowledge_id": "V2-ELEM-104",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Rf correspond à quel élément ?",
+    "choices": [
+      "Rutherfordium",
+      "Roentgenium",
+      "Phosphore",
+      "Argent"
+    ],
+    "answer": 0,
+    "explanation": "Rf est le symbole de Rutherfordium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E104C",
+    "knowledge_id": "V2-ELEM-104",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Rutherfordium ?",
+    "choices": [
+      "104",
+      "111",
+      "15",
+      "47"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Rutherfordium est 104.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E105A",
+    "knowledge_id": "V2-ELEM-105",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Dubnium ?",
+    "choices": [
+      "Cn",
+      "S",
+      "Cd",
+      "Db"
+    ],
+    "answer": 3,
+    "explanation": "Dubnium porte le symbole Db.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E105B",
+    "knowledge_id": "V2-ELEM-105",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Db correspond à quel élément ?",
+    "choices": [
+      "Copernicium",
+      "Soufre",
+      "Cadmium",
+      "Dubnium"
+    ],
+    "answer": 3,
+    "explanation": "Db est le symbole de Dubnium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E105C",
+    "knowledge_id": "V2-ELEM-105",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Dubnium ?",
+    "choices": [
+      "112",
+      "16",
+      "48",
+      "105"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Dubnium est 105.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E106A",
+    "knowledge_id": "V2-ELEM-106",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Seaborgium ?",
+    "choices": [
+      "Cl",
+      "In",
+      "Sg",
+      "Nh"
+    ],
+    "answer": 2,
+    "explanation": "Seaborgium porte le symbole Sg.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E106B",
+    "knowledge_id": "V2-ELEM-106",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Sg correspond à quel élément ?",
+    "choices": [
+      "Chlore",
+      "Indium",
+      "Seaborgium",
+      "Nihonium"
+    ],
+    "answer": 2,
+    "explanation": "Sg est le symbole de Seaborgium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E106C",
+    "knowledge_id": "V2-ELEM-106",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Seaborgium ?",
+    "choices": [
+      "17",
+      "49",
+      "106",
+      "113"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Seaborgium est 106.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E107A",
+    "knowledge_id": "V2-ELEM-107",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Bohrium ?",
+    "choices": [
+      "Sn",
+      "Bh",
+      "Fl",
+      "Ar"
+    ],
+    "answer": 1,
+    "explanation": "Bohrium porte le symbole Bh.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E107B",
+    "knowledge_id": "V2-ELEM-107",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Bh correspond à quel élément ?",
+    "choices": [
+      "Étain",
+      "Bohrium",
+      "Flérovium",
+      "Argon"
+    ],
+    "answer": 1,
+    "explanation": "Bh est le symbole de Bohrium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E107C",
+    "knowledge_id": "V2-ELEM-107",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Bohrium ?",
+    "choices": [
+      "50",
+      "107",
+      "114",
+      "18"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Bohrium est 107.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E108A",
+    "knowledge_id": "V2-ELEM-108",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Hassium ?",
+    "choices": [
+      "Hs",
+      "Mc",
+      "K",
+      "Sb"
+    ],
+    "answer": 0,
+    "explanation": "Hassium porte le symbole Hs.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E108B",
+    "knowledge_id": "V2-ELEM-108",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Hs correspond à quel élément ?",
+    "choices": [
+      "Hassium",
+      "Moscovium",
+      "Potassium",
+      "Antimoine"
+    ],
+    "answer": 0,
+    "explanation": "Hs est le symbole de Hassium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E108C",
+    "knowledge_id": "V2-ELEM-108",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Hassium ?",
+    "choices": [
+      "108",
+      "115",
+      "19",
+      "51"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Hassium est 108.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E109A",
+    "knowledge_id": "V2-ELEM-109",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Meitnérium ?",
+    "choices": [
+      "Lv",
+      "Ca",
+      "Te",
+      "Mt"
+    ],
+    "answer": 3,
+    "explanation": "Meitnérium porte le symbole Mt.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E109B",
+    "knowledge_id": "V2-ELEM-109",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Mt correspond à quel élément ?",
+    "choices": [
+      "Livermorium",
+      "Calcium",
+      "Tellure",
+      "Meitnérium"
+    ],
+    "answer": 3,
+    "explanation": "Mt est le symbole de Meitnérium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E109C",
+    "knowledge_id": "V2-ELEM-109",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Meitnérium ?",
+    "choices": [
+      "116",
+      "20",
+      "52",
+      "109"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Meitnérium est 109.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E110A",
+    "knowledge_id": "V2-ELEM-110",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Darmstadtium ?",
+    "choices": [
+      "Sc",
+      "I",
+      "Ds",
+      "Ts"
+    ],
+    "answer": 2,
+    "explanation": "Darmstadtium porte le symbole Ds.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E110B",
+    "knowledge_id": "V2-ELEM-110",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ds correspond à quel élément ?",
+    "choices": [
+      "Scandium",
+      "Iode",
+      "Darmstadtium",
+      "Tennesse"
+    ],
+    "answer": 2,
+    "explanation": "Ds est le symbole de Darmstadtium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E110C",
+    "knowledge_id": "V2-ELEM-110",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Darmstadtium ?",
+    "choices": [
+      "21",
+      "53",
+      "110",
+      "117"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Darmstadtium est 110.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E111A",
+    "knowledge_id": "V2-ELEM-111",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Roentgenium ?",
+    "choices": [
+      "Xe",
+      "Rg",
+      "Og",
+      "Ti"
+    ],
+    "answer": 1,
+    "explanation": "Roentgenium porte le symbole Rg.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E111B",
+    "knowledge_id": "V2-ELEM-111",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Rg correspond à quel élément ?",
+    "choices": [
+      "Xénon",
+      "Roentgenium",
+      "Oganesson",
+      "Titane"
+    ],
+    "answer": 1,
+    "explanation": "Rg est le symbole de Roentgenium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E111C",
+    "knowledge_id": "V2-ELEM-111",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Roentgenium ?",
+    "choices": [
+      "54",
+      "111",
+      "118",
+      "22"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Roentgenium est 111.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E112A",
+    "knowledge_id": "V2-ELEM-112",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Copernicium ?",
+    "choices": [
+      "Cn",
+      "H",
+      "V",
+      "Cs"
+    ],
+    "answer": 0,
+    "explanation": "Copernicium porte le symbole Cn.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E112B",
+    "knowledge_id": "V2-ELEM-112",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Cn correspond à quel élément ?",
+    "choices": [
+      "Copernicium",
+      "Hydrogène",
+      "Vanadium",
+      "Césium"
+    ],
+    "answer": 0,
+    "explanation": "Cn est le symbole de Copernicium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E112C",
+    "knowledge_id": "V2-ELEM-112",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Copernicium ?",
+    "choices": [
+      "112",
+      "1",
+      "23",
+      "55"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Copernicium est 112.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E113A",
+    "knowledge_id": "V2-ELEM-113",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Nihonium ?",
+    "choices": [
+      "He",
+      "Cr",
+      "Ba",
+      "Nh"
+    ],
+    "answer": 3,
+    "explanation": "Nihonium porte le symbole Nh.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E113B",
+    "knowledge_id": "V2-ELEM-113",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Nh correspond à quel élément ?",
+    "choices": [
+      "Hélium",
+      "Chrome",
+      "Baryum",
+      "Nihonium"
+    ],
+    "answer": 3,
+    "explanation": "Nh est le symbole de Nihonium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E113C",
+    "knowledge_id": "V2-ELEM-113",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Nihonium ?",
+    "choices": [
+      "2",
+      "24",
+      "56",
+      "113"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Nihonium est 113.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E114A",
+    "knowledge_id": "V2-ELEM-114",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Flérovium ?",
+    "choices": [
+      "Mn",
+      "La",
+      "Fl",
+      "Li"
+    ],
+    "answer": 2,
+    "explanation": "Flérovium porte le symbole Fl.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E114B",
+    "knowledge_id": "V2-ELEM-114",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Fl correspond à quel élément ?",
+    "choices": [
+      "Manganèse",
+      "Lanthane",
+      "Flérovium",
+      "Lithium"
+    ],
+    "answer": 2,
+    "explanation": "Fl est le symbole de Flérovium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E114C",
+    "knowledge_id": "V2-ELEM-114",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Flérovium ?",
+    "choices": [
+      "25",
+      "57",
+      "114",
+      "3"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Flérovium est 114.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E115A",
+    "knowledge_id": "V2-ELEM-115",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Moscovium ?",
+    "choices": [
+      "Ce",
+      "Mc",
+      "Be",
+      "Fe"
+    ],
+    "answer": 1,
+    "explanation": "Moscovium porte le symbole Mc.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E115B",
+    "knowledge_id": "V2-ELEM-115",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Mc correspond à quel élément ?",
+    "choices": [
+      "Cérium",
+      "Moscovium",
+      "Béryllium",
+      "Fer"
+    ],
+    "answer": 1,
+    "explanation": "Mc est le symbole de Moscovium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E115C",
+    "knowledge_id": "V2-ELEM-115",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Moscovium ?",
+    "choices": [
+      "58",
+      "115",
+      "4",
+      "26"
+    ],
+    "answer": 1,
+    "explanation": "Le numéro atomique de Moscovium est 115.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E116A",
+    "knowledge_id": "V2-ELEM-116",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Livermorium ?",
+    "choices": [
+      "Lv",
+      "B",
+      "Co",
+      "Pr"
+    ],
+    "answer": 0,
+    "explanation": "Livermorium porte le symbole Lv.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E116B",
+    "knowledge_id": "V2-ELEM-116",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Lv correspond à quel élément ?",
+    "choices": [
+      "Livermorium",
+      "Bore",
+      "Cobalt",
+      "Praséodyme"
+    ],
+    "answer": 0,
+    "explanation": "Lv est le symbole de Livermorium.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E116C",
+    "knowledge_id": "V2-ELEM-116",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Livermorium ?",
+    "choices": [
+      "116",
+      "5",
+      "27",
+      "59"
+    ],
+    "answer": 0,
+    "explanation": "Le numéro atomique de Livermorium est 116.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E117A",
+    "knowledge_id": "V2-ELEM-117",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Tennesse ?",
+    "choices": [
+      "C",
+      "Ni",
+      "Nd",
+      "Ts"
+    ],
+    "answer": 3,
+    "explanation": "Tennesse porte le symbole Ts.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E117B",
+    "knowledge_id": "V2-ELEM-117",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Ts correspond à quel élément ?",
+    "choices": [
+      "Carbone",
+      "Nickel",
+      "Néodyme",
+      "Tennesse"
+    ],
+    "answer": 3,
+    "explanation": "Ts est le symbole de Tennesse.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E117C",
+    "knowledge_id": "V2-ELEM-117",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Tennesse ?",
+    "choices": [
+      "6",
+      "28",
+      "60",
+      "117"
+    ],
+    "answer": 3,
+    "explanation": "Le numéro atomique de Tennesse est 117.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E118A",
+    "knowledge_id": "V2-ELEM-118",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, quel symbole désigne Oganesson ?",
+    "choices": [
+      "Cu",
+      "Pm",
+      "Og",
+      "N"
+    ],
+    "answer": 2,
+    "explanation": "Oganesson porte le symbole Og.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E118B",
+    "knowledge_id": "V2-ELEM-118",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Dans le tableau périodique, le symbole Og correspond à quel élément ?",
+    "choices": [
+      "Cuivre",
+      "Prométhium",
+      "Oganesson",
+      "Azote"
+    ],
+    "answer": 2,
+    "explanation": "Og est le symbole de Oganesson.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  },
+  {
+    "id": "V2E118C",
+    "knowledge_id": "V2-ELEM-118",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Tableau périodique",
+    "prompt": "Quel est le numéro atomique de Oganesson ?",
+    "choices": [
+      "29",
+      "61",
+      "118",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "Le numéro atomique de Oganesson est 118.",
+    "difficulty": 4,
+    "stability": "STABLE",
+    "source": "IUPAC — tableau périodique des éléments"
+  }
+]
