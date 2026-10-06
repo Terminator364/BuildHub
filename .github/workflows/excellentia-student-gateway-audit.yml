@@ -59,7 +59,7 @@ jobs:
           NODE
       - name: PWA contract
         run: |
-          grep -q '40 s' excellentia-student/index.html
+          grep -q '"timer_seconds": 40' excellentia-student/data/gateway-manifest.json
           grep -q "remaining_ms:40000" excellentia-student/app.js
           grep -q "mode==='exam'" excellentia-student/app.js
           grep -q "localStorage" excellentia-student/app.js
