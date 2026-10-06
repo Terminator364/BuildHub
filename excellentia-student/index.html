@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <title>Excellentia Study Hub</title>
 <link rel="manifest" href="./manifest.webmanifest">
-<link rel="stylesheet" href="./style.css?v=302">
+<link rel="stylesheet" href="./style.css?v=303">
 </head>
 <body>
 <div class="app-shell" id="appShell">
@@ -103,11 +103,11 @@ if('serviceWorker' in navigator){
   navigator.serviceWorker.addEventListener('controllerchange',()=>{
     if(reloading)return;
     reloading=true;
-    const k='exc_gateway_sw302_reloaded';
+    const k='exc_gateway_sw303_reloaded';
     if(!sessionStorage.getItem(k)){sessionStorage.setItem(k,'1');location.reload();}
   });
 }
 </script>
-<script src="./app.js?v=302"></script>
+<script src="./app.js?v=303"></script>
 </body>
 </html>
