@@ -68,7 +68,7 @@ jobs:
           test -f excellentia-student/index.html
           test -f excellentia-student/sw.js
           test -f excellentia-student/manifest.webmanifest
-          grep -q "excellentia-student-v302" excellentia-student/sw.js
+          grep -q "excellentia-student-v303" excellentia-student/sw.js
 
   browser-preview-smoke:
     if: github.event_name != 'pull_request'
