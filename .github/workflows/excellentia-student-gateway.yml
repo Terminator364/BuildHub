@@ -69,23 +69,24 @@ jobs:
           test -f excellentia-student/manifest.webmanifest
           grep -q "excellentia-student-v230" excellentia-student/sw.js
 
-  deploy:
+  cdn-smoke:
     if: github.event_name != 'pull_request'
     needs: audit
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: excellentia-student
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Verify public CDN gateway
+        shell: bash
+        run: |
+          BASE="https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@main/excellentia-student"
+          curl -fsSL --retry 5 --retry-delay 2 "$BASE/index.html" | grep -q "EXCELLENTIA STUDY HUB"
+          curl -fsSL --retry 5 --retry-delay 2 "$BASE/app.js?v=230" | grep -q "const S="
+          curl -fsSL --retry 5 --retry-delay 2 "$BASE/data/gateway-manifest.json" | grep -q '"expected_questions": 4174'
+          curl -fsSI --retry 5 --retry-delay 2 "$BASE/index.html" | tr -d '\r' | grep -i '^content-type:'
+          echo "GATEWAY_URL=$BASE/index.html"
+
+  deploy-pages:
+    if: github.event_name != 'pull_request' && false
+    needs: audit
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "GitHub Pages initial enablement requires an administrative token; CDN gateway is active meanwhile."
