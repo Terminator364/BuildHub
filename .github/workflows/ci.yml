@@ -32,6 +32,20 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Excellentia public browser proof
+        if: matrix.os == 'ubuntu-latest'
+        shell: bash
+        run: |
+          URL="https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia-student/index.html"
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$CHROME"
+          "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=45000 --dump-dom "$URL" > /tmp/excellentia-dom.html
+          grep -q "EXCELLENTIA STUDY HUB" /tmp/excellentia-dom.html
+          grep -q "Culture générale" /tmp/excellentia-dom.html
+          grep -Eq "4[ . ]?174|4174" /tmp/excellentia-dom.html
+          grep -Eq "2[ . ]?667|2667" /tmp/excellentia-dom.html
+          echo "EXCELLENTIA_PUBLIC_BROWSER_OK=$URL"
+
       - name: Public repository boundary audit
         run: python tools/public_audit.py .
 
