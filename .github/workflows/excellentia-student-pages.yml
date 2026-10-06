@@ -1,13 +1,48 @@
-name: Excellentia Student Pages (optional)
+name: Excellentia Student Pages
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-pages.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: excellentia-student-pages
+  cancel-in-progress: true
 
 jobs:
-  note:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
-      - run: echo "Production uses the tested html-preview HTTPS entry. GitHub Pages is optional."
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.14.0
+      - name: Release gate
+        run: |
+          node --check excellentia-student/app.js
+          node --check excellentia-student/gateway-adapter.js
+          node --check excellentia-student/sw.js
+          node excellentia-student/audit.mjs
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: excellentia-student
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
