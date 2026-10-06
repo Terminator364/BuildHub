@@ -307,5 +307,10 @@ if(P.theme==='dark')document.body.classList.add('dark');
 qs('#collapseRail').onclick=()=>document.body.classList.toggle('rail-collapsed');
 qs('#railScrollUp').onclick=()=>qs('#railScroll').scrollBy({top:-180,behavior:'smooth'});
 qs('#railScrollDown').onclick=()=>qs('#railScroll').scrollBy({top:180,behavior:'smooth'});
-if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js?v=302',{updateViaCache:'none'}).then(async reg=>{
+    try{await reg.update()}catch{}
+    if(reg.waiting)reg.waiting.postMessage({type:'SKIP_WAITING'});
+  }).catch(()=>{});
+}
 networkUI();load().catch(e=>{qs('#viewHost').innerHTML='<div class="empty-state"><div class="empty-inner"><div class="empty-icon">!</div><h3>Chargement impossible</h3><p>'+esc(e.message)+'</p><div class="actions"><button class="btn" onclick="location.reload()">Réessayer</button></div></div></div>'});
