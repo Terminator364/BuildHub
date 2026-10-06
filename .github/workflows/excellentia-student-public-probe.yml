@@ -1,0 +1,47 @@
+name: Excellentia Student Public Probe
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'excellentia/**'
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-public-probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Local pointer contract
+        run: |
+          node -e "const j=require('./excellentia/latest.json'); if(j.version!=='2.3.0'||j.questions!==4174||j.knowledge_units!==2667||j.timer_seconds!==40) process.exit(2); console.log(j)"
+      - name: Probe raw latest pointer
+        run: |
+          for i in 1 2 3 4 5; do
+            curl -fsSL --connect-timeout 10 --max-time 30 "https://raw.githubusercontent.com/Terminator364/BuildHub/main/excellentia/latest.json?t=$(date +%s)" -o /tmp/latest.json && break
+            sleep 3
+          done
+          node -e "const j=require('/tmp/latest.json'); if(!j.url.startsWith('https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@')) process.exit(3); console.log(j.url)"
+      - name: Probe immutable student gateway
+        run: |
+          URL="$(node -p "require('/tmp/latest.json').url")"
+          curl -fsSL --retry 4 --retry-delay 2 --connect-timeout 10 --max-time 45 "$URL" -o /tmp/index.html
+          grep -q "Excellentia Study Hub — Élève" /tmp/index.html
+          BASE="${URL%index.html}"
+          curl -fsSL --retry 4 --retry-delay 2 "${BASE}data/gateway-manifest.json" -o /tmp/gateway.json
+          node -e "const j=require('/tmp/gateway.json'); if(j.expected_questions!==4174||j.expected_knowledge_units!==2667||j.timer_seconds!==40||j.question_files.length!==45) process.exit(4); console.log(j)"
+          curl -fsSL --retry 4 --retry-delay 2 "${BASE}app.js?v=230" -o /tmp/app.js
+          node --check /tmp/app.js
+      - name: Probe permanent QR entry
+        run: |
+          ENTRY="https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@main/excellentia/index.html"
+          curl -fsSL --retry 6 --retry-delay 3 --connect-timeout 10 --max-time 45 "$ENTRY" -o /tmp/entry.html
+          grep -q "Excellentia — Entrée Élève" /tmp/entry.html
+          grep -q "raw.githubusercontent.com/Terminator364/BuildHub/main/excellentia/latest.json" /tmp/entry.html
+          echo "PUBLIC_ENTRY_OK=$ENTRY"
