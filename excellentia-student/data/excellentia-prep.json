@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "updated_at": "2026-09-30",
+  "product": "Excellentia Study Hub",
+  "reference": {
+    "official_site": "https://excellentia.cd/",
+    "selection_article": "https://excellentia.cd/2025/10/24/deux-journees-cles-pour-lexcellence-entre-information-preparation-et-selection-le-parcours-des-candidats-dexcellentia-rdc/",
+    "application_page": "https://excellentia.cd/postuler-a-excellentia-rdc/",
+    "note": "Les quatre matières sont reprises de la communication officielle Excellentia. Les axes de compétences ci-dessous sont une structuration pédagogique interne, pas un barème officiel."
+  },
+  "subjects": [
+    {
+      "id": "culture",
+      "title": "Culture générale",
+      "icon": "◎",
+      "status": "ENGINE_READY",
+      "coverage_mode": "measured",
+      "description": "RDC, Afrique, monde, organisations, sciences, histoire, culture et actualité vérifiée.",
+      "skills": [
+        "RDC — histoire et institutions",
+        "RDC — géographie et patrimoine",
+        "Afrique — pays, capitales et repères",
+        "Organisations internationales",
+        "Monde et économie",
+        "Sciences et environnement",
+        "Histoire, littérature et arts",
+        "Actualité vérifiée"
+      ]
+    },
+    {
+      "id": "math",
+      "title": "Mathématiques",
+      "icon": "∑",
+      "status": "FRAMEWORK_READY",
+      "coverage_mode": "unmeasured",
+      "description": "Socle de calcul, algèbre et raisonnement quantitatif à instrumenter sans inventer de faux corpus.",
+      "skills": [
+        "Calcul numérique",
+        "Fractions et proportions",
+        "Pourcentages",
+        "Équations et inéquations",
+        "Algèbre élémentaire",
+        "Géométrie",
+        "Problèmes appliqués",
+        "Lecture de données",
+        "Suites et raisonnement quantitatif"
+      ]
+    },
+    {
+      "id": "french",
+      "title": "Français",
+      "icon": "Aa",
+      "status": "FRAMEWORK_READY",
+      "coverage_mode": "unmeasured",
+      "description": "Maîtrise grammaticale, compréhension et expression écrite.",
+      "skills": [
+        "Grammaire",
+        "Conjugaison",
+        "Accords",
+        "Orthographe",
+        "Vocabulaire",
+        "Synonymes et antonymes",
+        "Compréhension de texte",
+        "Reformulation",
+        "Expression écrite et argumentation"
+      ]
+    },
+    {
+      "id": "english",
+      "title": "Anglais",
+      "icon": "EN",
+      "status": "FRAMEWORK_READY",
+      "coverage_mode": "unmeasured",
+      "description": "Grammaire, vocabulaire, compréhension et expression fonctionnelle.",
+      "skills": [
+        "Tenses",
+        "Sentence transformations",
+        "Negation and questions",
+        "Vocabulary",
+        "Synonyms and antonyms",
+        "Reading comprehension",
+        "Translation FR→EN",
+        "Translation EN→FR",
+        "Functional English"
+      ]
+    }
+  ],
+  "transversal": {
+    "id": "reasoning",
+    "title": "Raisonnement analytique",
+    "status": "FRAMEWORK_READY",
+    "description": "Aptitude transversale : logique, analogies, suites, élimination et gestion du temps.",
+    "skills": [
+      "Suites numériques",
+      "Suites logiques",
+      "Analogies",
+      "Intrus et classifications",
+      "Raisonnement verbal",
+      "Estimation",
+      "Élimination stratégique",
+      "Gestion du temps"
+    ]
+  }
+}

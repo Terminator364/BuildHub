@@ -1,10 +1,49 @@
 {
+  "id": "/",
   "name": "Excellentia Study Hub — Élève",
   "short_name": "Excellentia",
+  "description": "Cockpit de préparation Excellentia : apprentissage guidé, entraînement adaptatif, révisions, examens et progression.",
+  "lang": "fr",
+  "dir": "ltr",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f2f4f7",
-  "theme_color": "#101828",
-  "description": "Culture générale — V2.3.0, annales EXETAT, 40 secondes par question, progression locale."
-}
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "orientation": "any",
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "/excellentia-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/excellentia-icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Mission du jour",
+      "short_name": "Mission",
+      "url": "/?space=home&tab=mission"
+    },
+    {
+      "name": "Apprendre",
+      "short_name": "Apprendre",
+      "url": "/?space=learn&tab=path"
+    },
+    {
+      "name": "S'entraîner",
+      "short_name": "Entraîner",
+      "url": "/?space=train&tab=adaptive"
+    }
+  ]
+}\n

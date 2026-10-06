@@ -1,0 +1,457 @@
+{
+  "schema": 1,
+  "updated_at": "2026-10-06",
+  "policy": {
+    "newest_first": true,
+    "ingest_order": [
+      2026,
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019,
+      2018,
+      2017,
+      2016,
+      2015,
+      2014,
+      2013,
+      2012,
+      2011,
+      2010,
+      2009,
+      2008,
+      2007,
+      2006,
+      2005
+    ],
+    "confidence_levels": [
+      "HIGH",
+      "MEDIUM",
+      "LOW",
+      "REJECT"
+    ],
+    "rules": [
+      "Ne jamais activer un document uniquement parce que son titre contient EXETAT.",
+      "Conserver année, matière, numéro d'item si connu, URL, type de source et niveau de confiance.",
+      "Les recueils secondaires servent à retrouver les notions mais la correction doit être contre-vérifiée.",
+      "Les formulations internes peuvent être réécrites; l'unité de connaissance et la provenance restent traçables."
+    ]
+  },
+  "sources": [
+    {
+      "year": 2025,
+      "id": "yekola-2025",
+      "kind": "CURATED_YEAR_INDEX",
+      "status": "DISCOVERED",
+      "confidence": "MEDIUM",
+      "url": "https://yekolaexetat.com/items/2025",
+      "note": "Index par matière/section; utile pour repérage, pas traité comme papier officiel brut."
+    },
+    {
+      "year": 2025,
+      "id": "e32-mini-2025",
+      "kind": "PROGRAM_E32_MINI",
+      "status": "VERIFIED_STRUCTURE",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/891262404/E-32-1",
+      "note": "Structure 20 items: 2 civisme, 6 géographie, 6 histoire, 6 philosophie."
+    },
+    {
+      "year": 2025,
+      "id": "scribd-100-items-2025",
+      "kind": "USER_UPLOAD",
+      "status": "REJECTED",
+      "confidence": "REJECT",
+      "url": "https://fr.scribd.com/document/895182190/100-Items-Culture-Generale-EXETAT-2025-COMPLET",
+      "note": "Contient des placeholders 'Question exemple / Réponse'; ne doit pas alimenter le corpus."
+    },
+    {
+      "year": 2024,
+      "id": "actualite-first-day-2024",
+      "kind": "REPORTED_ACTUAL_ITEMS",
+      "status": "USABLE_WITH_CAUTION",
+      "confidence": "MEDIUM",
+      "url": "https://actualite.cd/2024/06/24/exetat-2024-ce-que-les-finalistes-retiennent-du-premier-jour-consacre-la-culture",
+      "note": "Questions rappelées par des candidats à la sortie de l'épreuve."
+    },
+    {
+      "year": 2024,
+      "id": "yekola-2024",
+      "kind": "CURATED_YEAR_INDEX",
+      "status": "DISCOVERED",
+      "confidence": "MEDIUM",
+      "url": "https://yekolaexetat.com/items/2024"
+    },
+    {
+      "year": 2024,
+      "id": "e32-program-2024",
+      "kind": "PROGRAM_E32",
+      "status": "VERIFIED_STRUCTURE",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/716574220/E-32-2024",
+      "note": "Structure 2/6/6/6 confirmée dans le document."
+    },
+    {
+      "year": 2023,
+      "id": "hkmstd-2005-2023",
+      "kind": "CURATED_ARCHIVE",
+      "status": "DISCOVERED",
+      "confidence": "MEDIUM",
+      "url": "https://cd.hkmstd.com/resource/da46cc2c-e0a0-428a-b6d8-77b962070567-s-exercer-par-les-items-examen-d-etat-2005-a-2023-pedagogie",
+      "note": "Recueil couvrant 2005–2023; séparer Culture générale des branches d'option."
+    },
+    {
+      "year": 2023,
+      "id": "recueil-cg-2023",
+      "kind": "CURATED_ARCHIVE",
+      "status": "USABLE_WITH_CAUTION",
+      "confidence": "LOW",
+      "url": "https://fr.scribd.com/document/853389182/RECUEIL-D-ITEMS-DE-CULTURE-GENERALE-19-06-2023",
+      "note": "Agrège plusieurs années; année réelle de chaque item à conserver."
+    },
+    {
+      "year": 2022,
+      "id": "educ-patsh-cg-2022",
+      "kind": "DETAILED_ARCHIVE",
+      "status": "USABLE_WITH_CAUTION",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/859010307/Culture-generale-2022-items-exetat-de-Geographie-Histoire-Phi",
+      "note": "Quatre séries détaillées; vérifier chaque correction avant activation."
+    },
+    {
+      "year": 2019,
+      "id": "educ-patsh-history-index",
+      "kind": "CURATED_ARCHIVE",
+      "status": "DISCOVERED",
+      "confidence": "LOW",
+      "url": "https://e.patshtecno.com/questions-dhistoire/amp/",
+      "note": "Index vers plusieurs séries Culture générale 2019."
+    },
+    {
+      "year": 2026,
+      "id": "yekola-2026",
+      "kind": "CURATED_YEAR_INDEX",
+      "status": "DISCOVERED",
+      "confidence": "MEDIUM",
+      "url": "https://yekolaexetat.com/items/2026",
+      "note": "Index 2026 par matière et section; utile pour repérage et triangulation."
+    },
+    {
+      "year": 2026,
+      "id": "diplome-culture-bank",
+      "kind": "ITEM_ARCHIVE",
+      "status": "DISCOVERED",
+      "confidence": "MEDIUM",
+      "url": "https://diplome.cd/exetats",
+      "note": "Archive de séries Culture générale avec options multiples; chaque série doit être datée/identifiée avant activation."
+    },
+    {
+      "year": 2026,
+      "id": "manuels-scolaires-culture",
+      "kind": "PREP_SYNTHESIS",
+      "status": "DISCOVERED",
+      "confidence": "LOW",
+      "url": "https://manuels-scolaires-rdc.com/exetat-items-culture-generale/",
+      "note": "Synthèse de préparation 2026; utile pour thèmes, jamais seule pour valider un item comme réellement posé."
+    },
+    {
+      "year": 2022,
+      "id": "educ-patsh-cg-2022-primary-page",
+      "kind": "DETAILED_ARCHIVE",
+      "status": "USABLE_WITH_CAUTION",
+      "confidence": "MEDIUM",
+      "url": "https://e.patshtecno.com/culture-generale-2022-items-exetat-de-geographie-histoire-philosophie-et-civisme/",
+      "note": "Page détaillée avec séries de 20 items à cinq choix."
+    },
+    {
+      "year": 2026,
+      "id": "actualite-2026-day1",
+      "kind": "REPORTED_SESSION_CONTEXT",
+      "status": "SESSION_CONFIRMED_NO_EXACT_ITEMS",
+      "confidence": "HIGH",
+      "url": "https://actualite.cd/2026/06/22/exetat-2026-au-centre-ep-molende-kinshasa-les-finalistes-racontent-leur-premier-des",
+      "note": "Confirme la Culture générale au premier jour, mais ne publie pas les items exacts."
+    },
+    {
+      "year": 2026,
+      "id": "minedu-2026-structure",
+      "kind": "OFFICIAL_SESSION_CONTEXT",
+      "status": "VERIFIED_STRUCTURE",
+      "confidence": "HIGH",
+      "url": "https://edu-nc.gouv.cd/",
+      "note": "Session 2026 confirmée; Culture générale couvre histoire, géographie, philosophie et civisme/ECM."
+    },
+    {
+      "year": 2025,
+      "id": "forumdesas-2025-reported",
+      "kind": "REPORTED_ACTUAL_TOPICS",
+      "status": "USABLE_WITH_CAUTION",
+      "confidence": "MEDIUM",
+      "url": "https://forumdesas.cd/index.php/les-finalistes-des-centres-alingba-et-st-georges-optimistes-pour-la-reussite",
+      "note": "20 questions, 4 séries; thèmes rapportés: okapi et Néandertaliens. Conservés comme thèmes, pas QCM actif sans choix exacts."
+    },
+    {
+      "year": 2024,
+      "id": "actualite-2024-reported",
+      "kind": "REPORTED_ACTUAL_ITEMS",
+      "status": "INGESTED_PARTIAL",
+      "confidence": "MEDIUM",
+      "url": "https://actualite.cd/2024/06/24/exetat-2024-ce-que-les-finalistes-retiennent-du-premier-jour-consacre-la-culture",
+      "note": "Questions rappelées par candidats; un item énergie Algérie ingéré après vérification."
+    },
+    {
+      "year": 2024,
+      "id": "7sur7-2024-reported",
+      "kind": "REPORTED_ACTUAL_ITEMS",
+      "status": "INGESTED_PARTIAL",
+      "confidence": "MEDIUM",
+      "url": "https://7sur7.cd/index.php/2024/06/24/exetat-plus-de-28000-candidats-passent-les-epreuves-au-nord-kivu-2",
+      "note": "Question rapportée sur la direction d'une commune; ingérée après vérification."
+    },
+    {
+      "year": 2023,
+      "id": "manuals-latin-philo-2023",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_PARTIAL",
+      "confidence": "MEDIUM",
+      "url": "https://manuels-scolaires-rdc.com/exetat-items-latin-philo/",
+      "note": "Item Culture générale littéraire Session 2023 ingéré."
+    },
+    {
+      "year": 2022,
+      "id": "educ-patsh-2022-culture",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_PARTIAL",
+      "confidence": "MEDIUM",
+      "url": "https://e.patshtecno.com/culture-generale-2022-items-exetat-de-geographie-histoire-philosophie-et-civisme/",
+      "note": "33 items/notions récupérés et réécrits avec numéro/série."
+    },
+    {
+      "year": 2019,
+      "id": "educ-patsh-2019-culture",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_PARTIAL",
+      "confidence": "MEDIUM",
+      "url": "https://e.patshtecno.com/items-exetat-culture-generale-2019/",
+      "note": "Items 2019 récupérés; complétés avec séries géographie/pédagogie."
+    },
+    {
+      "year": 2013,
+      "id": "scribd-jij-2013",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_PARTIAL",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/853389182/RECUEIL-D-ITEMS-DE-CULTURE-GENERALE-19-06-2023",
+      "note": "7 items 2013 ingérés."
+    },
+    {
+      "year": 2016,
+      "id": "scribd-jij-2016",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_PARTIAL",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/853389182/RECUEIL-D-ITEMS-DE-CULTURE-GENERALE-19-06-2023",
+      "note": "7 items 2016 ingérés."
+    },
+    {
+      "year": 2017,
+      "id": "scribd-jij-2017",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_PARTIAL",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/853389182/RECUEIL-D-ITEMS-DE-CULTURE-GENERALE-19-06-2023",
+      "note": "12 items 2017 ingérés au total dans deux fichiers."
+    },
+    {
+      "year": 2024,
+      "id": "luebo-ped644",
+      "kind": "MISCLASSIFIED_CG_COMMERCIALE_GESTION",
+      "status": "REJECTED",
+      "confidence": "REJECT",
+      "url": "https://www.luebo.org/biblio/docs/PED644-Les_Items_de_Cg_2023_Et_2024.pdf",
+      "note": "Téléchargé et inspecté page par page. 'CG' désigne ici Commerciale/Gestion; questionnaires M38/M13/M04/M52, pas le bloc Culture générale commun."
+    },
+    {
+      "year": 2025,
+      "id": "luebo-ped653",
+      "kind": "OPTION_SPECIFIC_QUESTIONNAIRE",
+      "status": "REJECTED",
+      "confidence": "REJECT",
+      "url": "https://www.luebo.org/biblio/docs/PED653-Questionnaires_EXETAT_2024_2025_Option_CG.pdf",
+      "note": "Contenu optionnel Commercial/Gestion, Secrétariat, Construction; ne constitue pas une banque Culture générale commune."
+    },
+    {
+      "year": 2024,
+      "id": "luebo-ped329",
+      "kind": "CURATED_PREP_ARCHIVE",
+      "status": "USABLE_WITH_CAUTION",
+      "confidence": "MEDIUM",
+      "url": "https://www.luebo.org/biblio/docs/PED329-Item-Preparation-Exetat2024-Culture-Generale.pdf",
+      "note": "Préparation 2024; contient des items historiques explicitement marqués EXETAT 2015, 2017, 2018 et 2021. Conserver l'année indiquée item par item; ne pas les étiqueter 2024."
+    },
+    {
+      "year": 2009,
+      "id": "educ-patsh-2009-mathphys",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://e.patshtecno.com/exetat-culture-generale-2009-option-math-physique/",
+      "note": "Série de 20 items Culture générale; notions robustes reformulées et recoupées."
+    },
+    {
+      "year": 2010,
+      "id": "scribd-2010-multiseries",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://www.scribd.com/document/793324428/Culture-Generale-2010-item",
+      "note": "Plusieurs variantes 2010 ont servi à compléter les notions sans duplication cosmétique."
+    },
+    {
+      "year": 2011,
+      "id": "civics-archive-2011",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/900287664/Items-Culture-General",
+      "note": "Items civisme explicitement étiquetés EXETAT 2011, complétés par recoupement factuel."
+    },
+    {
+      "year": 2012,
+      "id": "scribd-2012-culture",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/971529696/Exetat-RDC-Culture-Ge-ne-rale-2012-v1",
+      "note": "Série 2012; seuls les faits indépendants d’illustrations et recoupables ont été activés."
+    },
+    {
+      "year": 2014,
+      "id": "culture-archive-2014",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/807694010/Items-Exetat",
+      "note": "Nombreux items 2014 explicitement datés; réponses vieillies ou ambiguës exclues."
+    },
+    {
+      "year": 2015,
+      "id": "educ-patsh-2015-mathphys",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://e.patshtecno.com/exetat-culture-generale-2015-option-math-physique/",
+      "note": "Série complète de 20 items; connaissances fiables extraites et reformulées."
+    },
+    {
+      "year": 2017,
+      "id": "educ-patsh-2017-series2",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://e.patshtecno.com/exetat-culture-generale-2017-option-math-physique-s2/",
+      "note": "Série parallèle 2017, utile pour géographie, histoire et logique."
+    },
+    {
+      "year": 2018,
+      "id": "educ-patsh-2018-mathphys",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://e.patshtecno.com/exetat-culture-generale-2018-option-math-physique/",
+      "note": "Série de 20 items; notions robustes intégrées après correction des formulations vieillies."
+    },
+    {
+      "year": 2020,
+      "id": "schoolap-2020-seriesb",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/790212971/Schoolap-Culturegenerale-Serieb-1716099751470",
+      "note": "Série B 2020; récupération sélective des faits vérifiables."
+    },
+    {
+      "year": 2021,
+      "id": "johnson-aigle-2021",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/853389182/RECUEIL-D-ITEMS-DE-CULTURE-GENERALE-19-06-2023",
+      "note": "Items 2021 explicitement datés dans le recueil; sciences auxiliaires, géographie, histoire et philosophie."
+    },
+    {
+      "year": 2023,
+      "id": "hkmstd-culture-recueil-2023-published",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://hkmstd.com/resource/bf14230e-3f12-49c7-952e-e04fef399cab-recueil-d-items-de-culture-generale-examen-d-etat?lng=fr",
+      "note": "Recueil classé par années contenant notamment des items 2013, 2016, 2017, 2019 et 2021; utilisé uniquement avec provenance annuelle explicite."
+    },
+    {
+      "year": 2024,
+      "id": "hkmstd-actual-paper-2024-m13",
+      "kind": "ACTUAL_PAST_PAPER",
+      "status": "INGESTED_PARTIAL",
+      "confidence": "HIGH",
+      "url": "https://hkmstd.com/resource/4def22d3-d5a2-442b-be03-15b366b6d9f0-examen-d-etat-2024-culture-generale-et-developpement?lng=fr",
+      "note": "Scan du questionnaire M13 Q15 S4 H3; deux items robustes activés, autres parties spécifiques/ambiguës laissées hors corpus."
+    },
+    {
+      "year": 2019,
+      "id": "educ-patsh-2019-pedagogy-series",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://e.patshtecno.com/items-exetat-culture-generale-2019-pedagogie-generale-serie-1/",
+      "note": "Trois séries 2019 publiées avec questions et corrections; compléments factuellement robustes intégrés."
+    },
+    {
+      "year": 2005,
+      "id": "scribd-exetat-philo-geo-history-2005",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/1048577981/PHILOSOPHIE-items",
+      "note": "Items 2005 de philosophie recoupés avec banques géographie/histoire; formulations internes."
+    },
+    {
+      "year": 2006,
+      "id": "hkmstd-civics-2006-2021",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://cd.hkmstd.com/resource/c2adf14a-bde8-4b10-a236-c3a29ee06385-items-de-civisme-questions-des-examens-d-etat-exetat-2006?lng=fr",
+      "note": "Recueil civisme 2006–2021 utilisé comme provenance secondaire."
+    },
+    {
+      "year": 2007,
+      "id": "scribd-geography-history-2007",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/841327177/Geographie-Preparation-Exetat",
+      "note": "Items 2007 géographie/histoire : Ruwenzori, Nyiragongo et repères historiques africains."
+    },
+    {
+      "year": 2008,
+      "id": "scribd-civics-philosophy-2008",
+      "kind": "CURATED_YEAR_LABELLED_ARCHIVE",
+      "status": "INGESTED_REINFORCED",
+      "confidence": "MEDIUM",
+      "url": "https://fr.scribd.com/document/1050900596/Item-Exetat-civisme",
+      "note": "Items 2008 civisme/philosophie/histoire recoupés; réponses datées ou fragiles exclues."
+    }
+  ],
+  "ingestion_summary": {
+    "recovered_active_items": 359,
+    "calibrated_core_items": 61,
+    "total_exetat_related_new": 420,
+    "reported_topics_pending": 2,
+    "latest_session_checked": 2026,
+    "max_recovery_update": "2026-10-06"
+  }
+}
