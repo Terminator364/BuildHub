@@ -9,5 +9,6 @@
   "knowledge_units": 2667,
   "timer_seconds": 40,
   "published_at": "2026-10-06T20:09:00+01:00",
-  "probe_sequence": 1
+  "probe_sequence": 2,
+  "probe_reason": "external-public-reachability"
 }
