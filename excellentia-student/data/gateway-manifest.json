@@ -54,5 +54,8 @@
   "expected_knowledge_units": 2667,
   "timer_seconds": 40,
   "offline_first": true,
-  "source_release": "Excellentia V2.3.0"
+  "source_release": "Excellentia V2.3.0",
+  "public_gateway_strategy": "github-pages",
+  "primary_url": "https://terminator364.github.io/BuildHub/excellentia-student/",
+  "fallback_note": "Do not use jsDelivr as the HTML entry point; it may serve HTML as text."
 }
