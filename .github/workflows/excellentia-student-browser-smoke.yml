@@ -1,0 +1,88 @@
+name: Excellentia Student Browser Smoke
+
+on:
+  pull_request:
+    paths:
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-browser-smoke.yml'
+  push:
+    branches:
+      - feat/excellentia-student-gateway
+    paths:
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-browser-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.14.0
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Start static site
+        run: |
+          python3 -m http.server 4173 --directory excellentia-student >/tmp/excellentia-http.log 2>&1 &
+          echo $! > /tmp/excellentia-http.pid
+          for i in {1..20}; do curl -fsS http://127.0.0.1:4173/ >/dev/null && exit 0; sleep 1; done
+          cat /tmp/excellentia-http.log
+          exit 1
+      - name: Mobile navigation + session smoke
+        run: |
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage({viewport:{width:412,height:915},isMobile:true,hasTouch:true});
+            const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+            await page.goto('http://127.0.0.1:4173/',{waitUntil:'networkidle',timeout:120000});
+            await page.waitForFunction(()=>document.querySelector('#versionBadge')?.textContent.includes('V2.3.0'),null,{timeout:120000});
+            const title=async expected=>{await page.waitForFunction(e=>document.querySelector('#pageTitle')?.textContent.trim()===e,expected,{timeout:30000})};
+            await title('Accueil');
+            const nav=async(space,expected)=>{
+              const dock=page.locator('#mobileDock [data-space="'+space+'"]');
+              if(await dock.count())await dock.click();else await page.locator('[data-space="'+space+'"]').first().click();
+              await title(expected);
+            };
+            await nav('learn','Apprendre');
+            await page.locator('#contextTabs [data-tab="modules"]').click();
+            await page.waitForSelector('[data-module]',{timeout:30000});
+            await page.locator('[data-module]').first().click();
+            await page.waitForSelector('#drawerBackdrop.open',{timeout:30000});
+            await page.locator('#drawerClose').click();
+
+            await nav('train',"S’entraîner");
+            await page.waitForSelector('#ctxQuick',{timeout:30000});
+            await page.locator('#ctxQuick').click();
+            await page.waitForSelector('.question-shell',{timeout:30000});
+            await page.locator('.answer').first().click();
+            await page.waitForTimeout(300);
+            const hasSession=await page.locator('.question-shell').count();
+            if(!hasSession)throw new Error('TRAIN_SESSION_NOT_ACTIVE');
+            const leave=page.locator('#leaveSession');if(await leave.count())await leave.click();
+
+            await nav('review','Réviser');
+            await title('Réviser');
+
+            await page.locator('[data-action="more"]').click();
+            await page.locator('#mobileSheet [data-space="exam"]').click();
+            await title('Examens');
+            await page.waitForSelector('#mock20x',{timeout:30000});
+
+            await page.locator('[data-action="more"]').click();
+            await page.locator('#mobileSheet [data-space="progress"]').click();
+            await title('Progression');
+
+            if(errors.length)throw new Error('PAGE_ERRORS '+errors.join(' | '));
+            console.log(JSON.stringify({ok:true,spaces:['home','learn','train','review','exam','progress'],session_started:true},null,2));
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
