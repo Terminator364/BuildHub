@@ -32,7 +32,7 @@ jobs:
             curl -fsSL --connect-timeout 10 --max-time 30 "https://raw.githubusercontent.com/Terminator364/BuildHub/main/excellentia/latest.json?t=$(date +%s)" -o /tmp/latest.json && break
             sleep 3
           done
-          node -e "const j=require('/tmp/latest.json'); if(!j.url.startsWith('https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@')) process.exit(3); console.log(j.url)"
+          node -e "const j=require('/tmp/latest.json'); if(!j.url.startsWith('https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia-student/index.html')) process.exit(3); console.log(j.url)"
       - name: Probe immutable student gateway
         run: |
           URL="$(node -p "require('/tmp/latest.json').url")"
@@ -45,8 +45,11 @@ jobs:
           node --check /tmp/app.js
       - name: Probe permanent QR entry
         run: |
-          ENTRY="https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@main/excellentia/index.html"
-          curl -fsSL --retry 6 --retry-delay 3 --connect-timeout 10 --max-time 45 "$ENTRY" -o /tmp/entry.html
-          grep -q "Excellentia — Entrée Élève" /tmp/entry.html
-          grep -q "raw.githubusercontent.com/Terminator364/BuildHub/main/excellentia/latest.json" /tmp/entry.html
+          ENTRY="https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia/index.html"
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=60000 --dump-dom "$ENTRY" > /tmp/entry-dom.html
+          grep -q "EXCELLENTIA STUDY HUB" /tmp/entry-dom.html
+          grep -q "Culture générale" /tmp/entry-dom.html
+          grep -Eq "4[ . ]?174|4174" /tmp/entry-dom.html
+          grep -Eq "2[ . ]?667|2667" /tmp/entry-dom.html
           echo "PUBLIC_ENTRY_OK=$ENTRY"
