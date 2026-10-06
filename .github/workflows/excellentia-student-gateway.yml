@@ -78,10 +78,14 @@ jobs:
         shell: bash
         run: |
           BASE="https://cdn.jsdelivr.net/gh/Terminator364/BuildHub@main/excellentia-student"
-          curl -fsSL --retry 5 --retry-delay 2 "$BASE/index.html" | grep -q "EXCELLENTIA STUDY HUB"
-          curl -fsSL --retry 5 --retry-delay 2 "$BASE/app.js?v=230" | grep -q "const S="
-          curl -fsSL --retry 5 --retry-delay 2 "$BASE/data/gateway-manifest.json" | grep -q '"expected_questions": 4174'
-          curl -fsSI --retry 5 --retry-delay 2 "$BASE/index.html" | tr -d '\r' | grep -i '^content-type:'
+          curl -fsSL --retry 5 --retry-delay 2 "$BASE/index.html" -o /tmp/index.html
+          curl -fsSL --retry 5 --retry-delay 2 "$BASE/app.js?v=230" -o /tmp/app.js
+          curl -fsSL --retry 5 --retry-delay 2 "$BASE/data/gateway-manifest.json" -o /tmp/gateway-manifest.json
+          grep -q "EXCELLENTIA STUDY HUB" /tmp/index.html
+          grep -q "const S=" /tmp/app.js
+          grep -q '"expected_questions": 4174' /tmp/gateway-manifest.json
+          curl -fsSI --retry 5 --retry-delay 2 "$BASE/index.html" -o /tmp/headers.txt
+          tr -d '\r' < /tmp/headers.txt | grep -i '^content-type:'
           echo "GATEWAY_URL=$BASE/index.html"
 
   deploy-pages:
