@@ -1,0 +1,6348 @@
+[
+  {
+    "id": "G0001",
+    "knowledge_id": "RDC-PROV-01",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Bas-Uele ?",
+    "choices": [
+      "Mbandaka",
+      "Bunia",
+      "Kenge",
+      "Buta"
+    ],
+    "answer": 3,
+    "explanation": "Buta est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0002",
+    "knowledge_id": "RDC-PROV-01",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Buta ?",
+    "choices": [
+      "Kasaï Central",
+      "Lomami",
+      "Bas-Uele",
+      "Équateur"
+    ],
+    "answer": 2,
+    "explanation": "Buta correspond à Bas-Uele.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0003",
+    "knowledge_id": "RDC-PROV-02",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Équateur à son chef-lieu.",
+    "choices": [
+      "Bandundu",
+      "Mbandaka",
+      "Lubumbashi",
+      "Tshikapa"
+    ],
+    "answer": 1,
+    "explanation": "Mbandaka est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0004",
+    "knowledge_id": "RDC-PROV-02",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Mbandaka à sa province.",
+    "choices": [
+      "Équateur",
+      "Haut-Katanga",
+      "Kasaï Oriental",
+      "Lualaba"
+    ],
+    "answer": 0,
+    "explanation": "Mbandaka correspond à Équateur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0005",
+    "knowledge_id": "RDC-PROV-03",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Haut-Katanga ?",
+    "choices": [
+      "Kamina",
+      "Kananga",
+      "Kabinda",
+      "Lubumbashi"
+    ],
+    "answer": 3,
+    "explanation": "Lubumbashi est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0006",
+    "knowledge_id": "RDC-PROV-03",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Lubumbashi ?",
+    "choices": [
+      "Kinshasa",
+      "Mai-Ndombe",
+      "Haut-Katanga",
+      "Haut-Lomami"
+    ],
+    "answer": 2,
+    "explanation": "Lubumbashi correspond à Haut-Katanga.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0007",
+    "knowledge_id": "RDC-PROV-04",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Haut-Lomami à son chef-lieu.",
+    "choices": [
+      "Kolwezi",
+      "Kamina",
+      "Isiro",
+      "Mbuji-Mayi"
+    ],
+    "answer": 1,
+    "explanation": "Kamina est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0008",
+    "knowledge_id": "RDC-PROV-04",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Kamina à sa province.",
+    "choices": [
+      "Haut-Lomami",
+      "Haut-Uele",
+      "Kongo Central",
+      "Maniema"
+    ],
+    "answer": 0,
+    "explanation": "Kamina correspond à Haut-Lomami.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0009",
+    "knowledge_id": "RDC-PROV-05",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Haut-Uele ?",
+    "choices": [
+      "Bunia",
+      "Kinshasa",
+      "Inongo",
+      "Isiro"
+    ],
+    "answer": 3,
+    "explanation": "Isiro est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0010",
+    "knowledge_id": "RDC-PROV-05",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Isiro ?",
+    "choices": [
+      "Kwango",
+      "Mongala",
+      "Haut-Uele",
+      "Ituri"
+    ],
+    "answer": 2,
+    "explanation": "Isiro correspond à Haut-Uele.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0011",
+    "knowledge_id": "RDC-PROV-06",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Ituri à son chef-lieu.",
+    "choices": [
+      "Kindu",
+      "Bunia",
+      "Tshikapa",
+      "Matadi"
+    ],
+    "answer": 1,
+    "explanation": "Bunia est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0012",
+    "knowledge_id": "RDC-PROV-06",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Bunia à sa province.",
+    "choices": [
+      "Ituri",
+      "Kasaï",
+      "Kwilu",
+      "Nord-Kivu"
+    ],
+    "answer": 0,
+    "explanation": "Bunia correspond à Ituri.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0013",
+    "knowledge_id": "RDC-PROV-07",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Kasaï ?",
+    "choices": [
+      "Kananga",
+      "Kenge",
+      "Lisala",
+      "Tshikapa"
+    ],
+    "answer": 3,
+    "explanation": "Tshikapa est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0014",
+    "knowledge_id": "RDC-PROV-07",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Tshikapa ?",
+    "choices": [
+      "Lomami",
+      "Nord-Ubangi",
+      "Kasaï",
+      "Kasaï Central"
+    ],
+    "answer": 2,
+    "explanation": "Tshikapa correspond à Kasaï.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0015",
+    "knowledge_id": "RDC-PROV-08",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Kasaï Central à son chef-lieu.",
+    "choices": [
+      "Goma",
+      "Kananga",
+      "Mbuji-Mayi",
+      "Bandundu"
+    ],
+    "answer": 1,
+    "explanation": "Kananga est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0016",
+    "knowledge_id": "RDC-PROV-08",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Kananga à sa province.",
+    "choices": [
+      "Kasaï Central",
+      "Kasaï Oriental",
+      "Lualaba",
+      "Sankuru"
+    ],
+    "answer": 0,
+    "explanation": "Kananga correspond à Kasaï Central.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0017",
+    "knowledge_id": "RDC-PROV-09",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Kasaï Oriental ?",
+    "choices": [
+      "Kinshasa",
+      "Kabinda",
+      "Gbadolite",
+      "Mbuji-Mayi"
+    ],
+    "answer": 3,
+    "explanation": "Mbuji-Mayi est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0018",
+    "knowledge_id": "RDC-PROV-09",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Mbuji-Mayi ?",
+    "choices": [
+      "Mai-Ndombe",
+      "Sud-Kivu",
+      "Kasaï Oriental",
+      "Kinshasa"
+    ],
+    "answer": 2,
+    "explanation": "Mbuji-Mayi correspond à Kasaï Oriental.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0019",
+    "knowledge_id": "RDC-PROV-10",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Kinshasa à son chef-lieu.",
+    "choices": [
+      "Lusambo",
+      "Kinshasa",
+      "Matadi",
+      "Kolwezi"
+    ],
+    "answer": 1,
+    "explanation": "Kinshasa est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0020",
+    "knowledge_id": "RDC-PROV-10",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Kinshasa à sa province.",
+    "choices": [
+      "Kinshasa",
+      "Kongo Central",
+      "Maniema",
+      "Sud-Ubangi"
+    ],
+    "answer": 0,
+    "explanation": "Kinshasa correspond à Kinshasa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0021",
+    "knowledge_id": "RDC-PROV-11",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Kongo Central ?",
+    "choices": [
+      "Kenge",
+      "Inongo",
+      "Bukavu",
+      "Matadi"
+    ],
+    "answer": 3,
+    "explanation": "Matadi est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0022",
+    "knowledge_id": "RDC-PROV-11",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Matadi ?",
+    "choices": [
+      "Mongala",
+      "Tanganyika",
+      "Kongo Central",
+      "Kwango"
+    ],
+    "answer": 2,
+    "explanation": "Matadi correspond à Kongo Central.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0023",
+    "knowledge_id": "RDC-PROV-12",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Kwango à son chef-lieu.",
+    "choices": [
+      "Gemena",
+      "Kenge",
+      "Bandundu",
+      "Kindu"
+    ],
+    "answer": 1,
+    "explanation": "Kenge est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0024",
+    "knowledge_id": "RDC-PROV-12",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Kenge à sa province.",
+    "choices": [
+      "Kwango",
+      "Kwilu",
+      "Nord-Kivu",
+      "Tshopo"
+    ],
+    "answer": 0,
+    "explanation": "Kenge correspond à Kwango.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0025",
+    "knowledge_id": "RDC-PROV-13",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Kwilu ?",
+    "choices": [
+      "Kabinda",
+      "Lisala",
+      "Kalemie",
+      "Bandundu"
+    ],
+    "answer": 3,
+    "explanation": "Bandundu est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0026",
+    "knowledge_id": "RDC-PROV-13",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Bandundu ?",
+    "choices": [
+      "Nord-Ubangi",
+      "Tshuapa",
+      "Kwilu",
+      "Lomami"
+    ],
+    "answer": 2,
+    "explanation": "Bandundu correspond à Kwilu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0027",
+    "knowledge_id": "RDC-PROV-14",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Lomami à son chef-lieu.",
+    "choices": [
+      "Kisangani",
+      "Kabinda",
+      "Kolwezi",
+      "Goma"
+    ],
+    "answer": 1,
+    "explanation": "Kabinda est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0028",
+    "knowledge_id": "RDC-PROV-14",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Kabinda à sa province.",
+    "choices": [
+      "Lomami",
+      "Lualaba",
+      "Sankuru",
+      "Bas-Uele"
+    ],
+    "answer": 0,
+    "explanation": "Kabinda correspond à Lomami.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0029",
+    "knowledge_id": "RDC-PROV-15",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Lualaba ?",
+    "choices": [
+      "Inongo",
+      "Gbadolite",
+      "Boende",
+      "Kolwezi"
+    ],
+    "answer": 3,
+    "explanation": "Kolwezi est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0030",
+    "knowledge_id": "RDC-PROV-15",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Kolwezi ?",
+    "choices": [
+      "Sud-Kivu",
+      "Équateur",
+      "Lualaba",
+      "Mai-Ndombe"
+    ],
+    "answer": 2,
+    "explanation": "Kolwezi correspond à Lualaba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0031",
+    "knowledge_id": "RDC-PROV-16",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Mai-Ndombe à son chef-lieu.",
+    "choices": [
+      "Buta",
+      "Inongo",
+      "Kindu",
+      "Lusambo"
+    ],
+    "answer": 1,
+    "explanation": "Inongo est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0032",
+    "knowledge_id": "RDC-PROV-16",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Inongo à sa province.",
+    "choices": [
+      "Mai-Ndombe",
+      "Maniema",
+      "Sud-Ubangi",
+      "Haut-Katanga"
+    ],
+    "answer": 0,
+    "explanation": "Inongo correspond à Mai-Ndombe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0033",
+    "knowledge_id": "RDC-PROV-17",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Maniema ?",
+    "choices": [
+      "Lisala",
+      "Bukavu",
+      "Mbandaka",
+      "Kindu"
+    ],
+    "answer": 3,
+    "explanation": "Kindu est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0034",
+    "knowledge_id": "RDC-PROV-17",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Kindu ?",
+    "choices": [
+      "Tanganyika",
+      "Haut-Lomami",
+      "Maniema",
+      "Mongala"
+    ],
+    "answer": 2,
+    "explanation": "Kindu correspond à Maniema.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0035",
+    "knowledge_id": "RDC-PROV-18",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Mongala à son chef-lieu.",
+    "choices": [
+      "Lubumbashi",
+      "Lisala",
+      "Goma",
+      "Gemena"
+    ],
+    "answer": 1,
+    "explanation": "Lisala est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0036",
+    "knowledge_id": "RDC-PROV-18",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Lisala à sa province.",
+    "choices": [
+      "Mongala",
+      "Nord-Kivu",
+      "Tshopo",
+      "Haut-Uele"
+    ],
+    "answer": 0,
+    "explanation": "Lisala correspond à Mongala.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0037",
+    "knowledge_id": "RDC-PROV-19",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Nord-Kivu ?",
+    "choices": [
+      "Gbadolite",
+      "Kalemie",
+      "Kamina",
+      "Goma"
+    ],
+    "answer": 3,
+    "explanation": "Goma est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0038",
+    "knowledge_id": "RDC-PROV-19",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Goma ?",
+    "choices": [
+      "Tshuapa",
+      "Ituri",
+      "Nord-Kivu",
+      "Nord-Ubangi"
+    ],
+    "answer": 2,
+    "explanation": "Goma correspond à Nord-Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0039",
+    "knowledge_id": "RDC-PROV-20",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Nord-Ubangi à son chef-lieu.",
+    "choices": [
+      "Isiro",
+      "Gbadolite",
+      "Lusambo",
+      "Kisangani"
+    ],
+    "answer": 1,
+    "explanation": "Gbadolite est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0040",
+    "knowledge_id": "RDC-PROV-20",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Gbadolite à sa province.",
+    "choices": [
+      "Nord-Ubangi",
+      "Sankuru",
+      "Bas-Uele",
+      "Kasaï"
+    ],
+    "answer": 0,
+    "explanation": "Gbadolite correspond à Nord-Ubangi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0041",
+    "knowledge_id": "RDC-PROV-21",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Sankuru ?",
+    "choices": [
+      "Bukavu",
+      "Boende",
+      "Bunia",
+      "Lusambo"
+    ],
+    "answer": 3,
+    "explanation": "Lusambo est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0042",
+    "knowledge_id": "RDC-PROV-21",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Lusambo ?",
+    "choices": [
+      "Équateur",
+      "Kasaï Central",
+      "Sankuru",
+      "Sud-Kivu"
+    ],
+    "answer": 2,
+    "explanation": "Lusambo correspond à Sankuru.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0043",
+    "knowledge_id": "RDC-PROV-22",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Sud-Kivu à son chef-lieu.",
+    "choices": [
+      "Tshikapa",
+      "Bukavu",
+      "Gemena",
+      "Buta"
+    ],
+    "answer": 1,
+    "explanation": "Bukavu est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0044",
+    "knowledge_id": "RDC-PROV-22",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Bukavu à sa province.",
+    "choices": [
+      "Sud-Kivu",
+      "Sud-Ubangi",
+      "Haut-Katanga",
+      "Kasaï Oriental"
+    ],
+    "answer": 0,
+    "explanation": "Bukavu correspond à Sud-Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0045",
+    "knowledge_id": "RDC-PROV-23",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Sud-Ubangi ?",
+    "choices": [
+      "Kalemie",
+      "Mbandaka",
+      "Kananga",
+      "Gemena"
+    ],
+    "answer": 3,
+    "explanation": "Gemena est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0046",
+    "knowledge_id": "RDC-PROV-23",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Gemena ?",
+    "choices": [
+      "Haut-Lomami",
+      "Kinshasa",
+      "Sud-Ubangi",
+      "Tanganyika"
+    ],
+    "answer": 2,
+    "explanation": "Gemena correspond à Sud-Ubangi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0047",
+    "knowledge_id": "RDC-PROV-24",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Tanganyika à son chef-lieu.",
+    "choices": [
+      "Mbuji-Mayi",
+      "Kalemie",
+      "Kisangani",
+      "Lubumbashi"
+    ],
+    "answer": 1,
+    "explanation": "Kalemie est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0048",
+    "knowledge_id": "RDC-PROV-24",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Kalemie à sa province.",
+    "choices": [
+      "Tanganyika",
+      "Tshopo",
+      "Haut-Uele",
+      "Kongo Central"
+    ],
+    "answer": 0,
+    "explanation": "Kalemie correspond à Tanganyika.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0049",
+    "knowledge_id": "RDC-PROV-25",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Tshopo ?",
+    "choices": [
+      "Boende",
+      "Kamina",
+      "Kinshasa",
+      "Kisangani"
+    ],
+    "answer": 3,
+    "explanation": "Kisangani est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0050",
+    "knowledge_id": "RDC-PROV-25",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "À quelle province congolaise correspond le chef-lieu Kisangani ?",
+    "choices": [
+      "Ituri",
+      "Kwango",
+      "Tshopo",
+      "Tshuapa"
+    ],
+    "answer": 2,
+    "explanation": "Kisangani correspond à Tshopo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0051",
+    "knowledge_id": "RDC-PROV-26",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe la province Tshuapa à son chef-lieu.",
+    "choices": [
+      "Matadi",
+      "Boende",
+      "Buta",
+      "Isiro"
+    ],
+    "answer": 1,
+    "explanation": "Boende est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0052",
+    "knowledge_id": "RDC-PROV-26",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Associe le chef-lieu Boende à sa province.",
+    "choices": [
+      "Tshuapa",
+      "Bas-Uele",
+      "Kasaï",
+      "Kwilu"
+    ],
+    "answer": 0,
+    "explanation": "Boende correspond à Tshuapa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Géographie administrative RDC"
+  },
+  {
+    "id": "G0053",
+    "knowledge_id": "AFR-CAP-01",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Algérie ?",
+    "choices": [
+      "Luanda",
+      "Gitega",
+      "Brazzaville",
+      "Alger"
+    ],
+    "answer": 3,
+    "explanation": "Alger est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0054",
+    "knowledge_id": "AFR-CAP-01",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Alger ?",
+    "choices": [
+      "Cap-Vert",
+      "Djibouti",
+      "Algérie",
+      "Angola"
+    ],
+    "answer": 2,
+    "explanation": "Alger correspond à Algérie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0055",
+    "knowledge_id": "AFR-CAP-02",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Angola à sa capitale.",
+    "choices": [
+      "Kinshasa",
+      "Luanda",
+      "Porto-Novo",
+      "Yaoundé"
+    ],
+    "answer": 1,
+    "explanation": "Luanda est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0056",
+    "knowledge_id": "AFR-CAP-02",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Luanda à son pays africain.",
+    "choices": [
+      "Angola",
+      "Bénin",
+      "République centrafricaine",
+      "Égypte"
+    ],
+    "answer": 0,
+    "explanation": "Luanda correspond à Angola.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0057",
+    "knowledge_id": "AFR-CAP-03",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Bénin ?",
+    "choices": [
+      "Gaborone",
+      "Praia",
+      "Djibouti",
+      "Porto-Novo"
+    ],
+    "answer": 3,
+    "explanation": "Porto-Novo est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0058",
+    "knowledge_id": "AFR-CAP-03",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Porto-Novo ?",
+    "choices": [
+      "Tchad",
+      "Érythrée",
+      "Bénin",
+      "Botswana"
+    ],
+    "answer": 2,
+    "explanation": "Porto-Novo correspond à Bénin.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0059",
+    "knowledge_id": "AFR-CAP-04",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Botswana à sa capitale.",
+    "choices": [
+      "Le Caire",
+      "Gaborone",
+      "Ouagadougou",
+      "Bangui"
+    ],
+    "answer": 1,
+    "explanation": "Gaborone est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0060",
+    "knowledge_id": "AFR-CAP-04",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Gaborone à son pays africain.",
+    "choices": [
+      "Botswana",
+      "Burkina Faso",
+      "Comores",
+      "Éthiopie"
+    ],
+    "answer": 0,
+    "explanation": "Gaborone correspond à Botswana.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0061",
+    "knowledge_id": "AFR-CAP-05",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Burkina Faso ?",
+    "choices": [
+      "Gitega",
+      "N'Djamena",
+      "Asmara",
+      "Ouagadougou"
+    ],
+    "answer": 3,
+    "explanation": "Ouagadougou est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0062",
+    "knowledge_id": "AFR-CAP-05",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Ouagadougou ?",
+    "choices": [
+      "République du Congo",
+      "Gabon",
+      "Burkina Faso",
+      "Burundi"
+    ],
+    "answer": 2,
+    "explanation": "Ouagadougou correspond à Burkina Faso.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0063",
+    "knowledge_id": "AFR-CAP-06",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Burundi à sa capitale.",
+    "choices": [
+      "Addis-Abeba",
+      "Gitega",
+      "Yaoundé",
+      "Moroni"
+    ],
+    "answer": 1,
+    "explanation": "Gitega est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0064",
+    "knowledge_id": "AFR-CAP-06",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Gitega à son pays africain.",
+    "choices": [
+      "Burundi",
+      "Cameroun",
+      "RDC",
+      "Gambie"
+    ],
+    "answer": 0,
+    "explanation": "Gitega correspond à Burundi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0065",
+    "knowledge_id": "AFR-CAP-07",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Cameroun ?",
+    "choices": [
+      "Praia",
+      "Brazzaville",
+      "Libreville",
+      "Yaoundé"
+    ],
+    "answer": 3,
+    "explanation": "Yaoundé est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0066",
+    "knowledge_id": "AFR-CAP-07",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Yaoundé ?",
+    "choices": [
+      "Djibouti",
+      "Ghana",
+      "Cameroun",
+      "Cap-Vert"
+    ],
+    "answer": 2,
+    "explanation": "Yaoundé correspond à Cameroun.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0067",
+    "knowledge_id": "AFR-CAP-08",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Cap-Vert à sa capitale.",
+    "choices": [
+      "Banjul",
+      "Praia",
+      "Bangui",
+      "Kinshasa"
+    ],
+    "answer": 1,
+    "explanation": "Praia est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0068",
+    "knowledge_id": "AFR-CAP-08",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Praia à son pays africain.",
+    "choices": [
+      "Cap-Vert",
+      "République centrafricaine",
+      "Égypte",
+      "Guinée"
+    ],
+    "answer": 0,
+    "explanation": "Praia correspond à Cap-Vert.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0069",
+    "knowledge_id": "AFR-CAP-09",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de République centrafricaine ?",
+    "choices": [
+      "N'Djamena",
+      "Djibouti",
+      "Accra",
+      "Bangui"
+    ],
+    "answer": 3,
+    "explanation": "Bangui est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0070",
+    "knowledge_id": "AFR-CAP-09",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Bangui ?",
+    "choices": [
+      "Érythrée",
+      "Guinée-Bissau",
+      "République centrafricaine",
+      "Tchad"
+    ],
+    "answer": 2,
+    "explanation": "Bangui correspond à République centrafricaine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0071",
+    "knowledge_id": "AFR-CAP-10",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Tchad à sa capitale.",
+    "choices": [
+      "Conakry",
+      "N'Djamena",
+      "Moroni",
+      "Le Caire"
+    ],
+    "answer": 1,
+    "explanation": "N'Djamena est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0072",
+    "knowledge_id": "AFR-CAP-10",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale N'Djamena à son pays africain.",
+    "choices": [
+      "Tchad",
+      "Comores",
+      "Éthiopie",
+      "Côte d’Ivoire"
+    ],
+    "answer": 0,
+    "explanation": "N'Djamena correspond à Tchad.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0073",
+    "knowledge_id": "AFR-CAP-11",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Comores ?",
+    "choices": [
+      "Brazzaville",
+      "Asmara",
+      "Bissau",
+      "Moroni"
+    ],
+    "answer": 3,
+    "explanation": "Moroni est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0074",
+    "knowledge_id": "AFR-CAP-11",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Moroni ?",
+    "choices": [
+      "Gabon",
+      "Kenya",
+      "Comores",
+      "République du Congo"
+    ],
+    "answer": 2,
+    "explanation": "Moroni correspond à Comores.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0075",
+    "knowledge_id": "AFR-CAP-12",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe République du Congo à sa capitale.",
+    "choices": [
+      "Yamoussoukro",
+      "Brazzaville",
+      "Kinshasa",
+      "Addis-Abeba"
+    ],
+    "answer": 1,
+    "explanation": "Brazzaville est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0076",
+    "knowledge_id": "AFR-CAP-12",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Brazzaville à son pays africain.",
+    "choices": [
+      "République du Congo",
+      "RDC",
+      "Gambie",
+      "Lesotho"
+    ],
+    "answer": 0,
+    "explanation": "Brazzaville correspond à République du Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0077",
+    "knowledge_id": "AFR-CAP-13",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de RDC ?",
+    "choices": [
+      "Djibouti",
+      "Libreville",
+      "Nairobi",
+      "Kinshasa"
+    ],
+    "answer": 3,
+    "explanation": "Kinshasa est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0078",
+    "knowledge_id": "AFR-CAP-13",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Kinshasa ?",
+    "choices": [
+      "Ghana",
+      "Liberia",
+      "RDC",
+      "Djibouti"
+    ],
+    "answer": 2,
+    "explanation": "Kinshasa correspond à RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0079",
+    "knowledge_id": "AFR-CAP-14",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Djibouti à sa capitale.",
+    "choices": [
+      "Maseru",
+      "Djibouti",
+      "Le Caire",
+      "Banjul"
+    ],
+    "answer": 1,
+    "explanation": "Djibouti est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0080",
+    "knowledge_id": "AFR-CAP-14",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Djibouti à son pays africain.",
+    "choices": [
+      "Djibouti",
+      "Égypte",
+      "Guinée",
+      "Libye"
+    ],
+    "answer": 0,
+    "explanation": "Djibouti correspond à Djibouti.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0081",
+    "knowledge_id": "AFR-CAP-15",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Égypte ?",
+    "choices": [
+      "Asmara",
+      "Accra",
+      "Monrovia",
+      "Le Caire"
+    ],
+    "answer": 3,
+    "explanation": "Le Caire est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0082",
+    "knowledge_id": "AFR-CAP-15",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Le Caire ?",
+    "choices": [
+      "Guinée-Bissau",
+      "Madagascar",
+      "Égypte",
+      "Érythrée"
+    ],
+    "answer": 2,
+    "explanation": "Le Caire correspond à Égypte.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0083",
+    "knowledge_id": "AFR-CAP-16",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Érythrée à sa capitale.",
+    "choices": [
+      "Tripoli",
+      "Asmara",
+      "Addis-Abeba",
+      "Conakry"
+    ],
+    "answer": 1,
+    "explanation": "Asmara est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0084",
+    "knowledge_id": "AFR-CAP-16",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Asmara à son pays africain.",
+    "choices": [
+      "Érythrée",
+      "Éthiopie",
+      "Côte d’Ivoire",
+      "Malawi"
+    ],
+    "answer": 0,
+    "explanation": "Asmara correspond à Érythrée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0085",
+    "knowledge_id": "AFR-CAP-17",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Éthiopie ?",
+    "choices": [
+      "Libreville",
+      "Bissau",
+      "Antananarivo",
+      "Addis-Abeba"
+    ],
+    "answer": 3,
+    "explanation": "Addis-Abeba est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0086",
+    "knowledge_id": "AFR-CAP-17",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Addis-Abeba ?",
+    "choices": [
+      "Kenya",
+      "Mali",
+      "Éthiopie",
+      "Gabon"
+    ],
+    "answer": 2,
+    "explanation": "Addis-Abeba correspond à Éthiopie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0087",
+    "knowledge_id": "AFR-CAP-18",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Gabon à sa capitale.",
+    "choices": [
+      "Lilongwe",
+      "Libreville",
+      "Banjul",
+      "Yamoussoukro"
+    ],
+    "answer": 1,
+    "explanation": "Libreville est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0088",
+    "knowledge_id": "AFR-CAP-18",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Libreville à son pays africain.",
+    "choices": [
+      "Gabon",
+      "Gambie",
+      "Lesotho",
+      "Mauritanie"
+    ],
+    "answer": 0,
+    "explanation": "Libreville correspond à Gabon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0089",
+    "knowledge_id": "AFR-CAP-19",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Gambie ?",
+    "choices": [
+      "Accra",
+      "Nairobi",
+      "Bamako",
+      "Banjul"
+    ],
+    "answer": 3,
+    "explanation": "Banjul est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0090",
+    "knowledge_id": "AFR-CAP-19",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Banjul ?",
+    "choices": [
+      "Liberia",
+      "Maurice",
+      "Gambie",
+      "Ghana"
+    ],
+    "answer": 2,
+    "explanation": "Banjul correspond à Gambie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0091",
+    "knowledge_id": "AFR-CAP-20",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Ghana à sa capitale.",
+    "choices": [
+      "Nouakchott",
+      "Accra",
+      "Conakry",
+      "Maseru"
+    ],
+    "answer": 1,
+    "explanation": "Accra est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0092",
+    "knowledge_id": "AFR-CAP-20",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Accra à son pays africain.",
+    "choices": [
+      "Ghana",
+      "Guinée",
+      "Libye",
+      "Maroc"
+    ],
+    "answer": 0,
+    "explanation": "Accra correspond à Ghana.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0093",
+    "knowledge_id": "AFR-CAP-21",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Guinée ?",
+    "choices": [
+      "Bissau",
+      "Monrovia",
+      "Port-Louis",
+      "Conakry"
+    ],
+    "answer": 3,
+    "explanation": "Conakry est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0094",
+    "knowledge_id": "AFR-CAP-21",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Conakry ?",
+    "choices": [
+      "Madagascar",
+      "Mozambique",
+      "Guinée",
+      "Guinée-Bissau"
+    ],
+    "answer": 2,
+    "explanation": "Conakry correspond à Guinée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0095",
+    "knowledge_id": "AFR-CAP-22",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Guinée-Bissau à sa capitale.",
+    "choices": [
+      "Rabat",
+      "Bissau",
+      "Yamoussoukro",
+      "Tripoli"
+    ],
+    "answer": 1,
+    "explanation": "Bissau est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0096",
+    "knowledge_id": "AFR-CAP-22",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Bissau à son pays africain.",
+    "choices": [
+      "Guinée-Bissau",
+      "Côte d’Ivoire",
+      "Malawi",
+      "Namibie"
+    ],
+    "answer": 0,
+    "explanation": "Bissau correspond à Guinée-Bissau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0097",
+    "knowledge_id": "AFR-CAP-23",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Côte d’Ivoire ?",
+    "choices": [
+      "Nairobi",
+      "Antananarivo",
+      "Maputo",
+      "Yamoussoukro"
+    ],
+    "answer": 3,
+    "explanation": "Yamoussoukro est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0098",
+    "knowledge_id": "AFR-CAP-23",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Yamoussoukro ?",
+    "choices": [
+      "Mali",
+      "Niger",
+      "Côte d’Ivoire",
+      "Kenya"
+    ],
+    "answer": 2,
+    "explanation": "Yamoussoukro correspond à Côte d’Ivoire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0099",
+    "knowledge_id": "AFR-CAP-24",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Kenya à sa capitale.",
+    "choices": [
+      "Windhoek",
+      "Nairobi",
+      "Maseru",
+      "Lilongwe"
+    ],
+    "answer": 1,
+    "explanation": "Nairobi est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0100",
+    "knowledge_id": "AFR-CAP-24",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Nairobi à son pays africain.",
+    "choices": [
+      "Kenya",
+      "Lesotho",
+      "Mauritanie",
+      "Nigeria"
+    ],
+    "answer": 0,
+    "explanation": "Nairobi correspond à Kenya.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0101",
+    "knowledge_id": "AFR-CAP-25",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Lesotho ?",
+    "choices": [
+      "Monrovia",
+      "Bamako",
+      "Niamey",
+      "Maseru"
+    ],
+    "answer": 3,
+    "explanation": "Maseru est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0102",
+    "knowledge_id": "AFR-CAP-25",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Maseru ?",
+    "choices": [
+      "Maurice",
+      "Rwanda",
+      "Lesotho",
+      "Liberia"
+    ],
+    "answer": 2,
+    "explanation": "Maseru correspond à Lesotho.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0103",
+    "knowledge_id": "AFR-CAP-26",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Liberia à sa capitale.",
+    "choices": [
+      "Abuja",
+      "Monrovia",
+      "Tripoli",
+      "Nouakchott"
+    ],
+    "answer": 1,
+    "explanation": "Monrovia est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0104",
+    "knowledge_id": "AFR-CAP-26",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Monrovia à son pays africain.",
+    "choices": [
+      "Liberia",
+      "Libye",
+      "Maroc",
+      "Sénégal"
+    ],
+    "answer": 0,
+    "explanation": "Monrovia correspond à Liberia.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0105",
+    "knowledge_id": "AFR-CAP-27",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Libye ?",
+    "choices": [
+      "Antananarivo",
+      "Port-Louis",
+      "Kigali",
+      "Tripoli"
+    ],
+    "answer": 3,
+    "explanation": "Tripoli est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0106",
+    "knowledge_id": "AFR-CAP-27",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Tripoli ?",
+    "choices": [
+      "Mozambique",
+      "Sierra Leone",
+      "Libye",
+      "Madagascar"
+    ],
+    "answer": 2,
+    "explanation": "Tripoli correspond à Libye.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0107",
+    "knowledge_id": "AFR-CAP-28",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Madagascar à sa capitale.",
+    "choices": [
+      "Dakar",
+      "Antananarivo",
+      "Lilongwe",
+      "Rabat"
+    ],
+    "answer": 1,
+    "explanation": "Antananarivo est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0108",
+    "knowledge_id": "AFR-CAP-28",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Antananarivo à son pays africain.",
+    "choices": [
+      "Madagascar",
+      "Malawi",
+      "Namibie",
+      "Somalie"
+    ],
+    "answer": 0,
+    "explanation": "Antananarivo correspond à Madagascar.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0109",
+    "knowledge_id": "AFR-CAP-29",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Malawi ?",
+    "choices": [
+      "Bamako",
+      "Maputo",
+      "Freetown",
+      "Lilongwe"
+    ],
+    "answer": 3,
+    "explanation": "Lilongwe est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0110",
+    "knowledge_id": "AFR-CAP-29",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Lilongwe ?",
+    "choices": [
+      "Niger",
+      "Soudan du Sud",
+      "Malawi",
+      "Mali"
+    ],
+    "answer": 2,
+    "explanation": "Lilongwe correspond à Malawi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0111",
+    "knowledge_id": "AFR-CAP-30",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Mali à sa capitale.",
+    "choices": [
+      "Mogadiscio",
+      "Bamako",
+      "Nouakchott",
+      "Windhoek"
+    ],
+    "answer": 1,
+    "explanation": "Bamako est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0112",
+    "knowledge_id": "AFR-CAP-30",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Bamako à son pays africain.",
+    "choices": [
+      "Mali",
+      "Mauritanie",
+      "Nigeria",
+      "Soudan"
+    ],
+    "answer": 0,
+    "explanation": "Bamako correspond à Mali.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0113",
+    "knowledge_id": "AFR-CAP-31",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Mauritanie ?",
+    "choices": [
+      "Port-Louis",
+      "Niamey",
+      "Djouba",
+      "Nouakchott"
+    ],
+    "answer": 3,
+    "explanation": "Nouakchott est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0114",
+    "knowledge_id": "AFR-CAP-31",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Nouakchott ?",
+    "choices": [
+      "Rwanda",
+      "Tanzanie",
+      "Mauritanie",
+      "Maurice"
+    ],
+    "answer": 2,
+    "explanation": "Nouakchott correspond à Mauritanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0115",
+    "knowledge_id": "AFR-CAP-32",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Maurice à sa capitale.",
+    "choices": [
+      "Khartoum",
+      "Port-Louis",
+      "Rabat",
+      "Abuja"
+    ],
+    "answer": 1,
+    "explanation": "Port-Louis est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0116",
+    "knowledge_id": "AFR-CAP-32",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Port-Louis à son pays africain.",
+    "choices": [
+      "Maurice",
+      "Maroc",
+      "Sénégal",
+      "Togo"
+    ],
+    "answer": 0,
+    "explanation": "Port-Louis correspond à Maurice.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0117",
+    "knowledge_id": "AFR-CAP-33",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Maroc ?",
+    "choices": [
+      "Maputo",
+      "Kigali",
+      "Dodoma",
+      "Rabat"
+    ],
+    "answer": 3,
+    "explanation": "Rabat est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0118",
+    "knowledge_id": "AFR-CAP-33",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Rabat ?",
+    "choices": [
+      "Sierra Leone",
+      "Tunisie",
+      "Maroc",
+      "Mozambique"
+    ],
+    "answer": 2,
+    "explanation": "Rabat correspond à Maroc.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0119",
+    "knowledge_id": "AFR-CAP-34",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Mozambique à sa capitale.",
+    "choices": [
+      "Lomé",
+      "Maputo",
+      "Windhoek",
+      "Dakar"
+    ],
+    "answer": 1,
+    "explanation": "Maputo est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0120",
+    "knowledge_id": "AFR-CAP-34",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Maputo à son pays africain.",
+    "choices": [
+      "Mozambique",
+      "Namibie",
+      "Somalie",
+      "Ouganda"
+    ],
+    "answer": 0,
+    "explanation": "Maputo correspond à Mozambique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0121",
+    "knowledge_id": "AFR-CAP-35",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Namibie ?",
+    "choices": [
+      "Niamey",
+      "Freetown",
+      "Tunis",
+      "Windhoek"
+    ],
+    "answer": 3,
+    "explanation": "Windhoek est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0122",
+    "knowledge_id": "AFR-CAP-35",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Windhoek ?",
+    "choices": [
+      "Soudan du Sud",
+      "Zambie",
+      "Namibie",
+      "Niger"
+    ],
+    "answer": 2,
+    "explanation": "Windhoek correspond à Namibie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0123",
+    "knowledge_id": "AFR-CAP-36",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Niger à sa capitale.",
+    "choices": [
+      "Kampala",
+      "Niamey",
+      "Abuja",
+      "Mogadiscio"
+    ],
+    "answer": 1,
+    "explanation": "Niamey est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0124",
+    "knowledge_id": "AFR-CAP-36",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Niamey à son pays africain.",
+    "choices": [
+      "Niger",
+      "Nigeria",
+      "Soudan",
+      "Zimbabwe"
+    ],
+    "answer": 0,
+    "explanation": "Niamey correspond à Niger.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0125",
+    "knowledge_id": "AFR-CAP-37",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Nigeria ?",
+    "choices": [
+      "Kigali",
+      "Djouba",
+      "Lusaka",
+      "Abuja"
+    ],
+    "answer": 3,
+    "explanation": "Abuja est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0126",
+    "knowledge_id": "AFR-CAP-37",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Abuja ?",
+    "choices": [
+      "Tanzanie",
+      "Algérie",
+      "Nigeria",
+      "Rwanda"
+    ],
+    "answer": 2,
+    "explanation": "Abuja correspond à Nigeria.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0127",
+    "knowledge_id": "AFR-CAP-38",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Rwanda à sa capitale.",
+    "choices": [
+      "Harare",
+      "Kigali",
+      "Dakar",
+      "Khartoum"
+    ],
+    "answer": 1,
+    "explanation": "Kigali est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0128",
+    "knowledge_id": "AFR-CAP-38",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Kigali à son pays africain.",
+    "choices": [
+      "Rwanda",
+      "Sénégal",
+      "Togo",
+      "Angola"
+    ],
+    "answer": 0,
+    "explanation": "Kigali correspond à Rwanda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0129",
+    "knowledge_id": "AFR-CAP-39",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Sénégal ?",
+    "choices": [
+      "Freetown",
+      "Dodoma",
+      "Alger",
+      "Dakar"
+    ],
+    "answer": 3,
+    "explanation": "Dakar est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0130",
+    "knowledge_id": "AFR-CAP-39",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Dakar ?",
+    "choices": [
+      "Tunisie",
+      "Bénin",
+      "Sénégal",
+      "Sierra Leone"
+    ],
+    "answer": 2,
+    "explanation": "Dakar correspond à Sénégal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0131",
+    "knowledge_id": "AFR-CAP-40",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Sierra Leone à sa capitale.",
+    "choices": [
+      "Luanda",
+      "Freetown",
+      "Mogadiscio",
+      "Lomé"
+    ],
+    "answer": 1,
+    "explanation": "Freetown est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0132",
+    "knowledge_id": "AFR-CAP-40",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Freetown à son pays africain.",
+    "choices": [
+      "Sierra Leone",
+      "Somalie",
+      "Ouganda",
+      "Botswana"
+    ],
+    "answer": 0,
+    "explanation": "Freetown correspond à Sierra Leone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0133",
+    "knowledge_id": "AFR-CAP-41",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Somalie ?",
+    "choices": [
+      "Djouba",
+      "Tunis",
+      "Porto-Novo",
+      "Mogadiscio"
+    ],
+    "answer": 3,
+    "explanation": "Mogadiscio est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0134",
+    "knowledge_id": "AFR-CAP-41",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Mogadiscio ?",
+    "choices": [
+      "Zambie",
+      "Burkina Faso",
+      "Somalie",
+      "Soudan du Sud"
+    ],
+    "answer": 2,
+    "explanation": "Mogadiscio correspond à Somalie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0135",
+    "knowledge_id": "AFR-CAP-42",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Soudan du Sud à sa capitale.",
+    "choices": [
+      "Gaborone",
+      "Djouba",
+      "Khartoum",
+      "Kampala"
+    ],
+    "answer": 1,
+    "explanation": "Djouba est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0136",
+    "knowledge_id": "AFR-CAP-42",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Djouba à son pays africain.",
+    "choices": [
+      "Soudan du Sud",
+      "Soudan",
+      "Zimbabwe",
+      "Burundi"
+    ],
+    "answer": 0,
+    "explanation": "Djouba correspond à Soudan du Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0137",
+    "knowledge_id": "AFR-CAP-43",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Soudan ?",
+    "choices": [
+      "Dodoma",
+      "Lusaka",
+      "Ouagadougou",
+      "Khartoum"
+    ],
+    "answer": 3,
+    "explanation": "Khartoum est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0138",
+    "knowledge_id": "AFR-CAP-43",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Khartoum ?",
+    "choices": [
+      "Algérie",
+      "Cameroun",
+      "Soudan",
+      "Tanzanie"
+    ],
+    "answer": 2,
+    "explanation": "Khartoum correspond à Soudan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0139",
+    "knowledge_id": "AFR-CAP-44",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Tanzanie à sa capitale.",
+    "choices": [
+      "Gitega",
+      "Dodoma",
+      "Lomé",
+      "Harare"
+    ],
+    "answer": 1,
+    "explanation": "Dodoma est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0140",
+    "knowledge_id": "AFR-CAP-44",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Dodoma à son pays africain.",
+    "choices": [
+      "Tanzanie",
+      "Togo",
+      "Angola",
+      "Cap-Vert"
+    ],
+    "answer": 0,
+    "explanation": "Dodoma correspond à Tanzanie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0141",
+    "knowledge_id": "AFR-CAP-45",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Togo ?",
+    "choices": [
+      "Tunis",
+      "Alger",
+      "Yaoundé",
+      "Lomé"
+    ],
+    "answer": 3,
+    "explanation": "Lomé est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0142",
+    "knowledge_id": "AFR-CAP-45",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Lomé ?",
+    "choices": [
+      "Bénin",
+      "République centrafricaine",
+      "Togo",
+      "Tunisie"
+    ],
+    "answer": 2,
+    "explanation": "Lomé correspond à Togo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0143",
+    "knowledge_id": "AFR-CAP-46",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Tunisie à sa capitale.",
+    "choices": [
+      "Praia",
+      "Tunis",
+      "Kampala",
+      "Luanda"
+    ],
+    "answer": 1,
+    "explanation": "Tunis est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0144",
+    "knowledge_id": "AFR-CAP-46",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Tunis à son pays africain.",
+    "choices": [
+      "Tunisie",
+      "Ouganda",
+      "Botswana",
+      "Tchad"
+    ],
+    "answer": 0,
+    "explanation": "Tunis correspond à Tunisie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0145",
+    "knowledge_id": "AFR-CAP-47",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Ouganda ?",
+    "choices": [
+      "Lusaka",
+      "Porto-Novo",
+      "Bangui",
+      "Kampala"
+    ],
+    "answer": 3,
+    "explanation": "Kampala est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0146",
+    "knowledge_id": "AFR-CAP-47",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Kampala ?",
+    "choices": [
+      "Burkina Faso",
+      "Comores",
+      "Ouganda",
+      "Zambie"
+    ],
+    "answer": 2,
+    "explanation": "Kampala correspond à Ouganda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0147",
+    "knowledge_id": "AFR-CAP-48",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe Zambie à sa capitale.",
+    "choices": [
+      "N'Djamena",
+      "Lusaka",
+      "Harare",
+      "Gaborone"
+    ],
+    "answer": 1,
+    "explanation": "Lusaka est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0148",
+    "knowledge_id": "AFR-CAP-48",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Associe la capitale Lusaka à son pays africain.",
+    "choices": [
+      "Zambie",
+      "Zimbabwe",
+      "Burundi",
+      "République du Congo"
+    ],
+    "answer": 0,
+    "explanation": "Lusaka correspond à Zambie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0149",
+    "knowledge_id": "AFR-CAP-49",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "Quelle est la capitale de Zimbabwe ?",
+    "choices": [
+      "Alger",
+      "Ouagadougou",
+      "Moroni",
+      "Harare"
+    ],
+    "answer": 3,
+    "explanation": "Harare est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0150",
+    "knowledge_id": "AFR-CAP-49",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Capitales africaines",
+    "prompt": "À quel pays africain correspond la capitale Harare ?",
+    "choices": [
+      "Cameroun",
+      "RDC",
+      "Zimbabwe",
+      "Algérie"
+    ],
+    "answer": 2,
+    "explanation": "Harare correspond à Zimbabwe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0151",
+    "knowledge_id": "WORLD-CAP-01",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe France à sa capitale.",
+    "choices": [
+      "Stockholm",
+      "Paris",
+      "Bruxelles",
+      "Lisbonne"
+    ],
+    "answer": 1,
+    "explanation": "Paris est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0152",
+    "knowledge_id": "WORLD-CAP-01",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Paris à son pays.",
+    "choices": [
+      "France",
+      "Belgique",
+      "Irlande",
+      "Danemark"
+    ],
+    "answer": 0,
+    "explanation": "Paris correspond à France.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0153",
+    "knowledge_id": "WORLD-CAP-02",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Belgique ?",
+    "choices": [
+      "Berlin",
+      "Londres",
+      "Oslo",
+      "Bruxelles"
+    ],
+    "answer": 3,
+    "explanation": "Bruxelles est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0154",
+    "knowledge_id": "WORLD-CAP-02",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Bruxelles ?",
+    "choices": [
+      "Grèce",
+      "Finlande",
+      "Belgique",
+      "Allemagne"
+    ],
+    "answer": 2,
+    "explanation": "Bruxelles correspond à Belgique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0155",
+    "knowledge_id": "WORLD-CAP-03",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Allemagne à sa capitale.",
+    "choices": [
+      "Copenhague",
+      "Berlin",
+      "Rome",
+      "Dublin"
+    ],
+    "answer": 1,
+    "explanation": "Berlin est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0156",
+    "knowledge_id": "WORLD-CAP-03",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Berlin à son pays.",
+    "choices": [
+      "Allemagne",
+      "Italie",
+      "Autriche",
+      "Russie"
+    ],
+    "answer": 0,
+    "explanation": "Berlin correspond à Allemagne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0157",
+    "knowledge_id": "WORLD-CAP-04",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Italie ?",
+    "choices": [
+      "Madrid",
+      "Athènes",
+      "Helsinki",
+      "Rome"
+    ],
+    "answer": 3,
+    "explanation": "Rome est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0158",
+    "knowledge_id": "WORLD-CAP-04",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Rome ?",
+    "choices": [
+      "Pologne",
+      "Chine",
+      "Italie",
+      "Espagne"
+    ],
+    "answer": 2,
+    "explanation": "Rome correspond à Italie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0159",
+    "knowledge_id": "WORLD-CAP-05",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Espagne à sa capitale.",
+    "choices": [
+      "Moscou",
+      "Madrid",
+      "Lisbonne",
+      "Vienne"
+    ],
+    "answer": 1,
+    "explanation": "Madrid est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0160",
+    "knowledge_id": "WORLD-CAP-05",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Madrid à son pays.",
+    "choices": [
+      "Espagne",
+      "Portugal",
+      "Suède",
+      "Japon"
+    ],
+    "answer": 0,
+    "explanation": "Madrid correspond à Espagne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0161",
+    "knowledge_id": "WORLD-CAP-06",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Portugal ?",
+    "choices": [
+      "Londres",
+      "Varsovie",
+      "Pékin",
+      "Lisbonne"
+    ],
+    "answer": 3,
+    "explanation": "Lisbonne est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0162",
+    "knowledge_id": "WORLD-CAP-06",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Lisbonne ?",
+    "choices": [
+      "Norvège",
+      "Inde",
+      "Portugal",
+      "Royaume-Uni"
+    ],
+    "answer": 2,
+    "explanation": "Lisbonne correspond à Portugal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0163",
+    "knowledge_id": "WORLD-CAP-07",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Royaume-Uni à sa capitale.",
+    "choices": [
+      "Tokyo",
+      "Londres",
+      "Dublin",
+      "Stockholm"
+    ],
+    "answer": 1,
+    "explanation": "Londres est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0164",
+    "knowledge_id": "WORLD-CAP-07",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Londres à son pays.",
+    "choices": [
+      "Royaume-Uni",
+      "Irlande",
+      "Danemark",
+      "Pakistan"
+    ],
+    "answer": 0,
+    "explanation": "Londres correspond à Royaume-Uni.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0165",
+    "knowledge_id": "WORLD-CAP-08",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Irlande ?",
+    "choices": [
+      "Athènes",
+      "Oslo",
+      "New Delhi",
+      "Dublin"
+    ],
+    "answer": 3,
+    "explanation": "Dublin est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0166",
+    "knowledge_id": "WORLD-CAP-08",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Dublin ?",
+    "choices": [
+      "Finlande",
+      "Indonésie",
+      "Irlande",
+      "Grèce"
+    ],
+    "answer": 2,
+    "explanation": "Dublin correspond à Irlande.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0167",
+    "knowledge_id": "WORLD-CAP-09",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Grèce à sa capitale.",
+    "choices": [
+      "Islamabad",
+      "Athènes",
+      "Vienne",
+      "Copenhague"
+    ],
+    "answer": 1,
+    "explanation": "Athènes est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0168",
+    "knowledge_id": "WORLD-CAP-09",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Athènes à son pays.",
+    "choices": [
+      "Grèce",
+      "Autriche",
+      "Russie",
+      "Thaïlande"
+    ],
+    "answer": 0,
+    "explanation": "Athènes correspond à Grèce.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0169",
+    "knowledge_id": "WORLD-CAP-10",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Autriche ?",
+    "choices": [
+      "Varsovie",
+      "Helsinki",
+      "Jakarta",
+      "Vienne"
+    ],
+    "answer": 3,
+    "explanation": "Vienne est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0170",
+    "knowledge_id": "WORLD-CAP-10",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Vienne ?",
+    "choices": [
+      "Chine",
+      "Corée du Sud",
+      "Autriche",
+      "Pologne"
+    ],
+    "answer": 2,
+    "explanation": "Vienne correspond à Autriche.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0171",
+    "knowledge_id": "WORLD-CAP-11",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Pologne à sa capitale.",
+    "choices": [
+      "Bangkok",
+      "Varsovie",
+      "Stockholm",
+      "Moscou"
+    ],
+    "answer": 1,
+    "explanation": "Varsovie est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0172",
+    "knowledge_id": "WORLD-CAP-11",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Varsovie à son pays.",
+    "choices": [
+      "Pologne",
+      "Suède",
+      "Japon",
+      "Canada"
+    ],
+    "answer": 0,
+    "explanation": "Varsovie correspond à Pologne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0173",
+    "knowledge_id": "WORLD-CAP-12",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Suède ?",
+    "choices": [
+      "Oslo",
+      "Pékin",
+      "Séoul",
+      "Stockholm"
+    ],
+    "answer": 3,
+    "explanation": "Stockholm est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0174",
+    "knowledge_id": "WORLD-CAP-12",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Stockholm ?",
+    "choices": [
+      "Inde",
+      "États-Unis",
+      "Suède",
+      "Norvège"
+    ],
+    "answer": 2,
+    "explanation": "Stockholm correspond à Suède.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0175",
+    "knowledge_id": "WORLD-CAP-13",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Norvège à sa capitale.",
+    "choices": [
+      "Ottawa",
+      "Oslo",
+      "Copenhague",
+      "Tokyo"
+    ],
+    "answer": 1,
+    "explanation": "Oslo est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0176",
+    "knowledge_id": "WORLD-CAP-13",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Oslo à son pays.",
+    "choices": [
+      "Norvège",
+      "Danemark",
+      "Pakistan",
+      "Mexique"
+    ],
+    "answer": 0,
+    "explanation": "Oslo correspond à Norvège.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0177",
+    "knowledge_id": "WORLD-CAP-14",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Danemark ?",
+    "choices": [
+      "Helsinki",
+      "New Delhi",
+      "Washington, D.C.",
+      "Copenhague"
+    ],
+    "answer": 3,
+    "explanation": "Copenhague est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0178",
+    "knowledge_id": "WORLD-CAP-14",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Copenhague ?",
+    "choices": [
+      "Indonésie",
+      "Brésil",
+      "Danemark",
+      "Finlande"
+    ],
+    "answer": 2,
+    "explanation": "Copenhague correspond à Danemark.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0179",
+    "knowledge_id": "WORLD-CAP-15",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Finlande à sa capitale.",
+    "choices": [
+      "Mexico",
+      "Helsinki",
+      "Moscou",
+      "Islamabad"
+    ],
+    "answer": 1,
+    "explanation": "Helsinki est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0180",
+    "knowledge_id": "WORLD-CAP-15",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Helsinki à son pays.",
+    "choices": [
+      "Finlande",
+      "Russie",
+      "Thaïlande",
+      "Argentine"
+    ],
+    "answer": 0,
+    "explanation": "Helsinki correspond à Finlande.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0181",
+    "knowledge_id": "WORLD-CAP-16",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Russie ?",
+    "choices": [
+      "Pékin",
+      "Jakarta",
+      "Brasília",
+      "Moscou"
+    ],
+    "answer": 3,
+    "explanation": "Moscou est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0182",
+    "knowledge_id": "WORLD-CAP-16",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Moscou ?",
+    "choices": [
+      "Corée du Sud",
+      "Pérou",
+      "Russie",
+      "Chine"
+    ],
+    "answer": 2,
+    "explanation": "Moscou correspond à Russie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0183",
+    "knowledge_id": "WORLD-CAP-17",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Chine à sa capitale.",
+    "choices": [
+      "Buenos Aires",
+      "Pékin",
+      "Tokyo",
+      "Bangkok"
+    ],
+    "answer": 1,
+    "explanation": "Pékin est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0184",
+    "knowledge_id": "WORLD-CAP-17",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Pékin à son pays.",
+    "choices": [
+      "Chine",
+      "Japon",
+      "Canada",
+      "Australie"
+    ],
+    "answer": 0,
+    "explanation": "Pékin correspond à Chine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0185",
+    "knowledge_id": "WORLD-CAP-18",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Japon ?",
+    "choices": [
+      "New Delhi",
+      "Séoul",
+      "Lima",
+      "Tokyo"
+    ],
+    "answer": 3,
+    "explanation": "Tokyo est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0186",
+    "knowledge_id": "WORLD-CAP-18",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Tokyo ?",
+    "choices": [
+      "États-Unis",
+      "Nouvelle-Zélande",
+      "Japon",
+      "Inde"
+    ],
+    "answer": 2,
+    "explanation": "Tokyo correspond à Japon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0187",
+    "knowledge_id": "WORLD-CAP-19",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Inde à sa capitale.",
+    "choices": [
+      "Canberra",
+      "New Delhi",
+      "Islamabad",
+      "Ottawa"
+    ],
+    "answer": 1,
+    "explanation": "New Delhi est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0188",
+    "knowledge_id": "WORLD-CAP-19",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale New Delhi à son pays.",
+    "choices": [
+      "Inde",
+      "Pakistan",
+      "Mexique",
+      "Turquie"
+    ],
+    "answer": 0,
+    "explanation": "New Delhi correspond à Inde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0189",
+    "knowledge_id": "WORLD-CAP-20",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Pakistan ?",
+    "choices": [
+      "Jakarta",
+      "Washington, D.C.",
+      "Wellington",
+      "Islamabad"
+    ],
+    "answer": 3,
+    "explanation": "Islamabad est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0190",
+    "knowledge_id": "WORLD-CAP-20",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Islamabad ?",
+    "choices": [
+      "Brésil",
+      "France",
+      "Pakistan",
+      "Indonésie"
+    ],
+    "answer": 2,
+    "explanation": "Islamabad correspond à Pakistan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0191",
+    "knowledge_id": "WORLD-CAP-21",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Indonésie à sa capitale.",
+    "choices": [
+      "Ankara",
+      "Jakarta",
+      "Bangkok",
+      "Mexico"
+    ],
+    "answer": 1,
+    "explanation": "Jakarta est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0192",
+    "knowledge_id": "WORLD-CAP-21",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Jakarta à son pays.",
+    "choices": [
+      "Indonésie",
+      "Thaïlande",
+      "Argentine",
+      "Belgique"
+    ],
+    "answer": 0,
+    "explanation": "Jakarta correspond à Indonésie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0193",
+    "knowledge_id": "WORLD-CAP-22",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Thaïlande ?",
+    "choices": [
+      "Séoul",
+      "Brasília",
+      "Paris",
+      "Bangkok"
+    ],
+    "answer": 3,
+    "explanation": "Bangkok est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0194",
+    "knowledge_id": "WORLD-CAP-22",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Bangkok ?",
+    "choices": [
+      "Pérou",
+      "Allemagne",
+      "Thaïlande",
+      "Corée du Sud"
+    ],
+    "answer": 2,
+    "explanation": "Bangkok correspond à Thaïlande.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0195",
+    "knowledge_id": "WORLD-CAP-23",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Corée du Sud à sa capitale.",
+    "choices": [
+      "Bruxelles",
+      "Séoul",
+      "Ottawa",
+      "Buenos Aires"
+    ],
+    "answer": 1,
+    "explanation": "Séoul est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0196",
+    "knowledge_id": "WORLD-CAP-23",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Séoul à son pays.",
+    "choices": [
+      "Corée du Sud",
+      "Canada",
+      "Australie",
+      "Italie"
+    ],
+    "answer": 0,
+    "explanation": "Séoul correspond à Corée du Sud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0197",
+    "knowledge_id": "WORLD-CAP-24",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Canada ?",
+    "choices": [
+      "Washington, D.C.",
+      "Lima",
+      "Berlin",
+      "Ottawa"
+    ],
+    "answer": 3,
+    "explanation": "Ottawa est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0198",
+    "knowledge_id": "WORLD-CAP-24",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Ottawa ?",
+    "choices": [
+      "Nouvelle-Zélande",
+      "Espagne",
+      "Canada",
+      "États-Unis"
+    ],
+    "answer": 2,
+    "explanation": "Ottawa correspond à Canada.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0199",
+    "knowledge_id": "WORLD-CAP-25",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe États-Unis à sa capitale.",
+    "choices": [
+      "Rome",
+      "Washington, D.C.",
+      "Mexico",
+      "Canberra"
+    ],
+    "answer": 1,
+    "explanation": "Washington, D.C. est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0200",
+    "knowledge_id": "WORLD-CAP-25",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Washington, D.C. à son pays.",
+    "choices": [
+      "États-Unis",
+      "Mexique",
+      "Turquie",
+      "Portugal"
+    ],
+    "answer": 0,
+    "explanation": "Washington, D.C. correspond à États-Unis.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0201",
+    "knowledge_id": "WORLD-CAP-26",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Mexique ?",
+    "choices": [
+      "Brasília",
+      "Wellington",
+      "Madrid",
+      "Mexico"
+    ],
+    "answer": 3,
+    "explanation": "Mexico est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0202",
+    "knowledge_id": "WORLD-CAP-26",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Mexico ?",
+    "choices": [
+      "France",
+      "Royaume-Uni",
+      "Mexique",
+      "Brésil"
+    ],
+    "answer": 2,
+    "explanation": "Mexico correspond à Mexique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0203",
+    "knowledge_id": "WORLD-CAP-27",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Brésil à sa capitale.",
+    "choices": [
+      "Lisbonne",
+      "Brasília",
+      "Buenos Aires",
+      "Ankara"
+    ],
+    "answer": 1,
+    "explanation": "Brasília est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0204",
+    "knowledge_id": "WORLD-CAP-27",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Brasília à son pays.",
+    "choices": [
+      "Brésil",
+      "Argentine",
+      "Belgique",
+      "Irlande"
+    ],
+    "answer": 0,
+    "explanation": "Brasília correspond à Brésil.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0205",
+    "knowledge_id": "WORLD-CAP-28",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Argentine ?",
+    "choices": [
+      "Lima",
+      "Paris",
+      "Londres",
+      "Buenos Aires"
+    ],
+    "answer": 3,
+    "explanation": "Buenos Aires est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0206",
+    "knowledge_id": "WORLD-CAP-28",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Buenos Aires ?",
+    "choices": [
+      "Allemagne",
+      "Grèce",
+      "Argentine",
+      "Pérou"
+    ],
+    "answer": 2,
+    "explanation": "Buenos Aires correspond à Argentine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0207",
+    "knowledge_id": "WORLD-CAP-29",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Pérou à sa capitale.",
+    "choices": [
+      "Dublin",
+      "Lima",
+      "Canberra",
+      "Bruxelles"
+    ],
+    "answer": 1,
+    "explanation": "Lima est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0208",
+    "knowledge_id": "WORLD-CAP-29",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Lima à son pays.",
+    "choices": [
+      "Pérou",
+      "Australie",
+      "Italie",
+      "Autriche"
+    ],
+    "answer": 0,
+    "explanation": "Lima correspond à Pérou.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0209",
+    "knowledge_id": "WORLD-CAP-30",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Australie ?",
+    "choices": [
+      "Wellington",
+      "Berlin",
+      "Athènes",
+      "Canberra"
+    ],
+    "answer": 3,
+    "explanation": "Canberra est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0210",
+    "knowledge_id": "WORLD-CAP-30",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Canberra ?",
+    "choices": [
+      "Espagne",
+      "Pologne",
+      "Australie",
+      "Nouvelle-Zélande"
+    ],
+    "answer": 2,
+    "explanation": "Canberra correspond à Australie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0211",
+    "knowledge_id": "WORLD-CAP-31",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe Nouvelle-Zélande à sa capitale.",
+    "choices": [
+      "Vienne",
+      "Wellington",
+      "Ankara",
+      "Rome"
+    ],
+    "answer": 1,
+    "explanation": "Wellington est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0212",
+    "knowledge_id": "WORLD-CAP-31",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Associe la capitale Wellington à son pays.",
+    "choices": [
+      "Nouvelle-Zélande",
+      "Turquie",
+      "Portugal",
+      "Suède"
+    ],
+    "answer": 0,
+    "explanation": "Wellington correspond à Nouvelle-Zélande.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0213",
+    "knowledge_id": "WORLD-CAP-32",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "Quelle est la capitale de Turquie ?",
+    "choices": [
+      "Paris",
+      "Madrid",
+      "Varsovie",
+      "Ankara"
+    ],
+    "answer": 3,
+    "explanation": "Ankara est la réponse correcte.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0214",
+    "knowledge_id": "WORLD-CAP-32",
+    "module": 4,
+    "domain": "Monde",
+    "subdomain": "Capitales mondiales",
+    "prompt": "À quel pays correspond la capitale Ankara ?",
+    "choices": [
+      "Royaume-Uni",
+      "Norvège",
+      "Turquie",
+      "France"
+    ],
+    "answer": 2,
+    "explanation": "Ankara correspond à Turquie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Atlas géographique — faits stables"
+  },
+  {
+    "id": "G0215",
+    "knowledge_id": "AFR-CUR-01",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Nigeria ?",
+    "choices": [
+      "franc burundais",
+      "naira",
+      "rand",
+      "shilling ougandais"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie de Nigeria est naira.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0216",
+    "knowledge_id": "AFR-CUR-02",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Afrique du Sud ?",
+    "choices": [
+      "rand",
+      "cedi",
+      "shilling tanzanien",
+      "franc congolais"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie de Afrique du Sud est rand.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0217",
+    "knowledge_id": "AFR-CUR-03",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Ghana ?",
+    "choices": [
+      "pula",
+      "kwacha zambien",
+      "livre égyptienne",
+      "cedi"
+    ],
+    "answer": 3,
+    "explanation": "La monnaie de Ghana est cedi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0218",
+    "knowledge_id": "AFR-CUR-04",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Botswana ?",
+    "choices": [
+      "kwacha malawite",
+      "dirham marocain",
+      "pula",
+      "birr"
+    ],
+    "answer": 2,
+    "explanation": "La monnaie de Botswana est pula.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0219",
+    "knowledge_id": "AFR-CUR-05",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Éthiopie ?",
+    "choices": [
+      "dinar algérien",
+      "birr",
+      "shilling kényan",
+      "kwanza"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie de Éthiopie est birr.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0220",
+    "knowledge_id": "AFR-CUR-06",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Kenya ?",
+    "choices": [
+      "shilling kényan",
+      "shilling ougandais",
+      "metical",
+      "dinar tunisien"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie de Kenya est shilling kényan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0221",
+    "knowledge_id": "AFR-CUR-07",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Ouganda ?",
+    "choices": [
+      "shilling tanzanien",
+      "franc rwandais",
+      "dinar libyen",
+      "shilling ougandais"
+    ],
+    "answer": 3,
+    "explanation": "La monnaie de Ouganda est shilling ougandais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0222",
+    "knowledge_id": "AFR-CUR-08",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Tanzanie ?",
+    "choices": [
+      "franc burundais",
+      "leone",
+      "shilling tanzanien",
+      "kwacha zambien"
+    ],
+    "answer": 2,
+    "explanation": "La monnaie de Tanzanie est shilling tanzanien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0223",
+    "knowledge_id": "AFR-CUR-09",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Zambie ?",
+    "choices": [
+      "dollar libérien",
+      "kwacha zambien",
+      "kwacha malawite",
+      "franc congolais"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie de Zambie est kwacha zambien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0224",
+    "knowledge_id": "AFR-CUR-10",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Malawi ?",
+    "choices": [
+      "kwacha malawite",
+      "kwanza",
+      "livre égyptienne",
+      "dalasi"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie de Malawi est kwacha malawite.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0225",
+    "knowledge_id": "AFR-CUR-11",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Angola ?",
+    "choices": [
+      "metical",
+      "dirham marocain",
+      "ouguiya",
+      "kwanza"
+    ],
+    "answer": 3,
+    "explanation": "La monnaie de Angola est kwanza.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0226",
+    "knowledge_id": "AFR-CUR-12",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Mozambique ?",
+    "choices": [
+      "dinar algérien",
+      "ariary",
+      "metical",
+      "franc rwandais"
+    ],
+    "answer": 2,
+    "explanation": "La monnaie de Mozambique est metical.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0227",
+    "knowledge_id": "AFR-CUR-13",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Rwanda ?",
+    "choices": [
+      "roupie mauricienne",
+      "franc rwandais",
+      "franc burundais",
+      "dinar tunisien"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie de Rwanda est franc rwandais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0228",
+    "knowledge_id": "AFR-CUR-14",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Burundi ?",
+    "choices": [
+      "franc burundais",
+      "franc congolais",
+      "dinar libyen",
+      "roupie seychelloise"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie de Burundi est franc burundais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0229",
+    "knowledge_id": "AFR-CUR-15",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de RDC ?",
+    "choices": [
+      "livre égyptienne",
+      "leone",
+      "escudo cap-verdien",
+      "franc congolais"
+    ],
+    "answer": 3,
+    "explanation": "La monnaie de RDC est franc congolais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0230",
+    "knowledge_id": "AFR-CUR-16",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Égypte ?",
+    "choices": [
+      "dollar libérien",
+      "franc comorien",
+      "livre égyptienne",
+      "dirham marocain"
+    ],
+    "answer": 2,
+    "explanation": "La monnaie de Égypte est livre égyptienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0231",
+    "knowledge_id": "AFR-CUR-17",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Maroc ?",
+    "choices": [
+      "dollar namibien",
+      "dirham marocain",
+      "dinar algérien",
+      "dalasi"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie de Maroc est dirham marocain.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0232",
+    "knowledge_id": "AFR-CUR-18",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Algérie ?",
+    "choices": [
+      "dinar algérien",
+      "dinar tunisien",
+      "ouguiya",
+      "naira"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie de Algérie est dinar algérien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0233",
+    "knowledge_id": "AFR-CUR-19",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Tunisie ?",
+    "choices": [
+      "dinar libyen",
+      "ariary",
+      "rand",
+      "dinar tunisien"
+    ],
+    "answer": 3,
+    "explanation": "La monnaie de Tunisie est dinar tunisien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0234",
+    "knowledge_id": "AFR-CUR-20",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Libye ?",
+    "choices": [
+      "roupie mauricienne",
+      "cedi",
+      "dinar libyen",
+      "leone"
+    ],
+    "answer": 2,
+    "explanation": "La monnaie de Libye est dinar libyen.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0235",
+    "knowledge_id": "AFR-CUR-21",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Sierra Leone ?",
+    "choices": [
+      "pula",
+      "leone",
+      "dollar libérien",
+      "roupie seychelloise"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie de Sierra Leone est leone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0236",
+    "knowledge_id": "AFR-CUR-22",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Liberia ?",
+    "choices": [
+      "dollar libérien",
+      "dalasi",
+      "escudo cap-verdien",
+      "birr"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie de Liberia est dollar libérien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0237",
+    "knowledge_id": "AFR-CUR-23",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Gambie ?",
+    "choices": [
+      "ouguiya",
+      "franc comorien",
+      "shilling kényan",
+      "dalasi"
+    ],
+    "answer": 3,
+    "explanation": "La monnaie de Gambie est dalasi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0238",
+    "knowledge_id": "AFR-CUR-24",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Mauritanie ?",
+    "choices": [
+      "dollar namibien",
+      "shilling ougandais",
+      "ouguiya",
+      "ariary"
+    ],
+    "answer": 2,
+    "explanation": "La monnaie de Mauritanie est ouguiya.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0239",
+    "knowledge_id": "AFR-CUR-25",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Madagascar ?",
+    "choices": [
+      "shilling tanzanien",
+      "ariary",
+      "roupie mauricienne",
+      "naira"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie de Madagascar est ariary.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0240",
+    "knowledge_id": "AFR-CUR-26",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Maurice ?",
+    "choices": [
+      "roupie mauricienne",
+      "roupie seychelloise",
+      "rand",
+      "kwacha zambien"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie de Maurice est roupie mauricienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0241",
+    "knowledge_id": "AFR-CUR-27",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Seychelles ?",
+    "choices": [
+      "escudo cap-verdien",
+      "cedi",
+      "kwacha malawite",
+      "roupie seychelloise"
+    ],
+    "answer": 3,
+    "explanation": "La monnaie de Seychelles est roupie seychelloise.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0242",
+    "knowledge_id": "AFR-CUR-28",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Cap-Vert ?",
+    "choices": [
+      "pula",
+      "kwanza",
+      "escudo cap-verdien",
+      "franc comorien"
+    ],
+    "answer": 2,
+    "explanation": "La monnaie de Cap-Vert est escudo cap-verdien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0243",
+    "knowledge_id": "AFR-CUR-29",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Comores ?",
+    "choices": [
+      "metical",
+      "franc comorien",
+      "dollar namibien",
+      "birr"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie de Comores est franc comorien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0244",
+    "knowledge_id": "AFR-CUR-30",
+    "module": 3,
+    "domain": "Afrique",
+    "subdomain": "Monnaies",
+    "prompt": "Quelle est la monnaie de Namibie ?",
+    "choices": [
+      "dollar namibien",
+      "naira",
+      "shilling kényan",
+      "franc rwandais"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie de Namibie est dollar namibien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Banques centrales / faits stables"
+  },
+  {
+    "id": "G0245",
+    "knowledge_id": "ORG-01-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Organisation des Nations Unies (ONU) ?",
+    "choices": [
+      "Arusha",
+      "New York",
+      "Washington, D.C.",
+      "Lyon"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de Organisation des Nations Unies (ONU) est à New York.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0246",
+    "knowledge_id": "ORG-01-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Organisation des Nations Unies (ONU) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1960",
+      "1992",
+      "1945",
+      "1919"
+    ],
+    "answer": 2,
+    "explanation": "Organisation des Nations Unies (ONU) date de 1945.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0247",
+    "knowledge_id": "ORG-02-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Organisation mondiale de la Santé (OMS) ?",
+    "choices": [
+      "New York",
+      "Vienne",
+      "Gaborone",
+      "Genève"
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de Organisation mondiale de la Santé (OMS) est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0248",
+    "knowledge_id": "ORG-02-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Organisation mondiale de la Santé (OMS) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1948",
+      "1970",
+      "1995",
+      "1944"
+    ],
+    "answer": 0,
+    "explanation": "Organisation mondiale de la Santé (OMS) date de 1948.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0249",
+    "knowledge_id": "ORG-03-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de UNESCO ?",
+    "choices": [
+      "Washington, D.C.",
+      "Paris",
+      "Montréal",
+      "Arusha"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de UNESCO est à Paris.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0250",
+    "knowledge_id": "ORG-03-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année UNESCO a-t-elle été créée / fondée ?",
+    "choices": [
+      "1992",
+      "2002",
+      "1945",
+      "1948"
+    ],
+    "answer": 2,
+    "explanation": "UNESCO date de 1945.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0251",
+    "knowledge_id": "ORG-04-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de UNICEF ?",
+    "choices": [
+      "Vienne",
+      "Abidjan",
+      "Genève",
+      "New York"
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de UNICEF est à New York.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0252",
+    "knowledge_id": "ORG-04-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année UNICEF a-t-elle été créée / fondée ?",
+    "choices": [
+      "1946",
+      "1995",
+      "1923",
+      "1960"
+    ],
+    "answer": 0,
+    "explanation": "UNICEF date de 1946.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0253",
+    "knowledge_id": "ORG-05-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Fonds monétaire international (FMI) ?",
+    "choices": [
+      "Montréal",
+      "Washington, D.C.",
+      "Libreville",
+      "Paris"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de Fonds monétaire international (FMI) est à Washington, D.C..",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0254",
+    "knowledge_id": "ORG-05-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Fonds monétaire international (FMI) a-t-elle été créée / fondée ?",
+    "choices": [
+      "2002",
+      "1946",
+      "1944",
+      "1970"
+    ],
+    "answer": 2,
+    "explanation": "Fonds monétaire international (FMI) date de 1944.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0255",
+    "knowledge_id": "ORG-06-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Banque mondiale ?",
+    "choices": [
+      "Abidjan",
+      "Lusaka",
+      "Vienne",
+      "Washington, D.C."
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de Banque mondiale est à Washington, D.C..",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0256",
+    "knowledge_id": "ORG-06-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Banque mondiale a-t-elle été créée / fondée ?",
+    "choices": [
+      "1944",
+      "1923",
+      "1957",
+      "1992"
+    ],
+    "answer": 0,
+    "explanation": "Banque mondiale date de 1944.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0257",
+    "knowledge_id": "ORG-07-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Union africaine (UA) ?",
+    "choices": [
+      "Libreville",
+      "Addis-Abeba",
+      "Genève",
+      "Montréal"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de Union africaine (UA) est à Addis-Abeba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0258",
+    "knowledge_id": "ORG-07-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Union africaine (UA) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1945",
+      "1960",
+      "2002",
+      "1994"
+    ],
+    "answer": 2,
+    "explanation": "Union africaine (UA) date de 2002.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0259",
+    "knowledge_id": "ORG-08-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Organisation internationale du Travail (OIT) ?",
+    "choices": [
+      "Lusaka",
+      "Addis-Abeba",
+      "Abidjan",
+      "Genève"
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de Organisation internationale du Travail (OIT) est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0260",
+    "knowledge_id": "ORG-08-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Organisation internationale du Travail (OIT) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1919",
+      "1957",
+      "1983",
+      "2002"
+    ],
+    "answer": 0,
+    "explanation": "Organisation internationale du Travail (OIT) date de 1919.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0261",
+    "knowledge_id": "ORG-09-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Organisation mondiale du commerce (OMC) ?",
+    "choices": [
+      "Paris",
+      "Genève",
+      "Rome",
+      "Libreville"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de Organisation mondiale du commerce (OMC) est à Genève.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0262",
+    "knowledge_id": "ORG-09-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Organisation mondiale du commerce (OMC) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1960",
+      "1992",
+      "1995",
+      "1923"
+    ],
+    "answer": 2,
+    "explanation": "Organisation mondiale du commerce (OMC) date de 1995.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0263",
+    "knowledge_id": "ORG-10-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Agence internationale de l’énergie atomique (AIEA) ?",
+    "choices": [
+      "Washington, D.C.",
+      "Lyon",
+      "Lusaka",
+      "Vienne"
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de Agence internationale de l’énergie atomique (AIEA) est à Vienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0264",
+    "knowledge_id": "ORG-10-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Agence internationale de l’énergie atomique (AIEA) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1957",
+      "1983",
+      "2000",
+      "1945"
+    ],
+    "answer": 0,
+    "explanation": "Agence internationale de l’énergie atomique (AIEA) date de 1957.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0265",
+    "knowledge_id": "ORG-11-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Organisation des Nations Unies pour l’alimentation et l’agriculture (FAO) ?",
+    "choices": [
+      "Vienne",
+      "Rome",
+      "Gaborone",
+      "Genève"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de Organisation des Nations Unies pour l’alimentation et l’agriculture (FAO) est à Rome.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0266",
+    "knowledge_id": "ORG-11-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Organisation des Nations Unies pour l’alimentation et l’agriculture (FAO) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1994",
+      "1919",
+      "1945",
+      "1957"
+    ],
+    "answer": 2,
+    "explanation": "Organisation des Nations Unies pour l’alimentation et l’agriculture (FAO) date de 1945.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0267",
+    "knowledge_id": "ORG-12-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Organisation de l’aviation civile internationale (OACI) ?",
+    "choices": [
+      "Lyon",
+      "Arusha",
+      "Washington, D.C.",
+      "Montréal"
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de Organisation de l’aviation civile internationale (OACI) est à Montréal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0268",
+    "knowledge_id": "ORG-12-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Organisation de l’aviation civile internationale (OACI) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1944",
+      "2000",
+      "1945",
+      "1964"
+    ],
+    "answer": 0,
+    "explanation": "Organisation de l’aviation civile internationale (OACI) date de 1944.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0269",
+    "knowledge_id": "ORG-13-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de INTERPOL ?",
+    "choices": [
+      "Gaborone",
+      "Lyon",
+      "New York",
+      "Vienne"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de INTERPOL est à Lyon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0270",
+    "knowledge_id": "ORG-13-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année INTERPOL a-t-elle été créée / fondée ?",
+    "choices": [
+      "1919",
+      "1948",
+      "1923",
+      "1983"
+    ],
+    "answer": 2,
+    "explanation": "INTERPOL date de 1923.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0271",
+    "knowledge_id": "ORG-14-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Banque africaine de développement (BAD) ?",
+    "choices": [
+      "Arusha",
+      "Paris",
+      "Montréal",
+      "Abidjan"
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de Banque africaine de développement (BAD) est à Abidjan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0272",
+    "knowledge_id": "ORG-14-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Banque africaine de développement (BAD) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1964",
+      "1944",
+      "1957",
+      "1994"
+    ],
+    "answer": 0,
+    "explanation": "Banque africaine de développement (BAD) date de 1964.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0273",
+    "knowledge_id": "ORG-15-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de SADC ?",
+    "choices": [
+      "New York",
+      "Gaborone",
+      "Addis-Abeba",
+      "Abidjan"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de SADC est à Gaborone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0274",
+    "knowledge_id": "ORG-15-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année SADC a-t-elle été créée / fondée ?",
+    "choices": [
+      "1946",
+      "1964",
+      "1992",
+      "2000"
+    ],
+    "answer": 2,
+    "explanation": "SADC date de 1992.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0275",
+    "knowledge_id": "ORG-16-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de CEEAC ?",
+    "choices": [
+      "Paris",
+      "Rome",
+      "Arusha",
+      "Libreville"
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de CEEAC est à Libreville.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0276",
+    "knowledge_id": "ORG-16-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année CEEAC a-t-elle été créée / fondée ?",
+    "choices": [
+      "1983",
+      "1957",
+      "1992",
+      "1919"
+    ],
+    "answer": 0,
+    "explanation": "CEEAC date de 1983.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0277",
+    "knowledge_id": "ORG-17-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Communauté d’Afrique de l’Est (EAC) ?",
+    "choices": [
+      "Addis-Abeba",
+      "Arusha",
+      "Lyon",
+      "New York"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de Communauté d’Afrique de l’Est (EAC) est à Arusha.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0278",
+    "knowledge_id": "ORG-17-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Communauté d’Afrique de l’Est (EAC) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1964",
+      "1994",
+      "2000",
+      "1944"
+    ],
+    "answer": 2,
+    "explanation": "Communauté d’Afrique de l’Est (EAC) date de 2000.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0279",
+    "knowledge_id": "ORG-18-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de COMESA ?",
+    "choices": [
+      "Rome",
+      "Gaborone",
+      "Paris",
+      "Lusaka"
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de COMESA est à Lusaka.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0280",
+    "knowledge_id": "ORG-18-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année COMESA a-t-elle été créée / fondée ?",
+    "choices": [
+      "1994",
+      "1983",
+      "2002",
+      "1946"
+    ],
+    "answer": 0,
+    "explanation": "COMESA date de 1994.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0281",
+    "knowledge_id": "ORG-19-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de OPEP ?",
+    "choices": [
+      "Abidjan",
+      "Vienne",
+      "Lusaka",
+      "Addis-Abeba"
+    ],
+    "answer": 1,
+    "explanation": "Le siège principal de OPEP est à Vienne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0282",
+    "knowledge_id": "ORG-19-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année OPEP a-t-elle été créée / fondée ?",
+    "choices": [
+      "1995",
+      "1923",
+      "1960",
+      "1957"
+    ],
+    "answer": 2,
+    "explanation": "OPEP date de 1960.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0283",
+    "knowledge_id": "ORG-20-HQ",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Sièges",
+    "prompt": "Où se trouve le siège principal de Organisation internationale de la Francophonie (OIF) ?",
+    "choices": [
+      "Libreville",
+      "Genève",
+      "Montréal",
+      "Paris"
+    ],
+    "answer": 3,
+    "explanation": "Le siège principal de Organisation internationale de la Francophonie (OIF) est à Paris.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0284",
+    "knowledge_id": "ORG-20-YEAR",
+    "module": 4,
+    "domain": "Organisations internationales",
+    "subdomain": "Repères historiques",
+    "prompt": "En quelle année Organisation internationale de la Francophonie (OIF) a-t-elle été créée / fondée ?",
+    "choices": [
+      "1970",
+      "2002",
+      "1945",
+      "1964"
+    ],
+    "answer": 0,
+    "explanation": "Organisation internationale de la Francophonie (OIF) date de 1970.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Organisation officielle"
+  },
+  {
+    "id": "G0287",
+    "knowledge_id": "SCI-03",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Astronomie",
+    "prompt": "Quelle est la plus grande planète du Système solaire ?",
+    "choices": [
+      "Neptune",
+      "Jupiter",
+      "Saturne",
+      "Terre"
+    ],
+    "answer": 1,
+    "explanation": "Jupiter est la plus grande planète du Système solaire.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0288",
+    "knowledge_id": "SCI-04",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Astronomie",
+    "prompt": "Quel satellite naturel tourne autour de la Terre ?",
+    "choices": [
+      "La Lune",
+      "Titan",
+      "Europe",
+      "Phobos"
+    ],
+    "answer": 0,
+    "explanation": "La Lune est le satellite naturel de la Terre.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0289",
+    "knowledge_id": "SCI-05",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Astronomie",
+    "prompt": "Quelle étoile est au centre du Système solaire ?",
+    "choices": [
+      "Sirius",
+      "Polaris",
+      "Bételgeuse",
+      "Le Soleil"
+    ],
+    "answer": 3,
+    "explanation": "Le Soleil est l’étoile au centre du Système solaire.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0290",
+    "knowledge_id": "SCI-06",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Physique",
+    "prompt": "Quel scientifique est associé à la gravitation universelle ?",
+    "choices": [
+      "Galilée",
+      "Niels Bohr",
+      "Isaac Newton",
+      "Albert Einstein"
+    ],
+    "answer": 2,
+    "explanation": "Newton a formulé la loi de la gravitation universelle.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0292",
+    "knowledge_id": "SCI-08",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Physique",
+    "prompt": "Quelle unité SI mesure la force ?",
+    "choices": [
+      "newton",
+      "joule",
+      "watt",
+      "pascal"
+    ],
+    "answer": 0,
+    "explanation": "La force se mesure en newtons.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0293",
+    "knowledge_id": "SCI-09",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Physique",
+    "prompt": "Quelle unité SI mesure l’énergie ?",
+    "choices": [
+      "watt",
+      "volt",
+      "ampère",
+      "joule"
+    ],
+    "answer": 3,
+    "explanation": "L’énergie se mesure en joules.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0294",
+    "knowledge_id": "SCI-10",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Physique",
+    "prompt": "Quelle unité SI mesure la puissance ?",
+    "choices": [
+      "newton",
+      "tesla",
+      "watt",
+      "joule"
+    ],
+    "answer": 2,
+    "explanation": "La puissance se mesure en watts.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0295",
+    "knowledge_id": "SCI-11",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Physique",
+    "prompt": "Quel instrument mesure la température ?",
+    "choices": [
+      "hygromètre",
+      "thermomètre",
+      "baromètre",
+      "voltmètre"
+    ],
+    "answer": 1,
+    "explanation": "Le thermomètre mesure la température.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0296",
+    "knowledge_id": "SCI-12",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Physique",
+    "prompt": "Quel instrument mesure la pression atmosphérique ?",
+    "choices": [
+      "baromètre",
+      "thermomètre",
+      "anémomètre",
+      "ampèremètre"
+    ],
+    "answer": 0,
+    "explanation": "Le baromètre mesure la pression atmosphérique.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0297",
+    "knowledge_id": "SCI-13",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’oxygène ?",
+    "choices": [
+      "N",
+      "H",
+      "C",
+      "O"
+    ],
+    "answer": 3,
+    "explanation": "Le symbole de l’oxygène est O.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0298",
+    "knowledge_id": "SCI-14",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique de l’hydrogène ?",
+    "choices": [
+      "O",
+      "N",
+      "H",
+      "He"
+    ],
+    "answer": 2,
+    "explanation": "Le symbole de l’hydrogène est H.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0299",
+    "knowledge_id": "SCI-15",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique du carbone ?",
+    "choices": [
+      "Cl",
+      "C",
+      "Ca",
+      "Co"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole du carbone est C.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0300",
+    "knowledge_id": "SCI-16",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quel est le symbole chimique du fer ?",
+    "choices": [
+      "Fe",
+      "F",
+      "Fr",
+      "Ir"
+    ],
+    "answer": 0,
+    "explanation": "Le symbole du fer est Fe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0301",
+    "knowledge_id": "SCI-17",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quelle formule correspond à l’eau ?",
+    "choices": [
+      "CO₂",
+      "O₂",
+      "NaCl",
+      "H₂O"
+    ],
+    "answer": 3,
+    "explanation": "L’eau a pour formule H₂O.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0302",
+    "knowledge_id": "SCI-18",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Chimie",
+    "prompt": "Quelle formule correspond au dioxyde de carbone ?",
+    "choices": [
+      "O₂",
+      "H₂O",
+      "CO₂",
+      "CO"
+    ],
+    "answer": 2,
+    "explanation": "Le dioxyde de carbone a pour formule CO₂.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0304",
+    "knowledge_id": "SCI-20",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel organe est principalement responsable des échanges gazeux respiratoires ?",
+    "choices": [
+      "les poumons",
+      "le pancréas",
+      "le foie",
+      "la rate"
+    ],
+    "answer": 0,
+    "explanation": "Les poumons assurent les échanges gazeux.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0305",
+    "knowledge_id": "SCI-21",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel organe filtre le sang et produit l’urine ?",
+    "choices": [
+      "le cœur",
+      "l’estomac",
+      "la thyroïde",
+      "les reins"
+    ],
+    "answer": 3,
+    "explanation": "Les reins filtrent le sang et produisent l’urine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0306",
+    "knowledge_id": "SCI-22",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel organe produit la bile ?",
+    "choices": [
+      "la rate",
+      "le rein",
+      "le foie",
+      "le pancréas"
+    ],
+    "answer": 2,
+    "explanation": "Le foie produit la bile.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0307",
+    "knowledge_id": "SCI-23",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel processus permet aux plantes d’utiliser l’énergie lumineuse ?",
+    "choices": [
+      "la filtration",
+      "la photosynthèse",
+      "la fermentation",
+      "la digestion"
+    ],
+    "answer": 1,
+    "explanation": "La photosynthèse utilise l’énergie lumineuse.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0308",
+    "knowledge_id": "SCI-24",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel gaz est notamment absorbé par les plantes lors de la photosynthèse ?",
+    "choices": [
+      "le dioxyde de carbone",
+      "l’hélium",
+      "le méthane",
+      "l’argon"
+    ],
+    "answer": 0,
+    "explanation": "Les plantes absorbent notamment du CO₂ pour la photosynthèse.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0309",
+    "knowledge_id": "SCI-25",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quel gaz est notamment libéré par les plantes lors de la photosynthèse ?",
+    "choices": [
+      "l’azote",
+      "le méthane",
+      "l’hydrogène",
+      "l’oxygène"
+    ],
+    "answer": 3,
+    "explanation": "La photosynthèse libère notamment de l’oxygène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0310",
+    "knowledge_id": "SCI-26",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quelle molécule porte l’information génétique ?",
+    "choices": [
+      "le glucose",
+      "le cholestérol",
+      "l’ADN",
+      "l’ATP"
+    ],
+    "answer": 2,
+    "explanation": "L’ADN porte l’information génétique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0311",
+    "knowledge_id": "SCI-27",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Biologie",
+    "prompt": "Quelle cellule sanguine transporte principalement l’oxygène ?",
+    "choices": [
+      "le neurone",
+      "le globule rouge",
+      "le globule blanc",
+      "la plaquette"
+    ],
+    "answer": 1,
+    "explanation": "Les globules rouges transportent principalement l’oxygène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0312",
+    "knowledge_id": "SCI-28",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Environnement",
+    "prompt": "Quel phénomène correspond à l’augmentation de la température moyenne du système climatique ?",
+    "choices": [
+      "le réchauffement climatique",
+      "l’érosion",
+      "la marée",
+      "la photosynthèse"
+    ],
+    "answer": 0,
+    "explanation": "Le réchauffement climatique décrit une hausse durable de la température moyenne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0313",
+    "knowledge_id": "SCI-29",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Environnement",
+    "prompt": "Comment appelle-t-on la variété des êtres vivants et des écosystèmes ?",
+    "choices": [
+      "la gravitation",
+      "la salinité",
+      "la densité",
+      "la biodiversité"
+    ],
+    "answer": 3,
+    "explanation": "La biodiversité désigne la variété du vivant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0314",
+    "knowledge_id": "SCI-30",
+    "module": 5,
+    "domain": "Sciences",
+    "subdomain": "Géologie",
+    "prompt": "Quelle couche de la Terre est la plus externe ?",
+    "choices": [
+      "le manteau inférieur",
+      "le noyau externe",
+      "la croûte terrestre",
+      "le noyau interne"
+    ],
+    "answer": 2,
+    "explanation": "La croûte est la couche la plus externe de la Terre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Sciences générales — fait stable"
+  },
+  {
+    "id": "G0315",
+    "knowledge_id": "CULT-01",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Histoire",
+    "prompt": "En quelle année débute la Première Guerre mondiale ?",
+    "choices": [
+      "1945",
+      "1914",
+      "1918",
+      "1939"
+    ],
+    "answer": 1,
+    "explanation": "La Première Guerre mondiale débute en 1914.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0316",
+    "knowledge_id": "CULT-02",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Histoire",
+    "prompt": "En quelle année se termine la Première Guerre mondiale ?",
+    "choices": [
+      "1918",
+      "1914",
+      "1939",
+      "1945"
+    ],
+    "answer": 0,
+    "explanation": "La Première Guerre mondiale se termine en 1918.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0317",
+    "knowledge_id": "CULT-03",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Histoire",
+    "prompt": "En quelle année débute la Deuxième Guerre mondiale ?",
+    "choices": [
+      "1914",
+      "1941",
+      "1945",
+      "1939"
+    ],
+    "answer": 3,
+    "explanation": "La Deuxième Guerre mondiale débute en 1939.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0318",
+    "knowledge_id": "CULT-04",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Histoire",
+    "prompt": "En quelle année se termine la Deuxième Guerre mondiale ?",
+    "choices": [
+      "1948",
+      "1950",
+      "1945",
+      "1939"
+    ],
+    "answer": 2,
+    "explanation": "La Deuxième Guerre mondiale se termine en 1945.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0319",
+    "knowledge_id": "CULT-05",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Histoire",
+    "prompt": "En quelle année l’ONU est-elle créée ?",
+    "choices": [
+      "1955",
+      "1945",
+      "1919",
+      "1948"
+    ],
+    "answer": 1,
+    "explanation": "L’ONU est créée en 1945.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0320",
+    "knowledge_id": "CULT-06",
+    "module": 6,
+    "domain": "Histoire",
+    "subdomain": "Histoire",
+    "prompt": "En quelle année l’OUA est-elle créée ?",
+    "choices": [
+      "1963",
+      "1957",
+      "1971",
+      "2002"
+    ],
+    "answer": 0,
+    "explanation": "L’OUA est créée en 1963.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0321",
+    "knowledge_id": "CULT-07",
+    "module": 6,
+    "domain": "RDC",
+    "subdomain": "Histoire RDC",
+    "prompt": "Quelle date marque l’indépendance de la RDC ?",
+    "choices": [
+      "17 mai 1997",
+      "18 février 2006",
+      "24 novembre 1965",
+      "30 juin 1960"
+    ],
+    "answer": 3,
+    "explanation": "La RDC devient indépendante le 30 juin 1960.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0323",
+    "knowledge_id": "CULT-09",
+    "module": 6,
+    "domain": "RDC",
+    "subdomain": "Histoire RDC",
+    "prompt": "En quelle année le nom République démocratique du Congo est-il rétabli ?",
+    "choices": [
+      "2006",
+      "1997",
+      "1960",
+      "1971"
+    ],
+    "answer": 1,
+    "explanation": "Le nom RDC est rétabli en 1997.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0326",
+    "knowledge_id": "CULT-12",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Littérature",
+    "prompt": "Qui a écrit Les Misérables ?",
+    "choices": [
+      "Molière",
+      "Albert Camus",
+      "Victor Hugo",
+      "Émile Zola"
+    ],
+    "answer": 2,
+    "explanation": "Les Misérables est un roman de Victor Hugo.",
+    "difficulty": 1,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0327",
+    "knowledge_id": "CULT-13",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Littérature",
+    "prompt": "Qui a écrit Le Malade imaginaire ?",
+    "choices": [
+      "Jean Racine",
+      "Molière",
+      "Victor Hugo",
+      "Voltaire"
+    ],
+    "answer": 1,
+    "explanation": "Le Malade imaginaire est une comédie de Molière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0328",
+    "knowledge_id": "CULT-14",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Littérature",
+    "prompt": "Qui a écrit L’Étranger ?",
+    "choices": [
+      "Albert Camus",
+      "Jean-Paul Sartre",
+      "Victor Hugo",
+      "Émile Zola"
+    ],
+    "answer": 0,
+    "explanation": "L’Étranger est un roman d’Albert Camus.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0329",
+    "knowledge_id": "CULT-15",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Littérature",
+    "prompt": "Qui a écrit Germinal ?",
+    "choices": [
+      "Albert Camus",
+      "Molière",
+      "Antoine de Saint-Exupéry",
+      "Émile Zola"
+    ],
+    "answer": 3,
+    "explanation": "Germinal est un roman d’Émile Zola.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0330",
+    "knowledge_id": "CULT-16",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Littérature",
+    "prompt": "Qui a écrit Le Petit Prince ?",
+    "choices": [
+      "Jules Verne",
+      "Molière",
+      "Antoine de Saint-Exupéry",
+      "Victor Hugo"
+    ],
+    "answer": 2,
+    "explanation": "Le Petit Prince est d’Antoine de Saint-Exupéry.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0331",
+    "knowledge_id": "CULT-17",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Littérature",
+    "prompt": "Qui a écrit Candide ?",
+    "choices": [
+      "Balzac",
+      "Voltaire",
+      "Rousseau",
+      "Molière"
+    ],
+    "answer": 1,
+    "explanation": "Candide est de Voltaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0332",
+    "knowledge_id": "CULT-18",
+    "module": 6,
+    "domain": "Arts",
+    "subdomain": "Arts",
+    "prompt": "Quel artiste a peint La Joconde ?",
+    "choices": [
+      "Léonard de Vinci",
+      "Pablo Picasso",
+      "Claude Monet",
+      "Vincent van Gogh"
+    ],
+    "answer": 0,
+    "explanation": "La Joconde est peinte par Léonard de Vinci.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0333",
+    "knowledge_id": "CULT-19",
+    "module": 6,
+    "domain": "Arts",
+    "subdomain": "Arts",
+    "prompt": "Quel artiste est associé à Guernica ?",
+    "choices": [
+      "Salvador Dalí",
+      "Claude Monet",
+      "Auguste Rodin",
+      "Pablo Picasso"
+    ],
+    "answer": 3,
+    "explanation": "Guernica est une œuvre de Pablo Picasso.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0334",
+    "knowledge_id": "CULT-20",
+    "module": 6,
+    "domain": "Arts",
+    "subdomain": "Arts",
+    "prompt": "Quel compositeur est associé à la Neuvième Symphonie et à l’Ode à la joie ?",
+    "choices": [
+      "Bach",
+      "Chopin",
+      "Ludwig van Beethoven",
+      "Mozart"
+    ],
+    "answer": 2,
+    "explanation": "La Neuvième Symphonie est de Beethoven.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0335",
+    "knowledge_id": "CULT-21",
+    "module": 6,
+    "domain": "Géographie",
+    "subdomain": "Géographie",
+    "prompt": "Quel est le plus grand océan du monde ?",
+    "choices": [
+      "l’océan Arctique",
+      "l’océan Pacifique",
+      "l’océan Atlantique",
+      "l’océan Indien"
+    ],
+    "answer": 1,
+    "explanation": "Le Pacifique est le plus grand océan.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0336",
+    "knowledge_id": "CULT-22",
+    "module": 6,
+    "domain": "Géographie",
+    "subdomain": "Géographie",
+    "prompt": "Quel est le plus grand continent par superficie ?",
+    "choices": [
+      "l’Asie",
+      "l’Afrique",
+      "l’Europe",
+      "l’Amérique du Sud"
+    ],
+    "answer": 0,
+    "explanation": "L’Asie est le plus grand continent par superficie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0337",
+    "knowledge_id": "CULT-23",
+    "module": 6,
+    "domain": "Géographie",
+    "subdomain": "Géographie",
+    "prompt": "Quel désert est le plus grand désert chaud du monde ?",
+    "choices": [
+      "le Kalahari",
+      "le Gobi",
+      "l’Atacama",
+      "le Sahara"
+    ],
+    "answer": 3,
+    "explanation": "Le Sahara est le plus grand désert chaud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0338",
+    "knowledge_id": "CULT-24",
+    "module": 6,
+    "domain": "Géographie",
+    "subdomain": "Géographie",
+    "prompt": "Quel fleuve traverse notamment l’Égypte ?",
+    "choices": [
+      "le Congo",
+      "le Zambèze",
+      "le Nil",
+      "le Niger"
+    ],
+    "answer": 2,
+    "explanation": "Le Nil traverse notamment l’Égypte.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0340",
+    "knowledge_id": "CULT-26",
+    "module": 6,
+    "domain": "RDC",
+    "subdomain": "Géographie RDC",
+    "prompt": "À quel océan la RDC a-t-elle accès ?",
+    "choices": [
+      "l’océan Atlantique",
+      "l’océan Indien",
+      "l’océan Pacifique",
+      "l’océan Arctique"
+    ],
+    "answer": 0,
+    "explanation": "La RDC possède un accès à l’Atlantique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0341",
+    "knowledge_id": "CULT-27",
+    "module": 6,
+    "domain": "RDC",
+    "subdomain": "Géographie RDC",
+    "prompt": "Quel grand fleuve traverse la RDC ?",
+    "choices": [
+      "le Nil",
+      "le Niger",
+      "le Zambèze",
+      "le fleuve Congo"
+    ],
+    "answer": 3,
+    "explanation": "Le fleuve Congo est l’axe hydrographique majeur de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  },
+  {
+    "id": "G0343",
+    "knowledge_id": "CULT-29",
+    "module": 6,
+    "domain": "RDC",
+    "subdomain": "Patrimoine RDC",
+    "prompt": "Quel parc congolais est célèbre pour les gorilles de montagne ?",
+    "choices": [
+      "le parc national de l’Upemba",
+      "le parc national des Virunga",
+      "le parc national de la Salonga",
+      "le parc national de la Garamba"
+    ],
+    "answer": 1,
+    "explanation": "Virunga est notamment connu pour ses gorilles de montagne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Culture générale — fait stable"
+  }
+]
