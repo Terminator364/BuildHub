@@ -22,15 +22,35 @@ jobs:
       - name: Local gateway audit
         run: node excellentia-student/audit.mjs
 
-      - name: Permanent entry browser proof
+      - name: Probe permanent pointer and official shell
         shell: bash
         run: |
-          ENTRY="https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia/index.html"
+          POINTER="https://raw.githubusercontent.com/Terminator364/BuildHub/main/excellentia/latest.json"
+          ENTRY="https://raw.githack.com/Terminator364/BuildHub/main/excellentia/index.html"
+          STUDENT="https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/index.html"
+          curl -fsSL --retry 6 --retry-delay 2 --connect-timeout 10 --max-time 60 "$POINTER?t=$(date +%s)" -o /tmp/latest.json
+          node - <<'NODE'
+          const j=require('/tmp/latest.json');
+          if(j.version!=='2.3.0'||j.questions!==4174||j.knowledge_units!==2667||j.timer_seconds!==40)process.exit(2);
+          if(j.url!=='https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/index.html')process.exit(3);
+          console.log(j);
+          NODE
+          curl -fsSL --retry 6 --retry-delay 2 --connect-timeout 10 --max-time 60 "$ENTRY" -o /tmp/entry.html
+          curl -fsSL --retry 6 --retry-delay 2 --connect-timeout 10 --max-time 60 "$STUDENT" -o /tmp/student.html
+          grep -q "Entrée Élève" /tmp/entry.html
+          grep -q 'data-space="learn"' /tmp/student.html
+          grep -q 'gateway-adapter.js' /tmp/student.html
+          curl -fsSL --retry 6 --retry-delay 2 "https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/gateway-adapter.js?v=301" -o /tmp/adapter.js
+          node --check /tmp/adapter.js
+          echo "PUBLIC_ENTRY_OK=$ENTRY"
+
+      - name: Browser proof of permanent entry
+        shell: bash
+        run: |
+          ENTRY="https://raw.githack.com/Terminator364/BuildHub/main/excellentia/index.html"
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
           test -n "$CHROME"
-          "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=60000 --dump-dom "$ENTRY" > /tmp/entry-dom.html
-          grep -q "EXCELLENTIA STUDY HUB" /tmp/entry-dom.html
-          grep -q "Culture générale" /tmp/entry-dom.html
-          grep -Eq "4[ . ]?174|4174" /tmp/entry-dom.html
-          grep -Eq "2[ . ]?667|2667" /tmp/entry-dom.html
-          echo "PUBLIC_ENTRY_OK=$ENTRY"
+          "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=90000 --dump-dom "$ENTRY" > /tmp/entry-dom.html
+          grep -q "Excellentia" /tmp/entry-dom.html
+          grep -Eq "Apprendre|S.entraîner|Réviser|Examens|Progression" /tmp/entry-dom.html
+          grep -q "V2.3.0" /tmp/entry-dom.html
