@@ -41,7 +41,14 @@ jobs:
           grep -q 'data-space="learn"' /tmp/student.html
           grep -q 'gateway-adapter.js' /tmp/student.html
           curl -fsSL --retry 6 --retry-delay 2 "https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/gateway-adapter.js?v=301" -o /tmp/adapter.js
+          curl -fsSL --retry 6 --retry-delay 2 "https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/app.js?v=301" -o /tmp/app.js
+          curl -fsSL --retry 6 --retry-delay 2 "https://raw.githack.com/Terminator364/BuildHub/main/excellentia-student/data/gateway-manifest.json" -o /tmp/gateway.json
           node --check /tmp/adapter.js
+          node --check /tmp/app.js
+          node - <<'NODE'
+          const j=require('/tmp/gateway.json');
+          if(j.version!=='2.3.0'||j.expected_questions!==4174||j.expected_knowledge_units!==2667||j.timer_seconds!==40)process.exit(4);
+          NODE
           echo "PUBLIC_ENTRY_OK=$ENTRY"
 
       - name: Browser proof of permanent entry
@@ -53,4 +60,3 @@ jobs:
           "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=90000 --dump-dom "$ENTRY" > /tmp/entry-dom.html
           grep -q "Excellentia" /tmp/entry-dom.html
           grep -Eq "Apprendre|S.entraîner|Réviser|Examens|Progression" /tmp/entry-dom.html
-          grep -q "V2.3.0" /tmp/entry-dom.html
