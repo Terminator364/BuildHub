@@ -1,0 +1,2662 @@
+[
+  {
+    "id": "V2RDP01B",
+    "knowledge_id": "V2-RDC-PROV-01",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Buta est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Kasaï Central",
+      "Lomami",
+      "Nord-Ubangi",
+      "Bas-Uele"
+    ],
+    "answer": 3,
+    "explanation": "Buta est le chef-lieu de la province Bas-Uele.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP02A",
+    "knowledge_id": "V2-RDC-PROV-02",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Équateur ?",
+    "choices": [
+      "Tshikapa",
+      "Bandundu",
+      "Goma",
+      "Mbandaka"
+    ],
+    "answer": 3,
+    "explanation": "Mbandaka est le chef-lieu de la province Équateur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP02B",
+    "knowledge_id": "V2-RDC-PROV-02",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Mbandaka est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Lualaba",
+      "Sankuru",
+      "Équateur",
+      "Kasaï Oriental"
+    ],
+    "answer": 2,
+    "explanation": "Mbandaka est le chef-lieu de la province Équateur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP03B",
+    "knowledge_id": "V2-RDC-PROV-03",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Lubumbashi est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Sud-Kivu",
+      "Haut-Katanga",
+      "Kinshasa",
+      "Mai-Ndombe"
+    ],
+    "answer": 1,
+    "explanation": "Lubumbashi est le chef-lieu de la province Haut-Katanga.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP04A",
+    "knowledge_id": "V2-RDC-PROV-04",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Haut-Lomami ?",
+    "choices": [
+      "Lusambo",
+      "Kamina",
+      "Mbuji-Mayi",
+      "Kolwezi"
+    ],
+    "answer": 1,
+    "explanation": "Kamina est le chef-lieu de la province Haut-Lomami.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP04B",
+    "knowledge_id": "V2-RDC-PROV-04",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Kamina est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Haut-Lomami",
+      "Kongo Central",
+      "Maniema",
+      "Sud-Ubangi"
+    ],
+    "answer": 0,
+    "explanation": "Kamina est le chef-lieu de la province Haut-Lomami.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP05B",
+    "knowledge_id": "V2-RDC-PROV-05",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Isiro est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Kwango",
+      "Mongala",
+      "Tanganyika",
+      "Haut-Uele"
+    ],
+    "answer": 3,
+    "explanation": "Isiro est le chef-lieu de la province Haut-Uele.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP06A",
+    "knowledge_id": "V2-RDC-PROV-06",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Ituri ?",
+    "choices": [
+      "Matadi",
+      "Kindu",
+      "Gemena",
+      "Bunia"
+    ],
+    "answer": 3,
+    "explanation": "Bunia est le chef-lieu de la province Ituri.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP06B",
+    "knowledge_id": "V2-RDC-PROV-06",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Bunia est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Nord-Kivu",
+      "Tshopo",
+      "Ituri",
+      "Kwilu"
+    ],
+    "answer": 2,
+    "explanation": "Bunia est le chef-lieu de la province Ituri.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP07B",
+    "knowledge_id": "V2-RDC-PROV-07",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Tshikapa est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Tshuapa",
+      "Kasaï",
+      "Lomami",
+      "Nord-Ubangi"
+    ],
+    "answer": 1,
+    "explanation": "Tshikapa est le chef-lieu de la province Kasaï.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP08A",
+    "knowledge_id": "V2-RDC-PROV-08",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Kasaï Central ?",
+    "choices": [
+      "Kisangani",
+      "Kananga",
+      "Bandundu",
+      "Goma"
+    ],
+    "answer": 1,
+    "explanation": "Kananga est le chef-lieu de la province Kasaï Central.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP08B",
+    "knowledge_id": "V2-RDC-PROV-08",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Kananga est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Kasaï Central",
+      "Lualaba",
+      "Sankuru",
+      "Bas-Uele"
+    ],
+    "answer": 0,
+    "explanation": "Kananga est le chef-lieu de la province Kasaï Central.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP09B",
+    "knowledge_id": "V2-RDC-PROV-09",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Mbuji-Mayi est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Mai-Ndombe",
+      "Sud-Kivu",
+      "Équateur",
+      "Kasaï Oriental"
+    ],
+    "answer": 3,
+    "explanation": "Mbuji-Mayi est le chef-lieu de la province Kasaï Oriental.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP10A",
+    "knowledge_id": "V2-RDC-PROV-10",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Kinshasa ?",
+    "choices": [
+      "Kolwezi",
+      "Lusambo",
+      "Buta",
+      "Kinshasa"
+    ],
+    "answer": 3,
+    "explanation": "Kinshasa est le chef-lieu de la province Kinshasa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP10B",
+    "knowledge_id": "V2-RDC-PROV-10",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Kinshasa est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Sud-Ubangi",
+      "Haut-Katanga",
+      "Kinshasa",
+      "Maniema"
+    ],
+    "answer": 2,
+    "explanation": "Kinshasa est le chef-lieu de la province Kinshasa.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP11B",
+    "knowledge_id": "V2-RDC-PROV-11",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Matadi est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Haut-Lomami",
+      "Kongo Central",
+      "Mongala",
+      "Tanganyika"
+    ],
+    "answer": 1,
+    "explanation": "Matadi est le chef-lieu de la province Kongo Central.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP12A",
+    "knowledge_id": "V2-RDC-PROV-12",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Kwango ?",
+    "choices": [
+      "Lubumbashi",
+      "Kenge",
+      "Kindu",
+      "Gemena"
+    ],
+    "answer": 1,
+    "explanation": "Kenge est le chef-lieu de la province Kwango.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP12B",
+    "knowledge_id": "V2-RDC-PROV-12",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Kenge est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Kwango",
+      "Nord-Kivu",
+      "Tshopo",
+      "Haut-Uele"
+    ],
+    "answer": 0,
+    "explanation": "Kenge est le chef-lieu de la province Kwango.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP13B",
+    "knowledge_id": "V2-RDC-PROV-13",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Bandundu est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Nord-Ubangi",
+      "Tshuapa",
+      "Ituri",
+      "Kwilu"
+    ],
+    "answer": 3,
+    "explanation": "Bandundu est le chef-lieu de la province Kwilu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP14A",
+    "knowledge_id": "V2-RDC-PROV-14",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Lomami ?",
+    "choices": [
+      "Goma",
+      "Kisangani",
+      "Isiro",
+      "Kabinda"
+    ],
+    "answer": 3,
+    "explanation": "Kabinda est le chef-lieu de la province Lomami.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP14B",
+    "knowledge_id": "V2-RDC-PROV-14",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Kabinda est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Bas-Uele",
+      "Kasaï",
+      "Lomami",
+      "Sankuru"
+    ],
+    "answer": 2,
+    "explanation": "Kabinda est le chef-lieu de la province Lomami.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP15B",
+    "knowledge_id": "V2-RDC-PROV-15",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Kolwezi est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Kasaï Central",
+      "Lualaba",
+      "Sud-Kivu",
+      "Équateur"
+    ],
+    "answer": 1,
+    "explanation": "Kolwezi est le chef-lieu de la province Lualaba.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP16A",
+    "knowledge_id": "V2-RDC-PROV-16",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Mai-Ndombe ?",
+    "choices": [
+      "Tshikapa",
+      "Inongo",
+      "Lusambo",
+      "Buta"
+    ],
+    "answer": 1,
+    "explanation": "Inongo est le chef-lieu de la province Mai-Ndombe.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP16B",
+    "knowledge_id": "V2-RDC-PROV-16",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Inongo est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Mai-Ndombe",
+      "Sud-Ubangi",
+      "Haut-Katanga",
+      "Kasaï Oriental"
+    ],
+    "answer": 0,
+    "explanation": "Inongo est le chef-lieu de la province Mai-Ndombe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP17B",
+    "knowledge_id": "V2-RDC-PROV-17",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Kindu est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Tanganyika",
+      "Haut-Lomami",
+      "Kinshasa",
+      "Maniema"
+    ],
+    "answer": 3,
+    "explanation": "Kindu est le chef-lieu de la province Maniema.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP18A",
+    "knowledge_id": "V2-RDC-PROV-18",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Mongala ?",
+    "choices": [
+      "Gemena",
+      "Lubumbashi",
+      "Mbuji-Mayi",
+      "Lisala"
+    ],
+    "answer": 3,
+    "explanation": "Lisala est le chef-lieu de la province Mongala.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP18B",
+    "knowledge_id": "V2-RDC-PROV-18",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Lisala est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Haut-Uele",
+      "Kongo Central",
+      "Mongala",
+      "Tshopo"
+    ],
+    "answer": 2,
+    "explanation": "Lisala est le chef-lieu de la province Mongala.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP19B",
+    "knowledge_id": "V2-RDC-PROV-19",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Goma est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Kwango",
+      "Nord-Kivu",
+      "Tshuapa",
+      "Ituri"
+    ],
+    "answer": 1,
+    "explanation": "Goma est le chef-lieu de la province Nord-Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP20A",
+    "knowledge_id": "V2-RDC-PROV-20",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Nord-Ubangi ?",
+    "choices": [
+      "Matadi",
+      "Gbadolite",
+      "Kisangani",
+      "Isiro"
+    ],
+    "answer": 1,
+    "explanation": "Gbadolite est le chef-lieu de la province Nord-Ubangi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP20B",
+    "knowledge_id": "V2-RDC-PROV-20",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Gbadolite est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Nord-Ubangi",
+      "Bas-Uele",
+      "Kasaï",
+      "Kwilu"
+    ],
+    "answer": 0,
+    "explanation": "Gbadolite est le chef-lieu de la province Nord-Ubangi.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP21B",
+    "knowledge_id": "V2-RDC-PROV-21",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Lusambo est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Équateur",
+      "Kasaï Central",
+      "Lomami",
+      "Sankuru"
+    ],
+    "answer": 3,
+    "explanation": "Lusambo est le chef-lieu de la province Sankuru.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP22A",
+    "knowledge_id": "V2-RDC-PROV-22",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Sud-Kivu ?",
+    "choices": [
+      "Buta",
+      "Tshikapa",
+      "Bandundu",
+      "Bukavu"
+    ],
+    "answer": 3,
+    "explanation": "Bukavu est le chef-lieu de la province Sud-Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP22B",
+    "knowledge_id": "V2-RDC-PROV-22",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Bukavu est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Kasaï Oriental",
+      "Lualaba",
+      "Sud-Kivu",
+      "Haut-Katanga"
+    ],
+    "answer": 2,
+    "explanation": "Bukavu est le chef-lieu de la province Sud-Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP23B",
+    "knowledge_id": "V2-RDC-PROV-23",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Gemena est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Mai-Ndombe",
+      "Sud-Ubangi",
+      "Haut-Lomami",
+      "Kinshasa"
+    ],
+    "answer": 1,
+    "explanation": "Gemena est le chef-lieu de la province Sud-Ubangi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP24A",
+    "knowledge_id": "V2-RDC-PROV-24",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Tanganyika ?",
+    "choices": [
+      "Kolwezi",
+      "Kalemie",
+      "Lubumbashi",
+      "Mbuji-Mayi"
+    ],
+    "answer": 1,
+    "explanation": "Kalemie est le chef-lieu de la province Tanganyika.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP24B",
+    "knowledge_id": "V2-RDC-PROV-24",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Kalemie est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Tanganyika",
+      "Haut-Uele",
+      "Kongo Central",
+      "Maniema"
+    ],
+    "answer": 0,
+    "explanation": "Kalemie est le chef-lieu de la province Tanganyika.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP25B",
+    "knowledge_id": "V2-RDC-PROV-25",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Kisangani est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Ituri",
+      "Kwango",
+      "Mongala",
+      "Tshopo"
+    ],
+    "answer": 3,
+    "explanation": "Kisangani est le chef-lieu de la province Tshopo.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP26A",
+    "knowledge_id": "V2-RDC-PROV-26",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Quel est le chef-lieu de la province Tshuapa ?",
+    "choices": [
+      "Isiro",
+      "Matadi",
+      "Kindu",
+      "Boende"
+    ],
+    "answer": 3,
+    "explanation": "Boende est le chef-lieu de la province Tshuapa.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDP26B",
+    "knowledge_id": "V2-RDC-PROV-26",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Provinces et chefs-lieux",
+    "prompt": "Boende est le chef-lieu de quelle province de la RDC ?",
+    "choices": [
+      "Kwilu",
+      "Nord-Kivu",
+      "Tshuapa",
+      "Kasaï"
+    ],
+    "answer": 2,
+    "explanation": "Boende est le chef-lieu de la province Tshuapa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF001A",
+    "knowledge_id": "V2-RDC-FACT-001",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "En quelle année l’État indépendant du Congo devient-il le Congo belge ?",
+    "choices": [
+      "1908",
+      "1885",
+      "1960",
+      "1971"
+    ],
+    "answer": 0,
+    "explanation": "En 1908, l’État indépendant du Congo devient le Congo belge.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF001B",
+    "knowledge_id": "V2-RDC-FACT-001",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "Repère RDC : En quelle année l’État indépendant du Congo devient-il le Congo belge ?",
+    "choices": [
+      "1885",
+      "1960",
+      "1971",
+      "1908"
+    ],
+    "answer": 3,
+    "explanation": "En 1908, l’État indépendant du Congo devient le Congo belge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF002A",
+    "knowledge_id": "V2-RDC-FACT-002",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "À quelle date la RDC accède-t-elle à l’indépendance ?",
+    "choices": [
+      "4 janvier 1959",
+      "24 novembre 1965",
+      "17 mai 1997",
+      "30 juin 1960"
+    ],
+    "answer": 3,
+    "explanation": "La RDC accède à l’indépendance le 30 juin 1960.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF002B",
+    "knowledge_id": "V2-RDC-FACT-002",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "Repère RDC : À quelle date la RDC accède-t-elle à l’indépendance ?",
+    "choices": [
+      "24 novembre 1965",
+      "17 mai 1997",
+      "30 juin 1960",
+      "4 janvier 1959"
+    ],
+    "answer": 2,
+    "explanation": "La RDC accède à l’indépendance le 30 juin 1960.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF003B",
+    "knowledge_id": "V2-RDC-FACT-003",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "Repère RDC : Quel nom le pays adopte-t-il en 1971 ?",
+    "choices": [
+      "Congo-Léopoldville",
+      "Zaïre",
+      "Congo belge",
+      "République du Zaïre-Katanga"
+    ],
+    "answer": 1,
+    "explanation": "En 1971, le pays prend le nom de Zaïre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF004A",
+    "knowledge_id": "V2-RDC-FACT-004",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "En quelle année le nom « République démocratique du Congo » est-il rétabli ?",
+    "choices": [
+      "2006",
+      "1997",
+      "1971",
+      "1990"
+    ],
+    "answer": 1,
+    "explanation": "Le nom République démocratique du Congo est rétabli en 1997.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF004B",
+    "knowledge_id": "V2-RDC-FACT-004",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "Repère RDC : En quelle année le nom « République démocratique du Congo » est-il rétabli ?",
+    "choices": [
+      "1997",
+      "1971",
+      "1990",
+      "2006"
+    ],
+    "answer": 0,
+    "explanation": "Le nom République démocratique du Congo est rétabli en 1997.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF005A",
+    "knowledge_id": "V2-RDC-FACT-005",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Personnages",
+    "prompt": "Qui est le premier Premier ministre de la RDC indépendante ?",
+    "choices": [
+      "Patrice Lumumba",
+      "Joseph Kasa-Vubu",
+      "Joseph-Désiré Mobutu",
+      "Moïse Tshombe"
+    ],
+    "answer": 0,
+    "explanation": "Patrice Lumumba est le premier Premier ministre de la RDC indépendante.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF005B",
+    "knowledge_id": "V2-RDC-FACT-005",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Personnages",
+    "prompt": "Repère RDC : Qui est le premier Premier ministre de la RDC indépendante ?",
+    "choices": [
+      "Joseph Kasa-Vubu",
+      "Joseph-Désiré Mobutu",
+      "Moïse Tshombe",
+      "Patrice Lumumba"
+    ],
+    "answer": 3,
+    "explanation": "Patrice Lumumba est le premier Premier ministre de la RDC indépendante.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF006A",
+    "knowledge_id": "V2-RDC-FACT-006",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Personnages",
+    "prompt": "Qui est le premier président de la RDC indépendante ?",
+    "choices": [
+      "Patrice Lumumba",
+      "Joseph-Désiré Mobutu",
+      "Laurent-Désiré Kabila",
+      "Joseph Kasa-Vubu"
+    ],
+    "answer": 3,
+    "explanation": "Joseph Kasa-Vubu est le premier président de la RDC indépendante.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF006B",
+    "knowledge_id": "V2-RDC-FACT-006",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Personnages",
+    "prompt": "Repère RDC : Qui est le premier président de la RDC indépendante ?",
+    "choices": [
+      "Joseph-Désiré Mobutu",
+      "Laurent-Désiré Kabila",
+      "Joseph Kasa-Vubu",
+      "Patrice Lumumba"
+    ],
+    "answer": 2,
+    "explanation": "Joseph Kasa-Vubu est le premier président de la RDC indépendante.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF007A",
+    "knowledge_id": "V2-RDC-FACT-007",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "En quelle année Mobutu prend-il le pouvoir ?",
+    "choices": [
+      "1971",
+      "1997",
+      "1965",
+      "1960"
+    ],
+    "answer": 2,
+    "explanation": "Mobutu prend le pouvoir en 1965.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF007B",
+    "knowledge_id": "V2-RDC-FACT-007",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "Repère RDC : En quelle année Mobutu prend-il le pouvoir ?",
+    "choices": [
+      "1997",
+      "1965",
+      "1960",
+      "1971"
+    ],
+    "answer": 1,
+    "explanation": "Mobutu prend le pouvoir en 1965.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF008A",
+    "knowledge_id": "V2-RDC-FACT-008",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "En quelle année Laurent-Désiré Kabila arrive-t-il au pouvoir ?",
+    "choices": [
+      "2006",
+      "1997",
+      "1994",
+      "2001"
+    ],
+    "answer": 1,
+    "explanation": "Laurent-Désiré Kabila arrive au pouvoir en 1997.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF008B",
+    "knowledge_id": "V2-RDC-FACT-008",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "Repère RDC : En quelle année Laurent-Désiré Kabila arrive-t-il au pouvoir ?",
+    "choices": [
+      "1997",
+      "1994",
+      "2001",
+      "2006"
+    ],
+    "answer": 0,
+    "explanation": "Laurent-Désiré Kabila arrive au pouvoir en 1997.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF009A",
+    "knowledge_id": "V2-RDC-FACT-009",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "En quelle année Joseph Kabila devient-il président ?",
+    "choices": [
+      "2001",
+      "1997",
+      "2006",
+      "2011"
+    ],
+    "answer": 0,
+    "explanation": "Joseph Kabila devient président en 2001.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF009B",
+    "knowledge_id": "V2-RDC-FACT-009",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Chronologie",
+    "prompt": "Repère RDC : En quelle année Joseph Kabila devient-il président ?",
+    "choices": [
+      "1997",
+      "2006",
+      "2011",
+      "2001"
+    ],
+    "answer": 3,
+    "explanation": "Joseph Kabila devient président en 2001.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF010A",
+    "knowledge_id": "V2-RDC-FACT-010",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Constitution",
+    "prompt": "À quelle date l’actuelle Constitution de la RDC est-elle promulguée ?",
+    "choices": [
+      "30 juin 1960",
+      "17 mai 1997",
+      "20 janvier 2011",
+      "18 février 2006"
+    ],
+    "answer": 3,
+    "explanation": "L’actuelle Constitution est promulguée le 18 février 2006.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF010B",
+    "knowledge_id": "V2-RDC-FACT-010",
+    "module": 2,
+    "domain": "Histoire",
+    "subdomain": "Constitution",
+    "prompt": "Repère RDC : À quelle date l’actuelle Constitution de la RDC est-elle promulguée ?",
+    "choices": [
+      "17 mai 1997",
+      "20 janvier 2011",
+      "18 février 2006",
+      "30 juin 1960"
+    ],
+    "answer": 2,
+    "explanation": "L’actuelle Constitution est promulguée le 18 février 2006.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF011A",
+    "knowledge_id": "V2-RDC-FACT-011",
+    "module": 2,
+    "domain": "Institutions",
+    "subdomain": "Parlement",
+    "prompt": "Quelles sont les deux chambres du Parlement de la RDC ?",
+    "choices": [
+      "Gouvernement et Sénat",
+      "Cour constitutionnelle et Assemblée nationale",
+      "Assemblée nationale et Sénat",
+      "Assemblée provinciale et Sénat"
+    ],
+    "answer": 2,
+    "explanation": "Le Parlement de la RDC comprend l’Assemblée nationale et le Sénat.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF011B",
+    "knowledge_id": "V2-RDC-FACT-011",
+    "module": 2,
+    "domain": "Institutions",
+    "subdomain": "Parlement",
+    "prompt": "Repère RDC : Quelles sont les deux chambres du Parlement de la RDC ?",
+    "choices": [
+      "Cour constitutionnelle et Assemblée nationale",
+      "Assemblée nationale et Sénat",
+      "Assemblée provinciale et Sénat",
+      "Gouvernement et Sénat"
+    ],
+    "answer": 1,
+    "explanation": "Le Parlement de la RDC comprend l’Assemblée nationale et le Sénat.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF012B",
+    "knowledge_id": "V2-RDC-FACT-012",
+    "module": 2,
+    "domain": "Institutions",
+    "subdomain": "Organisation territoriale",
+    "prompt": "Repère RDC : Combien de provinces compte la RDC en incluant Kinshasa ?",
+    "choices": [
+      "26",
+      "11",
+      "24",
+      "25"
+    ],
+    "answer": 0,
+    "explanation": "La RDC compte 26 provinces, Kinshasa comprise.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF013A",
+    "knowledge_id": "V2-RDC-FACT-013",
+    "module": 2,
+    "domain": "Institutions",
+    "subdomain": "Organisation territoriale",
+    "prompt": "Quel statut administratif possède Kinshasa ?",
+    "choices": [
+      "ville-province et capitale",
+      "territoire du Kongo Central",
+      "district autonome",
+      "commune rurale"
+    ],
+    "answer": 0,
+    "explanation": "Kinshasa est à la fois la capitale et une province.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF013B",
+    "knowledge_id": "V2-RDC-FACT-013",
+    "module": 2,
+    "domain": "Institutions",
+    "subdomain": "Organisation territoriale",
+    "prompt": "Repère RDC : Quel statut administratif possède Kinshasa ?",
+    "choices": [
+      "territoire du Kongo Central",
+      "district autonome",
+      "commune rurale",
+      "ville-province et capitale"
+    ],
+    "answer": 3,
+    "explanation": "Kinshasa est à la fois la capitale et une province.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF014A",
+    "knowledge_id": "V2-RDC-FACT-014",
+    "module": 2,
+    "domain": "Institutions",
+    "subdomain": "Constitution",
+    "prompt": "Quel texte juridique fondamental organise les institutions de la RDC ?",
+    "choices": [
+      "le Code civil",
+      "la Charte des Nations Unies",
+      "le Code minier",
+      "la Constitution"
+    ],
+    "answer": 3,
+    "explanation": "La Constitution est le texte juridique fondamental de l’État.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF014B",
+    "knowledge_id": "V2-RDC-FACT-014",
+    "module": 2,
+    "domain": "Institutions",
+    "subdomain": "Constitution",
+    "prompt": "Repère RDC : Quel texte juridique fondamental organise les institutions de la RDC ?",
+    "choices": [
+      "la Charte des Nations Unies",
+      "le Code minier",
+      "la Constitution",
+      "le Code civil"
+    ],
+    "answer": 2,
+    "explanation": "La Constitution est le texte juridique fondamental de l’État.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF015A",
+    "knowledge_id": "V2-RDC-FACT-015",
+    "module": 2,
+    "domain": "Institutions",
+    "subdomain": "Pouvoir législatif",
+    "prompt": "Quel pouvoir vote les lois au niveau national ?",
+    "choices": [
+      "la Cour des comptes",
+      "les universités",
+      "le Parlement",
+      "la Banque centrale"
+    ],
+    "answer": 2,
+    "explanation": "Le Parlement exerce le pouvoir législatif national.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF015B",
+    "knowledge_id": "V2-RDC-FACT-015",
+    "module": 2,
+    "domain": "Institutions",
+    "subdomain": "Pouvoir législatif",
+    "prompt": "Repère RDC : Quel pouvoir vote les lois au niveau national ?",
+    "choices": [
+      "les universités",
+      "le Parlement",
+      "la Banque centrale",
+      "la Cour des comptes"
+    ],
+    "answer": 1,
+    "explanation": "Le Parlement exerce le pouvoir législatif national.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF016B",
+    "knowledge_id": "V2-RDC-FACT-016",
+    "module": 2,
+    "domain": "Symboles",
+    "subdomain": "Langue",
+    "prompt": "Repère RDC : Quelle est la langue officielle de la RDC ?",
+    "choices": [
+      "le français",
+      "le lingala",
+      "le swahili",
+      "le tshiluba"
+    ],
+    "answer": 0,
+    "explanation": "Le français est la langue officielle de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF017A",
+    "knowledge_id": "V2-RDC-FACT-017",
+    "module": 2,
+    "domain": "Symboles",
+    "subdomain": "Langues nationales",
+    "prompt": "Quel ensemble contient uniquement les quatre langues nationales de la RDC ?",
+    "choices": [
+      "kikongo, lingala, swahili et tshiluba",
+      "français, lingala, anglais et swahili",
+      "kikongo, portugais, lingala et tshiluba",
+      "français, kikongo, arabe et swahili"
+    ],
+    "answer": 0,
+    "explanation": "Les quatre langues nationales sont le kikongo, le lingala, le swahili et le tshiluba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF017B",
+    "knowledge_id": "V2-RDC-FACT-017",
+    "module": 2,
+    "domain": "Symboles",
+    "subdomain": "Langues nationales",
+    "prompt": "Repère RDC : Quel ensemble contient uniquement les quatre langues nationales de la RDC ?",
+    "choices": [
+      "français, lingala, anglais et swahili",
+      "kikongo, portugais, lingala et tshiluba",
+      "français, kikongo, arabe et swahili",
+      "kikongo, lingala, swahili et tshiluba"
+    ],
+    "answer": 3,
+    "explanation": "Les quatre langues nationales sont le kikongo, le lingala, le swahili et le tshiluba.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF018B",
+    "knowledge_id": "V2-RDC-FACT-018",
+    "module": 2,
+    "domain": "Symboles",
+    "subdomain": "Devise",
+    "prompt": "Repère RDC : Quelle est la devise de la RDC ?",
+    "choices": [
+      "Paix-Travail-Patrie",
+      "Liberté-Égalité-Fraternité",
+      "Justice-Paix-Travail",
+      "Unité-Travail-Progrès"
+    ],
+    "answer": 2,
+    "explanation": "La devise de la RDC est Justice-Paix-Travail.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF019B",
+    "knowledge_id": "V2-RDC-FACT-019",
+    "module": 2,
+    "domain": "Symboles",
+    "subdomain": "Hymne",
+    "prompt": "Repère RDC : Quel est l’hymne national de la RDC ?",
+    "choices": [
+      "Nkosi Sikelel’ iAfrika",
+      "Debout Congolais",
+      "La Congolaise",
+      "Indépendance Cha Cha"
+    ],
+    "answer": 1,
+    "explanation": "L’hymne national est Debout Congolais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF020A",
+    "knowledge_id": "V2-RDC-FACT-020",
+    "module": 2,
+    "domain": "Symboles",
+    "subdomain": "Monnaie",
+    "prompt": "Quelle est la monnaie nationale de la RDC ?",
+    "choices": [
+      "le shilling congolais",
+      "le franc congolais",
+      "le franc CFA",
+      "le rand"
+    ],
+    "answer": 1,
+    "explanation": "La monnaie nationale est le franc congolais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF020B",
+    "knowledge_id": "V2-RDC-FACT-020",
+    "module": 2,
+    "domain": "Symboles",
+    "subdomain": "Monnaie",
+    "prompt": "Repère RDC : Quelle est la monnaie nationale de la RDC ?",
+    "choices": [
+      "le franc congolais",
+      "le franc CFA",
+      "le rand",
+      "le shilling congolais"
+    ],
+    "answer": 0,
+    "explanation": "La monnaie nationale est le franc congolais.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF021A",
+    "knowledge_id": "V2-RDC-FACT-021",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Hydrographie",
+    "prompt": "Quel fleuve est l’axe hydrographique majeur de la RDC ?",
+    "choices": [
+      "le fleuve Congo",
+      "le Nil",
+      "le Niger",
+      "le Zambèze"
+    ],
+    "answer": 0,
+    "explanation": "Le fleuve Congo est l’axe hydrographique majeur du pays.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF021B",
+    "knowledge_id": "V2-RDC-FACT-021",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Hydrographie",
+    "prompt": "Repère RDC : Quel fleuve est l’axe hydrographique majeur de la RDC ?",
+    "choices": [
+      "le Nil",
+      "le Niger",
+      "le Zambèze",
+      "le fleuve Congo"
+    ],
+    "answer": 3,
+    "explanation": "Le fleuve Congo est l’axe hydrographique majeur du pays.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF022A",
+    "knowledge_id": "V2-RDC-FACT-022",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Océan",
+    "prompt": "À quel océan la RDC possède-t-elle un accès ?",
+    "choices": [
+      "l’océan Indien",
+      "l’océan Pacifique",
+      "l’océan Arctique",
+      "l’océan Atlantique"
+    ],
+    "answer": 3,
+    "explanation": "La RDC possède une courte façade sur l’océan Atlantique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF022B",
+    "knowledge_id": "V2-RDC-FACT-022",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Océan",
+    "prompt": "Repère RDC : À quel océan la RDC possède-t-elle un accès ?",
+    "choices": [
+      "l’océan Pacifique",
+      "l’océan Arctique",
+      "l’océan Atlantique",
+      "l’océan Indien"
+    ],
+    "answer": 2,
+    "explanation": "La RDC possède une courte façade sur l’océan Atlantique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF023B",
+    "knowledge_id": "V2-RDC-FACT-023",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Lacs",
+    "prompt": "Repère RDC : Quel lac est partagé par la RDC et le Rwanda ?",
+    "choices": [
+      "le lac Mweru",
+      "le lac Kivu",
+      "le lac Tumba",
+      "le lac Mai-Ndombe"
+    ],
+    "answer": 1,
+    "explanation": "Le lac Kivu est partagé entre la RDC et le Rwanda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF024A",
+    "knowledge_id": "V2-RDC-FACT-024",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Lacs",
+    "prompt": "Quel grand lac borde notamment la RDC, la Tanzanie, le Burundi et la Zambie ?",
+    "choices": [
+      "le lac Turkana",
+      "le lac Tanganyika",
+      "le lac Victoria",
+      "le lac Tchad"
+    ],
+    "answer": 1,
+    "explanation": "Le lac Tanganyika est partagé notamment par ces quatre pays.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF024B",
+    "knowledge_id": "V2-RDC-FACT-024",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Lacs",
+    "prompt": "Repère RDC : Quel grand lac borde notamment la RDC, la Tanzanie, le Burundi et la Zambie ?",
+    "choices": [
+      "le lac Tanganyika",
+      "le lac Victoria",
+      "le lac Tchad",
+      "le lac Turkana"
+    ],
+    "answer": 0,
+    "explanation": "Le lac Tanganyika est partagé notamment par ces quatre pays.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF025A",
+    "knowledge_id": "V2-RDC-FACT-025",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Lacs",
+    "prompt": "Quel lac se trouve à la frontière entre la RDC et l’Ouganda ?",
+    "choices": [
+      "le lac Albert",
+      "le lac Tumba",
+      "le lac Mai-Ndombe",
+      "le lac Kivu"
+    ],
+    "answer": 0,
+    "explanation": "Le lac Albert se trouve à la frontière entre la RDC et l’Ouganda.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF025B",
+    "knowledge_id": "V2-RDC-FACT-025",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Lacs",
+    "prompt": "Repère RDC : Quel lac se trouve à la frontière entre la RDC et l’Ouganda ?",
+    "choices": [
+      "le lac Tumba",
+      "le lac Mai-Ndombe",
+      "le lac Kivu",
+      "le lac Albert"
+    ],
+    "answer": 3,
+    "explanation": "Le lac Albert se trouve à la frontière entre la RDC et l’Ouganda.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF026A",
+    "knowledge_id": "V2-RDC-FACT-026",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Relief",
+    "prompt": "Quel massif abrite le pic Marguerite ?",
+    "choices": [
+      "l’Atlas",
+      "le Drakensberg",
+      "le Tibesti",
+      "le Rwenzori"
+    ],
+    "answer": 3,
+    "explanation": "Le pic Marguerite se trouve dans le massif du Rwenzori.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF026B",
+    "knowledge_id": "V2-RDC-FACT-026",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Relief",
+    "prompt": "Repère RDC : Quel massif abrite le pic Marguerite ?",
+    "choices": [
+      "le Drakensberg",
+      "le Tibesti",
+      "le Rwenzori",
+      "l’Atlas"
+    ],
+    "answer": 2,
+    "explanation": "Le pic Marguerite se trouve dans le massif du Rwenzori.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF027A",
+    "knowledge_id": "V2-RDC-FACT-027",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Relief",
+    "prompt": "Quel est le point culminant de la RDC ?",
+    "choices": [
+      "le mont Mikeno",
+      "le mont Mangengenge",
+      "le pic Marguerite",
+      "le mont Kahuzi"
+    ],
+    "answer": 2,
+    "explanation": "Le pic Marguerite est le point culminant de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF027B",
+    "knowledge_id": "V2-RDC-FACT-027",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Relief",
+    "prompt": "Repère RDC : Quel est le point culminant de la RDC ?",
+    "choices": [
+      "le mont Mangengenge",
+      "le pic Marguerite",
+      "le mont Kahuzi",
+      "le mont Mikeno"
+    ],
+    "answer": 1,
+    "explanation": "Le pic Marguerite est le point culminant de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF028A",
+    "knowledge_id": "V2-RDC-FACT-028",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Frontières",
+    "prompt": "Combien de pays partagent une frontière terrestre avec la RDC ?",
+    "choices": [
+      "10",
+      "9",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "La RDC partage une frontière terrestre avec neuf pays.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF028B",
+    "knowledge_id": "V2-RDC-FACT-028",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Frontières",
+    "prompt": "Repère RDC : Combien de pays partagent une frontière terrestre avec la RDC ?",
+    "choices": [
+      "9",
+      "7",
+      "8",
+      "10"
+    ],
+    "answer": 0,
+    "explanation": "La RDC partage une frontière terrestre avec neuf pays.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF029A",
+    "knowledge_id": "V2-RDC-FACT-029",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays se trouve directement à l’est de la RDC et partage le lac Kivu ?",
+    "choices": [
+      "le Rwanda",
+      "le Ghana",
+      "le Tchad",
+      "le Cameroun"
+    ],
+    "answer": 0,
+    "explanation": "Le Rwanda partage une frontière avec la RDC et le lac Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF029B",
+    "knowledge_id": "V2-RDC-FACT-029",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Frontières",
+    "prompt": "Repère RDC : Quel pays se trouve directement à l’est de la RDC et partage le lac Kivu ?",
+    "choices": [
+      "le Ghana",
+      "le Tchad",
+      "le Cameroun",
+      "le Rwanda"
+    ],
+    "answer": 3,
+    "explanation": "Le Rwanda partage une frontière avec la RDC et le lac Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF030A",
+    "knowledge_id": "V2-RDC-FACT-030",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays partage une longue frontière au sud avec la RDC ?",
+    "choices": [
+      "le Kenya",
+      "le Soudan",
+      "le Gabon",
+      "la Zambie"
+    ],
+    "answer": 3,
+    "explanation": "La Zambie partage une longue frontière avec le sud de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF030B",
+    "knowledge_id": "V2-RDC-FACT-030",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Frontières",
+    "prompt": "Repère RDC : Quel pays partage une longue frontière au sud avec la RDC ?",
+    "choices": [
+      "le Soudan",
+      "le Gabon",
+      "la Zambie",
+      "le Kenya"
+    ],
+    "answer": 2,
+    "explanation": "La Zambie partage une longue frontière avec le sud de la RDC.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF031A",
+    "knowledge_id": "V2-RDC-FACT-031",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays se trouve à l’ouest de Kinshasa, de l’autre côté du fleuve Congo ?",
+    "choices": [
+      "l’Angola",
+      "le Gabon",
+      "la République du Congo",
+      "la République centrafricaine"
+    ],
+    "answer": 2,
+    "explanation": "Brazzaville, capitale de la République du Congo, fait face à Kinshasa.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF031B",
+    "knowledge_id": "V2-RDC-FACT-031",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Frontières",
+    "prompt": "Repère RDC : Quel pays se trouve à l’ouest de Kinshasa, de l’autre côté du fleuve Congo ?",
+    "choices": [
+      "le Gabon",
+      "la République du Congo",
+      "la République centrafricaine",
+      "l’Angola"
+    ],
+    "answer": 1,
+    "explanation": "Brazzaville, capitale de la République du Congo, fait face à Kinshasa.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF032A",
+    "knowledge_id": "V2-RDC-FACT-032",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Quel parc de la RDC est célèbre notamment pour les gorilles de montagne ?",
+    "choices": [
+      "le parc national d’Upemba",
+      "le parc national des Virunga",
+      "le parc national de la Salonga",
+      "le parc national de Kundelungu"
+    ],
+    "answer": 1,
+    "explanation": "Virunga abrite notamment des gorilles de montagne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF032B",
+    "knowledge_id": "V2-RDC-FACT-032",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Repère RDC : Quel parc de la RDC est célèbre notamment pour les gorilles de montagne ?",
+    "choices": [
+      "le parc national des Virunga",
+      "le parc national de la Salonga",
+      "le parc national de Kundelungu",
+      "le parc national d’Upemba"
+    ],
+    "answer": 0,
+    "explanation": "Virunga abrite notamment des gorilles de montagne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF033A",
+    "knowledge_id": "V2-RDC-FACT-033",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Quel site protège notamment l’okapi en RDC ?",
+    "choices": [
+      "la Réserve de faune à okapis",
+      "le parc national de la Salonga",
+      "le parc national de Kundelungu",
+      "le jardin botanique de Kisantu"
+    ],
+    "answer": 0,
+    "explanation": "La Réserve de faune à okapis protège notamment l’okapi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF033B",
+    "knowledge_id": "V2-RDC-FACT-033",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Repère RDC : Quel site protège notamment l’okapi en RDC ?",
+    "choices": [
+      "le parc national de la Salonga",
+      "le parc national de Kundelungu",
+      "le jardin botanique de Kisantu",
+      "la Réserve de faune à okapis"
+    ],
+    "answer": 3,
+    "explanation": "La Réserve de faune à okapis protège notamment l’okapi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF034A",
+    "knowledge_id": "V2-RDC-FACT-034",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Quel parc est une vaste aire protégée de forêt équatoriale dans le bassin du Congo ?",
+    "choices": [
+      "le parc national de Kundelungu",
+      "le parc national de l’Upemba",
+      "le parc national de la Garamba",
+      "le parc national de la Salonga"
+    ],
+    "answer": 3,
+    "explanation": "La Salonga protège une vaste forêt équatoriale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF034B",
+    "knowledge_id": "V2-RDC-FACT-034",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Repère RDC : Quel parc est une vaste aire protégée de forêt équatoriale dans le bassin du Congo ?",
+    "choices": [
+      "le parc national de l’Upemba",
+      "le parc national de la Garamba",
+      "le parc national de la Salonga",
+      "le parc national de Kundelungu"
+    ],
+    "answer": 2,
+    "explanation": "La Salonga protège une vaste forêt équatoriale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF035A",
+    "knowledge_id": "V2-RDC-FACT-035",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Quel parc national de l’est de la RDC porte les noms de deux sommets ?",
+    "choices": [
+      "le parc national des Virunga",
+      "le parc national de la Salonga",
+      "le parc national de Kahuzi-Biega",
+      "le parc national de la Garamba"
+    ],
+    "answer": 2,
+    "explanation": "Kahuzi-Biega porte les noms des monts Kahuzi et Biega.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF035B",
+    "knowledge_id": "V2-RDC-FACT-035",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Repère RDC : Quel parc national de l’est de la RDC porte les noms de deux sommets ?",
+    "choices": [
+      "le parc national de la Salonga",
+      "le parc national de Kahuzi-Biega",
+      "le parc national de la Garamba",
+      "le parc national des Virunga"
+    ],
+    "answer": 1,
+    "explanation": "Kahuzi-Biega porte les noms des monts Kahuzi et Biega.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF036A",
+    "knowledge_id": "V2-RDC-FACT-036",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Quel parc national se situe dans le nord-est de la RDC ?",
+    "choices": [
+      "le parc national marin des Mangroves",
+      "le parc national de la Garamba",
+      "le parc national de la Salonga",
+      "le parc national de Kundelungu"
+    ],
+    "answer": 1,
+    "explanation": "La Garamba se situe dans le nord-est de la RDC.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF036B",
+    "knowledge_id": "V2-RDC-FACT-036",
+    "module": 2,
+    "domain": "Patrimoine",
+    "subdomain": "UNESCO",
+    "prompt": "Repère RDC : Quel parc national se situe dans le nord-est de la RDC ?",
+    "choices": [
+      "le parc national de la Garamba",
+      "le parc national de la Salonga",
+      "le parc national de Kundelungu",
+      "le parc national marin des Mangroves"
+    ],
+    "answer": 0,
+    "explanation": "La Garamba se situe dans le nord-est de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF037A",
+    "knowledge_id": "V2-RDC-FACT-037",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Quel métal stratégique extrait en RDC est très utilisé dans les batteries rechargeables ?",
+    "choices": [
+      "le cobalt",
+      "le plomb",
+      "l’étain",
+      "l’argent"
+    ],
+    "answer": 0,
+    "explanation": "Le cobalt est un métal stratégique important pour de nombreuses batteries rechargeables.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF037B",
+    "knowledge_id": "V2-RDC-FACT-037",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Repère RDC : Quel métal stratégique extrait en RDC est très utilisé dans les batteries rechargeables ?",
+    "choices": [
+      "le plomb",
+      "l’étain",
+      "l’argent",
+      "le cobalt"
+    ],
+    "answer": 3,
+    "explanation": "Le cobalt est un métal stratégique important pour de nombreuses batteries rechargeables.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF038A",
+    "knowledge_id": "V2-RDC-FACT-038",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Quel métal est largement exploité avec le cobalt dans le sud-est de la RDC ?",
+    "choices": [
+      "l’aluminium",
+      "le nickel",
+      "le mercure",
+      "le cuivre"
+    ],
+    "answer": 3,
+    "explanation": "Le cuivre est un minerai majeur du sud-est de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF038B",
+    "knowledge_id": "V2-RDC-FACT-038",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Repère RDC : Quel métal est largement exploité avec le cobalt dans le sud-est de la RDC ?",
+    "choices": [
+      "le nickel",
+      "le mercure",
+      "le cuivre",
+      "l’aluminium"
+    ],
+    "answer": 2,
+    "explanation": "Le cuivre est un minerai majeur du sud-est de la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF039A",
+    "knowledge_id": "V2-RDC-FACT-039",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Dans quelle région historique se concentrent d’importants gisements de cuivre et de cobalt ?",
+    "choices": [
+      "l’Équateur",
+      "le Bas-Uele",
+      "le Katanga",
+      "le Kasaï"
+    ],
+    "answer": 2,
+    "explanation": "Le Katanga historique concentre d’importants gisements de cuivre et de cobalt.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF039B",
+    "knowledge_id": "V2-RDC-FACT-039",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Repère RDC : Dans quelle région historique se concentrent d’importants gisements de cuivre et de cobalt ?",
+    "choices": [
+      "le Bas-Uele",
+      "le Katanga",
+      "le Kasaï",
+      "l’Équateur"
+    ],
+    "answer": 1,
+    "explanation": "Le Katanga historique concentre d’importants gisements de cuivre et de cobalt.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF040A",
+    "knowledge_id": "V2-RDC-FACT-040",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Quel minerai est une source importante de tantale et est exploité dans l’est de la RDC ?",
+    "choices": [
+      "le gypse",
+      "le coltan",
+      "la bauxite",
+      "le phosphate"
+    ],
+    "answer": 1,
+    "explanation": "Le coltan est une source de tantale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF040B",
+    "knowledge_id": "V2-RDC-FACT-040",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Repère RDC : Quel minerai est une source importante de tantale et est exploité dans l’est de la RDC ?",
+    "choices": [
+      "le coltan",
+      "la bauxite",
+      "le phosphate",
+      "le gypse"
+    ],
+    "answer": 0,
+    "explanation": "Le coltan est une source de tantale.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF041A",
+    "knowledge_id": "V2-RDC-FACT-041",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Quelle ressource minérale est historiquement associée au Kasaï ?",
+    "choices": [
+      "le diamant",
+      "le pétrole offshore",
+      "le sel marin",
+      "la bauxite"
+    ],
+    "answer": 0,
+    "explanation": "Le Kasaï est historiquement associé à l’exploitation du diamant.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF041B",
+    "knowledge_id": "V2-RDC-FACT-041",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Mines",
+    "prompt": "Repère RDC : Quelle ressource minérale est historiquement associée au Kasaï ?",
+    "choices": [
+      "le pétrole offshore",
+      "le sel marin",
+      "la bauxite",
+      "le diamant"
+    ],
+    "answer": 3,
+    "explanation": "Le Kasaï est historiquement associé à l’exploitation du diamant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF042A",
+    "knowledge_id": "V2-RDC-FACT-042",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Énergie",
+    "prompt": "Sur quel fleuve se trouve le complexe hydroélectrique d’Inga ?",
+    "choices": [
+      "le Kasai",
+      "l’Ubangi",
+      "le Lualaba",
+      "le fleuve Congo"
+    ],
+    "answer": 3,
+    "explanation": "Le complexe d’Inga se trouve sur le fleuve Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF042B",
+    "knowledge_id": "V2-RDC-FACT-042",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Énergie",
+    "prompt": "Repère RDC : Sur quel fleuve se trouve le complexe hydroélectrique d’Inga ?",
+    "choices": [
+      "l’Ubangi",
+      "le Lualaba",
+      "le fleuve Congo",
+      "le Kasai"
+    ],
+    "answer": 2,
+    "explanation": "Le complexe d’Inga se trouve sur le fleuve Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF043A",
+    "knowledge_id": "V2-RDC-FACT-043",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Énergie",
+    "prompt": "Dans quelle province se trouve le site d’Inga ?",
+    "choices": [
+      "le Haut-Katanga",
+      "la Tshopo",
+      "le Kongo Central",
+      "le Lualaba"
+    ],
+    "answer": 2,
+    "explanation": "Le site d’Inga se trouve dans la province du Kongo Central.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF043B",
+    "knowledge_id": "V2-RDC-FACT-043",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Énergie",
+    "prompt": "Repère RDC : Dans quelle province se trouve le site d’Inga ?",
+    "choices": [
+      "la Tshopo",
+      "le Kongo Central",
+      "le Lualaba",
+      "le Haut-Katanga"
+    ],
+    "answer": 1,
+    "explanation": "Le site d’Inga se trouve dans la province du Kongo Central.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF044A",
+    "knowledge_id": "V2-RDC-FACT-044",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Agriculture",
+    "prompt": "Quel produit agricole est une culture importante dans plusieurs régions humides de la RDC ?",
+    "choices": [
+      "le houblon",
+      "le manioc",
+      "le blé dur méditerranéen",
+      "l’olive"
+    ],
+    "answer": 1,
+    "explanation": "Le manioc est une culture vivrière majeure en RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF044B",
+    "knowledge_id": "V2-RDC-FACT-044",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Agriculture",
+    "prompt": "Repère RDC : Quel produit agricole est une culture importante dans plusieurs régions humides de la RDC ?",
+    "choices": [
+      "le manioc",
+      "le blé dur méditerranéen",
+      "l’olive",
+      "le houblon"
+    ],
+    "answer": 0,
+    "explanation": "Le manioc est une culture vivrière majeure en RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF045A",
+    "knowledge_id": "V2-RDC-FACT-045",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Forêts",
+    "prompt": "Quel grand ensemble forestier couvre une partie importante de la RDC ?",
+    "choices": [
+      "le bassin du Congo",
+      "le bassin amazonien",
+      "la taïga sibérienne",
+      "la forêt boréale canadienne"
+    ],
+    "answer": 0,
+    "explanation": "La RDC abrite une grande partie des forêts du bassin du Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF045B",
+    "knowledge_id": "V2-RDC-FACT-045",
+    "module": 2,
+    "domain": "Économie",
+    "subdomain": "Forêts",
+    "prompt": "Repère RDC : Quel grand ensemble forestier couvre une partie importante de la RDC ?",
+    "choices": [
+      "le bassin amazonien",
+      "la taïga sibérienne",
+      "la forêt boréale canadienne",
+      "le bassin du Congo"
+    ],
+    "answer": 3,
+    "explanation": "La RDC abrite une grande partie des forêts du bassin du Congo.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF046A",
+    "knowledge_id": "V2-RDC-FACT-046",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Villes",
+    "prompt": "Quelle ville est le principal centre urbain du Haut-Katanga ?",
+    "choices": [
+      "Matadi",
+      "Mbandaka",
+      "Bunia",
+      "Lubumbashi"
+    ],
+    "answer": 3,
+    "explanation": "Lubumbashi est le chef-lieu du Haut-Katanga et un grand centre urbain du sud-est.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF046B",
+    "knowledge_id": "V2-RDC-FACT-046",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Villes",
+    "prompt": "Repère RDC : Quelle ville est le principal centre urbain du Haut-Katanga ?",
+    "choices": [
+      "Mbandaka",
+      "Bunia",
+      "Lubumbashi",
+      "Matadi"
+    ],
+    "answer": 2,
+    "explanation": "Lubumbashi est le chef-lieu du Haut-Katanga et un grand centre urbain du sud-est.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF047A",
+    "knowledge_id": "V2-RDC-FACT-047",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Villes",
+    "prompt": "Quelle ville est située sur le fleuve Congo en aval de Kinshasa et constitue un grand port fluvial-maritime ?",
+    "choices": [
+      "Kananga",
+      "Kindu",
+      "Matadi",
+      "Goma"
+    ],
+    "answer": 2,
+    "explanation": "Matadi est un grand port du Kongo Central sur le fleuve Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF047B",
+    "knowledge_id": "V2-RDC-FACT-047",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Villes",
+    "prompt": "Repère RDC : Quelle ville est située sur le fleuve Congo en aval de Kinshasa et constitue un grand port fluvial-maritime ?",
+    "choices": [
+      "Kindu",
+      "Matadi",
+      "Goma",
+      "Kananga"
+    ],
+    "answer": 1,
+    "explanation": "Matadi est un grand port du Kongo Central sur le fleuve Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF048A",
+    "knowledge_id": "V2-RDC-FACT-048",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Villes",
+    "prompt": "Quelle ville se trouve au bord du lac Kivu ?",
+    "choices": [
+      "Kikwit",
+      "Goma",
+      "Kisangani",
+      "Mbuji-Mayi"
+    ],
+    "answer": 1,
+    "explanation": "Goma se trouve au bord du lac Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF048B",
+    "knowledge_id": "V2-RDC-FACT-048",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Villes",
+    "prompt": "Repère RDC : Quelle ville se trouve au bord du lac Kivu ?",
+    "choices": [
+      "Goma",
+      "Kisangani",
+      "Mbuji-Mayi",
+      "Kikwit"
+    ],
+    "answer": 0,
+    "explanation": "Goma se trouve au bord du lac Kivu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF049A",
+    "knowledge_id": "V2-RDC-FACT-049",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Villes",
+    "prompt": "Quelle ville de la RDC se trouve près de l’équateur et sur le fleuve Congo ?",
+    "choices": [
+      "Mbandaka",
+      "Kolwezi",
+      "Likasi",
+      "Butembo"
+    ],
+    "answer": 0,
+    "explanation": "Mbandaka est située près de l’équateur sur le fleuve Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDF049B",
+    "knowledge_id": "V2-RDC-FACT-049",
+    "module": 2,
+    "domain": "Géographie",
+    "subdomain": "Villes",
+    "prompt": "Repère RDC : Quelle ville de la RDC se trouve près de l’équateur et sur le fleuve Congo ?",
+    "choices": [
+      "Kolwezi",
+      "Likasi",
+      "Butembo",
+      "Mbandaka"
+    ],
+    "answer": 3,
+    "explanation": "Mbandaka est située près de l’équateur sur le fleuve Congo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDB01",
+    "knowledge_id": "V2-RDC-BORDER-01",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays, dont l’enclave de Cabinda borde l’ouest de la RDC, partage une frontière avec elle ?",
+    "choices": [
+      "Éthiopie",
+      "Mozambique",
+      "Angola",
+      "Kenya"
+    ],
+    "answer": 2,
+    "explanation": "Angola partage une frontière terrestre avec la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDB02",
+    "knowledge_id": "V2-RDC-BORDER-02",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays des Grands Lacs partage une courte frontière avec la RDC au sud du Rwanda ?",
+    "choices": [
+      "Tchad",
+      "Burundi",
+      "Gabon",
+      "Ghana"
+    ],
+    "answer": 1,
+    "explanation": "Burundi partage une frontière terrestre avec la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDB03",
+    "knowledge_id": "V2-RDC-BORDER-03",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays situé au nord de la RDC partage avec elle une frontière dans la région de l’Ubangi ?",
+    "choices": [
+      "République centrafricaine",
+      "Cameroun",
+      "Malawi",
+      "Sénégal"
+    ],
+    "answer": 0,
+    "explanation": "République centrafricaine partage une frontière terrestre avec la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDB04",
+    "knowledge_id": "V2-RDC-BORDER-04",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays, dont Brazzaville fait face à Kinshasa, partage une frontière avec la RDC ?",
+    "choices": [
+      "Éthiopie",
+      "Mozambique",
+      "Somalie",
+      "République du Congo"
+    ],
+    "answer": 3,
+    "explanation": "République du Congo partage une frontière terrestre avec la RDC.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDB05",
+    "knowledge_id": "V2-RDC-BORDER-05",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays des Grands Lacs partage avec la RDC la région du lac Kivu ?",
+    "choices": [
+      "Tchad",
+      "Namibie",
+      "Rwanda",
+      "Ghana"
+    ],
+    "answer": 2,
+    "explanation": "Rwanda partage une frontière terrestre avec la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDB06",
+    "knowledge_id": "V2-RDC-BORDER-06",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Frontières",
+    "prompt": "Quel État devenu indépendant en 2011 partage une frontière au nord-est de la RDC ?",
+    "choices": [
+      "Nigeria",
+      "Soudan du Sud",
+      "Malawi",
+      "Sénégal"
+    ],
+    "answer": 1,
+    "explanation": "Soudan du Sud partage une frontière terrestre avec la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDB07",
+    "knowledge_id": "V2-RDC-BORDER-07",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays partage avec la RDC une frontière passant notamment par le lac Tanganyika ?",
+    "choices": [
+      "Tanzanie",
+      "Mozambique",
+      "Somalie",
+      "Kenya"
+    ],
+    "answer": 0,
+    "explanation": "Tanzanie partage une frontière terrestre avec la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDB08",
+    "knowledge_id": "V2-RDC-BORDER-08",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays d’Afrique de l’Est partage avec la RDC une frontière autour du lac Albert ?",
+    "choices": [
+      "Tchad",
+      "Namibie",
+      "Gabon",
+      "Ouganda"
+    ],
+    "answer": 3,
+    "explanation": "Ouganda partage une frontière terrestre avec la RDC.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  },
+  {
+    "id": "V2RDB09",
+    "knowledge_id": "V2-RDC-BORDER-09",
+    "module": 2,
+    "domain": "RDC",
+    "subdomain": "Frontières",
+    "prompt": "Quel pays partage une longue frontière avec le sud et le sud-est de la RDC ?",
+    "choices": [
+      "Nigeria",
+      "Cameroun",
+      "Zambie",
+      "Sénégal"
+    ],
+    "answer": 2,
+    "explanation": "Zambie partage une frontière terrestre avec la RDC.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Programme national RDC / Constitution / géographie et patrimoine de la RDC"
+  }
+]
