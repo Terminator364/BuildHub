@@ -1,0 +1,71 @@
+name: Excellentia Student Gateway
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-pages.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'excellentia-student/**'
+      - '.github/workflows/excellentia-student-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: excellentia-student-pages
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.14.0
+      - name: Syntax
+        run: |
+          node --check excellentia-student/app.js
+          node --check excellentia-student/sw.js
+          node --check excellentia-student/audit.mjs
+      - name: Gateway corpus audit
+        run: node excellentia-student/audit.mjs
+      - name: Static gateway contract
+        shell: bash
+        run: |
+          grep -q "remaining_ms:40000" excellentia-student/app.js
+          grep -q "deadline:Date.now()+40000" excellentia-student/app.js
+          grep -q "mode==='exam'" excellentia-student/app.js
+          grep -q "serviceWorker.register" excellentia-student/app.js
+          test -f excellentia-student/index.html
+          test -f excellentia-student/manifest.webmanifest
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Upload Student Gateway
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: excellentia-student
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
