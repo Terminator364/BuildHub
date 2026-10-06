@@ -1,0 +1,4942 @@
+[
+  {
+    "id": "V3SC0001",
+    "knowledge_id": "V3-SCI-PHY001",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « distance parcourue par unité de temps » ?",
+    "choices": [
+      "masse",
+      "travail mécanique",
+      "masse volumique",
+      "vitesse"
+    ],
+    "answer": 3,
+    "explanation": "vitesse : distance parcourue par unité de temps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0002",
+    "knowledge_id": "V3-SCI-PHY001",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « vitesse » ?",
+    "choices": [
+      "durée d’un cycle complet d’un phénomène périodique",
+      "distance parcourue par unité de temps",
+      "énergie qu’un corps possède du fait de son mouvement",
+      "force exercée par unité de surface"
+    ],
+    "answer": 1,
+    "explanation": "vitesse : distance parcourue par unité de temps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0003",
+    "knowledge_id": "V3-SCI-PHY002",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « variation de la vitesse par unité de temps » ?",
+    "choices": [
+      "fréquence",
+      "accélération",
+      "poids",
+      "puissance"
+    ],
+    "answer": 1,
+    "explanation": "accélération : variation de la vitesse par unité de temps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0004",
+    "knowledge_id": "V3-SCI-PHY002",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « accélération » ?",
+    "choices": [
+      "énergie liée à la position d’un corps dans un champ de pesanteur",
+      "rapport entre la masse volumique d’une substance et celle d’une substance de référence",
+      "distance entre deux points successifs en phase d’une onde",
+      "variation de la vitesse par unité de temps"
+    ],
+    "answer": 3,
+    "explanation": "accélération : variation de la vitesse par unité de temps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0005",
+    "knowledge_id": "V3-SCI-PHY003",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « interaction capable de modifier le mouvement ou de déformer un corps » ?",
+    "choices": [
+      "énergie cinétique",
+      "pression",
+      "période",
+      "force"
+    ],
+    "answer": 3,
+    "explanation": "force : interaction capable de modifier le mouvement ou de déformer un corps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0006",
+    "knowledge_id": "V3-SCI-PHY003",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « force » ?",
+    "choices": [
+      "écart maximal d’une oscillation par rapport à sa position d’équilibre",
+      "interaction capable de modifier le mouvement ou de déformer un corps",
+      "transfert d’énergie lorsqu’une force déplace son point d’application",
+      "masse contenue par unité de volume"
+    ],
+    "answer": 1,
+    "explanation": "force : interaction capable de modifier le mouvement ou de déformer un corps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0007",
+    "knowledge_id": "V3-SCI-PHY004",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « mesure de la quantité de matière et de l’inertie d’un corps » ?",
+    "choices": [
+      "longueur d’onde",
+      "masse",
+      "énergie potentielle gravitationnelle",
+      "densité"
+    ],
+    "answer": 1,
+    "explanation": "masse : mesure de la quantité de matière et de l’inertie d’un corps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0008",
+    "knowledge_id": "V3-SCI-PHY004",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « masse » ?",
+    "choices": [
+      "énergie transférée ou travail effectué par unité de temps",
+      "nombre de cycles ou oscillations par unité de temps",
+      "renvoi d’une onde lorsqu’elle rencontre une interface",
+      "mesure de la quantité de matière et de l’inertie d’un corps"
+    ],
+    "answer": 3,
+    "explanation": "masse : mesure de la quantité de matière et de l’inertie d’un corps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0009",
+    "knowledge_id": "V3-SCI-PHY005",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « force gravitationnelle exercée sur un corps » ?",
+    "choices": [
+      "travail mécanique",
+      "masse volumique",
+      "amplitude",
+      "poids"
+    ],
+    "answer": 3,
+    "explanation": "poids : force gravitationnelle exercée sur un corps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0010",
+    "knowledge_id": "V3-SCI-PHY005",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « poids » ?",
+    "choices": [
+      "changement de direction d’une onde lors du passage entre deux milieux où sa vitesse diffère",
+      "force gravitationnelle exercée sur un corps",
+      "force exercée par unité de surface",
+      "durée d’un cycle complet d’un phénomène périodique"
+    ],
+    "answer": 1,
+    "explanation": "poids : force gravitationnelle exercée sur un corps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0011",
+    "knowledge_id": "V3-SCI-PHY006",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « énergie qu’un corps possède du fait de son mouvement » ?",
+    "choices": [
+      "réflexion",
+      "énergie cinétique",
+      "puissance",
+      "fréquence"
+    ],
+    "answer": 1,
+    "explanation": "énergie cinétique : énergie qu’un corps possède du fait de son mouvement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0012",
+    "knowledge_id": "V3-SCI-PHY006",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « énergie cinétique » ?",
+    "choices": [
+      "rapport entre la masse volumique d’une substance et celle d’une substance de référence",
+      "distance entre deux points successifs en phase d’une onde",
+      "étalement d’une onde lorsqu’elle traverse une ouverture ou contourne un obstacle",
+      "énergie qu’un corps possède du fait de son mouvement"
+    ],
+    "answer": 3,
+    "explanation": "énergie cinétique : énergie qu’un corps possède du fait de son mouvement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0013",
+    "knowledge_id": "V3-SCI-PHY007",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « énergie liée à la position d’un corps dans un champ de pesanteur » ?",
+    "choices": [
+      "pression",
+      "période",
+      "réfraction",
+      "énergie potentielle gravitationnelle"
+    ],
+    "answer": 3,
+    "explanation": "énergie potentielle gravitationnelle : énergie liée à la position d’un corps dans un champ de pesanteur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0014",
+    "knowledge_id": "V3-SCI-PHY007",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « énergie potentielle gravitationnelle » ?",
+    "choices": [
+      "superposition de plusieurs ondes produisant une amplitude résultante",
+      "énergie liée à la position d’un corps dans un champ de pesanteur",
+      "masse contenue par unité de volume",
+      "écart maximal d’une oscillation par rapport à sa position d’équilibre"
+    ],
+    "answer": 1,
+    "explanation": "énergie potentielle gravitationnelle : énergie liée à la position d’un corps dans un champ de pesanteur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0015",
+    "knowledge_id": "V3-SCI-PHY008",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « transfert d’énergie lorsqu’une force déplace son point d’application » ?",
+    "choices": [
+      "diffraction",
+      "travail mécanique",
+      "densité",
+      "longueur d’onde"
+    ],
+    "answer": 1,
+    "explanation": "travail mécanique : transfert d’énergie lorsqu’une force déplace son point d’application.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0016",
+    "knowledge_id": "V3-SCI-PHY008",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « travail mécanique » ?",
+    "choices": [
+      "nombre de cycles ou oscillations par unité de temps",
+      "renvoi d’une onde lorsqu’elle rencontre une interface",
+      "déplacement ordonné de charges électriques",
+      "transfert d’énergie lorsqu’une force déplace son point d’application"
+    ],
+    "answer": 3,
+    "explanation": "travail mécanique : transfert d’énergie lorsqu’une force déplace son point d’application.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0017",
+    "knowledge_id": "V3-SCI-PHY009",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « énergie transférée ou travail effectué par unité de temps » ?",
+    "choices": [
+      "masse volumique",
+      "amplitude",
+      "interférence",
+      "puissance"
+    ],
+    "answer": 3,
+    "explanation": "puissance : énergie transférée ou travail effectué par unité de temps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0018",
+    "knowledge_id": "V3-SCI-PHY009",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « puissance » ?",
+    "choices": [
+      "différence de potentiel électrique entre deux points",
+      "énergie transférée ou travail effectué par unité de temps",
+      "durée d’un cycle complet d’un phénomène périodique",
+      "changement de direction d’une onde lors du passage entre deux milieux où sa vitesse diffère"
+    ],
+    "answer": 1,
+    "explanation": "puissance : énergie transférée ou travail effectué par unité de temps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0019",
+    "knowledge_id": "V3-SCI-PHY010",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « force exercée par unité de surface » ?",
+    "choices": [
+      "courant électrique",
+      "pression",
+      "fréquence",
+      "réflexion"
+    ],
+    "answer": 1,
+    "explanation": "pression : force exercée par unité de surface.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0020",
+    "knowledge_id": "V3-SCI-PHY010",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « pression » ?",
+    "choices": [
+      "distance entre deux points successifs en phase d’une onde",
+      "étalement d’une onde lorsqu’elle traverse une ouverture ou contourne un obstacle",
+      "opposition d’un composant au passage du courant électrique",
+      "force exercée par unité de surface"
+    ],
+    "answer": 3,
+    "explanation": "pression : force exercée par unité de surface.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0021",
+    "knowledge_id": "V3-SCI-PHY011",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « rapport entre la masse volumique d’une substance et celle d’une substance de référence » ?",
+    "choices": [
+      "période",
+      "réfraction",
+      "tension électrique",
+      "densité"
+    ],
+    "answer": 3,
+    "explanation": "densité : rapport entre la masse volumique d’une substance et celle d’une substance de référence.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0022",
+    "knowledge_id": "V3-SCI-PHY011",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « densité » ?",
+    "choices": [
+      "matériau dans lequel les charges électriques peuvent se déplacer facilement",
+      "rapport entre la masse volumique d’une substance et celle d’une substance de référence",
+      "écart maximal d’une oscillation par rapport à sa position d’équilibre",
+      "superposition de plusieurs ondes produisant une amplitude résultante"
+    ],
+    "answer": 1,
+    "explanation": "densité : rapport entre la masse volumique d’une substance et celle d’une substance de référence.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0023",
+    "knowledge_id": "V3-SCI-PHY012",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « masse contenue par unité de volume » ?",
+    "choices": [
+      "résistance électrique",
+      "masse volumique",
+      "longueur d’onde",
+      "diffraction"
+    ],
+    "answer": 1,
+    "explanation": "masse volumique : masse contenue par unité de volume.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0024",
+    "knowledge_id": "V3-SCI-PHY012",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « masse volumique » ?",
+    "choices": [
+      "renvoi d’une onde lorsqu’elle rencontre une interface",
+      "déplacement ordonné de charges électriques",
+      "matériau qui s’oppose fortement au déplacement des charges électriques",
+      "masse contenue par unité de volume"
+    ],
+    "answer": 3,
+    "explanation": "masse volumique : masse contenue par unité de volume.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0025",
+    "knowledge_id": "V3-SCI-PHY013",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « nombre de cycles ou oscillations par unité de temps » ?",
+    "choices": [
+      "amplitude",
+      "interférence",
+      "conducteur",
+      "fréquence"
+    ],
+    "answer": 3,
+    "explanation": "fréquence : nombre de cycles ou oscillations par unité de temps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0026",
+    "knowledge_id": "V3-SCI-PHY013",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « fréquence » ?",
+    "choices": [
+      "région où une charge électrique subit une force électrique",
+      "nombre de cycles ou oscillations par unité de temps",
+      "changement de direction d’une onde lors du passage entre deux milieux où sa vitesse diffère",
+      "différence de potentiel électrique entre deux points"
+    ],
+    "answer": 1,
+    "explanation": "fréquence : nombre de cycles ou oscillations par unité de temps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0027",
+    "knowledge_id": "V3-SCI-PHY014",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « durée d’un cycle complet d’un phénomène périodique » ?",
+    "choices": [
+      "isolant électrique",
+      "période",
+      "réflexion",
+      "courant électrique"
+    ],
+    "answer": 1,
+    "explanation": "période : durée d’un cycle complet d’un phénomène périodique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0028",
+    "knowledge_id": "V3-SCI-PHY014",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « période » ?",
+    "choices": [
+      "étalement d’une onde lorsqu’elle traverse une ouverture ou contourne un obstacle",
+      "opposition d’un composant au passage du courant électrique",
+      "région de l’espace où s’exercent des forces magnétiques",
+      "durée d’un cycle complet d’un phénomène périodique"
+    ],
+    "answer": 3,
+    "explanation": "période : durée d’un cycle complet d’un phénomène périodique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0029",
+    "knowledge_id": "V3-SCI-PHY015",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « distance entre deux points successifs en phase d’une onde » ?",
+    "choices": [
+      "réfraction",
+      "tension électrique",
+      "champ électrique",
+      "longueur d’onde"
+    ],
+    "answer": 3,
+    "explanation": "longueur d’onde : distance entre deux points successifs en phase d’une onde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0030",
+    "knowledge_id": "V3-SCI-PHY015",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « longueur d’onde » ?",
+    "choices": [
+      "production d’une force électromotrice par variation du flux magnétique",
+      "distance entre deux points successifs en phase d’une onde",
+      "superposition de plusieurs ondes produisant une amplitude résultante",
+      "matériau dans lequel les charges électriques peuvent se déplacer facilement"
+    ],
+    "answer": 1,
+    "explanation": "longueur d’onde : distance entre deux points successifs en phase d’une onde.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0031",
+    "knowledge_id": "V3-SCI-PHY016",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « écart maximal d’une oscillation par rapport à sa position d’équilibre » ?",
+    "choices": [
+      "champ magnétique",
+      "amplitude",
+      "diffraction",
+      "résistance électrique"
+    ],
+    "answer": 1,
+    "explanation": "amplitude : écart maximal d’une oscillation par rapport à sa position d’équilibre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0032",
+    "knowledge_id": "V3-SCI-PHY016",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « amplitude » ?",
+    "choices": [
+      "déplacement ordonné de charges électriques",
+      "matériau qui s’oppose fortement au déplacement des charges électriques",
+      "appareil qui modifie une tension alternative par induction électromagnétique",
+      "écart maximal d’une oscillation par rapport à sa position d’équilibre"
+    ],
+    "answer": 3,
+    "explanation": "amplitude : écart maximal d’une oscillation par rapport à sa position d’équilibre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0033",
+    "knowledge_id": "V3-SCI-PHY017",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « renvoi d’une onde lorsqu’elle rencontre une interface » ?",
+    "choices": [
+      "interférence",
+      "conducteur",
+      "induction électromagnétique",
+      "réflexion"
+    ],
+    "answer": 3,
+    "explanation": "réflexion : renvoi d’une onde lorsqu’elle rencontre une interface.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0034",
+    "knowledge_id": "V3-SCI-PHY017",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « réflexion » ?",
+    "choices": [
+      "conversion d’énergie électrique en chaleur dans un conducteur résistif",
+      "renvoi d’une onde lorsqu’elle rencontre une interface",
+      "différence de potentiel électrique entre deux points",
+      "région où une charge électrique subit une force électrique"
+    ],
+    "answer": 1,
+    "explanation": "réflexion : renvoi d’une onde lorsqu’elle rencontre une interface.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0035",
+    "knowledge_id": "V3-SCI-PHY018",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « changement de direction d’une onde lors du passage entre deux milieux où sa vitesse diffère » ?",
+    "choices": [
+      "transformateur",
+      "réfraction",
+      "courant électrique",
+      "isolant électrique"
+    ],
+    "answer": 1,
+    "explanation": "réfraction : changement de direction d’une onde lors du passage entre deux milieux où sa vitesse diffère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0036",
+    "knowledge_id": "V3-SCI-PHY018",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « réfraction » ?",
+    "choices": [
+      "opposition d’un composant au passage du courant électrique",
+      "région de l’espace où s’exercent des forces magnétiques",
+      "grandeur liée à l’état thermique d’un système",
+      "changement de direction d’une onde lors du passage entre deux milieux où sa vitesse diffère"
+    ],
+    "answer": 3,
+    "explanation": "réfraction : changement de direction d’une onde lors du passage entre deux milieux où sa vitesse diffère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0037",
+    "knowledge_id": "V3-SCI-PHY019",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « étalement d’une onde lorsqu’elle traverse une ouverture ou contourne un obstacle » ?",
+    "choices": [
+      "tension électrique",
+      "champ électrique",
+      "effet Joule",
+      "diffraction"
+    ],
+    "answer": 3,
+    "explanation": "diffraction : étalement d’une onde lorsqu’elle traverse une ouverture ou contourne un obstacle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0038",
+    "knowledge_id": "V3-SCI-PHY019",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « diffraction » ?",
+    "choices": [
+      "transfert d’énergie thermique dû à une différence de température",
+      "étalement d’une onde lorsqu’elle traverse une ouverture ou contourne un obstacle",
+      "matériau dans lequel les charges électriques peuvent se déplacer facilement",
+      "production d’une force électromotrice par variation du flux magnétique"
+    ],
+    "answer": 1,
+    "explanation": "diffraction : étalement d’une onde lorsqu’elle traverse une ouverture ou contourne un obstacle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0039",
+    "knowledge_id": "V3-SCI-PHY020",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « superposition de plusieurs ondes produisant une amplitude résultante » ?",
+    "choices": [
+      "température",
+      "interférence",
+      "résistance électrique",
+      "champ magnétique"
+    ],
+    "answer": 1,
+    "explanation": "interférence : superposition de plusieurs ondes produisant une amplitude résultante.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0040",
+    "knowledge_id": "V3-SCI-PHY020",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « interférence » ?",
+    "choices": [
+      "matériau qui s’oppose fortement au déplacement des charges électriques",
+      "appareil qui modifie une tension alternative par induction électromagnétique",
+      "transfert de chaleur à travers la matière sans déplacement global de matière",
+      "superposition de plusieurs ondes produisant une amplitude résultante"
+    ],
+    "answer": 3,
+    "explanation": "interférence : superposition de plusieurs ondes produisant une amplitude résultante.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0041",
+    "knowledge_id": "V3-SCI-PHY021",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « déplacement ordonné de charges électriques » ?",
+    "choices": [
+      "conducteur",
+      "induction électromagnétique",
+      "chaleur",
+      "courant électrique"
+    ],
+    "answer": 3,
+    "explanation": "courant électrique : déplacement ordonné de charges électriques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0042",
+    "knowledge_id": "V3-SCI-PHY021",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « courant électrique » ?",
+    "choices": [
+      "transfert de chaleur accompagné d’un déplacement de fluide",
+      "déplacement ordonné de charges électriques",
+      "région où une charge électrique subit une force électrique",
+      "conversion d’énergie électrique en chaleur dans un conducteur résistif"
+    ],
+    "answer": 1,
+    "explanation": "courant électrique : déplacement ordonné de charges électriques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0043",
+    "knowledge_id": "V3-SCI-PHY022",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « différence de potentiel électrique entre deux points » ?",
+    "choices": [
+      "conduction thermique",
+      "tension électrique",
+      "isolant électrique",
+      "transformateur"
+    ],
+    "answer": 1,
+    "explanation": "tension électrique : différence de potentiel électrique entre deux points.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0044",
+    "knowledge_id": "V3-SCI-PHY022",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « tension électrique » ?",
+    "choices": [
+      "région de l’espace où s’exercent des forces magnétiques",
+      "grandeur liée à l’état thermique d’un système",
+      "transfert d’énergie thermique par ondes électromagnétiques",
+      "différence de potentiel électrique entre deux points"
+    ],
+    "answer": 3,
+    "explanation": "tension électrique : différence de potentiel électrique entre deux points.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0045",
+    "knowledge_id": "V3-SCI-PHY023",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « opposition d’un composant au passage du courant électrique » ?",
+    "choices": [
+      "champ électrique",
+      "effet Joule",
+      "convection",
+      "résistance électrique"
+    ],
+    "answer": 3,
+    "explanation": "résistance électrique : opposition d’un composant au passage du courant électrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0046",
+    "knowledge_id": "V3-SCI-PHY023",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « résistance électrique » ?",
+    "choices": [
+      "passage de l’état solide à l’état liquide",
+      "opposition d’un composant au passage du courant électrique",
+      "production d’une force électromotrice par variation du flux magnétique",
+      "transfert d’énergie thermique dû à une différence de température"
+    ],
+    "answer": 1,
+    "explanation": "résistance électrique : opposition d’un composant au passage du courant électrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0047",
+    "knowledge_id": "V3-SCI-PHY024",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « matériau dans lequel les charges électriques peuvent se déplacer facilement » ?",
+    "choices": [
+      "rayonnement thermique",
+      "conducteur",
+      "champ magnétique",
+      "température"
+    ],
+    "answer": 1,
+    "explanation": "conducteur : matériau dans lequel les charges électriques peuvent se déplacer facilement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0048",
+    "knowledge_id": "V3-SCI-PHY024",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « conducteur » ?",
+    "choices": [
+      "appareil qui modifie une tension alternative par induction électromagnétique",
+      "transfert de chaleur à travers la matière sans déplacement global de matière",
+      "passage de l’état liquide à l’état solide",
+      "matériau dans lequel les charges électriques peuvent se déplacer facilement"
+    ],
+    "answer": 3,
+    "explanation": "conducteur : matériau dans lequel les charges électriques peuvent se déplacer facilement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0049",
+    "knowledge_id": "V3-SCI-PHY025",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « matériau qui s’oppose fortement au déplacement des charges électriques » ?",
+    "choices": [
+      "induction électromagnétique",
+      "chaleur",
+      "fusion",
+      "isolant électrique"
+    ],
+    "answer": 3,
+    "explanation": "isolant électrique : matériau qui s’oppose fortement au déplacement des charges électriques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0050",
+    "knowledge_id": "V3-SCI-PHY025",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « isolant électrique » ?",
+    "choices": [
+      "passage de l’état liquide à l’état gazeux",
+      "matériau qui s’oppose fortement au déplacement des charges électriques",
+      "conversion d’énergie électrique en chaleur dans un conducteur résistif",
+      "transfert de chaleur accompagné d’un déplacement de fluide"
+    ],
+    "answer": 1,
+    "explanation": "isolant électrique : matériau qui s’oppose fortement au déplacement des charges électriques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0051",
+    "knowledge_id": "V3-SCI-PHY026",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « région où une charge électrique subit une force électrique » ?",
+    "choices": [
+      "solidification",
+      "champ électrique",
+      "transformateur",
+      "conduction thermique"
+    ],
+    "answer": 1,
+    "explanation": "champ électrique : région où une charge électrique subit une force électrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0052",
+    "knowledge_id": "V3-SCI-PHY026",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « champ électrique » ?",
+    "choices": [
+      "grandeur liée à l’état thermique d’un système",
+      "transfert d’énergie thermique par ondes électromagnétiques",
+      "passage de l’état gazeux à l’état liquide",
+      "région où une charge électrique subit une force électrique"
+    ],
+    "answer": 3,
+    "explanation": "champ électrique : région où une charge électrique subit une force électrique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0053",
+    "knowledge_id": "V3-SCI-PHY027",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « région de l’espace où s’exercent des forces magnétiques » ?",
+    "choices": [
+      "effet Joule",
+      "convection",
+      "vaporisation",
+      "champ magnétique"
+    ],
+    "answer": 3,
+    "explanation": "champ magnétique : région de l’espace où s’exercent des forces magnétiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0054",
+    "knowledge_id": "V3-SCI-PHY027",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « champ magnétique » ?",
+    "choices": [
+      "passage direct de l’état solide à l’état gazeux",
+      "région de l’espace où s’exercent des forces magnétiques",
+      "transfert d’énergie thermique dû à une différence de température",
+      "passage de l’état solide à l’état liquide"
+    ],
+    "answer": 1,
+    "explanation": "champ magnétique : région de l’espace où s’exercent des forces magnétiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0055",
+    "knowledge_id": "V3-SCI-PHY028",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « production d’une force électromotrice par variation du flux magnétique » ?",
+    "choices": [
+      "condensation liquide",
+      "induction électromagnétique",
+      "température",
+      "rayonnement thermique"
+    ],
+    "answer": 1,
+    "explanation": "induction électromagnétique : production d’une force électromotrice par variation du flux magnétique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0056",
+    "knowledge_id": "V3-SCI-PHY028",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « induction électromagnétique » ?",
+    "choices": [
+      "transfert de chaleur à travers la matière sans déplacement global de matière",
+      "passage de l’état liquide à l’état solide",
+      "tendance d’un corps à conserver son état de repos ou de mouvement rectiligne uniforme",
+      "production d’une force électromotrice par variation du flux magnétique"
+    ],
+    "answer": 3,
+    "explanation": "induction électromagnétique : production d’une force électromotrice par variation du flux magnétique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0057",
+    "knowledge_id": "V3-SCI-PHY029",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « appareil qui modifie une tension alternative par induction électromagnétique » ?",
+    "choices": [
+      "chaleur",
+      "fusion",
+      "sublimation",
+      "transformateur"
+    ],
+    "answer": 3,
+    "explanation": "transformateur : appareil qui modifie une tension alternative par induction électromagnétique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0058",
+    "knowledge_id": "V3-SCI-PHY029",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « transformateur » ?",
+    "choices": [
+      "attraction mutuelle entre les masses",
+      "appareil qui modifie une tension alternative par induction électromagnétique",
+      "transfert de chaleur accompagné d’un déplacement de fluide",
+      "passage de l’état liquide à l’état gazeux"
+    ],
+    "answer": 1,
+    "explanation": "transformateur : appareil qui modifie une tension alternative par induction électromagnétique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0059",
+    "knowledge_id": "V3-SCI-PHY030",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « conversion d’énergie électrique en chaleur dans un conducteur résistif » ?",
+    "choices": [
+      "inertie",
+      "effet Joule",
+      "conduction thermique",
+      "solidification"
+    ],
+    "answer": 1,
+    "explanation": "effet Joule : conversion d’énergie électrique en chaleur dans un conducteur résistif.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0060",
+    "knowledge_id": "V3-SCI-PHY030",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « effet Joule » ?",
+    "choices": [
+      "transfert d’énergie thermique par ondes électromagnétiques",
+      "passage de l’état gazeux à l’état liquide",
+      "produit de la masse d’un corps par sa vitesse",
+      "conversion d’énergie électrique en chaleur dans un conducteur résistif"
+    ],
+    "answer": 3,
+    "explanation": "effet Joule : conversion d’énergie électrique en chaleur dans un conducteur résistif.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0061",
+    "knowledge_id": "V3-SCI-PHY031",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « grandeur liée à l’état thermique d’un système » ?",
+    "choices": [
+      "convection",
+      "vaporisation",
+      "gravitation universelle",
+      "température"
+    ],
+    "answer": 3,
+    "explanation": "température : grandeur liée à l’état thermique d’un système.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0062",
+    "knowledge_id": "V3-SCI-PHY031",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « température » ?",
+    "choices": [
+      "mesure de l’aptitude d’une force à faire tourner un objet autour d’un axe",
+      "grandeur liée à l’état thermique d’un système",
+      "passage de l’état solide à l’état liquide",
+      "passage direct de l’état solide à l’état gazeux"
+    ],
+    "answer": 1,
+    "explanation": "température : grandeur liée à l’état thermique d’un système.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0063",
+    "knowledge_id": "V3-SCI-PHY032",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « transfert d’énergie thermique dû à une différence de température » ?",
+    "choices": [
+      "quantité de mouvement",
+      "chaleur",
+      "rayonnement thermique",
+      "condensation liquide"
+    ],
+    "answer": 1,
+    "explanation": "chaleur : transfert d’énergie thermique dû à une différence de température.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0064",
+    "knowledge_id": "V3-SCI-PHY032",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « chaleur » ?",
+    "choices": [
+      "passage de l’état liquide à l’état solide",
+      "tendance d’un corps à conserver son état de repos ou de mouvement rectiligne uniforme",
+      "point où l’on peut considérer appliqué le poids résultant d’un corps",
+      "transfert d’énergie thermique dû à une différence de température"
+    ],
+    "answer": 3,
+    "explanation": "chaleur : transfert d’énergie thermique dû à une différence de température.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0065",
+    "knowledge_id": "V3-SCI-PHY033",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « transfert de chaleur à travers la matière sans déplacement global de matière » ?",
+    "choices": [
+      "fusion",
+      "sublimation",
+      "moment d’une force",
+      "conduction thermique"
+    ],
+    "answer": 3,
+    "explanation": "conduction thermique : transfert de chaleur à travers la matière sans déplacement global de matière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0066",
+    "knowledge_id": "V3-SCI-PHY033",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « conduction thermique » ?",
+    "choices": [
+      "forte réponse d’un système lorsque la fréquence d’excitation est proche de sa fréquence propre",
+      "transfert de chaleur à travers la matière sans déplacement global de matière",
+      "passage de l’état liquide à l’état gazeux",
+      "attraction mutuelle entre les masses"
+    ],
+    "answer": 1,
+    "explanation": "conduction thermique : transfert de chaleur à travers la matière sans déplacement global de matière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0067",
+    "knowledge_id": "V3-SCI-PHY034",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « transfert de chaleur accompagné d’un déplacement de fluide » ?",
+    "choices": [
+      "centre de gravité",
+      "convection",
+      "solidification",
+      "inertie"
+    ],
+    "answer": 1,
+    "explanation": "convection : transfert de chaleur accompagné d’un déplacement de fluide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0068",
+    "knowledge_id": "V3-SCI-PHY034",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « convection » ?",
+    "choices": [
+      "passage de l’état gazeux à l’état liquide",
+      "produit de la masse d’un corps par sa vitesse",
+      "onde mécanique liée à une vibration se propageant dans un milieu matériel",
+      "transfert de chaleur accompagné d’un déplacement de fluide"
+    ],
+    "answer": 3,
+    "explanation": "convection : transfert de chaleur accompagné d’un déplacement de fluide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0069",
+    "knowledge_id": "V3-SCI-PHY035",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « transfert d’énergie thermique par ondes électromagnétiques » ?",
+    "choices": [
+      "vaporisation",
+      "gravitation universelle",
+      "résonance",
+      "rayonnement thermique"
+    ],
+    "answer": 3,
+    "explanation": "rayonnement thermique : transfert d’énergie thermique par ondes électromagnétiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0070",
+    "knowledge_id": "V3-SCI-PHY035",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « rayonnement thermique » ?",
+    "choices": [
+      "onde sonore de fréquence supérieure à la limite d’audition humaine",
+      "transfert d’énergie thermique par ondes électromagnétiques",
+      "passage direct de l’état solide à l’état gazeux",
+      "mesure de l’aptitude d’une force à faire tourner un objet autour d’un axe"
+    ],
+    "answer": 1,
+    "explanation": "rayonnement thermique : transfert d’énergie thermique par ondes électromagnétiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0071",
+    "knowledge_id": "V3-SCI-PHY036",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « passage de l’état solide à l’état liquide » ?",
+    "choices": [
+      "son",
+      "fusion",
+      "condensation liquide",
+      "quantité de mouvement"
+    ],
+    "answer": 1,
+    "explanation": "fusion : passage de l’état solide à l’état liquide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0072",
+    "knowledge_id": "V3-SCI-PHY036",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « fusion » ?",
+    "choices": [
+      "tendance d’un corps à conserver son état de repos ou de mouvement rectiligne uniforme",
+      "point où l’on peut considérer appliqué le poids résultant d’un corps",
+      "partie du spectre électromagnétique perceptible par l’œil humain",
+      "passage de l’état solide à l’état liquide"
+    ],
+    "answer": 3,
+    "explanation": "fusion : passage de l’état solide à l’état liquide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0073",
+    "knowledge_id": "V3-SCI-PHY037",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « passage de l’état liquide à l’état solide » ?",
+    "choices": [
+      "sublimation",
+      "moment d’une force",
+      "ultrason",
+      "solidification"
+    ],
+    "answer": 3,
+    "explanation": "solidification : passage de l’état liquide à l’état solide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0074",
+    "knowledge_id": "V3-SCI-PHY037",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « solidification » ?",
+    "choices": [
+      "quantum d’énergie associé au rayonnement électromagnétique",
+      "passage de l’état liquide à l’état solide",
+      "attraction mutuelle entre les masses",
+      "forte réponse d’un système lorsque la fréquence d’excitation est proche de sa fréquence propre"
+    ],
+    "answer": 1,
+    "explanation": "solidification : passage de l’état liquide à l’état solide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0075",
+    "knowledge_id": "V3-SCI-PHY038",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « passage de l’état liquide à l’état gazeux » ?",
+    "choices": [
+      "lumière visible",
+      "vaporisation",
+      "inertie",
+      "centre de gravité"
+    ],
+    "answer": 1,
+    "explanation": "vaporisation : passage de l’état liquide à l’état gazeux.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0076",
+    "knowledge_id": "V3-SCI-PHY038",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « vaporisation » ?",
+    "choices": [
+      "produit de la masse d’un corps par sa vitesse",
+      "onde mécanique liée à une vibration se propageant dans un milieu matériel",
+      "distance parcourue par unité de temps",
+      "passage de l’état liquide à l’état gazeux"
+    ],
+    "answer": 3,
+    "explanation": "vaporisation : passage de l’état liquide à l’état gazeux.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0077",
+    "knowledge_id": "V3-SCI-PHY039",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « passage de l’état gazeux à l’état liquide » ?",
+    "choices": [
+      "gravitation universelle",
+      "résonance",
+      "photon",
+      "condensation liquide"
+    ],
+    "answer": 3,
+    "explanation": "condensation liquide : passage de l’état gazeux à l’état liquide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0078",
+    "knowledge_id": "V3-SCI-PHY039",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « condensation liquide » ?",
+    "choices": [
+      "variation de la vitesse par unité de temps",
+      "passage de l’état gazeux à l’état liquide",
+      "mesure de l’aptitude d’une force à faire tourner un objet autour d’un axe",
+      "onde sonore de fréquence supérieure à la limite d’audition humaine"
+    ],
+    "answer": 1,
+    "explanation": "condensation liquide : passage de l’état gazeux à l’état liquide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0079",
+    "knowledge_id": "V3-SCI-PHY040",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « passage direct de l’état solide à l’état gazeux » ?",
+    "choices": [
+      "vitesse",
+      "sublimation",
+      "quantité de mouvement",
+      "son"
+    ],
+    "answer": 1,
+    "explanation": "sublimation : passage direct de l’état solide à l’état gazeux.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0080",
+    "knowledge_id": "V3-SCI-PHY040",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « sublimation » ?",
+    "choices": [
+      "point où l’on peut considérer appliqué le poids résultant d’un corps",
+      "partie du spectre électromagnétique perceptible par l’œil humain",
+      "interaction capable de modifier le mouvement ou de déformer un corps",
+      "passage direct de l’état solide à l’état gazeux"
+    ],
+    "answer": 3,
+    "explanation": "sublimation : passage direct de l’état solide à l’état gazeux.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0081",
+    "knowledge_id": "V3-SCI-PHY041",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « tendance d’un corps à conserver son état de repos ou de mouvement rectiligne uniforme » ?",
+    "choices": [
+      "moment d’une force",
+      "ultrason",
+      "accélération",
+      "inertie"
+    ],
+    "answer": 3,
+    "explanation": "inertie : tendance d’un corps à conserver son état de repos ou de mouvement rectiligne uniforme.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0082",
+    "knowledge_id": "V3-SCI-PHY041",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « inertie » ?",
+    "choices": [
+      "mesure de la quantité de matière et de l’inertie d’un corps",
+      "tendance d’un corps à conserver son état de repos ou de mouvement rectiligne uniforme",
+      "forte réponse d’un système lorsque la fréquence d’excitation est proche de sa fréquence propre",
+      "quantum d’énergie associé au rayonnement électromagnétique"
+    ],
+    "answer": 1,
+    "explanation": "inertie : tendance d’un corps à conserver son état de repos ou de mouvement rectiligne uniforme.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0083",
+    "knowledge_id": "V3-SCI-PHY042",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « attraction mutuelle entre les masses » ?",
+    "choices": [
+      "force",
+      "gravitation universelle",
+      "centre de gravité",
+      "lumière visible"
+    ],
+    "answer": 1,
+    "explanation": "gravitation universelle : attraction mutuelle entre les masses.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0084",
+    "knowledge_id": "V3-SCI-PHY042",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « gravitation universelle » ?",
+    "choices": [
+      "onde mécanique liée à une vibration se propageant dans un milieu matériel",
+      "distance parcourue par unité de temps",
+      "force gravitationnelle exercée sur un corps",
+      "attraction mutuelle entre les masses"
+    ],
+    "answer": 3,
+    "explanation": "gravitation universelle : attraction mutuelle entre les masses.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0085",
+    "knowledge_id": "V3-SCI-PHY043",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « produit de la masse d’un corps par sa vitesse » ?",
+    "choices": [
+      "résonance",
+      "photon",
+      "masse",
+      "quantité de mouvement"
+    ],
+    "answer": 3,
+    "explanation": "quantité de mouvement : produit de la masse d’un corps par sa vitesse.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0086",
+    "knowledge_id": "V3-SCI-PHY043",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « quantité de mouvement » ?",
+    "choices": [
+      "énergie qu’un corps possède du fait de son mouvement",
+      "produit de la masse d’un corps par sa vitesse",
+      "onde sonore de fréquence supérieure à la limite d’audition humaine",
+      "variation de la vitesse par unité de temps"
+    ],
+    "answer": 1,
+    "explanation": "quantité de mouvement : produit de la masse d’un corps par sa vitesse.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0087",
+    "knowledge_id": "V3-SCI-PHY044",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « mesure de l’aptitude d’une force à faire tourner un objet autour d’un axe » ?",
+    "choices": [
+      "poids",
+      "moment d’une force",
+      "son",
+      "vitesse"
+    ],
+    "answer": 1,
+    "explanation": "moment d’une force : mesure de l’aptitude d’une force à faire tourner un objet autour d’un axe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0088",
+    "knowledge_id": "V3-SCI-PHY044",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « moment d’une force » ?",
+    "choices": [
+      "partie du spectre électromagnétique perceptible par l’œil humain",
+      "interaction capable de modifier le mouvement ou de déformer un corps",
+      "énergie liée à la position d’un corps dans un champ de pesanteur",
+      "mesure de l’aptitude d’une force à faire tourner un objet autour d’un axe"
+    ],
+    "answer": 3,
+    "explanation": "moment d’une force : mesure de l’aptitude d’une force à faire tourner un objet autour d’un axe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0089",
+    "knowledge_id": "V3-SCI-PHY045",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « point où l’on peut considérer appliqué le poids résultant d’un corps » ?",
+    "choices": [
+      "ultrason",
+      "accélération",
+      "énergie cinétique",
+      "centre de gravité"
+    ],
+    "answer": 3,
+    "explanation": "centre de gravité : point où l’on peut considérer appliqué le poids résultant d’un corps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0090",
+    "knowledge_id": "V3-SCI-PHY045",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « centre de gravité » ?",
+    "choices": [
+      "transfert d’énergie lorsqu’une force déplace son point d’application",
+      "point où l’on peut considérer appliqué le poids résultant d’un corps",
+      "quantum d’énergie associé au rayonnement électromagnétique",
+      "mesure de la quantité de matière et de l’inertie d’un corps"
+    ],
+    "answer": 1,
+    "explanation": "centre de gravité : point où l’on peut considérer appliqué le poids résultant d’un corps.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0091",
+    "knowledge_id": "V3-SCI-PHY046",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « forte réponse d’un système lorsque la fréquence d’excitation est proche de sa fréquence propre » ?",
+    "choices": [
+      "énergie potentielle gravitationnelle",
+      "résonance",
+      "lumière visible",
+      "force"
+    ],
+    "answer": 1,
+    "explanation": "résonance : forte réponse d’un système lorsque la fréquence d’excitation est proche de sa fréquence propre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0092",
+    "knowledge_id": "V3-SCI-PHY046",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « résonance » ?",
+    "choices": [
+      "distance parcourue par unité de temps",
+      "force gravitationnelle exercée sur un corps",
+      "énergie transférée ou travail effectué par unité de temps",
+      "forte réponse d’un système lorsque la fréquence d’excitation est proche de sa fréquence propre"
+    ],
+    "answer": 3,
+    "explanation": "résonance : forte réponse d’un système lorsque la fréquence d’excitation est proche de sa fréquence propre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0093",
+    "knowledge_id": "V3-SCI-PHY047",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « onde mécanique liée à une vibration se propageant dans un milieu matériel » ?",
+    "choices": [
+      "photon",
+      "masse",
+      "travail mécanique",
+      "son"
+    ],
+    "answer": 3,
+    "explanation": "son : onde mécanique liée à une vibration se propageant dans un milieu matériel.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0094",
+    "knowledge_id": "V3-SCI-PHY047",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « son » ?",
+    "choices": [
+      "force exercée par unité de surface",
+      "onde mécanique liée à une vibration se propageant dans un milieu matériel",
+      "variation de la vitesse par unité de temps",
+      "énergie qu’un corps possède du fait de son mouvement"
+    ],
+    "answer": 1,
+    "explanation": "son : onde mécanique liée à une vibration se propageant dans un milieu matériel.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0095",
+    "knowledge_id": "V3-SCI-PHY048",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « onde sonore de fréquence supérieure à la limite d’audition humaine » ?",
+    "choices": [
+      "puissance",
+      "ultrason",
+      "vitesse",
+      "poids"
+    ],
+    "answer": 1,
+    "explanation": "ultrason : onde sonore de fréquence supérieure à la limite d’audition humaine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0096",
+    "knowledge_id": "V3-SCI-PHY048",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « ultrason » ?",
+    "choices": [
+      "interaction capable de modifier le mouvement ou de déformer un corps",
+      "énergie liée à la position d’un corps dans un champ de pesanteur",
+      "rapport entre la masse volumique d’une substance et celle d’une substance de référence",
+      "onde sonore de fréquence supérieure à la limite d’audition humaine"
+    ],
+    "answer": 3,
+    "explanation": "ultrason : onde sonore de fréquence supérieure à la limite d’audition humaine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0097",
+    "knowledge_id": "V3-SCI-PHY049",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « partie du spectre électromagnétique perceptible par l’œil humain » ?",
+    "choices": [
+      "accélération",
+      "énergie cinétique",
+      "pression",
+      "lumière visible"
+    ],
+    "answer": 3,
+    "explanation": "lumière visible : partie du spectre électromagnétique perceptible par l’œil humain.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0098",
+    "knowledge_id": "V3-SCI-PHY049",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « lumière visible » ?",
+    "choices": [
+      "masse contenue par unité de volume",
+      "partie du spectre électromagnétique perceptible par l’œil humain",
+      "mesure de la quantité de matière et de l’inertie d’un corps",
+      "transfert d’énergie lorsqu’une force déplace son point d’application"
+    ],
+    "answer": 1,
+    "explanation": "lumière visible : partie du spectre électromagnétique perceptible par l’œil humain.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0099",
+    "knowledge_id": "V3-SCI-PHY050",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « quantum d’énergie associé au rayonnement électromagnétique » ?",
+    "choices": [
+      "densité",
+      "photon",
+      "force",
+      "énergie potentielle gravitationnelle"
+    ],
+    "answer": 1,
+    "explanation": "photon : quantum d’énergie associé au rayonnement électromagnétique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0100",
+    "knowledge_id": "V3-SCI-PHY050",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Physique",
+    "prompt": "Quelle proposition définit correctement « photon » ?",
+    "choices": [
+      "force gravitationnelle exercée sur un corps",
+      "énergie transférée ou travail effectué par unité de temps",
+      "nombre de cycles ou oscillations par unité de temps",
+      "quantum d’énergie associé au rayonnement électromagnétique"
+    ],
+    "answer": 3,
+    "explanation": "photon : quantum d’énergie associé au rayonnement électromagnétique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "BIPM / manuels de physique générale"
+  },
+  {
+    "id": "V3SC0101",
+    "knowledge_id": "V3-SCI-CHE001",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « plus petite unité d’un élément chimique conservant ses propriétés chimiques » ?",
+    "choices": [
+      "cation",
+      "nombre de masse",
+      "acide de Brønsted",
+      "atome"
+    ],
+    "answer": 3,
+    "explanation": "atome : plus petite unité d’un élément chimique conservant ses propriétés chimiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0102",
+    "knowledge_id": "V3-SCI-CHE001",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « atome » ?",
+    "choices": [
+      "mesure logarithmique liée à l’acidité ou à la basicité d’une solution aqueuse",
+      "plus petite unité d’un élément chimique conservant ses propriétés chimiques",
+      "atomes d’un même élément ayant le même nombre de protons mais des nombres de neutrons différents",
+      "attraction électrostatique entre ions de charges opposées"
+    ],
+    "answer": 1,
+    "explanation": "atome : plus petite unité d’un élément chimique conservant ses propriétés chimiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0103",
+    "knowledge_id": "V3-SCI-CHE002",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « assemblage électriquement neutre d’au moins deux atomes liés » ?",
+    "choices": [
+      "base de Brønsted",
+      "molécule",
+      "anion",
+      "liaison covalente"
+    ],
+    "answer": 1,
+    "explanation": "molécule : assemblage électriquement neutre d’au moins deux atomes liés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0104",
+    "knowledge_id": "V3-SCI-CHE002",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « molécule » ?",
+    "choices": [
+      "nombre de protons dans le noyau d’un atome",
+      "liaison caractéristique des métaux avec électrons délocalisés",
+      "réaction entre un acide et une base conduisant généralement à un sel et de l’eau",
+      "assemblage électriquement neutre d’au moins deux atomes liés"
+    ],
+    "answer": 3,
+    "explanation": "molécule : assemblage électriquement neutre d’au moins deux atomes liés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0105",
+    "knowledge_id": "V3-SCI-CHE003",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « atome ou groupe d’atomes portant une charge électrique nette » ?",
+    "choices": [
+      "isotope",
+      "liaison ionique",
+      "pH",
+      "ion"
+    ],
+    "answer": 3,
+    "explanation": "ion : atome ou groupe d’atomes portant une charge électrique nette.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0106",
+    "knowledge_id": "V3-SCI-CHE003",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « ion » ?",
+    "choices": [
+      "processus correspondant à une perte d’électrons",
+      "atome ou groupe d’atomes portant une charge électrique nette",
+      "somme du nombre de protons et de neutrons d’un noyau",
+      "espèce capable de céder un proton"
+    ],
+    "answer": 1,
+    "explanation": "ion : atome ou groupe d’atomes portant une charge électrique nette.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0107",
+    "knowledge_id": "V3-SCI-CHE004",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « ion chargé positivement » ?",
+    "choices": [
+      "neutralisation",
+      "cation",
+      "numéro atomique",
+      "liaison métallique"
+    ],
+    "answer": 1,
+    "explanation": "cation : ion chargé positivement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0108",
+    "knowledge_id": "V3-SCI-CHE004",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « cation » ?",
+    "choices": [
+      "liaison fondée sur le partage d’une ou plusieurs paires d’électrons",
+      "espèce capable de capter un proton",
+      "processus correspondant à un gain d’électrons",
+      "ion chargé positivement"
+    ],
+    "answer": 3,
+    "explanation": "cation : ion chargé positivement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0109",
+    "knowledge_id": "V3-SCI-CHE005",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « ion chargé négativement » ?",
+    "choices": [
+      "nombre de masse",
+      "acide de Brønsted",
+      "oxydation",
+      "anion"
+    ],
+    "answer": 3,
+    "explanation": "anion : ion chargé négativement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0110",
+    "knowledge_id": "V3-SCI-CHE005",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « anion » ?",
+    "choices": [
+      "substance qui modifie la vitesse d’une réaction sans être consommée globalement",
+      "ion chargé négativement",
+      "attraction électrostatique entre ions de charges opposées",
+      "mesure logarithmique liée à l’acidité ou à la basicité d’une solution aqueuse"
+    ],
+    "answer": 1,
+    "explanation": "anion : ion chargé négativement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0111",
+    "knowledge_id": "V3-SCI-CHE006",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « atomes d’un même élément ayant le même nombre de protons mais des nombres de neutrons différents » ?",
+    "choices": [
+      "réduction",
+      "isotope",
+      "liaison covalente",
+      "base de Brønsted"
+    ],
+    "answer": 1,
+    "explanation": "isotope : atomes d’un même élément ayant le même nombre de protons mais des nombres de neutrons différents.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0112",
+    "knowledge_id": "V3-SCI-CHE006",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « isotope » ?",
+    "choices": [
+      "liaison caractéristique des métaux avec électrons délocalisés",
+      "réaction entre un acide et une base conduisant généralement à un sel et de l’eau",
+      "quantité de matière contenant un nombre d’entités égal à la constante d’Avogadro",
+      "atomes d’un même élément ayant le même nombre de protons mais des nombres de neutrons différents"
+    ],
+    "answer": 3,
+    "explanation": "isotope : atomes d’un même élément ayant le même nombre de protons mais des nombres de neutrons différents.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0113",
+    "knowledge_id": "V3-SCI-CHE007",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « nombre de protons dans le noyau d’un atome » ?",
+    "choices": [
+      "liaison ionique",
+      "pH",
+      "catalyseur",
+      "numéro atomique"
+    ],
+    "answer": 3,
+    "explanation": "numéro atomique : nombre de protons dans le noyau d’un atome.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0114",
+    "knowledge_id": "V3-SCI-CHE007",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « numéro atomique » ?",
+    "choices": [
+      "quantité de matière de soluté par unité de volume de solution",
+      "nombre de protons dans le noyau d’un atome",
+      "espèce capable de céder un proton",
+      "processus correspondant à une perte d’électrons"
+    ],
+    "answer": 1,
+    "explanation": "numéro atomique : nombre de protons dans le noyau d’un atome.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0115",
+    "knowledge_id": "V3-SCI-CHE008",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « somme du nombre de protons et de neutrons d’un noyau » ?",
+    "choices": [
+      "mole",
+      "nombre de masse",
+      "liaison métallique",
+      "neutralisation"
+    ],
+    "answer": 1,
+    "explanation": "nombre de masse : somme du nombre de protons et de neutrons d’un noyau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0116",
+    "knowledge_id": "V3-SCI-CHE008",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « nombre de masse » ?",
+    "choices": [
+      "espèce capable de capter un proton",
+      "processus correspondant à un gain d’électrons",
+      "substance dissoute dans un solvant",
+      "somme du nombre de protons et de neutrons d’un noyau"
+    ],
+    "answer": 3,
+    "explanation": "nombre de masse : somme du nombre de protons et de neutrons d’un noyau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0117",
+    "knowledge_id": "V3-SCI-CHE009",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « liaison fondée sur le partage d’une ou plusieurs paires d’électrons » ?",
+    "choices": [
+      "acide de Brønsted",
+      "oxydation",
+      "concentration molaire",
+      "liaison covalente"
+    ],
+    "answer": 3,
+    "explanation": "liaison covalente : liaison fondée sur le partage d’une ou plusieurs paires d’électrons.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0118",
+    "knowledge_id": "V3-SCI-CHE009",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « liaison covalente » ?",
+    "choices": [
+      "constituant d’une solution qui dissout le soluté et est souvent majoritaire",
+      "liaison fondée sur le partage d’une ou plusieurs paires d’électrons",
+      "mesure logarithmique liée à l’acidité ou à la basicité d’une solution aqueuse",
+      "substance qui modifie la vitesse d’une réaction sans être consommée globalement"
+    ],
+    "answer": 1,
+    "explanation": "liaison covalente : liaison fondée sur le partage d’une ou plusieurs paires d’électrons.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0119",
+    "knowledge_id": "V3-SCI-CHE010",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « attraction électrostatique entre ions de charges opposées » ?",
+    "choices": [
+      "soluté",
+      "liaison ionique",
+      "base de Brønsted",
+      "réduction"
+    ],
+    "answer": 1,
+    "explanation": "liaison ionique : attraction électrostatique entre ions de charges opposées.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0120",
+    "knowledge_id": "V3-SCI-CHE010",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « liaison ionique » ?",
+    "choices": [
+      "réaction entre un acide et une base conduisant généralement à un sel et de l’eau",
+      "quantité de matière contenant un nombre d’entités égal à la constante d’Avogadro",
+      "mélange homogène constitué d’un solvant et d’un ou plusieurs solutés",
+      "attraction électrostatique entre ions de charges opposées"
+    ],
+    "answer": 3,
+    "explanation": "liaison ionique : attraction électrostatique entre ions de charges opposées.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0121",
+    "knowledge_id": "V3-SCI-CHE011",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « liaison caractéristique des métaux avec électrons délocalisés » ?",
+    "choices": [
+      "pH",
+      "catalyseur",
+      "solvant",
+      "liaison métallique"
+    ],
+    "answer": 3,
+    "explanation": "liaison métallique : liaison caractéristique des métaux avec électrons délocalisés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0122",
+    "knowledge_id": "V3-SCI-CHE011",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « liaison métallique » ?",
+    "choices": [
+      "solide insoluble formé au cours d’une réaction en solution",
+      "liaison caractéristique des métaux avec électrons délocalisés",
+      "processus correspondant à une perte d’électrons",
+      "quantité de matière de soluté par unité de volume de solution"
+    ],
+    "answer": 1,
+    "explanation": "liaison métallique : liaison caractéristique des métaux avec électrons délocalisés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0123",
+    "knowledge_id": "V3-SCI-CHE012",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « espèce capable de céder un proton » ?",
+    "choices": [
+      "solution",
+      "acide de Brønsted",
+      "neutralisation",
+      "mole"
+    ],
+    "answer": 1,
+    "explanation": "acide de Brønsted : espèce capable de céder un proton.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0124",
+    "knowledge_id": "V3-SCI-CHE012",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « acide de Brønsted » ?",
+    "choices": [
+      "processus correspondant à un gain d’électrons",
+      "substance dissoute dans un solvant",
+      "technique de séparation fondée sur des différences de volatilité ou de température d’ébullition",
+      "espèce capable de céder un proton"
+    ],
+    "answer": 3,
+    "explanation": "acide de Brønsted : espèce capable de céder un proton.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0125",
+    "knowledge_id": "V3-SCI-CHE013",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « espèce capable de capter un proton » ?",
+    "choices": [
+      "oxydation",
+      "concentration molaire",
+      "précipité",
+      "base de Brønsted"
+    ],
+    "answer": 3,
+    "explanation": "base de Brønsted : espèce capable de capter un proton.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0126",
+    "knowledge_id": "V3-SCI-CHE013",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « base de Brønsted » ?",
+    "choices": [
+      "séparation d’un solide d’un fluide à l’aide d’un milieu poreux",
+      "espèce capable de capter un proton",
+      "substance qui modifie la vitesse d’une réaction sans être consommée globalement",
+      "constituant d’une solution qui dissout le soluté et est souvent majoritaire"
+    ],
+    "answer": 1,
+    "explanation": "base de Brønsted : espèce capable de capter un proton.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0127",
+    "knowledge_id": "V3-SCI-CHE014",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « mesure logarithmique liée à l’acidité ou à la basicité d’une solution aqueuse » ?",
+    "choices": [
+      "distillation",
+      "pH",
+      "réduction",
+      "soluté"
+    ],
+    "answer": 1,
+    "explanation": "pH : mesure logarithmique liée à l’acidité ou à la basicité d’une solution aqueuse.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0128",
+    "knowledge_id": "V3-SCI-CHE014",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « pH » ?",
+    "choices": [
+      "quantité de matière contenant un nombre d’entités égal à la constante d’Avogadro",
+      "mélange homogène constitué d’un solvant et d’un ou plusieurs solutés",
+      "technique séparant les constituants selon leurs interactions avec des phases mobile et stationnaire",
+      "mesure logarithmique liée à l’acidité ou à la basicité d’une solution aqueuse"
+    ],
+    "answer": 3,
+    "explanation": "pH : mesure logarithmique liée à l’acidité ou à la basicité d’une solution aqueuse.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0129",
+    "knowledge_id": "V3-SCI-CHE015",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « réaction entre un acide et une base conduisant généralement à un sel et de l’eau » ?",
+    "choices": [
+      "catalyseur",
+      "solvant",
+      "filtration",
+      "neutralisation"
+    ],
+    "answer": 3,
+    "explanation": "neutralisation : réaction entre un acide et une base conduisant généralement à un sel et de l’eau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0130",
+    "knowledge_id": "V3-SCI-CHE015",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « neutralisation » ?",
+    "choices": [
+      "substance qui produit des ions mobiles en solution ou à l’état fondu et conduit le courant",
+      "réaction entre un acide et une base conduisant généralement à un sel et de l’eau",
+      "quantité de matière de soluté par unité de volume de solution",
+      "solide insoluble formé au cours d’une réaction en solution"
+    ],
+    "answer": 1,
+    "explanation": "neutralisation : réaction entre un acide et une base conduisant généralement à un sel et de l’eau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0131",
+    "knowledge_id": "V3-SCI-CHE016",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « processus correspondant à une perte d’électrons » ?",
+    "choices": [
+      "chromatographie",
+      "oxydation",
+      "mole",
+      "solution"
+    ],
+    "answer": 1,
+    "explanation": "oxydation : processus correspondant à une perte d’électrons.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0132",
+    "knowledge_id": "V3-SCI-CHE016",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « oxydation » ?",
+    "choices": [
+      "substance dissoute dans un solvant",
+      "technique de séparation fondée sur des différences de volatilité ou de température d’ébullition",
+      "réaction qui libère de l’énergie vers le milieu extérieur",
+      "processus correspondant à une perte d’électrons"
+    ],
+    "answer": 3,
+    "explanation": "oxydation : processus correspondant à une perte d’électrons.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0133",
+    "knowledge_id": "V3-SCI-CHE017",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « processus correspondant à un gain d’électrons » ?",
+    "choices": [
+      "concentration molaire",
+      "précipité",
+      "électrolyte",
+      "réduction"
+    ],
+    "answer": 3,
+    "explanation": "réduction : processus correspondant à un gain d’électrons.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0134",
+    "knowledge_id": "V3-SCI-CHE017",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « réduction » ?",
+    "choices": [
+      "réaction qui absorbe de l’énergie depuis le milieu extérieur",
+      "processus correspondant à un gain d’électrons",
+      "constituant d’une solution qui dissout le soluté et est souvent majoritaire",
+      "séparation d’un solide d’un fluide à l’aide d’un milieu poreux"
+    ],
+    "answer": 1,
+    "explanation": "réduction : processus correspondant à un gain d’électrons.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0135",
+    "knowledge_id": "V3-SCI-CHE018",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « substance qui modifie la vitesse d’une réaction sans être consommée globalement » ?",
+    "choices": [
+      "réaction exothermique",
+      "catalyseur",
+      "soluté",
+      "distillation"
+    ],
+    "answer": 1,
+    "explanation": "catalyseur : substance qui modifie la vitesse d’une réaction sans être consommée globalement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0136",
+    "knowledge_id": "V3-SCI-CHE018",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « catalyseur » ?",
+    "choices": [
+      "mélange homogène constitué d’un solvant et d’un ou plusieurs solutés",
+      "technique séparant les constituants selon leurs interactions avec des phases mobile et stationnaire",
+      "macromolécule constituée de motifs répétés",
+      "substance qui modifie la vitesse d’une réaction sans être consommée globalement"
+    ],
+    "answer": 3,
+    "explanation": "catalyseur : substance qui modifie la vitesse d’une réaction sans être consommée globalement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0137",
+    "knowledge_id": "V3-SCI-CHE019",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « quantité de matière contenant un nombre d’entités égal à la constante d’Avogadro » ?",
+    "choices": [
+      "solvant",
+      "filtration",
+      "réaction endothermique",
+      "mole"
+    ],
+    "answer": 3,
+    "explanation": "mole : quantité de matière contenant un nombre d’entités égal à la constante d’Avogadro.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0138",
+    "knowledge_id": "V3-SCI-CHE019",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « mole » ?",
+    "choices": [
+      "petite molécule pouvant s’assembler pour former un polymère",
+      "quantité de matière contenant un nombre d’entités égal à la constante d’Avogadro",
+      "solide insoluble formé au cours d’une réaction en solution",
+      "substance qui produit des ions mobiles en solution ou à l’état fondu et conduit le courant"
+    ],
+    "answer": 1,
+    "explanation": "mole : quantité de matière contenant un nombre d’entités égal à la constante d’Avogadro.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0139",
+    "knowledge_id": "V3-SCI-CHE020",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « quantité de matière de soluté par unité de volume de solution » ?",
+    "choices": [
+      "polymère",
+      "concentration molaire",
+      "solution",
+      "chromatographie"
+    ],
+    "answer": 1,
+    "explanation": "concentration molaire : quantité de matière de soluté par unité de volume de solution.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0140",
+    "knowledge_id": "V3-SCI-CHE020",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « concentration molaire » ?",
+    "choices": [
+      "technique de séparation fondée sur des différences de volatilité ou de température d’ébullition",
+      "réaction qui libère de l’énergie vers le milieu extérieur",
+      "composé constitué uniquement de carbone et d’hydrogène",
+      "quantité de matière de soluté par unité de volume de solution"
+    ],
+    "answer": 3,
+    "explanation": "concentration molaire : quantité de matière de soluté par unité de volume de solution.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0141",
+    "knowledge_id": "V3-SCI-CHE021",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « substance dissoute dans un solvant » ?",
+    "choices": [
+      "précipité",
+      "électrolyte",
+      "monomère",
+      "soluté"
+    ],
+    "answer": 3,
+    "explanation": "soluté : substance dissoute dans un solvant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0142",
+    "knowledge_id": "V3-SCI-CHE021",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « soluté » ?",
+    "choices": [
+      "hydrocarbure saturé ne comportant que des liaisons simples carbone-carbone",
+      "substance dissoute dans un solvant",
+      "séparation d’un solide d’un fluide à l’aide d’un milieu poreux",
+      "réaction qui absorbe de l’énergie depuis le milieu extérieur"
+    ],
+    "answer": 1,
+    "explanation": "soluté : substance dissoute dans un solvant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0143",
+    "knowledge_id": "V3-SCI-CHE022",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « constituant d’une solution qui dissout le soluté et est souvent majoritaire » ?",
+    "choices": [
+      "hydrocarbure",
+      "solvant",
+      "distillation",
+      "réaction exothermique"
+    ],
+    "answer": 1,
+    "explanation": "solvant : constituant d’une solution qui dissout le soluté et est souvent majoritaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0144",
+    "knowledge_id": "V3-SCI-CHE022",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « solvant » ?",
+    "choices": [
+      "technique séparant les constituants selon leurs interactions avec des phases mobile et stationnaire",
+      "macromolécule constituée de motifs répétés",
+      "hydrocarbure contenant au moins une double liaison carbone-carbone",
+      "constituant d’une solution qui dissout le soluté et est souvent majoritaire"
+    ],
+    "answer": 3,
+    "explanation": "solvant : constituant d’une solution qui dissout le soluté et est souvent majoritaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0145",
+    "knowledge_id": "V3-SCI-CHE023",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « mélange homogène constitué d’un solvant et d’un ou plusieurs solutés » ?",
+    "choices": [
+      "filtration",
+      "réaction endothermique",
+      "alcane",
+      "solution"
+    ],
+    "answer": 3,
+    "explanation": "solution : mélange homogène constitué d’un solvant et d’un ou plusieurs solutés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0146",
+    "knowledge_id": "V3-SCI-CHE023",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « solution » ?",
+    "choices": [
+      "famille organique caractérisée notamment par un groupe hydroxyle lié à un carbone saturé",
+      "mélange homogène constitué d’un solvant et d’un ou plusieurs solutés",
+      "substance qui produit des ions mobiles en solution ou à l’état fondu et conduit le courant",
+      "petite molécule pouvant s’assembler pour former un polymère"
+    ],
+    "answer": 1,
+    "explanation": "solution : mélange homogène constitué d’un solvant et d’un ou plusieurs solutés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0147",
+    "knowledge_id": "V3-SCI-CHE024",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « solide insoluble formé au cours d’une réaction en solution » ?",
+    "choices": [
+      "alcène",
+      "précipité",
+      "chromatographie",
+      "polymère"
+    ],
+    "answer": 1,
+    "explanation": "précipité : solide insoluble formé au cours d’une réaction en solution.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0148",
+    "knowledge_id": "V3-SCI-CHE024",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « précipité » ?",
+    "choices": [
+      "réaction qui libère de l’énergie vers le milieu extérieur",
+      "composé constitué uniquement de carbone et d’hydrogène",
+      "composé organique comportant le groupe fonctionnel dérivé d’un acide carboxylique et d’un alcool",
+      "solide insoluble formé au cours d’une réaction en solution"
+    ],
+    "answer": 3,
+    "explanation": "précipité : solide insoluble formé au cours d’une réaction en solution.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0149",
+    "knowledge_id": "V3-SCI-CHE025",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « technique de séparation fondée sur des différences de volatilité ou de température d’ébullition » ?",
+    "choices": [
+      "électrolyte",
+      "monomère",
+      "alcool",
+      "distillation"
+    ],
+    "answer": 3,
+    "explanation": "distillation : technique de séparation fondée sur des différences de volatilité ou de température d’ébullition.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0150",
+    "knowledge_id": "V3-SCI-CHE025",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « distillation » ?",
+    "choices": [
+      "réaction d’oxydation rapide libérant de l’énergie, souvent avec le dioxygène",
+      "technique de séparation fondée sur des différences de volatilité ou de température d’ébullition",
+      "réaction qui absorbe de l’énergie depuis le milieu extérieur",
+      "hydrocarbure saturé ne comportant que des liaisons simples carbone-carbone"
+    ],
+    "answer": 1,
+    "explanation": "distillation : technique de séparation fondée sur des différences de volatilité ou de température d’ébullition.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0151",
+    "knowledge_id": "V3-SCI-CHE026",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « séparation d’un solide d’un fluide à l’aide d’un milieu poreux » ?",
+    "choices": [
+      "ester",
+      "filtration",
+      "réaction exothermique",
+      "hydrocarbure"
+    ],
+    "answer": 1,
+    "explanation": "filtration : séparation d’un solide d’un fluide à l’aide d’un milieu poreux.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0152",
+    "knowledge_id": "V3-SCI-CHE026",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « filtration » ?",
+    "choices": [
+      "macromolécule constituée de motifs répétés",
+      "hydrocarbure contenant au moins une double liaison carbone-carbone",
+      "dégradation progressive d’un matériau par réaction chimique ou électrochimique avec son environnement",
+      "séparation d’un solide d’un fluide à l’aide d’un milieu poreux"
+    ],
+    "answer": 3,
+    "explanation": "filtration : séparation d’un solide d’un fluide à l’aide d’un milieu poreux.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0153",
+    "knowledge_id": "V3-SCI-CHE027",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « technique séparant les constituants selon leurs interactions avec des phases mobile et stationnaire » ?",
+    "choices": [
+      "réaction endothermique",
+      "alcane",
+      "combustion",
+      "chromatographie"
+    ],
+    "answer": 3,
+    "explanation": "chromatographie : technique séparant les constituants selon leurs interactions avec des phases mobile et stationnaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0154",
+    "knowledge_id": "V3-SCI-CHE027",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « chromatographie » ?",
+    "choices": [
+      "matériau métallique obtenu par combinaison de plusieurs éléments dont au moins un métal",
+      "technique séparant les constituants selon leurs interactions avec des phases mobile et stationnaire",
+      "petite molécule pouvant s’assembler pour former un polymère",
+      "famille organique caractérisée notamment par un groupe hydroxyle lié à un carbone saturé"
+    ],
+    "answer": 1,
+    "explanation": "chromatographie : technique séparant les constituants selon leurs interactions avec des phases mobile et stationnaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0155",
+    "knowledge_id": "V3-SCI-CHE028",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « substance qui produit des ions mobiles en solution ou à l’état fondu et conduit le courant » ?",
+    "choices": [
+      "corrosion",
+      "électrolyte",
+      "polymère",
+      "alcène"
+    ],
+    "answer": 1,
+    "explanation": "électrolyte : substance qui produit des ions mobiles en solution ou à l’état fondu et conduit le courant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0156",
+    "knowledge_id": "V3-SCI-CHE028",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « électrolyte » ?",
+    "choices": [
+      "composé constitué uniquement de carbone et d’hydrogène",
+      "composé organique comportant le groupe fonctionnel dérivé d’un acide carboxylique et d’un alcool",
+      "plus petite unité d’un élément chimique conservant ses propriétés chimiques",
+      "substance qui produit des ions mobiles en solution ou à l’état fondu et conduit le courant"
+    ],
+    "answer": 3,
+    "explanation": "électrolyte : substance qui produit des ions mobiles en solution ou à l’état fondu et conduit le courant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0157",
+    "knowledge_id": "V3-SCI-CHE029",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « réaction qui libère de l’énergie vers le milieu extérieur » ?",
+    "choices": [
+      "monomère",
+      "alcool",
+      "alliage",
+      "réaction exothermique"
+    ],
+    "answer": 3,
+    "explanation": "réaction exothermique : réaction qui libère de l’énergie vers le milieu extérieur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0158",
+    "knowledge_id": "V3-SCI-CHE029",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « réaction exothermique » ?",
+    "choices": [
+      "assemblage électriquement neutre d’au moins deux atomes liés",
+      "réaction qui libère de l’énergie vers le milieu extérieur",
+      "hydrocarbure saturé ne comportant que des liaisons simples carbone-carbone",
+      "réaction d’oxydation rapide libérant de l’énergie, souvent avec le dioxygène"
+    ],
+    "answer": 1,
+    "explanation": "réaction exothermique : réaction qui libère de l’énergie vers le milieu extérieur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0159",
+    "knowledge_id": "V3-SCI-CHE030",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « réaction qui absorbe de l’énergie depuis le milieu extérieur » ?",
+    "choices": [
+      "atome",
+      "réaction endothermique",
+      "hydrocarbure",
+      "ester"
+    ],
+    "answer": 1,
+    "explanation": "réaction endothermique : réaction qui absorbe de l’énergie depuis le milieu extérieur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0160",
+    "knowledge_id": "V3-SCI-CHE030",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « réaction endothermique » ?",
+    "choices": [
+      "hydrocarbure contenant au moins une double liaison carbone-carbone",
+      "dégradation progressive d’un matériau par réaction chimique ou électrochimique avec son environnement",
+      "atome ou groupe d’atomes portant une charge électrique nette",
+      "réaction qui absorbe de l’énergie depuis le milieu extérieur"
+    ],
+    "answer": 3,
+    "explanation": "réaction endothermique : réaction qui absorbe de l’énergie depuis le milieu extérieur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0161",
+    "knowledge_id": "V3-SCI-CHE031",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « macromolécule constituée de motifs répétés » ?",
+    "choices": [
+      "alcane",
+      "combustion",
+      "molécule",
+      "polymère"
+    ],
+    "answer": 3,
+    "explanation": "polymère : macromolécule constituée de motifs répétés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0162",
+    "knowledge_id": "V3-SCI-CHE031",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « polymère » ?",
+    "choices": [
+      "ion chargé positivement",
+      "macromolécule constituée de motifs répétés",
+      "famille organique caractérisée notamment par un groupe hydroxyle lié à un carbone saturé",
+      "matériau métallique obtenu par combinaison de plusieurs éléments dont au moins un métal"
+    ],
+    "answer": 1,
+    "explanation": "polymère : macromolécule constituée de motifs répétés.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0163",
+    "knowledge_id": "V3-SCI-CHE032",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « petite molécule pouvant s’assembler pour former un polymère » ?",
+    "choices": [
+      "ion",
+      "monomère",
+      "alcène",
+      "corrosion"
+    ],
+    "answer": 1,
+    "explanation": "monomère : petite molécule pouvant s’assembler pour former un polymère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0164",
+    "knowledge_id": "V3-SCI-CHE032",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « monomère » ?",
+    "choices": [
+      "composé organique comportant le groupe fonctionnel dérivé d’un acide carboxylique et d’un alcool",
+      "plus petite unité d’un élément chimique conservant ses propriétés chimiques",
+      "ion chargé négativement",
+      "petite molécule pouvant s’assembler pour former un polymère"
+    ],
+    "answer": 3,
+    "explanation": "monomère : petite molécule pouvant s’assembler pour former un polymère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0165",
+    "knowledge_id": "V3-SCI-CHE033",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « composé constitué uniquement de carbone et d’hydrogène » ?",
+    "choices": [
+      "alcool",
+      "alliage",
+      "cation",
+      "hydrocarbure"
+    ],
+    "answer": 3,
+    "explanation": "hydrocarbure : composé constitué uniquement de carbone et d’hydrogène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0166",
+    "knowledge_id": "V3-SCI-CHE033",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « hydrocarbure » ?",
+    "choices": [
+      "atomes d’un même élément ayant le même nombre de protons mais des nombres de neutrons différents",
+      "composé constitué uniquement de carbone et d’hydrogène",
+      "réaction d’oxydation rapide libérant de l’énergie, souvent avec le dioxygène",
+      "assemblage électriquement neutre d’au moins deux atomes liés"
+    ],
+    "answer": 1,
+    "explanation": "hydrocarbure : composé constitué uniquement de carbone et d’hydrogène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0167",
+    "knowledge_id": "V3-SCI-CHE034",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « hydrocarbure saturé ne comportant que des liaisons simples carbone-carbone » ?",
+    "choices": [
+      "anion",
+      "alcane",
+      "ester",
+      "atome"
+    ],
+    "answer": 1,
+    "explanation": "alcane : hydrocarbure saturé ne comportant que des liaisons simples carbone-carbone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0168",
+    "knowledge_id": "V3-SCI-CHE034",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « alcane » ?",
+    "choices": [
+      "dégradation progressive d’un matériau par réaction chimique ou électrochimique avec son environnement",
+      "atome ou groupe d’atomes portant une charge électrique nette",
+      "nombre de protons dans le noyau d’un atome",
+      "hydrocarbure saturé ne comportant que des liaisons simples carbone-carbone"
+    ],
+    "answer": 3,
+    "explanation": "alcane : hydrocarbure saturé ne comportant que des liaisons simples carbone-carbone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0169",
+    "knowledge_id": "V3-SCI-CHE035",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « hydrocarbure contenant au moins une double liaison carbone-carbone » ?",
+    "choices": [
+      "combustion",
+      "molécule",
+      "isotope",
+      "alcène"
+    ],
+    "answer": 3,
+    "explanation": "alcène : hydrocarbure contenant au moins une double liaison carbone-carbone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0170",
+    "knowledge_id": "V3-SCI-CHE035",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « alcène » ?",
+    "choices": [
+      "somme du nombre de protons et de neutrons d’un noyau",
+      "hydrocarbure contenant au moins une double liaison carbone-carbone",
+      "matériau métallique obtenu par combinaison de plusieurs éléments dont au moins un métal",
+      "ion chargé positivement"
+    ],
+    "answer": 1,
+    "explanation": "alcène : hydrocarbure contenant au moins une double liaison carbone-carbone.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0171",
+    "knowledge_id": "V3-SCI-CHE036",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « famille organique caractérisée notamment par un groupe hydroxyle lié à un carbone saturé » ?",
+    "choices": [
+      "numéro atomique",
+      "alcool",
+      "corrosion",
+      "ion"
+    ],
+    "answer": 1,
+    "explanation": "alcool : famille organique caractérisée notamment par un groupe hydroxyle lié à un carbone saturé.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0172",
+    "knowledge_id": "V3-SCI-CHE036",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « alcool » ?",
+    "choices": [
+      "plus petite unité d’un élément chimique conservant ses propriétés chimiques",
+      "ion chargé négativement",
+      "liaison fondée sur le partage d’une ou plusieurs paires d’électrons",
+      "famille organique caractérisée notamment par un groupe hydroxyle lié à un carbone saturé"
+    ],
+    "answer": 3,
+    "explanation": "alcool : famille organique caractérisée notamment par un groupe hydroxyle lié à un carbone saturé.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0173",
+    "knowledge_id": "V3-SCI-CHE037",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « composé organique comportant le groupe fonctionnel dérivé d’un acide carboxylique et d’un alcool » ?",
+    "choices": [
+      "alliage",
+      "cation",
+      "nombre de masse",
+      "ester"
+    ],
+    "answer": 3,
+    "explanation": "ester : composé organique comportant le groupe fonctionnel dérivé d’un acide carboxylique et d’un alcool.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0174",
+    "knowledge_id": "V3-SCI-CHE037",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « ester » ?",
+    "choices": [
+      "attraction électrostatique entre ions de charges opposées",
+      "composé organique comportant le groupe fonctionnel dérivé d’un acide carboxylique et d’un alcool",
+      "assemblage électriquement neutre d’au moins deux atomes liés",
+      "atomes d’un même élément ayant le même nombre de protons mais des nombres de neutrons différents"
+    ],
+    "answer": 1,
+    "explanation": "ester : composé organique comportant le groupe fonctionnel dérivé d’un acide carboxylique et d’un alcool.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0175",
+    "knowledge_id": "V3-SCI-CHE038",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « réaction d’oxydation rapide libérant de l’énergie, souvent avec le dioxygène » ?",
+    "choices": [
+      "liaison covalente",
+      "combustion",
+      "atome",
+      "anion"
+    ],
+    "answer": 1,
+    "explanation": "combustion : réaction d’oxydation rapide libérant de l’énergie, souvent avec le dioxygène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0176",
+    "knowledge_id": "V3-SCI-CHE038",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « combustion » ?",
+    "choices": [
+      "atome ou groupe d’atomes portant une charge électrique nette",
+      "nombre de protons dans le noyau d’un atome",
+      "liaison caractéristique des métaux avec électrons délocalisés",
+      "réaction d’oxydation rapide libérant de l’énergie, souvent avec le dioxygène"
+    ],
+    "answer": 3,
+    "explanation": "combustion : réaction d’oxydation rapide libérant de l’énergie, souvent avec le dioxygène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0177",
+    "knowledge_id": "V3-SCI-CHE039",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « dégradation progressive d’un matériau par réaction chimique ou électrochimique avec son environnement » ?",
+    "choices": [
+      "molécule",
+      "isotope",
+      "liaison ionique",
+      "corrosion"
+    ],
+    "answer": 3,
+    "explanation": "corrosion : dégradation progressive d’un matériau par réaction chimique ou électrochimique avec son environnement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0178",
+    "knowledge_id": "V3-SCI-CHE039",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « corrosion » ?",
+    "choices": [
+      "espèce capable de céder un proton",
+      "dégradation progressive d’un matériau par réaction chimique ou électrochimique avec son environnement",
+      "ion chargé positivement",
+      "somme du nombre de protons et de neutrons d’un noyau"
+    ],
+    "answer": 1,
+    "explanation": "corrosion : dégradation progressive d’un matériau par réaction chimique ou électrochimique avec son environnement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0179",
+    "knowledge_id": "V3-SCI-CHE040",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « matériau métallique obtenu par combinaison de plusieurs éléments dont au moins un métal » ?",
+    "choices": [
+      "liaison métallique",
+      "alliage",
+      "ion",
+      "numéro atomique"
+    ],
+    "answer": 1,
+    "explanation": "alliage : matériau métallique obtenu par combinaison de plusieurs éléments dont au moins un métal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0180",
+    "knowledge_id": "V3-SCI-CHE040",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Chimie",
+    "prompt": "Quelle proposition définit correctement « alliage » ?",
+    "choices": [
+      "ion chargé négativement",
+      "liaison fondée sur le partage d’une ou plusieurs paires d’électrons",
+      "espèce capable de capter un proton",
+      "matériau métallique obtenu par combinaison de plusieurs éléments dont au moins un métal"
+    ],
+    "answer": 3,
+    "explanation": "alliage : matériau métallique obtenu par combinaison de plusieurs éléments dont au moins un métal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "IUPAC / manuels de chimie générale"
+  },
+  {
+    "id": "V3SC0181",
+    "knowledge_id": "V3-SCI-EAR001",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « enveloppe rigide superficielle de la Terre comprenant la croûte et la partie supérieure du manteau » ?",
+    "choices": [
+      "subduction",
+      "épicentre",
+      "roche magmatique",
+      "lithosphère"
+    ],
+    "answer": 3,
+    "explanation": "lithosphère : enveloppe rigide superficielle de la Terre comprenant la croûte et la partie supérieure du manteau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0182",
+    "knowledge_id": "V3-SCI-EAR001",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « lithosphère » ?",
+    "choices": [
+      "roche transformée à l’état solide par pression, température ou fluides",
+      "enveloppe rigide superficielle de la Terre comprenant la croûte et la partie supérieure du manteau",
+      "fracture de la croûte accompagnée d’un déplacement relatif des blocs",
+      "roche fondue ou partiellement fondue présente en profondeur"
+    ],
+    "answer": 1,
+    "explanation": "lithosphère : enveloppe rigide superficielle de la Terre comprenant la croûte et la partie supérieure du manteau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0183",
+    "knowledge_id": "V3-SCI-EAR002",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « zone ductile du manteau supérieur sur laquelle se déplacent les plaques lithosphériques » ?",
+    "choices": [
+      "roche sédimentaire",
+      "asthénosphère",
+      "dorsale océanique",
+      "foyer sismique"
+    ],
+    "answer": 1,
+    "explanation": "asthénosphère : zone ductile du manteau supérieur sur laquelle se déplacent les plaques lithosphériques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0184",
+    "knowledge_id": "V3-SCI-EAR002",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « asthénosphère » ?",
+    "choices": [
+      "libération brutale d’énergie dans la croûte produisant des ondes sismiques",
+      "magma arrivé à la surface et dégazé en partie",
+      "usure et transport des matériaux de surface par l’eau, le vent, la glace ou la gravité",
+      "zone ductile du manteau supérieur sur laquelle se déplacent les plaques lithosphériques"
+    ],
+    "answer": 3,
+    "explanation": "asthénosphère : zone ductile du manteau supérieur sur laquelle se déplacent les plaques lithosphériques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0185",
+    "knowledge_id": "V3-SCI-EAR003",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « théorie décrivant le mouvement relatif des plaques rigides de la lithosphère » ?",
+    "choices": [
+      "faille",
+      "magma",
+      "roche métamorphique",
+      "tectonique des plaques"
+    ],
+    "answer": 3,
+    "explanation": "tectonique des plaques : théorie décrivant le mouvement relatif des plaques rigides de la lithosphère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0186",
+    "knowledge_id": "V3-SCI-EAR003",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « tectonique des plaques » ?",
+    "choices": [
+      "transformation physique ou chimique des roches au contact de l’environnement",
+      "théorie décrivant le mouvement relatif des plaques rigides de la lithosphère",
+      "point de la surface situé à la verticale du foyer d’un séisme",
+      "roche formée par refroidissement et solidification d’un magma ou d’une lave"
+    ],
+    "answer": 1,
+    "explanation": "tectonique des plaques : théorie décrivant le mouvement relatif des plaques rigides de la lithosphère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0187",
+    "knowledge_id": "V3-SCI-EAR004",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « enfoncement d’une plaque lithosphérique sous une autre » ?",
+    "choices": [
+      "érosion",
+      "subduction",
+      "séisme",
+      "lave"
+    ],
+    "answer": 1,
+    "explanation": "subduction : enfoncement d’une plaque lithosphérique sous une autre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0188",
+    "knowledge_id": "V3-SCI-EAR004",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « subduction » ?",
+    "choices": [
+      "zone en profondeur où débute la rupture responsable d’un séisme",
+      "roche formée par accumulation, compaction ou précipitation de sédiments",
+      "circulation continue de l’eau entre océans, atmosphère, continents et sous-sol",
+      "enfoncement d’une plaque lithosphérique sous une autre"
+    ],
+    "answer": 3,
+    "explanation": "subduction : enfoncement d’une plaque lithosphérique sous une autre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0189",
+    "knowledge_id": "V3-SCI-EAR005",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « longue chaîne sous-marine où se forme de la nouvelle lithosphère océanique » ?",
+    "choices": [
+      "épicentre",
+      "roche magmatique",
+      "altération",
+      "dorsale océanique"
+    ],
+    "answer": 3,
+    "explanation": "dorsale océanique : longue chaîne sous-marine où se forme de la nouvelle lithosphère océanique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0190",
+    "knowledge_id": "V3-SCI-EAR005",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « dorsale océanique » ?",
+    "choices": [
+      "passage de l’eau liquide en vapeur à la surface d’un liquide",
+      "longue chaîne sous-marine où se forme de la nouvelle lithosphère océanique",
+      "roche fondue ou partiellement fondue présente en profondeur",
+      "roche transformée à l’état solide par pression, température ou fluides"
+    ],
+    "answer": 1,
+    "explanation": "dorsale océanique : longue chaîne sous-marine où se forme de la nouvelle lithosphère océanique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0191",
+    "knowledge_id": "V3-SCI-EAR006",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « fracture de la croûte accompagnée d’un déplacement relatif des blocs » ?",
+    "choices": [
+      "cycle de l’eau",
+      "faille",
+      "foyer sismique",
+      "roche sédimentaire"
+    ],
+    "answer": 1,
+    "explanation": "faille : fracture de la croûte accompagnée d’un déplacement relatif des blocs.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0192",
+    "knowledge_id": "V3-SCI-EAR006",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « faille » ?",
+    "choices": [
+      "magma arrivé à la surface et dégazé en partie",
+      "usure et transport des matériaux de surface par l’eau, le vent, la glace ou la gravité",
+      "chute vers le sol d’eau liquide ou solide issue de l’atmosphère",
+      "fracture de la croûte accompagnée d’un déplacement relatif des blocs"
+    ],
+    "answer": 3,
+    "explanation": "faille : fracture de la croûte accompagnée d’un déplacement relatif des blocs.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0193",
+    "knowledge_id": "V3-SCI-EAR007",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « libération brutale d’énergie dans la croûte produisant des ondes sismiques » ?",
+    "choices": [
+      "magma",
+      "roche métamorphique",
+      "évaporation",
+      "séisme"
+    ],
+    "answer": 3,
+    "explanation": "séisme : libération brutale d’énergie dans la croûte produisant des ondes sismiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0194",
+    "knowledge_id": "V3-SCI-EAR007",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « séisme » ?",
+    "choices": [
+      "pénétration de l’eau dans le sol et le sous-sol",
+      "libération brutale d’énergie dans la croûte produisant des ondes sismiques",
+      "roche formée par refroidissement et solidification d’un magma ou d’une lave",
+      "transformation physique ou chimique des roches au contact de l’environnement"
+    ],
+    "answer": 1,
+    "explanation": "séisme : libération brutale d’énergie dans la croûte produisant des ondes sismiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0195",
+    "knowledge_id": "V3-SCI-EAR008",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « point de la surface situé à la verticale du foyer d’un séisme » ?",
+    "choices": [
+      "précipitation atmosphérique",
+      "épicentre",
+      "lave",
+      "érosion"
+    ],
+    "answer": 1,
+    "explanation": "épicentre : point de la surface situé à la verticale du foyer d’un séisme.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0196",
+    "knowledge_id": "V3-SCI-EAR008",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « épicentre » ?",
+    "choices": [
+      "roche formée par accumulation, compaction ou précipitation de sédiments",
+      "circulation continue de l’eau entre océans, atmosphère, continents et sous-sol",
+      "réserve d’eau souterraine occupant les pores et fissures d’un aquifère proche de la surface",
+      "point de la surface situé à la verticale du foyer d’un séisme"
+    ],
+    "answer": 3,
+    "explanation": "épicentre : point de la surface situé à la verticale du foyer d’un séisme.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0197",
+    "knowledge_id": "V3-SCI-EAR009",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « zone en profondeur où débute la rupture responsable d’un séisme » ?",
+    "choices": [
+      "roche magmatique",
+      "altération",
+      "infiltration",
+      "foyer sismique"
+    ],
+    "answer": 3,
+    "explanation": "foyer sismique : zone en profondeur où débute la rupture responsable d’un séisme.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0198",
+    "knowledge_id": "V3-SCI-EAR009",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « foyer sismique » ?",
+    "choices": [
+      "formation géologique capable de stocker et transmettre de l’eau souterraine",
+      "zone en profondeur où débute la rupture responsable d’un séisme",
+      "roche transformée à l’état solide par pression, température ou fluides",
+      "passage de l’eau liquide en vapeur à la surface d’un liquide"
+    ],
+    "answer": 1,
+    "explanation": "foyer sismique : zone en profondeur où débute la rupture responsable d’un séisme.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0199",
+    "knowledge_id": "V3-SCI-EAR010",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « roche fondue ou partiellement fondue présente en profondeur » ?",
+    "choices": [
+      "nappe phréatique",
+      "magma",
+      "roche sédimentaire",
+      "cycle de l’eau"
+    ],
+    "answer": 1,
+    "explanation": "magma : roche fondue ou partiellement fondue présente en profondeur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0200",
+    "knowledge_id": "V3-SCI-EAR010",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « magma » ?",
+    "choices": [
+      "usure et transport des matériaux de surface par l’eau, le vent, la glace ou la gravité",
+      "chute vers le sol d’eau liquide ou solide issue de l’atmosphère",
+      "territoire dont les eaux s’écoulent vers un même exutoire",
+      "roche fondue ou partiellement fondue présente en profondeur"
+    ],
+    "answer": 3,
+    "explanation": "magma : roche fondue ou partiellement fondue présente en profondeur.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0201",
+    "knowledge_id": "V3-SCI-EAR011",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « magma arrivé à la surface et dégazé en partie » ?",
+    "choices": [
+      "roche métamorphique",
+      "évaporation",
+      "aquifère",
+      "lave"
+    ],
+    "answer": 3,
+    "explanation": "lave : magma arrivé à la surface et dégazé en partie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0202",
+    "knowledge_id": "V3-SCI-EAR011",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « lave » ?",
+    "choices": [
+      "réchauffement de la basse atmosphère dû à l’absorption et la réémission du rayonnement infrarouge par certains gaz",
+      "magma arrivé à la surface et dégazé en partie",
+      "transformation physique ou chimique des roches au contact de l’environnement",
+      "pénétration de l’eau dans le sol et le sous-sol"
+    ],
+    "answer": 1,
+    "explanation": "lave : magma arrivé à la surface et dégazé en partie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0203",
+    "knowledge_id": "V3-SCI-EAR012",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « roche formée par refroidissement et solidification d’un magma ou d’une lave » ?",
+    "choices": [
+      "bassin versant",
+      "roche magmatique",
+      "érosion",
+      "précipitation atmosphérique"
+    ],
+    "answer": 1,
+    "explanation": "roche magmatique : roche formée par refroidissement et solidification d’un magma ou d’une lave.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0204",
+    "knowledge_id": "V3-SCI-EAR012",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « roche magmatique » ?",
+    "choices": [
+      "circulation continue de l’eau entre océans, atmosphère, continents et sous-sol",
+      "réserve d’eau souterraine occupant les pores et fissures d’un aquifère proche de la surface",
+      "gaz atmosphérique capable d’absorber et réémettre du rayonnement infrarouge",
+      "roche formée par refroidissement et solidification d’un magma ou d’une lave"
+    ],
+    "answer": 3,
+    "explanation": "roche magmatique : roche formée par refroidissement et solidification d’un magma ou d’une lave.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0205",
+    "knowledge_id": "V3-SCI-EAR013",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « roche formée par accumulation, compaction ou précipitation de sédiments » ?",
+    "choices": [
+      "altération",
+      "infiltration",
+      "effet de serre",
+      "roche sédimentaire"
+    ],
+    "answer": 3,
+    "explanation": "roche sédimentaire : roche formée par accumulation, compaction ou précipitation de sédiments.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0206",
+    "knowledge_id": "V3-SCI-EAR013",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « roche sédimentaire » ?",
+    "choices": [
+      "modification durable des caractéristiques statistiques du climat",
+      "roche formée par accumulation, compaction ou précipitation de sédiments",
+      "passage de l’eau liquide en vapeur à la surface d’un liquide",
+      "formation géologique capable de stocker et transmettre de l’eau souterraine"
+    ],
+    "answer": 1,
+    "explanation": "roche sédimentaire : roche formée par accumulation, compaction ou précipitation de sédiments.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0207",
+    "knowledge_id": "V3-SCI-EAR014",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « roche transformée à l’état solide par pression, température ou fluides » ?",
+    "choices": [
+      "gaz à effet de serre",
+      "roche métamorphique",
+      "cycle de l’eau",
+      "nappe phréatique"
+    ],
+    "answer": 1,
+    "explanation": "roche métamorphique : roche transformée à l’état solide par pression, température ou fluides.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0208",
+    "knowledge_id": "V3-SCI-EAR014",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « roche métamorphique » ?",
+    "choices": [
+      "chute vers le sol d’eau liquide ou solide issue de l’atmosphère",
+      "territoire dont les eaux s’écoulent vers un même exutoire",
+      "état de l’atmosphère à court terme en un lieu donné",
+      "roche transformée à l’état solide par pression, température ou fluides"
+    ],
+    "answer": 3,
+    "explanation": "roche métamorphique : roche transformée à l’état solide par pression, température ou fluides.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0209",
+    "knowledge_id": "V3-SCI-EAR015",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « usure et transport des matériaux de surface par l’eau, le vent, la glace ou la gravité » ?",
+    "choices": [
+      "évaporation",
+      "aquifère",
+      "changement climatique",
+      "érosion"
+    ],
+    "answer": 3,
+    "explanation": "érosion : usure et transport des matériaux de surface par l’eau, le vent, la glace ou la gravité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0210",
+    "knowledge_id": "V3-SCI-EAR015",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « érosion » ?",
+    "choices": [
+      "statistiques à long terme des conditions atmosphériques d’une région",
+      "usure et transport des matériaux de surface par l’eau, le vent, la glace ou la gravité",
+      "pénétration de l’eau dans le sol et le sous-sol",
+      "réchauffement de la basse atmosphère dû à l’absorption et la réémission du rayonnement infrarouge par certains gaz"
+    ],
+    "answer": 1,
+    "explanation": "érosion : usure et transport des matériaux de surface par l’eau, le vent, la glace ou la gravité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0211",
+    "knowledge_id": "V3-SCI-EAR016",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « transformation physique ou chimique des roches au contact de l’environnement » ?",
+    "choices": [
+      "météo",
+      "altération",
+      "précipitation atmosphérique",
+      "bassin versant"
+    ],
+    "answer": 1,
+    "explanation": "altération : transformation physique ou chimique des roches au contact de l’environnement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0212",
+    "knowledge_id": "V3-SCI-EAR016",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « altération » ?",
+    "choices": [
+      "réserve d’eau souterraine occupant les pores et fissures d’un aquifère proche de la surface",
+      "gaz atmosphérique capable d’absorber et réémettre du rayonnement infrarouge",
+      "diversité des gènes, des espèces et des écosystèmes",
+      "transformation physique ou chimique des roches au contact de l’environnement"
+    ],
+    "answer": 3,
+    "explanation": "altération : transformation physique ou chimique des roches au contact de l’environnement.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0213",
+    "knowledge_id": "V3-SCI-EAR017",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « circulation continue de l’eau entre océans, atmosphère, continents et sous-sol » ?",
+    "choices": [
+      "infiltration",
+      "effet de serre",
+      "climat",
+      "cycle de l’eau"
+    ],
+    "answer": 3,
+    "explanation": "cycle de l’eau : circulation continue de l’eau entre océans, atmosphère, continents et sous-sol.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0214",
+    "knowledge_id": "V3-SCI-EAR017",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « cycle de l’eau » ?",
+    "choices": [
+      "ensemble formé par une communauté d’êtres vivants et son milieu avec leurs interactions",
+      "circulation continue de l’eau entre océans, atmosphère, continents et sous-sol",
+      "formation géologique capable de stocker et transmettre de l’eau souterraine",
+      "modification durable des caractéristiques statistiques du climat"
+    ],
+    "answer": 1,
+    "explanation": "cycle de l’eau : circulation continue de l’eau entre océans, atmosphère, continents et sous-sol.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0215",
+    "knowledge_id": "V3-SCI-EAR018",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « passage de l’eau liquide en vapeur à la surface d’un liquide » ?",
+    "choices": [
+      "biodiversité",
+      "évaporation",
+      "nappe phréatique",
+      "gaz à effet de serre"
+    ],
+    "answer": 1,
+    "explanation": "évaporation : passage de l’eau liquide en vapeur à la surface d’un liquide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0216",
+    "knowledge_id": "V3-SCI-EAR018",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « évaporation » ?",
+    "choices": [
+      "territoire dont les eaux s’écoulent vers un même exutoire",
+      "état de l’atmosphère à court terme en un lieu donné",
+      "milieu où vit habituellement une espèce ou une population",
+      "passage de l’eau liquide en vapeur à la surface d’un liquide"
+    ],
+    "answer": 3,
+    "explanation": "évaporation : passage de l’eau liquide en vapeur à la surface d’un liquide.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0217",
+    "knowledge_id": "V3-SCI-EAR019",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « chute vers le sol d’eau liquide ou solide issue de l’atmosphère » ?",
+    "choices": [
+      "aquifère",
+      "changement climatique",
+      "écosystème",
+      "précipitation atmosphérique"
+    ],
+    "answer": 3,
+    "explanation": "précipitation atmosphérique : chute vers le sol d’eau liquide ou solide issue de l’atmosphère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0218",
+    "knowledge_id": "V3-SCI-EAR019",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « précipitation atmosphérique » ?",
+    "choices": [
+      "rôle fonctionnel et ensemble des conditions utilisées par une espèce dans un écosystème",
+      "chute vers le sol d’eau liquide ou solide issue de l’atmosphère",
+      "réchauffement de la basse atmosphère dû à l’absorption et la réémission du rayonnement infrarouge par certains gaz",
+      "statistiques à long terme des conditions atmosphériques d’une région"
+    ],
+    "answer": 1,
+    "explanation": "précipitation atmosphérique : chute vers le sol d’eau liquide ou solide issue de l’atmosphère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0219",
+    "knowledge_id": "V3-SCI-EAR020",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « pénétration de l’eau dans le sol et le sous-sol » ?",
+    "choices": [
+      "habitat",
+      "infiltration",
+      "bassin versant",
+      "météo"
+    ],
+    "answer": 1,
+    "explanation": "infiltration : pénétration de l’eau dans le sol et le sous-sol.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0220",
+    "knowledge_id": "V3-SCI-EAR020",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « infiltration » ?",
+    "choices": [
+      "gaz atmosphérique capable d’absorber et réémettre du rayonnement infrarouge",
+      "diversité des gènes, des espèces et des écosystèmes",
+      "suite d’organismes reliés par des relations alimentaires",
+      "pénétration de l’eau dans le sol et le sous-sol"
+    ],
+    "answer": 3,
+    "explanation": "infiltration : pénétration de l’eau dans le sol et le sous-sol.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0221",
+    "knowledge_id": "V3-SCI-EAR021",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « réserve d’eau souterraine occupant les pores et fissures d’un aquifère proche de la surface » ?",
+    "choices": [
+      "effet de serre",
+      "climat",
+      "niche écologique",
+      "nappe phréatique"
+    ],
+    "answer": 3,
+    "explanation": "nappe phréatique : réserve d’eau souterraine occupant les pores et fissures d’un aquifère proche de la surface.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0222",
+    "knowledge_id": "V3-SCI-EAR021",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « nappe phréatique » ?",
+    "choices": [
+      "ensemble interconnecté de chaînes alimentaires d’un écosystème",
+      "réserve d’eau souterraine occupant les pores et fissures d’un aquifère proche de la surface",
+      "modification durable des caractéristiques statistiques du climat",
+      "ensemble formé par une communauté d’êtres vivants et son milieu avec leurs interactions"
+    ],
+    "answer": 1,
+    "explanation": "nappe phréatique : réserve d’eau souterraine occupant les pores et fissures d’un aquifère proche de la surface.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0223",
+    "knowledge_id": "V3-SCI-EAR022",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « formation géologique capable de stocker et transmettre de l’eau souterraine » ?",
+    "choices": [
+      "chaîne alimentaire",
+      "aquifère",
+      "gaz à effet de serre",
+      "biodiversité"
+    ],
+    "answer": 1,
+    "explanation": "aquifère : formation géologique capable de stocker et transmettre de l’eau souterraine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0224",
+    "knowledge_id": "V3-SCI-EAR022",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « aquifère » ?",
+    "choices": [
+      "état de l’atmosphère à court terme en un lieu donné",
+      "milieu où vit habituellement une espèce ou une population",
+      "organisme autotrophe produisant de la matière organique à partir de matière minérale",
+      "formation géologique capable de stocker et transmettre de l’eau souterraine"
+    ],
+    "answer": 3,
+    "explanation": "aquifère : formation géologique capable de stocker et transmettre de l’eau souterraine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0225",
+    "knowledge_id": "V3-SCI-EAR023",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « territoire dont les eaux s’écoulent vers un même exutoire » ?",
+    "choices": [
+      "changement climatique",
+      "écosystème",
+      "réseau trophique",
+      "bassin versant"
+    ],
+    "answer": 3,
+    "explanation": "bassin versant : territoire dont les eaux s’écoulent vers un même exutoire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0226",
+    "knowledge_id": "V3-SCI-EAR023",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « bassin versant » ?",
+    "choices": [
+      "organisme qui obtient son énergie en mangeant d’autres organismes ou leur matière",
+      "territoire dont les eaux s’écoulent vers un même exutoire",
+      "statistiques à long terme des conditions atmosphériques d’une région",
+      "rôle fonctionnel et ensemble des conditions utilisées par une espèce dans un écosystème"
+    ],
+    "answer": 1,
+    "explanation": "bassin versant : territoire dont les eaux s’écoulent vers un même exutoire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0227",
+    "knowledge_id": "V3-SCI-EAR024",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « réchauffement de la basse atmosphère dû à l’absorption et la réémission du rayonnement infrarouge par certains gaz » ?",
+    "choices": [
+      "producteur primaire",
+      "effet de serre",
+      "météo",
+      "habitat"
+    ],
+    "answer": 1,
+    "explanation": "effet de serre : réchauffement de la basse atmosphère dû à l’absorption et la réémission du rayonnement infrarouge par certains gaz.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0228",
+    "knowledge_id": "V3-SCI-EAR024",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « effet de serre » ?",
+    "choices": [
+      "diversité des gènes, des espèces et des écosystèmes",
+      "suite d’organismes reliés par des relations alimentaires",
+      "organisme qui dégrade la matière organique morte et recycle des nutriments",
+      "réchauffement de la basse atmosphère dû à l’absorption et la réémission du rayonnement infrarouge par certains gaz"
+    ],
+    "answer": 3,
+    "explanation": "effet de serre : réchauffement de la basse atmosphère dû à l’absorption et la réémission du rayonnement infrarouge par certains gaz.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0229",
+    "knowledge_id": "V3-SCI-EAR025",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « gaz atmosphérique capable d’absorber et réémettre du rayonnement infrarouge » ?",
+    "choices": [
+      "climat",
+      "niche écologique",
+      "consommateur",
+      "gaz à effet de serre"
+    ],
+    "answer": 3,
+    "explanation": "gaz à effet de serre : gaz atmosphérique capable d’absorber et réémettre du rayonnement infrarouge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0230",
+    "knowledge_id": "V3-SCI-EAR025",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « gaz à effet de serre » ?",
+    "choices": [
+      "espèce naturellement limitée à une aire géographique déterminée",
+      "gaz atmosphérique capable d’absorber et réémettre du rayonnement infrarouge",
+      "ensemble formé par une communauté d’êtres vivants et son milieu avec leurs interactions",
+      "ensemble interconnecté de chaînes alimentaires d’un écosystème"
+    ],
+    "answer": 1,
+    "explanation": "gaz à effet de serre : gaz atmosphérique capable d’absorber et réémettre du rayonnement infrarouge.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0231",
+    "knowledge_id": "V3-SCI-EAR026",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « modification durable des caractéristiques statistiques du climat » ?",
+    "choices": [
+      "décomposeur",
+      "changement climatique",
+      "biodiversité",
+      "chaîne alimentaire"
+    ],
+    "answer": 1,
+    "explanation": "changement climatique : modification durable des caractéristiques statistiques du climat.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0232",
+    "knowledge_id": "V3-SCI-EAR026",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « changement climatique » ?",
+    "choices": [
+      "milieu où vit habituellement une espèce ou une population",
+      "organisme autotrophe produisant de la matière organique à partir de matière minérale",
+      "espèce introduite qui se propage et cause des impacts écologiques ou socio-économiques importants",
+      "modification durable des caractéristiques statistiques du climat"
+    ],
+    "answer": 3,
+    "explanation": "changement climatique : modification durable des caractéristiques statistiques du climat.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0233",
+    "knowledge_id": "V3-SCI-EAR027",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « état de l’atmosphère à court terme en un lieu donné » ?",
+    "choices": [
+      "écosystème",
+      "réseau trophique",
+      "espèce endémique",
+      "météo"
+    ],
+    "answer": 3,
+    "explanation": "météo : état de l’atmosphère à court terme en un lieu donné.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0234",
+    "knowledge_id": "V3-SCI-EAR027",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « météo » ?",
+    "choices": [
+      "développement répondant aux besoins présents sans compromettre la capacité des générations futures à répondre aux leurs",
+      "état de l’atmosphère à court terme en un lieu donné",
+      "rôle fonctionnel et ensemble des conditions utilisées par une espèce dans un écosystème",
+      "organisme qui obtient son énergie en mangeant d’autres organismes ou leur matière"
+    ],
+    "answer": 1,
+    "explanation": "météo : état de l’atmosphère à court terme en un lieu donné.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0235",
+    "knowledge_id": "V3-SCI-EAR028",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « statistiques à long terme des conditions atmosphériques d’une région » ?",
+    "choices": [
+      "espèce invasive",
+      "climat",
+      "habitat",
+      "producteur primaire"
+    ],
+    "answer": 1,
+    "explanation": "climat : statistiques à long terme des conditions atmosphériques d’une région.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0236",
+    "knowledge_id": "V3-SCI-EAR028",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « climat » ?",
+    "choices": [
+      "suite d’organismes reliés par des relations alimentaires",
+      "organisme qui dégrade la matière organique morte et recycle des nutriments",
+      "enveloppe rigide superficielle de la Terre comprenant la croûte et la partie supérieure du manteau",
+      "statistiques à long terme des conditions atmosphériques d’une région"
+    ],
+    "answer": 3,
+    "explanation": "climat : statistiques à long terme des conditions atmosphériques d’une région.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0237",
+    "knowledge_id": "V3-SCI-EAR029",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « diversité des gènes, des espèces et des écosystèmes » ?",
+    "choices": [
+      "niche écologique",
+      "consommateur",
+      "développement durable",
+      "biodiversité"
+    ],
+    "answer": 3,
+    "explanation": "biodiversité : diversité des gènes, des espèces et des écosystèmes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0238",
+    "knowledge_id": "V3-SCI-EAR029",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « biodiversité » ?",
+    "choices": [
+      "zone ductile du manteau supérieur sur laquelle se déplacent les plaques lithosphériques",
+      "diversité des gènes, des espèces et des écosystèmes",
+      "ensemble interconnecté de chaînes alimentaires d’un écosystème",
+      "espèce naturellement limitée à une aire géographique déterminée"
+    ],
+    "answer": 1,
+    "explanation": "biodiversité : diversité des gènes, des espèces et des écosystèmes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0239",
+    "knowledge_id": "V3-SCI-EAR030",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « ensemble formé par une communauté d’êtres vivants et son milieu avec leurs interactions » ?",
+    "choices": [
+      "lithosphère",
+      "écosystème",
+      "chaîne alimentaire",
+      "décomposeur"
+    ],
+    "answer": 1,
+    "explanation": "écosystème : ensemble formé par une communauté d’êtres vivants et son milieu avec leurs interactions.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0240",
+    "knowledge_id": "V3-SCI-EAR030",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « écosystème » ?",
+    "choices": [
+      "organisme autotrophe produisant de la matière organique à partir de matière minérale",
+      "espèce introduite qui se propage et cause des impacts écologiques ou socio-économiques importants",
+      "théorie décrivant le mouvement relatif des plaques rigides de la lithosphère",
+      "ensemble formé par une communauté d’êtres vivants et son milieu avec leurs interactions"
+    ],
+    "answer": 3,
+    "explanation": "écosystème : ensemble formé par une communauté d’êtres vivants et son milieu avec leurs interactions.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0241",
+    "knowledge_id": "V3-SCI-EAR031",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « milieu où vit habituellement une espèce ou une population » ?",
+    "choices": [
+      "réseau trophique",
+      "espèce endémique",
+      "asthénosphère",
+      "habitat"
+    ],
+    "answer": 3,
+    "explanation": "habitat : milieu où vit habituellement une espèce ou une population.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0242",
+    "knowledge_id": "V3-SCI-EAR031",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « habitat » ?",
+    "choices": [
+      "enfoncement d’une plaque lithosphérique sous une autre",
+      "milieu où vit habituellement une espèce ou une population",
+      "organisme qui obtient son énergie en mangeant d’autres organismes ou leur matière",
+      "développement répondant aux besoins présents sans compromettre la capacité des générations futures à répondre aux leurs"
+    ],
+    "answer": 1,
+    "explanation": "habitat : milieu où vit habituellement une espèce ou une population.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0243",
+    "knowledge_id": "V3-SCI-EAR032",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « rôle fonctionnel et ensemble des conditions utilisées par une espèce dans un écosystème » ?",
+    "choices": [
+      "tectonique des plaques",
+      "niche écologique",
+      "producteur primaire",
+      "espèce invasive"
+    ],
+    "answer": 1,
+    "explanation": "niche écologique : rôle fonctionnel et ensemble des conditions utilisées par une espèce dans un écosystème.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0244",
+    "knowledge_id": "V3-SCI-EAR032",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « niche écologique » ?",
+    "choices": [
+      "organisme qui dégrade la matière organique morte et recycle des nutriments",
+      "enveloppe rigide superficielle de la Terre comprenant la croûte et la partie supérieure du manteau",
+      "longue chaîne sous-marine où se forme de la nouvelle lithosphère océanique",
+      "rôle fonctionnel et ensemble des conditions utilisées par une espèce dans un écosystème"
+    ],
+    "answer": 3,
+    "explanation": "niche écologique : rôle fonctionnel et ensemble des conditions utilisées par une espèce dans un écosystème.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0245",
+    "knowledge_id": "V3-SCI-EAR033",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « suite d’organismes reliés par des relations alimentaires » ?",
+    "choices": [
+      "consommateur",
+      "développement durable",
+      "subduction",
+      "chaîne alimentaire"
+    ],
+    "answer": 3,
+    "explanation": "chaîne alimentaire : suite d’organismes reliés par des relations alimentaires.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0246",
+    "knowledge_id": "V3-SCI-EAR033",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « chaîne alimentaire » ?",
+    "choices": [
+      "fracture de la croûte accompagnée d’un déplacement relatif des blocs",
+      "suite d’organismes reliés par des relations alimentaires",
+      "espèce naturellement limitée à une aire géographique déterminée",
+      "zone ductile du manteau supérieur sur laquelle se déplacent les plaques lithosphériques"
+    ],
+    "answer": 1,
+    "explanation": "chaîne alimentaire : suite d’organismes reliés par des relations alimentaires.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0247",
+    "knowledge_id": "V3-SCI-EAR034",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « ensemble interconnecté de chaînes alimentaires d’un écosystème » ?",
+    "choices": [
+      "dorsale océanique",
+      "réseau trophique",
+      "décomposeur",
+      "lithosphère"
+    ],
+    "answer": 1,
+    "explanation": "réseau trophique : ensemble interconnecté de chaînes alimentaires d’un écosystème.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0248",
+    "knowledge_id": "V3-SCI-EAR034",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « réseau trophique » ?",
+    "choices": [
+      "espèce introduite qui se propage et cause des impacts écologiques ou socio-économiques importants",
+      "théorie décrivant le mouvement relatif des plaques rigides de la lithosphère",
+      "libération brutale d’énergie dans la croûte produisant des ondes sismiques",
+      "ensemble interconnecté de chaînes alimentaires d’un écosystème"
+    ],
+    "answer": 3,
+    "explanation": "réseau trophique : ensemble interconnecté de chaînes alimentaires d’un écosystème.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0249",
+    "knowledge_id": "V3-SCI-EAR035",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « organisme autotrophe produisant de la matière organique à partir de matière minérale » ?",
+    "choices": [
+      "espèce endémique",
+      "asthénosphère",
+      "faille",
+      "producteur primaire"
+    ],
+    "answer": 3,
+    "explanation": "producteur primaire : organisme autotrophe produisant de la matière organique à partir de matière minérale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0250",
+    "knowledge_id": "V3-SCI-EAR035",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « producteur primaire » ?",
+    "choices": [
+      "point de la surface situé à la verticale du foyer d’un séisme",
+      "organisme autotrophe produisant de la matière organique à partir de matière minérale",
+      "développement répondant aux besoins présents sans compromettre la capacité des générations futures à répondre aux leurs",
+      "enfoncement d’une plaque lithosphérique sous une autre"
+    ],
+    "answer": 1,
+    "explanation": "producteur primaire : organisme autotrophe produisant de la matière organique à partir de matière minérale.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0251",
+    "knowledge_id": "V3-SCI-EAR036",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « organisme qui obtient son énergie en mangeant d’autres organismes ou leur matière » ?",
+    "choices": [
+      "séisme",
+      "consommateur",
+      "espèce invasive",
+      "tectonique des plaques"
+    ],
+    "answer": 1,
+    "explanation": "consommateur : organisme qui obtient son énergie en mangeant d’autres organismes ou leur matière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0252",
+    "knowledge_id": "V3-SCI-EAR036",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « consommateur » ?",
+    "choices": [
+      "enveloppe rigide superficielle de la Terre comprenant la croûte et la partie supérieure du manteau",
+      "longue chaîne sous-marine où se forme de la nouvelle lithosphère océanique",
+      "zone en profondeur où débute la rupture responsable d’un séisme",
+      "organisme qui obtient son énergie en mangeant d’autres organismes ou leur matière"
+    ],
+    "answer": 3,
+    "explanation": "consommateur : organisme qui obtient son énergie en mangeant d’autres organismes ou leur matière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0253",
+    "knowledge_id": "V3-SCI-EAR037",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « organisme qui dégrade la matière organique morte et recycle des nutriments » ?",
+    "choices": [
+      "développement durable",
+      "subduction",
+      "épicentre",
+      "décomposeur"
+    ],
+    "answer": 3,
+    "explanation": "décomposeur : organisme qui dégrade la matière organique morte et recycle des nutriments.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0254",
+    "knowledge_id": "V3-SCI-EAR037",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « décomposeur » ?",
+    "choices": [
+      "roche fondue ou partiellement fondue présente en profondeur",
+      "organisme qui dégrade la matière organique morte et recycle des nutriments",
+      "zone ductile du manteau supérieur sur laquelle se déplacent les plaques lithosphériques",
+      "fracture de la croûte accompagnée d’un déplacement relatif des blocs"
+    ],
+    "answer": 1,
+    "explanation": "décomposeur : organisme qui dégrade la matière organique morte et recycle des nutriments.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0255",
+    "knowledge_id": "V3-SCI-EAR038",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « espèce naturellement limitée à une aire géographique déterminée » ?",
+    "choices": [
+      "foyer sismique",
+      "espèce endémique",
+      "lithosphère",
+      "dorsale océanique"
+    ],
+    "answer": 1,
+    "explanation": "espèce endémique : espèce naturellement limitée à une aire géographique déterminée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0256",
+    "knowledge_id": "V3-SCI-EAR038",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « espèce endémique » ?",
+    "choices": [
+      "théorie décrivant le mouvement relatif des plaques rigides de la lithosphère",
+      "libération brutale d’énergie dans la croûte produisant des ondes sismiques",
+      "magma arrivé à la surface et dégazé en partie",
+      "espèce naturellement limitée à une aire géographique déterminée"
+    ],
+    "answer": 3,
+    "explanation": "espèce endémique : espèce naturellement limitée à une aire géographique déterminée.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0257",
+    "knowledge_id": "V3-SCI-EAR039",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « espèce introduite qui se propage et cause des impacts écologiques ou socio-économiques importants » ?",
+    "choices": [
+      "asthénosphère",
+      "faille",
+      "magma",
+      "espèce invasive"
+    ],
+    "answer": 3,
+    "explanation": "espèce invasive : espèce introduite qui se propage et cause des impacts écologiques ou socio-économiques importants.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0258",
+    "knowledge_id": "V3-SCI-EAR039",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « espèce invasive » ?",
+    "choices": [
+      "roche formée par refroidissement et solidification d’un magma ou d’une lave",
+      "espèce introduite qui se propage et cause des impacts écologiques ou socio-économiques importants",
+      "enfoncement d’une plaque lithosphérique sous une autre",
+      "point de la surface situé à la verticale du foyer d’un séisme"
+    ],
+    "answer": 1,
+    "explanation": "espèce invasive : espèce introduite qui se propage et cause des impacts écologiques ou socio-économiques importants.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0259",
+    "knowledge_id": "V3-SCI-EAR040",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle notion scientifique correspond à cette définition : « développement répondant aux besoins présents sans compromettre la capacité des générations futures à répondre aux leurs » ?",
+    "choices": [
+      "lave",
+      "développement durable",
+      "tectonique des plaques",
+      "séisme"
+    ],
+    "answer": 1,
+    "explanation": "développement durable : développement répondant aux besoins présents sans compromettre la capacité des générations futures à répondre aux leurs.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  },
+  {
+    "id": "V3SC0260",
+    "knowledge_id": "V3-SCI-EAR040",
+    "module": 5,
+    "domain": "Sciences générales",
+    "subdomain": "Terre et environnement",
+    "prompt": "Quelle proposition définit correctement « développement durable » ?",
+    "choices": [
+      "longue chaîne sous-marine où se forme de la nouvelle lithosphère océanique",
+      "zone en profondeur où débute la rupture responsable d’un séisme",
+      "roche formée par accumulation, compaction ou précipitation de sédiments",
+      "développement répondant aux besoins présents sans compromettre la capacité des générations futures à répondre aux leurs"
+    ],
+    "answer": 3,
+    "explanation": "développement durable : développement répondant aux besoins présents sans compromettre la capacité des générations futures à répondre aux leurs.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "USGS, GIEC/IPCC et manuels de sciences de la Terre"
+  }
+]
