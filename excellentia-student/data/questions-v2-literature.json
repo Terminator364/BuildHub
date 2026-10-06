@@ -1,0 +1,2301 @@
+[
+  {
+    "id": "V2L001B",
+    "knowledge_id": "V2-LIT-001",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de Victor Hugo, quel titre proposé lui appartient ?",
+    "choices": [
+      "De l’esprit des lois",
+      "Les Fleurs du mal",
+      "Guerre et Paix",
+      "Les Misérables"
+    ],
+    "answer": 3,
+    "explanation": "Les Misérables est une œuvre de Victor Hugo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L002A",
+    "knowledge_id": "V2-LIT-002",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Notre-Dame de Paris » ?",
+    "choices": [
+      "Émile Zola",
+      "Stendhal",
+      "Charlotte Brontë",
+      "Victor Hugo"
+    ],
+    "answer": 3,
+    "explanation": "Notre-Dame de Paris est une œuvre de Victor Hugo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L002B",
+    "knowledge_id": "V2-LIT-002",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par Victor Hugo ?",
+    "choices": [
+      "Une saison en enfer",
+      "Anna Karénine",
+      "Notre-Dame de Paris",
+      "L’Étranger"
+    ],
+    "answer": 2,
+    "explanation": "Notre-Dame de Paris est une œuvre de Victor Hugo.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L003B",
+    "knowledge_id": "V2-LIT-003",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de Molière, quel titre proposé lui appartient ?",
+    "choices": [
+      "Crime et Châtiment",
+      "Le Malade imaginaire",
+      "La Peste",
+      "Le Cid"
+    ],
+    "answer": 1,
+    "explanation": "Le Malade imaginaire est une œuvre de Molière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L004A",
+    "knowledge_id": "V2-LIT-004",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « L’Avare » ?",
+    "choices": [
+      "J. R. R. Tolkien",
+      "Molière",
+      "Gustave Flaubert",
+      "William Shakespeare"
+    ],
+    "answer": 1,
+    "explanation": "L’Avare est une œuvre de Molière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L004B",
+    "knowledge_id": "V2-LIT-004",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par Molière ?",
+    "choices": [
+      "L’Avare",
+      "Huis clos",
+      "Phèdre",
+      "Les Frères Karamazov"
+    ],
+    "answer": 0,
+    "explanation": "L’Avare est une œuvre de Molière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L005A",
+    "knowledge_id": "V2-LIT-005",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Tartuffe » ?",
+    "choices": [
+      "Molière",
+      "Alexandre Dumas",
+      "Miguel de Cervantes",
+      "Chinua Achebe"
+    ],
+    "answer": 0,
+    "explanation": "Tartuffe est une œuvre de Molière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L005B",
+    "knowledge_id": "V2-LIT-005",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Repère auteur–œuvre : quel titre faut-il associer à Molière ?",
+    "choices": [
+      "Le Petit Prince",
+      "Fables",
+      "La Métamorphose",
+      "Tartuffe"
+    ],
+    "answer": 3,
+    "explanation": "Tartuffe est une œuvre de Molière.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L006B",
+    "knowledge_id": "V2-LIT-006",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Voltaire ?",
+    "choices": [
+      "À la recherche du temps perdu",
+      "1984",
+      "Candide",
+      "Germinal"
+    ],
+    "answer": 2,
+    "explanation": "Candide est une œuvre de Voltaire.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L007A",
+    "knowledge_id": "V2-LIT-007",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Du contrat social » ?",
+    "choices": [
+      "Homère",
+      "Ousmane Sembène",
+      "Jean-Jacques Rousseau",
+      "Charles Baudelaire"
+    ],
+    "answer": 2,
+    "explanation": "Du contrat social est une œuvre de Jean-Jacques Rousseau.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L007B",
+    "knowledge_id": "V2-LIT-007",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Jean-Jacques Rousseau ?",
+    "choices": [
+      "La Ferme des animaux",
+      "Du contrat social",
+      "Le Père Goriot",
+      "Bel-Ami"
+    ],
+    "answer": 1,
+    "explanation": "Du contrat social est une œuvre de Jean-Jacques Rousseau.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L008A",
+    "knowledge_id": "V2-LIT-008",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « De l’esprit des lois » ?",
+    "choices": [
+      "Ahmadou Kourouma",
+      "Montesquieu",
+      "Arthur Rimbaud",
+      "Johann Wolfgang von Goethe"
+    ],
+    "answer": 1,
+    "explanation": "De l’esprit des lois est une œuvre de Montesquieu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L008B",
+    "knowledge_id": "V2-LIT-008",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Montesquieu ?",
+    "choices": [
+      "De l’esprit des lois",
+      "Madame Bovary",
+      "Le Rouge et le Noir",
+      "Le Meilleur des mondes"
+    ],
+    "answer": 0,
+    "explanation": "De l’esprit des lois est une œuvre de Montesquieu.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L009B",
+    "knowledge_id": "V2-LIT-009",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de Albert Camus, quel titre proposé lui appartient ?",
+    "choices": [
+      "Le Comte de Monte-Cristo",
+      "Le Mariage de Figaro",
+      "Le Vieil Homme et la Mer",
+      "L’Étranger"
+    ],
+    "answer": 3,
+    "explanation": "L’Étranger est une œuvre de Albert Camus.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L010A",
+    "knowledge_id": "V2-LIT-010",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « La Peste » ?",
+    "choices": [
+      "Jean Racine",
+      "Fiodor Dostoïevski",
+      "Ferdinand Oyono",
+      "Albert Camus"
+    ],
+    "answer": 3,
+    "explanation": "La Peste est une œuvre de Albert Camus.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L010B",
+    "knowledge_id": "V2-LIT-010",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par Albert Camus ?",
+    "choices": [
+      "Hamlet",
+      "Les Raisins de la colère",
+      "La Peste",
+      "Les Trois Mousquetaires"
+    ],
+    "answer": 2,
+    "explanation": "La Peste est une œuvre de Albert Camus.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L011A",
+    "knowledge_id": "V2-LIT-011",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Huis clos » ?",
+    "choices": [
+      "Franz Kafka",
+      "Camara Laye",
+      "Jean-Paul Sartre",
+      "Jean de La Fontaine"
+    ],
+    "answer": 2,
+    "explanation": "Huis clos est une œuvre de Jean-Paul Sartre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L011B",
+    "knowledge_id": "V2-LIT-011",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Jean-Paul Sartre ?",
+    "choices": [
+      "Gatsby le Magnifique",
+      "Huis clos",
+      "Vingt mille lieues sous les mers",
+      "Macbeth"
+    ],
+    "answer": 1,
+    "explanation": "Huis clos est une œuvre de Jean-Paul Sartre.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L012B",
+    "knowledge_id": "V2-LIT-012",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Antoine de Saint-Exupéry ?",
+    "choices": [
+      "Le Petit Prince",
+      "Le Tour du monde en quatre-vingts jours",
+      "Roméo et Juliette",
+      "Moby Dick"
+    ],
+    "answer": 0,
+    "explanation": "Le Petit Prince est une œuvre de Antoine de Saint-Exupéry.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L013B",
+    "knowledge_id": "V2-LIT-013",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Émile Zola ?",
+    "choices": [
+      "Les Fleurs du mal",
+      "Othello",
+      "Oliver Twist",
+      "Germinal"
+    ],
+    "answer": 3,
+    "explanation": "Germinal est une œuvre de Émile Zola.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L014A",
+    "knowledge_id": "V2-LIT-014",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Père Goriot » ?",
+    "choices": [
+      "Stendhal",
+      "Ernest Hemingway",
+      "Sony Labou Tansi",
+      "Honoré de Balzac"
+    ],
+    "answer": 3,
+    "explanation": "Le Père Goriot est une œuvre de Honoré de Balzac.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L014B",
+    "knowledge_id": "V2-LIT-014",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Honoré de Balzac ?",
+    "choices": [
+      "Don Quichotte",
+      "Les Grandes Espérances",
+      "Le Père Goriot",
+      "Une saison en enfer"
+    ],
+    "answer": 2,
+    "explanation": "Le Père Goriot est une œuvre de Honoré de Balzac.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L015A",
+    "knowledge_id": "V2-LIT-015",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Madame Bovary » ?",
+    "choices": [
+      "John Steinbeck",
+      "Alain Mabanckou",
+      "Gustave Flaubert",
+      "Beaumarchais"
+    ],
+    "answer": 2,
+    "explanation": "Madame Bovary est une œuvre de Gustave Flaubert.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L015B",
+    "knowledge_id": "V2-LIT-015",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Gustave Flaubert ?",
+    "choices": [
+      "Orgueil et Préjugés",
+      "Madame Bovary",
+      "Le Cid",
+      "La Divine Comédie"
+    ],
+    "answer": 1,
+    "explanation": "Madame Bovary est une œuvre de Gustave Flaubert.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L016A",
+    "knowledge_id": "V2-LIT-016",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Comte de Monte-Cristo » ?",
+    "choices": [
+      "Ngũgĩ wa Thiong’o",
+      "Alexandre Dumas",
+      "William Shakespeare",
+      "F. Scott Fitzgerald"
+    ],
+    "answer": 1,
+    "explanation": "Le Comte de Monte-Cristo est une œuvre de Alexandre Dumas.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L016B",
+    "knowledge_id": "V2-LIT-016",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de Alexandre Dumas, quel titre proposé lui appartient ?",
+    "choices": [
+      "Le Comte de Monte-Cristo",
+      "Phèdre",
+      "L’Iliade",
+      "Jane Eyre"
+    ],
+    "answer": 0,
+    "explanation": "Le Comte de Monte-Cristo est une œuvre de Alexandre Dumas.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L017A",
+    "knowledge_id": "V2-LIT-017",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Les Trois Mousquetaires » ?",
+    "choices": [
+      "Alexandre Dumas",
+      "Miguel de Cervantes",
+      "Herman Melville",
+      "Wole Soyinka"
+    ],
+    "answer": 0,
+    "explanation": "Les Trois Mousquetaires est une œuvre de Alexandre Dumas.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L017B",
+    "knowledge_id": "V2-LIT-017",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par Alexandre Dumas ?",
+    "choices": [
+      "Fables",
+      "L’Odyssée",
+      "Frankenstein",
+      "Les Trois Mousquetaires"
+    ],
+    "answer": 3,
+    "explanation": "Les Trois Mousquetaires est une œuvre de Alexandre Dumas.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L018B",
+    "knowledge_id": "V2-LIT-018",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de Jules Verne, quel titre proposé lui appartient ?",
+    "choices": [
+      "Faust",
+      "Le Seigneur des anneaux",
+      "Vingt mille lieues sous les mers",
+      "À la recherche du temps perdu"
+    ],
+    "answer": 2,
+    "explanation": "Vingt mille lieues sous les mers est une œuvre de Jules Verne.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L019A",
+    "knowledge_id": "V2-LIT-019",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Tour du monde en quatre-vingts jours » ?",
+    "choices": [
+      "Jane Austen",
+      "Cheikh Hamidou Kane",
+      "Jules Verne",
+      "Homère"
+    ],
+    "answer": 2,
+    "explanation": "Le Tour du monde en quatre-vingts jours est une œuvre de Jules Verne.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L019B",
+    "knowledge_id": "V2-LIT-019",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par Jules Verne ?",
+    "choices": [
+      "Le Monde s’effondre",
+      "Le Tour du monde en quatre-vingts jours",
+      "Bel-Ami",
+      "Guerre et Paix"
+    ],
+    "answer": 1,
+    "explanation": "Le Tour du monde en quatre-vingts jours est une œuvre de Jules Verne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L020A",
+    "knowledge_id": "V2-LIT-020",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Les Fleurs du mal » ?",
+    "choices": [
+      "Victor Hugo",
+      "Charles Baudelaire",
+      "Johann Wolfgang von Goethe",
+      "Charlotte Brontë"
+    ],
+    "answer": 1,
+    "explanation": "Les Fleurs du mal est une œuvre de Charles Baudelaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L020B",
+    "knowledge_id": "V2-LIT-020",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Charles Baudelaire ?",
+    "choices": [
+      "Les Fleurs du mal",
+      "Le Rouge et le Noir",
+      "Anna Karénine",
+      "Une si longue lettre"
+    ],
+    "answer": 0,
+    "explanation": "Les Fleurs du mal est une œuvre de Charles Baudelaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L021A",
+    "knowledge_id": "V2-LIT-021",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Une saison en enfer » ?",
+    "choices": [
+      "Arthur Rimbaud",
+      "Léon Tolstoï",
+      "Mary Shelley",
+      "Molière"
+    ],
+    "answer": 0,
+    "explanation": "Une saison en enfer est une œuvre de Arthur Rimbaud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L021B",
+    "knowledge_id": "V2-LIT-021",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Arthur Rimbaud ?",
+    "choices": [
+      "Le Mariage de Figaro",
+      "Crime et Châtiment",
+      "Les Bouts de bois de Dieu",
+      "Une saison en enfer"
+    ],
+    "answer": 3,
+    "explanation": "Une saison en enfer est une œuvre de Arthur Rimbaud.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L022A",
+    "knowledge_id": "V2-LIT-022",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Cid » ?",
+    "choices": [
+      "Fiodor Dostoïevski",
+      "J. R. R. Tolkien",
+      "Voltaire",
+      "Pierre Corneille"
+    ],
+    "answer": 3,
+    "explanation": "Le Cid est une œuvre de Pierre Corneille.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L022B",
+    "knowledge_id": "V2-LIT-022",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Pierre Corneille ?",
+    "choices": [
+      "Les Frères Karamazov",
+      "Les Soleils des indépendances",
+      "Le Cid",
+      "Hamlet"
+    ],
+    "answer": 2,
+    "explanation": "Le Cid est une œuvre de Pierre Corneille.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L023A",
+    "knowledge_id": "V2-LIT-023",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Phèdre » ?",
+    "choices": [
+      "Chinua Achebe",
+      "Jean-Jacques Rousseau",
+      "Jean Racine",
+      "Franz Kafka"
+    ],
+    "answer": 2,
+    "explanation": "Phèdre est une œuvre de Jean Racine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L023B",
+    "knowledge_id": "V2-LIT-023",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Jean Racine ?",
+    "choices": [
+      "Le Pauvre Christ de Bomba",
+      "Phèdre",
+      "Macbeth",
+      "La Métamorphose"
+    ],
+    "answer": 1,
+    "explanation": "Phèdre est une œuvre de Jean Racine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L024A",
+    "knowledge_id": "V2-LIT-024",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Fables » ?",
+    "choices": [
+      "Montesquieu",
+      "Jean de La Fontaine",
+      "George Orwell",
+      "Mariama Bâ"
+    ],
+    "answer": 1,
+    "explanation": "Fables est une œuvre de Jean de La Fontaine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L024B",
+    "knowledge_id": "V2-LIT-024",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Jean de La Fontaine ?",
+    "choices": [
+      "Fables",
+      "Roméo et Juliette",
+      "1984",
+      "Une vie de boy"
+    ],
+    "answer": 0,
+    "explanation": "Fables est une œuvre de Jean de La Fontaine.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L025A",
+    "knowledge_id": "V2-LIT-025",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « À la recherche du temps perdu » ?",
+    "choices": [
+      "Marcel Proust",
+      "Aldous Huxley",
+      "Ousmane Sembène",
+      "Albert Camus"
+    ],
+    "answer": 0,
+    "explanation": "À la recherche du temps perdu est une œuvre de Marcel Proust.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L025B",
+    "knowledge_id": "V2-LIT-025",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Marcel Proust ?",
+    "choices": [
+      "Othello",
+      "La Ferme des animaux",
+      "L’Enfant noir",
+      "À la recherche du temps perdu"
+    ],
+    "answer": 3,
+    "explanation": "À la recherche du temps perdu est une œuvre de Marcel Proust.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L026A",
+    "knowledge_id": "V2-LIT-026",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Bel-Ami » ?",
+    "choices": [
+      "Ernest Hemingway",
+      "Ahmadou Kourouma",
+      "Jean-Paul Sartre",
+      "Guy de Maupassant"
+    ],
+    "answer": 3,
+    "explanation": "Bel-Ami est une œuvre de Guy de Maupassant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L026B",
+    "knowledge_id": "V2-LIT-026",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Guy de Maupassant ?",
+    "choices": [
+      "Le Meilleur des mondes",
+      "Cahier d’un retour au pays natal",
+      "Bel-Ami",
+      "Don Quichotte"
+    ],
+    "answer": 2,
+    "explanation": "Bel-Ami est une œuvre de Guy de Maupassant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L027A",
+    "knowledge_id": "V2-LIT-027",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Rouge et le Noir » ?",
+    "choices": [
+      "Mongo Beti",
+      "Antoine de Saint-Exupéry",
+      "Stendhal",
+      "John Steinbeck"
+    ],
+    "answer": 2,
+    "explanation": "Le Rouge et le Noir est une œuvre de Stendhal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L027B",
+    "knowledge_id": "V2-LIT-027",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Stendhal ?",
+    "choices": [
+      "Les Damnés de la Terre",
+      "Le Rouge et le Noir",
+      "La Divine Comédie",
+      "Le Vieil Homme et la Mer"
+    ],
+    "answer": 1,
+    "explanation": "Le Rouge et le Noir est une œuvre de Stendhal.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L028A",
+    "knowledge_id": "V2-LIT-028",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Mariage de Figaro » ?",
+    "choices": [
+      "Émile Zola",
+      "Beaumarchais",
+      "F. Scott Fitzgerald",
+      "Ferdinand Oyono"
+    ],
+    "answer": 1,
+    "explanation": "Le Mariage de Figaro est une œuvre de Beaumarchais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L028B",
+    "knowledge_id": "V2-LIT-028",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Beaumarchais ?",
+    "choices": [
+      "Le Mariage de Figaro",
+      "L’Iliade",
+      "Les Raisins de la colère",
+      "La Vie et demie"
+    ],
+    "answer": 0,
+    "explanation": "Le Mariage de Figaro est une œuvre de Beaumarchais.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L029B",
+    "knowledge_id": "V2-LIT-029",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de William Shakespeare, quel titre proposé lui appartient ?",
+    "choices": [
+      "L’Odyssée",
+      "Gatsby le Magnifique",
+      "Verre cassé",
+      "Hamlet"
+    ],
+    "answer": 3,
+    "explanation": "Hamlet est une œuvre de William Shakespeare.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L030A",
+    "knowledge_id": "V2-LIT-030",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Macbeth » ?",
+    "choices": [
+      "Charles Dickens",
+      "Aimé Césaire",
+      "Gustave Flaubert",
+      "William Shakespeare"
+    ],
+    "answer": 3,
+    "explanation": "Macbeth est une œuvre de William Shakespeare.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L030B",
+    "knowledge_id": "V2-LIT-030",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par William Shakespeare ?",
+    "choices": [
+      "Moby Dick",
+      "Un grain de blé",
+      "Macbeth",
+      "Faust"
+    ],
+    "answer": 2,
+    "explanation": "Macbeth est une œuvre de William Shakespeare.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L031A",
+    "knowledge_id": "V2-LIT-031",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Roméo et Juliette » ?",
+    "choices": [
+      "Frantz Fanon",
+      "Alexandre Dumas",
+      "William Shakespeare",
+      "Jane Austen"
+    ],
+    "answer": 2,
+    "explanation": "Roméo et Juliette est une œuvre de William Shakespeare.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L031B",
+    "knowledge_id": "V2-LIT-031",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Repère auteur–œuvre : quel titre faut-il associer à William Shakespeare ?",
+    "choices": [
+      "La Mort et l’Écuyer du roi",
+      "Roméo et Juliette",
+      "Guerre et Paix",
+      "Oliver Twist"
+    ],
+    "answer": 1,
+    "explanation": "Roméo et Juliette est une œuvre de William Shakespeare.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L032A",
+    "knowledge_id": "V2-LIT-032",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Othello » ?",
+    "choices": [
+      "Jules Verne",
+      "William Shakespeare",
+      "Charlotte Brontë",
+      "Sony Labou Tansi"
+    ],
+    "answer": 1,
+    "explanation": "Othello est une œuvre de William Shakespeare.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L032B",
+    "knowledge_id": "V2-LIT-032",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Parmi ces choix, identifie une œuvre de William Shakespeare.",
+    "choices": [
+      "Othello",
+      "Anna Karénine",
+      "Les Grandes Espérances",
+      "Chants d’ombre"
+    ],
+    "answer": 0,
+    "explanation": "Othello est une œuvre de William Shakespeare.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L033B",
+    "knowledge_id": "V2-LIT-033",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Miguel de Cervantes ?",
+    "choices": [
+      "Crime et Châtiment",
+      "Orgueil et Préjugés",
+      "L’Aventure ambiguë",
+      "Don Quichotte"
+    ],
+    "answer": 3,
+    "explanation": "Don Quichotte est une œuvre de Miguel de Cervantes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L034B",
+    "knowledge_id": "V2-LIT-034",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Dante Alighieri ?",
+    "choices": [
+      "Jane Eyre",
+      "Les Misérables",
+      "La Divine Comédie",
+      "Les Frères Karamazov"
+    ],
+    "answer": 2,
+    "explanation": "La Divine Comédie est une œuvre de Dante Alighieri.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L035A",
+    "knowledge_id": "V2-LIT-035",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « L’Iliade » ?",
+    "choices": [
+      "Wole Soyinka",
+      "Pierre Corneille",
+      "Homère",
+      "Chinua Achebe"
+    ],
+    "answer": 2,
+    "explanation": "L’Iliade est une œuvre de Homère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L035B",
+    "knowledge_id": "V2-LIT-035",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de Homère, quel titre proposé lui appartient ?",
+    "choices": [
+      "Notre-Dame de Paris",
+      "L’Iliade",
+      "La Métamorphose",
+      "Frankenstein"
+    ],
+    "answer": 1,
+    "explanation": "L’Iliade est une œuvre de Homère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L036A",
+    "knowledge_id": "V2-LIT-036",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « L’Odyssée » ?",
+    "choices": [
+      "Jean Racine",
+      "Homère",
+      "Mariama Bâ",
+      "Léopold Sédar Senghor"
+    ],
+    "answer": 1,
+    "explanation": "L’Odyssée est une œuvre de Homère.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L036B",
+    "knowledge_id": "V2-LIT-036",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par Homère ?",
+    "choices": [
+      "L’Odyssée",
+      "1984",
+      "Le Seigneur des anneaux",
+      "Le Malade imaginaire"
+    ],
+    "answer": 0,
+    "explanation": "L’Odyssée est une œuvre de Homère.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L037B",
+    "knowledge_id": "V2-LIT-037",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Johann Wolfgang von Goethe ?",
+    "choices": [
+      "La Ferme des animaux",
+      "Le Monde s’effondre",
+      "L’Avare",
+      "Faust"
+    ],
+    "answer": 3,
+    "explanation": "Faust est une œuvre de Johann Wolfgang von Goethe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L038B",
+    "knowledge_id": "V2-LIT-038",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de Léon Tolstoï, quel titre proposé lui appartient ?",
+    "choices": [
+      "Une si longue lettre",
+      "Tartuffe",
+      "Guerre et Paix",
+      "Le Meilleur des mondes"
+    ],
+    "answer": 2,
+    "explanation": "Guerre et Paix est une œuvre de Léon Tolstoï.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L039A",
+    "knowledge_id": "V2-LIT-039",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Anna Karénine » ?",
+    "choices": [
+      "Molière",
+      "Guy de Maupassant",
+      "Léon Tolstoï",
+      "Mongo Beti"
+    ],
+    "answer": 2,
+    "explanation": "Anna Karénine est une œuvre de Léon Tolstoï.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L039B",
+    "knowledge_id": "V2-LIT-039",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par Léon Tolstoï ?",
+    "choices": [
+      "Candide",
+      "Anna Karénine",
+      "Le Vieil Homme et la Mer",
+      "Les Bouts de bois de Dieu"
+    ],
+    "answer": 1,
+    "explanation": "Anna Karénine est une œuvre de Léon Tolstoï.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L040B",
+    "knowledge_id": "V2-LIT-040",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de Fiodor Dostoïevski, quel titre proposé lui appartient ?",
+    "choices": [
+      "Crime et Châtiment",
+      "Les Raisins de la colère",
+      "Les Soleils des indépendances",
+      "Du contrat social"
+    ],
+    "answer": 0,
+    "explanation": "Crime et Châtiment est une œuvre de Fiodor Dostoïevski.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L041A",
+    "knowledge_id": "V2-LIT-041",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Les Frères Karamazov » ?",
+    "choices": [
+      "Fiodor Dostoïevski",
+      "Camara Laye",
+      "Jean-Jacques Rousseau",
+      "Beaumarchais"
+    ],
+    "answer": 0,
+    "explanation": "Les Frères Karamazov est une œuvre de Fiodor Dostoïevski.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L041B",
+    "knowledge_id": "V2-LIT-041",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par Fiodor Dostoïevski ?",
+    "choices": [
+      "Gatsby le Magnifique",
+      "Le Pauvre Christ de Bomba",
+      "De l’esprit des lois",
+      "Les Frères Karamazov"
+    ],
+    "answer": 3,
+    "explanation": "Les Frères Karamazov est une œuvre de Fiodor Dostoïevski.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L042A",
+    "knowledge_id": "V2-LIT-042",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « La Métamorphose » ?",
+    "choices": [
+      "Aimé Césaire",
+      "Montesquieu",
+      "William Shakespeare",
+      "Franz Kafka"
+    ],
+    "answer": 3,
+    "explanation": "La Métamorphose est une œuvre de Franz Kafka.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L042B",
+    "knowledge_id": "V2-LIT-042",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Franz Kafka ?",
+    "choices": [
+      "Une vie de boy",
+      "L’Étranger",
+      "La Métamorphose",
+      "Moby Dick"
+    ],
+    "answer": 2,
+    "explanation": "La Métamorphose est une œuvre de Franz Kafka.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L043B",
+    "knowledge_id": "V2-LIT-043",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de George Orwell, quel titre proposé lui appartient ?",
+    "choices": [
+      "La Peste",
+      "1984",
+      "Oliver Twist",
+      "L’Enfant noir"
+    ],
+    "answer": 1,
+    "explanation": "1984 est une œuvre de George Orwell.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L044A",
+    "knowledge_id": "V2-LIT-044",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « La Ferme des animaux » ?",
+    "choices": [
+      "Dante Alighieri",
+      "George Orwell",
+      "Sony Labou Tansi",
+      "Jean-Paul Sartre"
+    ],
+    "answer": 1,
+    "explanation": "La Ferme des animaux est une œuvre de George Orwell.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L044B",
+    "knowledge_id": "V2-LIT-044",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par George Orwell ?",
+    "choices": [
+      "La Ferme des animaux",
+      "Les Grandes Espérances",
+      "Cahier d’un retour au pays natal",
+      "Huis clos"
+    ],
+    "answer": 0,
+    "explanation": "La Ferme des animaux est une œuvre de George Orwell.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L045A",
+    "knowledge_id": "V2-LIT-045",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Meilleur des mondes » ?",
+    "choices": [
+      "Aldous Huxley",
+      "Alain Mabanckou",
+      "Antoine de Saint-Exupéry",
+      "Homère"
+    ],
+    "answer": 0,
+    "explanation": "Le Meilleur des mondes est une œuvre de Aldous Huxley.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L045B",
+    "knowledge_id": "V2-LIT-045",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Aldous Huxley ?",
+    "choices": [
+      "Orgueil et Préjugés",
+      "Les Damnés de la Terre",
+      "Le Petit Prince",
+      "Le Meilleur des mondes"
+    ],
+    "answer": 3,
+    "explanation": "Le Meilleur des mondes est une œuvre de Aldous Huxley.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L046A",
+    "knowledge_id": "V2-LIT-046",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Vieil Homme et la Mer » ?",
+    "choices": [
+      "Ngũgĩ wa Thiong’o",
+      "Émile Zola",
+      "Johann Wolfgang von Goethe",
+      "Ernest Hemingway"
+    ],
+    "answer": 3,
+    "explanation": "Le Vieil Homme et la Mer est une œuvre de Ernest Hemingway.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L046B",
+    "knowledge_id": "V2-LIT-046",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Ernest Hemingway ?",
+    "choices": [
+      "La Vie et demie",
+      "Germinal",
+      "Le Vieil Homme et la Mer",
+      "Jane Eyre"
+    ],
+    "answer": 2,
+    "explanation": "Le Vieil Homme et la Mer est une œuvre de Ernest Hemingway.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L047A",
+    "knowledge_id": "V2-LIT-047",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Les Raisins de la colère » ?",
+    "choices": [
+      "Honoré de Balzac",
+      "Léon Tolstoï",
+      "John Steinbeck",
+      "Wole Soyinka"
+    ],
+    "answer": 2,
+    "explanation": "Les Raisins de la colère est une œuvre de John Steinbeck.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L047B",
+    "knowledge_id": "V2-LIT-047",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à John Steinbeck ?",
+    "choices": [
+      "Le Père Goriot",
+      "Les Raisins de la colère",
+      "Frankenstein",
+      "Verre cassé"
+    ],
+    "answer": 1,
+    "explanation": "Les Raisins de la colère est une œuvre de John Steinbeck.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L048A",
+    "knowledge_id": "V2-LIT-048",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Gatsby le Magnifique » ?",
+    "choices": [
+      "Fiodor Dostoïevski",
+      "F. Scott Fitzgerald",
+      "Léopold Sédar Senghor",
+      "Gustave Flaubert"
+    ],
+    "answer": 1,
+    "explanation": "Gatsby le Magnifique est une œuvre de F. Scott Fitzgerald.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L048B",
+    "knowledge_id": "V2-LIT-048",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à F. Scott Fitzgerald ?",
+    "choices": [
+      "Gatsby le Magnifique",
+      "Le Seigneur des anneaux",
+      "Un grain de blé",
+      "Madame Bovary"
+    ],
+    "answer": 0,
+    "explanation": "Gatsby le Magnifique est une œuvre de F. Scott Fitzgerald.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L049A",
+    "knowledge_id": "V2-LIT-049",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Moby Dick » ?",
+    "choices": [
+      "Herman Melville",
+      "Cheikh Hamidou Kane",
+      "Alexandre Dumas",
+      "Franz Kafka"
+    ],
+    "answer": 0,
+    "explanation": "Moby Dick est une œuvre de Herman Melville.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L049B",
+    "knowledge_id": "V2-LIT-049",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Herman Melville ?",
+    "choices": [
+      "Le Monde s’effondre",
+      "La Mort et l’Écuyer du roi",
+      "Le Comte de Monte-Cristo",
+      "Moby Dick"
+    ],
+    "answer": 3,
+    "explanation": "Moby Dick est une œuvre de Herman Melville.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L050A",
+    "knowledge_id": "V2-LIT-050",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Oliver Twist » ?",
+    "choices": [
+      "Victor Hugo",
+      "Jules Verne",
+      "George Orwell",
+      "Charles Dickens"
+    ],
+    "answer": 3,
+    "explanation": "Oliver Twist est une œuvre de Charles Dickens.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L050B",
+    "knowledge_id": "V2-LIT-050",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Dans la bibliographie de Charles Dickens, quel titre proposé lui appartient ?",
+    "choices": [
+      "Chants d’ombre",
+      "Les Trois Mousquetaires",
+      "Oliver Twist",
+      "Une si longue lettre"
+    ],
+    "answer": 2,
+    "explanation": "Oliver Twist est une œuvre de Charles Dickens.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L051A",
+    "knowledge_id": "V2-LIT-051",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Les Grandes Espérances » ?",
+    "choices": [
+      "Charles Baudelaire",
+      "Aldous Huxley",
+      "Charles Dickens",
+      "Molière"
+    ],
+    "answer": 2,
+    "explanation": "Les Grandes Espérances est une œuvre de Charles Dickens.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L051B",
+    "knowledge_id": "V2-LIT-051",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre ci-dessous a bien été écrite par Charles Dickens ?",
+    "choices": [
+      "Vingt mille lieues sous les mers",
+      "Les Grandes Espérances",
+      "Les Bouts de bois de Dieu",
+      "L’Aventure ambiguë"
+    ],
+    "answer": 1,
+    "explanation": "Les Grandes Espérances est une œuvre de Charles Dickens.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L052A",
+    "knowledge_id": "V2-LIT-052",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Orgueil et Préjugés » ?",
+    "choices": [
+      "Ernest Hemingway",
+      "Jane Austen",
+      "Voltaire",
+      "Arthur Rimbaud"
+    ],
+    "answer": 1,
+    "explanation": "Orgueil et Préjugés est une œuvre de Jane Austen.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L052B",
+    "knowledge_id": "V2-LIT-052",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Jane Austen ?",
+    "choices": [
+      "Orgueil et Préjugés",
+      "Les Soleils des indépendances",
+      "Les Misérables",
+      "Le Tour du monde en quatre-vingts jours"
+    ],
+    "answer": 0,
+    "explanation": "Orgueil et Préjugés est une œuvre de Jane Austen.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L053A",
+    "knowledge_id": "V2-LIT-053",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Jane Eyre » ?",
+    "choices": [
+      "Charlotte Brontë",
+      "Jean-Jacques Rousseau",
+      "Pierre Corneille",
+      "John Steinbeck"
+    ],
+    "answer": 0,
+    "explanation": "Jane Eyre est une œuvre de Charlotte Brontë.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L053B",
+    "knowledge_id": "V2-LIT-053",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Charlotte Brontë ?",
+    "choices": [
+      "Le Pauvre Christ de Bomba",
+      "Notre-Dame de Paris",
+      "Les Fleurs du mal",
+      "Jane Eyre"
+    ],
+    "answer": 3,
+    "explanation": "Jane Eyre est une œuvre de Charlotte Brontë.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L054A",
+    "knowledge_id": "V2-LIT-054",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Frankenstein » ?",
+    "choices": [
+      "Montesquieu",
+      "Jean Racine",
+      "F. Scott Fitzgerald",
+      "Mary Shelley"
+    ],
+    "answer": 3,
+    "explanation": "Frankenstein est une œuvre de Mary Shelley.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L054B",
+    "knowledge_id": "V2-LIT-054",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Mary Shelley ?",
+    "choices": [
+      "Le Malade imaginaire",
+      "Une saison en enfer",
+      "Frankenstein",
+      "Une vie de boy"
+    ],
+    "answer": 2,
+    "explanation": "Frankenstein est une œuvre de Mary Shelley.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L055A",
+    "knowledge_id": "V2-LIT-055",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Seigneur des anneaux » ?",
+    "choices": [
+      "Jean de La Fontaine",
+      "Herman Melville",
+      "J. R. R. Tolkien",
+      "Albert Camus"
+    ],
+    "answer": 2,
+    "explanation": "Le Seigneur des anneaux est une œuvre de J. R. R. Tolkien.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L055B",
+    "knowledge_id": "V2-LIT-055",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à J. R. R. Tolkien ?",
+    "choices": [
+      "Le Cid",
+      "Le Seigneur des anneaux",
+      "L’Enfant noir",
+      "L’Avare"
+    ],
+    "answer": 1,
+    "explanation": "Le Seigneur des anneaux est une œuvre de J. R. R. Tolkien.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L056B",
+    "knowledge_id": "V2-LIT-056",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Chinua Achebe ?",
+    "choices": [
+      "Le Monde s’effondre",
+      "Cahier d’un retour au pays natal",
+      "Tartuffe",
+      "Phèdre"
+    ],
+    "answer": 0,
+    "explanation": "Le Monde s’effondre est une œuvre de Chinua Achebe.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L057B",
+    "knowledge_id": "V2-LIT-057",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Mariama Bâ ?",
+    "choices": [
+      "Les Damnés de la Terre",
+      "Candide",
+      "Fables",
+      "Une si longue lettre"
+    ],
+    "answer": 3,
+    "explanation": "Une si longue lettre est une œuvre de Mariama Bâ.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L058A",
+    "knowledge_id": "V2-LIT-058",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Les Bouts de bois de Dieu » ?",
+    "choices": [
+      "Émile Zola",
+      "Stendhal",
+      "Charlotte Brontë",
+      "Ousmane Sembène"
+    ],
+    "answer": 3,
+    "explanation": "Les Bouts de bois de Dieu est une œuvre de Ousmane Sembène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L058B",
+    "knowledge_id": "V2-LIT-058",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Ousmane Sembène ?",
+    "choices": [
+      "Du contrat social",
+      "À la recherche du temps perdu",
+      "Les Bouts de bois de Dieu",
+      "La Vie et demie"
+    ],
+    "answer": 2,
+    "explanation": "Les Bouts de bois de Dieu est une œuvre de Ousmane Sembène.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L059A",
+    "knowledge_id": "V2-LIT-059",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Les Soleils des indépendances » ?",
+    "choices": [
+      "Beaumarchais",
+      "Mary Shelley",
+      "Ahmadou Kourouma",
+      "Honoré de Balzac"
+    ],
+    "answer": 2,
+    "explanation": "Les Soleils des indépendances est une œuvre de Ahmadou Kourouma.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L059B",
+    "knowledge_id": "V2-LIT-059",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Ahmadou Kourouma ?",
+    "choices": [
+      "Bel-Ami",
+      "Les Soleils des indépendances",
+      "Verre cassé",
+      "De l’esprit des lois"
+    ],
+    "answer": 1,
+    "explanation": "Les Soleils des indépendances est une œuvre de Ahmadou Kourouma.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L060A",
+    "knowledge_id": "V2-LIT-060",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Le Pauvre Christ de Bomba » ?",
+    "choices": [
+      "J. R. R. Tolkien",
+      "Mongo Beti",
+      "Gustave Flaubert",
+      "William Shakespeare"
+    ],
+    "answer": 1,
+    "explanation": "Le Pauvre Christ de Bomba est une œuvre de Mongo Beti.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L060B",
+    "knowledge_id": "V2-LIT-060",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Mongo Beti ?",
+    "choices": [
+      "Le Pauvre Christ de Bomba",
+      "Un grain de blé",
+      "L’Étranger",
+      "Le Rouge et le Noir"
+    ],
+    "answer": 0,
+    "explanation": "Le Pauvre Christ de Bomba est une œuvre de Mongo Beti.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L061A",
+    "knowledge_id": "V2-LIT-061",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Une vie de boy » ?",
+    "choices": [
+      "Ferdinand Oyono",
+      "Alexandre Dumas",
+      "Miguel de Cervantes",
+      "Chinua Achebe"
+    ],
+    "answer": 0,
+    "explanation": "Une vie de boy est une œuvre de Ferdinand Oyono.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L061B",
+    "knowledge_id": "V2-LIT-061",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Ferdinand Oyono ?",
+    "choices": [
+      "La Mort et l’Écuyer du roi",
+      "La Peste",
+      "Le Mariage de Figaro",
+      "Une vie de boy"
+    ],
+    "answer": 3,
+    "explanation": "Une vie de boy est une œuvre de Ferdinand Oyono.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L062B",
+    "knowledge_id": "V2-LIT-062",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Camara Laye ?",
+    "choices": [
+      "Huis clos",
+      "Hamlet",
+      "L’Enfant noir",
+      "Chants d’ombre"
+    ],
+    "answer": 2,
+    "explanation": "L’Enfant noir est une œuvre de Camara Laye.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L063B",
+    "knowledge_id": "V2-LIT-063",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Aimé Césaire ?",
+    "choices": [
+      "Macbeth",
+      "Cahier d’un retour au pays natal",
+      "L’Aventure ambiguë",
+      "Le Petit Prince"
+    ],
+    "answer": 1,
+    "explanation": "Cahier d’un retour au pays natal est une œuvre de Aimé Césaire.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L064A",
+    "knowledge_id": "V2-LIT-064",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Les Damnés de la Terre » ?",
+    "choices": [
+      "Ahmadou Kourouma",
+      "Frantz Fanon",
+      "Arthur Rimbaud",
+      "Johann Wolfgang von Goethe"
+    ],
+    "answer": 1,
+    "explanation": "Les Damnés de la Terre est une œuvre de Frantz Fanon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L064B",
+    "knowledge_id": "V2-LIT-064",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Frantz Fanon ?",
+    "choices": [
+      "Les Damnés de la Terre",
+      "Les Misérables",
+      "Germinal",
+      "Roméo et Juliette"
+    ],
+    "answer": 0,
+    "explanation": "Les Damnés de la Terre est une œuvre de Frantz Fanon.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L065A",
+    "knowledge_id": "V2-LIT-065",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « La Vie et demie » ?",
+    "choices": [
+      "Sony Labou Tansi",
+      "Pierre Corneille",
+      "Léon Tolstoï",
+      "Mongo Beti"
+    ],
+    "answer": 0,
+    "explanation": "La Vie et demie est une œuvre de Sony Labou Tansi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L065B",
+    "knowledge_id": "V2-LIT-065",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Sony Labou Tansi ?",
+    "choices": [
+      "Notre-Dame de Paris",
+      "Le Père Goriot",
+      "Othello",
+      "La Vie et demie"
+    ],
+    "answer": 3,
+    "explanation": "La Vie et demie est une œuvre de Sony Labou Tansi.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L066A",
+    "knowledge_id": "V2-LIT-066",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Verre cassé » ?",
+    "choices": [
+      "Jean Racine",
+      "Fiodor Dostoïevski",
+      "Ferdinand Oyono",
+      "Alain Mabanckou"
+    ],
+    "answer": 3,
+    "explanation": "Verre cassé est une œuvre de Alain Mabanckou.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L066B",
+    "knowledge_id": "V2-LIT-066",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Alain Mabanckou ?",
+    "choices": [
+      "Madame Bovary",
+      "Don Quichotte",
+      "Verre cassé",
+      "Le Malade imaginaire"
+    ],
+    "answer": 2,
+    "explanation": "Verre cassé est une œuvre de Alain Mabanckou.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L067A",
+    "knowledge_id": "V2-LIT-067",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « Un grain de blé » ?",
+    "choices": [
+      "Franz Kafka",
+      "Camara Laye",
+      "Ngũgĩ wa Thiong’o",
+      "Jean de La Fontaine"
+    ],
+    "answer": 2,
+    "explanation": "Un grain de blé est une œuvre de Ngũgĩ wa Thiong’o.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L067B",
+    "knowledge_id": "V2-LIT-067",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Ngũgĩ wa Thiong’o ?",
+    "choices": [
+      "La Divine Comédie",
+      "Un grain de blé",
+      "L’Avare",
+      "Le Comte de Monte-Cristo"
+    ],
+    "answer": 1,
+    "explanation": "Un grain de blé est une œuvre de Ngũgĩ wa Thiong’o.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L068A",
+    "knowledge_id": "V2-LIT-068",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « La Mort et l’Écuyer du roi » ?",
+    "choices": [
+      "Aimé Césaire",
+      "Wole Soyinka",
+      "Marcel Proust",
+      "George Orwell"
+    ],
+    "answer": 1,
+    "explanation": "La Mort et l’Écuyer du roi est une œuvre de Wole Soyinka.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L068B",
+    "knowledge_id": "V2-LIT-068",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Wole Soyinka ?",
+    "choices": [
+      "La Mort et l’Écuyer du roi",
+      "Tartuffe",
+      "Les Trois Mousquetaires",
+      "L’Iliade"
+    ],
+    "answer": 0,
+    "explanation": "La Mort et l’Écuyer du roi est une œuvre de Wole Soyinka.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L069B",
+    "knowledge_id": "V2-LIT-069",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Léopold Sédar Senghor ?",
+    "choices": [
+      "Candide",
+      "Vingt mille lieues sous les mers",
+      "L’Odyssée",
+      "Chants d’ombre"
+    ],
+    "answer": 3,
+    "explanation": "Chants d’ombre est une œuvre de Léopold Sédar Senghor.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L070A",
+    "knowledge_id": "V2-LIT-070",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Qui a écrit « L’Aventure ambiguë » ?",
+    "choices": [
+      "Stendhal",
+      "Ernest Hemingway",
+      "Sony Labou Tansi",
+      "Cheikh Hamidou Kane"
+    ],
+    "answer": 3,
+    "explanation": "L’Aventure ambiguë est une œuvre de Cheikh Hamidou Kane.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  },
+  {
+    "id": "V2L070B",
+    "knowledge_id": "V2-LIT-070",
+    "module": 6,
+    "domain": "Littérature",
+    "subdomain": "Auteurs et œuvres",
+    "prompt": "Quelle œuvre parmi les suivantes est associée à Cheikh Hamidou Kane ?",
+    "choices": [
+      "Le Tour du monde en quatre-vingts jours",
+      "Faust",
+      "L’Aventure ambiguë",
+      "Du contrat social"
+    ],
+    "answer": 2,
+    "explanation": "L’Aventure ambiguë est une œuvre de Cheikh Hamidou Kane.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Références bibliographiques canoniques"
+  }
+]
