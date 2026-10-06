@@ -3,59 +3,113 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#101828">
-<title>Excellentia Study Hub — Élève</title>
+<meta name="theme-color" content="#0d1117">
+<meta name="referrer" content="no-referrer">
+<title>Excellentia Study Hub</title>
 <link rel="manifest" href="./manifest.webmanifest">
-<link rel="stylesheet" href="./style.css?v=230">
+<link rel="stylesheet" href="./style.css?v=301">
 </head>
 <body>
-<div id="app">
-<header class="topbar">
-  <div>
-    <div class="eyebrow">EXCELLENTIA STUDY HUB</div>
-    <h1>Plateforme Élève</h1>
-  </div>
-  <div id="net" class="pill">Initialisation…</div>
-</header>
-<main id="view">
-  <section class="hero card">
-    <div>
-      <span class="badge">V2.3.0 · autonome</span>
-      <h2>Culture générale — préparation intensive</h2>
-      <p>Corpus complet, annales EXETAT renforcées, 40 s par question, progression conservée sur ce téléphone.</p>
+<div class="app-shell" id="appShell">
+  <aside class="rail" id="rail">
+    <div class="brand-block">
+      <div class="brand-mark">E</div>
+      <div class="brand-copy"><strong>Excellentia</strong><span>Study Hub <b class="version-badge" id="versionBadge">V—</b></span></div>
+      <button class="ghost-icon desktop-collapse" id="collapseRail" aria-label="Réduire la navigation">‹</button>
     </div>
-    <div class="heroStats">
-      <div><b id="qCount">—</b><span>questions</span></div>
-      <div><b id="kCount">—</b><span>connaissances</span></div>
-      <div><b>40 s</b><span>par question</span></div>
+
+    <div class="rail-scroll-wrap" id="railScrollWrap">
+    <div class="rail-scroll" id="railScroll" tabindex="0" aria-label="Navigation principale">
+    <nav class="primary-nav" id="primaryNav">
+      <button data-space="home" class="active"><span class="nav-ico">⌂</span><span>Accueil</span></button>
+      <button data-space="learn"><span class="nav-ico">◫</span><span>Apprendre</span></button>
+      <button data-space="train"><span class="nav-ico">◎</span><span>S’entraîner</span></button>
+      <button data-space="review"><span class="nav-ico">↻</span><span>Réviser</span><em id="reviewNavBadge" class="nav-badge">0</em></button>
+      <button data-space="exam"><span class="nav-ico">◇</span><span>Examens</span></button>
+      <button data-space="progress"><span class="nav-ico">▥</span><span>Progression</span></button>
+    </nav>
+
+    <div class="rail-spacer"></div>
+
+    <nav class="secondary-nav">
+      <button data-space="admin" class="admin-nav"><span class="nav-ico">⚙</span><span>Administration</span></button>
+    </nav>
+
+    <div class="account-card">
+      <div class="presence"><span id="netDot" class="presence-dot"></span></div>
+      <div class="account-copy"><strong id="roleLabel">—</strong><span id="netLabel">Connexion…</span></div>
+      <button class="ghost-icon" id="themeToggle" title="Changer de thème">◐</button>
     </div>
-  </section>
-  <section id="loading" class="card">
-    <div class="row"><b>Chargement du corpus</b><span id="loadPct">0%</span></div>
-    <div class="progress"><i id="loadBar"></i></div>
-    <p id="loadText" class="muted">Préparation du mode hors ligne…</p>
-  </section>
-  <section id="dashboard" class="hidden">
-    <div class="actions">
-      <button class="primary" data-action="start-mix">Grand Mix</button>
-      <button data-action="start-exam">Examen blanc · 100</button>
-      <button data-action="resume">Reprendre</button>
+    <div class="rail-scroll-end" aria-hidden="true">Fin du menu</div>
     </div>
-    <div id="stats" class="statsGrid"></div>
-    <h3>Modules</h3>
-    <div id="modules" class="moduleGrid"></div>
-    <h3>Leçons</h3>
-    <div id="lessons" class="lessonList"></div>
-  </section>
-  <section id="session" class="hidden"></section>
-  <section id="result" class="hidden"></section>
-</main>
-<nav class="dock">
-  <button data-nav="home">Accueil</button>
-  <button data-nav="modules">Modules</button>
-  <button data-nav="stats">Progression</button>
-</nav>
+    <div class="rail-scrollbar" id="railScrollbar" role="scrollbar" tabindex="0" aria-label="Défilement du menu" aria-controls="railScroll" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <button type="button" class="rail-scroll-btn" id="railScrollUp" aria-label="Monter dans le menu">▲</button>
+      <div class="rail-scroll-track" id="railScrollTrack" aria-hidden="true">
+        <div class="rail-scroll-thumb" id="railScrollThumb"></div>
+      </div>
+      <button type="button" class="rail-scroll-btn" id="railScrollDown" aria-label="Descendre dans le menu">▼</button>
+    </div>
+    </div>
+  </aside>
+
+  <main class="workspace">
+    <header class="app-header">
+      <button class="ghost-icon mobile-menu" id="mobileMenu" aria-label="Menu">☰</button>
+      <div class="header-context">
+        <div class="breadcrumbs" id="breadcrumbs">Excellentia / Accueil</div>
+        <h1 id="pageTitle">Accueil</h1>
+      </div>
+      <div class="header-actions"><span class="build-chip" id="buildChip">Version —</span>
+        <button class="command-button" id="commandButton"><span>⌕</span><span class="command-label">Rechercher</span><kbd>Ctrl K</kbd></button>
+        <button class="ghost-icon" id="refreshButton" title="Actualiser">↻</button>
+        <div class="sync-pill" id="syncPill"><span></span><b>Connecté</b></div>
+      </div>
+    </header>
+
+    <div class="context-bar" id="contextBar">
+      <nav class="tabs" id="contextTabs"></nav>
+      <div class="context-actions" id="contextActions"></div>
+    </div>
+
+    <section class="content-stage">
+      <div class="content-column" id="viewHost"></div>
+      <aside class="inspector" id="inspector"></aside>
+    </section>
+  </main>
 </div>
-<script src="./app.js?v=230" defer></script>
+
+<nav class="mobile-dock" id="mobileDock">
+  <button data-space="home" class="active"><span>⌂</span><small>Accueil</small></button>
+  <button data-space="learn"><span>◫</span><small>Apprendre</small></button>
+  <button data-space="train"><span>◎</span><small>Entraîner</small></button>
+  <button data-space="review"><span>↻</span><small>Réviser</small></button>
+  <button data-action="more"><span>•••</span><small>Plus</small></button>
+</nav>
+
+<div class="mobile-sheet" id="mobileSheet">
+  <div class="sheet-handle"></div>
+  <button data-space="exam">◇ Examens</button>
+  <button data-space="progress">▥ Progression</button>
+  <button data-space="admin" class="admin-nav">⚙ Administration</button>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<div class="command-palette" id="commandPalette" aria-hidden="true">
+  <div class="command-dialog">
+    <div class="command-input-wrap"><span>⌕</span><input id="commandInput" placeholder="Aller à… rechercher un module, une notion, une action"></div>
+    <div class="command-results" id="commandResults"></div>
+  </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop">
+  <section class="drawer" id="drawer">
+    <header><div><span class="eyebrow" id="drawerEyebrow"></span><h2 id="drawerTitle"></h2></div><button class="ghost-icon" id="drawerClose">✕</button></header>
+    <div class="drawer-body" id="drawerBody"></div>
+  </section>
+</div>
+
+<div class="toast-stack" id="toasts"></div>
+<script src="./vendor/qrcode.min.js"></script>\n<script src="./gateway-adapter.js?v=301"></script>
+<script src="./app.js?v=301"></script>
 </body>
 </html>
