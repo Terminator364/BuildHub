@@ -1,0 +1,1142 @@
+[
+  {
+    "id": "V2D01A",
+    "knowledge_id": "V2-DISC-01",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la formulation des lois du mouvement et de la gravitation classique ?",
+    "choices": [
+      "Isaac Newton",
+      "Alexander Fleming",
+      "J. J. Thomson",
+      "Johannes Kepler"
+    ],
+    "answer": 0,
+    "explanation": "Isaac Newton est principalement associé à la formulation des lois du mouvement et de la gravitation classique.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D01B",
+    "knowledge_id": "V2-DISC-01",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Isaac Newton ?",
+    "choices": [
+      "la découverte de la pénicilline",
+      "la découverte de l’électron",
+      "les lois du mouvement des planètes",
+      "la formulation des lois du mouvement et de la gravitation classique"
+    ],
+    "answer": 3,
+    "explanation": "Isaac Newton est principalement associé à la formulation des lois du mouvement et de la gravitation classique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D02A",
+    "knowledge_id": "V2-DISC-02",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la théorie de la relativité ?",
+    "choices": [
+      "Marie Curie",
+      "James Chadwick",
+      "Archimède",
+      "Albert Einstein"
+    ],
+    "answer": 3,
+    "explanation": "Albert Einstein est principalement associé à la théorie de la relativité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D02B",
+    "knowledge_id": "V2-DISC-02",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Albert Einstein ?",
+    "choices": [
+      "la découverte du neutron",
+      "le principe de poussée portant son nom",
+      "la théorie de la relativité",
+      "des travaux pionniers sur la radioactivité"
+    ],
+    "answer": 2,
+    "explanation": "Albert Einstein est principalement associé à la théorie de la relativité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D03A",
+    "knowledge_id": "V2-DISC-03",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la théorie de l’évolution par sélection naturelle ?",
+    "choices": [
+      "Robert Hooke",
+      "Blaise Pascal",
+      "Charles Darwin",
+      "Dmitri Mendeleïev"
+    ],
+    "answer": 2,
+    "explanation": "Charles Darwin est principalement associé à la théorie de l’évolution par sélection naturelle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D03B",
+    "knowledge_id": "V2-DISC-03",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Charles Darwin ?",
+    "choices": [
+      "des travaux sur la pression et l’hydrostatique",
+      "la théorie de l’évolution par sélection naturelle",
+      "l’organisation du tableau périodique des éléments",
+      "l’emploi du terme « cellule » en observant du liège"
+    ],
+    "answer": 1,
+    "explanation": "Charles Darwin est principalement associé à la théorie de l’évolution par sélection naturelle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D04A",
+    "knowledge_id": "V2-DISC-04",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à les lois fondamentales de l’hérédité ?",
+    "choices": [
+      "Alessandro Volta",
+      "Gregor Mendel",
+      "Antoine Lavoisier",
+      "William Harvey"
+    ],
+    "answer": 1,
+    "explanation": "Gregor Mendel est principalement associé à les lois fondamentales de l’hérédité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D04B",
+    "knowledge_id": "V2-DISC-04",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Gregor Mendel ?",
+    "choices": [
+      "les lois fondamentales de l’hérédité",
+      "la loi de conservation de la masse en chimie",
+      "la description de la circulation sanguine",
+      "la première pile électrique moderne"
+    ],
+    "answer": 0,
+    "explanation": "Gregor Mendel est principalement associé à les lois fondamentales de l’hérédité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D05A",
+    "knowledge_id": "V2-DISC-05",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à les travaux sur les microbes, la fermentation et la pasteurisation ?",
+    "choices": [
+      "Louis Pasteur",
+      "Michael Faraday",
+      "Edward Jenner",
+      "Georg Ohm"
+    ],
+    "answer": 0,
+    "explanation": "Louis Pasteur est principalement associé à les travaux sur les microbes, la fermentation et la pasteurisation.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D05B",
+    "knowledge_id": "V2-DISC-05",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Louis Pasteur ?",
+    "choices": [
+      "des travaux majeurs sur l’induction électromagnétique",
+      "la mise au point de la vaccination contre la variole",
+      "la loi reliant tension, résistance et courant",
+      "les travaux sur les microbes, la fermentation et la pasteurisation"
+    ],
+    "answer": 3,
+    "explanation": "Louis Pasteur est principalement associé à les travaux sur les microbes, la fermentation et la pasteurisation.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D06A",
+    "knowledge_id": "V2-DISC-06",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la découverte de la pénicilline ?",
+    "choices": [
+      "James Clerk Maxwell",
+      "Carl von Linné",
+      "Heinrich Hertz",
+      "Alexander Fleming"
+    ],
+    "answer": 3,
+    "explanation": "Alexander Fleming est principalement associé à la découverte de la pénicilline.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D06B",
+    "knowledge_id": "V2-DISC-06",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Alexander Fleming ?",
+    "choices": [
+      "la nomenclature binominale en biologie",
+      "la mise en évidence expérimentale des ondes électromagnétiques",
+      "la découverte de la pénicilline",
+      "la formulation des équations de l’électromagnétisme classique"
+    ],
+    "answer": 2,
+    "explanation": "Alexander Fleming est principalement associé à la découverte de la pénicilline.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D07A",
+    "knowledge_id": "V2-DISC-07",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à des travaux pionniers sur la radioactivité ?",
+    "choices": [
+      "Alfred Wegener",
+      "Max Planck",
+      "Marie Curie",
+      "Niels Bohr"
+    ],
+    "answer": 2,
+    "explanation": "Marie Curie est principalement associé à des travaux pionniers sur la radioactivité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D07B",
+    "knowledge_id": "V2-DISC-07",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Marie Curie ?",
+    "choices": [
+      "l’introduction de l’hypothèse des quanta d’énergie",
+      "des travaux pionniers sur la radioactivité",
+      "un modèle atomique quantifié du début du XXe siècle",
+      "la théorie de la dérive des continents"
+    ],
+    "answer": 1,
+    "explanation": "Marie Curie est principalement associé à des travaux pionniers sur la radioactivité.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D08A",
+    "knowledge_id": "V2-DISC-08",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à l’organisation du tableau périodique des éléments ?",
+    "choices": [
+      "Isaac Newton",
+      "Dmitri Mendeleïev",
+      "Ernest Rutherford",
+      "Edwin Hubble"
+    ],
+    "answer": 1,
+    "explanation": "Dmitri Mendeleïev est principalement associé à l’organisation du tableau périodique des éléments.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D08B",
+    "knowledge_id": "V2-DISC-08",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Dmitri Mendeleïev ?",
+    "choices": [
+      "l’organisation du tableau périodique des éléments",
+      "la mise en évidence du noyau atomique",
+      "la mise en évidence de l’expansion de l’Univers à partir des observations de galaxies",
+      "la formulation des lois du mouvement et de la gravitation classique"
+    ],
+    "answer": 0,
+    "explanation": "Dmitri Mendeleïev est principalement associé à l’organisation du tableau périodique des éléments.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D09A",
+    "knowledge_id": "V2-DISC-09",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la loi de conservation de la masse en chimie ?",
+    "choices": [
+      "Antoine Lavoisier",
+      "J. J. Thomson",
+      "Galilée",
+      "Albert Einstein"
+    ],
+    "answer": 0,
+    "explanation": "Antoine Lavoisier est principalement associé à la loi de conservation de la masse en chimie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D09B",
+    "knowledge_id": "V2-DISC-09",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Antoine Lavoisier ?",
+    "choices": [
+      "la découverte de l’électron",
+      "des observations astronomiques télescopiques majeures au début du XVIIe siècle",
+      "la théorie de la relativité",
+      "la loi de conservation de la masse en chimie"
+    ],
+    "answer": 3,
+    "explanation": "Antoine Lavoisier est principalement associé à la loi de conservation de la masse en chimie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D10A",
+    "knowledge_id": "V2-DISC-10",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à des travaux majeurs sur l’induction électromagnétique ?",
+    "choices": [
+      "James Chadwick",
+      "Nicolas Copernic",
+      "Charles Darwin",
+      "Michael Faraday"
+    ],
+    "answer": 3,
+    "explanation": "Michael Faraday est principalement associé à des travaux majeurs sur l’induction électromagnétique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D10B",
+    "knowledge_id": "V2-DISC-10",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Michael Faraday ?",
+    "choices": [
+      "le modèle héliocentrique moderne de la Renaissance",
+      "la théorie de l’évolution par sélection naturelle",
+      "des travaux majeurs sur l’induction électromagnétique",
+      "la découverte du neutron"
+    ],
+    "answer": 2,
+    "explanation": "Michael Faraday est principalement associé à des travaux majeurs sur l’induction électromagnétique.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D11A",
+    "knowledge_id": "V2-DISC-11",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la formulation des équations de l’électromagnétisme classique ?",
+    "choices": [
+      "Johannes Kepler",
+      "Gregor Mendel",
+      "James Clerk Maxwell",
+      "Robert Hooke"
+    ],
+    "answer": 2,
+    "explanation": "James Clerk Maxwell est principalement associé à la formulation des équations de l’électromagnétisme classique.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D11B",
+    "knowledge_id": "V2-DISC-11",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement James Clerk Maxwell ?",
+    "choices": [
+      "les lois fondamentales de l’hérédité",
+      "la formulation des équations de l’électromagnétisme classique",
+      "l’emploi du terme « cellule » en observant du liège",
+      "les lois du mouvement des planètes"
+    ],
+    "answer": 1,
+    "explanation": "James Clerk Maxwell est principalement associé à la formulation des équations de l’électromagnétisme classique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D12A",
+    "knowledge_id": "V2-DISC-12",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à un modèle atomique quantifié du début du XXe siècle ?",
+    "choices": [
+      "Louis Pasteur",
+      "Niels Bohr",
+      "William Harvey",
+      "Archimède"
+    ],
+    "answer": 1,
+    "explanation": "Niels Bohr est principalement associé à un modèle atomique quantifié du début du XXe siècle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D12B",
+    "knowledge_id": "V2-DISC-12",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Niels Bohr ?",
+    "choices": [
+      "un modèle atomique quantifié du début du XXe siècle",
+      "la description de la circulation sanguine",
+      "le principe de poussée portant son nom",
+      "les travaux sur les microbes, la fermentation et la pasteurisation"
+    ],
+    "answer": 0,
+    "explanation": "Niels Bohr est principalement associé à un modèle atomique quantifié du début du XXe siècle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D13A",
+    "knowledge_id": "V2-DISC-13",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la mise en évidence du noyau atomique ?",
+    "choices": [
+      "Ernest Rutherford",
+      "Edward Jenner",
+      "Blaise Pascal",
+      "Alexander Fleming"
+    ],
+    "answer": 0,
+    "explanation": "Ernest Rutherford est principalement associé à la mise en évidence du noyau atomique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D13B",
+    "knowledge_id": "V2-DISC-13",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Ernest Rutherford ?",
+    "choices": [
+      "la mise au point de la vaccination contre la variole",
+      "des travaux sur la pression et l’hydrostatique",
+      "la découverte de la pénicilline",
+      "la mise en évidence du noyau atomique"
+    ],
+    "answer": 3,
+    "explanation": "Ernest Rutherford est principalement associé à la mise en évidence du noyau atomique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D14A",
+    "knowledge_id": "V2-DISC-14",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la découverte de l’électron ?",
+    "choices": [
+      "Carl von Linné",
+      "Alessandro Volta",
+      "Marie Curie",
+      "J. J. Thomson"
+    ],
+    "answer": 3,
+    "explanation": "J. J. Thomson est principalement associé à la découverte de l’électron.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D14B",
+    "knowledge_id": "V2-DISC-14",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement J. J. Thomson ?",
+    "choices": [
+      "la première pile électrique moderne",
+      "des travaux pionniers sur la radioactivité",
+      "la découverte de l’électron",
+      "la nomenclature binominale en biologie"
+    ],
+    "answer": 2,
+    "explanation": "J. J. Thomson est principalement associé à la découverte de l’électron.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D15A",
+    "knowledge_id": "V2-DISC-15",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la découverte du neutron ?",
+    "choices": [
+      "Georg Ohm",
+      "Dmitri Mendeleïev",
+      "James Chadwick",
+      "Alfred Wegener"
+    ],
+    "answer": 2,
+    "explanation": "James Chadwick est principalement associé à la découverte du neutron.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D15B",
+    "knowledge_id": "V2-DISC-15",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement James Chadwick ?",
+    "choices": [
+      "l’organisation du tableau périodique des éléments",
+      "la découverte du neutron",
+      "la théorie de la dérive des continents",
+      "la loi reliant tension, résistance et courant"
+    ],
+    "answer": 1,
+    "explanation": "James Chadwick est principalement associé à la découverte du neutron.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D16A",
+    "knowledge_id": "V2-DISC-16",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à l’emploi du terme « cellule » en observant du liège ?",
+    "choices": [
+      "Antoine Lavoisier",
+      "Robert Hooke",
+      "Edwin Hubble",
+      "Heinrich Hertz"
+    ],
+    "answer": 1,
+    "explanation": "Robert Hooke est principalement associé à l’emploi du terme « cellule » en observant du liège.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D16B",
+    "knowledge_id": "V2-DISC-16",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Robert Hooke ?",
+    "choices": [
+      "l’emploi du terme « cellule » en observant du liège",
+      "la mise en évidence de l’expansion de l’Univers à partir des observations de galaxies",
+      "la mise en évidence expérimentale des ondes électromagnétiques",
+      "la loi de conservation de la masse en chimie"
+    ],
+    "answer": 0,
+    "explanation": "Robert Hooke est principalement associé à l’emploi du terme « cellule » en observant du liège.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D17A",
+    "knowledge_id": "V2-DISC-17",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la description de la circulation sanguine ?",
+    "choices": [
+      "William Harvey",
+      "Galilée",
+      "Max Planck",
+      "Michael Faraday"
+    ],
+    "answer": 0,
+    "explanation": "William Harvey est principalement associé à la description de la circulation sanguine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D17B",
+    "knowledge_id": "V2-DISC-17",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement William Harvey ?",
+    "choices": [
+      "des observations astronomiques télescopiques majeures au début du XVIIe siècle",
+      "l’introduction de l’hypothèse des quanta d’énergie",
+      "des travaux majeurs sur l’induction électromagnétique",
+      "la description de la circulation sanguine"
+    ],
+    "answer": 3,
+    "explanation": "William Harvey est principalement associé à la description de la circulation sanguine.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D18A",
+    "knowledge_id": "V2-DISC-18",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la mise au point de la vaccination contre la variole ?",
+    "choices": [
+      "Nicolas Copernic",
+      "Isaac Newton",
+      "James Clerk Maxwell",
+      "Edward Jenner"
+    ],
+    "answer": 3,
+    "explanation": "Edward Jenner est principalement associé à la mise au point de la vaccination contre la variole.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D18B",
+    "knowledge_id": "V2-DISC-18",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Edward Jenner ?",
+    "choices": [
+      "la formulation des lois du mouvement et de la gravitation classique",
+      "la formulation des équations de l’électromagnétisme classique",
+      "la mise au point de la vaccination contre la variole",
+      "le modèle héliocentrique moderne de la Renaissance"
+    ],
+    "answer": 2,
+    "explanation": "Edward Jenner est principalement associé à la mise au point de la vaccination contre la variole.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D19A",
+    "knowledge_id": "V2-DISC-19",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la nomenclature binominale en biologie ?",
+    "choices": [
+      "Albert Einstein",
+      "Niels Bohr",
+      "Carl von Linné",
+      "Johannes Kepler"
+    ],
+    "answer": 2,
+    "explanation": "Carl von Linné est principalement associé à la nomenclature binominale en biologie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D19B",
+    "knowledge_id": "V2-DISC-19",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Carl von Linné ?",
+    "choices": [
+      "un modèle atomique quantifié du début du XXe siècle",
+      "la nomenclature binominale en biologie",
+      "les lois du mouvement des planètes",
+      "la théorie de la relativité"
+    ],
+    "answer": 1,
+    "explanation": "Carl von Linné est principalement associé à la nomenclature binominale en biologie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D20A",
+    "knowledge_id": "V2-DISC-20",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la théorie de la dérive des continents ?",
+    "choices": [
+      "Ernest Rutherford",
+      "Alfred Wegener",
+      "Archimède",
+      "Charles Darwin"
+    ],
+    "answer": 1,
+    "explanation": "Alfred Wegener est principalement associé à la théorie de la dérive des continents.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D20B",
+    "knowledge_id": "V2-DISC-20",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Alfred Wegener ?",
+    "choices": [
+      "la théorie de la dérive des continents",
+      "le principe de poussée portant son nom",
+      "la théorie de l’évolution par sélection naturelle",
+      "la mise en évidence du noyau atomique"
+    ],
+    "answer": 0,
+    "explanation": "Alfred Wegener est principalement associé à la théorie de la dérive des continents.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D21A",
+    "knowledge_id": "V2-DISC-21",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la mise en évidence de l’expansion de l’Univers à partir des observations de galaxies ?",
+    "choices": [
+      "Edwin Hubble",
+      "Blaise Pascal",
+      "Gregor Mendel",
+      "J. J. Thomson"
+    ],
+    "answer": 0,
+    "explanation": "Edwin Hubble est principalement associé à la mise en évidence de l’expansion de l’Univers à partir des observations de galaxies.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D21B",
+    "knowledge_id": "V2-DISC-21",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Edwin Hubble ?",
+    "choices": [
+      "des travaux sur la pression et l’hydrostatique",
+      "les lois fondamentales de l’hérédité",
+      "la découverte de l’électron",
+      "la mise en évidence de l’expansion de l’Univers à partir des observations de galaxies"
+    ],
+    "answer": 3,
+    "explanation": "Edwin Hubble est principalement associé à la mise en évidence de l’expansion de l’Univers à partir des observations de galaxies.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D22A",
+    "knowledge_id": "V2-DISC-22",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à des observations astronomiques télescopiques majeures au début du XVIIe siècle ?",
+    "choices": [
+      "Alessandro Volta",
+      "Louis Pasteur",
+      "James Chadwick",
+      "Galilée"
+    ],
+    "answer": 3,
+    "explanation": "Galilée est principalement associé à des observations astronomiques télescopiques majeures au début du XVIIe siècle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D22B",
+    "knowledge_id": "V2-DISC-22",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Galilée ?",
+    "choices": [
+      "les travaux sur les microbes, la fermentation et la pasteurisation",
+      "la découverte du neutron",
+      "des observations astronomiques télescopiques majeures au début du XVIIe siècle",
+      "la première pile électrique moderne"
+    ],
+    "answer": 2,
+    "explanation": "Galilée est principalement associé à des observations astronomiques télescopiques majeures au début du XVIIe siècle.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D23A",
+    "knowledge_id": "V2-DISC-23",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à le modèle héliocentrique moderne de la Renaissance ?",
+    "choices": [
+      "Alexander Fleming",
+      "Robert Hooke",
+      "Nicolas Copernic",
+      "Georg Ohm"
+    ],
+    "answer": 2,
+    "explanation": "Nicolas Copernic est principalement associé à le modèle héliocentrique moderne de la Renaissance.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D23B",
+    "knowledge_id": "V2-DISC-23",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Nicolas Copernic ?",
+    "choices": [
+      "l’emploi du terme « cellule » en observant du liège",
+      "le modèle héliocentrique moderne de la Renaissance",
+      "la loi reliant tension, résistance et courant",
+      "la découverte de la pénicilline"
+    ],
+    "answer": 1,
+    "explanation": "Nicolas Copernic est principalement associé à le modèle héliocentrique moderne de la Renaissance.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D24A",
+    "knowledge_id": "V2-DISC-24",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à les lois du mouvement des planètes ?",
+    "choices": [
+      "William Harvey",
+      "Johannes Kepler",
+      "Heinrich Hertz",
+      "Marie Curie"
+    ],
+    "answer": 1,
+    "explanation": "Johannes Kepler est principalement associé à les lois du mouvement des planètes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D24B",
+    "knowledge_id": "V2-DISC-24",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Johannes Kepler ?",
+    "choices": [
+      "les lois du mouvement des planètes",
+      "la mise en évidence expérimentale des ondes électromagnétiques",
+      "des travaux pionniers sur la radioactivité",
+      "la description de la circulation sanguine"
+    ],
+    "answer": 0,
+    "explanation": "Johannes Kepler est principalement associé à les lois du mouvement des planètes.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D25A",
+    "knowledge_id": "V2-DISC-25",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à le principe de poussée portant son nom ?",
+    "choices": [
+      "Archimède",
+      "Max Planck",
+      "Dmitri Mendeleïev",
+      "Edward Jenner"
+    ],
+    "answer": 0,
+    "explanation": "Archimède est principalement associé à le principe de poussée portant son nom.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D25B",
+    "knowledge_id": "V2-DISC-25",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Archimède ?",
+    "choices": [
+      "l’introduction de l’hypothèse des quanta d’énergie",
+      "l’organisation du tableau périodique des éléments",
+      "la mise au point de la vaccination contre la variole",
+      "le principe de poussée portant son nom"
+    ],
+    "answer": 3,
+    "explanation": "Archimède est principalement associé à le principe de poussée portant son nom.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D26A",
+    "knowledge_id": "V2-DISC-26",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à des travaux sur la pression et l’hydrostatique ?",
+    "choices": [
+      "Isaac Newton",
+      "Antoine Lavoisier",
+      "Carl von Linné",
+      "Blaise Pascal"
+    ],
+    "answer": 3,
+    "explanation": "Blaise Pascal est principalement associé à des travaux sur la pression et l’hydrostatique.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D26B",
+    "knowledge_id": "V2-DISC-26",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Blaise Pascal ?",
+    "choices": [
+      "la loi de conservation de la masse en chimie",
+      "la nomenclature binominale en biologie",
+      "des travaux sur la pression et l’hydrostatique",
+      "la formulation des lois du mouvement et de la gravitation classique"
+    ],
+    "answer": 2,
+    "explanation": "Blaise Pascal est principalement associé à des travaux sur la pression et l’hydrostatique.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D27A",
+    "knowledge_id": "V2-DISC-27",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la première pile électrique moderne ?",
+    "choices": [
+      "Michael Faraday",
+      "Alfred Wegener",
+      "Alessandro Volta",
+      "Albert Einstein"
+    ],
+    "answer": 2,
+    "explanation": "Alessandro Volta est principalement associé à la première pile électrique moderne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D27B",
+    "knowledge_id": "V2-DISC-27",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Alessandro Volta ?",
+    "choices": [
+      "la théorie de la dérive des continents",
+      "la première pile électrique moderne",
+      "la théorie de la relativité",
+      "des travaux majeurs sur l’induction électromagnétique"
+    ],
+    "answer": 1,
+    "explanation": "Alessandro Volta est principalement associé à la première pile électrique moderne.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D28A",
+    "knowledge_id": "V2-DISC-28",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la loi reliant tension, résistance et courant ?",
+    "choices": [
+      "Edwin Hubble",
+      "Georg Ohm",
+      "Charles Darwin",
+      "James Clerk Maxwell"
+    ],
+    "answer": 1,
+    "explanation": "Georg Ohm est principalement associé à la loi reliant tension, résistance et courant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D28B",
+    "knowledge_id": "V2-DISC-28",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Georg Ohm ?",
+    "choices": [
+      "la loi reliant tension, résistance et courant",
+      "la théorie de l’évolution par sélection naturelle",
+      "la formulation des équations de l’électromagnétisme classique",
+      "la mise en évidence de l’expansion de l’Univers à partir des observations de galaxies"
+    ],
+    "answer": 0,
+    "explanation": "Georg Ohm est principalement associé à la loi reliant tension, résistance et courant.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D29A",
+    "knowledge_id": "V2-DISC-29",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à la mise en évidence expérimentale des ondes électromagnétiques ?",
+    "choices": [
+      "Heinrich Hertz",
+      "Gregor Mendel",
+      "Niels Bohr",
+      "Galilée"
+    ],
+    "answer": 0,
+    "explanation": "Heinrich Hertz est principalement associé à la mise en évidence expérimentale des ondes électromagnétiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D29B",
+    "knowledge_id": "V2-DISC-29",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Heinrich Hertz ?",
+    "choices": [
+      "les lois fondamentales de l’hérédité",
+      "un modèle atomique quantifié du début du XXe siècle",
+      "des observations astronomiques télescopiques majeures au début du XVIIe siècle",
+      "la mise en évidence expérimentale des ondes électromagnétiques"
+    ],
+    "answer": 3,
+    "explanation": "Heinrich Hertz est principalement associé à la mise en évidence expérimentale des ondes électromagnétiques.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D30A",
+    "knowledge_id": "V2-DISC-30",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "Quel scientifique est principalement associé à l’introduction de l’hypothèse des quanta d’énergie ?",
+    "choices": [
+      "Louis Pasteur",
+      "Ernest Rutherford",
+      "Nicolas Copernic",
+      "Max Planck"
+    ],
+    "answer": 3,
+    "explanation": "Max Planck est principalement associé à l’introduction de l’hypothèse des quanta d’énergie.",
+    "difficulty": 2,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  },
+  {
+    "id": "V2D30B",
+    "knowledge_id": "V2-DISC-30",
+    "module": 5,
+    "domain": "Histoire des sciences",
+    "subdomain": "Scientifiques et découvertes",
+    "prompt": "À quelle contribution scientifique associe-t-on principalement Max Planck ?",
+    "choices": [
+      "la mise en évidence du noyau atomique",
+      "le modèle héliocentrique moderne de la Renaissance",
+      "l’introduction de l’hypothèse des quanta d’énergie",
+      "les travaux sur les microbes, la fermentation et la pasteurisation"
+    ],
+    "answer": 2,
+    "explanation": "Max Planck est principalement associé à l’introduction de l’hypothèse des quanta d’énergie.",
+    "difficulty": 3,
+    "stability": "STABLE",
+    "source": "Histoire des sciences — références scientifiques générales"
+  }
+]
