@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <title>Excellentia Study Hub</title>
 <link rel="manifest" href="./manifest.webmanifest">
-<link rel="stylesheet" href="./style.css?v=301">
+<link rel="stylesheet" href="./style.css?v=302">
 </head>
 <body>
 <div class="app-shell" id="appShell">
@@ -97,6 +97,17 @@
 </div>
 
 <div class="toast-stack" id="toasts"></div>
-<script src="./app.js?v=301"></script>
+<script>
+if('serviceWorker' in navigator){
+  let reloading=false;
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{
+    if(reloading)return;
+    reloading=true;
+    const k='exc_gateway_sw302_reloaded';
+    if(!sessionStorage.getItem(k)){sessionStorage.setItem(k,'1');location.reload();}
+  });
+}
+</script>
+<script src="./app.js?v=302"></script>
 </body>
 </html>
