@@ -7,11 +7,6 @@ on:
       - 'excellentia/**'
       - 'excellentia-student/**'
       - '.github/workflows/excellentia-student-public-probe.yml'
-  pull_request:
-    paths:
-      - 'excellentia/**'
-      - 'excellentia-student/**'
-      - '.github/workflows/excellentia-student-public-probe.yml'
   workflow_dispatch:
 
 permissions:
@@ -23,30 +18,16 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Local pointer contract
-        run: |
-          node -e "const j=require('./excellentia/latest.json'); if(j.version!=='2.3.0'||j.questions!==4174||j.knowledge_units!==2667||j.timer_seconds!==40) process.exit(2); console.log(j)"
-      - name: Probe raw latest pointer
-        run: |
-          for i in 1 2 3 4 5; do
-            curl -fsSL --connect-timeout 10 --max-time 30 "https://raw.githubusercontent.com/Terminator364/BuildHub/main/excellentia/latest.json?t=$(date +%s)" -o /tmp/latest.json && break
-            sleep 3
-          done
-          node -e "const j=require('/tmp/latest.json'); if(!j.url.startsWith('https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia-student/index.html')) process.exit(3); console.log(j.url)"
-      - name: Probe immutable student gateway
-        run: |
-          URL="$(node -p "require('/tmp/latest.json').url")"
-          curl -fsSL --retry 4 --retry-delay 2 --connect-timeout 10 --max-time 45 "$URL" -o /tmp/index.html
-          grep -q "Excellentia Study Hub — Élève" /tmp/index.html
-          BASE="${URL%index.html}"
-          curl -fsSL --retry 4 --retry-delay 2 "${BASE}data/gateway-manifest.json" -o /tmp/gateway.json
-          node -e "const j=require('/tmp/gateway.json'); if(j.expected_questions!==4174||j.expected_knowledge_units!==2667||j.timer_seconds!==40||j.question_files.length!==45) process.exit(4); console.log(j)"
-          curl -fsSL --retry 4 --retry-delay 2 "${BASE}app.js?v=230" -o /tmp/app.js
-          node --check /tmp/app.js
-      - name: Probe permanent QR entry
+
+      - name: Local gateway audit
+        run: node excellentia-student/audit.mjs
+
+      - name: Permanent entry browser proof
+        shell: bash
         run: |
           ENTRY="https://html-preview.github.io/?url=https://github.com/Terminator364/BuildHub/blob/main/excellentia/index.html"
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$CHROME"
           "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=60000 --dump-dom "$ENTRY" > /tmp/entry-dom.html
           grep -q "EXCELLENTIA STUDY HUB" /tmp/entry-dom.html
           grep -q "Culture générale" /tmp/entry-dom.html
