@@ -1,0 +1,96 @@
+{
+  "schema": "pc.command.config.v1",
+  "version": "0.7.0",
+  "code": {
+    "repo": "Terminator364/BuildHub",
+    "branch": "lab/pc-command-browser-20260926",
+    "base_path": "labs/pc-command/v5"
+  },
+  "state": {
+    "transport": "github_private",
+    "repo": "Terminator364/PC-COMMAND-STATE",
+    "branch": "main",
+    "registry_path": "pc-command/registry.json",
+    "overview_path": "pc-command/overview.json",
+    "sync_mode": "local_git_background_pull"
+  },
+  "cadence": {
+    "internet_sync_seconds": 5,
+    "engine_recalc_seconds": 5,
+    "display_refresh_seconds": 10,
+    "heartbeat_title_seconds": 1,
+    "update_check_seconds": 300
+  },
+  "limits": {
+    "max_conversations": 10,
+    "max_macro_tasks_per_conversation": 10,
+    "max_visible_microtasks": 20,
+    "max_events_loaded": 100,
+    "ram_budget_mb": 150,
+    "history_max_bytes": 524288
+  },
+  "drive": {
+    "root_folder_id": "1fFLEoZxzoAkrMzC9SxjvOlzbTsW1ZjLW",
+    "reports_folder_id": "1Y6tgwMBHYaQPvsWIWCvEdUrUOgP681a3",
+    "checkpoints_folder_id": "1zLolAtOMPtoLkr8OxCEk5FJkNncBbSfN",
+    "exports_folder_id": "1WttL-Nm4DbpFjnGizDUY5YN-lWYQw9zA"
+  },
+  "privacy": {
+    "no_passwords": true,
+    "no_chain_of_thought": true,
+    "observable_state_only": true
+  },
+  "freshness": {
+    "work_lease_seconds": 1200,
+    "processing_fresh_seconds": 300,
+    "interruption_possible_seconds": 1800
+  },
+  "render": {
+    "responsive": true,
+    "max_general_conversations": 10,
+    "max_conversation_macros_visible": 4,
+    "max_macro_microtasks_visible": 12,
+    "emergency_fallback": true,
+    "footer_parameter_binding_fix": true
+  },
+  "automation": {
+    "update_on_start": true,
+    "atomic_stage": true,
+    "rollback_backup": true,
+    "state_transport_separate": true,
+    "cahier_delta_each_relevant_message": true,
+    "event_bus_append_only": true,
+    "nonblocking_state_sync": true,
+    "input_first_loop": true
+  },
+  "event_bus": {
+    "enabled": false,
+    "mode": "dormant_experimental",
+    "reason": "disabled in local runtime to preserve instant UI and low RAM"
+  },
+  "navigation": {
+    "cache_first": true,
+    "max_visual_response_ms": 500,
+    "network_refresh_after_navigation": true,
+    "local_state_only_on_keypress": true
+  },
+  "updater": {
+    "transport": "github_api_blob_sha",
+    "manifest_ref": "lab/pc-command-browser-20260926",
+    "verify_git_blob_sha": true,
+    "backups_kept": 3
+  },
+  "hotfixes": {
+    "footer_positional_color_binding": "fixed",
+    "emergency_mode_regression": "fixed"
+  },
+  "feedback_ledger": {
+    "enabled": true,
+    "canonical_repo": "Terminator364/PC-COMMAND-STATE",
+    "index_path": "pc-command/feedback/feedback-index.json",
+    "machine_path": "pc-command/feedback/feedback-ledger.jsonl",
+    "version_trace_path": "pc-command/feedback/version-trace.json",
+    "ingest_before_build": true,
+    "preserve_previous": true
+  }
+}

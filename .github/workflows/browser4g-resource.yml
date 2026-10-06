@@ -1,0 +1,30 @@
+name: Browser4G Resource Bench
+
+on:
+  pull_request:
+    paths:
+      - 'labs/browser-bench/**'
+      - '.github/workflows/browser4g-resource.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: browser4g-resource-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  bench:
+    name: ${{ matrix.browser }}
+    runs-on: windows-latest
+    timeout-minutes: 14
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [edge, firefox, brave, qutebrowser, falkon, helium]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resource prefilter
+        shell: pwsh
+        run: ./labs/browser-bench/browser-resource.ps1 -Browser '${{ matrix.browser }}'

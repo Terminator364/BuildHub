@@ -1,0 +1,30 @@
+name: Browser4G Realistic Bench
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'labs/browser-bench/browser-realistic.ps1'
+      - '.github/workflows/browser4g-realistic.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: browser4g-realistic-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  bench:
+    name: ${{ matrix.browser }}
+    runs-on: windows-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [edge, firefox, brave, qutebrowser, falkon, helium]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Three-page resource/compatibility prefilter
+        shell: pwsh
+        run: ./labs/browser-bench/browser-realistic.ps1 -Browser '${{ matrix.browser }}'
