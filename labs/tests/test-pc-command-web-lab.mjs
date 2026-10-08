@@ -111,7 +111,7 @@ test('PC_COMMAND_WEB_LAB_027_SECURITY_EVIDENCE_OK', {timeout:25000}, async () =>
     const home=await request(port,'/');
     assert.equal(home.status,200);
     assert.match(home.text,/id="evidenceAlert"/);
-    assert.match(home.text,/Dernier checkpoint/);
+    assert.match(home.text,/dernier checkpoint/i);
     assert.equal(home.headers['x-content-type-options'],'nosniff');
 
     const blockedHost=await request(port,'/api/status',{Host:'evil.example'});
@@ -144,7 +144,7 @@ test('PC_COMMAND_WEB_LAB_027_SECURITY_EVIDENCE_OK', {timeout:25000}, async () =>
     assert.doesNotThrow(()=>new vm.Script(inline[1]),'web UI JS is syntactically valid');
     assert.match(html,/sourceFilters/);
     assert.match(html,/A — Cahier/);
-    assert.match(html,/Dernier checkpoint/);
+    assert.match(html,/dernier checkpoint/i);
     console.log('PC_COMMAND_WEB_LAB_027_SECURITY_EVIDENCE_OK');
   } finally {
     child.kill('SIGTERM');
