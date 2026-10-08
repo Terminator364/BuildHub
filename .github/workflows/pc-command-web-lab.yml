@@ -38,6 +38,10 @@ jobs:
             throw "PC COMMAND WEB LAB launcher parse failed"
           }
           Write-Host "PC_COMMAND_WEB_LAB_LAUNCHER_PARSE_OK"
+      - name: Windows launcher double-click and single Node instance
+        shell: pwsh
+        run: |
+          & ./labs/tests/test-pc-command-web-lab-launcher.ps1
       - name: Localhost API and A+B+C stale-state regression
         shell: pwsh
         run: |

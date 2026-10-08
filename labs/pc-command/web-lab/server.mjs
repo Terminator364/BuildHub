@@ -62,7 +62,7 @@ function tailJsonl(file, limit=12, maxBytes=262144) {
 }
 
 function safeChannelId(id) {
-  return /^[A-Za-z0-9._-]{1,100}$/.test(String(id||'')) ? String(id) : null;
+  return /^[A-Za-z0-9_-][A-Za-z0-9._-]{0,99}$/.test(String(id||'')) ? String(id) : null;
 }
 
 function sourceSummary() {
@@ -94,7 +94,7 @@ function statusSnapshot() {
   const convs = Array.isArray(overview.conversations) ? overview.conversations : [];
   return {
     lab: {
-      version: '0.2.7',
+      version: '0.2.8',
       mode: 'READ_ONLY',
       serverPid: process.pid,
       serverRssMb: Math.round(process.memoryUsage().rss / 104857.6) / 10,
@@ -236,7 +236,7 @@ const server = http.createServer((req,res) => {
   lastRequestAt = Date.now();
   try {
     const u = new URL(req.url || '/', LOCAL_ORIGIN);
-    if (u.pathname === '/api/ping') return sendJson(res,200,{ok:true,at:new Date().toISOString(),mode:'READ_ONLY'});
+    if (u.pathname === '/api/ping') return sendJson(res,200,{ok:true,service:'pc-command-web-lab',version:'0.2.8',serverPid:process.pid,at:new Date().toISOString(),mode:'READ_ONLY'});
     if (u.pathname === '/api/status') return sendJson(res,200,statusSnapshot());
     if (u.pathname === '/api/health') return sendJson(res,200,healthSnapshot());
     if (u.pathname === '/api/channel') {

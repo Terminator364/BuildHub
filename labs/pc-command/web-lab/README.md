@@ -40,14 +40,14 @@ Runtime constraints:
 - Browser/API reads are bounded and cache-first.
 - server stops after 5 minutes without a request.
 
-## WEB LAB 0.2.7 — validation gates
+## WEB LAB 0.2.8 — validation gates
 
 - L’interface distingue **checkpoint historique** et **exécution réellement vérifiée**. Un signal absent, ancien de plus de 15 minutes, ou horodaté excessivement dans le futur est marqué non confirmé.
 - Les indicateurs de progression représentent le dernier checkpoint, jamais une progression live garantie.
 - API locale: bind `127.0.0.1:8791`, host/origin strict, méthodes GET uniquement, aucun endpoint d’écriture et aucun accès réseau externe dans les vues.
 - Les tests isolés `node --test labs/tests/test-pc-command-web-lab.mjs` couvrent le faux live, la navigation/traversal, le contrôle d’origine, la lecture seule, l’intégrité du ledger et la syntaxe JavaScript de la vue.
 - CI Windows: un seul job ciblé, avec parsing PowerShell du launcher. Pas de dépendances npm ajoutées.
-- Déploiement **en attente de la preuve de terrain** sur MBMPC; ne pas confondre CI verte et bouton Windows vérifié. La dernière preuve terrain porte sur WEB LAB 0.2.5, pas 0.2.7.
+- Déploiement **en attente de la preuve de terrain** sur MBMPC; ne pas confondre CI verte et bouton Windows vérifié. La dernière preuve terrain porte sur WEB LAB 0.2.5, pas 0.2.8.
 
 ## Human surfaces
 
@@ -95,3 +95,11 @@ The stable app remains under:
 `%LOCALAPPDATA%\PC_COMMAND`
 
 Closing the browser/lab does not modify stable data. Removing the lab folder/shortcut is sufficient to remove the experiment; stable PC COMMAND remains untouched.
+
+## Launcher resilience gate 0.2.8
+
+- Named per-port session mutex serializes double-clicks and prevents multiple simultaneous Node startups.
+- `/api/ping` includes exact service identity, version, and PID. An unknown process on port 8791 is never reused or stopped.
+- Older lab processes are stopped **only** after verifying Node PID and exact script path; no unrelated process termination.
+- Reuse/activate an existing Web Lab Edge window instead of creating another. No browser is launched during CI via `-NoBrowser`.
+- Windows CI runs two launcher invocations on an isolated ephemeral port, checks the same Node PID, and tears down only that test server. An exact 0.2.8 desktop/GUI last-mile test remains required on MBMPC.

@@ -54,7 +54,7 @@ function request(port, path, headers={}, method='GET') {
   });
 }
 
-test('PC_COMMAND_WEB_LAB_027_SECURITY_EVIDENCE_OK', {timeout:25000}, async () => {
+test('PC_COMMAND_WEB_LAB_028_SECURITY_EVIDENCE_OK', {timeout:25000}, async () => {
   const root = mkdtempSync(join(tmpdir(),'pc-command-web-lab-test-'));
   const oldSignal='2020-01-01T00:00:00Z';
   writeJson(root,'app/manifest.json',{version:'1.0.5',channel:'stable'});
@@ -97,11 +97,15 @@ test('PC_COMMAND_WEB_LAB_027_SECURITY_EVIDENCE_OK', {timeout:25000}, async () =>
       await new Promise(ok=>setTimeout(ok,70));
     }
     assert.ok(up,'Node server started: '+stderr);
+    const hello=(await request(port,'/api/ping')).json();
+    assert.equal(hello.service,'pc-command-web-lab');
+    assert.equal(hello.version,'0.2.8');
+    assert.equal(hello.serverPid,child.pid);
 
     const status=await request(port,'/api/status');
     assert.equal(status.status,200);
     const data=status.json();
-    assert.equal(data.lab.version,'0.2.7');
+    assert.equal(data.lab.version,'0.2.8');
     assert.equal(data.app.version,'1.0.5');
     assert.equal(data.evidence.conversationSignal.status,'STALE');
     assert.equal(data.evidence.conversationSignal.certifiedLive,false);
@@ -127,6 +131,8 @@ test('PC_COMMAND_WEB_LAB_027_SECURITY_EVIDENCE_OK', {timeout:25000}, async () =>
     const blockedPost=await request(port,'/api/status',{},'POST');
     assert.equal(blockedPost.status,405);
 
+    const blockedDotDot=await request(port,'/api/channel?id=..');
+    assert.equal(blockedDotDot.status,404);
     const blockedTraverse=await request(port,'/api/channel?id=..%2F..%2Fsecrets');
     assert.equal(blockedTraverse.status,404);
 
@@ -145,7 +151,7 @@ test('PC_COMMAND_WEB_LAB_027_SECURITY_EVIDENCE_OK', {timeout:25000}, async () =>
     assert.match(html,/sourceFilters/);
     assert.match(html,/A — Cahier/);
     assert.match(html,/dernier checkpoint/i);
-    console.log('PC_COMMAND_WEB_LAB_027_SECURITY_EVIDENCE_OK');
+    console.log('PC_COMMAND_WEB_LAB_028_SECURITY_EVIDENCE_OK');
   } finally {
     child.kill('SIGTERM');
     await new Promise(ok=>{if(child.exitCode!==null)return ok();child.once('exit',ok);setTimeout(ok,1500)});
