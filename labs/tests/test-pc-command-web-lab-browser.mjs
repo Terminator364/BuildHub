@@ -130,7 +130,13 @@ test('PC_COMMAND_WEB_LAB_028_REAL_EDGE_INTERACTION_OK',{timeout:90000},async()=>
       if(result.exceptionDetails)throw new Error('Browser JS: '+JSON.stringify(result.exceptionDetails));
       return result.result?.value;
     }
-    await waitFor(()=>run("document.querySelector('#kSources')?.textContent==='41'"));
+    try {
+      await waitFor(()=>run("document.querySelector('#kSources')?.textContent==='41'"),8500);
+    } catch(e) {
+      const diag=await run(`(async()=>{let response='none';try{const r=await fetch('/api/status');response=r.status+':'+(await r.text()).slice(0,240)}catch(err){response='ERR:'+String(err)}return JSON.stringify({url:location.href,title:document.title,ready:document.readyState,sources:document.querySelector('#kSources')?.textContent,version:document.querySelector('#kVersion')?.textContent,body:document.body?.innerText.slice(0,320),refresh:typeof refresh,status:typeof STATUS==='undefined'?'undefined':STATUS?.sources?.total,api:response})})()`);
+      console.error('PC_COMMAND_WEB_LAB_BROWSER_HYDRATION_DIAGNOSTIC '+diag);
+      throw e;
+    }
     assert.equal(await run("document.querySelector('#kVersion').textContent"),'1.0.5');
     assert.equal(await run("document.querySelectorAll('#conversationCards .conversation').length"),10);
     assert.equal(await run("document.querySelector('#evidenceAlert').classList.contains('visible')"),true);
