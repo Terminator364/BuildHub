@@ -162,7 +162,11 @@ test('PC_COMMAND_WEB_LAB_028_REAL_EDGE_INTERACTION_OK',{timeout:90000},async()=>
     await run("document.querySelector('[data-view=\\\"feedback\\\"]').click()");
     await waitFor(()=>run("document.querySelectorAll('#feedbackList details').length===3"));
     await run("document.querySelector('#feedbackList details summary').click()");
-    assert.equal(await run("document.querySelector('#feedbackList details').open"),true);
+    await waitFor(()=>run("document.querySelector('#feedbackList details').open"),3000);
+    await run("document.querySelector('#feedbackList details summary').click()");
+    await waitFor(()=>run("document.querySelector('#feedbackList details').open===false"),3000);
+    await run("document.querySelector('#feedbackList details summary').click()");
+    await waitFor(()=>run("document.querySelector('#feedbackList details').open"),3000);
     assert.match(await run("document.querySelector('#feedbackList').textContent"),/A — Cahier/);
     await run("document.querySelector('[data-view=\\\"versions\\\"]').click()");
     await waitFor(()=>run("document.querySelector('#versionList').textContent.includes('1.0.5')"));
@@ -170,8 +174,27 @@ test('PC_COMMAND_WEB_LAB_028_REAL_EDGE_INTERACTION_OK',{timeout:90000},async()=>
     await waitFor(()=>run("document.querySelector('#hFree').textContent.includes('MB')"));
     await run("document.querySelector('[data-view=\\\"technical\\\"]').click()");
     assert.match(await run("document.querySelector('#rawStatus').textContent"),/READ_ONLY/);
+    // Verify responsive narrow layout without horizontal overflow.
+    await cdp.call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
+    await pause(200);
+    const mobile=await run("({scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth})");
+    assert.ok(mobile.scrollWidth<=mobile.clientWidth+2,'Mobile horizontal overflow '+JSON.stringify(mobile));
+    await cdp.call('Emulation.clearDeviceMetricsOverride');
+
+    // Exercise cache invalidation and graceful rendering for 0, 1, and 10 conversations.
+    const overviewPath='state-repo/pc-command/overview.json';
+    fixture(root,overviewPath,{conversations:[]});
+    await pause(1200);await run("refresh()");
+    assert.equal(await run("document.querySelector('#kConversations').textContent"),'0');
+    assert.match(await run("document.querySelector('#conversationCards').textContent"),/Aucune conversation/);
+    fixture(root,overviewPath,{conversations:conversations.slice(0,1)});
+    await pause(1200);await run("refresh()");
+    assert.equal(await run("document.querySelectorAll('#conversationCards .conversation').length"),1);
+    fixture(root,overviewPath,{conversations});
+    await pause(1200);await run("refresh()");
+    assert.equal(await run("document.querySelectorAll('#conversationCards .conversation').length"),10);
     assert.equal(readFileSync(ledgerFile,'utf8'),initialLedger);
-    console.log('PC_COMMAND_WEB_LAB_028_REAL_EDGE_INTERACTION_OK : 8 tabs, 10 conversations, 41 sources, search/filter, feedback A+B+C, versions, health, technical');
+    console.log('PC_COMMAND_WEB_LAB_028_REAL_EDGE_INTERACTION_OK : 8 tabs, 0/1/10 conversations, 41 sources, search/filter, Feedback A+B+C, versions, health, mobile');
   }finally{
     cdp?.close();
     chrome?.kill();
