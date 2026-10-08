@@ -53,7 +53,7 @@ pre{margin:0;white-space:pre-wrap;word-break:break-word;background:#0a1120;borde
 .macros{display:grid;gap:10px}.macro{background:#0e1728;border:1px solid var(--line);border-radius:12px;padding:13px}.macrohead{display:flex;justify-content:space-between;gap:10px}.micro{font-size:12px;color:var(--muted);padding:5px 0 0 12px}
 .statusDot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:var(--muted)}.statusDot.ok{background:var(--ok)}.statusDot.warn{background:var(--warn)}.statusDot.bad{background:var(--bad)}
 .empty{padding:24px;color:var(--muted);text-align:center}
-.subnav{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.subnav button{border:1px solid var(--line);background:#0d1628;color:var(--muted);border-radius:999px;padding:6px 9px;cursor:pointer}.subnav button.active,.subnav button:hover{color:white;border-color:#6684c2;background:#16233d}.abc{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:9px}.abc>div{background:#0b1424;border:1px solid var(--line);border-radius:10px;padding:10px}.abc b{display:block;margin-bottom:5px}.footerNote{margin-top:18px;font-size:12px;color:var(--muted)}
+.subnav{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.subnav button{border:1px solid var(--line);background:#0d1628;color:var(--muted);border-radius:999px;padding:6px 9px;cursor:pointer}.subnav button.active,.subnav button:hover{color:white;border-color:#6684c2;background:#16233d}.abc{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:9px}.abc>div{background:#0b1424;border:1px solid var(--line);border-radius:10px;padding:10px}.abc b{display:block;margin-bottom:5px}.evidence-alert{display:none;margin:0 0 15px;border:1px solid #80663c;border-left:4px solid var(--warn);background:#201b14;border-radius:12px;padding:12px 14px;color:#f4deb3;font-size:13px}.evidence-alert.visible{display:block}.footerNote{margin-top:18px;font-size:12px;color:var(--muted)}
 @media(max-width:1100px){.kpis{grid-template-columns:repeat(2,1fr)}.hero,.twocol,.threecol{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.shell{grid-template-columns:1fr}.side{position:static;height:auto}.sidefoot{position:static;margin-top:14px}.top{align-items:flex-start;flex-direction:column}.badges{justify-content:flex-start}.kpis,.cards{grid-template-columns:1fr}main{padding:20px}}
 </style>
@@ -81,6 +81,7 @@ pre{margin:0;white-space:pre-wrap;word-break:break-word;background:#0a1120;borde
   </div>
 
   <section id="home" class="section active">
+    <div id="evidenceAlert" class="evidence-alert" role="status">Dernier état non récent : aucune exécution en cours ne peut être certifiée depuis ce cache.</div>
     <div class="grid kpis">
       <div class="card kpi" data-go="versions"><div class="label">Version stable</div><div class="value" id="kVersion">…</div><div class="hint" id="kChannel">canal</div></div>
       <div class="card kpi" data-go="conversations"><div class="label">Conversations</div><div class="value" id="kConversations">…</div><div class="hint">maximum 10</div></div>
@@ -196,8 +197,9 @@ $('.nav button').forEach(b=>b.onclick=()=>setView(b.dataset.view));function bind
 function renderHome(){
   const s=STATUS;if(!s)return;const conv=(s.overview.conversations||[])[0]||{};
   $('#versionBadge').textContent='v'+s.app.version+' · '+s.app.channel;
-  $('#syncBadge').textContent=s.sync?.last_error?'sync erreur':'sync OK';
-  $('#syncBadge').className='badge '+(s.sync?.last_error?'warn':'ok');
+  const syncEvidence=s.evidence?.syncSignal?.status||'UNKNOWN';
+  $('#syncBadge').textContent=s.sync?.last_error?'sync erreur':(syncEvidence==='RECENT'?'sync récente (non certifiée)':'sync non vérifiée');
+  $('#syncBadge').className='badge '+(s.sync?.last_error||syncEvidence!=='RECENT'?'warn':'ok');
   $('#sideState').textContent='Web Lab en ligne · '+s.lab.boundTo;
   $('#serverRam').textContent='Serveur '+s.lab.serverRssMb+' MB';
   $('#kVersion').textContent=s.app.version||'—';$('#kChannel').textContent=s.app.channel||'—';
@@ -205,15 +207,19 @@ function renderHome(){
   $('#kFeedback').textContent=fmt(s.feedback.total_feedbacks||0);$('#kFeedbackLast').textContent=s.feedback.last_feedback_id||'—';
   $('#kSources').textContent=fmt(s.sources.total||0);
   $('#workLabel').textContent=conv.label||'Aucune conversation';
-  const liveState=conv.lifecycle?.state||'INCONNU';$('#workState').textContent=humanState(liveState);$('#workState').className='pill '+stateClass(liveState);$('#workFresh').textContent='signal '+ageText(conv.lifecycle?.last_signal_at);
-  const p=Math.max(0,Math.min(100,Number(conv.progress_estimate||0)));$('#workProgress').style.width=p+'%';$('#workPct').textContent=p+' % estimé';
-  $('#workNow').textContent=conv.current_action||'—';$('#workSuccess').textContent=conv.last_success||'—';$('#workNext').textContent=conv.next_step||'—';$('#workBlocker').textContent=conv.blocker||'Aucun';
+  const liveState=conv.lifecycle?.state||'INCONNU';const signal=s.evidence?.conversationSignal?.status||'UNKNOWN';
+  const stale=signal!=='RECENT';$('#workState').textContent=stale?'État ancien · non confirmé':humanState(liveState)+' · non certifié';
+  $('#workState').className='pill '+(stale?'warn':stateClass(liveState));$('#workFresh').textContent='signal '+ageText(conv.lifecycle?.last_signal_at);
+  $('#evidenceAlert').classList.toggle('visible',stale);
+  $('#evidenceAlert').textContent=stale?'⚠ Dernier signal '+ageText(conv.lifecycle?.last_signal_at)+' : le statut historique « '+humanState(liveState)+' » ne prouve pas que le travail continue actuellement.':'Dernier signal récent, mais le Web Lab ne peut pas certifier que ChatGPT travaille en direct.';
+  const p=Math.max(0,Math.min(100,Number(conv.progress_estimate||0)));$('#workProgress').style.width=p+'%';$('#workPct').textContent=p+' % du dernier checkpoint (non temps réel)';
+  $('#workNow').textContent=(stale?'Au dernier checkpoint : ':'')+(conv.current_action||'—');$('#workSuccess').textContent=conv.last_success||'—';$('#workNext').textContent=conv.next_step||'—';$('#workBlocker').textContent=conv.blocker||'Aucun';
   renderConversationCards();
   $('#rawStatus').textContent=JSON.stringify(s,null,2);
 }
 function renderConversationCards(){
   if(!STATUS)return;const root=$('#conversationCards');const rows=STATUS.overview.conversations||[];
-  root.innerHTML=rows.length?rows.map(c=>'<div class="card item conversation" data-id="'+esc(c.id)+'"><div class="small muted">'+esc(c.short_code||c.id)+'</div><h3>'+esc(c.label||c.id)+'</h3><div class="meta"><span class="pill '+stateClass(c.lifecycle?.state)+'">'+esc(c.lifecycle?.state||'INCONNU')+'</span><span class="pill">'+esc(c.progress_estimate||0)+' %</span><span class="pill">signal '+esc(ageText(c.lifecycle?.last_signal_at))+'</span></div><p class="muted small">'+esc(c.current_action||'')+'</p></div>').join(''):'<div class="empty">Aucune conversation.</div>';
+  root.innerHTML=rows.length?rows.map(c=>'<div class="card item conversation" data-id="'+esc(c.id)+'"><div class="small muted">'+esc(c.short_code||c.id)+'</div><h3>'+esc(c.label||c.id)+'</h3><div class="meta"><span class="pill '+(Date.now()-Date.parse(c.lifecycle?.last_signal_at||'')>900000?'warn':stateClass(c.lifecycle?.state))+'">'+esc(Date.now()-Date.parse(c.lifecycle?.last_signal_at||'')>900000?'État ancien':(c.lifecycle?.state||'INCONNU'))+'</span><span class="pill">'+esc(c.progress_estimate||0)+' %</span><span class="pill">signal '+esc(ageText(c.lifecycle?.last_signal_at))+'</span></div><p class="muted small">'+esc(c.current_action||'')+'</p></div>').join(''):'<div class="empty">Aucune conversation.</div>';
   $$('.conversation').forEach(x=>x.onclick=()=>loadConversation(x.dataset.id));
 }
 async function loadConversation(id){
@@ -229,7 +235,7 @@ function renderHealth(){
   const h=HEALTH;if(!h)return;$('#hFree').textContent=fmt(h.ram.freeMb)+' MB';$('#hUsed').textContent=h.ram.usedPercent+' % utilisé';
   $('#hUptime').textContent=h.uptimeHours+' h';$('#hHost').textContent=h.hostname+' · '+h.platform;
   $('#hUpdate').textContent=STATUS?.update?.state||'—';$('#hUpdateMsg').textContent=STATUS?.update?.message||'—';
-  $('#hSync').textContent=STATUS?.sync?.last_error?'ERREUR':'OK';$('#hSyncAt').textContent=STATUS?.sync?.last_success||'—';
+  $('#hSync').textContent=STATUS?.sync?.last_error?'ERREUR':(STATUS?.evidence?.syncSignal?.status==='RECENT'?'RÉCENTE':'NON VÉRIFIÉE');$('#hSyncAt').textContent=STATUS?.sync?.last_success||'—';
   $('#healthNetwork').innerHTML=(h.network||[]).length?(h.network||[]).map(n=>'<div class="row"><strong>'+esc(n.name)+'</strong><span>'+esc(n.address)+' · '+esc(n.cidr||'')+'</span></div>').join(''):'<div class="empty">Aucune IPv4 locale.</div>';
   $('#healthServer').innerHTML='<div class="row"><strong>PID</strong><span>'+h.server.pid+'</span></div><div class="row"><strong>RAM Node</strong><span>'+h.server.rssMb+' MB</span></div><div class="row"><strong>Mode</strong><span>lecture seule</span></div><div class="row"><strong>Arrêt idle</strong><span>'+STATUS.lab.idleShutdownSeconds+' s</span></div>';
   $('#localMachine').innerHTML='<div class="row"><strong>Machine</strong><span>'+esc(h.hostname)+'</span></div><div class="row"><strong>RAM totale</strong><span>'+fmt(h.ram.totalMb)+' MB</span></div><div class="row"><strong>RAM libre</strong><span>'+fmt(h.ram.freeMb)+' MB</span></div><div class="row"><strong>Uptime</strong><span>'+h.uptimeHours+' h</span></div>';
