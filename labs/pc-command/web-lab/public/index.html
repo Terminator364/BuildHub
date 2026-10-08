@@ -185,6 +185,7 @@ const fmt=n=>Number(n||0).toLocaleString('fr-FR');
 async function api(path){const r=await fetch(path,{cache:'no-store'});const j=await r.json();if(!r.ok)throw new Error(j.message||j.error||'Erreur');return j}
 function stateClass(s){s=String(s||'').toUpperCase();return /DONE|SUCCESS|ONLINE|RESPONDED|COMPLETED/.test(s)?'ok':/ERROR|BLOCK|FAILED|OFFLINE|INTERRUPT/.test(s)?'bad':'warn'}
 function humanState(s){const m={ASSISTANT_PROCESSING:'Travail en cours',TOOL_RUNNING:'Outil en cours',WAITING_EXTERNAL:'Attente externe',ASSISTANT_RESPONDED:'Réponse terminée',PAUSED:'En pause',INTERRUPTED_INFERRED:'Interruption possible',OFFLINE:'Hors ligne',RECOVERING:'Récupération',COMPLETED:'Terminé'};return m[String(s||'').toUpperCase()]||String(s||'Inconnu').replaceAll('_',' ')}
+function isOldSignal(v){const at=Date.parse(v||'');return !Number.isFinite(at)||at>Date.now()+300000||(Date.now()-at)>900000}
 function ageText(v){if(!v)return'—';const ms=Date.now()-Date.parse(v);if(!Number.isFinite(ms))return v;const sec=Math.max(0,Math.round(ms/1000));if(sec<60)return sec+' s';if(sec<3600)return Math.round(sec/60)+' min';return (sec/3600).toFixed(1)+' h'}
 function setView(v){
   ACTIVE=v;$$('.section').forEach(x=>x.classList.toggle('active',x.id===v));$$('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===v));
@@ -219,7 +220,7 @@ function renderHome(){
 }
 function renderConversationCards(){
   if(!STATUS)return;const root=$('#conversationCards');const rows=STATUS.overview.conversations||[];
-  root.innerHTML=rows.length?rows.map(c=>'<div class="card item conversation" data-id="'+esc(c.id)+'"><div class="small muted">'+esc(c.short_code||c.id)+'</div><h3>'+esc(c.label||c.id)+'</h3><div class="meta"><span class="pill '+(Date.now()-Date.parse(c.lifecycle?.last_signal_at||'')>900000?'warn':stateClass(c.lifecycle?.state))+'">'+esc(Date.now()-Date.parse(c.lifecycle?.last_signal_at||'')>900000?'État ancien':(c.lifecycle?.state||'INCONNU'))+'</span><span class="pill">'+esc(c.progress_estimate||0)+' %</span><span class="pill">signal '+esc(ageText(c.lifecycle?.last_signal_at))+'</span></div><p class="muted small">'+esc(c.current_action||'')+'</p></div>').join(''):'<div class="empty">Aucune conversation.</div>';
+  root.innerHTML=rows.length?rows.map(c=>'<div class="card item conversation" data-id="'+esc(c.id)+'"><div class="small muted">'+esc(c.short_code||c.id)+'</div><h3>'+esc(c.label||c.id)+'</h3><div class="meta"><span class="pill '+(isOldSignal(c.lifecycle?.last_signal_at)?'warn':stateClass(c.lifecycle?.state))+'">'+esc(isOldSignal(c.lifecycle?.last_signal_at)?'État ancien':(c.lifecycle?.state||'INCONNU'))+'</span><span class="pill">'+esc(c.progress_estimate||0)+' %</span><span class="pill">signal '+esc(ageText(c.lifecycle?.last_signal_at))+'</span></div><p class="muted small">'+esc(c.current_action||'')+'</p></div>').join(''):'<div class="empty">Aucune conversation.</div>';
   $$('.conversation').forEach(x=>x.onclick=()=>loadConversation(x.dataset.id));
 }
 async function loadConversation(id){
