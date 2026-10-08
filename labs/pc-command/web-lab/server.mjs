@@ -76,8 +76,10 @@ function sourceSummary() {
 function evidenceAge(value) {
   const at = Date.parse(String(value || ''));
   if (!Number.isFinite(at)) return { status: 'UNKNOWN', ageMinutes: null, certifiedLive: false };
-  const ageMinutes = Math.max(0, Math.round((Date.now() - at) / 60000));
-  return { status: ageMinutes < (STALE_AFTER_MS / 60000) ? 'RECENT' : 'STALE', ageMinutes, certifiedLive: false };
+  const delta = Date.now() - at;
+  if (delta < -5 * 60 * 1000) return { status: 'CLOCK_SKEW', ageMinutes: null, certifiedLive: false };
+  const ageMinutes = Math.max(0, Math.round(delta / 60000));
+  return { status: delta < STALE_AFTER_MS ? 'RECENT' : 'STALE', ageMinutes, certifiedLive: false };
 }
 
 function statusSnapshot() {
@@ -232,8 +234,8 @@ const server = http.createServer((req,res) => {
   if (!trustedLocalRequest(req)) return sendJson(res,403,{error:'LOCAL_ORIGIN_REQUIRED'});
   if (req.method !== 'GET') return sendJson(res,405,{error:'READ_ONLY_GET_REQUIRED'});
   lastRequestAt = Date.now();
-  const u = new URL(req.url || '/', LOCAL_ORIGIN);
   try {
+    const u = new URL(req.url || '/', LOCAL_ORIGIN);
     if (u.pathname === '/api/ping') return sendJson(res,200,{ok:true,at:new Date().toISOString(),mode:'READ_ONLY'});
     if (u.pathname === '/api/status') return sendJson(res,200,statusSnapshot());
     if (u.pathname === '/api/health') return sendJson(res,200,healthSnapshot());
