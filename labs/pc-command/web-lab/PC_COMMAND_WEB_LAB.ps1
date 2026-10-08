@@ -35,7 +35,7 @@ if(-not$ready){
   $detail=''
   $errFile=Join-Path $LabRoot 'web-lab-error.log'
   if(Test-Path $errFile){$detail=(Get-Content $errFile -Raw -ErrorAction SilentlyContinue)}
-  throw ('Le serveur WEB LAB n’a pas répondu sur '+$Url+'. '+$detail)
+  throw ('Le serveur WEB LAB n a pas repondu sur '+$Url+'. '+$detail)
 }
 
 $edgeCandidates=@(
