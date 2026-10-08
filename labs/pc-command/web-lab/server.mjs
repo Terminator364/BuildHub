@@ -1,14 +1,17 @@
 import http from 'node:http';
 import os from 'node:os';
 import { existsSync, openSync, closeSync, readSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { join, resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const PORT = Number(process.env.PC_COMMAND_WEB_PORT || 8791);
 const HOST = '127.0.0.1';
 const PC_ROOT = resolve(process.env.PC_COMMAND_ROOT || join(process.env.LOCALAPPDATA || os.homedir(), 'PC_COMMAND'));
-const LAB_ROOT = resolve(new URL('.', import.meta.url).pathname.replace(/^\/(?:[A-Za-z]:)/, m => m.slice(1)));
+const LAB_ROOT = dirname(fileURLToPath(import.meta.url));
 const PUBLIC = join(LAB_ROOT, 'public');
 const IDLE_MS = Number(process.env.PC_COMMAND_WEB_IDLE_MS || 300000);
+const STALE_AFTER_MS = 15 * 60 * 1000;
+const LOCAL_ORIGIN = 'http://' + HOST + ':' + PORT;
 let lastRequestAt = Date.now();
 
 const paths = {
@@ -70,6 +73,13 @@ function sourceSummary() {
   return { total: entries.length, counts };
 }
 
+function evidenceAge(value) {
+  const at = Date.parse(String(value || ''));
+  if (!Number.isFinite(at)) return { status: 'UNKNOWN', ageMinutes: null, certifiedLive: false };
+  const ageMinutes = Math.max(0, Math.round((Date.now() - at) / 60000));
+  return { status: ageMinutes < (STALE_AFTER_MS / 60000) ? 'RECENT' : 'STALE', ageMinutes, certifiedLive: false };
+}
+
 function statusSnapshot() {
   const overview = readJsonCached(paths.overview, { conversations: [] }, 1000);
   const versions = readJsonCached(paths.versionTrace, { versions: [] }, 10000);
@@ -82,7 +92,7 @@ function statusSnapshot() {
   const convs = Array.isArray(overview.conversations) ? overview.conversations : [];
   return {
     lab: {
-      version: '0.2.6',
+      version: '0.2.7',
       mode: 'READ_ONLY',
       serverPid: process.pid,
       serverRssMb: Math.round(process.memoryUsage().rss / 104857.6) / 10,
@@ -99,6 +109,11 @@ function statusSnapshot() {
     },
     update,
     sync,
+    evidence: {
+      conversationSignal: evidenceAge(convs[0]?.lifecycle?.last_signal_at),
+      syncSignal: evidenceAge(sync?.last_success || sync?.last_success_at),
+      note: 'Un signal récent ne certifie pas une exécution en cours.'
+    },
     overview,
     feedback,
     versions: Array.isArray(versions.versions) ? versions.versions.slice(-8) : [],
@@ -170,12 +185,20 @@ function healthSnapshot() {
   };
 }
 
+function trustedLocalRequest(req) {
+  if (req.headers.host !== HOST + ':' + PORT) return false;
+  if (req.headers.origin && req.headers.origin !== LOCAL_ORIGIN) return false;
+  if (req.headers['sec-fetch-site'] === 'cross-site') return false;
+  return true;
+}
+
 function sendJson(res, code, body) {
   const data = JSON.stringify(body);
   res.writeHead(code, {
     'content-type':'application/json; charset=utf-8',
     'cache-control':'no-store',
-    'x-content-type-options':'nosniff'
+    'x-content-type-options':'nosniff',
+    'referrer-policy':'no-referrer'
   });
   res.end(data);
 }
@@ -186,6 +209,8 @@ function serveIndex(res) {
     res.writeHead(200, {
       'content-type':'text/html; charset=utf-8',
       'cache-control':'no-store',
+      'x-content-type-options':'nosniff',
+      'referrer-policy':'no-referrer',
       'content-security-policy':"default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data:"
     });
     res.end(page);
@@ -204,8 +229,10 @@ if (process.argv.includes('--selftest')) {
 }
 
 const server = http.createServer((req,res) => {
+  if (!trustedLocalRequest(req)) return sendJson(res,403,{error:'LOCAL_ORIGIN_REQUIRED'});
+  if (req.method !== 'GET') return sendJson(res,405,{error:'READ_ONLY_GET_REQUIRED'});
   lastRequestAt = Date.now();
-  const u = new URL(req.url || '/', 'http://' + HOST);
+  const u = new URL(req.url || '/', LOCAL_ORIGIN);
   try {
     if (u.pathname === '/api/ping') return sendJson(res,200,{ok:true,at:new Date().toISOString(),mode:'READ_ONLY'});
     if (u.pathname === '/api/status') return sendJson(res,200,statusSnapshot());
@@ -232,6 +259,8 @@ const server = http.createServer((req,res) => {
   }
 });
 
+server.headersTimeout = 5000;
+server.requestTimeout = 5000;
 server.listen(PORT, HOST, () => {
   console.log('PC COMMAND WEB LAB: http://' + HOST + ':' + PORT);
   console.log('Mode: READ_ONLY | PC root: ' + PC_ROOT);
