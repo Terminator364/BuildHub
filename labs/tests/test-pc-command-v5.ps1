@@ -468,3 +468,130 @@ if([bool]$cfg.pslib_audit.lot8_local_software.external_module_required){throw 'l
 if(-not[bool]$cfg.pslib_audit.lot8_local_software.local_view_only){throw 'lot8 must remain Local-view only'}
 Write-Host 'PC_COMMAND_V105_LOCAL_SOFTWARE_OK'
 
+# FB-045 / v1.0.6: feedback ledger must stream with bounded retention; TRIM must remain read-only.
+if(-not[bool]$cfg.feedback_ledger.streaming_reader){throw 'feedback ledger streaming reader must be enabled'}
+if([int]$cfg.feedback_ledger.recent_window-ne12){throw 'feedback recent window must be 12'}
+if([int]$cfg.pslib_audit.relevance_coverage.catalog_entries-ne41){throw 'repo coverage catalog count must be 41'}
+if([int]$cfg.pslib_audit.relevance_coverage.covered_entries-ne41){throw 'repo relevance coverage must be 41/41'}
+if([string]$cfg.pslib_audit.relevance_coverage.status-ne'COMPLETE_FOR_CURRENT_PC_COMMAND_RELEVANCE'){throw 'repo coverage status mismatch'}
+
+$ioText=Get-Content (Join-Path $root 'pc-command\v5\lib\io.ps1') -Raw -Encoding UTF8
+$fbStart=$ioText.IndexOf('function Read-PcFeedbackLocal')
+$fbEnd=$ioText.IndexOf('function Start-PcUpdateProbe')
+if($fbStart-lt0 -or $fbEnd-le$fbStart){throw 'feedback reader source block missing'}
+$fbFn=$ioText.Substring($fbStart,$fbEnd-$fbStart)
+if($fbFn -notmatch '\[IO\.StreamReader\]'){throw 'feedback reader must use IO.StreamReader'}
+if($fbFn -match 'Get-Content\s+\$ledger'){throw 'feedback reader must not buffer the full ledger with Get-Content'}
+
+$tmp106=Join-Path $env:TEMP ('pc-command-feedback-stream-'+[guid]::NewGuid().ToString('N'))
+$fb106=Join-Path $tmp106 'pc-command\feedback'
+New-Item -ItemType Directory -Force -Path $fb106|Out-Null
+@'
+{"schema":"pc.command.feedback.index.v1","total_feedbacks":1,"unique_feedback_ids":1,"last_feedback_id":"OLD","policy":"A+B+C -> MERGE+REFINE+PRESERVE"}
+'@ | Set-Content (Join-Path $fb106 'feedback-index.json') -Encoding UTF8
+$lines106=New-Object System.Collections.Generic.List[string]
+1..30|ForEach-Object{
+  $n=$_
+  $at=[datetimeoffset]::Parse('2026-09-27T00:00:00Z').AddMinutes($n)
+  $obj=[ordered]@{schema='pc.command.feedback.v1';feedback_id=('FB-T'+('{0:D2}' -f $n));at=$at.ToString('o');status='RECORDED'}
+  $lines106.Add(($obj|ConvertTo-Json -Compress))
+}
+# Add an out-of-order duplicate ID with the newest timestamp: total remains exact,
+# unique count must not increase, and latest selection must follow timestamp.
+$lines106.Add(([ordered]@{schema='pc.command.feedback.v1';feedback_id='FB-T05';at='2026-09-27T02:00:00Z';status='RECORDED'}|ConvertTo-Json -Compress))
+[IO.File]::WriteAllLines((Join-Path $fb106 'feedback-ledger.jsonl'),$lines106,[Text.UTF8Encoding]::new($false))
+@'
+{"schema":"pc.command.version.trace.v1","versions":[]}
+'@ | Set-Content (Join-Path $fb106 'version-trace.json') -Encoding UTF8
+$streamPaths=[pscustomobject]@{StateRepo=$tmp106}
+$streamResult=Read-PcFeedbackLocal $streamPaths
+if($streamResult.Error){throw "streaming feedback reader error: $($streamResult.Error)"}
+if([string]$streamResult.LedgerReadMode-ne'streaming'){throw 'feedback reader mode must report streaming'}
+if([int]$streamResult.LedgerEventsRead-ne31){throw "feedback stream total wrong: $($streamResult.LedgerEventsRead)"}
+if([int]$streamResult.Index.total_feedbacks-ne31){throw 'feedback index total must reconcile to 31'}
+if([int]$streamResult.Index.unique_feedback_ids-ne30){throw "feedback unique count wrong: $($streamResult.Index.unique_feedback_ids)"}
+if([string]$streamResult.Index.last_feedback_id-ne'FB-T05'){throw "feedback latest timestamp selection wrong: $($streamResult.Index.last_feedback_id)"}
+if(@($streamResult.Recent).Count-ne12){throw "feedback recent retention must be 12, got $(@($streamResult.Recent).Count)"}
+if([string]$streamResult.Recent[-1].feedback_id-ne'FB-T05'){throw 'feedback recent window must end with newest timestamp event'}
+Remove-Item $tmp106 -Recurse -Force -ErrorAction SilentlyContinue
+
+if(-not(Get-Command ConvertFrom-PcTrimOutput -ErrorAction SilentlyContinue)){throw 'TRIM parser missing'}
+if(-not(Get-Command Get-PcTrimSnapshot -ErrorAction SilentlyContinue)){throw 'TRIM snapshot missing'}
+$parsedTrim=@(ConvertFrom-PcTrimOutput -InputLine @('NTFS DisableDeleteNotify = 0 (localized text)','ReFS DisableDeleteNotify = 1 (localized text)'))
+if($parsedTrim.Count-ne2){throw 'TRIM parser count mismatch'}
+if([string]$parsedTrim[0].FileSystem-ne'NTFS' -or -not[bool]$parsedTrim[0].Enabled){throw 'TRIM parser must map value 0 to enabled'}
+if([string]$parsedTrim[1].FileSystem-ne'ReFS' -or [bool]$parsedTrim[1].Enabled){throw 'TRIM parser must map nonzero to disabled'}
+$trim=Get-PcTrimSnapshot -TtlSeconds 0
+if(-not[bool]$trim.ReadOnly){throw 'TRIM snapshot must be read-only'}
+if([bool]$trim.NetworkTrafficGenerated){throw 'TRIM snapshot must generate zero network traffic'}
+if([bool]$trim.SettingChanged){throw 'TRIM snapshot must not change settings'}
+if([bool]$trim.SmartQueryUsed){throw 'TRIM baseline must not use legacy SMART query'}
+if([bool]$trim.FilesystemEventScanUsed){throw 'TRIM baseline must not use slow ambiguous filesystem event scan'}
+if([bool]$trim.ExternalModuleRequired){throw 'TRIM snapshot must not require external modules'}
+$trimStart=$ioText.IndexOf('function Get-PcTrimSnapshot')
+if($trimStart-lt0){throw 'TRIM snapshot source block missing'}
+$trimFn=$ioText.Substring($trimStart)
+foreach($forbidden in @('behavior set','Set-CimInstance','Get-StorageReliabilityCounter','MSStorageDriver_FailurePredictStatus','Get-WinEvent')){
+  if($trimFn -match [regex]::Escape($forbidden)){throw "forbidden TRIM baseline primitive present: $forbidden"}
+}
+if(-not[bool]$cfg.pslib_audit.lot9_streaming_trim.trim_read_only){throw 'lot9 TRIM must be read-only'}
+if([bool]$cfg.pslib_audit.lot9_streaming_trim.trim_network_traffic){throw 'lot9 TRIM network traffic must be false'}
+if([bool]$cfg.pslib_audit.lot9_streaming_trim.filesystem_event_baseline){throw 'lot9 slow filesystem event baseline must be disabled'}
+if([bool]$cfg.pslib_audit.lot9_streaming_trim.legacy_smart_baseline){throw 'lot9 legacy SMART baseline must be disabled'}
+if([bool]$cfg.pslib_audit.lot9_streaming_trim.resident_monitoring_added){throw 'lot9 resident monitoring must remain absent'}
+
+if(-not(Get-Command Get-PcBoundedRecentSystemErrors -ErrorAction SilentlyContinue)){throw 'bounded recent System error helper missing'}
+$diagStart106=$ioText.IndexOf('function Get-PcBoundedRecentSystemErrors')
+$diagEnd106=$ioText.IndexOf('function Get-PcLocalNetworkSnapshot')
+if($diagStart106-lt0 -or $diagEnd106-le$diagStart106){throw 'bounded diagnostics source block missing'}
+$diagFn106=$ioText.Substring($diagStart106,$diagEnd106-$diagStart106)
+if($diagFn106 -match 'Get-WinEvent'){throw 'baseline diagnostics must not use unbounded synchronous Get-WinEvent'}
+if($diagFn106 -notmatch 'wevtutil\.exe'){throw 'bounded diagnostics must use wevtutil child process'}
+if($diagFn106 -notmatch 'WaitForExit\(\$timeout\)'){throw 'bounded diagnostics must enforce child-process timeout'}
+$bounded106=Get-PcBoundedRecentSystemErrors -RecentErrorHours 6 -MaxRecentErrors 5 -TimeoutMs 2000
+if([string]$bounded106.Source-ne'wevtutil-bounded'){throw 'bounded diagnostics source marker mismatch'}
+if([int]$bounded106.TimeoutMs-ne2000){throw 'bounded diagnostics timeout must be 2000 ms'}
+if(@($bounded106.Items).Count-gt5){throw 'bounded diagnostics returned too many events'}
+if([string](Get-PcReadOnlyDiagnostics -TtlSeconds 0 -RecentErrorHours 6 -MaxRecentErrors 5).RecentSystemErrorsSource-ne'wevtutil-bounded'){throw 'read-only diagnostics must use bounded event source'}
+
+
+# Robust Windows event XML from wevtutil: multiple standalone documents with declarations.
+$sampleEvents106=@'
+<?xml version="1.0" encoding="utf-8"?>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"><System><Provider Name="Disk"/><EventID>7</EventID><TimeCreated SystemTime="2026-10-08T10:00:00.000Z"/></System></Event>
+<?xml version="1.0" encoding="utf-8"?>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"><System><Provider Name="Ntfs"/><EventID>55</EventID><TimeCreated SystemTime="2026-10-08T10:01:00.000Z"/></System></Event>
+'@
+$eventParsed106=@(ConvertFrom-PcWevtutilXml -RawXml $sampleEvents106 -MaxItems 2)
+if($eventParsed106.Count-ne2){throw 'wevtutil multi-document parser must return 2 events'}
+if([int]$eventParsed106[0].Id-ne7 -or [string]$eventParsed106[0].ProviderName-ne'Disk'){throw 'wevtutil event metadata extraction invalid'}
+if([int]$eventParsed106[1].Id-ne55 -or [string]$eventParsed106[1].ProviderName-ne'Ntfs'){throw 'wevtutil second event parsing invalid'}
+if(@(ConvertFrom-PcWevtutilXml -RawXml $sampleEvents106 -MaxItems 1).Count-ne1){throw 'wevtutil parser must cap returned event count'}
+if($diagFn106 -notmatch 'ReadToEndAsync\(\)'){throw 'wevtutil output must be asynchronously drained to avoid pipe saturation'}
+Write-Host 'PC_COMMAND_V106_WEVTUTIL_XML_ASYNC_OK'
+
+# Synthetic large-ledger test on Windows CI, independent of MBMPC.
+$stressRoot106=Join-Path $env:TEMP ('pc-command-ledger-stress-'+[guid]::NewGuid().ToString('N'))
+$stressFeedback106=Join-Path $stressRoot106 'pc-command\feedback'
+New-Item -ItemType Directory -Force -Path $stressFeedback106|Out-Null
+$stressFile106=Join-Path $stressFeedback106 'feedback-ledger.jsonl'
+$stressWriter106=New-Object IO.StreamWriter($stressFile106,$false,[Text.UTF8Encoding]::new($false))
+try{
+  for($n=1;$n-le3000;$n++){
+    $id='FB-STRESS-'+('{0:D5}' -f $n)
+    $obj=[ordered]@{schema='pc.command.feedback.v1';feedback_id=$id;at=([datetimeoffset]::Parse('2026-10-08T00:00:00Z').AddSeconds($n)).ToString('o');evidence='synthetic'}
+    $stressWriter106.WriteLine(($obj|ConvertTo-Json -Compress))
+  }
+}finally{$stressWriter106.Dispose()}
+$stressWatch106=[Diagnostics.Stopwatch]::StartNew()
+$stressResult106=Read-PcFeedbackLocal ([pscustomobject]@{StateRepo=$stressRoot106})
+$stressWatch106.Stop()
+if($stressResult106.Error){throw ('stress ledger: '+$stressResult106.Error)}
+if([int]$stressResult106.Index.total_feedbacks-ne3000 -or [int]$stressResult106.Index.unique_feedback_ids-ne3000){throw 'stress ledger total/unique incorrect'}
+if(@($stressResult106.Recent).Count-ne12){throw 'stress ledger must retain 12 recent entries only'}
+if([int]$stressResult106.LedgerRecentRetained-ne12){throw 'stress recent retention telemetry mismatch'}
+Write-Host ('PC_COMMAND_V106_STREAM_3000_OK | ms='+[math]::Round($stressWatch106.Elapsed.TotalMilliseconds,1))
+Remove-Item $stressRoot106 -Recurse -Force -ErrorAction SilentlyContinue
+
+Write-Host 'PC_COMMAND_V106_STREAMING_TRIM_OK'
+

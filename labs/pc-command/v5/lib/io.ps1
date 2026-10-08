@@ -23,6 +23,8 @@ $script:PcPowerSnapshotCache = $null
 $script:PcPowerSnapshotCacheAt = [datetime]::MinValue
 $script:PcSoftwareInventoryCache = $null
 $script:PcSoftwareInventoryCacheAt = [datetime]::MinValue
+$script:PcTrimSnapshotCache = $null
+$script:PcTrimSnapshotCacheAt = [datetime]::MinValue
 
 function Initialize-PcPaths {
   param([string]$Root)
@@ -206,72 +208,95 @@ function Get-PcUpdateInfo {
 function Read-PcFeedbackLocal {
   param($Paths)
   $base=Join-Path $Paths.StateRepo 'pc-command\feedback'
-  $errors=@()
+  $errors=New-Object System.Collections.Generic.List[string]
   $index=$null
   $versions=$null
-  $events=@()
+  $total=0
+  $unique=New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
+  $recentCandidates=New-Object System.Collections.Generic.List[object]
+  $latestEvent=$null
+  $latestAt=[datetimeoffset]::MinValue
 
   $idx=Join-Path $base 'feedback-index.json'
   if(Test-Path $idx){
     try{$index=Get-Content $idx -Raw -Encoding UTF8|ConvertFrom-Json}
-    catch{$errors+=('index: '+$_.Exception.Message)}
+    catch{$errors.Add('index: '+$_.Exception.Message)}
   }
 
   $ledger=Join-Path $base 'feedback-ledger.jsonl'
   if(Test-Path $ledger){
+    $reader=$null
     try{
-      foreach($line in @(Get-Content $ledger -Encoding UTF8 -ErrorAction Stop)){
+      $reader=[IO.StreamReader]::new($ledger,[Text.Encoding]::UTF8,$true,4096)
+      while(-not$reader.EndOfStream){
+        $line=$reader.ReadLine()
         if([string]::IsNullOrWhiteSpace([string]$line)){continue}
-        try{$events+=($line|ConvertFrom-Json)}
-        catch{$errors+=('ledger-line: '+$_.Exception.Message)}
+        try{
+          $event=$line|ConvertFrom-Json
+          $total++
+          $id=[string]$event.feedback_id
+          if(-not[string]::IsNullOrWhiteSpace($id)){$null=$unique.Add($id)}
+          try{$at=[datetimeoffset]::Parse([string]$event.at)}catch{$at=[datetimeoffset]::MinValue}
+          if($at-ge$latestAt){$latestAt=$at;$latestEvent=$event}
+          $recentCandidates.Add([pscustomobject]@{At=$at;Event=$event})
+          if($recentCandidates.Count-gt24){
+            $keep=@($recentCandidates|Sort-Object At -Descending|Select-Object -First 12)
+            $recentCandidates=New-Object System.Collections.Generic.List[object]
+            foreach($x in $keep){$recentCandidates.Add($x)}
+          }
+        }catch{
+          if($errors.Count-lt10){$errors.Add('ledger-line: '+$_.Exception.Message)}
+        }
       }
-    }catch{$errors+=('ledger: '+$_.Exception.Message)}
+    }catch{
+      $errors.Add('ledger: '+$_.Exception.Message)
+    }finally{
+      if($reader){$reader.Dispose()}
+    }
   }
 
   $vt=Join-Path $base 'version-trace.json'
   if(Test-Path $vt){
     try{$versions=Get-Content $vt -Raw -Encoding UTF8|ConvertFrom-Json}
-    catch{$errors+=('versions: '+$_.Exception.Message)}
+    catch{$errors.Add('versions: '+$_.Exception.Message)}
   }
 
-  # Reconcile the human pointer from the machine ledger instead of trusting
-  # a stale index. The ledger remains the source of truth for chronology.
-  if($events.Count-gt0){
-    $latest=@($events|Sort-Object {
-      try{[datetimeoffset]::Parse([string]$_.at)}catch{[datetimeoffset]::MinValue}
-    }|Select-Object -Last 1)
+  # Reconcile the human pointer from the machine ledger without buffering
+  # the full JSONL file. Total, unique IDs and latest timestamp remain exact.
+  if($total-gt0 -and $latestEvent){
     if(-not$index){
       $index=[pscustomobject]@{
         schema='pc.command.feedback.index.derived.v1'
-        total_feedbacks=$events.Count
-        unique_feedback_ids=@($events.feedback_id|Sort-Object -Unique).Count
-        last_feedback_id=[string]$latest[0].feedback_id
-        last_feedback_at=[string]$latest[0].at
+        total_feedbacks=$total
+        unique_feedback_ids=$unique.Count
+        last_feedback_id=[string]$latestEvent.feedback_id
+        last_feedback_at=[string]$latestEvent.at
         policy='A+B+C -> MERGE+REFINE+PRESERVE'
       }
     }else{
-      $index.total_feedbacks=$events.Count
+      $index.total_feedbacks=$total
       if($index.PSObject.Properties.Name -contains 'unique_feedback_ids'){
-        $index.unique_feedback_ids=@($events.feedback_id|Sort-Object -Unique).Count
+        $index.unique_feedback_ids=$unique.Count
       }
-      $index.last_feedback_id=[string]$latest[0].feedback_id
+      $index.last_feedback_id=[string]$latestEvent.feedback_id
       if($index.PSObject.Properties.Name -contains 'last_feedback_at'){
-        $index.last_feedback_at=[string]$latest[0].at
+        $index.last_feedback_at=[string]$latestEvent.at
       }else{
-        $index|Add-Member -NotePropertyName last_feedback_at -NotePropertyValue ([string]$latest[0].at) -Force
+        $index|Add-Member -NotePropertyName last_feedback_at -NotePropertyValue ([string]$latestEvent.at) -Force
       }
     }
   }
 
-  $recent=@($events|Sort-Object {
-    try{[datetimeoffset]::Parse([string]$_.at)}catch{[datetimeoffset]::MinValue}
-  }|Select-Object -Last 12)
+  $recent=@($recentCandidates|Sort-Object At|Select-Object -Last 12|ForEach-Object {$_.Event})
 
   return [pscustomobject]@{
     Index=$index
     Recent=$recent
     Versions=$versions
     Error=if($errors.Count){$errors -join ' | '}else{$null}
+    LedgerReadMode='streaming'
+    LedgerEventsRead=$total
+    LedgerRecentRetained=$recent.Count
   }
 }
 
@@ -461,6 +486,123 @@ function Get-PcPowerShellSourceCatalog {
   }
 }
 
+function ConvertFrom-PcWevtutilXml {
+  param([string]$RawXml,[int]$MaxItems=5)
+  if([string]::IsNullOrWhiteSpace($RawXml)){return @()}
+  $limit=[math]::Max(0,[math]::Min(20,$MaxItems))
+  if($limit-eq0){return @()}
+  # wevtutil can concatenate separate XML documents, each with its declaration.
+  $body=[regex]::Replace($RawXml,'(?is)<\?xml[^>]*\?>','')
+  $body=$body.Trim([char]0xFEFF).Trim()
+  if([string]::IsNullOrWhiteSpace($body)){return @()}
+  $doc=New-Object System.Xml.XmlDocument
+  $doc.XmlResolver=$null
+  $doc.LoadXml('<Events>'+$body+'</Events>')
+  $ns=New-Object Xml.XmlNamespaceManager($doc.NameTable)
+  $ns.AddNamespace('e','http://schemas.microsoft.com/win/2004/08/events/event')
+  $items=@()
+  foreach($node in @($doc.SelectNodes('/Events/e:Event',$ns))){
+    $sys=$node.SelectSingleNode('e:System',$ns)
+    if(-not$sys){continue}
+    $providerNode=$sys.SelectSingleNode('e:Provider',$ns)
+    $idNode=$sys.SelectSingleNode('e:EventID',$ns)
+    $timeNode=$sys.SelectSingleNode('e:TimeCreated',$ns)
+    $provider=if($providerNode){[string]$providerNode.GetAttribute('Name')}else{'?'}
+    $id=if($idNode){[int]$idNode.InnerText}else{0}
+    $time=$null
+    if($timeNode){
+      $rawTime=[string]$timeNode.GetAttribute('SystemTime')
+      if($rawTime){try{$time=[datetimeoffset]::Parse($rawTime).LocalDateTime}catch{}}
+    }
+    $items += [pscustomobject]@{
+      TimeCreated=$time
+      Id=$id
+      ProviderName=$provider
+      LevelDisplayName='Erreur'
+    }
+    if($items.Count-ge$limit){break}
+  }
+  return @($items)
+}
+
+function Get-PcBoundedRecentSystemErrors {
+  param(
+    [int]$RecentErrorHours=6,
+    [int]$MaxRecentErrors=5,
+    [int]$TimeoutMs=2000
+  )
+
+  $limit=[math]::Max(0,[math]::Min(20,$MaxRecentErrors))
+  $timeout=[math]::Max(250,[math]::Min(5000,$TimeoutMs))
+  if($limit-eq0){
+    return [pscustomobject]@{
+      Items=@();TimedOut=$false;DurationMs=0;ExitCode=0;Error=$null
+      Source='wevtutil-bounded';TimeoutMs=$timeout
+    }
+  }
+
+  $errors=New-Object System.Collections.Generic.List[string]
+  $items=@()
+  $timedOut=$false
+  $exitCode=$null
+  $sw=[Diagnostics.Stopwatch]::StartNew()
+  $proc=$null
+  try{
+    $wevtutil=Join-Path $env:WINDIR 'System32\wevtutil.exe'
+    if(-not(Test-Path -LiteralPath $wevtutil)){throw 'wevtutil absent'}
+    $hours=[math]::Max(1,[math]::Min(168,[math]::Abs($RecentErrorHours)))
+    $windowMs=[int64]$hours*60*60*1000
+    $query='*[System[(Level=2) and TimeCreated[timediff(@SystemTime) <= '+$windowMs+']]]'
+
+    $psi=New-Object Diagnostics.ProcessStartInfo
+    $psi.FileName=$wevtutil
+    $psi.Arguments='qe System /q:"'+$query+'" /c:'+$limit+' /rd:true /f:xml'
+    $psi.UseShellExecute=$false
+    $psi.CreateNoWindow=$true
+    $psi.RedirectStandardOutput=$true
+    $psi.RedirectStandardError=$true
+
+    $proc=[Diagnostics.Process]::Start($psi)
+    $stdoutTask=$proc.StandardOutput.ReadToEndAsync()
+    $stderrTask=$proc.StandardError.ReadToEndAsync()
+    if(-not$proc.WaitForExit($timeout)){
+      $timedOut=$true
+      try{$proc.Kill()}catch{}
+      try{$null=$proc.WaitForExit(250)}catch{}
+    }
+
+    $raw=''
+    $stderr=''
+    if($stdoutTask.Wait(500)){$raw=[string]$stdoutTask.Result}
+    else{$errors.Add('event stdout read timeout')}
+    if($stderrTask.Wait(500)){$stderr=[string]$stderrTask.Result}
+    else{$errors.Add('event stderr read timeout')}
+    if(-not$timedOut){$exitCode=$proc.ExitCode}
+    if($timedOut){
+      $errors.Add('events timeout '+$timeout+' ms')
+    }elseif($exitCode-ne0){
+      $errors.Add('wevtutil exit '+$exitCode+$(if($stderr){': '+$stderr.Trim()}else{''}))
+    }elseif(-not[string]::IsNullOrWhiteSpace($raw)){
+      try{$items=@(ConvertFrom-PcWevtutilXml -RawXml $raw -MaxItems $limit)}
+      catch{$errors.Add('events parse: '+$_.Exception.Message)}
+    }
+  }catch{$errors.Add('events: '+$_.Exception.Message)}
+  finally{
+    if($proc){$proc.Dispose()}
+    $sw.Stop()
+  }
+
+  return [pscustomobject]@{
+    Items=@($items|Select-Object -First $limit)
+    TimedOut=$timedOut
+    DurationMs=[math]::Round($sw.Elapsed.TotalMilliseconds,1)
+    ExitCode=$exitCode
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    Source='wevtutil-bounded'
+    TimeoutMs=$timeout
+  }
+}
+
 function Get-PcReadOnlyDiagnostics {
   param(
     [int]$TtlSeconds=30,
@@ -512,14 +654,9 @@ function Get-PcReadOnlyDiagnostics {
     }catch{$errors.Add('os: '+$_.Exception.Message)}
   }
 
-  $recent=@()
-  try{
-    if($MaxRecentErrors-gt0){
-      $since=(Get-Date).AddHours(-[math]::Abs($RecentErrorHours))
-      $recent=@(Get-WinEvent -FilterHashtable @{LogName='System';Level=2;StartTime=$since} -MaxEvents $MaxRecentErrors -ErrorAction SilentlyContinue |
-        Select-Object TimeCreated,Id,ProviderName,LevelDisplayName)
-    }
-  }catch{$errors.Add('events: '+$_.Exception.Message)}
+  $eventProbe=Get-PcBoundedRecentSystemErrors -RecentErrorHours $RecentErrorHours -MaxRecentErrors $MaxRecentErrors -TimeoutMs 2000
+  $recent=@($eventProbe.Items)
+  if($eventProbe.Error){$errors.Add($eventProbe.Error)}
 
   $result=[pscustomobject]@{
     ObservedAt=$now
@@ -531,12 +668,16 @@ function Get-PcReadOnlyDiagnostics {
     RecentSystemErrors=$recent
     RecentErrorHours=$RecentErrorHours
     MaxRecentErrors=$MaxRecentErrors
+    RecentSystemErrorsTimedOut=[bool]$eventProbe.TimedOut
+    RecentSystemErrorsDurationMs=$eventProbe.DurationMs
+    RecentSystemErrorsSource=[string]$eventProbe.Source
+    RecentSystemErrorsTimeoutMs=$eventProbe.TimeoutMs
     Error=if($errors.Count){$errors -join ' | '}else{$null}
     ReadOnly=$true
     NetworkTrafficGenerated=$false
     DnsCacheModified=$false
     ExternalModuleRequired=$false
-    SourcePolicy='native bounded read-only'
+    SourcePolicy='native bounded read-only; event query hard-timeout'
   }
 
   $script:PcReadOnlyDiagCache=$result
@@ -848,6 +989,66 @@ function Get-PcLocalSoftwareInventory {
   }
   $script:PcSoftwareInventoryCache=$result
   $script:PcSoftwareInventoryCacheAt=$now
+  return $result
+}
+
+function ConvertFrom-PcTrimOutput {
+  param([string[]]$InputLine)
+  $items=@()
+  foreach($line in @($InputLine)){
+    $text=[string]$line
+    if([string]::IsNullOrWhiteSpace($text)){continue}
+    $trimmed=$text.Trim()
+    if($trimmed -match '^(.+?)\s+DisableDeleteNotify\s*=\s*(\d+)'){
+      $items += [pscustomobject]@{
+        FileSystem=([string]$Matches[1]).Trim()
+        Enabled=([int]$Matches[2]-eq0)
+        Value=[int]$Matches[2]
+      }
+    }
+  }
+  return @($items)
+}
+
+function Get-PcTrimSnapshot {
+  param([int]$TtlSeconds=300)
+  $now=Get-Date
+  if($script:PcTrimSnapshotCache -and $TtlSeconds -gt0 -and
+     (($now-$script:PcTrimSnapshotCacheAt).TotalSeconds -lt $TtlSeconds)){
+    return $script:PcTrimSnapshotCache
+  }
+
+  $errors=New-Object System.Collections.Generic.List[string]
+  $items=@()
+  $exitCode=$null
+  try{
+    $fsutil=Join-Path $env:WINDIR 'System32\fsutil.exe'
+    if(Test-Path -LiteralPath $fsutil){
+      $raw=@(& $fsutil behavior query DisableDeleteNotify 2>&1)
+      $exitCode=$LASTEXITCODE
+      $items=@(ConvertFrom-PcTrimOutput -InputLine $raw)
+      if($exitCode-ne0){$errors.Add('fsutil exit '+$exitCode)}
+    }else{
+      $errors.Add('fsutil absent')
+    }
+  }catch{$errors.Add('trim: '+$_.Exception.Message)}
+
+  $result=[pscustomobject]@{
+    ObservedAt=$now
+    Items=$items
+    ExitCode=$exitCode
+    ReadOnly=$true
+    NetworkTrafficGenerated=$false
+    SettingChanged=$false
+    SmartQueryUsed=$false
+    FilesystemEventScanUsed=$false
+    ExternalModuleRequired=$false
+    CacheSeconds=$TtlSeconds
+    Error=if($errors.Count){$errors -join ' | '}else{$null}
+    SourcePolicy='fsutil behavior query DisableDeleteNotify only'
+  }
+  $script:PcTrimSnapshotCache=$result
+  $script:PcTrimSnapshotCacheAt=$now
   return $result
 }
 

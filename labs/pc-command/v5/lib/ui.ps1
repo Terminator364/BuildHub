@@ -549,6 +549,7 @@ function Write-PcHealth {
   $net=Get-PcLocalNetworkSnapshot
   $startup=Get-PcStartupRamSnapshot
   $power=Get-PcPowerSnapshot
+  $trim=Get-PcTrimSnapshot
   Write-PcLine 'SANTE / DIAGNOSTIC' -ForegroundColor Cyan
   Write-PcLine ''
   Write-PcLine ('Score : '+$h.Score+'/100 | '+$h.Level) -ForegroundColor $h.Color
@@ -573,6 +574,13 @@ function Write-PcHealth {
     $col=if([double]$d.FreePercent-lt10){'Yellow'}else{'Gray'}
     Write-PcLine ('Disque '+$d.Name+' : '+$d.FreeGB+' GB libres / '+$d.TotalGB+' GB ('+$d.FreePercent+'%)') $col
   }
+  if(@($trim.Items).Count){
+    $trimText=@($trim.Items|ForEach-Object {([string]$_.FileSystem)+' '+$(if([bool]$_.Enabled){'ON'}else{'OFF'})}) -join ' | '
+    $trimWarn=@($trim.Items|Where-Object {-not[bool]$_.Enabled}).Count -gt 0
+    Write-PcLine ('TRIM stockage : '+$trimText+' | lecture seule') $(if($trimWarn){'Yellow'}else{'Gray'})
+  }else{
+    Write-PcLine 'TRIM stockage : statut indisponible | lecture seule' DarkGray
+  }
   Write-PcLine ('Demarrage : '+@($startup.RunEntries).Count+' Run/RunOnce | '+@($startup.StartupFolderItems).Count+' item(s) dossier Startup | lecture seule')
   Write-PcLine 'Top RAM groupes :' DarkCyan
   foreach($p in @($startup.TopMemoryProcesses|Select-Object -First 5)){
@@ -581,7 +589,8 @@ function Write-PcHealth {
   $recentCount=@($diag.RecentSystemErrors).Count
   Write-PcLine ('Erreurs System recentes : '+$recentCount+' max '+$diag.MaxRecentErrors+' sur '+$diag.RecentErrorHours+' h')
   foreach($e in @($diag.RecentSystemErrors|Select-Object -First 3)){
-    Write-PcLine ('  '+$e.TimeCreated.ToString('HH:mm')+' | '+$e.ProviderName+' | ID '+$e.Id) DarkGray
+    $etime=if($e.TimeCreated){$e.TimeCreated.ToString('HH:mm')}else{'--:--'}
+    Write-PcLine ('  '+$etime+' | '+$e.ProviderName+' | ID '+$e.Id) DarkGray
   }
   Write-PcLine ('PowerShell : '+$caps.Engine+' | WinGet '+$(if($caps.WinGetDetected){'OK'}else{'ABSENT'})+' | pwsh7 '+$(if($caps.Pwsh7Detected){'DETECTE'}else{'DIFFERE'}))
   if(-not$catalog.Error){Write-PcLine ('Sources PS : '+$catalog.Total+' auditees | zero installation runtime automatique') DarkCyan}
@@ -589,6 +598,7 @@ function Write-PcHealth {
   if($net.Error){Write-PcLine ('Snapshot reseau partiel : '+$net.Error) Yellow}
   if($startup.Error){Write-PcLine ('Snapshot demarrage/RAM partiel : '+$startup.Error) Yellow}
   if($power.Error){Write-PcLine ('Snapshot alimentation partiel : '+$power.Error) Yellow}
+  if($trim.Error){Write-PcLine ('Snapshot TRIM partiel : '+$trim.Error) Yellow}
   if(@($h.Reasons).Count-eq0 -and $driveWarn.Count-eq0){Write-PcLine 'Aucune anomalie prioritaire detectee.' -ForegroundColor Green}
   else{
     Write-PcLine 'Points a surveiller :' -ForegroundColor Yellow
