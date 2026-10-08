@@ -24,7 +24,7 @@ Node built-in HTTP adapter
 127.0.0.1:8791
              |
              v
-Existing browser tab
+Dedicated Edge application window (isolated browser profile)
 ```
 
 Runtime constraints:
@@ -39,6 +39,15 @@ Runtime constraints:
 - Canonical state remains PowerShell/GitHub state.
 - Browser/API reads are bounded and cache-first.
 - server stops after 5 minutes without a request.
+
+## WEB LAB 0.2.7 — validation gates
+
+- L’interface distingue **checkpoint historique** et **exécution réellement vérifiée**. Un signal absent, ancien de plus de 15 minutes, ou horodaté excessivement dans le futur est marqué non confirmé.
+- Les indicateurs de progression représentent le dernier checkpoint, jamais une progression live garantie.
+- API locale: bind `127.0.0.1:8791`, host/origin strict, méthodes GET uniquement, aucun endpoint d’écriture et aucun accès réseau externe dans les vues.
+- Les tests isolés `node --test labs/tests/test-pc-command-web-lab.mjs` couvrent le faux live, la navigation/traversal, le contrôle d’origine, la lecture seule, l’intégrité du ledger et la syntaxe JavaScript de la vue.
+- CI Windows: un seul job ciblé, avec parsing PowerShell du launcher. Pas de dépendances npm ajoutées.
+- Déploiement **en attente de la preuve de terrain** sur MBMPC; ne pas confondre CI verte et bouton Windows vérifié. La dernière preuve terrain porte sur WEB LAB 0.2.5, pas 0.2.7.
 
 ## Human surfaces
 
