@@ -486,6 +486,45 @@ function Get-PcPowerShellSourceCatalog {
   }
 }
 
+function ConvertFrom-PcWevtutilXml {
+  param([string]$RawXml,[int]$MaxItems=5)
+  if([string]::IsNullOrWhiteSpace($RawXml)){return @()}
+  $limit=[math]::Max(0,[math]::Min(20,$MaxItems))
+  if($limit-eq0){return @()}
+  # wevtutil can concatenate separate XML documents, each with its declaration.
+  $body=[regex]::Replace($RawXml,'(?is)<\?xml[^>]*\?>','')
+  $body=$body.Trim([char]0xFEFF).Trim()
+  if([string]::IsNullOrWhiteSpace($body)){return @()}
+  $doc=New-Object System.Xml.XmlDocument
+  $doc.XmlResolver=$null
+  $doc.LoadXml('<Events>'+$body+'</Events>')
+  $ns=New-Object Xml.XmlNamespaceManager($doc.NameTable)
+  $ns.AddNamespace('e','http://schemas.microsoft.com/win/2004/08/events/event')
+  $items=@()
+  foreach($node in @($doc.SelectNodes('/Events/e:Event',$ns))){
+    $sys=$node.SelectSingleNode('e:System',$ns)
+    if(-not$sys){continue}
+    $providerNode=$sys.SelectSingleNode('e:Provider',$ns)
+    $idNode=$sys.SelectSingleNode('e:EventID',$ns)
+    $timeNode=$sys.SelectSingleNode('e:TimeCreated',$ns)
+    $provider=if($providerNode){[string]$providerNode.GetAttribute('Name')}else{'?'}
+    $id=if($idNode){[int]$idNode.InnerText}else{0}
+    $time=$null
+    if($timeNode){
+      $rawTime=[string]$timeNode.GetAttribute('SystemTime')
+      if($rawTime){try{$time=[datetimeoffset]::Parse($rawTime).LocalDateTime}catch{}}
+    }
+    $items += [pscustomobject]@{
+      TimeCreated=$time
+      Id=$id
+      ProviderName=$provider
+      LevelDisplayName='Erreur'
+    }
+    if($items.Count-ge$limit){break}
+  }
+  return @($items)
+}
+
 function Get-PcBoundedRecentSystemErrors {
   param(
     [int]$RecentErrorHours=6,
@@ -524,47 +563,28 @@ function Get-PcBoundedRecentSystemErrors {
     $psi.RedirectStandardError=$true
 
     $proc=[Diagnostics.Process]::Start($psi)
+    $stdoutTask=$proc.StandardOutput.ReadToEndAsync()
+    $stderrTask=$proc.StandardError.ReadToEndAsync()
     if(-not$proc.WaitForExit($timeout)){
       $timedOut=$true
       try{$proc.Kill()}catch{}
       try{$null=$proc.WaitForExit(250)}catch{}
     }
 
-    $raw=$proc.StandardOutput.ReadToEnd()
-    $stderr=$proc.StandardError.ReadToEnd()
+    $raw=''
+    $stderr=''
+    if($stdoutTask.Wait(500)){$raw=[string]$stdoutTask.Result}
+    else{$errors.Add('event stdout read timeout')}
+    if($stderrTask.Wait(500)){$stderr=[string]$stderrTask.Result}
+    else{$errors.Add('event stderr read timeout')}
     if(-not$timedOut){$exitCode=$proc.ExitCode}
     if($timedOut){
       $errors.Add('events timeout '+$timeout+' ms')
     }elseif($exitCode-ne0){
       $errors.Add('wevtutil exit '+$exitCode+$(if($stderr){': '+$stderr.Trim()}else{''}))
     }elseif(-not[string]::IsNullOrWhiteSpace($raw)){
-      try{
-        [xml]$doc='<Events>'+$raw+'</Events>'
-        $ns=New-Object Xml.XmlNamespaceManager($doc.NameTable)
-        $ns.AddNamespace('e','http://schemas.microsoft.com/win/2004/08/events/event')
-        foreach($node in @($doc.SelectNodes('/Events/e:Event',$ns))){
-          $sys=$node.SelectSingleNode('e:System',$ns)
-          if(-not$sys){continue}
-          $providerNode=$sys.SelectSingleNode('e:Provider',$ns)
-          $idNode=$sys.SelectSingleNode('e:EventID',$ns)
-          $timeNode=$sys.SelectSingleNode('e:TimeCreated',$ns)
-          $provider=if($providerNode){[string]$providerNode.GetAttribute('Name')}else{'?'}
-          $id=if($idNode){[int]$idNode.InnerText}else{0}
-          $time=$null
-          if($timeNode){
-            $rawTime=[string]$timeNode.GetAttribute('SystemTime')
-            if($rawTime){
-              try{$time=[datetimeoffset]::Parse($rawTime).LocalDateTime}catch{}
-            }
-          }
-          $items += [pscustomobject]@{
-            TimeCreated=$time
-            Id=$id
-            ProviderName=$provider
-            LevelDisplayName='Erreur'
-          }
-        }
-      }catch{$errors.Add('events parse: '+$_.Exception.Message)}
+      try{$items=@(ConvertFrom-PcWevtutilXml -RawXml $raw -MaxItems $limit)}
+      catch{$errors.Add('events parse: '+$_.Exception.Message)}
     }
   }catch{$errors.Add('events: '+$_.Exception.Message)}
   finally{

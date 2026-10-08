@@ -554,5 +554,44 @@ if([int]$bounded106.TimeoutMs-ne2000){throw 'bounded diagnostics timeout must be
 if(@($bounded106.Items).Count-gt5){throw 'bounded diagnostics returned too many events'}
 if([string](Get-PcReadOnlyDiagnostics -TtlSeconds 0 -RecentErrorHours 6 -MaxRecentErrors 5).RecentSystemErrorsSource-ne'wevtutil-bounded'){throw 'read-only diagnostics must use bounded event source'}
 
+
+# Robust Windows event XML from wevtutil: multiple standalone documents with declarations.
+$sampleEvents106=@'
+<?xml version="1.0" encoding="utf-8"?>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"><System><Provider Name="Disk"/><EventID>7</EventID><TimeCreated SystemTime="2026-10-08T10:00:00.000Z"/></System></Event>
+<?xml version="1.0" encoding="utf-8"?>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"><System><Provider Name="Ntfs"/><EventID>55</EventID><TimeCreated SystemTime="2026-10-08T10:01:00.000Z"/></System></Event>
+'@
+$eventParsed106=@(ConvertFrom-PcWevtutilXml -RawXml $sampleEvents106 -MaxItems 2)
+if($eventParsed106.Count-ne2){throw 'wevtutil multi-document parser must return 2 events'}
+if([int]$eventParsed106[0].Id-ne7 -or [string]$eventParsed106[0].ProviderName-ne'Disk'){throw 'wevtutil event metadata extraction invalid'}
+if([int]$eventParsed106[1].Id-ne55 -or [string]$eventParsed106[1].ProviderName-ne'Ntfs'){throw 'wevtutil second event parsing invalid'}
+if(@(ConvertFrom-PcWevtutilXml -RawXml $sampleEvents106 -MaxItems 1).Count-ne1){throw 'wevtutil parser must cap returned event count'}
+if($diagFn106 -notmatch 'ReadToEndAsync\(\)'){throw 'wevtutil output must be asynchronously drained to avoid pipe saturation'}
+Write-Host 'PC_COMMAND_V106_WEVTUTIL_XML_ASYNC_OK'
+
+# Synthetic large-ledger test on Windows CI, independent of MBMPC.
+$stressRoot106=Join-Path $env:TEMP ('pc-command-ledger-stress-'+[guid]::NewGuid().ToString('N'))
+$stressFeedback106=Join-Path $stressRoot106 'pc-command\feedback'
+New-Item -ItemType Directory -Force -Path $stressFeedback106|Out-Null
+$stressFile106=Join-Path $stressFeedback106 'feedback-ledger.jsonl'
+$stressWriter106=New-Object IO.StreamWriter($stressFile106,$false,[Text.UTF8Encoding]::new($false))
+try{
+  for($n=1;$n-le3000;$n++){
+    $id='FB-STRESS-'+('{0:D5}' -f $n)
+    $obj=[ordered]@{schema='pc.command.feedback.v1';feedback_id=$id;at=([datetimeoffset]::Parse('2026-10-08T00:00:00Z').AddSeconds($n)).ToString('o');evidence='synthetic'}
+    $stressWriter106.WriteLine(($obj|ConvertTo-Json -Compress))
+  }
+}finally{$stressWriter106.Dispose()}
+$stressWatch106=[Diagnostics.Stopwatch]::StartNew()
+$stressResult106=Read-PcFeedbackLocal ([pscustomobject]@{StateRepo=$stressRoot106})
+$stressWatch106.Stop()
+if($stressResult106.Error){throw ('stress ledger: '+$stressResult106.Error)}
+if([int]$stressResult106.Index.total_feedbacks-ne3000 -or [int]$stressResult106.Index.unique_feedback_ids-ne3000){throw 'stress ledger total/unique incorrect'}
+if(@($stressResult106.Recent).Count-ne12){throw 'stress ledger must retain 12 recent entries only'}
+if([int]$stressResult106.LedgerRecentRetained-ne12){throw 'stress recent retention telemetry mismatch'}
+Write-Host ('PC_COMMAND_V106_STREAM_3000_OK | ms='+[math]::Round($stressWatch106.Elapsed.TotalMilliseconds,1))
+Remove-Item $stressRoot106 -Recurse -Force -ErrorAction SilentlyContinue
+
 Write-Host 'PC_COMMAND_V106_STREAMING_TRIM_OK'
 
