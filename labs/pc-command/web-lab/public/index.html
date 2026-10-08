@@ -193,7 +193,7 @@ function setView(v){
   $('#pageTitle').textContent=t[v][0];$('#pageSubtitle').textContent=t[v][1];
   if(v==='sources')loadSources();if(v==='feedback')loadFeedback();if(v==='versions')loadVersions();if(v==='health'||v==='local')loadHealth();
 }
-$('.nav button').forEach(b=>b.onclick=()=>setView(b.dataset.view));function bindGo(){ $('[data-go]').forEach(b=>b.onclick=()=>setView(b.dataset.go)); } bindGo();
+$$('.nav button').forEach(b=>b.onclick=()=>setView(b.dataset.view));function bindGo(){ $$('[data-go]').forEach(b=>b.onclick=()=>setView(b.dataset.go)); } bindGo();
 
 function renderHome(){
   const s=STATUS;if(!s)return;const conv=(s.overview.conversations||[])[0]||{};

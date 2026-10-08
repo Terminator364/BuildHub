@@ -149,6 +149,8 @@ test('PC_COMMAND_WEB_LAB_028_SECURITY_EVIDENCE_OK', {timeout:25000}, async () =>
     assert.ok(inline,'web UI script exists');
     assert.doesNotThrow(()=>new vm.Script(inline[1]),'web UI JS is syntactically valid');
     assert.match(html,/sourceFilters/);
+    assert.doesNotMatch(html,/(?<!\$)\$\('[^']+'\)\.forEach/g,'Do not call forEach on querySelector single node');
+    assert.match(html,/\$\$\('\.nav button'\)\.forEach/,'All menu buttons must receive handlers');
     assert.match(html,/A — Cahier/);
     assert.match(html,/dernier checkpoint/i);
     console.log('PC_COMMAND_WEB_LAB_028_SECURITY_EVIDENCE_OK');
