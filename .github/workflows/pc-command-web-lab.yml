@@ -1,0 +1,39 @@
+name: PC Command Web Lab Audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  web-lab-verify:
+    runs-on: windows-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node and frontend syntax
+        shell: pwsh
+        run: |
+          node --version
+          node --check labs/pc-command/web-lab/server.mjs
+          node --check labs/tests/test-pc-command-web-lab.mjs
+      - name: Windows launcher PowerShell parse
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile(
+            (Resolve-Path labs/pc-command/web-lab/PC_COMMAND_WEB_LAB.ps1),
+            [ref]$tokens,
+            [ref]$errors
+          ) | Out-Null
+          if (@($errors).Count -gt 0) {
+            $errors | Format-Table
+            throw "PC COMMAND WEB LAB launcher parse failed"
+          }
+          Write-Host "PC_COMMAND_WEB_LAB_LAUNCHER_PARSE_OK"
+      - name: Localhost API and A+B+C stale-state regression
+        shell: pwsh
+        run: |
+          node --test labs/tests/test-pc-command-web-lab.mjs
