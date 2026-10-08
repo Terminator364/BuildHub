@@ -42,6 +42,10 @@ jobs:
         shell: pwsh
         run: |
           & ./labs/tests/test-pc-command-web-lab-launcher.ps1
+      - name: Real Microsoft Edge UI navigation and interaction (no npm)
+        shell: pwsh
+        run: |
+          node --test labs/tests/test-pc-command-web-lab-browser.mjs
       - name: Localhost API and A+B+C stale-state regression
         shell: pwsh
         run: |

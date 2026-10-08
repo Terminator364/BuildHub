@@ -103,3 +103,7 @@ Closing the browser/lab does not modify stable data. Removing the lab folder/sho
 - Older lab processes are stopped **only** after verifying Node PID and exact script path; no unrelated process termination.
 - Reuse/activate an existing Web Lab Edge window instead of creating another. No browser is launched during CI via `-NoBrowser`.
 - Windows CI runs two launcher invocations on an isolated ephemeral port, checks the same Node PID, and tears down only that test server. An exact 0.2.8 desktop/GUI last-mile test remains required on MBMPC.
+
+## Windows browser-level interaction verification (CI)
+
+The Windows workflow launches a clean headless Microsoft Edge instance with a disposable profile and exercises all eight tabs, 10 conversations, source classification/search, feedback A+B+C expansion, versions, health, and technical JSON. A Node-only fixture generates 41 sample repository entries; **no user/private data** is copied into CI. This is automated UI verification, not a substitute for MBMPC desktop-button and RAM certification.
