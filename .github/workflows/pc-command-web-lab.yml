@@ -1,6 +1,11 @@
 name: PC Command Web Lab Audit
 
 on:
+  pull_request:
+    paths:
+      - 'labs/pc-command/web-lab/**'
+      - 'labs/tests/test-pc-command-web-lab.mjs'
+      - '.github/workflows/pc-command-web-lab.yml'
   workflow_dispatch:
 
 permissions:
