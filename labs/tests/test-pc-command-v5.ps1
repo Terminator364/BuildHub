@@ -1,0 +1,77 @@
+$ErrorActionPreference='Stop'
+$root=Resolve-Path (Join-Path $PSScriptRoot '..')
+$files=@(
+  (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1'),
+  (Join-Path $root 'pc-command\v5\PC_COMMAND_BOOTSTRAP.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\engine.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\eventbus.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\io.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\report.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\pdf.ps1'),
+  (Join-Path $root 'pc-command\v5\lib\ui.ps1')
+)
+foreach($f in $files){
+  if(-not(Test-Path $f)){throw "Missing $f"}
+  $tokens=$null;$errors=$null
+  [void][Management.Automation.Language.Parser]::ParseFile($f,[ref]$tokens,[ref]$errors)
+  if($errors.Count){throw "PowerShell parse errors in $f : $($errors|Out-String)"}
+}
+$cfg=Get-Content (Join-Path $root 'pc-command\v5\config.default.json') -Raw|ConvertFrom-Json
+if([double]$cfg.cadence.internet_sync_seconds-ne3){throw 'sync must be 3s'}
+if([double]$cfg.cadence.engine_recalc_seconds-ne3.5){throw 'engine must be 3.5s'}
+if([int]$cfg.cadence.display_refresh_seconds-ne10){throw 'display must be 10s'}
+if([int]$cfg.limits.max_conversations-ne10){throw 'max conversations must be 10'}
+if([int]$cfg.limits.ram_budget_mb-ne150){throw 'ram budget must be 150MB'}
+. (Join-Path $root 'pc-command\v5\lib\engine.ps1')
+$m=[pscustomobject]@{state='ACTIVE';weight=1;micro_tasks=@(
+ [pscustomobject]@{state='DONE';weight=1;completion=1;evidence='x'},
+ [pscustomobject]@{state='ACTIVE';weight=1;completion=.5;evidence='y'}
+)}
+$p1=(Get-PcMacroProgress $m).Percent
+if($p1-ne75){throw "expected 75 got $p1"}
+$m.micro_tasks += [pscustomobject]@{state='PENDING';weight=1;completion=0}
+$p2=(Get-PcMacroProgress $m).Percent
+if($p2-ne50){throw "scope expansion expected 50 got $p2"}
+$manifest=Get-Content (Join-Path $root 'pc-command\v5\manifest.json') -Raw|ConvertFrom-Json
+if([string]$cfg.version -ne [string]$manifest.version){throw "config/manifest version mismatch: cfg=$($cfg.version) manifest=$($manifest.version)"}
+. (Join-Path $root 'pc-command\v5\lib\io.ps1')
+if(-not(Get-Command Read-PcStateLocal -ErrorAction SilentlyContinue)){throw 'Read-PcStateLocal missing'}
+if(-not(Get-Command Start-PcStatePull -ErrorAction SilentlyContinue)){throw 'Start-PcStatePull missing'}
+if(-not(Get-Command Complete-PcStatePull -ErrorAction SilentlyContinue)){throw 'Complete-PcStatePull missing'}
+if(-not(Get-Command Invoke-PcRollback -ErrorAction SilentlyContinue)){throw 'rollback command missing'}
+$idxPath=Join-Path $root 'pc-command\v5\config.default.json'
+if(-not(Test-Path $idxPath)){throw 'config missing'}
+if(-not([bool]$cfg.feedback_ledger.enabled)){throw 'feedback ledger must be enabled'}
+if(-not$cfg.feedback_ledger.ingest_before_build){throw 'feedback ingestion must happen before build'}
+if([double]$cfg.cadence.internet_sync_seconds -ne 3){throw 'sync must default to 3s'}
+if([double]$cfg.cadence.engine_recalc_seconds -ne 3.5){throw 'engine must default to 3.5s'}
+if([int]$cfg.cadence.display_refresh_seconds -ne 10){throw 'display must default to 10s'}
+if(-not[bool]$cfg.automation.auto_update){throw 'auto update must be enabled'}
+if([string]$cfg.code.branch -ne 'lab/pc-command-v090'){throw 'updater must follow v090 branch'}
+if([string]$cfg.updater.manifest_ref -ne 'lab/pc-command-v090'){throw 'manifest ref mismatch'}
+if([string]$cfg.product.command_router -ne 'contextual'){throw 'contextual command router required'}
+if(-not[bool]$cfg.product.report_center){throw 'report center required'}
+if(-not[bool]$cfg.product.health_score){throw 'health score required'}
+if(-not[bool]$cfg.preferences.local_persisted){throw 'local preferences required'}
+if([string]$cfg.reports.pdf_engine -ne 'pure_powershell_low_ram'){throw 'low-RAM PDF engine required'}
+if([bool]$cfg.reports.browser_processes_required){throw 'report generation must not require browser processes'}
+$uiText=Get-Content (Join-Path $root 'pc-command\v5\lib\ui.ps1') -Raw
+if($uiText -notmatch '\[A\] Accueil'){throw 'A Accueil must be visible'}
+if($uiText -notmatch 'PARAMETRES / SANTE DU SYSTEME'){throw 'settings health view missing'}
+if($uiText -notmatch 'function Write-PcMicro'){throw 'micro detail view missing'}
+if($uiText -notmatch 'function Write-PcReportCenter'){throw 'report center missing'}
+if($uiText -notmatch 'function Write-PcHealth'){throw 'health view missing'}
+if($uiText -notmatch '\[Y\] Sante'){throw 'health shortcut missing'}
+if($uiText -notmatch '\[X\] Rapports'){throw 'report center shortcut missing'}
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -notmatch 'Start-PcUpdateProbe'){throw 'auto update probe not wired'}
+$manifest=Get-Content (Join-Path $root 'pc-command\v5\manifest.json') -Raw|ConvertFrom-Json
+foreach($f in @($manifest.files)){
+  $p=Join-Path (Join-Path $root 'pc-command\v5') $f.relative_path
+  if(-not(Test-Path $p)){throw "manifest file missing: $($f.relative_path)"}
+  $actual=(& git hash-object $p).Trim()
+  if($actual-ne[string]$f.git_blob_sha){throw "manifest integrity mismatch: $($f.relative_path)"}
+}
+$mainText=Get-Content (Join-Path $root 'pc-command\v5\PC_COMMAND_V5.ps1') -Raw
+if($mainText -notmatch 'PC_COMMAND_SMOKE_OK'){throw 'runtime smoke gate missing'}
+Write-Host 'PC_COMMAND_V5_TESTS_OK'

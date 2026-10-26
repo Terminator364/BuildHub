@@ -1,0 +1,16 @@
+{
+  "schema": "pc_command.status.v1",
+  "project": "PC COMMAND / Browser4G lab",
+  "stage": "NAVIGATEURS_TRI_GITHUB",
+  "current_action": "Analyse comparative des navigateurs survivants apres smoke-tests Windows: Edge, Firefox, Brave, qutebrowser, Falkon et Helium",
+  "last_success": "6/6 navigateurs ont passe le smoke-test Windows sur BuildHub public; suivi local PowerShell minimal deploye",
+  "next_step": "Eliminer les candidats peu adaptes au PC 4 Go puis ne tester localement que la shortlist finale",
+  "blocker": null,
+  "updated_at": "2026-09-26T15:18:00+01:00",
+  "recent": [
+    "PC COMMAND simplifie: une seule fenetre PowerShell, rafraichie toutes les 2 minutes",
+    "Raccourci PC COMMAND - SUIVI installe sur le Bureau",
+    "6 smoke-tests Windows GitHub reussis",
+    "Google Drive Desktop reste actif"
+  ]
+}
