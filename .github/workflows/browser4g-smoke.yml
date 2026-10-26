@@ -1,0 +1,30 @@
+name: Browser4G Smoke
+
+on:
+  pull_request:
+    paths:
+      - 'labs/browser-bench/**'
+      - '.github/workflows/browser4g-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: browser4g-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    name: ${{ matrix.browser }}
+    runs-on: windows-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [edge, firefox, brave, qutebrowser, falkon, helium]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install / locate / bounded version smoke test
+        shell: pwsh
+        run: ./labs/browser-bench/browser-smoke.ps1 -Browser '${{ matrix.browser }}'
