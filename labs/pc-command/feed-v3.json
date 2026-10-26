@@ -1,0 +1,601 @@
+{
+  "schema": "pc_command.feed.v3",
+  "generated_at": "2026-09-26T16:39:00+01:00",
+  "engine": {
+    "version": "4.0-lab",
+    "local_recalc_seconds": 5,
+    "remote_sync_seconds": 5,
+    "max_connected_conversations": 10,
+    "max_active_macro_tasks_per_conversation": 10,
+    "progress_semantics": "weighted completion, dynamic scope; not a probability of success",
+    "confidence_semantics": "evidence coverage and freshness",
+    "source_of_truth": "GitHub snapshot + local observable events",
+    "zero_cost": true,
+    "display_refresh_seconds": 10
+  },
+  "host": {
+    "id": "MBMPC",
+    "ram_gb": 4,
+    "drive_policy": "KEEP_RUNNING"
+  },
+  "conversations": [
+    {
+      "id": "asquota-pccommand-20260926",
+      "label": "ASQUOTA2GO / PC COMMAND",
+      "short_code": "PCGO-01",
+      "state": "ACTIVE",
+      "last_update": "2026-09-26T16:39:00+01:00",
+      "objective": "Optimiser le PC 4 Go, construire PC COMMAND multi-conversations et choisir un navigateur adapte sans casser Google Drive.",
+      "macro_tasks": [
+        {
+          "id": "pc-command-engine",
+          "title": "PC COMMAND - moteur de suivi",
+          "weight": 4,
+          "state": "ACTIVE",
+          "last_event": "2026-09-26T15:58:00+01:00",
+          "current_action": "Passage au modele conversation > macro-taches > micro-taches; detection de portee et recalcul dynamique.",
+          "last_success": "V3 multi-flux PowerShell fonctionne; CI precedente verte.",
+          "next_step": "Valider le modele V4 puis le deployer une seule fois sur le PC.",
+          "blocker": null,
+          "micro_tasks": [
+            {
+              "id": "pc1",
+              "title": "Bus de statut GitHub zero-dollar",
+              "weight": 2,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "feed GitHub public"
+            },
+            {
+              "id": "pc2",
+              "title": "Recalcul local chaque seconde",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.9,
+              "evidence": "V3 engine implemented"
+            },
+            {
+              "id": "pc3",
+              "title": "Synchronisation distante chaque 10 secondes",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.9,
+              "evidence": "feed cadence set to 10s"
+            },
+            {
+              "id": "pc4",
+              "title": "Vue humaine PowerShell detaillee",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.85,
+              "evidence": "V3 viewer implemented"
+            },
+            {
+              "id": "pc5",
+              "title": "Onglets de conversations connectees",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.35,
+              "evidence": "V4 schema defined"
+            },
+            {
+              "id": "pc6",
+              "title": "Detection nouvelle macro/micro-tache et recalcul de portee",
+              "weight": 4,
+              "state": "ACTIVE",
+              "completion": 0.35,
+              "evidence": "current request recorded as scope expansion"
+            },
+            {
+              "id": "pc7",
+              "title": "Protocole PCCONNECT pour nouvelles conversations",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.25,
+              "evidence": "protocol being implemented"
+            },
+            {
+              "id": "pc8",
+              "title": "Journal local d'evenements Desktop Commander sans appel supplementaire",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.75,
+              "evidence": "WMI/local event monitoring designed"
+            },
+            {
+              "id": "pc9",
+              "title": "Demarrage en un clic depuis le Bureau",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.85,
+              "evidence": "shortcut exists; auto-start refinement pending"
+            },
+            {
+              "id": "pc10",
+              "title": "CI et deployment V4",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T15:31:20+01:00",
+              "type": "ui.feedback",
+              "summary": "Vue multi-flux demandee plus detaillee."
+            },
+            {
+              "at": "2026-09-26T15:50:00+01:00",
+              "type": "scope.expanded",
+              "summary": "Nouvelle exigence: suivi multi-conversations et taches dynamiques."
+            },
+            {
+              "at": "2026-09-26T15:58:00+01:00",
+              "type": "task.added",
+              "summary": "Architecture conversation > macro-taches > micro-taches ajoutee; limite 10 macro-taches actives."
+            }
+          ]
+        },
+        {
+          "id": "browser4g",
+          "title": "Navigateur pour PC 4 Go",
+          "weight": 3,
+          "state": "ACTIVE",
+          "last_event": "2026-09-26T15:52:00+01:00",
+          "current_action": "Confirmation comparative des navigateurs avant tests locaux minimaux.",
+          "last_success": "Prefiltre Windows: Falkon 165 MB, qutebrowser 306 MB, Brave 357 MB, Helium 646 MB, Edge 678 MB, Firefox 786 MB sur runner; comparatif relatif.",
+          "next_step": "Test realiste multi-pages puis shortlist 2-3 finalistes, incluant le navigateur personnel BuildHub comme candidat experimental.",
+          "blocker": null,
+          "micro_tasks": [
+            {
+              "id": "b1",
+              "title": "Recherche Internet/GitHub/TLIB",
+              "weight": 2,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "candidate matrix"
+            },
+            {
+              "id": "b2",
+              "title": "Smoke-tests Windows",
+              "weight": 2,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "6/6 success"
+            },
+            {
+              "id": "b3",
+              "title": "Prefiltre RAM/CPU sur runner",
+              "weight": 3,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "resource benchmark completed"
+            },
+            {
+              "id": "b4",
+              "title": "Test realiste multi-pages",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.15,
+              "evidence": "harness next"
+            },
+            {
+              "id": "b5",
+              "title": "Tri technique final",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.35,
+              "evidence": "provisional ranking"
+            },
+            {
+              "id": "b6",
+              "title": "Tests locaux des finalistes",
+              "weight": 3,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "b7",
+              "title": "Migration ou optimisation Edge",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "b8",
+              "title": "Nettoyage des candidats rejetes",
+              "weight": 1,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T14:04:00Z",
+              "type": "test.passed",
+              "summary": "6/6 navigateurs ont passe le smoke-test Windows."
+            },
+            {
+              "at": "2026-09-26T14:32:56Z",
+              "type": "benchmark.completed",
+              "summary": "Prefiltre RAM termine."
+            }
+          ]
+        },
+        {
+          "id": "ram-optimization",
+          "title": "Optimisation RAM Windows",
+          "weight": 2,
+          "state": "WAITING",
+          "last_event": "2026-09-26T13:00:00+01:00",
+          "current_action": "Optimisations finales suspendues jusqu'a la shortlist navigateur pour eviter des reglages contradictoires.",
+          "last_success": "Politique un seul onglet technique adoptee; Google Drive conserve actif.",
+          "next_step": "Appliquer les optimisations Windows reversibles puis mesurer avant/apres.",
+          "blocker": "Depend du navigateur final.",
+          "micro_tasks": [
+            {
+              "id": "r1",
+              "title": "Nettoyer onglets et doublons",
+              "weight": 1,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "measured Edge reduction"
+            },
+            {
+              "id": "r2",
+              "title": "Choisir navigateur final",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.55,
+              "evidence": "resource prefilter complete"
+            },
+            {
+              "id": "r3",
+              "title": "Optimiser demarrage Windows",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "r4",
+              "title": "Optimiser effets/processus non essentiels",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "r5",
+              "title": "Mesurer avant/apres",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T13:00:00+01:00",
+              "type": "policy.set",
+              "summary": "Google Drive Desktop doit rester actif."
+            }
+          ]
+        },
+        {
+          "id": "conversation-observability",
+          "title": "Observabilite des conversations ChatGPT",
+          "weight": 4,
+          "state": "ACTIVE",
+          "last_event": "2026-09-26T16:39:00+01:00",
+          "current_action": "Modeliser les etats observables: message recu, traitement, outils, reponse, pause, interruption, securite, reseau et reprise.",
+          "last_success": "Les problemes Support OpenAI ont ete relus et convertis en exigences de resilience.",
+          "next_step": "Definir la machine d'etats et les evenements TURN/TOOL/ERROR sans exposer le raisonnement prive.",
+          "blocker": null,
+          "micro_tasks": [
+            {
+              "id": "o1",
+              "title": "Machine d'etats conversation/turn",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.25,
+              "evidence": "support failures reviewed"
+            },
+            {
+              "id": "o2",
+              "title": "Evenements debut/fin de tour et outils",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.2,
+              "evidence": "PCCONNECT instrumentation design"
+            },
+            {
+              "id": "o3",
+              "title": "Etats securite/reseau/quota/interruption",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.3,
+              "evidence": "support cases identified"
+            },
+            {
+              "id": "o4",
+              "title": "Duree observable du traitement sans chain-of-thought",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "o5",
+              "title": "Checkpoint et reprise apres interruption",
+              "weight": 3,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T16:39:00+01:00",
+              "type": "scope.expanded",
+              "summary": "Nouvelle macro-tache ajoutee: observabilite de conversation et resilience."
+            }
+          ]
+        },
+        {
+          "id": "local-first-runtime",
+          "title": "Runtime local-first / offline / auto-update",
+          "weight": 4,
+          "state": "ACTIVE",
+          "last_event": "2026-09-26T16:39:00+01:00",
+          "current_action": "Concevoir dossier applicatif local, cache offline, mise a jour atomique, rollback et reprise au dernier etat fiable.",
+          "last_success": "Architecture local-first retenue; GitHub reste code/CI et le PC conserve un cache local.",
+          "next_step": "Creer manifest de version, updater et test offline/recovery.",
+          "blocker": null,
+          "micro_tasks": [
+            {
+              "id": "lf1",
+              "title": "Arborescence application locale",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.3,
+              "evidence": "target structure defined"
+            },
+            {
+              "id": "lf2",
+              "title": "Manifest version + hash",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "lf3",
+              "title": "Update staging + readback + rollback",
+              "weight": 3,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "lf4",
+              "title": "Mode offline sur cache",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.25,
+              "evidence": "V4 already reads cached feed"
+            },
+            {
+              "id": "lf5",
+              "title": "Recovery au redemarrage",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T16:39:00+01:00",
+              "type": "task.added",
+              "summary": "Runtime local-first et auto-update ajoute au plan."
+            }
+          ]
+        },
+        {
+          "id": "human-ui-reports",
+          "title": "Interface humaine, navigation et rapports",
+          "weight": 3,
+          "state": "ACTIVE",
+          "last_event": "2026-09-26T16:39:00+01:00",
+          "current_action": "Etendre la TUI PowerShell: version, vivant, vues detaillees, boutons adaptes, resumes et export de rapports.",
+          "last_success": "Navigation A/1-9/B/S/L/P/R/Q validee par l'utilisateur comme base.",
+          "next_step": "Ajouter version, statut vivant, pages Resume/Chronologie/Risques/Parametres et export.",
+          "blocker": null,
+          "micro_tasks": [
+            {
+              "id": "u1",
+              "title": "Version visible + indicateur vivant",
+              "weight": 2,
+              "state": "ACTIVE",
+              "completion": 0.35,
+              "evidence": "requested and architecture ready"
+            },
+            {
+              "id": "u2",
+              "title": "Navigation contextuelle par onglet",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.3,
+              "evidence": "existing keyboard navigation"
+            },
+            {
+              "id": "u3",
+              "title": "Resume humain ou/quoi/prochaine etape",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.45,
+              "evidence": "current macro details exist"
+            },
+            {
+              "id": "u4",
+              "title": "Chronologie et erreurs/reprises",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "u5",
+              "title": "Export rapport PDF/Drive",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T16:39:00+01:00",
+              "type": "ui.feedback",
+              "summary": "Interface jugee 3/10; besoin d'une application PowerShell beaucoup plus complete et humaine."
+            }
+          ]
+        },
+        {
+          "id": "source-adapters",
+          "title": "Adaptateurs de sources et synchronisation",
+          "weight": 4,
+          "state": "ACTIVE",
+          "last_event": "2026-09-26T16:39:00+01:00",
+          "current_action": "Definir comment ChatGPT, GitHub, Drive, Telegram, TLIB, Web/YouTube et le PC publient des preuves sans devenir des dependances obligatoires.",
+          "last_success": "GitHub public fonctionne deja comme bus/snapshot zero-dollar.",
+          "next_step": "Passer aux evenements append-only + projection consolidee et health par source.",
+          "blocker": null,
+          "micro_tasks": [
+            {
+              "id": "s1",
+              "title": "Schema d'evenement commun",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.55,
+              "evidence": "CloudEvents/Trace Context research"
+            },
+            {
+              "id": "s2",
+              "title": "Deduplication, sequence, hash, trace/span",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.4,
+              "evidence": "spec drafted"
+            },
+            {
+              "id": "s3",
+              "title": "Health/fraicheur par source",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "s4",
+              "title": "Drive/Telegram/TLIB/Web adapters",
+              "weight": 4,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "s5",
+              "title": "Consolidation sans conflits multi-writers",
+              "weight": 4,
+              "state": "ACTIVE",
+              "completion": 0.2,
+              "evidence": "event-sourcing/local-first research"
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T16:39:00+01:00",
+              "type": "scope.expanded",
+              "summary": "Architecture de sources generalisee et decouplee."
+            }
+          ]
+        },
+        {
+          "id": "resource-budget",
+          "title": "Budget RAM et performance PC COMMAND",
+          "weight": 3,
+          "state": "ACTIVE",
+          "last_event": "2026-09-26T16:39:00+01:00",
+          "current_action": "Fixer et verifier un plafond local de 150 MB meme avec 9 conversations connectees.",
+          "last_success": "V4 viewer mesure autour de 94 MB; Desktop Commander observe autour de 17 MB sur la capture utilisateur.",
+          "next_step": "Ajouter test 9 conversations, historique borne et budget RAM runtime.",
+          "blocker": null,
+          "micro_tasks": [
+            {
+              "id": "m1",
+              "title": "Budget total local <=150 MB",
+              "weight": 3,
+              "state": "ACTIVE",
+              "completion": 0.45,
+              "evidence": "V4 viewer 93.6 MB measured"
+            },
+            {
+              "id": "m2",
+              "title": "Un seul processus viewer pour tous les flux",
+              "weight": 3,
+              "state": "DONE",
+              "completion": 1,
+              "evidence": "current architecture"
+            },
+            {
+              "id": "m3",
+              "title": "Historique borne/rotation",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "m4",
+              "title": "Benchmark 9 conversations",
+              "weight": 3,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            },
+            {
+              "id": "m5",
+              "title": "Degradation RAM faible",
+              "weight": 2,
+              "state": "PENDING",
+              "completion": 0,
+              "evidence": null
+            }
+          ],
+          "events": [
+            {
+              "at": "2026-09-26T16:39:00+01:00",
+              "type": "constraint.added",
+              "summary": "Plafond RAM cible <=150 MB avec 9 conversations."
+            }
+          ]
+        }
+      ],
+      "turn_state": {
+        "state": "ASSISTANT_PROCESSING",
+        "started_at": "2026-09-26T16:38:00+01:00",
+        "last_transition_at": "2026-09-26T16:39:00+01:00",
+        "phase": "RESEARCH_ARCHITECTURE_BUILD",
+        "user_stopped": false,
+        "network_state": "ONLINE",
+        "note": "Nouvelle directive recue: transformer PC COMMAND en logiciel complet, resilient, auto-mis-a-jour et multi-sources."
+      }
+    }
+  ]
+}
